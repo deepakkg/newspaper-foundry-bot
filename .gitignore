@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.scheduler.lock
+tweet_history.log
+cron_debug.log
+scheduler.log
+.pytest_cache/
+.coverage
+htmlcov/
