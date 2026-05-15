@@ -46,7 +46,6 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `X_USERNAME`
 - `RUN_TIMEZONE`
 - `ENABLED_RUN_SLOTS`
-- `LOG_FILE_PATH`
 
 Recommended defaults:
 
@@ -59,7 +58,6 @@ OLLAMA_TIMEOUT_SECONDS=120
 POST_TO_X=true
 RUN_TIMEZONE=Asia/Kolkata
 ENABLED_RUN_SLOTS=06:00,10:00,14:00,18:00
-LOG_FILE_PATH=logs/tweet-history.md
 ```
 
 ## Local setup
@@ -85,7 +83,11 @@ Run with the GitHub schedule guard:
 
 ## Logs and Telegram
 
-Successful posts are appended to `logs/tweet-history.md`.
+GitHub Actions writes successful posts to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
+
+To view the log in GitHub, switch the branch selector from `main` to `tweet-history` and open `tweet-history.md`.
+
+For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 
 Telegram receives only:
 

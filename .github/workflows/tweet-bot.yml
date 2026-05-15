@@ -40,7 +40,8 @@ jobs:
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       RUN_TIMEZONE: ${{ vars.RUN_TIMEZONE || 'Asia/Kolkata' }}
       ENABLED_RUN_SLOTS: ${{ vars.ENABLED_RUN_SLOTS || '06:00,10:00,14:00,18:00' }}
-      LOG_FILE_PATH: ${{ vars.LOG_FILE_PATH || 'logs/tweet-history.md' }}
+      LOG_FILE_PATH: tweet-log-store/tweet-history.md
+      TWEET_HISTORY_BRANCH: tweet-history
 
     steps:
       - name: Check out repository
@@ -55,6 +56,22 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
+      - name: Prepare tweet history branch
+        run: |
+          git fetch origin "${TWEET_HISTORY_BRANCH}:refs/remotes/origin/${TWEET_HISTORY_BRANCH}" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/${TWEET_HISTORY_BRANCH}"; then
+            git worktree add -B "${TWEET_HISTORY_BRANCH}" tweet-log-store "origin/${TWEET_HISTORY_BRANCH}"
+          else
+            git worktree add --detach tweet-log-store
+            git -C tweet-log-store checkout --orphan "${TWEET_HISTORY_BRANCH}"
+            git -C tweet-log-store rm -rf . >/dev/null 2>&1 || true
+            if [ -f "logs/tweet-history.md" ]; then
+              cp "logs/tweet-history.md" "tweet-log-store/tweet-history.md"
+            else
+              printf "# Tweet History\n\nThis file is updated by GitHub Actions after each successful tweet.\n" > "tweet-log-store/tweet-history.md"
+            fi
+          fi
+
       - name: Run tweet bot
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force_run }}" = "true" ]; then
@@ -65,16 +82,16 @@ jobs:
 
       - name: Commit tweet history
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C tweet-log-store config user.name "github-actions[bot]"
+          git -C tweet-log-store config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ ! -f "${LOG_FILE_PATH}" ]; then
             echo "No tweet history file found at ${LOG_FILE_PATH}."
             exit 0
           fi
-          git add "${LOG_FILE_PATH}"
-          if git diff --cached --quiet; then
+          git -C tweet-log-store add tweet-history.md
+          if git -C tweet-log-store diff --cached --quiet; then
             echo "No tweet history changes to commit."
           else
-            git commit -m "Update tweet history"
-            git push
+            git -C tweet-log-store commit -m "Update tweet history"
+            git -C tweet-log-store push origin "HEAD:${TWEET_HISTORY_BRANCH}"
           fi
