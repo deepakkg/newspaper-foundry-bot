@@ -8,7 +8,7 @@ on:
       force_run:
         description: "Run even if the current slot is disabled or already logged"
         required: false
-        default: false
+        default: true
         type: boolean
 
 permissions:
