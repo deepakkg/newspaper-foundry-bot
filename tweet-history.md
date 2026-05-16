@@ -65,3 +65,19 @@ Tweet text:
 > My personal finance strategy is checking my bank account balance and deciding that $14 is enough to justify a takeout order. 🍟
 
 <!-- tweet-slot:2026-05-16:02:00 -->
+
+## Tweet posted
+
+- Date/time: 2026-05-16 23:01:20 IST
+- Run slot: 22:00
+- Topic: leadership
+- Tone: nostalgic
+- Time taken: 1.67 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2055702653955723436
+
+Tweet text:
+
+> I remember my first real experience with leadership. It was a worn clipboard and a team that trusted me to lead the way. Those were simpler days. 🪵
+
+<!-- tweet-slot:2026-05-16:22:00 -->
