@@ -129,3 +129,19 @@ Tweet text:
 > Missing those summer afternoons playing cricket in the street. We used a taped tennis ball and a wooden crate for stumps. Everything felt simpler then 🏏
 
 <!-- tweet-slot:2026-05-17:22:00 -->
+
+## Tweet posted
+
+- Date/time: 2026-05-18 02:59:21 IST
+- Run slot: 02:00
+- Topic: personal finance
+- Tone: rant
+- Time taken: 1.17 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2056124942425686104
+
+Tweet text:
+
+> Personal finance advice is exhausting. Stop telling me to skip a five dollar latte to save for a house. The math does not add up when rent increases by two hundred dollars every year. It is frustrating. 🙄
+
+<!-- tweet-slot:2026-05-18:02:00 -->
