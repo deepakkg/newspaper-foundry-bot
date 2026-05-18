@@ -145,3 +145,19 @@ Tweet text:
 > Personal finance advice is exhausting. Stop telling me to skip a five dollar latte to save for a house. The math does not add up when rent increases by two hundred dollars every year. It is frustrating. 🙄
 
 <!-- tweet-slot:2026-05-18:02:00 -->
+
+## Tweet posted
+
+- Date/time: 2026-05-18 10:21:38 IST
+- Run slot: 10:00
+- Topic: middle management
+- Tone: nostalgic
+- Time taken: 1.78 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2056236246335111218
+
+Tweet text:
+
+> I miss the old days of middle management. We had shared calendars and long lunches. We spent hours in a beige conference room planning the next quarter. Things were simpler then. 💼
+
+<!-- tweet-slot:2026-05-18:10:00 -->
