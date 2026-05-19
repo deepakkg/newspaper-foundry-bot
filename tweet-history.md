@@ -193,3 +193,19 @@ Tweet text:
 > I miss the days before generative AI. I remember spending hours sketching in a notebook and erasing lines until the paper thinned. Now a prompt does it in seconds. ✍️
 
 <!-- tweet-slot:2026-05-19:10:00 -->
+
+## Tweet posted
+
+- Date/time: 2026-05-20 03:25:53 IST
+- Run slot: 02:00
+- Topic: middle management
+- Tone: nostalgic
+- Time taken: 1.48 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2056856391885771006
+
+Tweet text:
+
+> I miss the old days of middle management. There were printed spreadsheets and long lunches. We solved things with a handshake and a landline phone. 📁
+
+<!-- tweet-slot:2026-05-20:02:00 -->
