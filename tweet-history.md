@@ -177,3 +177,19 @@ Tweet text:
 > Our SaaS pricing is a bit too scalable. I can't stop adding seats to the dashboard. 📈
 
 <!-- tweet-slot:2026-05-19:02:00 -->
+
+## Tweet posted
+
+- Date/time: 2026-05-19 10:14:03 IST
+- Run slot: 10:00
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 1.21 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2056596725297557964
+
+Tweet text:
+
+> I miss the days before generative AI. I remember spending hours sketching in a notebook and erasing lines until the paper thinned. Now a prompt does it in seconds. ✍️
+
+<!-- tweet-slot:2026-05-19:10:00 -->
