@@ -225,3 +225,19 @@ Tweet text:
 > AI agents are great until you realize you’ve spent three hours debugging a loop where two bots are politely apologizing to each other instead of booking your flight. ✈️
 
 <!-- tweet-slot:2026-05-20:10:00 -->
+
+## Tweet posted
+
+- Date/time: 2026-05-21 10:24:38 IST
+- Run slot: 10:00
+- Topic: personal finance
+- Tone: whimsical
+- Time taken: 1.39 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2057324163103170964
+
+Tweet text:
+
+> Personal finance is a dance with a magic ledger. I watch my index funds grow while I eat a slice of fancy toast. Small coins dreaming of big castles 🏰
+
+<!-- tweet-slot:2026-05-21:10:00 -->
