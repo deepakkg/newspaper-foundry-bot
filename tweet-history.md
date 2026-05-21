@@ -267,3 +267,16 @@ Tweet text:
 Tweet text:
 
 > Generative AI is amazing until it gives a person six fingers in a photo.
+
+## Tweet posted
+
+- Date/time: 2026-05-21 18:21:47
+- Topic: ai agents
+- Tone: couplet
+- Time taken: 0.91 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2057527287340261526
+
+Tweet text:
+
+> AI agents move beyond simple chat. They take action to book your flights.
