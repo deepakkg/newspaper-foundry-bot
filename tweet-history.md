@@ -254,3 +254,16 @@ Tweet text:
 Tweet text:
 
 > The software industry is the only place where you can spend six hours automating a task that takes ten seconds to do manually. 💻
+
+## Tweet posted
+
+- Date/time: 2026-05-21 18:01:56
+- Topic: generative ai
+- Tone: funny
+- Time taken: 1.46 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2057522292456816915
+
+Tweet text:
+
+> Generative AI is amazing until it gives a person six fingers in a photo.
