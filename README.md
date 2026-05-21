@@ -4,19 +4,17 @@ This bot generates short tweets with Ollama, posts them to X, records each succe
 
 ## GitHub Actions schedule
 
-The workflow wakes at these fixed India-time slots:
+The workflow wakes and posts at these fixed India-time slots:
 
-- 02:00 IST
 - 06:00 IST
-- 10:00 IST
-- 14:00 IST
+- 12:00 IST
 - 18:00 IST
 - 22:00 IST
 
-Only slots listed in `ENABLED_RUN_SLOTS` will post. The default is:
+The default slot list is:
 
 ```text
-06:00,10:00,14:00,18:00
+06:00,12:00,18:00,22:00
 ```
 
 ## GitHub Secrets
@@ -57,7 +55,7 @@ MAX_RETRIES=5
 OLLAMA_TIMEOUT_SECONDS=120
 POST_TO_X=true
 RUN_TIMEZONE=Asia/Kolkata
-ENABLED_RUN_SLOTS=06:00,10:00,14:00,18:00
+ENABLED_RUN_SLOTS=06:00,12:00,18:00,22:00
 ```
 
 ## Local setup

@@ -128,7 +128,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         os.getenv("RUN_TIMEZONE", "Asia/Kolkata"), "RUN_TIMEZONE"
     )
     enabled_run_slots = _parse_time_list(
-        os.getenv("ENABLED_RUN_SLOTS", "06:00,10:00,14:00,18:00"),
+        os.getenv("ENABLED_RUN_SLOTS", "06:00,12:00,18:00,22:00"),
         "ENABLED_RUN_SLOTS",
     )
     log_file_path = Path(log_file_raw)

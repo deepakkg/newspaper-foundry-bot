@@ -39,7 +39,7 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "TONES": "witty,serious",
         "POST_TO_X": "false",
         "RUN_TIMEZONE": "Asia/Kolkata",
-        "ENABLED_RUN_SLOTS": "06:00,10:00,14:00,18:00",
+        "ENABLED_RUN_SLOTS": "06:00,12:00,18:00,22:00",
         "OLLAMA_API_KEY": "",
         "X_API_KEY": "",
         "X_API_KEY_SECRET": "",
@@ -207,7 +207,7 @@ class ConfigTests(unittest.TestCase):
 
         self.assertTrue(config.post_to_x)
         self.assertEqual(config.run_timezone, "Asia/Kolkata")
-        self.assertEqual(config.enabled_run_slots, ["06:00", "10:00", "14:00", "18:00"])
+        self.assertEqual(config.enabled_run_slots, ["06:00", "12:00", "18:00", "22:00"])
         self.assertEqual(config.log_file_path, log_path)
 
     def test_load_config_rejects_invalid_enabled_slot(self) -> None:
@@ -234,9 +234,9 @@ class ConfigTests(unittest.TestCase):
 
 class ScheduleGuardTests(unittest.TestCase):
     def test_resolve_current_slot_accepts_delayed_workflow_start(self) -> None:
-        now = datetime(2026, 5, 15, 10, 12, tzinfo=ZoneInfo("Asia/Kolkata"))
+        now = datetime(2026, 5, 15, 12, 12, tzinfo=ZoneInfo("Asia/Kolkata"))
 
-        self.assertEqual(resolve_current_slot(now), ("2026-05-15", "10:00"))
+        self.assertEqual(resolve_current_slot(now), ("2026-05-15", "12:00"))
 
     def test_decide_scheduled_run_runs_enabled_unlogged_slot(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -244,18 +244,18 @@ class ScheduleGuardTests(unittest.TestCase):
             env_path = Path(tmp_dir) / ".env"
             write_env_file(env_path, LOG_FILE_PATH=str(log_path))
             config = load_config(env_path)
-            now = datetime(2026, 5, 15, 10, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
+            now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
             decision = decide_scheduled_run(config, now)
 
         self.assertTrue(decision.should_run)
         self.assertEqual(decision.run_date, "2026-05-15")
-        self.assertEqual(decision.run_slot, "10:00")
+        self.assertEqual(decision.run_slot, "12:00")
 
     def test_decide_scheduled_run_skips_disabled_slot(self) -> None:
-        tmp_dir, config = load_temp_config(ENABLED_RUN_SLOTS="06:00,10:00")
+        tmp_dir, config = load_temp_config(ENABLED_RUN_SLOTS="06:00,18:00")
         self.addCleanup(tmp_dir.cleanup)
-        now = datetime(2026, 5, 15, 14, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
+        now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
         decision = decide_scheduled_run(config, now)
 
@@ -266,13 +266,13 @@ class ScheduleGuardTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp_dir:
             log_path = Path(tmp_dir) / "tweet-history.md"
             log_path.write_text(
-                build_slot_marker(run_date="2026-05-15", run_slot="10:00"),
+                build_slot_marker(run_date="2026-05-15", run_slot="12:00"),
                 encoding="utf-8",
             )
             env_path = Path(tmp_dir) / ".env"
             write_env_file(env_path, LOG_FILE_PATH=str(log_path))
             config = load_config(env_path)
-            now = datetime(2026, 5, 15, 10, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
+            now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
             decision = decide_scheduled_run(config, now)
 
@@ -289,15 +289,15 @@ class LoggerTests(unittest.TestCase):
             time_taken_seconds=12.34,
             attempts=2,
             tweet_url="https://x.com/example/status/1",
-            run_slot="10:00",
-            timestamp="2026-05-15 10:00:00 IST",
+            run_slot="12:00",
+            timestamp="2026-05-15 12:00:00 IST",
             run_date="2026-05-15",
         )
 
         self.assertIn("## Tweet posted", entry)
-        self.assertIn("- Run slot: 10:00", entry)
+        self.assertIn("- Run slot: 12:00", entry)
         self.assertIn("> Coffee is back.", entry)
-        self.assertIn("<!-- tweet-slot:2026-05-15:10:00 -->", entry)
+        self.assertIn("<!-- tweet-slot:2026-05-15:12:00 -->", entry)
 
     def test_append_tweet_log_writes_markdown_and_duplicate_marker(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -311,14 +311,14 @@ class LoggerTests(unittest.TestCase):
                 time_taken_seconds=12.34,
                 attempts=2,
                 tweet_url="https://x.com/example/status/1",
-                run_slot="10:00",
-                timestamp="2026-05-15 10:00:00 IST",
+                run_slot="12:00",
+                timestamp="2026-05-15 12:00:00 IST",
                 run_date="2026-05-15",
             )
 
             content = log_path.read_text(encoding="utf-8")
             logged = has_logged_slot(
-                log_path, run_date="2026-05-15", run_slot="10:00"
+                log_path, run_date="2026-05-15", run_slot="12:00"
             )
 
         self.assertIn("# Tweet History", content)
@@ -356,7 +356,7 @@ class TweetGeneratorTests(unittest.TestCase):
         buffer = StringIO()
         tmp_dir, config = load_temp_config(ENABLED_RUN_SLOTS="06:00")
         self.addCleanup(tmp_dir.cleanup)
-        now = datetime(2026, 5, 15, 10, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
+        now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client") as mock_client:
@@ -381,7 +381,7 @@ class TweetGeneratorTests(unittest.TestCase):
         )
         self.addCleanup(tmp_dir.cleanup)
         published = MagicMock(url="https://x.com/example/status/1")
-        now = datetime(2026, 5, 15, 10, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
+        now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
