@@ -319,3 +319,16 @@ Tweet text:
 Tweet text:
 
 > Cricket is a patient game. A white ball flies through a summer sky. We wait for hours for one perfect wicket 🏏
+
+## Tweet posted
+
+- Date/time: 2026-05-22 18:17:21
+- Topic: generative ai
+- Tone: serious
+- Time taken: 1.13 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2057888559722328370
+
+Tweet text:
+
+> Generative AI is shifting the baseline of intellectual labor. The ability to automate complex coding and drafting requires a new framework for verifying truth. We must prioritize accuracy over speed.
