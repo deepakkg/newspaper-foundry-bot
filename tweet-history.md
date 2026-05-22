@@ -293,3 +293,16 @@ Tweet text:
 Tweet text:
 
 > I tried to invest in a stock market company that sells watches. The timing was terrible 📉
+
+## Tweet posted
+
+- Date/time: 2026-05-22 09:57:53
+- Topic: personal finance
+- Tone: nostalgic
+- Time taken: 2.51 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2057762868393619956
+
+Tweet text:
+
+> I miss when personal finance meant counting quarters in a glass jar. The clink of the coins was the only balance sheet I needed. 🪙
