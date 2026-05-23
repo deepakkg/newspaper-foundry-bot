@@ -358,3 +358,16 @@ Tweet text:
 Tweet text:
 
 > Learning is a nightmare when the documentation is out of date. I spent three hours debugging a library only to find the tutorial was written for a version from 2019. Stop publishing obsolete guides 🙄
+
+## Tweet posted
+
+- Date/time: 2026-05-23 14:10:44
+- Topic: generative ai
+- Tone: funny
+- Time taken: 1.28 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2058188886858219974
+
+Tweet text:
+
+> Generative AI is impressive until it gives a person six fingers in a high-resolution photo. 🖐️
