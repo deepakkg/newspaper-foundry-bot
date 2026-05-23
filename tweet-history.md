@@ -345,3 +345,16 @@ Tweet text:
 Tweet text:
 
 > I miss the sound of a leather ball hitting a willow bat in the backyard. Those long summer afternoons of cricket ended only when the streetlights came on.
+
+## Tweet posted
+
+- Date/time: 2026-05-23 08:36:08
+- Topic: learning
+- Tone: rant
+- Time taken: 1.36 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2058104679742284155
+
+Tweet text:
+
+> Learning is a nightmare when the documentation is out of date. I spent three hours debugging a library only to find the tutorial was written for a version from 2019. Stop publishing obsolete guides 🙄
