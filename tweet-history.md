@@ -384,3 +384,16 @@ Tweet text:
 Tweet text:
 
 > Learning is a nightmare when the tutorial skips three foundational steps. I spent two hours debugging a single line of code because the guide assumed I knew the setup. Stop omitting the basics. 🙄
+
+## Tweet posted
+
+- Date/time: 2026-05-24 14:09:28
+- Topic: middle management
+- Tone: rant
+- Time taken: 1.34 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2058550956317659549
+
+Tweet text:
+
+> Middle management is a void. They spend all day in alignment meetings to tell us what the executives already decided. They add layers of approval that slow everything down. It is an endless cycle of reporting status updates. 🙄
