@@ -397,3 +397,16 @@ Tweet text:
 Tweet text:
 
 > Middle management is a void. They spend all day in alignment meetings to tell us what the executives already decided. They add layers of approval that slow everything down. It is an endless cycle of reporting status updates. 🙄
+
+## Tweet posted
+
+- Date/time: 2026-05-24 17:32:54
+- Topic: coffee
+- Tone: punny
+- Time taken: 1.59 seconds
+- Attempts: 2
+- Tweet URL: https://x.com/deepakgupta1/status/2058602152738590956
+
+Tweet text:
+
+> I like my coffee a latte. One double shot of espresso is all it takes. ☕️
