@@ -371,3 +371,16 @@ Tweet text:
 Tweet text:
 
 > Generative AI is impressive until it gives a person six fingers in a high-resolution photo. 🖐️
+
+## Tweet posted
+
+- Date/time: 2026-05-24 09:06:30
+- Topic: learning
+- Tone: rant
+- Time taken: 5.12 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2058474711856599328
+
+Tweet text:
+
+> Learning is a nightmare when the tutorial skips three foundational steps. I spent two hours debugging a single line of code because the guide assumed I knew the setup. Stop omitting the basics. 🙄
