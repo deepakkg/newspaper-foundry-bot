@@ -410,3 +410,16 @@ Tweet text:
 Tweet text:
 
 > I like my coffee a latte. One double shot of espresso is all it takes. ☕️
+
+## Tweet posted
+
+- Date/time: 2026-05-25 10:41:08
+- Topic: ai agents
+- Tone: witty
+- Time taken: 1.57 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2058860916163174533
+
+Tweet text:
+
+> AI agents are great until you realize you've delegated your entire calendar to a bot that thinks a 3 AM meeting is a bold productivity move. 🤖
