@@ -2,7 +2,7 @@ name: Tweet Bot
 
 on:
   schedule:
-    - cron: "30 0,6,12,16 * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -57,7 +57,12 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       - name: Run tweet bot
-        run: python tweet_generator.py
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python tweet_generator.py
+          else
+            python tweet_generator.py --respect-schedule
+          fi
 
       - name: Commit tweet history
         run: |

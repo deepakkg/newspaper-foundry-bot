@@ -4,14 +4,14 @@ This bot generates short tweets with Ollama, posts them to X, records each succe
 
 ## GitHub Actions schedule
 
-The workflow wakes and posts at these fixed India-time slots:
+The workflow checks every 15 minutes and only posts shortly after these fixed India-time slots:
 
 - 06:00 IST
 - 12:00 IST
 - 18:00 IST
 - 22:00 IST
 
-GitHub cron controls these times directly. `ENABLED_RUN_SLOTS` is kept for local schedule-guard runs and should use the same list:
+The Python schedule guard controls the actual posting slots. `ENABLED_RUN_SLOTS` should use the same list:
 
 ```text
 06:00,12:00,18:00,22:00

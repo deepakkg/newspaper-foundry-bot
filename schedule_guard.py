@@ -9,7 +9,7 @@ from logger import has_logged_slot
 
 
 FIXED_RUN_SLOTS = ("06:00", "12:00", "18:00", "22:00")
-DEFAULT_SLOT_WINDOW_MINUTES = 90
+DEFAULT_SLOT_WINDOW_MINUTES = 20
 
 
 @dataclass(frozen=True)

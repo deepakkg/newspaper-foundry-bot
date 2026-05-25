@@ -238,6 +238,11 @@ class ScheduleGuardTests(unittest.TestCase):
 
         self.assertEqual(resolve_current_slot(now), ("2026-05-15", "12:00"))
 
+    def test_resolve_current_slot_rejects_late_workflow_start(self) -> None:
+        now = datetime(2026, 5, 15, 12, 25, tzinfo=ZoneInfo("Asia/Kolkata"))
+
+        self.assertIsNone(resolve_current_slot(now))
+
     def test_decide_scheduled_run_runs_enabled_unlogged_slot(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             log_path = Path(tmp_dir) / "tweet-history.md"
