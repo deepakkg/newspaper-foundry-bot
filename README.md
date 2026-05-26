@@ -4,7 +4,7 @@ This bot generates short tweets with Ollama, posts them to X, records each succe
 
 ## GitHub Actions schedule
 
-The workflow checks every 15 minutes and only posts shortly after these fixed India-time slots:
+The workflow makes several attempts shortly after these fixed India-time slots and posts only once per slot:
 
 - 06:00 IST
 - 12:00 IST

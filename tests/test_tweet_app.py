@@ -238,8 +238,13 @@ class ScheduleGuardTests(unittest.TestCase):
 
         self.assertEqual(resolve_current_slot(now), ("2026-05-15", "12:00"))
 
-    def test_resolve_current_slot_rejects_late_workflow_start(self) -> None:
-        now = datetime(2026, 5, 15, 12, 25, tzinfo=ZoneInfo("Asia/Kolkata"))
+    def test_resolve_current_slot_accepts_later_retry_start(self) -> None:
+        now = datetime(2026, 5, 15, 12, 59, tzinfo=ZoneInfo("Asia/Kolkata"))
+
+        self.assertEqual(resolve_current_slot(now), ("2026-05-15", "12:00"))
+
+    def test_resolve_current_slot_rejects_too_late_workflow_start(self) -> None:
+        now = datetime(2026, 5, 15, 13, 16, tzinfo=ZoneInfo("Asia/Kolkata"))
 
         self.assertIsNone(resolve_current_slot(now))
 
