@@ -423,3 +423,16 @@ Tweet text:
 Tweet text:
 
 > AI agents are great until you realize you've delegated your entire calendar to a bot that thinks a 3 AM meeting is a bold productivity move. 🤖
+
+## Tweet posted
+
+- Date/time: 2026-05-26 13:14:43
+- Topic: ai
+- Tone: funny
+- Time taken: 0.84 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2059261953386934279
+
+Tweet text:
+
+> AI can write a full legal contract in ten seconds but still thinks humans have seven fingers on one hand. 🤖
