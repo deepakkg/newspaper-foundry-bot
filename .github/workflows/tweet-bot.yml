@@ -2,8 +2,12 @@ name: Tweet Bot
 
 on:
   schedule:
-    - cron: "30,45 0,6,12,16 * * *"
-    - cron: "5,25 1,7,13,17 * * *"
+    # GitHub cron uses UTC. These four entries map to:
+    # 06:00, 12:00, 18:00, and 22:00 in Asia/Kolkata.
+    - cron: "30 0 * * *"
+    - cron: "30 6 * * *"
+    - cron: "30 12 * * *"
+    - cron: "30 16 * * *"
   workflow_dispatch:
 
 permissions:
@@ -34,12 +38,11 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       RUN_TIMEZONE: ${{ vars.RUN_TIMEZONE || 'Asia/Kolkata' }}
-      ENABLED_RUN_SLOTS: ${{ vars.ENABLED_RUN_SLOTS || '06:00,12:00,18:00,22:00' }}
       LOG_FILE_PATH: tweet-log-store/tweet-history.md
       TWEET_HISTORY_BRANCH: tweet-history
 
     steps:
-      - name: Check out repository
+      - name: Check out app code
         uses: actions/checkout@v6
 
       - name: Check out tweet history
@@ -57,22 +60,13 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Run tweet bot
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            python tweet_generator.py
-          else
-            python tweet_generator.py --respect-schedule
-          fi
+      - name: Generate and post tweet
+        run: python tweet_generator.py
 
       - name: Commit tweet history
         run: |
           git -C tweet-log-store config user.name "github-actions[bot]"
           git -C tweet-log-store config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ ! -f "${LOG_FILE_PATH}" ]; then
-            echo "No tweet history file found at ${LOG_FILE_PATH}."
-            exit 0
-          fi
           git -C tweet-log-store add tweet-history.md
           if git -C tweet-log-store diff --cached --quiet; then
             echo "No tweet history changes to commit."

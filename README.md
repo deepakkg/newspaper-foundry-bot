@@ -4,18 +4,14 @@ This bot generates short tweets with Ollama, posts them to X, records each succe
 
 ## GitHub Actions schedule
 
-The workflow makes several attempts shortly after these fixed India-time slots and posts only once per slot:
+The workflow has four explicit GitHub cron entries for these India-time slots:
 
 - 06:00 IST
 - 12:00 IST
 - 18:00 IST
 - 22:00 IST
 
-The Python schedule guard controls the actual posting slots. `ENABLED_RUN_SLOTS` should use the same list:
-
-```text
-06:00,12:00,18:00,22:00
-```
+GitHub cron uses UTC, so the workflow file maps these to `00:30`, `06:30`, `12:30`, and `16:30` UTC.
 
 ## GitHub Secrets
 
@@ -43,7 +39,6 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `POST_TO_X`
 - `X_USERNAME`
 - `RUN_TIMEZONE`
-- `ENABLED_RUN_SLOTS`
 
 Recommended defaults:
 
@@ -55,7 +50,6 @@ MAX_RETRIES=5
 OLLAMA_TIMEOUT_SECONDS=120
 POST_TO_X=true
 RUN_TIMEZONE=Asia/Kolkata
-ENABLED_RUN_SLOTS=06:00,12:00,18:00,22:00
 ```
 
 ## Local setup
