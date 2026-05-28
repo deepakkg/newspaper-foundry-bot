@@ -514,3 +514,16 @@ Tweet text:
 Tweet text:
 
 > Our SaaS growth is scaling. I guess you could say we have a subscription to success 📈
+
+## Tweet posted
+
+- Date/time: 2026-05-28 10:37:46
+- Topic: middle management
+- Tone: couplet
+- Time taken: 5.61 seconds
+- Attempts: 3
+- Tweet URL: https://x.com/deepakgupta1/status/2059947229633491451
+
+Tweet text:
+
+> Middle management lives in the middle. They turn board slide decks into a Monday sync.
