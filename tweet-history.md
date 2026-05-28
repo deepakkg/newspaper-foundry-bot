@@ -527,3 +527,16 @@ Tweet text:
 Tweet text:
 
 > Middle management lives in the middle. They turn board slide decks into a Monday sync.
+
+## Tweet posted
+
+- Date/time: 2026-05-28 19:13:17
+- Topic: cricket
+- Tone: funny
+- Time taken: 1.43 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2060076964698837213
+
+Tweet text:
+
+> Cricket is the only sport where you can play for five days and still end in a draw. 🏏
