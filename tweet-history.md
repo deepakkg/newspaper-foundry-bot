@@ -566,3 +566,16 @@ Tweet text:
 Tweet text:
 
 > AI is getting too smart. I asked a large language model for a joke and it actually had a neural network of puns. 🤖
+
+## Tweet posted
+
+- Date/time: 2026-05-29 16:13:38
+- Topic: ai
+- Tone: funny
+- Time taken: 0.87 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2060394141607981066
+
+Tweet text:
+
+> AI is terrifyingly smart until you ask it to generate a person with the correct number of fingers.
