@@ -712,3 +712,20 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services just got a bit more competitive. K-38 Consulting was named the Best Outsourced CFO Firm for SaaS Startups 2026 by AI Research Awards. Someone finally knows where the money is going 📈
+
+## Tweet posted
+
+- Date/time: 2026-05-31 17:38:48
+- Topic: openai
+- Tone: nostalgic
+- Time taken: 1.57 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061140348865225177
+- News title: OpenAI Robotics ramps up hiring to build general-purpose robots - Crypto Briefing
+- News source: Crypto Briefing
+- News published: 2026-05-31 16:11 UTC
+- News URL: https://news.google.com/rss/articles/CBMibEFVX3lxTE81YUlRekFHR2xHeEFwbkJyWk1EMFZhc2tFWUIxV0FiQjQ4d211MkVSU0w0WjFqS0JXNDFyLUN3c3ZyVmVKZVdZRHFHSVhPbXdFcW9Fa0Ita3lzSU12dkUyNWotc21fY3ZYbHpxYg?oc=5
+
+Tweet text:
+
+> Remember when OpenAI was only about text? Now they are hiring to build general-purpose robots. Things are moving fast. 🤖
