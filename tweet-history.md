@@ -644,3 +644,20 @@ Tweet text:
 Tweet text:
 
 > Our SaaS professional services are a cut above. We help you implement your tech stack without the teething pains. It is a scalable way to get your onboarding on track 🚀
+
+## Tweet posted
+
+- Date/time: 2026-05-31 08:56:20
+- Topic: ai agents
+- Tone: funny
+- Time taken: 29.49 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061008866846941302
+- News title: Q&A: Why AI Agents Need New Financial Rails to Scale - FinTech Magazine
+- News source: FinTech Magazine
+- News published: 2026-05-31 08:02 UTC
+- News URL: https://news.google.com/rss/articles/CBMikwFBVV95cUxNWHBZR0syLW9xWkFtckZwaEx5RmtPVWtWY2Nqd0N1d29aTngxVklwSjNkOU1Fekg4dkltV3pVS3hzcE55RVlYMVRXTlpKOWFMcU5SSzZvWDFzZzZ5UGpDanRWQThGQjk5enYtbW10MlRKSjJfcXU2dnhidFdTTkR3QVM1NndDenlFNldia0VIanJYazg?oc=5
+
+Tweet text:
+
+> AI agents are ready to take over, but they can't even open a bank account. We need new financial rails before the bots start asking for a loan 🤖
