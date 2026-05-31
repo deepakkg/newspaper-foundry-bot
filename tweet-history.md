@@ -695,3 +695,20 @@ Tweet text:
 Tweet text:
 
 > Jacques Kallis has been named the 21st century’s greatest cricket player by SA Cricket Mag. A touch of magic in the record books 🏏
+
+## Tweet posted
+
+- Date/time: 2026-05-31 14:16:41
+- Topic: saas professional services
+- Tone: funny
+- Time taken: 2.33 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061089487548043592
+- News title: K-38 Consulting Recognized as Best Outsourced CFO Firm for SaaS Startups 2026 by AI Research Awards - StreetInsider
+- News source: StreetInsider
+- News published: 2026-05-29 20:16 UTC
+- News URL: https://news.google.com/rss/articles/CBMi5gFBVV95cUxOT0Y0czVkcDZhWWV0YVV4UDhUM3o0NnVCN1FsZzlxdTkxb0xRNEVkcU9lLU5kejNId0pjQkhVd3NjUnFyNkhuOUxzN3ZXSG1sOGZwZkpwZEdtQmM0eWdNTlJWYy1Ud2IzZ0duRzl4RjVfMHRrSXFlOXFBSEtJWnROWWJ0U2V5Z0wxLUF2T01Lc0szeHVfRFZvY2x3a24xbEJVRjd3SmpFcm10LXY4RmJmOXpqTm8yclVWYWNYUnBIelNtZUpnM2FvVDVoREpkQnkwbnJmM3h1ZlBWYTBVb3FsQmNPaEZGUQ?oc=5
+
+Tweet text:
+
+> SaaS professional services just got a bit more competitive. K-38 Consulting was named the Best Outsourced CFO Firm for SaaS Startups 2026 by AI Research Awards. Someone finally knows where the money is going 📈
