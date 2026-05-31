@@ -661,3 +661,20 @@ Tweet text:
 Tweet text:
 
 > AI agents are ready to take over, but they can't even open a bank account. We need new financial rails before the bots start asking for a loan 🤖
+
+## Tweet posted
+
+- Date/time: 2026-05-31 08:57:45
+- Topic: india
+- Tone: deep thought
+- Time taken: 36.31 seconds
+- Attempts: 2
+- Tweet URL: https://x.com/deepakgupta1/status/2061009224616783958
+- News title: Retail Price Inflation Set To Rise In India Following Fuel Price Hikes - ESM Magazine
+- News source: ESM Magazine
+- News published: 2026-05-31 08:32 UTC
+- News URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxPWXNHejZzcWhzM09aeFY4UDkyX09VUXF4djFLblJSY19SUXVnQ2haY2lRLUNYOVhIazFPVWhjc3p2VjVoNmphN2ZYbkpRSHRJSkRwaC1qZlNSWlo0WkQ5alg3VEVCa2pLYmlfX2ZES2I0cDZJOUF6OVozV3k5S2oxY1htR1Azdzd1ZFoxd0twUS10SEp5dVhnOElMUnpzSUtPQTFZVFNQVEtuUmkweFQ0MVl1RnhTY2ZjbTFEcmF1Zw?oc=5
+
+Tweet text:
+
+> Fuel price hikes are pushing retail price inflation higher in India. It is a stark reminder of how global energy shifts weigh on the daily lives of millions.
