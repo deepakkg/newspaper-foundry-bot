@@ -678,3 +678,20 @@ Tweet text:
 Tweet text:
 
 > Fuel price hikes are pushing retail price inflation higher in India. It is a stark reminder of how global energy shifts weigh on the daily lives of millions.
+
+## Tweet posted
+
+- Date/time: 2026-05-31 09:28:04
+- Topic: cricket
+- Tone: whimsical
+- Time taken: 2.23 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061016854856884539
+- News title: Kallis recognized as 21st century’s greatest - SA Cricket Mag
+- News source: SA Cricket Mag
+- News published: 2026-05-31 09:12 UTC
+- News URL: https://news.google.com/rss/articles/CBMifkFVX3lxTE1VTHFqZWRUV1FuMk9KWFFnOHFaWnRJQWJQd2JrMVRnOEVteGdUa2p5UmF4eHpoMjBXMzVnOXR0bWRRblRGT0lJc3FuTllyVUVkN244UlFfdkJ4TXRabzFVVENNM0t3VkpFRFMyaUdNRkh1T2g5ZC14RlFwQ1V5UQ?oc=5
+
+Tweet text:
+
+> Jacques Kallis has been named the 21st century’s greatest cricket player by SA Cricket Mag. A touch of magic in the record books 🏏
