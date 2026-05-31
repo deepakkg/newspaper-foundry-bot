@@ -6,7 +6,7 @@ import socket
 import sys
 import threading
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 from ollama import ResponseError
@@ -14,6 +14,7 @@ from ollama import ResponseError
 from config import AppConfig, load_config
 from generator import build_client, generate_valid_tweet
 from logger import append_log_entry, build_telegram_summary, build_tweet_log_entry
+from news_fetcher import NewsItem, fetch_latest_news
 from publisher import post_tweet_to_x
 from schedule_guard import RunDecision, decide_scheduled_run
 from telegram_sender import send_telegram_message
@@ -55,6 +56,12 @@ def is_timeout_exception(exc: Exception) -> bool:
     return "timed out" in lowered or "timeout" in lowered
 
 
+def format_news_published_at(news_item: NewsItem) -> str:
+    return news_item.published_at.astimezone(timezone.utc).strftime(
+        "%Y-%m-%d %H:%M UTC"
+    )
+
+
 def run_once(
     *,
     respect_schedule: bool = False,
@@ -91,6 +98,17 @@ def run_once(
 
     topic = random.choice(config.topics)
     tone = random.choice(config.tones)
+    news_item: NewsItem | None = None
+
+    if config.news_enabled:
+        try:
+            news_item = fetch_latest_news(topic, config)
+            if news_item is None:
+                print(f"No recent RSS news found for {topic}. Using generic topic prompt.")
+            else:
+                print(f"Using RSS news: {news_item.title} ({news_item.source})")
+        except Exception as exc:
+            print(f"Warning: RSS news lookup failed for {topic}: {exc}")
 
     stop_event: threading.Event | None = None
     spinner_thread: threading.Thread | None = None
@@ -105,7 +123,11 @@ def run_once(
             spinner_thread.start()
 
         tweet, _generation_elapsed, attempts = generate_valid_tweet(
-            client, config, topic, tone
+            client,
+            config,
+            topic,
+            tone,
+            news_item,
         )
 
         if not config.post_to_x:
@@ -133,6 +155,10 @@ def run_once(
             run_slot=run_slot,
             timestamp=timestamp,
             run_date=run_date,
+            news_title=news_item.title if news_item else None,
+            news_source=news_item.source if news_item else None,
+            news_published_at=format_news_published_at(news_item) if news_item else None,
+            news_url=news_item.link if news_item else None,
         )
         append_log_entry(config.log_file_path, log_entry)
         if config.telegram_bot_token and config.telegram_chat_id:

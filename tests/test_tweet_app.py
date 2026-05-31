@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import tempfile
 import unittest
-from datetime import datetime
+from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -26,6 +26,13 @@ from logger import (
     has_logged_slot,
 )
 from ollama import ResponseError
+from news_fetcher import (
+    NewsItem,
+    build_google_news_rss_url,
+    fetch_latest_news,
+    parse_rss_items,
+    strip_html,
+)
 from publisher import build_post_text
 from schedule_guard import decide_scheduled_run, resolve_current_slot
 from telegram_sender import send_telegram_message
@@ -40,6 +47,10 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "POST_TO_X": "false",
         "RUN_TIMEZONE": "Asia/Kolkata",
         "ENABLED_RUN_SLOTS": "06:00,12:00,18:00,22:00",
+        "NEWS_ENABLED": "false",
+        "NEWS_RECENCY_HOURS": "48",
+        "NEWS_REGION": "US",
+        "NEWS_LANGUAGE": "en",
         "OLLAMA_API_KEY": "",
         "X_API_KEY": "",
         "X_API_KEY_SECRET": "",
@@ -59,6 +70,7 @@ def write_env_file(path: Path, **overrides: str) -> None:
 def load_temp_config(**overrides: str):
     tmp_dir = tempfile.TemporaryDirectory()
     env_path = Path(tmp_dir.name) / ".env"
+    overrides.setdefault("LOG_FILE_PATH", str(Path(tmp_dir.name) / "tweet-history.md"))
     write_env_file(env_path, **overrides)
     config = load_config(env_path)
     return tmp_dir, config
@@ -96,6 +108,22 @@ class GeneratorValidationTests(unittest.TestCase):
             build_topic_hint("saas professional services"),
             "saas professional",
         )
+
+    def test_build_prompt_includes_news_context(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape enterprise workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 12, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are using AI agents to automate multi-step support work.",
+        )
+
+        prompt = build_prompt("ai agents", "serious", 230, 1, news_item)
+
+        self.assertIn("Current news context:", prompt)
+        self.assertIn("AI agents reshape enterprise workflows", prompt)
+        self.assertIn("Example News", prompt)
+        self.assertIn("Do not include the article URL.", prompt)
 
     def test_request_tweet_retries_with_compact_prompt_on_context_error(self) -> None:
         tmp_dir, config = load_temp_config()
@@ -208,7 +236,29 @@ class ConfigTests(unittest.TestCase):
         self.assertTrue(config.post_to_x)
         self.assertEqual(config.run_timezone, "Asia/Kolkata")
         self.assertEqual(config.enabled_run_slots, ["06:00", "12:00", "18:00", "22:00"])
+        self.assertFalse(config.news_enabled)
+        self.assertEqual(config.news_recency_hours, 48)
+        self.assertEqual(config.news_region, "US")
+        self.assertEqual(config.news_language, "en")
         self.assertEqual(config.log_file_path, log_path)
+
+    def test_load_config_accepts_news_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                NEWS_ENABLED="true",
+                NEWS_RECENCY_HOURS="24",
+                NEWS_REGION="US",
+                NEWS_LANGUAGE="en",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.news_enabled)
+        self.assertEqual(config.news_recency_hours, 24)
+        self.assertEqual(config.news_region, "US")
+        self.assertEqual(config.news_language, "en")
 
     def test_load_config_rejects_invalid_enabled_slot(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -230,6 +280,91 @@ class ConfigTests(unittest.TestCase):
                 "TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must both be set",
             ):
                 load_config(env_path)
+
+
+class NewsFetcherTests(unittest.TestCase):
+    def test_build_google_news_rss_url_uses_us_english_settings(self) -> None:
+        url = build_google_news_rss_url("ai agents", language="en", region="US")
+
+        self.assertIn("https://news.google.com/rss/search?", url)
+        self.assertIn("q=ai+agents", url)
+        self.assertIn("hl=en-US", url)
+        self.assertIn("gl=US", url)
+        self.assertIn("ceid=US%3Aen", url)
+
+    def test_strip_html_cleans_rss_description(self) -> None:
+        cleaned = strip_html("<a>Headline</a>&nbsp;&nbsp;<font>Source</font>")
+
+        self.assertEqual(cleaned, "Headline Source")
+
+    def test_parse_rss_items_filters_stale_items(self) -> None:
+        rss = """<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>Fresh AI agents headline</title>
+      <link>https://example.com/fresh</link>
+      <description><![CDATA[Fresh <b>summary</b> text.]]></description>
+      <pubDate>Sun, 31 May 2026 10:00:00 GMT</pubDate>
+      <source url="https://example.com">Example News</source>
+    </item>
+    <item>
+      <title>Old AI agents headline</title>
+      <link>https://example.com/old</link>
+      <description>Old summary text.</description>
+      <pubDate>Thu, 28 May 2026 10:00:00 GMT</pubDate>
+      <source url="https://example.com">Example News</source>
+    </item>
+  </channel>
+</rss>
+"""
+        now = datetime(2026, 5, 31, 12, 0, tzinfo=timezone.utc)
+
+        items = parse_rss_items(rss, now=now, recency_hours=48)
+
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0].title, "Fresh AI agents headline")
+        self.assertEqual(items[0].source, "Example News")
+        self.assertEqual(items[0].summary, "Fresh summary text.")
+
+    def test_fetch_latest_news_returns_latest_usable_item(self) -> None:
+        tmp_dir, config = load_temp_config(NEWS_ENABLED="true")
+        self.addCleanup(tmp_dir.cleanup)
+        rss = """<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>Newer learning headline</title>
+      <link>https://example.com/newer</link>
+      <description>Newer summary text.</description>
+      <pubDate>Sun, 31 May 2026 11:00:00 GMT</pubDate>
+      <source url="https://example.com">Example News</source>
+    </item>
+    <item>
+      <title>Older learning headline</title>
+      <link>https://example.com/older</link>
+      <description>Older summary text.</description>
+      <pubDate>Sun, 31 May 2026 10:00:00 GMT</pubDate>
+      <source url="https://example.com">Example News</source>
+    </item>
+  </channel>
+</rss>
+"""
+        response = MagicMock(text=rss)
+
+        with patch("news_fetcher.requests.get", return_value=response) as mock_get:
+            with patch("news_fetcher.datetime") as mock_datetime:
+                mock_datetime.now.return_value = datetime(
+                    2026, 5, 31, 12, 0, tzinfo=timezone.utc
+                )
+                news_item = fetch_latest_news("learning", config)
+
+        self.assertIsNotNone(news_item)
+        self.assertEqual(news_item.title, "Newer learning headline")
+        request_url = mock_get.call_args.args[0]
+        self.assertIn("q=learning", request_url)
+        self.assertIn("hl=en-US", request_url)
+        response.raise_for_status.assert_called_once()
 
 
 class ScheduleGuardTests(unittest.TestCase):
@@ -335,6 +470,25 @@ class LoggerTests(unittest.TestCase):
         self.assertIn("Topic: coffee", content)
         self.assertTrue(logged)
 
+    def test_build_tweet_log_entry_includes_news_metadata(self) -> None:
+        entry = build_tweet_log_entry(
+            topic="ai agents",
+            tone="serious",
+            tweet_text="AI agents are moving from demos into support queues.",
+            time_taken_seconds=3.21,
+            attempts=1,
+            tweet_url="https://x.com/example/status/2",
+            news_title="AI agents reshape support workflows",
+            news_source="Example News",
+            news_published_at="2026-05-31 10:00 UTC",
+            news_url="https://example.com/ai-agents",
+        )
+
+        self.assertIn("News title: AI agents reshape support workflows", entry)
+        self.assertIn("News source: Example News", entry)
+        self.assertIn("News published: 2026-05-31 10:00 UTC", entry)
+        self.assertIn("News URL: https://example.com/ai-agents", entry)
+
     def test_build_telegram_summary_excludes_full_log_and_url(self) -> None:
         summary = build_telegram_summary(
             topic="coffee",
@@ -420,6 +574,135 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertNotIn("Tweet URL", telegram_text)
         self.assertNotIn("tweet-slot", telegram_text)
         self.assertIn("Tweet posted and logged.", buffer.getvalue())
+
+    def test_run_once_uses_rss_news_when_available(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+        published = MagicMock(url="https://x.com/example/status/2")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "fetch_latest_news",
+                    return_value=news_item,
+                ) as mock_fetch:
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("AI agents are moving into support queues.", 1.0, 1),
+                    ) as mock_generate:
+                        with patch.object(
+                            tweet_generator, "post_tweet_to_x", return_value=published
+                        ):
+                            with patch.object(
+                                tweet_generator, "send_telegram_message"
+                            ) as mock_telegram:
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_fetch.assert_called_once()
+        self.assertIs(mock_generate.call_args.args[4], news_item)
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("News title: AI agents reshape support workflows", log_content)
+        self.assertIn("News URL: https://example.com/ai-agents", log_content)
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Topic:", telegram_text)
+        self.assertIn("Tone:", telegram_text)
+        self.assertIn("AI agents are moving into support queues.", telegram_text)
+        self.assertNotIn("AI agents reshape support workflows", telegram_text)
+        self.assertNotIn("https://example.com/ai-agents", telegram_text)
+        self.assertIn("Using RSS news:", buffer.getvalue())
+
+    def test_run_once_falls_back_when_rss_has_no_recent_news(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/3")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator, "fetch_latest_news", return_value=None):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Coffee is back.", 1.0, 1),
+                    ) as mock_generate:
+                        with patch.object(
+                            tweet_generator, "post_tweet_to_x", return_value=published
+                        ):
+                            with patch("sys.stdout", buffer):
+                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIsNone(mock_generate.call_args.args[4])
+        self.assertIn("Using generic topic prompt", buffer.getvalue())
+
+    def test_run_once_falls_back_when_rss_lookup_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/4")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "fetch_latest_news",
+                    side_effect=RuntimeError("RSS timed out"),
+                ):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Learning still rewards curiosity.", 1.0, 1),
+                    ) as mock_generate:
+                        with patch.object(
+                            tweet_generator, "post_tweet_to_x", return_value=published
+                        ):
+                            with patch("sys.stdout", buffer):
+                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIsNone(mock_generate.call_args.args[4])
+        self.assertIn("Warning: RSS news lookup failed", buffer.getvalue())
+        self.assertNotIn(
+            "News title:", config.log_file_path.read_text(encoding="utf-8")
+        )
 
     def test_run_once_keeps_success_when_telegram_send_fails(self) -> None:
         buffer = StringIO()

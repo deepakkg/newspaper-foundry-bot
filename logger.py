@@ -28,6 +28,10 @@ def build_tweet_log_entry(
     run_slot: str | None = None,
     timestamp: str | None = None,
     run_date: str | None = None,
+    news_title: str | None = None,
+    news_source: str | None = None,
+    news_published_at: str | None = None,
+    news_url: str | None = None,
 ) -> str:
     resolved_timestamp = timestamp or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     resolved_run_date = run_date or resolved_timestamp[:10]
@@ -46,6 +50,21 @@ def build_tweet_log_entry(
             f"- Time taken: {time_taken_seconds:.2f} seconds",
             f"- Attempts: {attempts}",
             f"- Tweet URL: {tweet_url}",
+        ]
+    )
+    if news_title:
+        lines.extend(
+            [
+                f"- News title: {news_title}",
+                f"- News source: {news_source or 'Unknown'}",
+            ]
+        )
+        if news_published_at:
+            lines.append(f"- News published: {news_published_at}")
+        if news_url:
+            lines.append(f"- News URL: {news_url}")
+    lines.extend(
+        [
             "",
             "Tweet text:",
             "",
@@ -96,6 +115,10 @@ def append_tweet_log(
     run_slot: str | None = None,
     timestamp: str | None = None,
     run_date: str | None = None,
+    news_title: str | None = None,
+    news_source: str | None = None,
+    news_published_at: str | None = None,
+    news_url: str | None = None,
 ) -> None:
     log_file_path.parent.mkdir(parents=True, exist_ok=True)
     entry = build_tweet_log_entry(
@@ -108,6 +131,10 @@ def append_tweet_log(
         run_slot=run_slot,
         timestamp=timestamp,
         run_date=run_date,
+        news_title=news_title,
+        news_source=news_source,
+        news_published_at=news_published_at,
+        news_url=news_url,
     )
     append_log_entry(log_file_path, entry)
 

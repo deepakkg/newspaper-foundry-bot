@@ -1,6 +1,6 @@
 # Gemma Tweet Bot
 
-This bot generates short tweets with Ollama, posts them to X, records each successful post in GitHub, and sends a short Telegram summary.
+This bot fetches recent topic news from Google News RSS, generates short tweets with Ollama, posts them to X, records each successful post in GitHub, and sends a short Telegram summary.
 
 ## GitHub Actions schedule
 
@@ -36,6 +36,10 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `MAX_TWEET_CHARS`
 - `MAX_RETRIES`
 - `OLLAMA_TIMEOUT_SECONDS`
+- `NEWS_ENABLED`
+- `NEWS_RECENCY_HOURS`
+- `NEWS_REGION`
+- `NEWS_LANGUAGE`
 - `POST_TO_X`
 - `X_USERNAME`
 - `RUN_TIMEZONE`
@@ -48,6 +52,10 @@ OLLAMA_MODEL=gemma4:31b-cloud
 MAX_TWEET_CHARS=230
 MAX_RETRIES=5
 OLLAMA_TIMEOUT_SECONDS=120
+NEWS_ENABLED=true
+NEWS_RECENCY_HOURS=48
+NEWS_REGION=US
+NEWS_LANGUAGE=en
 POST_TO_X=true
 RUN_TIMEZONE=Asia/Kolkata
 ```
@@ -78,6 +86,8 @@ Run with the GitHub schedule guard:
 GitHub Actions writes successful posts to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
 
 To view the log in GitHub, switch the branch selector from `main` to `tweet-history` and open `tweet-history.md`.
+
+When a recent RSS item is used, the log also includes the news title, source, published time, and URL.
 
 For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 

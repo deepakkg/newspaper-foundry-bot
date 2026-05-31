@@ -29,6 +29,10 @@ jobs:
       MAX_TWEET_CHARS: ${{ vars.MAX_TWEET_CHARS || '230' }}
       MAX_RETRIES: ${{ vars.MAX_RETRIES || '5' }}
       OLLAMA_TIMEOUT_SECONDS: ${{ vars.OLLAMA_TIMEOUT_SECONDS || '120' }}
+      NEWS_ENABLED: ${{ vars.NEWS_ENABLED || 'true' }}
+      NEWS_RECENCY_HOURS: ${{ vars.NEWS_RECENCY_HOURS || '48' }}
+      NEWS_REGION: ${{ vars.NEWS_REGION || 'US' }}
+      NEWS_LANGUAGE: ${{ vars.NEWS_LANGUAGE || 'en' }}
       POST_TO_X: ${{ vars.POST_TO_X || 'true' }}
       X_API_KEY: ${{ secrets.X_API_KEY }}
       X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}

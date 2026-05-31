@@ -35,6 +35,10 @@ class AppConfig:
     log_file_path: Path
     run_timezone: str
     enabled_run_slots: list[str]
+    news_enabled: bool
+    news_recency_hours: int
+    news_region: str
+    news_language: str
 
 
 def _parse_csv_list(value: str, name: str) -> list[str]:
@@ -88,6 +92,13 @@ def _parse_timezone(value: str, name: str) -> str:
     return normalized
 
 
+def _parse_non_empty_text(value: str, name: str) -> str:
+    normalized = value.strip()
+    if not normalized:
+        raise ValueError(f"{name} must not be empty.")
+    return normalized
+
+
 def _read_required_env(name: str) -> str:
     value = os.getenv(name, "").strip()
     if not value:
@@ -130,6 +141,14 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     enabled_run_slots = _parse_time_list(
         os.getenv("ENABLED_RUN_SLOTS", "06:00,12:00,18:00,22:00"),
         "ENABLED_RUN_SLOTS",
+    )
+    news_enabled = _parse_bool(os.getenv("NEWS_ENABLED", "true"), "NEWS_ENABLED")
+    news_recency_hours = _parse_positive_int(
+        os.getenv("NEWS_RECENCY_HOURS", "48"), "NEWS_RECENCY_HOURS"
+    )
+    news_region = _parse_non_empty_text(os.getenv("NEWS_REGION", "US"), "NEWS_REGION")
+    news_language = _parse_non_empty_text(
+        os.getenv("NEWS_LANGUAGE", "en"), "NEWS_LANGUAGE"
     )
     log_file_path = Path(log_file_raw)
     if not log_file_path.is_absolute():
@@ -183,4 +202,8 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         log_file_path=log_file_path,
         run_timezone=run_timezone,
         enabled_run_slots=enabled_run_slots,
+        news_enabled=news_enabled,
+        news_recency_hours=news_recency_hours,
+        news_region=news_region,
+        news_language=news_language,
     )

@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import re
 import time
+from datetime import timezone
 
 from ollama import Client, ResponseError
 
 from config import AppConfig
+from news_fetcher import NewsItem
 
 
 EMOJI_PATTERN = re.compile(
@@ -116,8 +118,29 @@ def build_topic_hint(topic: str) -> str:
     return " ".join(chosen_tokens)
 
 
+def format_news_context(news_item: NewsItem | None) -> str:
+    if news_item is None:
+        return ""
+
+    published_at = news_item.published_at.astimezone(timezone.utc).strftime(
+        "%Y-%m-%d %H:%M UTC"
+    )
+    summary = news_item.summary or news_item.title
+    return f"""
+Current news context:
+- Article title: {news_item.title}
+- Source: {news_item.source}
+- Published: {published_at}
+- Key point: {summary}
+"""
+
+
 def build_prompt(
-    topic: str, tone: str, max_tweet_chars: int, attempt_number: int
+    topic: str,
+    tone: str,
+    max_tweet_chars: int,
+    attempt_number: int,
+    news_item: NewsItem | None = None,
 ) -> str:
     retry_block = ""
     if attempt_number in (2, 3):
@@ -138,8 +161,18 @@ Fallback:
 - One or two short sentences, max {max_tweet_chars} characters.
 """
 
+    news_context = format_news_context(news_item)
+    news_rules = ""
+    if news_item is not None:
+        news_rules = """
+- Base the tweet on the current news context.
+- Do not invent facts beyond the provided news context.
+- Do not include the article URL.
+"""
+
     return f"""Write one tweet about: {topic}
 Tone: {tone}
+{news_context}
 
 Rules:
 - Stay clearly about the topic.
@@ -150,6 +183,7 @@ Rules:
 - Use short, clean sentences.
 - Keep tone in the wording, not as filler.
 - Max {max_tweet_chars} characters.
+{news_rules}
 
 Do not use:
 - Hashtags, labels, or quotes.
@@ -165,24 +199,42 @@ Output only the tweet text.
 
 
 def build_compact_prompt(
-    topic: str, tone: str, max_tweet_chars: int, attempt_number: int
+    topic: str,
+    tone: str,
+    max_tweet_chars: int,
+    attempt_number: int,
+    news_item: NewsItem | None = None,
 ) -> str:
     retry_hint = ""
     if attempt_number > 1:
         retry_hint = " Previous attempt was invalid. Be more direct."
 
+    news_hint = ""
+    if news_item is not None:
+        news_hint = (
+            f" Use this news: {news_item.title} from {news_item.source}. "
+            f"Key point: {news_item.summary or news_item.title}."
+        )
+
     return (
         f"Write one tweet about {topic}. Tone: {tone}. "
+        f"{news_hint}"
         f"Stay on topic, sound human, use one concrete detail, and keep it under {max_tweet_chars} characters."
         " No hashtags, no labels, no quotes, no filler, no meta commentary."
         f"{retry_hint} Output only the tweet text."
     )
 
 
-def build_minimal_prompt(topic: str, tone: str, max_tweet_chars: int) -> str:
+def build_minimal_prompt(
+    topic: str,
+    tone: str,
+    max_tweet_chars: int,
+    news_item: NewsItem | None = None,
+) -> str:
     topic_hint = build_topic_hint(topic)
+    news_hint = f" Latest news: {news_item.title}." if news_item else ""
     return (
-        f"Tweet about {topic_hint}. Tone: {tone}. "
+        f"Tweet about {topic_hint}.{news_hint} Tone: {tone}. "
         f"Under {max_tweet_chars} chars. Plain text only."
     )
 
@@ -325,9 +377,20 @@ def is_context_length_error(exc: ResponseError) -> bool:
 
 
 def request_tweet(
-    client: Client, config: AppConfig, topic: str, tone: str, attempt_number: int
+    client: Client,
+    config: AppConfig,
+    topic: str,
+    tone: str,
+    attempt_number: int,
+    news_item: NewsItem | None = None,
 ) -> str:
-    prompt = build_prompt(topic, tone, config.max_tweet_chars, attempt_number)
+    prompt = build_prompt(
+        topic,
+        tone,
+        config.max_tweet_chars,
+        attempt_number,
+        news_item,
+    )
     try:
         response = client.generate(
             model=config.ollama_model,
@@ -337,7 +400,7 @@ def request_tweet(
         if not is_context_length_error(exc):
             raise
         compact_prompt = build_compact_prompt(
-            topic, tone, config.max_tweet_chars, attempt_number
+            topic, tone, config.max_tweet_chars, attempt_number, news_item
         )
         try:
             response = client.generate(
@@ -349,7 +412,12 @@ def request_tweet(
                 raise
             response = client.generate(
                 model=config.ollama_model,
-                prompt=build_minimal_prompt(topic, tone, config.max_tweet_chars),
+                prompt=build_minimal_prompt(
+                    topic,
+                    tone,
+                    config.max_tweet_chars,
+                    news_item,
+                ),
             )
     tweet = response.get("response")
     if not isinstance(tweet, str) or not tweet.strip():
@@ -362,14 +430,18 @@ def request_tweet(
 
 
 def generate_valid_tweet(
-    client: Client, config: AppConfig, topic: str, tone: str
+    client: Client,
+    config: AppConfig,
+    topic: str,
+    tone: str,
+    news_item: NewsItem | None = None,
 ) -> tuple[str, float, int]:
     original_topic, topic_tokens = normalize_topic(topic)
     last_reason = "unknown validation failure"
     start = time.perf_counter()
 
     for attempt in range(1, config.max_retries + 1):
-        tweet = request_tweet(client, config, original_topic, tone, attempt)
+        tweet = request_tweet(client, config, original_topic, tone, attempt, news_item)
         failure_reason = validate_tweet(
             tweet,
             original_topic,
