@@ -729,3 +729,20 @@ Tweet text:
 Tweet text:
 
 > Remember when OpenAI was only about text? Now they are hiring to build general-purpose robots. Things are moving fast. 🤖
+
+## Tweet posted
+
+- Date/time: 2026-06-01 12:16:19
+- Topic: jammu
+- Tone: witty
+- Time taken: 1.60 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061421582740857346
+- News title: LG Sinha Gives Emotional Push to Anti-Drug Campaign - Kashmir Observer
+- News source: Kashmir Observer
+- News published: 2026-06-01 11:30 UTC
+- News URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxPTm03bkI1YXMzS3V3ZmJSUGZ4a3cwWDRIZDVLT3UybHRyNHdRbkhhVk1XOVh0cHNZbE8yUUlvd09yajJNTThpYjJldTFqQ3pWNG9ZVjJwekxUSm9Kcmh0NHE3Q2o0VUN1YURqSmhrZDFfc2ZScW1JVTVyc0tNSWlyNV9md24wSk16RmdjTFZsZUxIeUVtd0E?oc=5
+
+Tweet text:
+
+> LG Sinha is bringing the feels to the anti-drug campaign in Jammu. Turns out a little emotion goes a long way when fighting addiction. 🏔️
