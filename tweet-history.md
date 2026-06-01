@@ -746,3 +746,20 @@ Tweet text:
 Tweet text:
 
 > LG Sinha is bringing the feels to the anti-drug campaign in Jammu. Turns out a little emotion goes a long way when fighting addiction. 🏔️
+
+## Tweet posted
+
+- Date/time: 2026-06-01 13:46:02
+- Topic: anthropic
+- Tone: serious
+- Time taken: 3.56 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061444160725430386
+- News title: Anthropic killing all software companies? This chart says nope. - Yahoo Finance UK
+- News source: Yahoo Finance UK
+- News published: 2026-06-01 13:42 UTC
+- News URL: https://news.google.com/rss/articles/CBMirwFBVV95cUxORnd2czZGdk1oLTlRWEVocFFFa2pFZXFIUE5IQVZibWxkRWV4VVp4WUxUdTltUWxFSGlTbm40TG9qdE9sS01RaE5iOFVuQXVaRjQ5eUZtM1pDU2VRR3hLbUJzdmE4dXBQdktrNGRVbDByM3ZVX3dRcFRBeFI0QmtadENkY2FWOTZvYWJCeHR3Q3ZyRkQ3N01Ga3FGaFVxQWJBTjBzc1hyRjRiRU9zUVVr?oc=5
+
+Tweet text:
+
+> Recent analysis from Yahoo Finance UK suggests that Anthropic is not eliminating all software companies. Data in the reported chart contradicts the idea that the company is killing off the software industry.
