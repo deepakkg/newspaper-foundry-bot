@@ -503,6 +503,28 @@ class LoggerTests(unittest.TestCase):
         self.assertIn("Time taken: 12.34 seconds", summary)
         self.assertIn("Attempts: 2", summary)
         self.assertIn("Coffee is back.", summary)
+        self.assertNotIn("News reference", summary)
+        self.assertNotIn("Tweet URL", summary)
+        self.assertNotIn("tweet-slot", summary)
+
+    def test_build_telegram_summary_includes_news_reference_when_provided(self) -> None:
+        summary = build_telegram_summary(
+            topic="ai agents",
+            tone="serious",
+            tweet_text="AI agents are moving into support queues.",
+            time_taken_seconds=8.5,
+            attempts=1,
+            news_title="AI agents reshape support workflows",
+            news_source="Example News",
+            news_published_at="2026-05-31 10:00 UTC",
+            news_url="https://example.com/ai-agents",
+        )
+
+        self.assertIn("News reference:", summary)
+        self.assertIn("AI agents reshape support workflows (Example News)", summary)
+        self.assertIn("Published: 2026-05-31 10:00 UTC", summary)
+        self.assertIn("https://example.com/ai-agents", summary)
+        self.assertIn("AI agents are moving into support queues.", summary)
         self.assertNotIn("Tweet URL", summary)
         self.assertNotIn("tweet-slot", summary)
 
@@ -571,6 +593,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("Tone:", telegram_text)
         self.assertIn("Attempts: 2", telegram_text)
         self.assertIn("Coffee is back.", telegram_text)
+        self.assertNotIn("News reference", telegram_text)
         self.assertNotIn("Tweet URL", telegram_text)
         self.assertNotIn("tweet-slot", telegram_text)
         self.assertIn("Tweet posted and logged.", buffer.getvalue())
@@ -629,8 +652,11 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("Topic:", telegram_text)
         self.assertIn("Tone:", telegram_text)
         self.assertIn("AI agents are moving into support queues.", telegram_text)
-        self.assertNotIn("AI agents reshape support workflows", telegram_text)
-        self.assertNotIn("https://example.com/ai-agents", telegram_text)
+        self.assertIn("News reference:", telegram_text)
+        self.assertIn("AI agents reshape support workflows", telegram_text)
+        self.assertIn("Example News", telegram_text)
+        self.assertIn("2026-05-31 10:00 UTC", telegram_text)
+        self.assertIn("https://example.com/ai-agents", telegram_text)
         self.assertIn("Using RSS news:", buffer.getvalue())
 
     def test_run_once_falls_back_when_rss_has_no_recent_news(self) -> None:

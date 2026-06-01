@@ -89,18 +89,37 @@ def build_telegram_summary(
     tweet_text: str,
     time_taken_seconds: float,
     attempts: int,
+    news_title: str | None = None,
+    news_source: str | None = None,
+    news_url: str | None = None,
+    news_published_at: str | None = None,
 ) -> str:
-    return "\n".join(
+    lines = [
+        f"Topic: {topic}",
+        f"Tone: {tone}",
+        f"Time taken: {time_taken_seconds:.2f} seconds",
+        f"Attempts: {attempts}",
+    ]
+    if news_title:
+        lines.extend(
+            [
+                "",
+                "News reference:",
+                f"{news_title} ({news_source or 'Unknown'})",
+            ]
+        )
+        if news_published_at:
+            lines.append(f"Published: {news_published_at}")
+        if news_url:
+            lines.append(news_url)
+    lines.extend(
         [
-            f"Topic: {topic}",
-            f"Tone: {tone}",
-            f"Time taken: {time_taken_seconds:.2f} seconds",
-            f"Attempts: {attempts}",
             "",
             "Tweet text:",
             tweet_text,
         ]
     )
+    return "\n".join(lines)
 
 
 def append_tweet_log(

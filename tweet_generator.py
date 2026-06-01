@@ -171,6 +171,12 @@ def run_once(
                         tweet_text=tweet,
                         time_taken_seconds=elapsed,
                         attempts=attempts,
+                        news_title=news_item.title if news_item else None,
+                        news_source=news_item.source if news_item else None,
+                        news_published_at=(
+                            format_news_published_at(news_item) if news_item else None
+                        ),
+                        news_url=news_item.link if news_item else None,
                     ),
                 )
             except Exception as exc:

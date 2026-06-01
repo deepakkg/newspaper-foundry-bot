@@ -97,4 +97,5 @@ Telegram receives only:
 - Tone
 - Total time taken
 - Number of generation attempts
+- News reference, when RSS news was used
 - Full tweet text
