@@ -797,3 +797,20 @@ Tweet text:
 Tweet text:
 
 > The software industry loves a good benchmark. Q1 results are in, and now everyone is using BILL to see how finance and HR stocks actually stack up. 📊
+
+## Tweet posted
+
+- Date/time: 2026-06-01 18:23:22
+- Topic: anthropic
+- Tone: nostalgic
+- Time taken: 5.16 seconds
+- Attempts: 3
+- Tweet URL: https://x.com/deepakgupta1/status/2061513953016959040
+- News title: Anthropic, now atop the AI bubble, files for its IPO - The Register
+- News source: The Register
+- News published: 2026-06-01 18:12 UTC
+- News URL: https://news.google.com/rss/articles/CBMiqwFBVV95cUxONGFONjY4c21faEI1SEE3WkxMOUNvbS02X1k3dmFKb3Q5d0d3dnN6cm1zcjliSUE0eXJBdVU5eGtsTmNnZ2pRZUFISmVVNmNPUGpDOU5UNFBOR0NyajdHQ0VlYk9XV0VMbGhrUEF6SkhraW5IdmNYeUV0bFlPcVBELWgzN0RCWC1UMENRN29uZDRibjdMeHMtMHh4elJkWkhOR0k2YlNwV055RlU?oc=5
+
+Tweet text:
+
+> Remember when Anthropic was just a small group of researchers? Now they are filing for an IPO. Things move fast 🕰️
