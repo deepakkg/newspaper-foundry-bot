@@ -848,3 +848,20 @@ Tweet text:
 Tweet text:
 
 > Generative AI is transforming how industry leaders operate. Moody’s is hosting a Q&A session on June 8 to share their strategy. Now is the time to refine your own approach to this technology. 🚀
+
+## Tweet posted
+
+- Date/time: 2026-06-02 19:56:35
+- Topic: ai agents
+- Tone: deep thought
+- Time taken: 1.63 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061899799461306639
+- News title: When AI becomes part of the workflow: Redesigning how software gets built - McKinsey & Company
+- News source: McKinsey & Company
+- News published: 2026-06-02 19:49 UTC
+- News URL: https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVTV1RUN1QkUyLTR2YVNmcEhqaFkzdHotOEVWd0loMndRRVFFTnNWd3JlR0c2RzRQN25zLWtBR2ZleHVaaVpwZlllb01nanppOVR5Smo2S3VkTHJxWExTX28tYzU1U1ZNX1pwcEhyM0tEay14Zy1hZG44ZzExQ1ExRFB2Qk11Z3FyaUQzZDVaNVNpd0lLMkIyNVN4NnVpZzhvMFgwR1pwZVlNcmhtUkNVQU80VldmY1hWVzlRQjlXZTBEYnRTSnhxQ0xDQTY4N1RIQkRWSU5R?oc=5
+
+Tweet text:
+
+> AI agents are moving beyond simple tools. They are becoming part of the workflow. This shift requires a fundamental redesign of how software gets built.
