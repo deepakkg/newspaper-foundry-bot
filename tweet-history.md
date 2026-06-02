@@ -831,3 +831,20 @@ Tweet text:
 Tweet text:
 
 > AI is citing LinkedIn as a top source. Now our SaaS professional services implementation guides will be written by a bot that learned everything from a guy who describes himself as a visionary. 🤖
+
+## Tweet posted
+
+- Date/time: 2026-06-02 11:02:57
+- Topic: generative ai
+- Tone: motivational
+- Time taken: 13.42 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061765508953674106
+- News title: Moody’s to Host Q&A Session on Generative AI Strategy on June 8, 2026 - Business Wire
+- News source: Business Wire
+- News published: 2026-06-02 11:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZlNYV0pXazNSUGtrNjhtODY4dG42S0VYcnV2ZzU4MzktZnVwQ3hnLWNJQURYMHAzc1owbkZaRml0Mi1Qd043VjU4NG1STHhrczROSzNtMkMtQWNXdkNrOXhxajF0dDl5blpXS19FZm5RT2p6b21QSXRrS3RuYWFRTjVzZkRSSmF2c3Y3UVRrbld5TnBSR2pvVDBBSy00UDBWSFFfSUpmTGhKNWtkSGRDLThyYjBkci1jLUNwNkVJTDU?oc=5
+
+Tweet text:
+
+> Generative AI is transforming how industry leaders operate. Moody’s is hosting a Q&A session on June 8 to share their strategy. Now is the time to refine your own approach to this technology. 🚀
