@@ -814,3 +814,20 @@ Tweet text:
 Tweet text:
 
 > Remember when Anthropic was just a small group of researchers? Now they are filing for an IPO. Things move fast 🕰️
+
+## Tweet posted
+
+- Date/time: 2026-06-02 05:08:43
+- Topic: saas professional services
+- Tone: funny
+- Time taken: 1.78 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2061676361983352965
+- News title: LinkedIn ranks second among AI's most cited sources - adnews.com.au
+- News source: adnews.com.au
+- News published: 2026-06-02 01:28 UTC
+- News URL: https://news.google.com/rss/articles/CBMiigFBVV95cUxNdWpsVi0wVndyeWZyS2wwNXQ3Ny1MUlRndC1naE9xaFo4c0UwSVp1ZWZHb0E1VDJfUERvckJEcFkxUFczb3JRUFFhY0FIbDZlMlpaTy12aGwzX0hSRjQtU0trYUJrbTlyZFVoa2g2X0xyRDVGLXRZdlNpMENYY0NqSW8xU3lMUVVueXc?oc=5
+
+Tweet text:
+
+> AI is citing LinkedIn as a top source. Now our SaaS professional services implementation guides will be written by a bot that learned everything from a guy who describes himself as a visionary. 🤖
