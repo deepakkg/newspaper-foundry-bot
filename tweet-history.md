@@ -912,3 +912,20 @@ Tweet text:
 Tweet text:
 
 > SaaS must adapt to stay successful.
+
+## Tweet posted
+
+- Date/time: 2026-06-03 20:02:26
+- Topic: generative ai
+- Tone: funny
+- Time taken: 1.74 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062263659078754375
+- News title: Morocco’s Education Council Urges National Framework for AI in Schools - Morocco World News
+- News source: Morocco World News
+- News published: 2026-06-03 19:41 UTC
+- News URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxOVGZGVWxYRGUzVjV3Z1gxQlFxS3BKLXRSakVHOUZYQTdYWkRxMXY1Z2tNQ1F3dktQUzY1bDI2eFh1cmJhcGE3dXdFbWttaWVISkdtZlZwT2pLcmJsSm54TEhpSENpeVJiWGUwRGRIbkxud1BKOFM5dFgtZUdVVkFmRUpqRldrVzFmLWt2UXctWUpCMktXZ1Nxa2NHdUQ3NE5oT3M2YlowaS1iV1JyZ1FDQnhhaFlEWENtdUE?oc=5
+
+Tweet text:
+
+> Morocco wants a national framework for generative AI in schools. Teachers are about to find out that every single essay was written by the same bot 🤖
