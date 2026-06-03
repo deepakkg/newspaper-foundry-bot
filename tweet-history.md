@@ -878,3 +878,20 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services bridge the gap. They turn a complex deployment into a fast rollout. 🛠️
+
+## Tweet posted
+
+- Date/time: 2026-06-03 11:26:25
+- Topic: anthropic
+- Tone: nostalgic
+- Time taken: 1.61 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062133801002680650
+- News title: Anthropic Funding Pushed Startup Investment To Near-Record Levels In May As Exit Market Reopened - Crunchbase News
+- News source: Crunchbase News
+- News published: 2026-06-03 11:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMifkFVX3lxTFBzQXg5MUpuUXRsUGtXRDhSeTR6bkpUTWZlUVBiaHpwcXNfOTBtS2JmNGMxRnFldHdDY1VsZkNTdlc3RzZOWm9hLTUtRFdISDA5VXNBRWpJVzR4ak5RTnZYRmdJU055ZkFDc1dselQ4OWNzMTNyTkZqQ2V6bkloUQ?oc=5
+
+Tweet text:
+
+> Remember when the startup world felt quiet. Now Anthropic funding is pushing May investments to near-record levels. Things have changed fast 🕰️
