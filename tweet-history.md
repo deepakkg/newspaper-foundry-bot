@@ -997,3 +997,20 @@ Tweet text:
 Tweet text:
 
 > Software stocks are playing a game of hide and seek with their prices. Despite recent dips, Schroders says they stay expensive. Fundamental valuation remains the North Star for the software industry 🌟
+
+## Tweet posted
+
+- Date/time: 2026-06-04 17:17:07
+- Topic: jammu
+- Tone: deep thought
+- Time taken: 2.10 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062584446474211573
+- News title: ‘Inadequate Reactive Power Leaves Jammu Kashmir Grid Gasping for Voltage Stability’ - Kashmir Life
+- News source: Kashmir Life
+- News published: 2026-06-04 16:58 UTC
+- News URL: https://news.google.com/rss/articles/CBMiswFBVV95cUxPcWFha2FzUHlVX2puMHN5cGJlMHVnVVFVbHY0YUNpWU5xY2dYN0N0ZS0tUFk5bXdId2YyZHdEMnhYZndDMVFWS0s5VFFlU1NxN01NeHo5b0tCaUs1M0xlMDBsTEt2M296MW9HZU52TE5nSFlmYnBtM2xuc0NfbVlPQVowZmdBb2ZyTi1UckkxN1htdGpFMGt1cGhhZFhqSjJuaUZyZl9uWVdqTmhLd0hTZE9Jcw?oc=5
+
+Tweet text:
+
+> Infrastructure is only as strong as its weakest link. The Jammu Kashmir grid is gasping for voltage stability because of inadequate reactive power. Hard to build a future when the basic current is unstable.
