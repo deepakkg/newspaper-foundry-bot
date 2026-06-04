@@ -99,3 +99,5 @@ Telegram receives only:
 - Number of generation attempts
 - News reference, when RSS news was used
 - Full tweet text
+
+If a run fails before posting a tweet, the workflow exits cleanly. When Telegram is configured, the bot sends a failure summary with the topic, tone, news reference when available, and the error message. Failed runs are not written to tweet history.

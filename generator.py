@@ -81,6 +81,28 @@ GENERIC_PATTERNS = (
     re.compile(r"\bdefinitely\b"),
     re.compile(r"\boften\b"),
 )
+PSEUDO_PROFOUND_PHRASES = (
+    "the real lesson",
+    "the bigger lesson",
+    "the hidden truth",
+    "what it really means",
+    "what this teaches us",
+    "reminds us that",
+    "in a world where",
+    "the future belongs to",
+    "the true power",
+    "true power lies",
+    "the real magic",
+    "chaos into clarity",
+    "complexity into clarity",
+    "turn uncertainty into",
+    "turns uncertainty into",
+)
+PSEUDO_PROFOUND_PATTERNS = (
+    re.compile(r"\b(?:it'?s|it is|this is)\s+not\s+about\b.{0,100}\babout\b"),
+    re.compile(r"\bisn'?t\s+about\b.{0,100}\bit'?s\s+about\b"),
+    re.compile(r"\bnot\s+just\s+about\b.{0,100}\bit'?s\s+about\b"),
+)
 
 
 def build_client(config: AppConfig) -> Client:
@@ -176,12 +198,15 @@ Tone: {tone}
 
 Rules:
 - Stay clearly about the topic.
+- Write like Deepak: direct, practical, concise, and not overly polished.
+- Lead with a clear point of view.
 - Sound human, specific, and restrained.
-- Prefer clarity over cleverness.
+- Prefer a specific observation over clever wording.
 - Use the topic name directly or make the reference unmistakable.
 - Include one concrete detail tied to the topic.
 - Use short, clean sentences.
 - Keep tone in the wording, not as filler.
+- Do not force first person unless it sounds natural.
 - Max {max_tweet_chars} characters.
 {news_rules}
 
@@ -189,6 +214,8 @@ Do not use:
 - Hashtags, labels, or quotes.
 - Generic filler, work-stress drift, or meta commentary.
 - "Imagine this", "Picture a world", or "In a world where".
+- Pseudo-profound framing like "It's not about X, it's about Y" or "The real lesson".
+- Forced inspiration, grand lessons, or performative wisdom.
 - More than one emoji or ellipsis.
 - Comma-heavy chains.
 - Filler like "just", "kind of", "sort of", "my brain", "feels like static", "really feels", "seriously", or "honestly".
@@ -219,8 +246,9 @@ def build_compact_prompt(
     return (
         f"Write one tweet about {topic}. Tone: {tone}. "
         f"{news_hint}"
-        f"Stay on topic, sound human, use one concrete detail, and keep it under {max_tweet_chars} characters."
-        " No hashtags, no labels, no quotes, no filler, no meta commentary."
+        "Write like Deepak: direct, practical, concise, and not overly polished. "
+        f"Stay on topic, use one concrete detail, and keep it under {max_tweet_chars} characters."
+        " No hashtags, no labels, no quotes, no filler, no meta commentary, no pseudo-profound framing."
         f"{retry_hint} Output only the tweet text."
     )
 
@@ -235,7 +263,7 @@ def build_minimal_prompt(
     news_hint = f" Latest news: {news_item.title}." if news_item else ""
     return (
         f"Tweet about {topic_hint}.{news_hint} Tone: {tone}. "
-        f"Under {max_tweet_chars} chars. Plain text only."
+        f"Under {max_tweet_chars} chars. Direct, practical. No fake insight."
     )
 
 
@@ -283,7 +311,17 @@ def get_style_issue(text: str) -> str | None:
     if lowered.startswith(("my brain", "feels like")):
         return "bad filler opening"
 
+    if is_pseudo_profound(text):
+        return "pseudo-profound phrasing"
+
     return None
+
+
+def is_pseudo_profound(text: str) -> bool:
+    lowered = text.lower()
+    if any(phrase in lowered for phrase in PSEUDO_PROFOUND_PHRASES):
+        return True
+    return any(pattern.search(lowered) for pattern in PSEUDO_PROFOUND_PATTERNS)
 
 
 def is_on_topic(tweet: str, original_topic: str, topic_tokens: list[str]) -> bool:

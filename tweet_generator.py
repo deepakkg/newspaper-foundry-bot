@@ -13,7 +13,12 @@ from ollama import ResponseError
 
 from config import AppConfig, load_config
 from generator import build_client, generate_valid_tweet
-from logger import append_log_entry, build_telegram_summary, build_tweet_log_entry
+from logger import (
+    append_log_entry,
+    build_failure_telegram_summary,
+    build_telegram_summary,
+    build_tweet_log_entry,
+)
 from news_fetcher import NewsItem, fetch_latest_news
 from publisher import post_tweet_to_x
 from schedule_guard import RunDecision, decide_scheduled_run
@@ -62,6 +67,46 @@ def format_news_published_at(news_item: NewsItem) -> str:
     )
 
 
+def describe_failure(exc: Exception, config: AppConfig | None = None) -> str:
+    if isinstance(exc, ResponseError):
+        return f"Ollama request failed: {exc}"
+    if isinstance(exc, TimeoutError) and config:
+        return format_timeout_message(config)
+    if is_timeout_exception(exc) and config:
+        return format_timeout_message(config)
+    return str(exc) or exc.__class__.__name__
+
+
+def send_failure_telegram(
+    config: AppConfig,
+    *,
+    topic: str | None,
+    tone: str | None,
+    news_item: NewsItem | None,
+    error_message: str,
+) -> None:
+    if not config.telegram_bot_token or not config.telegram_chat_id:
+        return
+
+    try:
+        send_telegram_message(
+            config,
+            build_failure_telegram_summary(
+                topic=topic,
+                tone=tone,
+                error_message=error_message,
+                news_title=news_item.title if news_item else None,
+                news_source=news_item.source if news_item else None,
+                news_published_at=(
+                    format_news_published_at(news_item) if news_item else None
+                ),
+                news_url=news_item.link if news_item else None,
+            ),
+        )
+    except Exception as exc:
+        print(f"Warning: Telegram failure alert delivery failed: {exc}")
+
+
 def run_once(
     *,
     respect_schedule: bool = False,
@@ -73,47 +118,51 @@ def run_once(
         config = load_config()
     except Exception as exc:
         print(f"Could not generate tweet: {exc}")
-        return 1
+        return 0
 
     run_decision: RunDecision | None = None
-    if respect_schedule and not force_run:
-        run_decision = decide_scheduled_run(config, now)
-        if not run_decision.should_run:
-            print(run_decision.reason)
-            return 0
-        print(run_decision.reason)
-    elif respect_schedule and force_run:
-        timezone = ZoneInfo(config.run_timezone)
-        resolved_now = now.astimezone(timezone) if now else datetime.now(timezone)
-        run_decision = RunDecision(
-            should_run=True,
-            run_date=resolved_now.date().isoformat(),
-            run_slot=resolved_now.strftime("%H:%M"),
-            reason="Forced run requested.",
-        )
-        print(run_decision.reason)
-
-    client = build_client(config)
-    interactive_tty = sys.stdout.isatty()
-
-    topic = random.choice(config.topics)
-    tone = random.choice(config.tones)
+    topic: str | None = None
+    tone: str | None = None
     news_item: NewsItem | None = None
-
-    if config.news_enabled:
-        try:
-            news_item = fetch_latest_news(topic, config)
-            if news_item is None:
-                print(f"No recent RSS news found for {topic}. Using generic topic prompt.")
-            else:
-                print(f"Using RSS news: {news_item.title} ({news_item.source})")
-        except Exception as exc:
-            print(f"Warning: RSS news lookup failed for {topic}: {exc}")
-
     stop_event: threading.Event | None = None
     spinner_thread: threading.Thread | None = None
 
     try:
+        if respect_schedule and not force_run:
+            run_decision = decide_scheduled_run(config, now)
+            if not run_decision.should_run:
+                print(run_decision.reason)
+                return 0
+            print(run_decision.reason)
+        elif respect_schedule and force_run:
+            timezone = ZoneInfo(config.run_timezone)
+            resolved_now = now.astimezone(timezone) if now else datetime.now(timezone)
+            run_decision = RunDecision(
+                should_run=True,
+                run_date=resolved_now.date().isoformat(),
+                run_slot=resolved_now.strftime("%H:%M"),
+                reason="Forced run requested.",
+            )
+            print(run_decision.reason)
+
+        client = build_client(config)
+        interactive_tty = sys.stdout.isatty()
+
+        topic = random.choice(config.topics)
+        tone = random.choice(config.tones)
+
+        if config.news_enabled:
+            try:
+                news_item = fetch_latest_news(topic, config)
+                if news_item is None:
+                    print(
+                        f"No recent RSS news found for {topic}. Using generic topic prompt."
+                    )
+                else:
+                    print(f"Using RSS news: {news_item.title} ({news_item.source})")
+            except Exception as exc:
+                print(f"Warning: RSS news lookup failed for {topic}: {exc}")
+
         print("Generating tweet...")
         if interactive_tty:
             stop_event = threading.Event()
@@ -183,21 +232,18 @@ def run_once(
                 print(f"Warning: Telegram delivery failed: {exc}")
         print("Tweet posted and logged.")
         return 0
-    except ResponseError as exc:
-        stop_spinner(stop_event, spinner_thread)
-        print(f"Ollama request failed: {exc}")
-        return 1
-    except TimeoutError:
-        stop_spinner(stop_event, spinner_thread)
-        print(format_timeout_message(config))
-        return 1
     except Exception as exc:
         stop_spinner(stop_event, spinner_thread)
-        if is_timeout_exception(exc):
-            print(format_timeout_message(config))
-            return 1
-        print(f"Could not generate tweet: {exc}")
-        return 1
+        error_message = describe_failure(exc, config)
+        print(f"Could not complete tweet run: {error_message}")
+        send_failure_telegram(
+            config,
+            topic=topic,
+            tone=tone,
+            news_item=news_item,
+            error_message=error_message,
+        )
+        return 0
 
 
 def main() -> int:

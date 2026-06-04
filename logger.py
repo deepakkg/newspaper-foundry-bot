@@ -122,6 +122,43 @@ def build_telegram_summary(
     return "\n".join(lines)
 
 
+def build_failure_telegram_summary(
+    *,
+    error_message: str,
+    topic: str | None = None,
+    tone: str | None = None,
+    news_title: str | None = None,
+    news_source: str | None = None,
+    news_url: str | None = None,
+    news_published_at: str | None = None,
+) -> str:
+    lines = [
+        "Tweet bot failed",
+        f"Topic: {topic or 'Not selected'}",
+        f"Tone: {tone or 'Not selected'}",
+    ]
+    if news_title:
+        lines.extend(
+            [
+                "",
+                "News reference:",
+                f"{news_title} ({news_source or 'Unknown'})",
+            ]
+        )
+        if news_published_at:
+            lines.append(f"Published: {news_published_at}")
+        if news_url:
+            lines.append(news_url)
+    lines.extend(
+        [
+            "",
+            "Error:",
+            error_message,
+        ]
+    )
+    return "\n".join(lines)
+
+
 def append_tweet_log(
     log_file_path: Path,
     *,

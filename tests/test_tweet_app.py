@@ -20,6 +20,7 @@ from generator import (
 )
 from logger import (
     append_tweet_log,
+    build_failure_telegram_summary,
     build_slot_marker,
     build_telegram_summary,
     build_tweet_log_entry,
@@ -125,6 +126,15 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("Example News", prompt)
         self.assertIn("Do not include the article URL.", prompt)
 
+    def test_build_prompt_includes_deepak_style_guidance(self) -> None:
+        prompt = build_prompt("leadership", "serious", 230, 1)
+
+        self.assertIn("Write like Deepak", prompt)
+        self.assertIn("direct, practical, concise", prompt)
+        self.assertIn("Do not force first person", prompt)
+        self.assertIn("Pseudo-profound", prompt)
+        self.assertIn("The real lesson", prompt)
+
     def test_request_tweet_retries_with_compact_prompt_on_context_error(self) -> None:
         tmp_dir, config = load_temp_config()
         self.addCleanup(tmp_dir.cleanup)
@@ -211,6 +221,21 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertEqual(result, "too generic")
+
+    def test_rejects_pseudo_profound_tweet(self) -> None:
+        topic, topic_tokens = normalize_topic("ai agents")
+        tweet = "AI agents are not about automation, it's about unlocking the real lesson of human potential."
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertEqual(result, "pseudo-profound phrasing")
 
 
 class ConfigTests(unittest.TestCase):
@@ -528,6 +553,27 @@ class LoggerTests(unittest.TestCase):
         self.assertNotIn("Tweet URL", summary)
         self.assertNotIn("tweet-slot", summary)
 
+    def test_build_failure_telegram_summary_includes_error_and_news_reference(self) -> None:
+        summary = build_failure_telegram_summary(
+            topic="ai agents",
+            tone="serious",
+            error_message="Could not generate a valid tweet after 5 attempts: too generic.",
+            news_title="AI agents reshape support workflows",
+            news_source="Example News",
+            news_published_at="2026-05-31 10:00 UTC",
+            news_url="https://example.com/ai-agents",
+        )
+
+        self.assertIn("Tweet bot failed", summary)
+        self.assertIn("Topic: ai agents", summary)
+        self.assertIn("Tone: serious", summary)
+        self.assertIn("News reference:", summary)
+        self.assertIn("AI agents reshape support workflows", summary)
+        self.assertIn("https://example.com/ai-agents", summary)
+        self.assertIn("Error:", summary)
+        self.assertIn("too generic", summary)
+        self.assertNotIn("Tweet text:", summary)
+
 
 class PublisherTests(unittest.TestCase):
     def test_build_post_text_appends_hashtag_once(self) -> None:
@@ -538,6 +584,20 @@ class PublisherTests(unittest.TestCase):
 
 
 class TweetGeneratorTests(unittest.TestCase):
+    def test_run_once_exits_cleanly_when_config_load_fails(self) -> None:
+        buffer = StringIO()
+
+        with patch.object(
+            tweet_generator,
+            "load_config",
+            side_effect=ValueError("Missing required environment variable: TOPICS"),
+        ):
+            with patch("sys.stdout", buffer):
+                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIn("Could not generate tweet:", buffer.getvalue())
+
     def test_run_once_skips_disabled_scheduled_slot(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(ENABLED_RUN_SLOTS="06:00")
@@ -658,6 +718,138 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("2026-05-31 10:00 UTC", telegram_text)
         self.assertIn("https://example.com/ai-agents", telegram_text)
         self.assertIn("Using RSS news:", buffer.getvalue())
+
+    def test_run_once_sends_failure_telegram_when_generation_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["learning", "serious"]):
+                    with patch.object(
+                        tweet_generator,
+                        "fetch_latest_news",
+                        return_value=news_item,
+                    ):
+                        with patch.object(
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            side_effect=RuntimeError(
+                                "Could not generate a valid tweet after 5 attempts: too generic."
+                            ),
+                        ):
+                            with patch.object(
+                                tweet_generator, "post_tweet_to_x"
+                            ) as mock_post:
+                                with patch.object(
+                                    tweet_generator, "send_telegram_message"
+                                ) as mock_telegram:
+                                    with patch("sys.stdout", buffer):
+                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_post.assert_not_called()
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Tweet bot failed", telegram_text)
+        self.assertIn("Topic: learning", telegram_text)
+        self.assertIn("Tone: serious", telegram_text)
+        self.assertIn("News reference:", telegram_text)
+        self.assertIn("AI agents reshape support workflows", telegram_text)
+        self.assertIn("too generic", telegram_text)
+        self.assertFalse(config.log_file_path.exists())
+
+    def test_run_once_sends_failure_telegram_when_x_posting_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["coffee", "witty"]):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Coffee is back.", 1.0, 1),
+                    ):
+                        with patch.object(
+                            tweet_generator,
+                            "post_tweet_to_x",
+                            side_effect=RuntimeError("X API returned 401"),
+                        ):
+                            with patch.object(
+                                tweet_generator, "send_telegram_message"
+                            ) as mock_telegram:
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Tweet bot failed", telegram_text)
+        self.assertIn("Topic: coffee", telegram_text)
+        self.assertIn("Tone: witty", telegram_text)
+        self.assertIn("X API returned 401", telegram_text)
+        self.assertNotIn("Coffee is back.", telegram_text)
+        self.assertFalse(config.log_file_path.exists())
+
+    def test_run_once_stays_clean_when_failure_telegram_send_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    side_effect=RuntimeError("Could not generate a valid tweet"),
+                ):
+                    with patch.object(
+                        tweet_generator,
+                        "send_telegram_message",
+                        side_effect=RuntimeError("Telegram send failed"),
+                    ):
+                        with patch("sys.stdout", buffer):
+                            result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIn("Warning: Telegram failure alert delivery failed:", buffer.getvalue())
+        self.assertFalse(config.log_file_path.exists())
 
     def test_run_once_falls_back_when_rss_has_no_recent_news(self) -> None:
         buffer = StringIO()
@@ -782,7 +974,7 @@ class TweetGeneratorTests(unittest.TestCase):
                         result = tweet_generator.run_once()
 
         output = buffer.getvalue()
-        self.assertEqual(result, 1)
+        self.assertEqual(result, 0)
         self.assertIn("Ollama request timed out after", output)
         self.assertIn(config.ollama_model, output)
         self.assertIn(config.ollama_host, output)
