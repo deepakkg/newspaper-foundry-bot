@@ -980,3 +980,20 @@ Tweet text:
 Tweet text:
 
 > Coffee worsens sleep. It is a simple trade off for the caffeine. ☕️
+
+## Tweet posted
+
+- Date/time: 2026-06-04 10:15:19
+- Topic: software industry
+- Tone: whimsical
+- Time taken: 5.71 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062478296810451457
+- News title: Schroders Investment: Software stocks remain expensive despite recent declines; fundamental valuation remains the 'North Star.' - Moomoo
+- News source: Moomoo
+- News published: 2026-06-04 07:38 UTC
+- News URL: https://news.google.com/rss/articles/CBMiywFBVV95cUxNc0xQNWpicnVJUWpfeUlYdmpKbkwyLUFtLUJ5RkxaaTM0YjdkZ3FwMjRueW1sa29iUjExMENuWjdiZ1RXZGpadXFmYkJCOTJ5VjBqazE3OFRBMVhtRWN1cEl4dTFGOWI2R1gtYVlXd04zcXBJNzE4ZXdDUndGVHRiU2M5Y1lEVXJ4bmRHUXVSLXBOVVFPNmh2TlhTbjM2LVJ4eEp6RHQxS180UkJmU2pkVUdJQmJlM2g3LWMwM05RRzl0eDQ0anFXQWtfVQ?oc=5
+
+Tweet text:
+
+> Software stocks are playing a game of hide and seek with their prices. Despite recent dips, Schroders says they stay expensive. Fundamental valuation remains the North Star for the software industry 🌟
