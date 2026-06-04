@@ -929,3 +929,20 @@ Tweet text:
 Tweet text:
 
 > Morocco wants a national framework for generative AI in schools. Teachers are about to find out that every single essay was written by the same bot 🤖
+
+## Tweet posted
+
+- Date/time: 2026-06-04 03:19:13
+- Topic: claude
+- Tone: motivational
+- Time taken: 1.58 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062373578558038308
+- News title: Moonpay Launches MoonAgents Desktop App With Claude Code and Codex - شبكة تواصل الإخبارية
+- News source: شبكة تواصل الإخبارية
+- News published: 2026-06-04 02:15 UTC
+- News URL: https://news.google.com/rss/articles/CBMiU0FVX3lxTFByNnFrWnFBY2Z0U0htdW9ZZGNGZEgxRHdPZnNmYVNPOTNncm1XWFcwWjZUOXh3Qmp0bmIwY20zSTRLZWxJbE1hVm1yWUdmd2dsai1V?oc=5
+
+Tweet text:
+
+> The arrival of Claude Code in the new MoonAgents desktop app opens new doors for developers. Use these tools to build faster and push your technical boundaries. 🚀
