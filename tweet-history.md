@@ -963,3 +963,20 @@ Tweet text:
 Tweet text:
 
 > The software industry is spending Q1 earnings calls trying to convince us that AI is a tool and not a replacement. 🤡
+
+## Tweet posted
+
+- Date/time: 2026-06-04 05:19:28
+- Topic: coffee
+- Tone: observational
+- Time taken: 1.73 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062403844362158482
+- News title: Coffee worsens sleep, ancient beer found in China, and a black hole as the birthplace of ghostly neutrinos - realnoevremya.com
+- News source: realnoevremya.com
+- News published: 2026-06-04 05:16 UTC
+- News URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxNa1RNMUZnZ3ZtamxqQ041VTQzUU1tNm1jQnpvVFBoaU12SVBKR2ZNTUN4U0tGbzBOU2QtTmdtWWZLM2psQTNpWGV5c19pQXV2NjJFZEp2MlRtd3F1X3UxNnA2UkQ1dlJPN0hZc1B3VVJZd1VvVV84QkRraXZWTnVzbTNIYkFQRkQ4N2ZOUEs1RElSOTVSLWtta25R?oc=5
+
+Tweet text:
+
+> Coffee worsens sleep. It is a simple trade off for the caffeine. ☕️
