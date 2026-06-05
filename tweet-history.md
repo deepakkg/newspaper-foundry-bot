@@ -1048,3 +1048,20 @@ Tweet text:
 Tweet text:
 
 > SaaS usually means Software as a Service. But in India, it's more likely to be the drama from Kyunki Saas Bhi Kabhi Bahu Thi where Rio is currently earning respect. Different kind of scaling.
+
+## Tweet posted
+
+- Date/time: 2026-06-05 10:30:16
+- Topic: codex
+- Tone: observational
+- Time taken: 2.53 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062844444643152365
+- News title: This AI startup says it saves $30,000 a month because of a quirk in OpenAI and Anthropic's pricing - Business Insider
+- News source: Business Insider
+- News published: 2026-06-05 09:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxQdUc0NlRnUVZVdVpQZzhjQjZGZi1DZzQ4TXVJNDFEVkJfcjl4MGtHTjluZDlBd1JJV3d5NXctZFBJNGdwWWs5djFiS01Uc1hZQllIbmx6ZGViWkZXNzR4YUp2cGVaQ0tNVGxmb2R0T3gtX0dXNVpIdmtRTEFzQmVCRWtORUI5WHhCVWMxbEpKUmlXdUQtZ0pmeVY0MVpEZFB3UlhF?oc=5
+
+Tweet text:
+
+> Pricing quirks in LLMs are becoming a profit center. Codex is saving $30,000 a month by leveraging gaps in OpenAI and Anthropic's billing. Practical arbitrage.
