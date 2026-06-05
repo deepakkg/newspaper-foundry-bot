@@ -1082,3 +1082,20 @@ Tweet text:
 Tweet text:
 
 > Russia finally sent the fourth S-400 squadron to India. A three year delay is just standard delivery timing for them. 📦
+
+## Tweet posted
+
+- Date/time: 2026-06-05 18:23:04
+- Topic: openai
+- Tone: whimsical
+- Time taken: 1.76 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062963429233840619
+- News title: Airbnb to open AI lab as CEO Chesky expands company’s AI push - The American Bazaar
+- News source: The American Bazaar
+- News published: 2026-06-05 17:59 UTC
+- News URL: https://news.google.com/rss/articles/CBMisgFBVV95cUxOSnFCYW8wY3JhM1VMVVl1SmNiblJIWHJGWHhUb2hGSy1fZG1rdGFaYXlLZ0l2WFVRaU5qakFvSnlkdE96UlVKUGxvYWJlQ05BLUViMTd1OHBWMEFYSXhzWFhLZG1RQVM5SXA2YVVyd1RVZFY5Y3RiWTJ2a25LR1ZabHozNTRaM2RFWTNlYnliVzNXNFJpOWJwaFZSSWgtbTlvSDc5d0htRzQ0U1lMSFhEbkZn?oc=5
+
+Tweet text:
+
+> OpenAI better watch out. Airbnb is opening its own AI lab. Chesky is moving fast to build internal tools. The rental market is getting a brain 🪄
