@@ -1065,3 +1065,20 @@ Tweet text:
 Tweet text:
 
 > Pricing quirks in LLMs are becoming a profit center. Codex is saving $30,000 a month by leveraging gaps in OpenAI and Anthropic's billing. Practical arbitrage.
+
+## Tweet posted
+
+- Date/time: 2026-06-05 15:33:34
+- Topic: india
+- Tone: funny
+- Time taken: 2.25 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2062920775175110917
+- News title: Russia Sends India Fourth S-400 Squadron After Three Year Delay on Defense Deal - UNITED24 Media
+- News source: UNITED24 Media
+- News published: 2026-06-05 15:12 UTC
+- News URL: https://news.google.com/rss/articles/CBMiuAFBVV95cUxNa1VmN3JJUHBWaGo5SmR0dFB6Vnh5cl9qZjlqV2d2TU53Zkw4THlpeUVoVXhmMEpVVG9UTnN2SkFnTC01M3ZPTkNvMkx2VjFQT1BiZ1NSZHo2SDV6bHA3ckJzMlBFcWg2TmRGWUplTTB3R2hyZ25JODFOV0t6QWx0cDdBWVRTdXVDekh1ZFZvekNkZndUNnFUdF9ORnlqbmZ4Q3hxblpjeFJwWmRFQ18yMHVLaC1hNVRs?oc=5
+
+Tweet text:
+
+> Russia finally sent the fourth S-400 squadron to India. A three year delay is just standard delivery timing for them. 📦
