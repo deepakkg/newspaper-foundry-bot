@@ -1116,3 +1116,20 @@ Tweet text:
 Tweet text:
 
 > Anthropic is calling for industry coordination to pause AI development if risks grow. It is a practical move to prioritize safety over a blind race.
+
+## Tweet posted
+
+- Date/time: 2026-06-06 09:06:44
+- Topic: ai tokens
+- Tone: deep thought
+- Time taken: 1.73 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063185811072315848
+- News title: Alex Karp compares tokenmaxxing to a porn addiction: People are just 'like sitting there all day' - Business Insider
+- News source: Business Insider
+- News published: 2026-06-06 08:55 UTC
+- News URL: https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjFqRXU2MGxrR0Q4U1ZXVXNZZ0N0dTN0dmlXeUxnUVRhN1VXcUhvWkNCOVNhd1lwQkVBTjF4T0hVZ3VuR1pMTG5NWDEwUDMydld6ZTNjTFdNaUU5bmpDT2RhamlNb0N5ZUhpaDhGSXBETVdQNVhMb0RDZjcyVnc1SEtuOG1CSy0wVnNxVHBiMjNxUQ?oc=5
+
+Tweet text:
+
+> Tokenmaxxing is a dopamine trap. Chasing AI tokens for hours is not productivity. It is an addiction to the output. Alex Karp sees it as a loop of sitting there all day. Efficiency is not the same as obsession.
