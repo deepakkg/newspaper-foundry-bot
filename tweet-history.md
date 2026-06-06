@@ -1150,3 +1150,20 @@ Tweet text:
 Tweet text:
 
 > Remember when news was written by people? Now Meta uses AI to build a clickbait news feed. We traded human reporting for generated noise.
+
+## Tweet posted
+
+- Date/time: 2026-06-06 17:42:23
+- Topic: software industry
+- Tone: witty
+- Time taken: 2.09 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063315577955918291
+- News title: Samsara Inches Higher on Earnings Beat. CEO Touts ‘Consistency.’ - Barron's
+- News source: Barron's
+- News published: 2026-06-05 17:11 UTC
+- News URL: https://news.google.com/rss/articles/CBMiekFVX3lxTE5ERE8yNHBvUDM5TGJIR05BY0U5dlFvVG5IczFmZ25zSldrS1RqV2p6WnF6cldqQmY4RjlGM2wzX05IUzJJa2NUYW5LMEM3ZUFPWml5RTN3ZGZaWHRmc1A0WE5IWnRFMTVNdWM1OWtrb2ZHbTFYZ3N0TW53?oc=5
+
+Tweet text:
+
+> Consistency is the rarest feature in the software industry. Samsara beating earnings proves that predictable growth matters more than the hype cycle.
