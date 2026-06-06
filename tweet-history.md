@@ -1133,3 +1133,20 @@ Tweet text:
 Tweet text:
 
 > Tokenmaxxing is a dopamine trap. Chasing AI tokens for hours is not productivity. It is an addiction to the output. Alex Karp sees it as a loop of sitting there all day. Efficiency is not the same as obsession.
+
+## Tweet posted
+
+- Date/time: 2026-06-06 14:15:44
+- Topic: ai
+- Tone: nostalgic
+- Time taken: 1.45 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063263574550860105
+- News title: Meta made its own AI-generated clickbait news feed - The Verge
+- News source: The Verge
+- News published: 2026-06-06 14:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMikwFBVV95cUxPNzdRZ3ZkM29nVTFXUlpUdE5HTGxodEJXQXBOMW10UHdpaGVhUXd5WjFGdElCMlozRlVUc2x3V0ZiOXIyN0lXM3ViVWd1UkEyTFpFdXppXzN3Um9PeXh5MzktRFBlV2pkT0w1Y3JXcDJkaXdvNnpkc2ZQZ1NiX0NKbkl2SDJYaU1PMkhoZFdacktheTg?oc=5
+
+Tweet text:
+
+> Remember when news was written by people? Now Meta uses AI to build a clickbait news feed. We traded human reporting for generated noise.
