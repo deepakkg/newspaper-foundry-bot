@@ -1099,3 +1099,20 @@ Tweet text:
 Tweet text:
 
 > OpenAI better watch out. Airbnb is opening its own AI lab. Chesky is moving fast to build internal tools. The rental market is getting a brain 🪄
+
+## Tweet posted
+
+- Date/time: 2026-06-06 04:34:14
+- Topic: anthropic
+- Tone: observational
+- Time taken: 1.51 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063117234185351371
+- News title: Anthropic urges industry coordination to allow for a 'pause' in AI development if risks grow - GreenevilleSun.com
+- News source: GreenevilleSun.com
+- News published: 2026-06-06 03:30 UTC
+- News URL: https://news.google.com/rss/articles/CBMihwJBVV95cUxORnZjaHh2Wi16OGU0aDBIRHpEZ3FybTc3TWt4RDhaLVJ4aWFQeTV5NDJvNXd2QThYLXk4Z213UmNRMC1EMTlYTnRFRkw3bUwzWTlUMWVyek90M2dFSlhxVUhxbk9DOENfRHZZeWpLLU91MkxKOVJmU2hHN0lNQkd4VkcyaHY0MzdiTVotQzBRY2l3Tkg3bUJMeVFuME9TU1VkYWUxZVdadkpHaGFqNDkyY3I2cldENDdBa2t5X283ZjU2TUZNVWllZGtOOVM2eXR1aHdOVWRRWXJ1d0lrSEt6X3AtSkZEVWtjMU1TM2pma3U2SDItODY2VGoxZDk5T01PSUkyb3gzdw?oc=5
+
+Tweet text:
+
+> Anthropic is calling for industry coordination to pause AI development if risks grow. It is a practical move to prioritize safety over a blind race.
