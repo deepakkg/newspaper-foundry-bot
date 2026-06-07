@@ -1167,3 +1167,20 @@ Tweet text:
 Tweet text:
 
 > Consistency is the rarest feature in the software industry. Samsara beating earnings proves that predictable growth matters more than the hype cycle.
+
+## Tweet posted
+
+- Date/time: 2026-06-07 05:04:45
+- Topic: ai
+- Tone: witty
+- Time taken: 1.65 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063487302668534000
+- News title: At This Singapore Hotel, AI Decides What’s For Breakfast - Forbes
+- News source: Forbes
+- News published: 2026-06-07 04:23 UTC
+- News URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxNSXFvU3hNenFaYTktNWwyRnRWeVhBYTN0WXBBQUc0Nlc3ZzBhejJvR2dzNDRybVlZdEE0SS0xWWhkcnZhSFdOa0ZNWFpQeGNUWWdVMFpHcE5jaVJJNkYwQ3c1Y1RJbFlzNmJZbW80Z0VNaFJMRTVRNlUzY3RpLVRCNDlPTXFpNHo1UGNjSENtN2R5bTFoUmYxX2s4YW1lYnZ2bzdZMnJnT3VnZVhXMEpnb25uUTQ?oc=5
+
+Tweet text:
+
+> AI choosing the breakfast menu at a Singapore hotel is an odd use of the tech. Most people can handle the high-stakes decision of toast versus pancakes on their own.
