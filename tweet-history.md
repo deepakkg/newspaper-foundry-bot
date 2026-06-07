@@ -1184,3 +1184,20 @@ Tweet text:
 Tweet text:
 
 > AI choosing the breakfast menu at a Singapore hotel is an odd use of the tech. Most people can handle the high-stakes decision of toast versus pancakes on their own.
+
+## Tweet posted
+
+- Date/time: 2026-06-07 09:44:48
+- Topic: saas
+- Tone: observational
+- Time taken: 1.52 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063557777520280013
+- News title: HubSpot lost 19% in one day. The market just told us what per-seat pricing is worth in an AI world. - ai-checker.webcoda.com.au
+- News source: ai-checker.webcoda.com.au
+- News published: 2026-06-07 06:20 UTC
+- News URL: https://news.google.com/rss/articles/CBMiowFBVV95cUxNaDdrRU9ocklGYThRQk9GcFlTUGxGdGw4RDJ4THpremRVaTFVYk55QXp0ZWU0cnZQUmhtTkRFUTdJVDRhMkYySENTX01kQ1ltNFI5SjlldHlmU1RKajhrRzU3MnZpVEdkM3J0OG5mR2dWYmRLXzBRaC0xLUl6NEU4cDh6bWhWeDlBbW9rU1hmVFB0MUpoVVFwX3A5akdOckVUT0RJ?oc=5
+
+Tweet text:
+
+> Per-seat pricing is a liability for SaaS now. HubSpot losing 19% in one day shows the market no longer values head-count licenses in an AI world.
