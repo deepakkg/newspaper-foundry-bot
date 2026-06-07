@@ -1201,3 +1201,20 @@ Tweet text:
 Tweet text:
 
 > Per-seat pricing is a liability for SaaS now. HubSpot losing 19% in one day shows the market no longer values head-count licenses in an AI world.
+
+## Tweet posted
+
+- Date/time: 2026-06-07 14:26:48
+- Topic: openai
+- Tone: observational
+- Time taken: 1.52 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063628747652100441
+- News title: OpenAI Plans Major ChatGPT Overhaul Focused on AI Agents and Coding Tools - Firstpost
+- News source: Firstpost
+- News published: 2026-06-07 13:50 UTC
+- News URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxPVl9BcUFoVl9wY1RlelJYSGhBWnBJZEJZbVVhNlhxX2Ffc2cydGFDamJCTk9wSzQ4NHkwd2g5ZVBYZkpqYUh2czJwUXBRZWF0djM2YjN5ZVRKLTl2d3NhU3MxZURRVHd0amtrZjdkZ3NzdVNWSlRYbVFhRTZSN0RENlJxSHhIa0dJVkdMRWpYQlJORDJGYVZaRlpnVE9tMUViVUZlR2I0d3RDQkRsb0dhdDRHdk1Wanp6cEE?oc=5
+
+Tweet text:
+
+> OpenAI is shifting ChatGPT from a chatbot to a tool for action. The focus on AI agents and coding tools suggests a move toward automation over conversation.
