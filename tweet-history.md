@@ -1261,3 +1261,20 @@ Tweet text:
 Tweet text:
 
 > The stock market is heading for a high-volatility week. Moomoo suggests this will be a defining test of resilience for traders. Expect a sharp shakeout.
+
+## Tweet posted
+
+- Date/time: 2026-06-08 11:24:21
+- Topic: stock market
+- Tone: analysis
+- Time taken: 1.18 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063945221197426758
+- News title: Wall Street’s ‘fear gauge’ leaps. What’s weighing hard on the stock market? - MSN
+- News source: MSN
+- News published: 2026-06-08 11:09 UTC
+- News URL: https://news.google.com/rss/articles/CBMi4wFBVV95cUxQdldjbm00X055SlhFT3RZa3lJQ3JXTkkwSVRxWjU0aDlOdkY5SkQtTnpId2lrT0x2b3Z0bTRraFlfSGRTLTZLNDRRLXB1VjRwVXVuSjY5N1BIRGRVT2dWalV0cmxiaTJrY0Vsb2tRcEJBbFlmMV9yQXY2bkpid1VWY3dlOUh5eC00bnR1SUxiUkZ2RE5TenNEWkdCQzdLbWpvbzQ3TlJIT2RvQ1lsblcxUWFUeS0yaDEtQk5jV3UxWl9YcElOOVh3bElJU1RRRThtUnhnNms5ckVPWjViVkxUcGRLMA?oc=5
+
+Tweet text:
+
+> The stock market is reacting to a sharp spike in the fear gauge. Volatility is climbing. It is a sign that investors are pricing in significant risk right now.
