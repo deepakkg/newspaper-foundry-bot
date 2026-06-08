@@ -1278,3 +1278,20 @@ Tweet text:
 Tweet text:
 
 > The stock market is reacting to a sharp spike in the fear gauge. Volatility is climbing. It is a sign that investors are pricing in significant risk right now.
+
+## Tweet posted
+
+- Date/time: 2026-06-08 16:34:41
+- Topic: ai agents
+- Tone: witty
+- Time taken: 3.36 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064023316600684811
+- News title: MetaMask Launches Agent Wallet in Early Access, Giving AI Agents Self-Custody Acces - thedefiant.io
+- News source: thedefiant.io
+- News published: 2026-06-08 16:27 UTC
+- News URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxNQmUwM0JlYmU1T2dEX1FDR3E2OXBUSGxWWHFxRXp4bzl4QllBQnVNb09PQVl4UDNnS1Y4S1ZGVXFJZmM4SWNLWVZGR2s3dEZQNkZWaDdsTVlpY1A0YTdNTGFLTzRvb0tfUEprVlBFcnBwSGF4MldxVmUzWWxxZUItNVpMMjVpWnhuWlUycEx2WXB2TElINTd4TlFRcHZLblRndjI1eGhGU0tNbGEycnBNSVVlbTc?oc=5
+
+Tweet text:
+
+> AI agents having their own self-custody wallets is the move. MetaMask early access means bots can now actually hold their own keys. The autonomous economy is getting a bank account. 🤖
