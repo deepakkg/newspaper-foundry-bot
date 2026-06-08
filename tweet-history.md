@@ -1231,3 +1231,16 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services exist because software cannot solve a broken process. A tool is useless if the client has no workflow. The gap is filled by configuring a specific set of KPIs, not by adding more features.
+
+## Tweet posted
+
+- Date/time: 2026-06-08 04:01:01
+- Topic: forward deployed experts
+- Tone: nostalgic
+- Time taken: 1.94 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2063833649955701084
+
+Tweet text:
+
+> Forward deployed experts were better when they lived out of suitcases. The magic was in the chaos of a hotel lobby and a local SIM card. Everything felt faster then.
