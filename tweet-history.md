@@ -1295,3 +1295,20 @@ Tweet text:
 Tweet text:
 
 > AI agents having their own self-custody wallets is the move. MetaMask early access means bots can now actually hold their own keys. The autonomous economy is getting a bank account. 🤖
+
+## Tweet posted
+
+- Date/time: 2026-06-08 18:43:14
+- Topic: ai tokens
+- Tone: analysis
+- Time taken: 3.36 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064055668110180382
+- News title: Together AI Pushes LLM Context Limits to 5 Million Tokens - StartupHub.ai
+- News source: StartupHub.ai
+- News published: 2026-06-08 18:04 UTC
+- News URL: https://news.google.com/rss/articles/CBMirAFBVV95cUxNVExqSWxkZWI2YlM2WWtIM3pNRzNmcjFmUUhuLTRLNnljcGVHZ2t4Q1RqUjdvNHR6YzNlOHJHLVliSnhWb05YUnU5RjhpTUJHUWJJT2VQNTZTejhucFFwS3JJSDhtMjBDZE91cW5MbmhMMU5YakdKQU9YdUFPZEZYVDZSSGZDLWxEeERpR2R0ZE9HaDFyMzE2VUdNcUxvc3J1S0xKdnRTTkt0ZzFC?oc=5
+
+Tweet text:
+
+> Context windows are becoming a commodity. Together AI pushing AI tokens to 5 million changes the game for large dataset analysis. No more aggressive chunking. Just massive scale.
