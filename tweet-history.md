@@ -1312,3 +1312,20 @@ Tweet text:
 Tweet text:
 
 > Context windows are becoming a commodity. Together AI pushing AI tokens to 5 million changes the game for large dataset analysis. No more aggressive chunking. Just massive scale.
+
+## Tweet posted
+
+- Date/time: 2026-06-09 04:43:37
+- Topic: india
+- Tone: witty
+- Time taken: 1.44 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064206758709428229
+- News title: Gold price in India: Rates on June 9 - FXStreet
+- News source: FXStreet
+- News published: 2026-06-09 04:35 UTC
+- News URL: https://news.google.com/rss/articles/CBMiqgFBVV95cUxQclI2TXY3dGRpMUdrUmJ4dXVuWTZOajdnbUZvWHJROWswSkVvaWZYNEoxQllROWRsRFJybHhCSE5md1lDa0M0cFVld1VYNExtVW43eU9Gc1ZiZmFrWXREMUhnTnFTaFJCaEVwOEU4TEhuNUhQTUxKd1FwNTJnYnNOMm9aNFFVNW9yOFNYc0ZJNzJOamd0QklJTllQV3N0VVphT1YxVjR1eDFMZw?oc=5
+
+Tweet text:
+
+> India treats gold like a savings account. Checking the June 9 rates is basically a national sport at this point.
