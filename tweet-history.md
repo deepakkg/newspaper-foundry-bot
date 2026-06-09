@@ -1363,3 +1363,16 @@ Tweet text:
 Tweet text:
 
 > The stock market is now a primary driver of the housing market. May home sales hit a yearly high because portfolios grew. Wealth in equities is becoming the prerequisite for home ownership.
+
+## Tweet posted
+
+- Date/time: 2026-06-09 18:31:18
+- Topic: saas professional services
+- Tone: funny
+- Time taken: 1.87 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064415051579301975
+
+Tweet text:
+
+> SaaS professional services exist because the product is too complex for the documentation. You pay $200 an hour to have someone tell you where the toggle is.
