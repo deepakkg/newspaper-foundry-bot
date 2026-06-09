@@ -1329,3 +1329,20 @@ Tweet text:
 Tweet text:
 
 > India treats gold like a savings account. Checking the June 9 rates is basically a national sport at this point.
+
+## Tweet posted
+
+- Date/time: 2026-06-09 10:08:06
+- Topic: saas
+- Tone: witty
+- Time taken: 4.24 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064288420969521507
+- News title: Aino’s SaaS Platform Selected Through Occupational Health Partner Härmämedi - TradingView
+- News source: TradingView
+- News published: 2026-06-09 06:30 UTC
+- News URL: https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWDVhRGRNNWlYRlc5TmdYbzZ1RXc5TWFOWnJoUEl4UjdER2tEcUpwb2JGTldHMXVoeVF4TEtMR3ZpQW5uUVN0bU1lU0Rtb3dpdlZqaVBHSTJsZWpLV2FUNnI2SjFrWldKelQ3M0lSMkVnZnVkUi1KQk8wVmRaTFFFSjFRVVVseU5FME9vUVdzbjI3bV9zMEhPeUdVSWtLN1dHLWFkei1RUzJVRW5aT1JWSVFkUDBQcnMtYjJFcE9yRnNIN0FvMlhRQ2lfS1J5UXFtU3c3Z2VEdFk?oc=5
+
+Tweet text:
+
+> Distribution beats a great product every time. Aino’s SaaS platform winning through Härmämedi shows that the right partner is the fastest shortcut to scale.
