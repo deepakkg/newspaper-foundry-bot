@@ -1427,3 +1427,20 @@ Tweet text:
 Tweet text:
 
 > AI agents are moving from task execution to financial autonomy. Mastercard enabling agents to pay each other removes the human bottleneck from the transaction loop. This is a fundamental shift in how services will be bought.
+
+## Tweet posted
+
+- Date/time: 2026-06-10 19:12:29
+- Topic: software industry
+- Tone: witty
+- Time taken: 3.73 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064787805654352092
+- News title: Netomi CEO says $5 trillion AI customer experience market could boost stablecoin demand - CoinDesk
+- News source: CoinDesk
+- News published: 2026-06-10 16:22 UTC
+- News URL: https://news.google.com/rss/articles/CBMizwFBVV95cUxPYi01V0JjWFN1TVFOV1FEUWpNMDBfX0VEOGZuSGlBaHdiclFlOWY0YWZoNVZJN1FNQ3ZSS0lHLXNiTVhNMmY1elFpLUZUVHNzX1BMZGNybDBnaGpIcDk3WDJQRS12X01MZ0RqN3dSTWN1S3VWXzRId0lPR19CTmRSRGM1UERLM3o5S2Y5bXE1QkhrQUI2aEU5cDR6Wnhtb2ZKV3RJcWhFcWNYekQzX3lZQm5pSElsSW9Pd2MwcFVpZFYyTWNfZjh2cUNCdWZWUVk?oc=5
+
+Tweet text:
+
+> The software industry is moving fast. Now AI customer experience is a $5 trillion market and it might actually drive stablecoin demand. High efficiency meets digital payments.
