@@ -1393,3 +1393,20 @@ Tweet text:
 Tweet text:
 
 > Calling a grenade blast in Uri accidental is a stretch. Jammu needs better safety drills if this keeps happening. 🙄
+
+## Tweet posted
+
+- Date/time: 2026-06-10 10:39:26
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 1.67 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064658690041434165
+- News title: AppSquadz Earns AWS AI Services Competency: Generative AI Consulting Services, Strengthens Leadership in Enterprise AI and Cloud Innovation - CXOToday.com
+- News source: CXOToday.com
+- News published: 2026-06-10 10:17 UTC
+- News URL: https://news.google.com/rss/articles/CBMihAJBVV95cUxNMDJZV1lxa05iSWE0UXFUWGFrbm9wY1dCOWpTNGMwSmlSUHJsanZINHo3Wjl2ZG1VR2FfNTRnUUVINzhyMTU3Mkc2Zm1FbDR4UlBoeWhxRmlMdjNfX2NTd2tvaElIaVp3Qy1kd0JnMi1SSmlXSmRkb09nQkZtTTBhenhZQktnWWZHYUZZa3N4YUppYl8wV09Bb1FhS2hETDFaVjAwR3F6el9hZ2pORGxvUm8yWUtHM1NnVkZkM2EwTERSWUNnakJyN09IeFZHWDhHM2ZKTHBjejRvM2ZmMnFYWW1tc2o2NmViYTJGQU54aGg0eFR2THFBWVh3LWM4eGtQWVRtRw?oc=5
+
+Tweet text:
+
+> Remember when AI was just a dream? Now it's a standard competency. AppSquadz getting the AWS AI Services Competency shows how fast generative AI moved from sci-fi to enterprise consulting.
