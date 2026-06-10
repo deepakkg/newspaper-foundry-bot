@@ -1376,3 +1376,20 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services exist because the product is too complex for the documentation. You pay $200 an hour to have someone tell you where the toggle is.
+
+## Tweet posted
+
+- Date/time: 2026-06-10 04:55:51
+- Topic: jammu
+- Tone: funny
+- Time taken: 1.83 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064572226351804651
+- News title: Jammu Kashmir: 2 Soldiers Killed In 'Accidental' Grenade Blast In Uri - ETV Bharat
+- News source: ETV Bharat
+- News published: 2026-06-10 04:42 UTC
+- News URL: https://news.google.com/rss/articles/CBMitgFBVV95cUxQVWQtS0dvamJoRjlxeUJsN0gxVm1ETmo1dkRleS10clhNNElJakR0VUw0V0x2SHJmN3lneXNMX0FrN2I1MWVVbEc4ajZ6VWUzdTA0UEYyUjNaMjkyS3U1VU83cXNwMWNWOXhLS3doRFREVkItVzZQRkJqdVBxNV9LZDRkelRIVl9xWEtST2VjSG1oQWVxdncwN3pPb2xYSXMyc1dOS1h6clJ0cjhDZU02ZmpWSmlYZ9IBuwFBVV95cUxPbGlUV0dZR1VxZVp6anR6dU1JaFFEX1pOaXQxRS0xWTNPTFFXZ3BPTHBiSDBjVU92SC1oVGxsRzFsTWJJRUNXNFZIbWl3ZkRfVXRWOFNobnZ6MHVoSzB5emg1NmVwRkpOTWJvUWVzaTRHNVVWSXFDeFJDQ1FacVY0TU1WcXFlSFdfaUIya21GQ25kbWRkRGNrS2s1T3dtX05ia0NielZ0eFNaUUhYNHIteEs3ZjlJSkpBSU9j?oc=5
+
+Tweet text:
+
+> Calling a grenade blast in Uri accidental is a stretch. Jammu needs better safety drills if this keeps happening. 🙄
