@@ -1444,3 +1444,20 @@ Tweet text:
 Tweet text:
 
 > The software industry is moving fast. Now AI customer experience is a $5 trillion market and it might actually drive stablecoin demand. High efficiency meets digital payments.
+
+## Tweet posted
+
+- Date/time: 2026-06-11 05:07:08
+- Topic: saas
+- Tone: nostalgic
+- Time taken: 3.12 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2064937454927245323
+- News title: ServiceNow Breach Explained: API Exposure, Risks & Security - Security Boulevard
+- News source: Security Boulevard
+- News published: 2026-06-10 20:34 UTC
+- News URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxObURTRUdjRE0tcGxwR1F5WXAtdmVQSFhqM2VJa05oYUp4OTRjMUlpWnVFQ3ROQ0NmNVFfZ3hjU1lib0lEc0lOeFRfTDBoVlZnRlhmMHBwUUE1MU5tdlZxMk1wNGdqVzZUbzZlejl2Q3RIbWVSdmVqSlJNOGhNdW4zNlVxWk40d1dENFdJeDhIVTZHbDZWSVZxYW1R?oc=5
+
+Tweet text:
+
+> SaaS used to feel like a simple way to offload risk. Now we have the ServiceNow breach. API exposure is the new norm. We traded local control for a set of keys that are too easy to leak.
