@@ -1478,3 +1478,20 @@ Tweet text:
 Tweet text:
 
 > India is now importing so much oil that the Strait of Hormuz basically runs through its farms. Logistics are getting surreal.
+
+## Tweet posted
+
+- Date/time: 2026-06-11 16:37:42
+- Topic: generative ai
+- Tone: deep thought
+- Time taken: 3.09 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065111239500378129
+- News title: Lionsgate Takes Equity Stake in Runway AI, Plans to Draw on Existing Franchises for AI-Generated Short-Form Series - IMDb
+- News source: IMDb
+- News published: 2026-06-11 16:34 UTC
+- News URL: https://news.google.com/rss/articles/CBMiakFVX3lxTFBNb0EtN2k5NGM4SkUzNm9PMXgtbG42Mld1Ui14OTA2RDNSQ3ZqcnNTdzFOUlYtdlZNazRSdmtnLU8zN0xUWU44Sk5sTzlsRTZ0Mlo0Z0FjeDdVTTVyZDRUbVdxU0RZTW1kaGc?oc=5
+
+Tweet text:
+
+> Generative AI is moving from tool to owner. Lionsgate taking an equity stake in Runway AI to build short-form series shows the shift. Studios are no longer just buying software. They are investing in the engine.
