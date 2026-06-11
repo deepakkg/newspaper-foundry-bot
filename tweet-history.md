@@ -1461,3 +1461,20 @@ Tweet text:
 Tweet text:
 
 > SaaS used to feel like a simple way to offload risk. Now we have the ServiceNow breach. API exposure is the new norm. We traded local control for a set of keys that are too easy to leak.
+
+## Tweet posted
+
+- Date/time: 2026-06-11 11:07:38
+- Topic: india
+- Tone: witty
+- Time taken: 1.45 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065028176468971833
+- News title: The Strait of Hormuz runs through India’s farms - The Times of India
+- News source: The Times of India
+- News published: 2026-06-11 10:58 UTC
+- News URL: https://news.google.com/rss/articles/CBMinAFBVV95cUxPYXFackRGUFloLXI3OEJ5Ulk5bHF5SWdpSW10el84OUxTUmQxZGxHelVBZldzb2FUcUNqRUd6UmxUZWVnYnE3d0VreG5vMmlXMWFjZUpHT3RCeUxEdXdfVmZyLWFUbGItbkZ1YU9VcDdXb0l1eTNfQkZtMkdrVHlXc2dDUTlrOU1mSTNZYjhJSzJGeThVNldLVVotS3HSAZwBQVVfeXFMT2FxWnJERlBZaC1yNzhCeVJZOWxxeUlnaUltdHpfODlMU1JkMWRsR3pVQWZXc29hVHFDakVHelJsVGVlZ2JxN3dFa3hubzJpVzFhY2VKR090QnlMRHV3X1Zmci1hVGxiLW5GdWFPVXA3V29JdXkzX0JGbTJHa1R5V3NnQ1E5azlNZkkzWWI4SUsyRnk4VTZXS1VaLUtx?oc=5
+
+Tweet text:
+
+> India is now importing so much oil that the Strait of Hormuz basically runs through its farms. Logistics are getting surreal.
