@@ -1495,3 +1495,20 @@ Tweet text:
 Tweet text:
 
 > Generative AI is moving from tool to owner. Lionsgate taking an equity stake in Runway AI to build short-form series shows the shift. Studios are no longer just buying software. They are investing in the engine.
+
+## Tweet posted
+
+- Date/time: 2026-06-11 19:19:39
+- Topic: india
+- Tone: analysis
+- Time taken: 2.54 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065151996835868701
+- News title: Reliance, Vedanta, Adani join India's drive to cut China rare earth dependence, sources say - Reuters
+- News source: Reuters
+- News published: 2026-06-11 19:10 UTC
+- News URL: https://news.google.com/rss/articles/CBMixwFBVV95cUxPYkpaSEhWXzY5Y3FVUkxYaDZFNjc4YUROajhzYks3Wks2UTc2Q0pHMjc3Z2hfLW43T2IzdnBFXzc2dHNaTFVsbWt6Y2FiYVR4YWVfY2xTd0VmSHdIcXRnOGotZ2FYNEYzbGttWlc0dllFdlZxNjduSzhObGF6N3pKOGhuRk0yLXA1N2tvWEdES2FSaWZGSmFFUWFwZjJUMXZhMVVOb09ZWTJyay1ua3JGQ2dWOHVweVRBdGd5UUNOdkU1dDdGMFA4?oc=5
+
+Tweet text:
+
+> India is moving to break China's grip on rare earths. Bringing in Reliance, Vedanta, and Adani shows a shift toward scaling domestic supply chains through heavy industry. This is a practical move for strategic autonomy.
