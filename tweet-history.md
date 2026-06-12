@@ -1546,3 +1546,20 @@ Tweet text:
 Tweet text:
 
 > The AI 1000 initiative brings back the era of forward deployed engineers. LTM is betting on putting technical talent directly in the field again. It was the only way to actually ship a product.
+
+## Tweet posted
+
+- Date/time: 2026-06-12 15:45:52
+- Topic: ai agents
+- Tone: deep thought
+- Time taken: 1.95 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065460585316130976
+- News title: PixelRAG beats text parsers on accuracy and cuts AI agent token costs 10x - VentureBeat
+- News source: VentureBeat
+- News published: 2026-06-12 15:39 UTC
+- News URL: https://news.google.com/rss/articles/CBMipAFBVV95cUxNZWJpZmE3U3hKNi1VOThpZTg3TXRleS1ZUE5PSFVtXzZSTW5OX1lZdDFXVGd0R2xlczNfR3NsOUx3N1pYd0M4bVJwSmtKakRmSkxjVzZEcWtmelI2UmJqSlJCajN5ci1oN2J6Y3Y1d0MwUVdnR1IxS0dPUnp4OExhV3Z3djJ4eEh4MVVzSGgwbmZQd0VhcVVOVl9qdkZWRktyYU4zaQ?oc=5
+
+Tweet text:
+
+> AI agents are moving past text parsers. PixelRAG proves visual processing is more accurate and cuts token costs 10x. Efficiency is now a matter of how the agent sees the data, not just how it reads it.
