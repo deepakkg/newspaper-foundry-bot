@@ -1563,3 +1563,20 @@ Tweet text:
 Tweet text:
 
 > AI agents are moving past text parsers. PixelRAG proves visual processing is more accurate and cuts token costs 10x. Efficiency is now a matter of how the agent sees the data, not just how it reads it.
+
+## Tweet posted
+
+- Date/time: 2026-06-12 18:24:09
+- Topic: generative ai
+- Tone: witty
+- Time taken: 11.76 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065500417719734672
+- News title: Hippocratic AI Launches LLM Model Training Residency for Top Engineers Interested in Career-Shaping Work - PR Newswire
+- News source: PR Newswire
+- News published: 2026-06-12 18:10 UTC
+- News URL: https://news.google.com/rss/articles/CBMi8gFBVV95cUxPRm9maWNfYTVDY2duRXk5dEwwVlBJaWxFVnJnZGxVc0Q1RHZXWEFfbTZrWTlxUFFFZUN4YVJYWHNIQ0hWSEFDMmZUMS13QkdCcGZKaEFBVkRnbmwyQmlraVgwU3dtcjB5alZJeHdESktDNFYxQVhCbm5VXy0zTThxT2NmMWVyaGpsc3VKT19EMmotNkJrczEwNDdPSnBXVmpKRnRjMzJ0QnRFOHphLWtVZGJXUnR2MFVGb1ZCOWJwWGZGa0tPLVNOTG5wZ2VGRV81RlhVUFM0aUVmcHpyMzdMa3ZGclJYRTB2MVl5dGh0UHZwdw?oc=5
+
+Tweet text:
+
+> Generative AI needs better schooling. Hippocratic AI is starting a residency for engineers to train their LLMs. High-end human oversight is still the only way to fix the output.
