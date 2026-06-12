@@ -1529,3 +1529,20 @@ Tweet text:
 Tweet text:
 
 > Remember when stock market news was slow. Now we get huge updates for Broadcom investors on a Tuesday morning. Things move too fast now.
+
+## Tweet posted
+
+- Date/time: 2026-06-12 10:47:25
+- Topic: forward deployed engineers
+- Tone: nostalgic
+- Time taken: 7.27 seconds
+- Attempts: 2
+- Tweet URL: https://x.com/deepakgupta1/status/2065385477453001164
+- News title: LTM launches AI 1000 initiative to build talent pool of forward deployed engineers - Moneycontrol.com
+- News source: Moneycontrol.com
+- News published: 2026-06-12 09:09 UTC
+- News URL: https://news.google.com/rss/articles/CBMi-gFBVV95cUxQeDdzN0FzUnNGUXFSZ2dDbzd3V1oyUTlmX2Zja3d4WXlPeGtJMW9DZkNaSHNpOWtGakp0Um1Ba21BeUdrN25OckJ0bUsyU3Q2Z0xfZWNyeFBwQ3UyVzRaUXlFbGlsa0cxZkd1UmRFbkcxWGFwV0p0aEdYNU8tcHBRQXVpYVFKRVpZbm5aQXZaZFBFNmFFZEhqcHB4NHF3aTkyV1lYSzBWYlJ5eTEtS1djbFh0czljVjAwTUgyWjdCR2NKT1hoOGN4V1d4eGhramlWRnNYOG9oQzZ0eUpWRm1adU1kVXVWZzNnQnliWHQ3U3dKU1UwOVhvTXJn0gH6AUFVX3lxTFB4N3M3QXNSc0ZRcVJnZ0NvN3dXWjJROWZfZmNrd3hZeU94a0kxb0NmQ1pIc2k5a0ZqSnRSbUFrbUF5R2s3bk5yQnRtSzJTdDZnTF9lY3J4UHBDdTJXNFpReUVsaWxrRzFmR3VSZEVuRzFYYXBXSnRoR1g1Ty1wcFFBdWlhUUpFWllublpBdlpkUEU2YUVkSGpwcHg0cXdpOTJXWVhLMFZiUnl5MS1LV2NsWHRzOWNWMDBNSDJaN0JHY0pPWGg4Y3hXV3h4aGtqaVZGc1g4b2hDNnR5SlZGbVp1TWRVdVZnM2dCeWJYdDdTd0pTVTA5WG9Ncmc?oc=5
+
+Tweet text:
+
+> The AI 1000 initiative brings back the era of forward deployed engineers. LTM is betting on putting technical talent directly in the field again. It was the only way to actually ship a product.
