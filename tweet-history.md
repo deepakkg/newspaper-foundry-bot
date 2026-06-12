@@ -1512,3 +1512,20 @@ Tweet text:
 Tweet text:
 
 > India is moving to break China's grip on rare earths. Bringing in Reliance, Vedanta, and Adani shows a shift toward scaling domestic supply chains through heavy industry. This is a practical move for strategic autonomy.
+
+## Tweet posted
+
+- Date/time: 2026-06-12 05:12:47
+- Topic: stock market
+- Tone: nostalgic
+- Time taken: 1.50 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065301263969894592
+- News title: Huge News for Broadcom Stock Investors - The Motley Fool
+- News source: The Motley Fool
+- News published: 2026-06-12 04:34 UTC
+- News URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUWZBcjZ3U1hWdEJyMDRFc2xPSHo3VDlwb2s2clBURFV1VnhVdFpCQmhSSWRBT244alJoS2RjTGlzTUhyZFNfQnBWWlRmY21LeENINzVWNDdBWEd5QzJBbHRCYVRoX1cxQklQSW5XZDNkNklfOHRaaXR4bTBOTTRjRDlmN0JnMjdZ?oc=5
+
+Tweet text:
+
+> Remember when stock market news was slow. Now we get huge updates for Broadcom investors on a Tuesday morning. Things move too fast now.
