@@ -1631,3 +1631,16 @@ Tweet text:
 Tweet text:
 
 > Remember when the internet felt like a private library? Now generative AI trains on everything by default. You have to manually opt out of Google's training settings to keep it that way.
+
+## Tweet posted
+
+- Date/time: 2026-06-13 17:53:40
+- Topic: saas professional services
+- Tone: analysis
+- Time taken: 4.60 seconds
+- Attempts: 3
+- Tweet URL: https://x.com/deepakgupta1/status/2065855135662678052
+
+Tweet text:
+
+> SaaS professional services shouldn't be a profit center. Use them to fix onboarding friction. If you need heavy services to get a customer live, your product has a UX problem. Fix the software, not the service package.
