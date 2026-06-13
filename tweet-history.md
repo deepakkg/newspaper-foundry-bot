@@ -1614,3 +1614,20 @@ Tweet text:
 Tweet text:
 
 > Remember when the AI hype felt endless. Now C3.ai stock is down 21% in 2026. The early excitement has faded into a hard question about buying the dip.
+
+## Tweet posted
+
+- Date/time: 2026-06-13 14:36:44
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 2.27 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065805575590482349
+- News title: How to opt out of Google’s new AI training default - Computerworld
+- News source: Computerworld
+- News published: 2026-06-13 14:30 UTC
+- News URL: https://news.google.com/rss/articles/CBMigwFBVV95cUxQbEZxdzFzUUNDdEc5aVVqN1VPc0Q1bnc3WDhSYnhzd1NzakxvMHFrR1dmRWNnc2RpV0xzMHBtaW1sV09XS1BpcGg4c01ZV01wQjRtVldGamUzQ1QwVjJBNE1RWTlEY1ZzazU4LXhfWHRKM0g4RHpRRExycUpSb0Q0aXk4WQ?oc=5
+
+Tweet text:
+
+> Remember when the internet felt like a private library? Now generative AI trains on everything by default. You have to manually opt out of Google's training settings to keep it that way.
