@@ -1597,3 +1597,20 @@ Tweet text:
 Tweet text:
 
 > Jammu officers are moving up. Three of them just got empanelled for DGP posts. The promotion race is getting crowded.
+
+## Tweet posted
+
+- Date/time: 2026-06-13 09:42:00
+- Topic: ai
+- Tone: nostalgic
+- Time taken: 1.53 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065731401798897891
+- News title: C3.ai Stock Is Down 21% in 2026. Should You Buy the Dip, or Run for the Hills? - The Motley Fool
+- News source: The Motley Fool
+- News published: 2026-06-13 09:27 UTC
+- News URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxOdzhLMHIyUTRzNVhWSGUyUDZBYVdIaktXTXhKX0RQYWphMWlXVG5jRXdPRUttS3p2dDFpUjdNVHR3SEgxNXN6cWo5OEN2UTNiUnFJcTVvLVJQaGdlV09GTUJHMmV3Z1RqdzNaSkJpcGlkaEY0MndVdll1OTdqRmY1VkFsTmlxSlJ6NDNWQzRfUlEyY0twcmc?oc=5
+
+Tweet text:
+
+> Remember when the AI hype felt endless. Now C3.ai stock is down 21% in 2026. The early excitement has faded into a hard question about buying the dip.
