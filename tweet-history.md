@@ -1580,3 +1580,20 @@ Tweet text:
 Tweet text:
 
 > Generative AI needs better schooling. Hippocratic AI is starting a residency for engineers to train their LLMs. High-end human oversight is still the only way to fix the output.
+
+## Tweet posted
+
+- Date/time: 2026-06-13 04:57:55
+- Topic: jammu
+- Tone: funny
+- Time taken: 2.52 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2065659909245452536
+- News title: Three Jammu Kashmir Segment Officers Among Six Empanelled for DGP Posts - Kashmir Life
+- News source: Kashmir Life
+- News published: 2026-06-13 04:29 UTC
+- News URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxNMmducDdwX2VJbVcxanJFb19DbTlZcks1T3R3NjRzSnRUS0J2T3dsOFViX1EtRm5hVS1yUFBNa3p5MkhsZkh5MkpkVzFMSm5NSDExemMyM2VjNktqMGp6S2xzS21NNWFXakhXd1d1UkZOOU5XaklXQVl0dUVFekJPQjI1QWVwLXRLZWJ4OHcxbzNMZWU4QjFURlYtOEdkZ0hvd1dJM05n?oc=5
+
+Tweet text:
+
+> Jammu officers are moving up. Three of them just got empanelled for DGP posts. The promotion race is getting crowded.
