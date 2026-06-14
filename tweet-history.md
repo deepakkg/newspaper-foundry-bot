@@ -1661,3 +1661,20 @@ Tweet text:
 Tweet text:
 
 > Unity Software is outperforming the broader stock market. It shows the software industry still rewards scaling efficiency and market position. Strong momentum for U.
+
+## Tweet posted
+
+- Date/time: 2026-06-14 10:02:09
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 2.62 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066098861924659685
+- News title: Forward Deployed Engineer Is AI’s Hottest Job: OpenAI and Google Race to Hire FDEs - Tech Times
+- News source: Tech Times
+- News published: 2026-06-14 03:34 UTC
+- News URL: https://news.google.com/rss/articles/CBMiwwFBVV95cUxPT2hYdFAwSFFKY2t4Ymx5R0ZWYUczVHZucDdYR3lYU0NkNXhpYWxPX2tta2ZXTnZMZE96eDRNbnNkZWRXUEhoVGp3VkFVeTJIb1BnRkxqc0g4cmYzdkdCd29oc0Q0NVJWWGNUMWJ5SUdlN3dqeTJFd2NRZlB0Nl9QU0tVSVBxTVY0Z2RPMENUS1hBYVVzRTFCWHlmRk91cTBCalRGMHhNY1pwNHY0VWlsNkNOSEFBVE85R3lhU213S3huVnc?oc=5
+
+Tweet text:
+
+> OpenAI and Google are fighting over Forward Deployed Engineers. It's the new hot job because shipping AI models is easy, but making them actually work for a customer is the hard part.
