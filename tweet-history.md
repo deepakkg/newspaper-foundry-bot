@@ -1678,3 +1678,20 @@ Tweet text:
 Tweet text:
 
 > OpenAI and Google are fighting over Forward Deployed Engineers. It's the new hot job because shipping AI models is easy, but making them actually work for a customer is the hard part.
+
+## Tweet posted
+
+- Date/time: 2026-06-14 14:38:46
+- Topic: ai
+- Tone: deep thought
+- Time taken: 1.63 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066168474263556232
+- News title: AI model could improve screening for primary aldosteronism - News-Medical
+- News source: News-Medical
+- News published: 2026-06-14 14:18 UTC
+- News URL: https://news.google.com/rss/articles/CBMiqgFBVV95cUxON0x6VWZtZEM1WUhfV1RYUnp5VlRlZm5nTGE5aWxZN1pINWQwS2tYdGxiSmJib1ZZdElNcHg1bTVFRkdjMjdRVFpLY1VrN2E4dV9xa3FJYnd4VFZ4VTlQM3Y0S1Y4X1ZzaTJaVk5OcjRQdU55bTd1WTVLN3FMc2NGVWNUN1o1UzdtcEhJc2FjRTg0SG9UV3dPMlJCSDU1NG1WS1Q1MXVKQjd6Zw?oc=5
+
+Tweet text:
+
+> AI is most useful when it solves a specific gap in human detection. Using an AI model to improve screening for primary aldosteronism shows the path. Precision in diagnosis beats general automation.
