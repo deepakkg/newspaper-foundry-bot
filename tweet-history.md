@@ -1695,3 +1695,20 @@ Tweet text:
 Tweet text:
 
 > AI is most useful when it solves a specific gap in human detection. Using an AI model to improve screening for primary aldosteronism shows the path. Precision in diagnosis beats general automation.
+
+## Tweet posted
+
+- Date/time: 2026-06-14 17:58:09
+- Topic: forward deployed experts
+- Tone: deep thought
+- Time taken: 1.50 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066218651196301490
+- News title: Top News Headlines In Indonesia, Myanmar, Philippines, Singapore, Thailand & Vietnam: June 14, 2026 - Bernama
+- News source: Bernama
+- News published: 2026-06-14 02:01 UTC
+- News URL: https://news.google.com/rss/articles/CBMiWEFVX3lxTE5TYWROSkNjTDlRdlhDWGtGay1BOVdKOHFFQ3ZVcEFnS0hmRnlzV1ZPWGVwWjBEMFJWcHRZazVNLTFLNFg1MndXWElFMVpfMzEzSEVRQzltM04?oc=5
+
+Tweet text:
+
+> Forward deployed experts are the bridge between code and reality. Seeing the news from SE Asia today, you realize local context is everything. A model is useless without someone on the ground to tune it for a specific market.
