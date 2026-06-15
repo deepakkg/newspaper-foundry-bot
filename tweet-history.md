@@ -1763,3 +1763,20 @@ Tweet text:
 Tweet text:
 
 > The era of AI pilots is shifting toward scale. Forward deployed experts are now the critical bridge. They move the tech from a demo to a production environment where it actually works for the enterprise.
+
+## Tweet posted
+
+- Date/time: 2026-06-15 20:02:31
+- Topic: jammu
+- Tone: funny
+- Time taken: 2.02 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066612334282309749
+- News title: Historic Heritage Commemoration to Mark 204th Jammu & Kashmir State Foundation Day at Jia Pota Ghat, Akhnoor - The National Law Review
+- News source: The National Law Review
+- News published: 2026-06-15 19:34 UTC
+- News URL: https://news.google.com/rss/articles/CBMiswFBVV95cUxOSE9ETFlzOElnMDgzemVzN21JTl9ERF9QT18tS19NUHg3QUxudGV0eEhHN2I1eHdUeHR2ZW81a2stZDNQNVJVRW12bVI0TGtRcDNUSjBTd0cxZlRNYk1qeXhqdzhRa0EyRkh3a3c4VGgwUk8zdmxkclIzbmZQc29IUE5HN3ZQdFBLWmpIbzd6MEk4cWNFeDVLeUx2c21TN01ObldZUzMtZkVtMmtYTURZbEVzWQ?oc=5
+
+Tweet text:
+
+> Jammu is turning 204. Most people can't even remember what they did last week, but Jia Pota Ghat in Akhnoor is out here celebrating a birthday from the 1800s. Respect the hustle. 🎂
