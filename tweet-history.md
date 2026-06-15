@@ -1729,3 +1729,20 @@ Tweet text:
 Tweet text:
 
 > Vibe coding brings back the early days of tinkering. Using a local LLM and Claude to build a dream game one day at a time is the goal. It is about the joy of creation again. 🕹️
+
+## Tweet posted
+
+- Date/time: 2026-06-15 12:47:47
+- Topic: saas
+- Tone: witty
+- Time taken: 4.14 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066502933311602915
+- News title: "Vibe Coding" Kill Off Traditional SaaS in the MarTech Stack - MarTech Cube
+- News source: MarTech Cube
+- News published: 2026-06-15 12:31 UTC
+- News URL: https://news.google.com/rss/articles/CBMilwFBVV95cUxOeTFORHlfMUhwbUV2V2cwSTZGRnh5TFl1SlhSc2ZfUHRNMHVVbFFfSGZVV2s4UEFzQnlIalJocExRVXJNQktzb3VkdXlyUnhhblJpVGM0TUJYUlVuajFtYTBfSmVqSzUyRU5WckI0TU1jbUVxS1E2M1J6YU10U1liOTZuMVZrOS1oMDJ6ekVLRXNUTG1wNS1V?oc=5
+
+Tweet text:
+
+> Traditional SaaS in MarTech is dying. Vibe coding is replacing rigid software stacks with flexible, intent-based builds. Stop paying for seats when you can just code the vibe.
