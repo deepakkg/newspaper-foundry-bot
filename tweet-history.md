@@ -1746,3 +1746,20 @@ Tweet text:
 Tweet text:
 
 > Traditional SaaS in MarTech is dying. Vibe coding is replacing rigid software stacks with flexible, intent-based builds. Stop paying for seats when you can just code the vibe.
+
+## Tweet posted
+
+- Date/time: 2026-06-15 17:30:02
+- Topic: forward deployed experts
+- Tone: analysis
+- Time taken: 1.98 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066573960938983453
+- News title: Is the Enterprise AI-Pilot Era Really Over? - AIM Media House
+- News source: AIM Media House
+- News published: 2026-06-15 10:13 UTC
+- News URL: https://news.google.com/rss/articles/CBMijgFBVV95cUxPSWEzUlRjbWJfaUN3Vk96ZnNqVGVrazlPNk9YMXBaRmVVYzduSmMxdF9kMHJVLTFkOHhWMUhOWTJqdlJjYU9VOUhNQlJQclFybGw0ZGx1QjYxLVdOR0hOY0tqRlVzWV90MHp1dElWMGU3WVJobGl5UjdHdGNyVzc1LWtCSV9pd1pFdEZDMFVB?oc=5
+
+Tweet text:
+
+> The era of AI pilots is shifting toward scale. Forward deployed experts are now the critical bridge. They move the tech from a demo to a production environment where it actually works for the enterprise.
