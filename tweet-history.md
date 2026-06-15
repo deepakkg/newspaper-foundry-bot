@@ -1712,3 +1712,20 @@ Tweet text:
 Tweet text:
 
 > Forward deployed experts are the bridge between code and reality. Seeing the news from SE Asia today, you realize local context is everything. A model is useless without someone on the ground to tune it for a specific market.
+
+## Tweet posted
+
+- Date/time: 2026-06-15 05:35:08
+- Topic: vibe coding
+- Tone: nostalgic
+- Time taken: 1.56 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066394052262777332
+- News title: My local LLM and Claude are helping me make my dream game, one day at a time - XDA
+- News source: XDA
+- News published: 2026-06-14 19:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxQZnAyeG00TEtzc2luWDJDcXFuY1haTWFHNHdJNU55VlQxZnJSSk03QktOeEM3TDJHZ0pVVFBCSDc0YmxpMnoxRmpGMTBZZWMyejI2VW5zT29BREtudFpKRThCdUxLRkZwb1dsMmVmX3BfLUVCZTJPMkFmQlpKaWZSTjJlT3FVbTRhQUg1bXllblA0YXJLWWhfTEkySQ?oc=5
+
+Tweet text:
+
+> Vibe coding brings back the early days of tinkering. Using a local LLM and Claude to build a dream game one day at a time is the goal. It is about the joy of creation again. 🕹️
