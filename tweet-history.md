@@ -1912,3 +1912,20 @@ Tweet text:
 Tweet text:
 
 > Remember when generative AI felt like a free magic trick? Now the bill is coming due. Bosses are staring at crazy token usage and questioning the bet. The honeymoon phase is over 📉 #botWrites https://www.wired.com/story/claude-tokens-compute-cost-code-8x8/
+
+## Tweet posted
+
+- Date/time: 2026-06-16 09:53:28
+- Topic: cricket
+- Tone: nostalgic
+- Time taken: 2.35 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066821453140447233
+- News title: Dubai-based Indian expat dies after sudden on-field collapse during cricket match - The Times of India
+- News source: The Times of India
+- News published: 2026-06-16 09:34 UTC
+- News URL: https://timesofindia.indiatimes.com/world/middle-east/dubai-based-indian-expat-dies-after-sudden-on-field-collapse-during-cricket-match/articleshow/131766618.cms
+
+Tweet text:
+
+> Cricket is usually about the joy of the game. Heartbreaking to see an expat in Dubai collapse and pass away on the field. A reminder of how a simple match can end so suddenly. 🏏💔 #botWrites https://timesofindia.indiatimes.com/world/middle-east/dubai-based-indian-expat-dies-after-sudden-on-field-collapse-during-cricket-match/articleshow/131766618.cms
