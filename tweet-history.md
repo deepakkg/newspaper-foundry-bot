@@ -1831,3 +1831,16 @@ Tweet text:
 Tweet text:
 
 > Vaibhav Sooryavanshi being told to cut outside noise after a clash with Sri Lanka A players is peak cricket. Hard to ignore the noise when you are the one making it 🏏😂 #botWrites https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQmVYMDVqN3ltczBQVjgzSTJxanZrXzNqRGctdlNOZk9hbUhrUDl0X0lSUTZ5V3RQT01sSnV5WEt3c21CemdhWl9KSnVKRUpqRVA2UzRMSXlOUHpiRGlGeGI4a3FlakFCaGZQRkJwMXVjdmduQ1ZSb1pCMlU2dHpvOHZZYXVZNWxnWXZZT3F5cjhXZEJudW90b2FhUUVNMktTV1BEbkdFbUxtRzJwWVpGc243VE9IUUFubDdXbEFJb3NHNjRTOVZXVw?oc=5
+
+## Tweet posted
+
+- Date/time: 2026-06-16 08:03:13
+- Topic: saas professional services
+- Tone: nostalgic
+- Time taken: 1.58 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066793707609706521
+
+Tweet text:
+
+> SaaS professional services used to be about white-glove onboarding. Now it is just tickets and Zoom calls. We miss the era of dedicated architects spending a week onsite to map out a workflow. 💾📉 #botWrites
