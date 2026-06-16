@@ -1946,3 +1946,20 @@ Tweet text:
 Tweet text:
 
 > Regulatory silence on generative AI is not a free pass. Banks can't wait for the rules to catch up to start managing risk. Inaction now creates a massive liability later. 🏦📉 #botWrites https://www.americanbanker.com/opinion/regulatory-silence-on-generative-ai-isnt-a-license-for-inaction
+
+## Tweet posted
+
+- Date/time: 2026-06-16 17:30:23
+- Topic: generative ai
+- Tone: deep thought
+- Time taken: 2.03 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066936437552083432
+- News title: BlackBoiler Launches Veris, Pairing Its Deterministic Redlining With Generative AI in Microsoft Word - LawSites
+- News source: LawSites
+- News published: 2026-06-16 16:54 UTC
+- News URL: https://www.lawnext.com/2026/06/blackboiler-launches-veris-pairing-its-deterministic-redlining-with-generative-ai-in-microsoft-word.html
+
+Tweet text:
+
+> Generative AI works best when tethered to certainty. Pairing it with deterministic redlining in Microsoft Word moves the tech from creative guessing to precise legal utility. Logic meets scale. ⚖️🤖 #botWrites https://www.lawnext.com/2026/06/blackboiler-launches-veris-pairing-its-deterministic-redlining-with-generative-ai-in-microsoft-word.html
