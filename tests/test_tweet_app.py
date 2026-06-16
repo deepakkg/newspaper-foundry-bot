@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import base64
 import tempfile
 import unittest
 from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path
+from urllib.parse import unquote
 from unittest.mock import MagicMock, patch
 
 import requests
@@ -411,7 +413,124 @@ class NewsFetcherTests(unittest.TestCase):
         response = MagicMock(url="https://news.google.com/read/example")
 
         with patch("news_fetcher.requests.get", return_value=response):
-            resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+            with patch(
+                "news_fetcher.requests.post",
+                side_effect=requests.RequestException("decode failed"),
+            ):
+                resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, google_url)
+
+    def test_resolve_news_url_decodes_embedded_publisher_url(self) -> None:
+        token = (
+            base64.urlsafe_b64encode(b'\x08\x13"https://example.com/embedded-story"')
+            .decode("ascii")
+            .rstrip("=")
+        )
+        google_url = f"https://news.google.com/rss/articles/{token}"
+        response = MagicMock(url=f"https://news.google.com/read/{token}")
+
+        with patch("news_fetcher.requests.get", return_value=response):
+            with patch("news_fetcher.requests.post") as mock_post:
+                resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, "https://example.com/embedded-story")
+        mock_post.assert_not_called()
+
+    def test_resolve_news_url_uses_google_decode_endpoint(self) -> None:
+        token = "CBMiNewStyleToken"
+        google_url = f"https://news.google.com/rss/articles/{token}"
+        redirect_response = MagicMock(url=f"https://news.google.com/read/{token}")
+        decode_response = MagicMock(
+            text=')]}\n["wrb.fr","Fbv4je","[[\\"https:\\\\/\\\\/example.com\\\\/decoded-story\\"]]"]'
+        )
+
+        with patch("news_fetcher.requests.get", return_value=redirect_response):
+            with patch(
+                "news_fetcher.requests.post",
+                return_value=decode_response,
+            ) as mock_post:
+                resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, "https://example.com/decoded-story")
+        mock_post.assert_called_once()
+        post_kwargs = mock_post.call_args.kwargs
+        self.assertEqual(post_kwargs["timeout"], 10)
+        self.assertIn("f.req", post_kwargs["data"])
+        redirect_response.raise_for_status.assert_called_once()
+        decode_response.raise_for_status.assert_called_once()
+
+    def test_resolve_news_url_uses_signed_google_decode_endpoint(self) -> None:
+        token = "CBMiSignedStyleToken"
+        google_url = f"https://news.google.com/rss/articles/{token}"
+        redirect_response = MagicMock(
+            url=f"https://news.google.com/read/{token}",
+            text=(
+                '<div data-n-a-id="CBMiSignedStyleToken" '
+                'data-n-a-ts="1781602109" '
+                'data-n-a-sg="AVvZt1GQ3mXICXiYhcZoLDoL59Hz"></div>'
+            ),
+        )
+        decode_response = MagicMock(
+            text=(
+                ')]}\'\n\n[["wrb.fr","Fbv4je",'
+                '"[\\"garturlres\\",\\"https://example.com/signed-story\\",1]",'
+                'null,null,null,""]]'
+            )
+        )
+
+        with patch("news_fetcher.requests.get", return_value=redirect_response):
+            with patch(
+                "news_fetcher.requests.post",
+                return_value=decode_response,
+            ) as mock_post:
+                resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, "https://example.com/signed-story")
+        post_kwargs = mock_post.call_args.kwargs
+        self.assertIsInstance(post_kwargs["data"], str)
+        decoded_body = unquote(post_kwargs["data"])
+        self.assertIn("garturlreq", decoded_body)
+        self.assertIn(token, decoded_body)
+        self.assertIn("1781602109", decoded_body)
+        self.assertIn("AVvZt1GQ3mXICXiYhcZoLDoL59Hz", decoded_body)
+        redirect_response.raise_for_status.assert_called_once()
+        decode_response.raise_for_status.assert_called_once()
+
+    def test_resolve_news_url_uses_decoded_google_article_id(self) -> None:
+        article_id = "AU_yqLMexampleArticleId"
+        token = (
+            base64.urlsafe_b64encode(f'\x08\x13"{article_id}'.encode("utf-8"))
+            .decode("ascii")
+            .rstrip("=")
+        )
+        google_url = f"https://news.google.com/rss/articles/{token}"
+        redirect_response = MagicMock(url=f"https://news.google.com/read/{token}")
+        decode_response = MagicMock(text='["https:\\/\\/example.com\\/decoded-id-story"]')
+
+        with patch("news_fetcher.requests.get", return_value=redirect_response):
+            with patch(
+                "news_fetcher.requests.post",
+                return_value=decode_response,
+            ) as mock_post:
+                resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, "https://example.com/decoded-id-story")
+        payload = mock_post.call_args.kwargs["data"]["f.req"]
+        self.assertIn(article_id, payload)
+        self.assertNotIn(token, payload)
+
+    def test_resolve_news_url_keeps_google_url_when_decode_fails(self) -> None:
+        token = "CBMiNewStyleToken"
+        google_url = f"https://news.google.com/rss/articles/{token}"
+        response = MagicMock(url=f"https://news.google.com/read/{token}")
+
+        with patch("news_fetcher.requests.get", return_value=response):
+            with patch(
+                "news_fetcher.requests.post",
+                side_effect=requests.RequestException("decode failed"),
+            ):
+                resolved_url = resolve_news_url(google_url, timeout_seconds=120)
 
         self.assertEqual(resolved_url, google_url)
 
@@ -430,10 +549,12 @@ class NewsFetcherTests(unittest.TestCase):
         article_url = "https://example.com/story"
 
         with patch("news_fetcher.requests.get") as mock_get:
-            resolved_url = resolve_news_url(article_url, timeout_seconds=120)
+            with patch("news_fetcher.requests.post") as mock_post:
+                resolved_url = resolve_news_url(article_url, timeout_seconds=120)
 
         self.assertEqual(resolved_url, article_url)
         mock_get.assert_not_called()
+        mock_post.assert_not_called()
 
     def test_fetch_latest_news_returns_latest_usable_item(self) -> None:
         tmp_dir, config = load_temp_config(NEWS_ENABLED="true")
