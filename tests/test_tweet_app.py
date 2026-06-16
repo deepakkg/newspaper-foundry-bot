@@ -1016,6 +1016,39 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("Warning: Telegram failure alert delivery failed:", buffer.getvalue())
         self.assertFalse(config.log_file_path.exists())
 
+    def test_run_once_stays_clean_when_failure_telegram_network_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    side_effect=RuntimeError("Could not generate a valid tweet"),
+                ):
+                    with patch.object(
+                        tweet_generator,
+                        "send_telegram_message",
+                        side_effect=requests.RequestException("Telegram timed out"),
+                    ):
+                        with patch("sys.stdout", buffer):
+                            result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIn("Warning: Telegram failure alert delivery failed:", buffer.getvalue())
+        self.assertFalse(config.log_file_path.exists())
+
     def test_run_once_falls_back_when_rss_has_no_recent_news(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(
@@ -1126,6 +1159,49 @@ class TweetGeneratorTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         self.assertIn("Warning: Telegram delivery failed:", buffer.getvalue())
+
+    def test_run_once_keeps_success_when_telegram_network_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/1")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 2),
+                ):
+                    with patch.object(
+                        tweet_generator, "post_tweet_to_x", return_value=published
+                    ) as mock_post:
+                        with patch.object(
+                            tweet_generator,
+                            "send_telegram_message",
+                            side_effect=requests.RequestException("Telegram timed out"),
+                        ):
+                            with patch("sys.stdout", buffer):
+                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIn("Warning: Telegram delivery failed:", buffer.getvalue())
+        mock_post.assert_called_once_with(
+            config, "Coffee is back. ☕", news_url=None
+        )
+        self.assertIn(
+            "Coffee is back. ☕ #botWrites",
+            config.log_file_path.read_text(encoding="utf-8"),
+        )
 
     def test_run_once_logs_clear_timeout_message(self) -> None:
         buffer = StringIO()

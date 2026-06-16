@@ -75,6 +75,21 @@ def describe_failure(exc: Exception, config: AppConfig | None = None) -> str:
     return str(exc) or exc.__class__.__name__
 
 
+def send_telegram_safely(
+    config: AppConfig,
+    message_text: str,
+    *,
+    warning_prefix: str,
+) -> None:
+    if not config.telegram_bot_token or not config.telegram_chat_id:
+        return
+
+    try:
+        send_telegram_message(config, message_text)
+    except Exception as exc:
+        print(f"{warning_prefix}: {exc}")
+
+
 def send_failure_telegram(
     config: AppConfig,
     *,
@@ -83,26 +98,21 @@ def send_failure_telegram(
     news_item: NewsItem | None,
     error_message: str,
 ) -> None:
-    if not config.telegram_bot_token or not config.telegram_chat_id:
-        return
-
-    try:
-        send_telegram_message(
-            config,
-            build_failure_telegram_summary(
-                topic=topic,
-                tone=tone,
-                error_message=error_message,
-                news_title=news_item.title if news_item else None,
-                news_source=news_item.source if news_item else None,
-                news_published_at=(
-                    format_news_published_at(news_item) if news_item else None
-                ),
-                news_url=news_item.link if news_item else None,
+    send_telegram_safely(
+        config,
+        build_failure_telegram_summary(
+            topic=topic,
+            tone=tone,
+            error_message=error_message,
+            news_title=news_item.title if news_item else None,
+            news_source=news_item.source if news_item else None,
+            news_published_at=(
+                format_news_published_at(news_item) if news_item else None
             ),
-        )
-    except Exception as exc:
-        print(f"Warning: Telegram failure alert delivery failed: {exc}")
+            news_url=news_item.link if news_item else None,
+        ),
+        warning_prefix="Warning: Telegram failure alert delivery failed",
+    )
 
 
 def run_once() -> int:
@@ -176,26 +186,23 @@ def run_once() -> int:
             news_url=news_item.link if news_item else None,
         )
         append_log_entry(config.log_file_path, log_entry)
-        if config.telegram_bot_token and config.telegram_chat_id:
-            try:
-                send_telegram_message(
-                    config,
-                    build_telegram_summary(
-                        topic=topic,
-                        tone=tone,
-                        tweet_text=final_post_text,
-                        time_taken_seconds=elapsed,
-                        attempts=attempts,
-                        news_title=news_item.title if news_item else None,
-                        news_source=news_item.source if news_item else None,
-                        news_published_at=(
-                            format_news_published_at(news_item) if news_item else None
-                        ),
-                        news_url=news_item.link if news_item else None,
-                    ),
-                )
-            except Exception as exc:
-                print(f"Warning: Telegram delivery failed: {exc}")
+        send_telegram_safely(
+            config,
+            build_telegram_summary(
+                topic=topic,
+                tone=tone,
+                tweet_text=final_post_text,
+                time_taken_seconds=elapsed,
+                attempts=attempts,
+                news_title=news_item.title if news_item else None,
+                news_source=news_item.source if news_item else None,
+                news_published_at=(
+                    format_news_published_at(news_item) if news_item else None
+                ),
+                news_url=news_item.link if news_item else None,
+            ),
+            warning_prefix="Warning: Telegram delivery failed",
+        )
         print("Tweet posted and logged.")
         return 0
     except Exception as exc:
