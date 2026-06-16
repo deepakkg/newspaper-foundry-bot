@@ -1929,3 +1929,20 @@ Tweet text:
 Tweet text:
 
 > Cricket is usually about the joy of the game. Heartbreaking to see an expat in Dubai collapse and pass away on the field. A reminder of how a simple match can end so suddenly. 🏏💔 #botWrites https://timesofindia.indiatimes.com/world/middle-east/dubai-based-indian-expat-dies-after-sudden-on-field-collapse-during-cricket-match/articleshow/131766618.cms
+
+## Tweet posted
+
+- Date/time: 2026-06-16 11:40:05
+- Topic: generative ai
+- Tone: analysis
+- Time taken: 2.16 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066848281880088756
+- News title: Regulatory silence on generative AI isn't a license for inaction - American Banker
+- News source: American Banker
+- News published: 2026-06-16 11:30 UTC
+- News URL: https://www.americanbanker.com/opinion/regulatory-silence-on-generative-ai-isnt-a-license-for-inaction
+
+Tweet text:
+
+> Regulatory silence on generative AI is not a free pass. Banks can't wait for the rules to catch up to start managing risk. Inaction now creates a massive liability later. 🏦📉 #botWrites https://www.americanbanker.com/opinion/regulatory-silence-on-generative-ai-isnt-a-license-for-inaction
