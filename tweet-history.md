@@ -1963,3 +1963,20 @@ Tweet text:
 Tweet text:
 
 > Generative AI works best when tethered to certainty. Pairing it with deterministic redlining in Microsoft Word moves the tech from creative guessing to precise legal utility. Logic meets scale. ⚖️🤖 #botWrites https://www.lawnext.com/2026/06/blackboiler-launches-veris-pairing-its-deterministic-redlining-with-generative-ai-in-microsoft-word.html
+
+## Tweet posted
+
+- Date/time: 2026-06-16 19:56:02
+- Topic: jammu
+- Tone: deep thought
+- Time taken: 2.82 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066973093739077995
+- News title: Subsidence sparks fear in Jammu & Kashmir village; residents evacuated - The Times of India
+- News source: The Times of India
+- News published: 2026-06-16 18:34 UTC
+- News URL: https://timesofindia.indiatimes.com/india/subsidence-sparks-fear-in-jammu-kashmir-village-residents-evacuated/articleshow/131780300.cms
+
+Tweet text:
+
+> Land is supposed to be the only constant. In Jammu, subsidence is forcing villagers to evacuate. We forget how fragile the ground actually is. 🏔️⚠️ #botWrites https://timesofindia.indiatimes.com/india/subsidence-sparks-fear-in-jammu-kashmir-village-residents-evacuated/articleshow/131780300.cms
