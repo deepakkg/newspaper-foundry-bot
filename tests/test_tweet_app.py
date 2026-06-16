@@ -7,6 +7,8 @@ from io import StringIO
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
+import requests
+
 from config import load_config
 from generator import (
     build_compact_prompt,
@@ -31,6 +33,7 @@ from news_fetcher import (
     build_google_news_rss_url,
     fetch_latest_news,
     parse_rss_items,
+    resolve_news_url,
     strip_html,
 )
 from publisher import build_post_text, max_generated_text_chars
@@ -387,6 +390,51 @@ class NewsFetcherTests(unittest.TestCase):
         self.assertEqual(items[0].source, "Example News")
         self.assertEqual(items[0].summary, "Fresh summary text.")
 
+    def test_resolve_news_url_returns_publisher_redirect(self) -> None:
+        google_url = "https://news.google.com/rss/articles/example"
+        response = MagicMock(url="https://example.com/story")
+
+        with patch("news_fetcher.requests.get", return_value=response) as mock_get:
+            resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, "https://example.com/story")
+        mock_get.assert_called_once_with(
+            google_url,
+            timeout=10,
+            headers={"User-Agent": "gemma-tweet-bot/1.0"},
+            allow_redirects=True,
+        )
+        response.raise_for_status.assert_called_once()
+
+    def test_resolve_news_url_keeps_google_url_when_redirect_stays_google(self) -> None:
+        google_url = "https://news.google.com/rss/articles/example"
+        response = MagicMock(url="https://news.google.com/read/example")
+
+        with patch("news_fetcher.requests.get", return_value=response):
+            resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, google_url)
+
+    def test_resolve_news_url_keeps_google_url_when_request_fails(self) -> None:
+        google_url = "https://news.google.com/rss/articles/example"
+
+        with patch(
+            "news_fetcher.requests.get",
+            side_effect=requests.RequestException("network failed"),
+        ):
+            resolved_url = resolve_news_url(google_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, google_url)
+
+    def test_resolve_news_url_skips_non_google_url(self) -> None:
+        article_url = "https://example.com/story"
+
+        with patch("news_fetcher.requests.get") as mock_get:
+            resolved_url = resolve_news_url(article_url, timeout_seconds=120)
+
+        self.assertEqual(resolved_url, article_url)
+        mock_get.assert_not_called()
+
     def test_fetch_latest_news_returns_latest_usable_item(self) -> None:
         tmp_dir, config = load_temp_config(NEWS_ENABLED="true")
         self.addCleanup(tmp_dir.cleanup)
@@ -395,7 +443,7 @@ class NewsFetcherTests(unittest.TestCase):
   <channel>
     <item>
       <title>Newer learning headline</title>
-      <link>https://example.com/newer</link>
+      <link>https://news.google.com/rss/articles/newer</link>
       <description>Newer summary text.</description>
       <pubDate>Sun, 31 May 2026 11:00:00 GMT</pubDate>
       <source url="https://example.com">Example News</source>
@@ -410,9 +458,13 @@ class NewsFetcherTests(unittest.TestCase):
   </channel>
 </rss>
 """
-        response = MagicMock(text=rss)
+        rss_response = MagicMock(text=rss)
+        resolve_response = MagicMock(url="https://example.com/newer")
 
-        with patch("news_fetcher.requests.get", return_value=response) as mock_get:
+        with patch(
+            "news_fetcher.requests.get",
+            side_effect=[rss_response, resolve_response],
+        ) as mock_get:
             with patch("news_fetcher.datetime") as mock_datetime:
                 mock_datetime.now.return_value = datetime(
                     2026, 5, 31, 12, 0, tzinfo=timezone.utc
@@ -421,10 +473,15 @@ class NewsFetcherTests(unittest.TestCase):
 
         self.assertIsNotNone(news_item)
         self.assertEqual(news_item.title, "Newer learning headline")
+        self.assertEqual(news_item.link, "https://example.com/newer")
         request_url = mock_get.call_args.args[0]
-        self.assertIn("q=learning", request_url)
-        self.assertIn("hl=en-US", request_url)
-        response.raise_for_status.assert_called_once()
+        first_request_url = mock_get.call_args_list[0].args[0]
+        self.assertIn("q=learning", first_request_url)
+        self.assertIn("hl=en-US", first_request_url)
+        self.assertEqual(request_url, "https://news.google.com/rss/articles/newer")
+        rss_response.raise_for_status.assert_called_once()
+        resolve_response.raise_for_status.assert_called_once()
+
 
 class LoggerTests(unittest.TestCase):
     def test_build_tweet_log_entry_is_markdown_with_slot_marker(self) -> None:
@@ -512,7 +569,7 @@ class LoggerTests(unittest.TestCase):
         summary = build_telegram_summary(
             topic="ai agents",
             tone="serious",
-            tweet_text="AI agents are moving into support queues.",
+            tweet_text="AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
             time_taken_seconds=8.5,
             attempts=1,
             news_title="AI agents reshape support workflows",
@@ -524,8 +581,11 @@ class LoggerTests(unittest.TestCase):
         self.assertIn("News reference:", summary)
         self.assertIn("AI agents reshape support workflows (Example News)", summary)
         self.assertIn("Published: 2026-05-31 10:00 UTC", summary)
-        self.assertIn("https://example.com/ai-agents", summary)
-        self.assertIn("AI agents are moving into support queues.", summary)
+        self.assertIn(
+            "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
+            summary,
+        )
+        self.assertEqual(summary.count("https://example.com/ai-agents"), 1)
         self.assertNotIn("Tweet URL", summary)
         self.assertNotIn("tweet-slot", summary)
 
@@ -700,7 +760,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("AI agents reshape support workflows", telegram_text)
         self.assertIn("Example News", telegram_text)
         self.assertIn("2026-05-31 10:00 UTC", telegram_text)
-        self.assertIn("https://example.com/ai-agents", telegram_text)
+        self.assertEqual(telegram_text.count("https://example.com/ai-agents"), 1)
         self.assertIn("Using RSS news:", buffer.getvalue())
 
     def test_run_once_sends_failure_telegram_when_generation_fails(self) -> None:

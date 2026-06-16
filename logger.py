@@ -110,8 +110,6 @@ def build_telegram_summary(
         )
         if news_published_at:
             lines.append(f"Published: {news_published_at}")
-        if news_url:
-            lines.append(news_url)
     lines.extend(
         [
             "",
