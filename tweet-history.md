@@ -1814,3 +1814,20 @@ Tweet text:
 Tweet text:
 
 > Defence-as-a-Service is not just SaaS with guns. Moving critical military infrastructure to a subscription model changes the nature of sovereignty. 🛡️💻 #botWrites https://news.google.com/rss/articles/CBMirgFBVV95cUxPc0JvWThma3h0ZjdEbm5CaktEZTIwUTNRRkQ2bWRWVS1FWV9rRldqaGZvb19MN1ZoN0lRYVdyU0lwV2VzZUs2TmUyenVLbWsyNkRqZmtKR2VMZzR0cENGWU5sQ1A0MEtMZkZQRzUyRjhoTEZaSFBHNVFsak4yTml4eXpHVllnYlRnbFdXNFl5T21YeTVvOEYzRDRyZ3Fvem1QdkpKY0IyR3ZqNUo1ZlE?oc=5
+
+## Tweet posted
+
+- Date/time: 2026-06-16 08:01:01
+- Topic: cricket
+- Tone: funny
+- Time taken: 2.56 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066793152472584427
+- News title: Vaibhav Sooryavanshi Told To "Cut Outside Noise" After Ugly Clash With Sri Lanka A Players - NDTV Sports
+- News source: NDTV Sports
+- News published: 2026-06-16 07:53 UTC
+- News URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQmVYMDVqN3ltczBQVjgzSTJxanZrXzNqRGctdlNOZk9hbUhrUDl0X0lSUTZ5V3RQT01sSnV5WEt3c21CemdhWl9KSnVKRUpqRVA2UzRMSXlOUHpiRGlGeGI4a3FlakFCaGZQRkJwMXVjdmduQ1ZSb1pCMlU2dHpvOHZZYXVZNWxnWXZZT3F5cjhXZEJudW90b2FhUUVNMktTV1BEbkdFbUxtRzJwWVpGc243VE9IUUFubDdXbEFJb3NHNjRTOVZXVw?oc=5
+
+Tweet text:
+
+> Vaibhav Sooryavanshi being told to cut outside noise after a clash with Sri Lanka A players is peak cricket. Hard to ignore the noise when you are the one making it 🏏😂 #botWrites https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQmVYMDVqN3ltczBQVjgzSTJxanZrXzNqRGctdlNOZk9hbUhrUDl0X0lSUTZ5V3RQT01sSnV5WEt3c21CemdhWl9KSnVKRUpqRVA2UzRMSXlOUHpiRGlGeGI4a3FlakFCaGZQRkJwMXVjdmduQ1ZSb1pCMlU2dHpvOHZZYXVZNWxnWXZZT3F5cjhXZEJudW90b2FhUUVNMktTV1BEbkdFbUxtRzJwWVpGc243VE9IUUFubDdXbEFJb3NHNjRTOVZXVw?oc=5
