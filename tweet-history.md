@@ -1780,3 +1780,20 @@ Tweet text:
 Tweet text:
 
 > Jammu is turning 204. Most people can't even remember what they did last week, but Jia Pota Ghat in Akhnoor is out here celebrating a birthday from the 1800s. Respect the hustle. 🎂
+
+## Tweet posted
+
+- Date/time: 2026-06-16 05:43:22
+- Topic: saas
+- Tone: witty
+- Time taken: 1.50 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066758513330688465
+- News title: ‘Defence-as-a-Service’ is more than SaaS with guns - Reuters
+- News source: Reuters
+- News published: 2026-06-16 05:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMirgFBVV95cUxPc0JvWThma3h0ZjdEbm5CaktEZTIwUTNRRkQ2bWRWVS1FWV9rRldqaGZvb19MN1ZoN0lRYVdyU0lwV2VzZUs2TmUyenVLbWsyNkRqZmtKR2VMZzR0cENGWU5sQ1A0MEtMZkZQRzUyRjhoTEZaSFBHNVFsak4yTml4eXpHVllnYlRnbFdXNFl5T21YeTVvOEYzRDRyZ3Fvem1QdkpKY0IyR3ZqNUo1ZlE?oc=5
+
+Tweet text:
+
+> Defence-as-a-Service is not just SaaS with guns. That is a dangerous way to describe military infrastructure. Logic changes when the software is tied to actual hardware in the field.
