@@ -42,7 +42,6 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `NEWS_LANGUAGE`
 - `POST_TO_X`
 - `X_USERNAME`
-- `RUN_TIMEZONE`
 
 Recommended defaults:
 
@@ -57,7 +56,6 @@ NEWS_RECENCY_HOURS=48
 NEWS_REGION=US
 NEWS_LANGUAGE=en
 POST_TO_X=true
-RUN_TIMEZONE=Asia/Kolkata
 ```
 
 ## Local setup
@@ -75,11 +73,8 @@ Run once locally:
 .venv/bin/python tweet_generator.py
 ```
 
-Run with the GitHub schedule guard:
-
-```bash
-.venv/bin/python tweet_generator.py --respect-schedule
-```
+GitHub cron controls the production run schedule. The Python code always runs once
+when invoked.
 
 ## Logs and Telegram
 

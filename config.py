@@ -1,17 +1,14 @@
 from __future__ import annotations
 
 import os
-import re
 from dataclasses import dataclass
 from pathlib import Path
-from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from dotenv import load_dotenv
 
 
 DEFAULT_ENV_PATH = Path(__file__).resolve().parent / ".env"
 PROJECT_ROOT = Path(__file__).resolve().parent
-TIME_PATTERN = re.compile(r"^(?:[01]\d|2[0-3]):[0-5]\d$")
 
 
 @dataclass(frozen=True)
@@ -33,8 +30,6 @@ class AppConfig:
     telegram_bot_token: str | None
     telegram_chat_id: str | None
     log_file_path: Path
-    run_timezone: str
-    enabled_run_slots: list[str]
     news_enabled: bool
     news_recency_hours: int
     news_region: str
@@ -67,29 +62,6 @@ def _parse_bool(value: str, name: str) -> bool:
     if normalized in {"0", "false", "no", "off", ""}:
         return False
     raise ValueError(f"{name} must be a boolean-like value.")
-
-
-def _parse_time_24h(value: str, name: str) -> str:
-    normalized = value.strip()
-    if not TIME_PATTERN.fullmatch(normalized):
-        raise ValueError(f"{name} must be in HH:MM 24-hour format.")
-    return normalized
-
-
-def _parse_time_list(value: str, name: str) -> list[str]:
-    return [_parse_time_24h(item, name) for item in _parse_csv_list(value, name)]
-
-
-def _parse_timezone(value: str, name: str) -> str:
-    normalized = value.strip()
-    if not normalized:
-        raise ValueError(f"{name} must not be empty.")
-
-    try:
-        ZoneInfo(normalized)
-    except ZoneInfoNotFoundError as exc:
-        raise ValueError(f"{name} must be a valid IANA timezone name.") from exc
-    return normalized
 
 
 def _parse_non_empty_text(value: str, name: str) -> str:
@@ -134,13 +106,6 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     log_file_raw = (
         os.getenv("LOG_FILE_PATH", "logs/tweet-history.md").strip()
         or "logs/tweet-history.md"
-    )
-    run_timezone = _parse_timezone(
-        os.getenv("RUN_TIMEZONE", "Asia/Kolkata"), "RUN_TIMEZONE"
-    )
-    enabled_run_slots = _parse_time_list(
-        os.getenv("ENABLED_RUN_SLOTS", "06:00,12:00,18:00,22:00"),
-        "ENABLED_RUN_SLOTS",
     )
     news_enabled = _parse_bool(os.getenv("NEWS_ENABLED", "true"), "NEWS_ENABLED")
     news_recency_hours = _parse_positive_int(
@@ -200,8 +165,6 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         telegram_bot_token=telegram_bot_token,
         telegram_chat_id=telegram_chat_id,
         log_file_path=log_file_path,
-        run_timezone=run_timezone,
-        enabled_run_slots=enabled_run_slots,
         news_enabled=news_enabled,
         news_recency_hours=news_recency_hours,
         news_region=news_region,

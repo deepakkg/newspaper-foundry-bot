@@ -41,7 +41,6 @@ jobs:
       X_USERNAME: ${{ vars.X_USERNAME }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      RUN_TIMEZONE: ${{ vars.RUN_TIMEZONE || 'Asia/Kolkata' }}
       LOG_FILE_PATH: tweet-log-store/tweet-history.md
       TWEET_HISTORY_BRANCH: tweet-history
 

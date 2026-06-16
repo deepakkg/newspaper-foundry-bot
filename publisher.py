@@ -10,6 +10,8 @@ from config import AppConfig
 
 X_POST_URL = "https://api.x.com/2/tweets"
 POST_HASHTAG = "#botWrites"
+X_MAX_POST_CHARS = 280
+X_URL_CHAR_COUNT = 23
 
 
 @dataclass(frozen=True)
@@ -18,15 +20,41 @@ class PublishedTweet:
     url: str
 
 
-def build_post_text(tweet_text: str) -> str:
-    cleaned = tweet_text.rstrip()
-    if cleaned.endswith(POST_HASHTAG):
-        return cleaned
-    return f"{cleaned} {POST_HASHTAG}"
+def _clean_post_part(text: str) -> str:
+    return " ".join(text.strip().split())
 
 
-def post_tweet_to_x(config: AppConfig, tweet_text: str) -> PublishedTweet:
-    post_text = build_post_text(tweet_text)
+def build_post_text(tweet_text: str, news_url: str | None = None) -> str:
+    cleaned_url = _clean_post_part(news_url or "")
+    parts = [
+        part
+        for part in _clean_post_part(tweet_text).split()
+        if part != POST_HASHTAG and part != cleaned_url
+    ]
+    suffix = [POST_HASHTAG]
+    if cleaned_url:
+        suffix.append(cleaned_url)
+    return " ".join([*parts, *suffix])
+
+
+def reserved_post_chars(news_url: str | None = None) -> int:
+    reserved = len(f" {POST_HASHTAG}")
+    if _clean_post_part(news_url or ""):
+        reserved += 1 + X_URL_CHAR_COUNT
+    return reserved
+
+
+def max_generated_text_chars(
+    configured_max_chars: int, news_url: str | None = None
+) -> int:
+    available = X_MAX_POST_CHARS - reserved_post_chars(news_url)
+    return max(1, min(configured_max_chars, available))
+
+
+def post_tweet_to_x(
+    config: AppConfig, tweet_text: str, news_url: str | None = None
+) -> PublishedTweet:
+    post_text = build_post_text(tweet_text, news_url)
     auth = OAuth1(
         config.x_api_key,
         config.x_api_key_secret,

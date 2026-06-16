@@ -6,7 +6,6 @@ from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path
 from unittest.mock import MagicMock, patch
-from zoneinfo import ZoneInfo
 
 from config import load_config
 from generator import (
@@ -34,8 +33,7 @@ from news_fetcher import (
     parse_rss_items,
     strip_html,
 )
-from publisher import build_post_text
-from schedule_guard import decide_scheduled_run, resolve_current_slot
+from publisher import build_post_text, max_generated_text_chars
 from telegram_sender import send_telegram_message
 import tweet_generator
 
@@ -46,8 +44,6 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "TOPICS": "coffee,learning",
         "TONES": "witty,serious",
         "POST_TO_X": "false",
-        "RUN_TIMEZONE": "Asia/Kolkata",
-        "ENABLED_RUN_SLOTS": "06:00,12:00,18:00,22:00",
         "NEWS_ENABLED": "false",
         "NEWS_RECENCY_HOURS": "48",
         "NEWS_REGION": "US",
@@ -92,6 +88,8 @@ class GeneratorValidationTests(unittest.TestCase):
 
         self.assertLess(len(compact_prompt), len(full_prompt))
         self.assertLess(len(compact_prompt), 400)
+        self.assertIn("Use 1 or 2 relevant emojis.", compact_prompt)
+        self.assertIn("no article URL", compact_prompt)
 
     def test_build_minimal_prompt_is_shorter_than_compact(self) -> None:
         compact_prompt = build_compact_prompt(
@@ -103,6 +101,8 @@ class GeneratorValidationTests(unittest.TestCase):
 
         self.assertLess(len(minimal_prompt), len(compact_prompt))
         self.assertLess(len(minimal_prompt), 120)
+        self.assertIn("Add 1-2 emojis.", minimal_prompt)
+        self.assertIn("No hashtag/link.", minimal_prompt)
 
     def test_build_topic_hint_shortens_long_topic(self) -> None:
         self.assertEqual(
@@ -124,6 +124,7 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("Current news context:", prompt)
         self.assertIn("AI agents reshape enterprise workflows", prompt)
         self.assertIn("Example News", prompt)
+        self.assertIn("Include 1 or 2 relevant emojis.", prompt)
         self.assertIn("Do not include the article URL.", prompt)
 
     def test_build_prompt_includes_deepak_style_guidance(self) -> None:
@@ -134,6 +135,7 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("Do not force first person", prompt)
         self.assertIn("Pseudo-profound", prompt)
         self.assertIn("The real lesson", prompt)
+        self.assertIn("More than two emojis", prompt)
 
     def test_request_tweet_retries_with_compact_prompt_on_context_error(self) -> None:
         tmp_dir, config = load_temp_config()
@@ -194,7 +196,7 @@ class GeneratorValidationTests(unittest.TestCase):
 
     def test_accepts_specific_topic_relevant_tweet(self) -> None:
         topic, topic_tokens = normalize_topic("Narendra Modi")
-        tweet = "Narendra Modi keeps turning routine policy announcements into headline events, and that timing is half the story."
+        tweet = "Narendra Modi keeps turning routine policy announcements into headline events, and that timing is half the story. 🗳️"
 
         result = validate_tweet(
             tweet,
@@ -207,9 +209,54 @@ class GeneratorValidationTests(unittest.TestCase):
 
         self.assertIsNone(result)
 
+    def test_accepts_two_relevant_emojis(self) -> None:
+        topic, topic_tokens = normalize_topic("ai agents")
+        tweet = "AI agents are moving from demos into support queues, where handoffs and escalation paths now matter. 🤖⚙️"
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertIsNone(result)
+
+    def test_rejects_tweet_without_emoji(self) -> None:
+        topic, topic_tokens = normalize_topic("ai agents")
+        tweet = "AI agents are moving from demos into support queues, where handoffs and escalation paths now matter."
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertEqual(result, "missing emoji")
+
+    def test_rejects_more_than_two_emojis(self) -> None:
+        topic, topic_tokens = normalize_topic("ai agents")
+        tweet = "AI agents are moving from demos into support queues, where handoffs and escalation paths now matter. 🤖⚙️🚀"
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertEqual(result, "too many emojis")
+
     def test_rejects_generic_coffee_tweet(self) -> None:
         topic, topic_tokens = normalize_topic("coffee")
-        tweet = "My morning coffee is definitely hitting the spot. Makes it easier to face the day."
+        tweet = "My morning coffee is definitely hitting the spot. Makes it easier to face the day. ☕"
 
         result = validate_tweet(
             tweet,
@@ -224,7 +271,7 @@ class GeneratorValidationTests(unittest.TestCase):
 
     def test_rejects_pseudo_profound_tweet(self) -> None:
         topic, topic_tokens = normalize_topic("ai agents")
-        tweet = "AI agents are not about automation, it's about unlocking the real lesson of human potential."
+        tweet = "AI agents are not about automation, it's about unlocking the real lesson of human potential. 🤖"
 
         result = validate_tweet(
             tweet,
@@ -259,8 +306,6 @@ class ConfigTests(unittest.TestCase):
             config = load_config(env_path)
 
         self.assertTrue(config.post_to_x)
-        self.assertEqual(config.run_timezone, "Asia/Kolkata")
-        self.assertEqual(config.enabled_run_slots, ["06:00", "12:00", "18:00", "22:00"])
         self.assertFalse(config.news_enabled)
         self.assertEqual(config.news_recency_hours, 48)
         self.assertEqual(config.news_region, "US")
@@ -284,16 +329,6 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(config.news_recency_hours, 24)
         self.assertEqual(config.news_region, "US")
         self.assertEqual(config.news_language, "en")
-
-    def test_load_config_rejects_invalid_enabled_slot(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            env_path = Path(tmp_dir) / ".env"
-            write_env_file(env_path, ENABLED_RUN_SLOTS="6:00")
-
-            with self.assertRaisesRegex(
-                ValueError, "ENABLED_RUN_SLOTS must be in HH:MM 24-hour format."
-            ):
-                load_config(env_path)
 
     def test_load_config_rejects_partial_telegram_settings(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -390,65 +425,6 @@ class NewsFetcherTests(unittest.TestCase):
         self.assertIn("q=learning", request_url)
         self.assertIn("hl=en-US", request_url)
         response.raise_for_status.assert_called_once()
-
-
-class ScheduleGuardTests(unittest.TestCase):
-    def test_resolve_current_slot_accepts_delayed_workflow_start(self) -> None:
-        now = datetime(2026, 5, 15, 12, 12, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-        self.assertEqual(resolve_current_slot(now), ("2026-05-15", "12:00"))
-
-    def test_resolve_current_slot_accepts_later_retry_start(self) -> None:
-        now = datetime(2026, 5, 15, 12, 59, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-        self.assertEqual(resolve_current_slot(now), ("2026-05-15", "12:00"))
-
-    def test_resolve_current_slot_rejects_too_late_workflow_start(self) -> None:
-        now = datetime(2026, 5, 15, 13, 16, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-        self.assertIsNone(resolve_current_slot(now))
-
-    def test_decide_scheduled_run_runs_enabled_unlogged_slot(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            log_path = Path(tmp_dir) / "tweet-history.md"
-            env_path = Path(tmp_dir) / ".env"
-            write_env_file(env_path, LOG_FILE_PATH=str(log_path))
-            config = load_config(env_path)
-            now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-            decision = decide_scheduled_run(config, now)
-
-        self.assertTrue(decision.should_run)
-        self.assertEqual(decision.run_date, "2026-05-15")
-        self.assertEqual(decision.run_slot, "12:00")
-
-    def test_decide_scheduled_run_skips_disabled_slot(self) -> None:
-        tmp_dir, config = load_temp_config(ENABLED_RUN_SLOTS="06:00,18:00")
-        self.addCleanup(tmp_dir.cleanup)
-        now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-        decision = decide_scheduled_run(config, now)
-
-        self.assertFalse(decision.should_run)
-        self.assertIn("not enabled", decision.reason)
-
-    def test_decide_scheduled_run_skips_already_logged_slot(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            log_path = Path(tmp_dir) / "tweet-history.md"
-            log_path.write_text(
-                build_slot_marker(run_date="2026-05-15", run_slot="12:00"),
-                encoding="utf-8",
-            )
-            env_path = Path(tmp_dir) / ".env"
-            write_env_file(env_path, LOG_FILE_PATH=str(log_path))
-            config = load_config(env_path)
-            now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-            decision = decide_scheduled_run(config, now)
-
-        self.assertFalse(decision.should_run)
-        self.assertIn("already logged", decision.reason)
-
 
 class LoggerTests(unittest.TestCase):
     def test_build_tweet_log_entry_is_markdown_with_slot_marker(self) -> None:
@@ -577,9 +553,22 @@ class LoggerTests(unittest.TestCase):
 
 class PublisherTests(unittest.TestCase):
     def test_build_post_text_appends_hashtag_once(self) -> None:
-        self.assertEqual(build_post_text("Fresh take"), "Fresh take #botWrites")
+        self.assertEqual(build_post_text("Fresh take 🚀"), "Fresh take 🚀 #botWrites")
         self.assertEqual(
-            build_post_text("Fresh take #botWrites"), "Fresh take #botWrites"
+            build_post_text("Fresh take 🚀 #botWrites"), "Fresh take 🚀 #botWrites"
+        )
+
+    def test_build_post_text_appends_news_url_after_hashtag(self) -> None:
+        self.assertEqual(
+            build_post_text("Fresh take 🚀", "https://example.com/news"),
+            "Fresh take 🚀 #botWrites https://example.com/news",
+        )
+
+    def test_max_generated_text_chars_reserves_suffix_space(self) -> None:
+        self.assertEqual(max_generated_text_chars(280), 269)
+        self.assertEqual(
+            max_generated_text_chars(280, "https://example.com/news"),
+            245,
         )
 
 
@@ -598,21 +587,6 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         self.assertIn("Could not generate tweet:", buffer.getvalue())
 
-    def test_run_once_skips_disabled_scheduled_slot(self) -> None:
-        buffer = StringIO()
-        tmp_dir, config = load_temp_config(ENABLED_RUN_SLOTS="06:00")
-        self.addCleanup(tmp_dir.cleanup)
-        now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
-
-        with patch.object(tweet_generator, "load_config", return_value=config):
-            with patch.object(tweet_generator, "build_client") as mock_client:
-                with patch("sys.stdout", buffer):
-                    result = tweet_generator.run_once(respect_schedule=True, now=now)
-
-        self.assertEqual(result, 0)
-        mock_client.assert_not_called()
-        self.assertIn("not enabled", buffer.getvalue())
-
     def test_run_once_sends_short_telegram_summary_after_success(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(
@@ -627,35 +601,33 @@ class TweetGeneratorTests(unittest.TestCase):
         )
         self.addCleanup(tmp_dir.cleanup)
         published = MagicMock(url="https://x.com/example/status/1")
-        now = datetime(2026, 5, 15, 12, 0, tzinfo=ZoneInfo("Asia/Kolkata"))
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
                 with patch.object(
                     tweet_generator,
                     "generate_valid_tweet",
-                    return_value=("Coffee is back.", 1.0, 2),
+                    return_value=("Coffee is back. ☕", 1.0, 2),
                 ):
                     with patch.object(
                         tweet_generator, "post_tweet_to_x", return_value=published
-                    ):
+                    ) as mock_post:
                         with patch.object(
                             tweet_generator, "send_telegram_message"
                         ) as mock_telegram:
                             with patch("sys.stdout", buffer):
-                                result = tweet_generator.run_once(
-                                    respect_schedule=True, now=now
-                                )
+                                result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn("Topic:", telegram_text)
         self.assertIn("Tone:", telegram_text)
         self.assertIn("Attempts: 2", telegram_text)
-        self.assertIn("Coffee is back.", telegram_text)
+        self.assertIn("Coffee is back. ☕ #botWrites", telegram_text)
         self.assertNotIn("News reference", telegram_text)
         self.assertNotIn("Tweet URL", telegram_text)
         self.assertNotIn("tweet-slot", telegram_text)
+        mock_post.assert_called_once_with(config, "Coffee is back. ☕", news_url=None)
         self.assertIn("Tweet posted and logged.", buffer.getvalue())
 
     def test_run_once_uses_rss_news_when_available(self) -> None:
@@ -691,11 +663,11 @@ class TweetGeneratorTests(unittest.TestCase):
                     with patch.object(
                         tweet_generator,
                         "generate_valid_tweet",
-                        return_value=("AI agents are moving into support queues.", 1.0, 1),
+                        return_value=("AI agents are moving into support queues. 🤖", 1.0, 1),
                     ) as mock_generate:
                         with patch.object(
                             tweet_generator, "post_tweet_to_x", return_value=published
-                        ):
+                        ) as mock_post:
                             with patch.object(
                                 tweet_generator, "send_telegram_message"
                             ) as mock_telegram:
@@ -705,13 +677,25 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         mock_fetch.assert_called_once()
         self.assertIs(mock_generate.call_args.args[4], news_item)
+        mock_post.assert_called_once_with(
+            config,
+            "AI agents are moving into support queues. 🤖",
+            news_url="https://example.com/ai-agents",
+        )
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn("News title: AI agents reshape support workflows", log_content)
         self.assertIn("News URL: https://example.com/ai-agents", log_content)
+        self.assertIn(
+            "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
+            log_content,
+        )
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn("Topic:", telegram_text)
         self.assertIn("Tone:", telegram_text)
-        self.assertIn("AI agents are moving into support queues.", telegram_text)
+        self.assertIn(
+            "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
+            telegram_text,
+        )
         self.assertIn("News reference:", telegram_text)
         self.assertIn("AI agents reshape support workflows", telegram_text)
         self.assertIn("Example News", telegram_text)
@@ -796,7 +780,7 @@ class TweetGeneratorTests(unittest.TestCase):
                     with patch.object(
                         tweet_generator,
                         "generate_valid_tweet",
-                        return_value=("Coffee is back.", 1.0, 1),
+                        return_value=("Coffee is back. ☕", 1.0, 1),
                     ):
                         with patch.object(
                             tweet_generator,
@@ -871,16 +855,17 @@ class TweetGeneratorTests(unittest.TestCase):
                     with patch.object(
                         tweet_generator,
                         "generate_valid_tweet",
-                        return_value=("Coffee is back.", 1.0, 1),
+                        return_value=("Coffee is back. ☕", 1.0, 1),
                     ) as mock_generate:
                         with patch.object(
                             tweet_generator, "post_tweet_to_x", return_value=published
-                        ):
+                        ) as mock_post:
                             with patch("sys.stdout", buffer):
                                 result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
         self.assertIsNone(mock_generate.call_args.args[4])
+        mock_post.assert_called_once_with(config, "Coffee is back. ☕", news_url=None)
         self.assertIn("Using generic topic prompt", buffer.getvalue())
 
     def test_run_once_falls_back_when_rss_lookup_fails(self) -> None:
@@ -907,16 +892,19 @@ class TweetGeneratorTests(unittest.TestCase):
                     with patch.object(
                         tweet_generator,
                         "generate_valid_tweet",
-                        return_value=("Learning still rewards curiosity.", 1.0, 1),
+                        return_value=("Learning still rewards curiosity. 📚", 1.0, 1),
                     ) as mock_generate:
                         with patch.object(
                             tweet_generator, "post_tweet_to_x", return_value=published
-                        ):
+                        ) as mock_post:
                             with patch("sys.stdout", buffer):
                                 result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
         self.assertIsNone(mock_generate.call_args.args[4])
+        mock_post.assert_called_once_with(
+            config, "Learning still rewards curiosity. 📚", news_url=None
+        )
         self.assertIn("Warning: RSS news lookup failed", buffer.getvalue())
         self.assertNotIn(
             "News title:", config.log_file_path.read_text(encoding="utf-8")
@@ -942,7 +930,7 @@ class TweetGeneratorTests(unittest.TestCase):
                 with patch.object(
                     tweet_generator,
                     "generate_valid_tweet",
-                    return_value=("Coffee is back.", 1.0, 2),
+                    return_value=("Coffee is back. ☕", 1.0, 2),
                 ):
                     with patch.object(
                         tweet_generator, "post_tweet_to_x", return_value=published

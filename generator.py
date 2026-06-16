@@ -21,7 +21,7 @@ EMOJI_PATTERN = re.compile(
     "\U0001FA70-\U0001FAFF"
     "\u2600-\u26FF"
     "\u2700-\u27BF"
-    "]+"
+    "]"
 )
 HARD_FAIL_PHRASES = (
     "my brain",
@@ -207,6 +207,7 @@ Rules:
 - Use short, clean sentences.
 - Keep tone in the wording, not as filler.
 - Do not force first person unless it sounds natural.
+- Include 1 or 2 relevant emojis.
 - Max {max_tweet_chars} characters.
 {news_rules}
 
@@ -216,7 +217,7 @@ Do not use:
 - "Imagine this", "Picture a world", or "In a world where".
 - Pseudo-profound framing like "It's not about X, it's about Y" or "The real lesson".
 - Forced inspiration, grand lessons, or performative wisdom.
-- More than one emoji or ellipsis.
+- More than two emojis or ellipsis.
 - Comma-heavy chains.
 - Filler like "just", "kind of", "sort of", "my brain", "feels like static", "really feels", "seriously", or "honestly".
 
@@ -246,9 +247,10 @@ def build_compact_prompt(
     return (
         f"Write one tweet about {topic}. Tone: {tone}. "
         f"{news_hint}"
-        "Write like Deepak: direct, practical, concise, and not overly polished. "
-        f"Stay on topic, use one concrete detail, and keep it under {max_tweet_chars} characters."
-        " No hashtags, no labels, no quotes, no filler, no meta commentary, no pseudo-profound framing."
+        "Direct, practical, concise. "
+        f"Stay on topic with one concrete detail under {max_tweet_chars} characters."
+        " Use 1 or 2 relevant emojis. No hashtags, labels, quotes, no article URL,"
+        " filler, meta commentary, or pseudo-profound framing."
         f"{retry_hint} Output only the tweet text."
     )
 
@@ -263,7 +265,7 @@ def build_minimal_prompt(
     news_hint = f" Latest news: {news_item.title}." if news_item else ""
     return (
         f"Tweet about {topic_hint}.{news_hint} Tone: {tone}. "
-        f"Under {max_tweet_chars} chars. Direct, practical. No fake insight."
+        f"Under {max_tweet_chars} chars. Direct, practical. Add 1-2 emojis. No hashtag/link."
     )
 
 
@@ -296,7 +298,10 @@ def is_overdecorated(text: str) -> bool:
 def get_style_issue(text: str) -> str | None:
     lowered = text.lower()
 
-    if count_emojis(text) > 1:
+    emoji_count = count_emojis(text)
+    if emoji_count < 1:
+        return "missing emoji"
+    if emoji_count > 2:
         return "too many emojis"
     if is_overdecorated(text):
         return "too much punctuation clutter"
@@ -421,11 +426,13 @@ def request_tweet(
     tone: str,
     attempt_number: int,
     news_item: NewsItem | None = None,
+    max_tweet_chars: int | None = None,
 ) -> str:
+    resolved_max_tweet_chars = max_tweet_chars or config.max_tweet_chars
     prompt = build_prompt(
         topic,
         tone,
-        config.max_tweet_chars,
+        resolved_max_tweet_chars,
         attempt_number,
         news_item,
     )
@@ -438,7 +445,7 @@ def request_tweet(
         if not is_context_length_error(exc):
             raise
         compact_prompt = build_compact_prompt(
-            topic, tone, config.max_tweet_chars, attempt_number, news_item
+            topic, tone, resolved_max_tweet_chars, attempt_number, news_item
         )
         try:
             response = client.generate(
@@ -453,7 +460,7 @@ def request_tweet(
                 prompt=build_minimal_prompt(
                     topic,
                     tone,
-                    config.max_tweet_chars,
+                    resolved_max_tweet_chars,
                     news_item,
                 ),
             )
@@ -473,18 +480,28 @@ def generate_valid_tweet(
     topic: str,
     tone: str,
     news_item: NewsItem | None = None,
+    max_tweet_chars: int | None = None,
 ) -> tuple[str, float, int]:
     original_topic, topic_tokens = normalize_topic(topic)
+    resolved_max_tweet_chars = max_tweet_chars or config.max_tweet_chars
     last_reason = "unknown validation failure"
     start = time.perf_counter()
 
     for attempt in range(1, config.max_retries + 1):
-        tweet = request_tweet(client, config, original_topic, tone, attempt, news_item)
+        tweet = request_tweet(
+            client,
+            config,
+            original_topic,
+            tone,
+            attempt,
+            news_item,
+            resolved_max_tweet_chars,
+        )
         failure_reason = validate_tweet(
             tweet,
             original_topic,
             topic_tokens,
-            config.max_tweet_chars,
+            resolved_max_tweet_chars,
             attempt,
             config.max_retries,
         )
