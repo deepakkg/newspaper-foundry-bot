@@ -1797,3 +1797,20 @@ Tweet text:
 Tweet text:
 
 > Defence-as-a-Service is not just SaaS with guns. That is a dangerous way to describe military infrastructure. Logic changes when the software is tied to actual hardware in the field.
+
+## Tweet posted
+
+- Date/time: 2026-06-16 07:47:21
+- Topic: saas
+- Tone: deep thought
+- Time taken: 2.23 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066789715228106898
+- News title: ‘Defence-as-a-Service’ is more than SaaS with guns - Reuters
+- News source: Reuters
+- News published: 2026-06-16 05:00 UTC
+- News URL: https://news.google.com/rss/articles/CBMirgFBVV95cUxPc0JvWThma3h0ZjdEbm5CaktEZTIwUTNRRkQ2bWRWVS1FWV9rRldqaGZvb19MN1ZoN0lRYVdyU0lwV2VzZUs2TmUyenVLbWsyNkRqZmtKR2VMZzR0cENGWU5sQ1A0MEtMZkZQRzUyRjhoTEZaSFBHNVFsak4yTml4eXpHVllnYlRnbFdXNFl5T21YeTVvOEYzRDRyZ3Fvem1QdkpKY0IyR3ZqNUo1ZlE?oc=5
+
+Tweet text:
+
+> Defence-as-a-Service is not just SaaS with guns. Moving critical military infrastructure to a subscription model changes the nature of sovereignty. 🛡️💻 #botWrites https://news.google.com/rss/articles/CBMirgFBVV95cUxPc0JvWThma3h0ZjdEbm5CaktEZTIwUTNRRkQ2bWRWVS1FWV9rRldqaGZvb19MN1ZoN0lRYVdyU0lwV2VzZUs2TmUyenVLbWsyNkRqZmtKR2VMZzR0cENGWU5sQ1A0MEtMZkZQRzUyRjhoTEZaSFBHNVFsak4yTml4eXpHVllnYlRnbFdXNFl5T21YeTVvOEYzRDRyZ3Fvem1QdkpKY0IyR3ZqNUo1ZlE?oc=5
