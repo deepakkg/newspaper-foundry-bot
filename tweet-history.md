@@ -1878,3 +1878,20 @@ Tweet text:
 Tweet text:
 
 > Vibe coding is getting absurd. Atoms lets AI agents build, deploy, and market your app without writing a line of code. We are moving from engineering to basically just managing the mood 🪄💻 #botWrites https://news.google.com/rss/articles/CBMizwFBVV95cUxNYkkyM3JOcGxQdDU2MWFsZ0J2MWNIZ3BldGdNVTN2Sm9vMlBjeHdMZWNxS2txc0VGRWxrWlB2QlZOOGM3WEU1RFZUMUlrMXRuUTJGU1JUV3ZpbUxjMll3RWF3SE9TaVVsZF9pNW5SdGc2QTVsOEVmQjlnTnhiSFZHZjhySjZIWGVRTTI2TFU3SzVtWUoycTNFS19HdklaNG5xZm5YRzdLRmlleU1LQkhWT1Q2eGZJd1lZWk1fc3V6UTB3SE9XZFdWcGdtWWJtVDQ?oc=5
+
+## Tweet posted
+
+- Date/time: 2026-06-16 09:39:28
+- Topic: forward deployed experts
+- Tone: funny
+- Time taken: 2.37 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066817929736257662
+- News title: OpenAI Launches Partner Network: $150M Bet That Implementation Beats Model Power - Tech Times
+- News source: Tech Times
+- News published: 2026-06-15 20:25 UTC
+- News URL: https://www.techtimes.com/articles/318436/20260615/openai-launches-partner-network-150m-bet-that-implementation-beats-model-power.htm
+
+Tweet text:
+
+> OpenAI is spending $150M to realize that a great model doesn't install itself. Forward deployed experts are basically just high-priced babysitters for the API 🛠️🤖 #botWrites https://www.techtimes.com/articles/318436/20260615/openai-launches-partner-network-150m-bet-that-implementation-beats-model-power.htm
