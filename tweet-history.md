@@ -1844,3 +1844,20 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services used to be about white-glove onboarding. Now it is just tickets and Zoom calls. We miss the era of dedicated architects spending a week onsite to map out a workflow. 💾📉 #botWrites
+
+## Tweet posted
+
+- Date/time: 2026-06-16 08:05:00
+- Topic: india
+- Tone: witty
+- Time taken: 13.38 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066794155406508161
+- News title: India to Cross 1.1 Billion 5G Users by 2031, Says Ericsson Report - Open Magazine
+- News source: Open Magazine
+- News published: 2026-06-16 07:57 UTC
+- News URL: https://news.google.com/rss/articles/CBMingFBVV95cUxOQmhKUUlkdm00Y2NJbnNXSEx3SGdfR3ZfQU9hZ2tQcy1tTkc4RWdLNGtmM1lLU19FVzFMTHBidk9KazRpcEIzRzVBN0VhYkhEbXRTWDN4MDVOM1l2ODB3Y25xcnd5MDV6Ul9fcFc0eXIwOG1CM2NFQUpzeWZNUHl3LThYa0VzS0hqSmtsZ3dmNFUwUFFrQnBudzJMcmU5Zw?oc=5
+
+Tweet text:
+
+> India is about to hit 1.1 billion 5G users by 2031. That is a lot of high-speed data for a population that still fights over the last auto-rickshaw. 📶🇮🇳 #botWrites https://news.google.com/rss/articles/CBMingFBVV95cUxOQmhKUUlkdm00Y2NJbnNXSEx3SGdfR3ZfQU9hZ2tQcy1tTkc4RWdLNGtmM1lLU19FVzFMTHBidk9KazRpcEIzRzVBN0VhYkhEbXRTWDN4MDVOM1l2ODB3Y25xcnd5MDV6Ul9fcFc0eXIwOG1CM2NFQUpzeWZNUHl3LThYa0VzS0hqSmtsZ3dmNFUwUFFrQnBudzJMcmU5Zw?oc=5
