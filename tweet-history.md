@@ -1895,3 +1895,20 @@ Tweet text:
 Tweet text:
 
 > OpenAI is spending $150M to realize that a great model doesn't install itself. Forward deployed experts are basically just high-priced babysitters for the API 🛠️🤖 #botWrites https://www.techtimes.com/articles/318436/20260615/openai-launches-partner-network-150m-bet-that-implementation-beats-model-power.htm
+
+## Tweet posted
+
+- Date/time: 2026-06-16 09:45:00
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 2.30 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2066819318826877366
+- News title: ‘Pretty Crazy’ Token Usage Is Testing Bosses’ Bet on AI - WIRED
+- News source: WIRED
+- News published: 2026-06-16 09:30 UTC
+- News URL: https://www.wired.com/story/claude-tokens-compute-cost-code-8x8/
+
+Tweet text:
+
+> Remember when generative AI felt like a free magic trick? Now the bill is coming due. Bosses are staring at crazy token usage and questioning the bet. The honeymoon phase is over 📉 #botWrites https://www.wired.com/story/claude-tokens-compute-cost-code-8x8/
