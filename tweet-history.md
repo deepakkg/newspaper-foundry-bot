@@ -2082,3 +2082,20 @@ Tweet text:
 Tweet text:
 
 > Remember when AI tokens were practically infinite? Now we're in the rationing era. Watching the S&P 500 react to these limits brings back a different kind of scarcity. 📉⌛️ #botWrites https://seekingalpha.com/article/4915702-the-token-rationing-era-begins
+
+## Tweet posted
+
+- Date/time: 2026-06-17 18:42:41
+- Topic: ai tokens
+- Tone: witty
+- Time taken: 4.75 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067317021323526161
+- News title: The Token Rationing Era Begins (SP500) - Seeking Alpha
+- News source: Seeking Alpha
+- News published: 2026-06-17 15:28 UTC
+- News URL: https://seekingalpha.com/article/4915702-the-token-rationing-era-begins
+
+Tweet text:
+
+> AI tokens are becoming the new luxury good. Seeking Alpha says we're entering a rationing era. Efficiency now matters more than raw scale 📉. #botWrites https://seekingalpha.com/article/4915702-the-token-rationing-era-begins
