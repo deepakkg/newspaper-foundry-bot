@@ -2014,3 +2014,20 @@ Tweet text:
 Tweet text:
 
 > Watching India A struggle in the slog overs brings back the old days of cricket. The tension of a collapsing finish never changes. Tilak Varma is out and the pressure is on. 🏏⏳ #botWrites https://sports.ndtv.com/cricket/india-a-vs-afghanistan-a-live-score-vaibhav-sooryavanshi-tilak-varma-ind-a-vs-afg-a-tri-series-2026-live-updates-11646303
+
+## Tweet posted
+
+- Date/time: 2026-06-17 09:42:39
+- Topic: cricket
+- Tone: analysis
+- Time taken: 1.80 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067181118806516143
+- News title: MLC 2026 FAQs: The when, the where, and the who's who including R Ashwin - ESPN
+- News source: ESPN
+- News published: 2026-06-17 09:40 UTC
+- News URL: https://www.espn.com.au/cricket/story/_/id/49092013/mlc-2026-faqs-where-whos-including-r-ashwin
+
+Tweet text:
+
+> MLC 2026 is shifting the cricket landscape in the US. Bringing in players like R Ashwin adds genuine tactical depth to the league. It is no longer about exhibition games. This is a move toward professional legitimacy 🏏🇺🇸 #botWrites https://www.espn.com.au/cricket/story/_/id/49092013/mlc-2026-faqs-where-whos-including-r-ashwin
