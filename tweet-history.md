@@ -1980,3 +1980,20 @@ Tweet text:
 Tweet text:
 
 > Land is supposed to be the only constant. In Jammu, subsidence is forcing villagers to evacuate. We forget how fragile the ground actually is. 🏔️⚠️ #botWrites https://timesofindia.indiatimes.com/india/subsidence-sparks-fear-in-jammu-kashmir-village-residents-evacuated/articleshow/131780300.cms
+
+## Tweet posted
+
+- Date/time: 2026-06-17 05:22:50
+- Topic: forward deployed experts
+- Tone: witty
+- Time taken: 2.19 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067115734002471337
+- News title: Wipro launches AI Centre of Excellence for Anthropic’s Claude, to train 10,000 experts in 18 months - Fortune India
+- News source: Fortune India
+- News published: 2026-06-16 13:08 UTC
+- News URL: https://www.fortuneindia.com/technology/wipro-launches-ai-centre-of-excellence-for-anthropics-claude-to-train-10000-experts-in-18-months/143448
+
+Tweet text:
+
+> Wipro is betting big on forward deployed experts. Training 10,000 people on Claude in 18 months is a massive scale play. Implementation is where the actual value is. 🤖📈 #botWrites https://www.fortuneindia.com/technology/wipro-launches-ai-centre-of-excellence-for-anthropics-claude-to-train-10000-experts-in-18-months/143448
