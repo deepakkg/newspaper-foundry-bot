@@ -1,6 +1,6 @@
 # Gemma Tweet Bot
 
-This bot fetches recent topic news from Google News RSS, generates short tweets with Ollama, posts them to X, records each successful post in GitHub, and sends a short Telegram summary.
+This bot fetches recent topic news from Google News RSS, generates short tweets with Ollama, posts them to X, records each successful post in GitHub, and can send Telegram and Discord notifications.
 
 ## GitHub Actions schedule
 
@@ -24,6 +24,7 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Secret
 - `X_ACCESS_TOKEN_SECRET`
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
+- `DISCORD_WEBHOOK_URL`
 
 ## GitHub Variables
 
@@ -42,6 +43,8 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `NEWS_LANGUAGE`
 - `POST_TO_X`
 - `X_USERNAME`
+- `TELEGRAM_NOTIFICATIONS_ENABLED`
+- `DISCORD_NOTIFICATIONS_ENABLED`
 
 Recommended defaults:
 
@@ -56,6 +59,8 @@ NEWS_RECENCY_HOURS=48
 NEWS_REGION=US
 NEWS_LANGUAGE=en
 POST_TO_X=true
+TELEGRAM_NOTIFICATIONS_ENABLED=false
+DISCORD_NOTIFICATIONS_ENABLED=false
 ```
 
 ## Local setup
@@ -76,7 +81,7 @@ Run once locally:
 GitHub cron controls the production run schedule. The Python code always runs once
 when invoked.
 
-## Logs and Telegram
+## Logs and notifications
 
 GitHub Actions writes successful posts to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
 
@@ -86,7 +91,18 @@ When a recent RSS item is used, the log also includes the news title, source, pu
 
 For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 
-Telegram receives only:
+Notification channels are opt-in. Set `TELEGRAM_NOTIFICATIONS_ENABLED=true` to send Telegram summaries, and set `DISCORD_NOTIFICATIONS_ENABLED=true` to send Discord webhook embeds. If an enabled notification channel is missing credentials or fails to send, the bot prints a warning and continues.
+
+Telegram requires:
+
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
+
+Discord requires:
+
+- `DISCORD_WEBHOOK_URL`
+
+Telegram receives:
 
 - Topic
 - Tone
@@ -95,4 +111,6 @@ Telegram receives only:
 - News reference, when RSS news was used
 - Full tweet text
 
-If a run fails before posting a tweet, the workflow exits cleanly. When Telegram is configured, the bot sends a failure summary with the topic, tone, news reference when available, and the error message. Failed runs are not written to tweet history.
+Discord receives the same success and failure information as a rich embed.
+
+If a run fails before posting a tweet, the workflow exits cleanly. When notification channels are enabled, the bot sends a failure summary with the topic, tone, news reference when available, and the error message. Failed runs are not written to tweet history.

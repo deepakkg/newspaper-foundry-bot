@@ -12,6 +12,7 @@ from unittest.mock import MagicMock, patch
 import requests
 
 from config import load_config
+from discord_sender import send_discord_embed
 from generator import (
     build_compact_prompt,
     build_minimal_prompt,
@@ -61,6 +62,9 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "X_USERNAME": "",
         "TELEGRAM_BOT_TOKEN": "",
         "TELEGRAM_CHAT_ID": "",
+        "TELEGRAM_NOTIFICATIONS_ENABLED": "false",
+        "DISCORD_NOTIFICATIONS_ENABLED": "false",
+        "DISCORD_WEBHOOK_URL": "",
     }
     values.update(overrides)
     path.write_text(
@@ -316,6 +320,8 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(config.news_region, "US")
         self.assertEqual(config.news_language, "en")
         self.assertEqual(config.log_file_path, log_path)
+        self.assertFalse(config.telegram_notifications_enabled)
+        self.assertFalse(config.discord_notifications_enabled)
 
     def test_load_config_accepts_news_settings(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -335,16 +341,41 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(config.news_region, "US")
         self.assertEqual(config.news_language, "en")
 
-    def test_load_config_rejects_partial_telegram_settings(self) -> None:
+    def test_load_config_accepts_notification_settings(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             env_path = Path(tmp_dir) / ".env"
-            write_env_file(env_path, TELEGRAM_BOT_TOKEN="bot-token")
+            write_env_file(
+                env_path,
+                TELEGRAM_NOTIFICATIONS_ENABLED="true",
+                DISCORD_NOTIFICATIONS_ENABLED="true",
+                DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+            )
 
-            with self.assertRaisesRegex(
-                ValueError,
-                "TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must both be set",
-            ):
-                load_config(env_path)
+            config = load_config(env_path)
+
+        self.assertTrue(config.telegram_notifications_enabled)
+        self.assertTrue(config.discord_notifications_enabled)
+        self.assertEqual(
+            config.discord_webhook_url,
+            "https://discord.com/api/webhooks/1/token",
+        )
+
+    def test_load_config_allows_missing_notification_credentials(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                TELEGRAM_NOTIFICATIONS_ENABLED="true",
+                DISCORD_NOTIFICATIONS_ENABLED="true",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.telegram_notifications_enabled)
+        self.assertIsNone(config.telegram_bot_token)
+        self.assertIsNone(config.telegram_chat_id)
+        self.assertTrue(config.discord_notifications_enabled)
+        self.assertIsNone(config.discord_webhook_url)
 
 
 class NewsFetcherTests(unittest.TestCase):
@@ -777,6 +808,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -821,6 +853,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -894,6 +927,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -950,6 +984,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -992,6 +1027,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -1025,6 +1061,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -1133,6 +1170,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -1169,6 +1207,7 @@ class TweetGeneratorTests(unittest.TestCase):
             X_ACCESS_TOKEN="token",
             X_ACCESS_TOKEN_SECRET="token-secret",
             X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
             TELEGRAM_BOT_TOKEN="bot-token",
             TELEGRAM_CHAT_ID="12345",
         )
@@ -1202,6 +1241,200 @@ class TweetGeneratorTests(unittest.TestCase):
             "Coffee is back. ☕ #botWrites",
             config.log_file_path.read_text(encoding="utf-8"),
         )
+
+    def test_run_once_sends_discord_embed_after_success(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/1")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 2),
+                ):
+                    with patch.object(
+                        tweet_generator, "post_tweet_to_x", return_value=published
+                    ):
+                        with patch.object(
+                            tweet_generator, "send_discord_embed"
+                        ) as mock_discord:
+                            with patch("sys.stdout", buffer):
+                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        embed = mock_discord.call_args.args[1]
+        self.assertEqual(embed["title"], "Tweet posted")
+        self.assertIn(
+            {"name": "Final tweet", "value": "Coffee is back. ☕ #botWrites", "inline": False},
+            embed["fields"],
+        )
+        self.assertIn("Tweet posted and logged.", buffer.getvalue())
+
+    def test_run_once_sends_both_notification_channels(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/1")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 2),
+                ):
+                    with patch.object(
+                        tweet_generator, "post_tweet_to_x", return_value=published
+                    ):
+                        with patch.object(
+                            tweet_generator, "send_telegram_message"
+                        ) as mock_telegram:
+                            with patch.object(
+                                tweet_generator, "send_discord_embed"
+                            ) as mock_discord:
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_telegram.assert_called_once()
+        mock_discord.assert_called_once()
+
+    def test_run_once_sends_discord_when_telegram_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/1")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 2),
+                ):
+                    with patch.object(
+                        tweet_generator, "post_tweet_to_x", return_value=published
+                    ):
+                        with patch.object(
+                            tweet_generator,
+                            "send_telegram_message",
+                            side_effect=RuntimeError("Telegram failed"),
+                        ):
+                            with patch.object(
+                                tweet_generator, "send_discord_embed"
+                            ) as mock_discord:
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_discord.assert_called_once()
+        self.assertIn("Warning: Telegram delivery failed:", buffer.getvalue())
+
+    def test_run_once_warns_when_enabled_credentials_are_missing(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://x.com/example/status/1")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 2),
+                ):
+                    with patch.object(
+                        tweet_generator, "post_tweet_to_x", return_value=published
+                    ):
+                        with patch("sys.stdout", buffer):
+                            result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        output = buffer.getvalue()
+        self.assertIn("Warning: Telegram delivery failed:", output)
+        self.assertIn("Warning: Discord delivery failed:", output)
+
+    def test_run_once_sends_failure_discord_when_generation_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["coffee", "witty"]):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        side_effect=RuntimeError("Could not generate a valid tweet"),
+                    ):
+                        with patch.object(
+                            tweet_generator, "send_discord_embed"
+                        ) as mock_discord:
+                            with patch("sys.stdout", buffer):
+                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        embed = mock_discord.call_args.args[1]
+        self.assertEqual(embed["title"], "Tweet bot failed")
+        self.assertIn(
+            {"name": "Error", "value": "Could not generate a valid tweet", "inline": False},
+            embed["fields"],
+        )
+        self.assertFalse(config.log_file_path.exists())
 
     def test_run_once_logs_clear_timeout_message(self) -> None:
         buffer = StringIO()
@@ -1252,6 +1485,48 @@ class TelegramSenderTests(unittest.TestCase):
         with patch("telegram_sender.requests.post", return_value=response):
             with self.assertRaisesRegex(RuntimeError, "Telegram send failed: chat not found"):
                 send_telegram_message(config, "hello")
+
+
+class DiscordSenderTests(unittest.TestCase):
+    def test_send_discord_embed_accepts_success_response(self) -> None:
+        tmp_dir, config = load_temp_config(
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=204, text="", reason="No Content")
+
+        with patch("discord_sender.requests.post", return_value=response) as mock_post:
+            send_discord_embed(config, {"title": "Tweet posted", "fields": []})
+
+        mock_post.assert_called_once_with(
+            "https://discord.com/api/webhooks/1/token",
+            json={
+                "embeds": [{"title": "Tweet posted", "fields": []}],
+                "allowed_mentions": {"parse": []},
+            },
+            timeout=config.timeout_seconds,
+        )
+
+    def test_send_discord_embed_raises_clear_error(self) -> None:
+        tmp_dir, config = load_temp_config(
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=400, text="bad webhook", reason="Bad Request")
+
+        with patch("discord_sender.requests.post", return_value=response):
+            with self.assertRaisesRegex(RuntimeError, "Discord send failed: bad webhook"):
+                send_discord_embed(config, {"title": "Tweet posted", "fields": []})
+
+    def test_send_discord_embed_accepts_empty_success_response(self) -> None:
+        tmp_dir, config = load_temp_config(
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=200, text="", reason="OK")
+
+        with patch("discord_sender.requests.post", return_value=response):
+            send_discord_embed(config, {"title": "Tweet posted", "fields": []})
 
 
 if __name__ == "__main__":

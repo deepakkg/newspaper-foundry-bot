@@ -39,8 +39,11 @@ jobs:
       X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
       X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
       X_USERNAME: ${{ vars.X_USERNAME }}
+      TELEGRAM_NOTIFICATIONS_ENABLED: ${{ vars.TELEGRAM_NOTIFICATIONS_ENABLED || 'false' }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      DISCORD_NOTIFICATIONS_ENABLED: ${{ vars.DISCORD_NOTIFICATIONS_ENABLED || 'false' }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       LOG_FILE_PATH: tweet-log-store/tweet-history.md
       TWEET_HISTORY_BRANCH: tweet-history
 

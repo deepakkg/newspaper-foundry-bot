@@ -27,8 +27,11 @@ class AppConfig:
     x_access_token: str | None
     x_access_token_secret: str | None
     x_username: str | None
+    telegram_notifications_enabled: bool
     telegram_bot_token: str | None
     telegram_chat_id: str | None
+    discord_notifications_enabled: bool
+    discord_webhook_url: str | None
     log_file_path: Path
     news_enabled: bool
     news_recency_hours: int
@@ -101,8 +104,17 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     x_access_token = os.getenv("X_ACCESS_TOKEN", "").strip() or None
     x_access_token_secret = os.getenv("X_ACCESS_TOKEN_SECRET", "").strip() or None
     x_username = os.getenv("X_USERNAME", "").strip() or None
+    telegram_notifications_enabled = _parse_bool(
+        os.getenv("TELEGRAM_NOTIFICATIONS_ENABLED", "false"),
+        "TELEGRAM_NOTIFICATIONS_ENABLED",
+    )
     telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip() or None
     telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip() or None
+    discord_notifications_enabled = _parse_bool(
+        os.getenv("DISCORD_NOTIFICATIONS_ENABLED", "false"),
+        "DISCORD_NOTIFICATIONS_ENABLED",
+    )
+    discord_webhook_url = os.getenv("DISCORD_WEBHOOK_URL", "").strip() or None
     log_file_raw = (
         os.getenv("LOG_FILE_PATH", "logs/tweet-history.md").strip()
         or "logs/tweet-history.md"
@@ -142,11 +154,6 @@ def load_config(env_path: Path | None = None) -> AppConfig:
             "OLLAMA_API_KEY is required when using a hosted Ollama endpoint."
         )
 
-    if bool(telegram_bot_token) != bool(telegram_chat_id):
-        raise ValueError(
-            "TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID must both be set to enable Telegram delivery."
-        )
-
     return AppConfig(
         ollama_host=ollama_host,
         ollama_model=ollama_model,
@@ -162,8 +169,11 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         x_access_token=x_access_token,
         x_access_token_secret=x_access_token_secret,
         x_username=x_username,
+        telegram_notifications_enabled=telegram_notifications_enabled,
         telegram_bot_token=telegram_bot_token,
         telegram_chat_id=telegram_chat_id,
+        discord_notifications_enabled=discord_notifications_enabled,
+        discord_webhook_url=discord_webhook_url,
         log_file_path=log_file_path,
         news_enabled=news_enabled,
         news_recency_hours=news_recency_hours,
