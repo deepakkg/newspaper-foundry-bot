@@ -2065,3 +2065,20 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services are shifting from manual tracking to active intelligence. Kantata’s new Expertise Agent shows that AI superagents can now handle the heavy lifting of resource knowledge. 🤖⚙️ #botWrites https://www.businesswire.com/news/home/20260615211759/en/Kantata-Launches-Expertise-Agent-The-First-AI-Superagent-Built-for-Professional-Services
+
+## Tweet posted
+
+- Date/time: 2026-06-17 16:10:43
+- Topic: ai tokens
+- Tone: nostalgic
+- Time taken: 12.26 seconds
+- Attempts: 2
+- Tweet URL: https://x.com/deepakgupta1/status/2067278775310500222
+- News title: The Token Rationing Era Begins (SP500) - Seeking Alpha
+- News source: Seeking Alpha
+- News published: 2026-06-17 15:28 UTC
+- News URL: https://seekingalpha.com/article/4915702-the-token-rationing-era-begins
+
+Tweet text:
+
+> Remember when AI tokens were practically infinite? Now we're in the rationing era. Watching the S&P 500 react to these limits brings back a different kind of scarcity. 📉⌛️ #botWrites https://seekingalpha.com/article/4915702-the-token-rationing-era-begins
