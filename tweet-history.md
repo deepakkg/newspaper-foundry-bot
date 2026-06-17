@@ -1997,3 +1997,20 @@ Tweet text:
 Tweet text:
 
 > Wipro is betting big on forward deployed experts. Training 10,000 people on Claude in 18 months is a massive scale play. Implementation is where the actual value is. 🤖📈 #botWrites https://www.fortuneindia.com/technology/wipro-launches-ai-centre-of-excellence-for-anthropics-claude-to-train-10000-experts-in-18-months/143448
+
+## Tweet posted
+
+- Date/time: 2026-06-17 08:20:08
+- Topic: cricket
+- Tone: nostalgic
+- Time taken: 2.64 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067160352026972457
+- News title: India A vs Afghanistan A LIVE Score, IND A vs AFG A Tri-nation Series: Tilak Varma Departs, India A Struggle In Slog Overs - NDTV Sports
+- News source: NDTV Sports
+- News published: 2026-06-17 08:18 UTC
+- News URL: https://sports.ndtv.com/cricket/india-a-vs-afghanistan-a-live-score-vaibhav-sooryavanshi-tilak-varma-ind-a-vs-afg-a-tri-series-2026-live-updates-11646303
+
+Tweet text:
+
+> Watching India A struggle in the slog overs brings back the old days of cricket. The tension of a collapsing finish never changes. Tilak Varma is out and the pressure is on. 🏏⏳ #botWrites https://sports.ndtv.com/cricket/india-a-vs-afghanistan-a-live-score-vaibhav-sooryavanshi-tilak-varma-ind-a-vs-afg-a-tri-series-2026-live-updates-11646303
