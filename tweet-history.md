@@ -2031,3 +2031,20 @@ Tweet text:
 Tweet text:
 
 > MLC 2026 is shifting the cricket landscape in the US. Bringing in players like R Ashwin adds genuine tactical depth to the league. It is no longer about exhibition games. This is a move toward professional legitimacy 🏏🇺🇸 #botWrites https://www.espn.com.au/cricket/story/_/id/49092013/mlc-2026-faqs-where-whos-including-r-ashwin
+
+## Tweet posted
+
+- Date/time: 2026-06-17 09:53:02
+- Topic: ai tokens
+- Tone: funny
+- Time taken: 2.43 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067183730653909120
+- News title: The Death Of Tokenmaxxing (SP500) - Seeking Alpha
+- News source: Seeking Alpha
+- News published: 2026-06-17 09:33 UTC
+- News URL: https://seekingalpha.com/article/4915584-the-death-of-tokenmaxxing
+
+Tweet text:
+
+> Tokenmaxxing is dead. Even the SP500 is moving past it. Turns out hoarding AI tokens isn't a sustainable strategy 📉📉 #botWrites https://seekingalpha.com/article/4915584-the-death-of-tokenmaxxing
