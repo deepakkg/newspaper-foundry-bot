@@ -2116,3 +2116,20 @@ Tweet text:
 Tweet text:
 
 > AI agents are winning the recruiting game. Adecco hit one million AI candidate interactions and cut delivery time by 50%. The speed is undeniable. 🤖💼 #botWrites https://www.prnewswire.com/news-releases/adecco-surpasses-one-million-ai-powered-candidate-interactions-cutting-time-to-deliver-by-50-302803497.html
+
+## Tweet posted
+
+- Date/time: 2026-06-18 15:59:06
+- Topic: ai tokens
+- Tone: funny
+- Time taken: 3.37 seconds
+- Attempts: 3
+- Tweet URL: https://x.com/deepakgupta1/status/2067638242342732103
+- News title: Tech Workers Maxed Out Their A.I. Use. Now They’re Trying to Minimize It. - The New York Times
+- News source: The New York Times
+- News published: 2026-06-18 15:18 UTC
+- News URL: https://www.nytimes.com/2026/06/18/technology/ai-token-minimizing.html
+
+Tweet text:
+
+> Tech workers spent all their AI tokens and now they're rationing. Going from maximalist to minimalist because you hit a limit is a funny way to evolve 📉🤖 #botWrites https://www.nytimes.com/2026/06/18/technology/ai-token-minimizing.html
