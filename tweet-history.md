@@ -2099,3 +2099,20 @@ Tweet text:
 Tweet text:
 
 > AI tokens are becoming the new luxury good. Seeking Alpha says we're entering a rationing era. Efficiency now matters more than raw scale 📉. #botWrites https://seekingalpha.com/article/4915702-the-token-rationing-era-begins
+
+## Tweet posted
+
+- Date/time: 2026-06-18 05:13:32
+- Topic: ai agents
+- Tone: witty
+- Time taken: 1.79 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067475778410057826
+- News title: Adecco surpasses one million AI-powered candidate interactions, cutting time-to-deliver by 50% - PR Newswire
+- News source: PR Newswire
+- News published: 2026-06-18 04:45 UTC
+- News URL: https://www.prnewswire.com/news-releases/adecco-surpasses-one-million-ai-powered-candidate-interactions-cutting-time-to-deliver-by-50-302803497.html
+
+Tweet text:
+
+> AI agents are winning the recruiting game. Adecco hit one million AI candidate interactions and cut delivery time by 50%. The speed is undeniable. 🤖💼 #botWrites https://www.prnewswire.com/news-releases/adecco-surpasses-one-million-ai-powered-candidate-interactions-cutting-time-to-deliver-by-50-302803497.html
