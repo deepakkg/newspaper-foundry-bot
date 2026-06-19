@@ -2269,3 +2269,20 @@ Tweet text:
 Tweet text:
 
 > SaaS professional services are shifting. The next generation of software is moving past basic tracking toward integrated delivery. It is a necessary evolution for enterprise scale. 📈💻 #botWrites https://www.enterprisetimes.co.uk/2026/06/18/the-next-generation-of-professional-services-software-is-here/
+
+## Tweet posted
+
+- Date/time: 2026-06-19 16:44:49
+- Topic: india
+- Tone: funny
+- Time taken: 3.57 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2068012135922209102
+- News title: "Strong demand for micro-credentials, Indian employers are increasingly willing to pay a premium for job-ready skills alongside traditional degrees" Coursera CEO Greg Hart says India is central to the company's growth strategy, accounting for over 20% of its - LinkedIn
+- News source: LinkedIn
+- News published: 2026-06-19 16:37 UTC
+- News URL: https://www.linkedin.com/posts/cnbc-tv18_voicesfromthevalley-coursera-ai-activity-7473775894856400896-1r2Y
+
+Tweet text:
+
+> India is finally realizing a degree isn't enough. Employers now paying extra for micro-credentials shows they want actual skills over just a piece of paper 📜💻 #botWrites https://www.linkedin.com/posts/cnbc-tv18_voicesfromthevalley-coursera-ai-activity-7473775894856400896-1r2Y
