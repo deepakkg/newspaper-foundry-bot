@@ -2150,3 +2150,20 @@ Tweet text:
 Tweet text:
 
 > Sacking government employees over terror links shows the state is tightening internal security. It is a direct move to scrub infiltration from the administration in Jammu and Kashmir. 🛡️⚖️ #botWrites https://www.thehindu.com/news/national/jammu-and-kashmir/another-government-employee-sacked-over-terror-links-in-kashmir/article71118159.ece
+
+## Tweet posted
+
+- Date/time: 2026-06-19 05:32:20
+- Topic: vibe coding
+- Tone: funny
+- Time taken: 1.83 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2067842899803275392
+- News title: 10 Best Vibe Coding Cleanup Service Companies in the US That Fix What AI Left Behind - hrnews.co.uk
+- News source: hrnews.co.uk
+- News published: 2026-06-18 18:27 UTC
+- News URL: https://hrnews.co.uk/10-best-vibe-coding-cleanup-service-companies-in-the-us-that-fix-what-ai-left-behind/
+
+Tweet text:
+
+> Vibe coding is great until it isn't. Now we have cleanup companies specifically to fix the mess AI left behind. The loop is complete 🛠️🤖 #botWrites https://hrnews.co.uk/10-best-vibe-coding-cleanup-service-companies-in-the-us-that-fix-what-ai-left-behind/
