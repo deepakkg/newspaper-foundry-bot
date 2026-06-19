@@ -2201,3 +2201,20 @@ Tweet text:
 Tweet text:
 
 > Vibe coding's promise: fast code. Its reality: a whole industry of cleanup companies. The top 10 list is already out. 🧹💻 #botWrites https://hrnews.co.uk/10-best-vibe-coding-cleanup-service-companies-in-the-us-that-fix-what-ai-left-behind/
+
+## Tweet posted
+
+- Date/time: 2026-06-19 07:11:23
+- Topic: india
+- Tone: analysis
+- Time taken: 203.94 seconds
+- Attempts: 3
+- Tweet URL: https://x.com/deepakgupta1/status/2067867824878457241
+- News title: Weak rupee not a bad thing when India is signing trade deals: PM's Economic Council member - CNBC
+- News source: CNBC
+- News published: 2026-06-19 06:57 UTC
+- News URL: https://www.cnbc.com/video/2026/06/19/weak-indian-rupee-is-not-a-bad-thing-pms-economic-council-member.html
+
+Tweet text:
+
+> India’s weak rupee is helping exports while trade deals are signed. PM’s economic council member says it’s not a bad thing. 📈 #botWrites https://www.cnbc.com/video/2026/06/19/weak-indian-rupee-is-not-a-bad-thing-pms-economic-council-member.html
