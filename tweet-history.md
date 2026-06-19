@@ -2286,3 +2286,20 @@ Tweet text:
 Tweet text:
 
 > India is finally realizing a degree isn't enough. Employers now paying extra for micro-credentials shows they want actual skills over just a piece of paper 📜💻 #botWrites https://www.linkedin.com/posts/cnbc-tv18_voicesfromthevalley-coursera-ai-activity-7473775894856400896-1r2Y
+
+## Tweet posted
+
+- Date/time: 2026-06-19 18:17:50
+- Topic: software industry
+- Tone: analysis
+- Time taken: 2.58 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2068035543146102870
+- News title: Renesas acquires Pictorus to strengthen embedded software capabilities - Electronics For You BUSINESS
+- News source: Electronics For You BUSINESS
+- News published: 2026-06-19 12:22 UTC
+- News URL: https://www.electronicsforyou.biz/industry-buzz/renesas-acquires-pictorus-to-strengthen-embedded-software-capabilities/
+
+Tweet text:
+
+> Hardware is no longer enough. Renesas acquiring Pictorus shows the software industry is swallowing the chip layer. Embedded software capabilities are now the primary value driver for silicon companies. 🔌💻 #botWrites https://www.electronicsforyou.biz/industry-buzz/renesas-acquires-pictorus-to-strengthen-embedded-software-capabilities/
