@@ -1,6 +1,6 @@
 # Gemma Tweet Bot
 
-This bot fetches recent topic news from Google News RSS, generates short tweets with Ollama, posts them to X, records each successful post in GitHub, and can send Telegram and Discord notifications.
+This bot fetches recent topic news from Google News RSS, generates short tweets with an OpenAI-compatible LLM API, posts them to X, records each successful post in GitHub, and can send Telegram and Discord notifications.
 
 ## GitHub Actions schedule
 
@@ -17,7 +17,7 @@ GitHub cron uses UTC, so the workflow file maps these to `00:30`, `06:30`, `12:3
 
 Store these in repository Settings -> Secrets and variables -> Actions -> Secrets:
 
-- `OLLAMA_API_KEY`
+- `LLM_API_KEY`
 - `X_API_KEY`
 - `X_API_KEY_SECRET`
 - `X_ACCESS_TOKEN`
@@ -30,13 +30,13 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Secret
 
 Store these in repository Settings -> Secrets and variables -> Actions -> Variables:
 
-- `OLLAMA_HOST`
-- `OLLAMA_MODEL`
+- `LLM_BASE_URL`
+- `LLM_MODEL`
 - `TOPICS`
 - `TONES`
 - `MAX_TWEET_CHARS`
 - `MAX_RETRIES`
-- `OLLAMA_TIMEOUT_SECONDS`
+- `LLM_TIMEOUT_SECONDS`
 - `NEWS_ENABLED`
 - `NEWS_RECENCY_HOURS`
 - `NEWS_REGION`
@@ -49,11 +49,9 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 Recommended defaults:
 
 ```text
-OLLAMA_HOST=https://ollama.com
-OLLAMA_MODEL=gemma4:31b-cloud
 MAX_TWEET_CHARS=230
 MAX_RETRIES=5
-OLLAMA_TIMEOUT_SECONDS=120
+LLM_TIMEOUT_SECONDS=120
 NEWS_ENABLED=true
 NEWS_RECENCY_HOURS=48
 NEWS_REGION=US
@@ -61,6 +59,28 @@ NEWS_LANGUAGE=en
 POST_TO_X=true
 TELEGRAM_NOTIFICATIONS_ENABLED=false
 DISCORD_NOTIFICATIONS_ENABLED=false
+```
+
+Choose `LLM_BASE_URL`, `LLM_MODEL`, and `LLM_API_KEY` based on the provider you want to use.
+
+OpenAI-compatible provider examples:
+
+```text
+# OpenAI
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_MODEL=gpt-4.1-mini
+
+# Ollama local
+LLM_BASE_URL=http://localhost:11434/v1
+LLM_MODEL=gemma3:1b
+
+# OpenRouter
+LLM_BASE_URL=https://openrouter.ai/api/v1
+LLM_MODEL=openai/gpt-4.1-mini
+
+# Groq
+LLM_BASE_URL=https://api.groq.com/openai/v1
+LLM_MODEL=llama-3.3-70b-versatile
 ```
 
 ## Local setup

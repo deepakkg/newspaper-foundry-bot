@@ -6,10 +6,12 @@ import unittest
 from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path
+from types import SimpleNamespace
 from urllib.parse import unquote
 from unittest.mock import MagicMock, patch
 
 import requests
+from openai import OpenAIError
 
 from config import load_config
 from discord_sender import send_discord_embed
@@ -30,7 +32,6 @@ from logger import (
     build_tweet_log_entry,
     has_logged_slot,
 )
-from ollama import ResponseError
 from news_fetcher import (
     NewsItem,
     build_google_news_rss_url,
@@ -46,7 +47,8 @@ import tweet_generator
 
 def write_env_file(path: Path, **overrides: str) -> None:
     values = {
-        "OLLAMA_HOST": "http://localhost:11434",
+        "LLM_BASE_URL": "http://localhost:11434/v1",
+        "LLM_MODEL": "gemma3:1b",
         "TOPICS": "coffee,learning",
         "TONES": "witty,serious",
         "POST_TO_X": "false",
@@ -54,7 +56,7 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "NEWS_RECENCY_HOURS": "48",
         "NEWS_REGION": "US",
         "NEWS_LANGUAGE": "en",
-        "OLLAMA_API_KEY": "",
+        "LLM_API_KEY": "",
         "X_API_KEY": "",
         "X_API_KEY_SECRET": "",
         "X_ACCESS_TOKEN": "",
@@ -80,6 +82,16 @@ def load_temp_config(**overrides: str):
     write_env_file(env_path, **overrides)
     config = load_config(env_path)
     return tmp_dir, config
+
+
+def chat_response(text: str) -> SimpleNamespace:
+    return SimpleNamespace(
+        choices=[
+            SimpleNamespace(
+                message=SimpleNamespace(content=text),
+            )
+        ]
+    )
 
 
 class GeneratorValidationTests(unittest.TestCase):
@@ -150,12 +162,11 @@ class GeneratorValidationTests(unittest.TestCase):
         tmp_dir, config = load_temp_config()
         self.addCleanup(tmp_dir.cleanup)
         client = MagicMock()
-        client.generate.side_effect = [
-            ResponseError(
-                "prompt too long; exceeded max context length by 8 tokens",
-                status_code=400,
+        client.chat.completions.create.side_effect = [
+            RuntimeError("prompt too long; exceeded max context length by 8 tokens"),
+            chat_response(
+                "SaaS professional services still win when handoff work is treated like product, not overhead."
             ),
-            {"response": "SaaS professional services still win when handoff work is treated like product, not overhead."},
         ]
 
         tweet = request_tweet(
@@ -167,25 +178,29 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertIn("SaaS professional services", tweet)
-        self.assertEqual(client.generate.call_count, 2)
-        first_prompt = client.generate.call_args_list[0].kwargs["prompt"]
-        second_prompt = client.generate.call_args_list[1].kwargs["prompt"]
+        self.assertEqual(client.chat.completions.create.call_count, 2)
+        first_prompt = client.chat.completions.create.call_args_list[0].kwargs[
+            "messages"
+        ][0]["content"]
+        second_prompt = client.chat.completions.create.call_args_list[1].kwargs[
+            "messages"
+        ][0]["content"]
+        self.assertEqual(
+            client.chat.completions.create.call_args_list[0].kwargs["model"],
+            config.llm_model,
+        )
         self.assertLess(len(second_prompt), len(first_prompt))
 
     def test_request_tweet_retries_with_minimal_prompt_if_needed(self) -> None:
         tmp_dir, config = load_temp_config()
         self.addCleanup(tmp_dir.cleanup)
         client = MagicMock()
-        client.generate.side_effect = [
-            ResponseError(
-                "prompt too long; exceeded max context length by 8 tokens",
-                status_code=400,
+        client.chat.completions.create.side_effect = [
+            RuntimeError("prompt too long; exceeded max context length by 8 tokens"),
+            RuntimeError("prompt too long; exceeded max context length by 3 tokens"),
+            chat_response(
+                "SaaS services become more valuable when messy implementation work is handled well."
             ),
-            ResponseError(
-                "prompt too long; exceeded max context length by 3 tokens",
-                status_code=400,
-            ),
-            {"response": "SaaS services become more valuable when messy implementation work is handled well."},
         ]
 
         tweet = request_tweet(
@@ -197,11 +212,25 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertIn("SaaS services", tweet)
-        self.assertEqual(client.generate.call_count, 3)
-        prompts = [call.kwargs["prompt"] for call in client.generate.call_args_list]
+        self.assertEqual(client.chat.completions.create.call_count, 3)
+        prompts = [
+            call.kwargs["messages"][0]["content"]
+            for call in client.chat.completions.create.call_args_list
+        ]
         self.assertLess(len(prompts[1]), len(prompts[0]))
         self.assertLess(len(prompts[2]), len(prompts[1]))
         self.assertIn("Tweet about saas professional.", prompts[2])
+
+    def test_request_tweet_rejects_empty_chat_response(self) -> None:
+        tmp_dir, config = load_temp_config()
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.chat.completions.create.return_value = chat_response("")
+
+        with self.assertRaisesRegex(
+            RuntimeError, "Server response did not include a valid tweet"
+        ):
+            request_tweet(client, config, "coffee", "witty", 1)
 
     def test_accepts_specific_topic_relevant_tweet(self) -> None:
         topic, topic_tokens = normalize_topic("Narendra Modi")
@@ -314,6 +343,9 @@ class ConfigTests(unittest.TestCase):
 
             config = load_config(env_path)
 
+        self.assertEqual(config.llm_base_url, "http://localhost:11434/v1")
+        self.assertEqual(config.llm_model, "gemma3:1b")
+        self.assertIsNone(config.llm_api_key)
         self.assertTrue(config.post_to_x)
         self.assertFalse(config.news_enabled)
         self.assertEqual(config.news_recency_hours, 48)
@@ -376,6 +408,87 @@ class ConfigTests(unittest.TestCase):
         self.assertIsNone(config.telegram_chat_id)
         self.assertTrue(config.discord_notifications_enabled)
         self.assertIsNone(config.discord_webhook_url)
+
+    def test_load_config_requires_llm_base_url(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, LLM_BASE_URL="")
+
+            with self.assertRaisesRegex(
+                ValueError, "Missing required environment variable: LLM_BASE_URL"
+            ):
+                load_config(env_path)
+
+    def test_load_config_requires_llm_model(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, LLM_MODEL="")
+
+            with self.assertRaisesRegex(
+                ValueError, "Missing required environment variable: LLM_MODEL"
+            ):
+                load_config(env_path)
+
+    def test_load_config_allows_missing_llm_api_key_for_local_endpoint(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                LLM_BASE_URL="http://localhost:11434/v1",
+                LLM_API_KEY="",
+            )
+
+            config = load_config(env_path)
+
+        self.assertIsNone(config.llm_api_key)
+
+    def test_load_config_requires_llm_api_key_for_hosted_endpoint(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                LLM_BASE_URL="https://api.openai.com/v1",
+                LLM_API_KEY="",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError, "LLM_API_KEY is required when using a hosted LLM endpoint"
+            ):
+                load_config(env_path)
+
+    def test_load_config_reads_llm_timeout_seconds(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, LLM_TIMEOUT_SECONDS="45")
+
+            config = load_config(env_path)
+
+        self.assertEqual(config.timeout_seconds, 45)
+
+    def test_old_ollama_variables_are_ignored(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            env_path.write_text(
+                "\n".join(
+                    [
+                        "OLLAMA_HOST=http://localhost:11434",
+                        "OLLAMA_MODEL=gemma3:1b",
+                        "OLLAMA_API_KEY=",
+                        "OLLAMA_TIMEOUT_SECONDS=10",
+                        "TOPICS=coffee",
+                        "TONES=witty",
+                        "POST_TO_X=false",
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            with patch.dict("os.environ", {}, clear=True):
+                with self.assertRaisesRegex(
+                    ValueError, "Missing required environment variable: LLM_BASE_URL"
+                ):
+                    load_config(env_path)
 
 
 class NewsFetcherTests(unittest.TestCase):
@@ -1453,9 +1566,14 @@ class TweetGeneratorTests(unittest.TestCase):
 
         output = buffer.getvalue()
         self.assertEqual(result, 0)
-        self.assertIn("Ollama request timed out after", output)
-        self.assertIn(config.ollama_model, output)
-        self.assertIn(config.ollama_host, output)
+        self.assertIn("LLM request timed out after", output)
+        self.assertIn(config.llm_model, output)
+        self.assertIn(config.llm_base_url, output)
+
+    def test_describe_failure_reports_llm_api_errors_generically(self) -> None:
+        message = tweet_generator.describe_failure(OpenAIError("provider rejected request"))
+
+        self.assertEqual(message, "LLM request failed: provider rejected request")
 
 
 class TelegramSenderTests(unittest.TestCase):

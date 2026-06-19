@@ -3,8 +3,9 @@ from __future__ import annotations
 import re
 import time
 from datetime import timezone
+from typing import Any
 
-from ollama import Client, ResponseError
+from openai import OpenAI
 
 from config import AppConfig
 from news_fetcher import NewsItem
@@ -105,13 +106,12 @@ PSEUDO_PROFOUND_PATTERNS = (
 )
 
 
-def build_client(config: AppConfig) -> Client:
-    client_kwargs = {"timeout": config.timeout_seconds}
-    if config.ollama_api_key:
-        client_kwargs["headers"] = {
-            "Authorization": f"Bearer {config.ollama_api_key}"
-        }
-    return Client(host=config.ollama_host, **client_kwargs)
+def build_client(config: AppConfig) -> OpenAI:
+    return OpenAI(
+        api_key=config.llm_api_key or "not-needed",
+        base_url=config.llm_base_url,
+        timeout=config.timeout_seconds,
+    )
 
 
 def normalize_topic(topic: str) -> tuple[str, list[str]]:
@@ -414,13 +414,32 @@ def validate_tweet(
     return None
 
 
-def is_context_length_error(exc: ResponseError) -> bool:
+def is_context_length_error(exc: Exception) -> bool:
     lowered = str(exc).lower()
     return "prompt too long" in lowered or "context length" in lowered
 
 
+def extract_response_text(response: Any) -> str:
+    choices = getattr(response, "choices", None)
+    if not choices:
+        raise RuntimeError("Server response did not include a valid tweet.")
+
+    message = getattr(choices[0], "message", None)
+    content = getattr(message, "content", None)
+    if not isinstance(content, str) or not content.strip():
+        raise RuntimeError("Server response did not include a valid tweet.")
+    return content
+
+
+def request_completion(client: OpenAI, config: AppConfig, prompt: str) -> Any:
+    return client.chat.completions.create(
+        model=config.llm_model,
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+
 def request_tweet(
-    client: Client,
+    client: OpenAI,
     config: AppConfig,
     topic: str,
     tone: str,
@@ -437,37 +456,29 @@ def request_tweet(
         news_item,
     )
     try:
-        response = client.generate(
-            model=config.ollama_model,
-            prompt=prompt,
-        )
-    except ResponseError as exc:
+        response = request_completion(client, config, prompt)
+    except Exception as exc:
         if not is_context_length_error(exc):
             raise
         compact_prompt = build_compact_prompt(
             topic, tone, resolved_max_tweet_chars, attempt_number, news_item
         )
         try:
-            response = client.generate(
-                model=config.ollama_model,
-                prompt=compact_prompt,
-            )
-        except ResponseError as compact_exc:
+            response = request_completion(client, config, compact_prompt)
+        except Exception as compact_exc:
             if not is_context_length_error(compact_exc):
                 raise
-            response = client.generate(
-                model=config.ollama_model,
-                prompt=build_minimal_prompt(
+            response = request_completion(
+                client,
+                config,
+                build_minimal_prompt(
                     topic,
                     tone,
                     resolved_max_tweet_chars,
                     news_item,
                 ),
             )
-    tweet = response.get("response")
-    if not isinstance(tweet, str) or not tweet.strip():
-        raise RuntimeError("Server response did not include a valid tweet.")
-
+    tweet = extract_response_text(response)
     cleaned_tweet = clean_generated_tweet(tweet)
     if not cleaned_tweet:
         raise RuntimeError("Server response did not include a usable tweet.")
@@ -475,7 +486,7 @@ def request_tweet(
 
 
 def generate_valid_tweet(
-    client: Client,
+    client: OpenAI,
     config: AppConfig,
     topic: str,
     tone: str,

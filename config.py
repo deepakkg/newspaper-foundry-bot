@@ -13,9 +13,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 
 @dataclass(frozen=True)
 class AppConfig:
-    ollama_host: str
-    ollama_model: str
-    ollama_api_key: str | None
+    llm_base_url: str
+    llm_model: str
+    llm_api_key: str | None
     topics: list[str]
     tones: list[str]
     max_tweet_chars: int
@@ -85,10 +85,9 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     resolved_env_path = env_path or DEFAULT_ENV_PATH
     load_dotenv(resolved_env_path, override=True)
 
-    ollama_host = _read_required_env("OLLAMA_HOST")
-    default_model = "gemma4:31b-cloud" if ollama_host == "https://ollama.com" else "gemma3:1b"
-    ollama_model = os.getenv("OLLAMA_MODEL", default_model).strip() or default_model
-    ollama_api_key = os.getenv("OLLAMA_API_KEY", "").strip() or None
+    llm_base_url = _read_required_env("LLM_BASE_URL")
+    llm_model = _read_required_env("LLM_MODEL")
+    llm_api_key = os.getenv("LLM_API_KEY", "").strip() or None
     topics = _parse_csv_list(_read_required_env("TOPICS"), "TOPICS")
     tones = _parse_csv_list(_read_required_env("TONES"), "TONES")
     max_tweet_chars = _parse_positive_int(
@@ -96,7 +95,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     )
     max_retries = _parse_positive_int(os.getenv("MAX_RETRIES", "5"), "MAX_RETRIES")
     timeout_seconds = _parse_positive_int(
-        os.getenv("OLLAMA_TIMEOUT_SECONDS", "120"), "OLLAMA_TIMEOUT_SECONDS"
+        os.getenv("LLM_TIMEOUT_SECONDS", "120"), "LLM_TIMEOUT_SECONDS"
     )
     post_to_x = _parse_bool(os.getenv("POST_TO_X", "true"), "POST_TO_X")
     x_api_key = os.getenv("X_API_KEY", "").strip() or None
@@ -149,15 +148,13 @@ def load_config(env_path: Path | None = None) -> AppConfig:
                 f"POST_TO_X is enabled but required X credentials are missing: {missing_str}"
             )
 
-    if ollama_host.startswith("https://") and ollama_api_key is None:
-        raise ValueError(
-            "OLLAMA_API_KEY is required when using a hosted Ollama endpoint."
-        )
+    if llm_base_url.startswith("https://") and llm_api_key is None:
+        raise ValueError("LLM_API_KEY is required when using a hosted LLM endpoint.")
 
     return AppConfig(
-        ollama_host=ollama_host,
-        ollama_model=ollama_model,
-        ollama_api_key=ollama_api_key,
+        llm_base_url=llm_base_url,
+        llm_model=llm_model,
+        llm_api_key=llm_api_key,
         topics=topics,
         tones=tones,
         max_tweet_chars=max_tweet_chars,

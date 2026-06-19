@@ -21,14 +21,14 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     env:
-      OLLAMA_HOST: ${{ vars.OLLAMA_HOST || 'https://ollama.com' }}
-      OLLAMA_MODEL: ${{ vars.OLLAMA_MODEL || 'gemma4:31b-cloud' }}
-      OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+      LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+      LLM_MODEL: ${{ vars.LLM_MODEL }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       TOPICS: ${{ vars.TOPICS }}
       TONES: ${{ vars.TONES }}
       MAX_TWEET_CHARS: ${{ vars.MAX_TWEET_CHARS || '230' }}
       MAX_RETRIES: ${{ vars.MAX_RETRIES || '5' }}
-      OLLAMA_TIMEOUT_SECONDS: ${{ vars.OLLAMA_TIMEOUT_SECONDS || '120' }}
+      LLM_TIMEOUT_SECONDS: ${{ vars.LLM_TIMEOUT_SECONDS || '120' }}
       NEWS_ENABLED: ${{ vars.NEWS_ENABLED || 'true' }}
       NEWS_RECENCY_HOURS: ${{ vars.NEWS_RECENCY_HOURS || '48' }}
       NEWS_REGION: ${{ vars.NEWS_REGION || 'US' }}

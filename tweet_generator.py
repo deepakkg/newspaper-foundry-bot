@@ -8,7 +8,7 @@ import threading
 import time
 from datetime import timezone
 
-from ollama import ResponseError
+from openai import OpenAIError
 
 from config import AppConfig, load_config
 from discord_sender import send_discord_embed
@@ -46,9 +46,9 @@ def stop_spinner(
 
 def format_timeout_message(config: AppConfig) -> str:
     return (
-        "Ollama request timed out after "
+        "LLM request timed out after "
         f"{config.timeout_seconds} seconds while waiting for "
-        f"{config.ollama_model} at {config.ollama_host}."
+        f"{config.llm_model} at {config.llm_base_url}."
     )
 
 
@@ -67,8 +67,8 @@ def format_news_published_at(news_item: NewsItem) -> str:
 
 
 def describe_failure(exc: Exception, config: AppConfig | None = None) -> str:
-    if isinstance(exc, ResponseError):
-        return f"Ollama request failed: {exc}"
+    if isinstance(exc, OpenAIError):
+        return f"LLM request failed: {exc}"
     if isinstance(exc, TimeoutError) and config:
         return format_timeout_message(config)
     if is_timeout_exception(exc) and config:

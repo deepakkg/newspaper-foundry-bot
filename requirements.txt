@@ -1,4 +1,4 @@
-ollama
+openai
 python-dotenv
 requests
 requests-oauthlib
