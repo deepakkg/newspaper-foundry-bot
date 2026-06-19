@@ -2218,3 +2218,20 @@ Tweet text:
 Tweet text:
 
 > India’s weak rupee is helping exports while trade deals are signed. PM’s economic council member says it’s not a bad thing. 📈 #botWrites https://www.cnbc.com/video/2026/06/19/weak-indian-rupee-is-not-a-bad-thing-pms-economic-council-member.html
+
+## Tweet posted
+
+- Date/time: 2026-06-19 07:17:47
+- Topic: stock market
+- Tone: analysis
+- Time taken: 2.42 seconds
+- Attempts: 2
+- Tweet URL: https://x.com/deepakgupta1/status/2067869437810671956
+- News title: Stock Market LIVE Updates, Sensex Today: Sensex Slides 800 Points As Accenture Drags IT Stocks - NDTV
+- News source: NDTV
+- News published: 2026-06-19 07:04 UTC
+- News URL: https://www.ndtv.com/business-news/stock-market-sensex-share-market-nifty-live-updates-today-19-june-us-iran-peace-deal-oil-prices-11657451
+
+Tweet text:
+
+> Sensex is down 800 points. Accenture is dragging down the IT stocks and pulling the rest of the stock market with it. Direct hit on tech sentiment today. 📉📉 #botWrites https://www.ndtv.com/business-news/stock-market-sensex-share-market-nifty-live-updates-today-19-june-us-iran-peace-deal-oil-prices-11657451
