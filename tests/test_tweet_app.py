@@ -429,6 +429,21 @@ class ConfigTests(unittest.TestCase):
             ):
                 load_config(env_path)
 
+    def test_load_config_rejects_ollama_website_base_url(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                LLM_BASE_URL="https://ollama.com/",
+                LLM_API_KEY="token",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "https://ollama.com, which is the Ollama website",
+            ):
+                load_config(env_path)
+
     def test_load_config_allows_missing_llm_api_key_for_local_endpoint(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             env_path = Path(tmp_dir) / ".env"
@@ -1574,6 +1589,18 @@ class TweetGeneratorTests(unittest.TestCase):
         message = tweet_generator.describe_failure(OpenAIError("provider rejected request"))
 
         self.assertEqual(message, "LLM request failed: provider rejected request")
+
+    def test_describe_failure_summarizes_html_provider_errors(self) -> None:
+        message = tweet_generator.describe_failure(
+            OpenAIError("<!doctype html><html><head><title>Ollama</title></head>")
+        )
+
+        self.assertEqual(
+            message,
+            "LLM request failed: provider returned an HTML page. "
+            "Check that LLM_BASE_URL points to an OpenAI-compatible API "
+            "endpoint, not a website.",
+        )
 
 
 class TelegramSenderTests(unittest.TestCase):

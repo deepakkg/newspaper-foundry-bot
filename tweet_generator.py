@@ -68,12 +68,23 @@ def format_news_published_at(news_item: NewsItem) -> str:
 
 def describe_failure(exc: Exception, config: AppConfig | None = None) -> str:
     if isinstance(exc, OpenAIError):
+        if looks_like_html_response(str(exc)):
+            return (
+                "LLM request failed: provider returned an HTML page. "
+                "Check that LLM_BASE_URL points to an OpenAI-compatible API "
+                "endpoint, not a website."
+            )
         return f"LLM request failed: {exc}"
     if isinstance(exc, TimeoutError) and config:
         return format_timeout_message(config)
     if is_timeout_exception(exc) and config:
         return format_timeout_message(config)
     return str(exc) or exc.__class__.__name__
+
+
+def looks_like_html_response(message: str) -> bool:
+    lowered = message.lower()
+    return "<!doctype html" in lowered or "<html" in lowered
 
 
 def send_telegram_safely(

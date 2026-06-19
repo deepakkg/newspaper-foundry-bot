@@ -81,11 +81,23 @@ def _read_required_env(name: str) -> str:
     return value
 
 
+def _normalize_llm_base_url(value: str) -> str:
+    normalized = value.rstrip("/")
+    if normalized == "https://ollama.com":
+        raise ValueError(
+            "LLM_BASE_URL is set to https://ollama.com, which is the Ollama "
+            "website, not an OpenAI-compatible API endpoint. Use a provider "
+            "base URL such as https://api.openai.com/v1 or local Ollama at "
+            "http://localhost:11434/v1."
+        )
+    return normalized
+
+
 def load_config(env_path: Path | None = None) -> AppConfig:
     resolved_env_path = env_path or DEFAULT_ENV_PATH
     load_dotenv(resolved_env_path, override=True)
 
-    llm_base_url = _read_required_env("LLM_BASE_URL")
+    llm_base_url = _normalize_llm_base_url(_read_required_env("LLM_BASE_URL"))
     llm_model = _read_required_env("LLM_MODEL")
     llm_api_key = os.getenv("LLM_API_KEY", "").strip() or None
     topics = _parse_csv_list(_read_required_env("TOPICS"), "TOPICS")

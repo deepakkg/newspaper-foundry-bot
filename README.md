@@ -62,6 +62,8 @@ DISCORD_NOTIFICATIONS_ENABLED=false
 ```
 
 Choose `LLM_BASE_URL`, `LLM_MODEL`, and `LLM_API_KEY` based on the provider you want to use.
+Do not use a provider's website URL as `LLM_BASE_URL`. For example,
+`https://ollama.com` is a website, not an OpenAI-compatible API endpoint.
 
 OpenAI-compatible provider examples:
 
