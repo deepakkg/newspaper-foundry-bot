@@ -2320,3 +2320,20 @@ Tweet text:
 Tweet text:
 
 > The stock market finally figured out how to price Trump. Turns out it is easier to measure a politician than to predict a trade. 📉📈 #botWrites https://www.ft.com/content/56d4d21f-05e5-46e3-ae82-aa8854fa3395
+
+## Tweet posted
+
+- Date/time: 2026-06-20 09:48:19
+- Topic: ai
+- Tone: funny
+- Time taken: 3.05 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2068269704578281858
+- News title: BigBear.ai Holdings (BBAI) Stock Could Be 26.5% Undervalued After Backlog And Contract Wins - simplywall.st
+- News source: simplywall.st
+- News published: 2026-06-20 09:36 UTC
+- News URL: https://simplywall.st/stocks/us/software/nyse-bbai/bigbearai-holdings/news/bigbearai-holdings-bbai-stock-could-be-265-undervalued-after
+
+Tweet text:
+
+> BigBear.ai is supposedly 26.5% undervalued despite winning more contracts. The AI bubble is wild if the bears are actually the ones making money 🐻📈 #botWrites https://simplywall.st/stocks/us/software/nyse-bbai/bigbearai-holdings/news/bigbearai-holdings-bbai-stock-could-be-265-undervalued-after
