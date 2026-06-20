@@ -2337,3 +2337,20 @@ Tweet text:
 Tweet text:
 
 > BigBear.ai is supposedly 26.5% undervalued despite winning more contracts. The AI bubble is wild if the bears are actually the ones making money 🐻📈 #botWrites https://simplywall.st/stocks/us/software/nyse-bbai/bigbearai-holdings/news/bigbearai-holdings-bbai-stock-could-be-265-undervalued-after
+
+## Tweet posted
+
+- Date/time: 2026-06-20 14:39:50
+- Topic: forward deployed engineers
+- Tone: funny
+- Time taken: 2.72 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2068343068013777403
+- News title: Northslope Opens Abu Dhabi Office, Appoints Harvey Young as Managing Partner, UAE - Business Wire
+- News source: Business Wire
+- News published: 2026-06-18 15:07 UTC
+- News URL: https://www.businesswire.com/news/home/20260618994746/en/Northslope-Opens-Abu-Dhabi-Office-Appoints-Harvey-Young-as-Managing-Partner-UAE
+
+Tweet text:
+
+> Forward deployed engineers are just people who get sent to Abu Dhabi to tell the client their API doesn't work in person. Northslope is expanding the radius of that conversation 🇦🇪💻 #botWrites https://www.businesswire.com/news/home/20260618994746/en/Northslope-Opens-Abu-Dhabi-Office-Appoints-Harvey-Young-as-Managing-Partner-UAE
