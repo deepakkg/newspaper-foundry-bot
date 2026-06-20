@@ -2303,3 +2303,20 @@ Tweet text:
 Tweet text:
 
 > Hardware is no longer enough. Renesas acquiring Pictorus shows the software industry is swallowing the chip layer. Embedded software capabilities are now the primary value driver for silicon companies. 🔌💻 #botWrites https://www.electronicsforyou.biz/industry-buzz/renesas-acquires-pictorus-to-strengthen-embedded-software-capabilities/
+
+## Tweet posted
+
+- Date/time: 2026-06-20 04:49:05
+- Topic: stock market
+- Tone: funny
+- Time taken: 2.22 seconds
+- Attempts: 1
+- Tweet URL: https://x.com/deepakgupta1/status/2068194402468565461
+- News title: Markets get the measure of Trump - Financial Times
+- News source: Financial Times
+- News published: 2026-06-20 04:00 UTC
+- News URL: https://www.ft.com/content/56d4d21f-05e5-46e3-ae82-aa8854fa3395
+
+Tweet text:
+
+> The stock market finally figured out how to price Trump. Turns out it is easier to measure a politician than to predict a trade. 📉📈 #botWrites https://www.ft.com/content/56d4d21f-05e5-46e3-ae82-aa8854fa3395
