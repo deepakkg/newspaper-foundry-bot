@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime
 from pathlib import Path
 
-LOG_TITLE = "# Tweet History"
+LOG_TITLE = "# Post History"
 
 
 def build_tweet_log_entry(
@@ -23,7 +23,7 @@ def build_tweet_log_entry(
     resolved_timestamp = timestamp or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     lines = [
         "",
-        "## Tweet posted",
+        "## Post published",
         "",
         f"- Date/time: {resolved_timestamp}",
     ]
@@ -33,7 +33,7 @@ def build_tweet_log_entry(
             f"- Tone: {tone}",
             f"- Time taken: {time_taken_seconds:.2f} seconds",
             f"- Attempts: {attempts}",
-            f"- Tweet URL: {tweet_url}",
+            f"- Post URL: {tweet_url}",
         ]
     )
     if news_title:
@@ -50,7 +50,7 @@ def build_tweet_log_entry(
     lines.extend(
         [
             "",
-            "Tweet text:",
+            "Post text:",
             "",
             f"> {tweet_text}",
         ]
@@ -90,7 +90,7 @@ def build_telegram_summary(
     lines.extend(
         [
             "",
-            "Tweet text:",
+            "Post text:",
             tweet_text,
         ]
     )
@@ -108,7 +108,7 @@ def build_failure_telegram_summary(
     news_published_at: str | None = None,
 ) -> str:
     lines = [
-        "Tweet bot failed",
+        "Content bot failed",
         f"Topic: {topic or 'Not selected'}",
         f"Tone: {tone or 'Not selected'}",
     ]

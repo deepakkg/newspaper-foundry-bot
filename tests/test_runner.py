@@ -60,7 +60,7 @@ class TweetGeneratorTests(unittest.TestCase):
                 result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
-        self.assertIn("Could not generate tweet:", buffer.getvalue())
+        self.assertIn("Could not generate post:", buffer.getvalue())
 
     def test_run_once_sends_short_telegram_summary_after_success(self) -> None:
         buffer = StringIO()
@@ -101,9 +101,9 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("Attempts: 2", telegram_text)
         self.assertIn("Coffee is back. ☕ #botWrites", telegram_text)
         self.assertNotIn("News reference", telegram_text)
-        self.assertNotIn("Tweet URL", telegram_text)
+        self.assertNotIn("Post URL", telegram_text)
         mock_post.assert_called_once_with(config, "Coffee is back. ☕", news_url=None)
-        self.assertIn("Tweet posted and logged.", buffer.getvalue())
+        self.assertIn("Post published and logged.", buffer.getvalue())
 
     def test_run_once_uses_rss_news_when_available(self) -> None:
         buffer = StringIO()
@@ -237,14 +237,14 @@ class TweetGeneratorTests(unittest.TestCase):
         mock_x.assert_not_called()
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn(
-            "Tweet URL: https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
+            "Post URL: https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
             log_content,
         )
         self.assertIn(
             "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
             log_content,
         )
-        self.assertIn("Tweet posted and logged.", buffer.getvalue())
+        self.assertIn("Post published and logged.", buffer.getvalue())
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn(
             "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
@@ -290,9 +290,9 @@ class TweetGeneratorTests(unittest.TestCase):
         mock_x.assert_not_called()
         self.assertFalse(config.log_file_path.exists())
         telegram_text = mock_telegram.call_args.args[1]
-        self.assertIn("Tweet bot failed", telegram_text)
+        self.assertIn("Content bot failed", telegram_text)
         self.assertIn("Bluesky posting failed: rate limited", telegram_text)
-        self.assertIn("Could not complete tweet run:", buffer.getvalue())
+        self.assertIn("Could not complete post run:", buffer.getvalue())
 
     def test_run_once_bluesky_enabled_does_not_enter_manual_mode(self) -> None:
         buffer = StringIO()
@@ -326,7 +326,7 @@ class TweetGeneratorTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         mock_manual_message.assert_not_called()
-        self.assertNotIn("Tweet ready for manual posting.", buffer.getvalue())
+        self.assertNotIn("Post ready for manual publishing.", buffer.getvalue())
 
     def test_run_once_manual_mode_sends_discord_embed_and_post_text(self) -> None:
         buffer = StringIO()
@@ -373,17 +373,17 @@ class TweetGeneratorTests(unittest.TestCase):
         mock_post.assert_not_called()
         self.assertFalse(config.log_file_path.exists())
         embed = mock_discord_embed.call_args.args[1]
-        self.assertEqual(embed["title"], "Tweet ready")
+        self.assertEqual(embed["title"], "Post ready")
         self.assertIn(
             {"name": "News title", "value": "AI agents reshape support workflows", "inline": False},
             embed["fields"],
         )
-        self.assertNotIn("Final tweet", [field["name"] for field in embed["fields"]])
+        self.assertNotIn("Final post", [field["name"] for field in embed["fields"]])
         mock_discord_message.assert_called_once_with(
             config,
             "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
         )
-        self.assertIn("Tweet ready for manual posting.", buffer.getvalue())
+        self.assertIn("Post ready for manual publishing.", buffer.getvalue())
 
     def test_run_once_manual_mode_sends_telegram_success_summary(self) -> None:
         buffer = StringIO()
@@ -420,7 +420,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("Tone: witty", telegram_text)
         self.assertIn("Attempts: 2", telegram_text)
         self.assertIn("Coffee is back. ☕ #botWrites", telegram_text)
-        self.assertNotIn("Tweet bot failed", telegram_text)
+        self.assertNotIn("Content bot failed", telegram_text)
 
     def test_run_once_manual_mode_without_news_sends_post_text_without_link(self) -> None:
         buffer = StringIO()
@@ -494,7 +494,7 @@ class TweetGeneratorTests(unittest.TestCase):
                             tweet_generator,
                             "generate_valid_tweet",
                             side_effect=RuntimeError(
-                                "Could not generate a valid tweet after 5 attempts: too generic."
+                                "Could not generate a valid post after 5 attempts: too generic."
                             ),
                         ):
                             with patch.object(
@@ -509,7 +509,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         mock_post.assert_not_called()
         telegram_text = mock_telegram.call_args.args[1]
-        self.assertIn("Tweet bot failed", telegram_text)
+        self.assertIn("Content bot failed", telegram_text)
         self.assertIn("Topic: learning", telegram_text)
         self.assertIn("Tone: serious", telegram_text)
         self.assertIn("News reference:", telegram_text)
@@ -553,7 +553,7 @@ class TweetGeneratorTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         telegram_text = mock_telegram.call_args.args[1]
-        self.assertIn("Tweet bot failed", telegram_text)
+        self.assertIn("Content bot failed", telegram_text)
         self.assertIn("Topic: coffee", telegram_text)
         self.assertIn("Tone: witty", telegram_text)
         self.assertIn("X API returned 401", telegram_text)
@@ -580,7 +580,7 @@ class TweetGeneratorTests(unittest.TestCase):
                 with patch.object(
                     tweet_generator,
                     "generate_valid_tweet",
-                    side_effect=RuntimeError("Could not generate a valid tweet"),
+                    side_effect=RuntimeError("Could not generate a valid post"),
                 ):
                     with patch.object(
                         notifications,
@@ -614,7 +614,7 @@ class TweetGeneratorTests(unittest.TestCase):
                 with patch.object(
                     tweet_generator,
                     "generate_valid_tweet",
-                    side_effect=RuntimeError("Could not generate a valid tweet"),
+                    side_effect=RuntimeError("Could not generate a valid post"),
                 ):
                     with patch.object(
                         notifications,
@@ -817,12 +817,12 @@ class TweetGeneratorTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         embed = mock_discord.call_args.args[1]
-        self.assertEqual(embed["title"], "Tweet posted")
+        self.assertEqual(embed["title"], "Post published")
         self.assertIn(
-            {"name": "Final tweet", "value": "Coffee is back. ☕ #botWrites", "inline": False},
+            {"name": "Final post", "value": "Coffee is back. ☕ #botWrites", "inline": False},
             embed["fields"],
         )
-        self.assertIn("Tweet posted and logged.", buffer.getvalue())
+        self.assertIn("Post published and logged.", buffer.getvalue())
 
     def test_run_once_sends_both_notification_channels(self) -> None:
         buffer = StringIO()
@@ -961,7 +961,7 @@ class TweetGeneratorTests(unittest.TestCase):
                     with patch.object(
                         tweet_generator,
                         "generate_valid_tweet",
-                        side_effect=RuntimeError("Could not generate a valid tweet"),
+                        side_effect=RuntimeError("Could not generate a valid post"),
                     ):
                         with patch.object(
                             notifications, "send_discord_embed"
@@ -971,9 +971,9 @@ class TweetGeneratorTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         embed = mock_discord.call_args.args[1]
-        self.assertEqual(embed["title"], "Tweet bot failed")
+        self.assertEqual(embed["title"], "Content bot failed")
         self.assertIn(
-            {"name": "Error", "value": "Could not generate a valid tweet", "inline": False},
+            {"name": "Error", "value": "Could not generate a valid post", "inline": False},
             embed["fields"],
         )
         self.assertFalse(config.log_file_path.exists())

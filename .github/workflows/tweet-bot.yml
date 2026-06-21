@@ -55,7 +55,7 @@ jobs:
       - name: Check out app code
         uses: actions/checkout@v6
 
-      - name: Check out tweet history
+      - name: Check out post history
         uses: actions/checkout@v6
         with:
           ref: tweet-history
@@ -70,17 +70,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Generate and post tweet
+      - name: Generate and publish post
         run: python tweet_generator.py
 
-      - name: Commit tweet history
+      - name: Commit post history
         run: |
           git -C tweet-log-store config user.name "github-actions[bot]"
           git -C tweet-log-store config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C tweet-log-store add tweet-history.md
           if git -C tweet-log-store diff --cached --quiet; then
-            echo "No tweet history changes to commit."
+            echo "No post history changes to commit."
           else
-            git -C tweet-log-store commit -m "Update tweet history"
+            git -C tweet-log-store commit -m "Update post history"
             git -C tweet-log-store push origin "HEAD:${TWEET_HISTORY_BRANCH}"
           fi

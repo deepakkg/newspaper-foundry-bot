@@ -59,7 +59,7 @@ class LoggerTests(unittest.TestCase):
             timestamp="2026-05-15 12:00:00 IST",
         )
 
-        self.assertIn("## Tweet posted", entry)
+        self.assertIn("## Post published", entry)
         self.assertIn("- Topic: coffee", entry)
         self.assertIn("> Coffee is back.", entry)
 
@@ -79,7 +79,7 @@ class LoggerTests(unittest.TestCase):
             append_log_entry(log_path, entry)
             content = log_path.read_text(encoding="utf-8")
 
-        self.assertIn("# Tweet History", content)
+        self.assertIn("# Post History", content)
         self.assertIn("Topic: coffee", content)
 
     def test_build_tweet_log_entry_includes_news_metadata(self) -> None:
@@ -111,9 +111,9 @@ class LoggerTests(unittest.TestCase):
         )
 
         self.assertIn("Topic: coffee", summary)
-        self.assertIn("Tweet text:\nCoffee is back.", summary)
-        self.assertNotIn("# Tweet History", summary)
-        self.assertNotIn("Tweet URL:", summary)
+        self.assertIn("Post text:\nCoffee is back.", summary)
+        self.assertNotIn("# Post History", summary)
+        self.assertNotIn("Post URL:", summary)
 
     def test_build_telegram_summary_includes_news_reference_when_provided(self) -> None:
         summary = build_telegram_summary(
@@ -149,8 +149,74 @@ class LoggerTests(unittest.TestCase):
             news_published_at="2026-05-31 10:00 UTC",
         )
 
-        self.assertIn("Tweet bot failed", summary)
+        self.assertIn("Content bot failed", summary)
         self.assertIn("Generation failed", summary)
         self.assertIn("AI agents reshape support workflows (Example News)", summary)
         self.assertIn("Published: 2026-05-31 10:00 UTC", summary)
         self.assertIn("https://example.com/news", summary)
+
+    def test_notification_and_log_copy_uses_generic_post_language(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/news",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+        rendered_outputs = [
+            build_tweet_log_entry(
+                topic="ai agents",
+                tone="serious",
+                tweet_text="AI agents are moving. 🤖 #botWrites",
+                time_taken_seconds=3.21,
+                attempts=1,
+                tweet_url="https://example.com/post",
+            ),
+            build_telegram_summary(
+                topic="ai agents",
+                tone="serious",
+                tweet_text="AI agents are moving. 🤖 #botWrites",
+                time_taken_seconds=3.21,
+                attempts=1,
+            ),
+            build_failure_telegram_summary(
+                topic="ai agents",
+                tone="serious",
+                error_message="Generation failed",
+            ),
+            str(
+                notifications.build_discord_success_embed(
+                    topic="ai agents",
+                    tone="serious",
+                    tweet_text="AI agents are moving. 🤖 #botWrites",
+                    time_taken_seconds=3.21,
+                    attempts=1,
+                    news_item=news_item,
+                )
+            ),
+            str(
+                notifications.build_discord_manual_embed(
+                    topic="ai agents",
+                    tone="serious",
+                    time_taken_seconds=3.21,
+                    attempts=1,
+                    news_item=news_item,
+                )
+            ),
+            str(
+                notifications.build_discord_failure_embed(
+                    topic="ai agents",
+                    tone="serious",
+                    news_item=news_item,
+                    error_message="Generation failed",
+                )
+            ),
+        ]
+
+        for output in rendered_outputs:
+            self.assertNotIn("Tweet", output)
+            self.assertNotIn("tweet", output)
+        self.assertIn("Post published", rendered_outputs[3])
+        self.assertIn("Final post", rendered_outputs[3])
+        self.assertIn("Post ready", rendered_outputs[4])
+        self.assertIn("Content bot failed", rendered_outputs[5])

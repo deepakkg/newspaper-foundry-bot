@@ -28,7 +28,7 @@ from publisher import (
 )
 
 
-def spinner(stop_event: threading.Event, message: str = "Generating tweet") -> None:
+def spinner(stop_event: threading.Event, message: str = "Generating post") -> None:
     frames = "|/-\\"
     idx = 0
     while not stop_event.is_set():
@@ -90,7 +90,7 @@ def run_once() -> int:
     try:
         config = load_config()
     except Exception as exc:
-        print(f"Could not generate tweet: {exc}")
+        print(f"Could not generate post: {exc}")
         return 0
 
     topic: str | None = None
@@ -118,7 +118,7 @@ def run_once() -> int:
             except Exception as exc:
                 print(f"Warning: RSS news lookup failed for {topic}: {exc}")
 
-        print("Generating tweet...")
+        print("Generating post...")
         if interactive_tty:
             stop_event = threading.Event()
             spinner_thread = threading.Thread(
@@ -159,7 +159,7 @@ def run_once() -> int:
                 attempts=attempts,
                 news_item=news_item,
             )
-            print("Tweet ready for manual posting.")
+            print("Post ready for manual publishing.")
             return 0
 
         stop_spinner(stop_event, spinner_thread)
@@ -186,12 +186,12 @@ def run_once() -> int:
             attempts=attempts,
             news_item=news_item,
         )
-        print("Tweet posted and logged.")
+        print("Post published and logged.")
         return 0
     except Exception as exc:
         stop_spinner(stop_event, spinner_thread)
         error_message = describe_failure(exc, config)
-        print(f"Could not complete tweet run: {error_message}")
+        print(f"Could not complete post run: {error_message}")
         send_failure_notifications(
             config,
             topic=topic,

@@ -51,7 +51,7 @@ class GeneratorValidationTests(unittest.TestCase):
     def test_build_prompt_stays_compact(self) -> None:
         prompt = build_prompt("saas professional services", "serious", 230, 1)
 
-        self.assertIn("Write one tweet about:", prompt)
+        self.assertIn("Write one post about:", prompt)
         self.assertLess(len(prompt), 1200)
 
     def test_build_compact_prompt_is_shorter(self) -> None:
@@ -172,7 +172,7 @@ class GeneratorValidationTests(unittest.TestCase):
         ]
         self.assertLess(len(prompts[1]), len(prompts[0]))
         self.assertLess(len(prompts[2]), len(prompts[1]))
-        self.assertIn("Tweet about saas professional.", prompts[2])
+        self.assertIn("Post about saas professional.", prompts[2])
 
     def test_request_tweet_rejects_empty_chat_response(self) -> None:
         tmp_dir, config = load_temp_config()
@@ -181,7 +181,7 @@ class GeneratorValidationTests(unittest.TestCase):
         client.chat.completions.create.return_value = chat_response("")
 
         with self.assertRaisesRegex(
-            RuntimeError, "Server response did not include a valid tweet"
+            RuntimeError, "Server response did not include a valid post"
         ):
             request_tweet(client, config, "coffee", "witty", 1)
 

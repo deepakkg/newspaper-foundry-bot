@@ -84,12 +84,12 @@ class DiscordSenderTests(unittest.TestCase):
         response = MagicMock(status_code=204, text="", reason="No Content")
 
         with patch("discord_sender.requests.post", return_value=response) as mock_post:
-            send_discord_embed(config, {"title": "Tweet posted", "fields": []})
+            send_discord_embed(config, {"title": "Post published", "fields": []})
 
         mock_post.assert_called_once_with(
             "https://discord.com/api/webhooks/1/token",
             json={
-                "embeds": [{"title": "Tweet posted", "fields": []}],
+                "embeds": [{"title": "Post published", "fields": []}],
                 "allowed_mentions": {"parse": []},
             },
             timeout=config.timeout_seconds,
@@ -104,7 +104,7 @@ class DiscordSenderTests(unittest.TestCase):
 
         with patch("discord_sender.requests.post", return_value=response):
             with self.assertRaisesRegex(RuntimeError, "Discord send failed: bad webhook"):
-                send_discord_embed(config, {"title": "Tweet posted", "fields": []})
+                send_discord_embed(config, {"title": "Post published", "fields": []})
 
     def test_send_discord_message_accepts_success_response(self) -> None:
         tmp_dir, config = load_temp_config(
@@ -144,7 +144,7 @@ class DiscordSenderTests(unittest.TestCase):
         response = MagicMock(status_code=200, text="", reason="OK")
 
         with patch("discord_sender.requests.post", return_value=response):
-            send_discord_embed(config, {"title": "Tweet posted", "fields": []})
+            send_discord_embed(config, {"title": "Post published", "fields": []})
 
 
 if __name__ == "__main__":

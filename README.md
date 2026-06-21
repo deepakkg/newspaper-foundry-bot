@@ -126,7 +126,7 @@ GitHub Actions writes successful auto-published posts to `tweet-history.md` on a
 
 To view the log in GitHub, switch the branch selector from `main` to `tweet-history` and open `tweet-history.md`.
 
-When a recent RSS item is used, the log also includes the news title, source, published time, and URL. Manual-mode generated posts are not written to tweet history.
+When a recent RSS item is used, the log also includes the news title, source, published time, and URL. Manual-mode generated posts are not written to the history log.
 
 For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 
@@ -148,8 +148,8 @@ Telegram receives:
 - Total time taken
 - Number of generation attempts
 - News reference, when RSS news was used
-- Full tweet text
+- Final post text
 
 Discord receives the same success and failure information as a rich embed.
 
-If a run fails before posting a tweet, the workflow exits cleanly. When notification channels are enabled, the bot sends a failure summary with the topic, tone, news reference when available, and the error message. Failed runs are not written to tweet history.
+If a run fails before publishing a post, the workflow exits cleanly. When notification channels are enabled, the bot sends a failure summary with the topic, tone, news reference when available, and the error message. Failed runs are not written to the history log.

@@ -187,12 +187,12 @@ Fallback:
     news_rules = ""
     if news_item is not None:
         news_rules = """
-- Base the tweet on the current news context.
+- Base the post on the current news context.
 - Do not invent facts beyond the provided news context.
 - Do not include the article URL.
 """
 
-    return f"""Write one tweet about: {topic}
+    return f"""Write one post about: {topic}
 Tone: {tone}
 {news_context}
 
@@ -221,7 +221,7 @@ Do not use:
 - Comma-heavy chains.
 - Filler like "just", "kind of", "sort of", "my brain", "feels like static", "really feels", "seriously", or "honestly".
 
-Output only the tweet text.
+Output only the post text.
 {retry_block}
 """
 
@@ -245,13 +245,13 @@ def build_compact_prompt(
         )
 
     return (
-        f"Write one tweet about {topic}. Tone: {tone}. "
+        f"Write one post about {topic}. Tone: {tone}. "
         f"{news_hint}"
         "Direct, practical, concise. "
         f"Stay on topic with one concrete detail under {max_tweet_chars} characters."
         " Use 1 or 2 relevant emojis. No hashtags, labels, quotes, no article URL,"
         " filler, meta commentary, or pseudo-profound framing."
-        f"{retry_hint} Output only the tweet text."
+        f"{retry_hint} Output only the post text."
     )
 
 
@@ -264,7 +264,7 @@ def build_minimal_prompt(
     topic_hint = build_topic_hint(topic)
     news_hint = f" Latest news: {news_item.title}." if news_item else ""
     return (
-        f"Tweet about {topic_hint}.{news_hint} Tone: {tone}. "
+        f"Post about {topic_hint}.{news_hint} Tone: {tone}. "
         f"Under {max_tweet_chars} chars. Direct, practical. Add 1-2 emojis. No hashtag/link."
     )
 
@@ -422,12 +422,12 @@ def is_context_length_error(exc: Exception) -> bool:
 def extract_response_text(response: Any) -> str:
     choices = getattr(response, "choices", None)
     if not choices:
-        raise RuntimeError("Server response did not include a valid tweet.")
+        raise RuntimeError("Server response did not include a valid post.")
 
     message = getattr(choices[0], "message", None)
     content = getattr(message, "content", None)
     if not isinstance(content, str) or not content.strip():
-        raise RuntimeError("Server response did not include a valid tweet.")
+        raise RuntimeError("Server response did not include a valid post.")
     return content
 
 
@@ -481,7 +481,7 @@ def request_tweet(
     tweet = extract_response_text(response)
     cleaned_tweet = clean_generated_tweet(tweet)
     if not cleaned_tweet:
-        raise RuntimeError("Server response did not include a usable tweet.")
+        raise RuntimeError("Server response did not include a usable post.")
     return cleaned_tweet
 
 
@@ -523,5 +523,5 @@ def generate_valid_tweet(
 
     elapsed = time.perf_counter() - start
     raise RuntimeError(
-        f"Could not generate a valid tweet after {config.max_retries} attempts: {last_reason}."
+        f"Could not generate a valid post after {config.max_retries} attempts: {last_reason}."
     )

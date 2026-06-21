@@ -79,8 +79,8 @@ def build_discord_success_embed(
                 },
             ]
         )
-    fields.append({"name": "Final tweet", "value": tweet_text, "inline": False})
-    return {"title": "Tweet posted", "color": 0x2ECC71, "fields": fields}
+    fields.append({"name": "Final post", "value": tweet_text, "inline": False})
+    return {"title": "Post published", "color": 0x2ECC71, "fields": fields}
 
 
 def build_discord_manual_embed(
@@ -121,7 +121,7 @@ def build_discord_manual_embed(
                 },
             ]
         )
-    return {"title": "Tweet ready", "color": 0x3498DB, "fields": fields}
+    return {"title": "Post ready", "color": 0x3498DB, "fields": fields}
 
 
 def build_discord_failure_embed(
@@ -156,7 +156,7 @@ def build_discord_failure_embed(
             ]
         )
     fields.append({"name": "Error", "value": error_message, "inline": False})
-    return {"title": "Tweet bot failed", "color": 0xE74C3C, "fields": fields}
+    return {"title": "Content bot failed", "color": 0xE74C3C, "fields": fields}
 
 
 def send_discord_safely(
