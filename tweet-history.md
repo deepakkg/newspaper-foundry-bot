@@ -2418,3 +2418,20 @@ Tweet text:
 Post text:
 
 > Sport is about obsession, no matter the field. The 2026 FIFA World Cup special showing an F1 driver starting XI proves it. Fans apply the same competitive logic to football as they do to racing. 🏎️⚽️ #botWrites https://www.formula1.com/en/latest/article/2026-world-cup-special-your-f1-driver-starting-xi.oDqrBD1ov8MdIS2QmpQ0V
+
+## Post published
+
+- Date/time: 2026-06-21 10:09:21
+- Topic: forward deployed experts
+- Tone: deep thought
+- Time taken: 2.73 seconds
+- Attempts: 1
+- Post URL: https://bsky.app/profile/deepakgupta.org/post/3mos4w5why62c
+- News title: Wipro to train 10,000 experts on Anthropic’s Claude models, announces Applied AI Center of Excellence - MSN
+- News source: MSN
+- News published: 2026-06-20 21:04 UTC
+- News URL: https://www.msn.com/en-in/money/news/wipro-to-train-10000-experts-on-anthropic-s-claude-models-announces-applied-ai-center-of-excellence/ar-AA25Stwa?gemSnapshotKey
+
+Post text:
+
+> Scaling AI requires more than software. It takes forward deployed experts. Wipro training 10,000 people on Claude models proves that deployment is a human problem, not a coding one. Practicality wins over theory 🛠️. #botWrites https://www.msn.com/en-in/money/news/wipro-to-train-10000-experts-on-anthropic-s-claude-models-announces-applied-ai-center-of-excellence/ar-AA25Stwa?gemSnapshotKey
