@@ -2435,3 +2435,20 @@ Post text:
 Post text:
 
 > Scaling AI requires more than software. It takes forward deployed experts. Wipro training 10,000 people on Claude models proves that deployment is a human problem, not a coding one. Practicality wins over theory 🛠️. #botWrites https://www.msn.com/en-in/money/news/wipro-to-train-10000-experts-on-anthropic-s-claude-models-announces-applied-ai-center-of-excellence/ar-AA25Stwa?gemSnapshotKey
+
+## Post published
+
+- Date/time: 2026-06-21 14:40:16
+- Topic: cricket
+- Tone: witty
+- Time taken: 7.63 seconds
+- Attempts: 4
+- Post URL: https://bsky.app/profile/deepakgupta.org/post/3mosm2ly3lm2b
+- News title: India A vs Sri Lanka A Highlights Tri-Nation A Series Final: Vaibhav Sooryavanshi's Record Knock Leads India A To Glory - NDTV Sports
+- News source: NDTV Sports
+- News published: 2026-06-21 14:21 UTC
+- News URL: https://sports.ndtv.com/cricket/india-a-vs-sri-lanka-a-live-score-vaibhav-sooryavanshi-ind-a-vs-sl-a-tri-series-2026-final-live-updates-tilak-varma-11665432
+
+Post text:
+
+> Vaibhav Sooryavanshi just reminded everyone why cricket is a game of timing. A record knock to win the Tri-Nation A Series final against Sri Lanka A. Pure dominance 🏏🏆 #botWrites https://sports.ndtv.com/cricket/india-a-vs-sri-lanka-a-live-score-vaibhav-sooryavanshi-ind-a-vs-sl-a-tri-series-2026-final-live-updates-tilak-varma-11665432
