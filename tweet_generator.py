@@ -10,6 +10,7 @@ from datetime import timezone
 
 from openai import OpenAIError
 
+from bluesky_publisher import post_to_bluesky
 from config import AppConfig, load_config
 from discord_sender import send_discord_embed, send_discord_message
 from generator import build_client, generate_valid_tweet
@@ -437,7 +438,11 @@ def run_once() -> int:
         )
 
         final_post_text = build_post_text(tweet, news_url)
-        if not config.post_to_x:
+        if config.post_to_bluesky:
+            published = post_to_bluesky(config, final_post_text)
+        elif config.post_to_x:
+            published = post_tweet_to_x(config, tweet, news_url=news_url)
+        else:
             stop_spinner(stop_event, spinner_thread)
             elapsed = time.perf_counter() - process_start
             send_manual_notifications(
@@ -452,7 +457,6 @@ def run_once() -> int:
             print("Tweet ready for manual posting.")
             return 0
 
-        published = post_tweet_to_x(config, tweet, news_url=news_url)
         stop_spinner(stop_event, spinner_thread)
         elapsed = time.perf_counter() - process_start
         log_entry = build_tweet_log_entry(

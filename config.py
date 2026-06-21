@@ -21,6 +21,10 @@ class AppConfig:
     max_tweet_chars: int
     max_retries: int
     timeout_seconds: int
+    post_to_bluesky: bool
+    bluesky_handle: str | None
+    bluesky_app_password: str | None
+    bluesky_service_url: str
     post_to_x: bool
     x_api_key: str | None
     x_api_key_secret: str | None
@@ -109,6 +113,13 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     timeout_seconds = _parse_positive_int(
         os.getenv("LLM_TIMEOUT_SECONDS", "120"), "LLM_TIMEOUT_SECONDS"
     )
+    post_to_bluesky = _parse_bool(os.getenv("POST_TO_BLUESKY", "false"), "POST_TO_BLUESKY")
+    bluesky_handle = os.getenv("BLUESKY_HANDLE", "").strip() or None
+    bluesky_app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip() or None
+    bluesky_service_url = (
+        os.getenv("BLUESKY_SERVICE_URL", "https://bsky.social").strip()
+        or "https://bsky.social"
+    ).rstrip("/")
     post_to_x = _parse_bool(os.getenv("POST_TO_X", "true"), "POST_TO_X")
     x_api_key = os.getenv("X_API_KEY", "").strip() or None
     x_api_key_secret = os.getenv("X_API_KEY_SECRET", "").strip() or None
@@ -142,7 +153,23 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     if not log_file_path.is_absolute():
         log_file_path = PROJECT_ROOT / log_file_path
 
-    if post_to_x:
+    if post_to_bluesky:
+        missing = [
+            name
+            for name, value in (
+                ("BLUESKY_HANDLE", bluesky_handle),
+                ("BLUESKY_APP_PASSWORD", bluesky_app_password),
+            )
+            if not value
+        ]
+        if missing:
+            missing_str = ", ".join(missing)
+            raise ValueError(
+                "POST_TO_BLUESKY is enabled but required Bluesky credentials "
+                f"are missing: {missing_str}"
+            )
+
+    if post_to_x and not post_to_bluesky:
         missing = [
             name
             for name, value in (
@@ -172,6 +199,10 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         max_tweet_chars=max_tweet_chars,
         max_retries=max_retries,
         timeout_seconds=timeout_seconds,
+        post_to_bluesky=post_to_bluesky,
+        bluesky_handle=bluesky_handle,
+        bluesky_app_password=bluesky_app_password,
+        bluesky_service_url=bluesky_service_url,
         post_to_x=post_to_x,
         x_api_key=x_api_key,
         x_api_key_secret=x_api_key_secret,

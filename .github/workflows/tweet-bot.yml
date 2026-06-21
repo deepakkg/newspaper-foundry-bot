@@ -33,7 +33,11 @@ jobs:
       NEWS_RECENCY_HOURS: ${{ vars.NEWS_RECENCY_HOURS || '48' }}
       NEWS_REGION: ${{ vars.NEWS_REGION || 'US' }}
       NEWS_LANGUAGE: ${{ vars.NEWS_LANGUAGE || 'en' }}
-      POST_TO_X: ${{ vars.POST_TO_X || 'true' }}
+      POST_TO_BLUESKY: ${{ vars.POST_TO_BLUESKY || 'false' }}
+      BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
+      BLUESKY_SERVICE_URL: ${{ vars.BLUESKY_SERVICE_URL || 'https://bsky.social' }}
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+      POST_TO_X: ${{ vars.POST_TO_X || 'false' }}
       X_API_KEY: ${{ secrets.X_API_KEY }}
       X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
       X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}

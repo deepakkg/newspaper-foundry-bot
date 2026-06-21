@@ -43,6 +43,7 @@ from news_fetcher import (
 from publisher import build_post_text, max_generated_text_chars
 from telegram_sender import send_telegram_message
 import tweet_generator
+from bluesky_publisher import build_bluesky_post_url, post_to_bluesky
 
 
 def write_env_file(path: Path, **overrides: str) -> None:
@@ -56,6 +57,10 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "NEWS_RECENCY_HOURS": "48",
         "NEWS_REGION": "US",
         "NEWS_LANGUAGE": "en",
+        "POST_TO_BLUESKY": "false",
+        "BLUESKY_HANDLE": "",
+        "BLUESKY_APP_PASSWORD": "",
+        "BLUESKY_SERVICE_URL": "https://bsky.social",
         "LLM_API_KEY": "",
         "X_API_KEY": "",
         "X_API_KEY_SECRET": "",
@@ -391,6 +396,53 @@ class ConfigTests(unittest.TestCase):
             config.discord_webhook_url,
             "https://discord.com/api/webhooks/1/token",
         )
+
+    def test_load_config_accepts_bluesky_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                POST_TO_BLUESKY="true",
+                BLUESKY_HANDLE="example.bsky.social",
+                BLUESKY_APP_PASSWORD="app-password",
+                BLUESKY_SERVICE_URL="https://example-pds.com/",
+                POST_TO_X="false",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.post_to_bluesky)
+        self.assertEqual(config.bluesky_handle, "example.bsky.social")
+        self.assertEqual(config.bluesky_app_password, "app-password")
+        self.assertEqual(config.bluesky_service_url, "https://example-pds.com")
+
+    def test_load_config_requires_bluesky_credentials_when_enabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, POST_TO_BLUESKY="true")
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "POST_TO_BLUESKY is enabled but required Bluesky credentials "
+                "are missing: BLUESKY_HANDLE, BLUESKY_APP_PASSWORD",
+            ):
+                load_config(env_path)
+
+    def test_load_config_bluesky_does_not_require_x_credentials(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                POST_TO_BLUESKY="true",
+                BLUESKY_HANDLE="example.bsky.social",
+                BLUESKY_APP_PASSWORD="app-password",
+                POST_TO_X="true",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.post_to_bluesky)
+        self.assertTrue(config.post_to_x)
 
     def test_load_config_allows_missing_notification_credentials(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -912,6 +964,76 @@ class PublisherTests(unittest.TestCase):
         )
 
 
+class BlueskyPublisherTests(unittest.TestCase):
+    def test_build_bluesky_post_url_uses_record_key(self) -> None:
+        url = build_bluesky_post_url(
+            "example.bsky.social",
+            "at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b",
+        )
+
+        self.assertEqual(
+            url,
+            "https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
+        )
+
+    def test_post_to_bluesky_logs_in_and_posts_text(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            BLUESKY_SERVICE_URL="https://bsky.social",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.send_post.return_value = SimpleNamespace(
+            uri="at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b",
+            cid="bafyexample",
+        )
+
+        with patch("bluesky_publisher.Client", return_value=client) as mock_client:
+            published = post_to_bluesky(config, "Fresh take 🚀 #botWrites")
+
+        mock_client.assert_called_once_with(base_url="https://bsky.social")
+        client.login.assert_called_once_with("example.bsky.social", "app-password")
+        client.send_post.assert_called_once_with("Fresh take 🚀 #botWrites")
+        self.assertEqual(published.uri, "at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b")
+        self.assertEqual(published.cid, "bafyexample")
+        self.assertEqual(
+            published.url,
+            "https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
+        )
+
+    def test_post_to_bluesky_raises_clear_error_on_failure(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.send_post.side_effect = RuntimeError("rate limited")
+
+        with patch("bluesky_publisher.Client", return_value=client):
+            with self.assertRaisesRegex(RuntimeError, "Bluesky posting failed: rate limited"):
+                post_to_bluesky(config, "Fresh take 🚀 #botWrites")
+
+    def test_post_to_bluesky_requires_post_uri(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.send_post.return_value = SimpleNamespace(uri=None, cid="bafyexample")
+
+        with patch("bluesky_publisher.Client", return_value=client):
+            with self.assertRaisesRegex(
+                RuntimeError, "Bluesky API response did not include a post URI"
+            ):
+                post_to_bluesky(config, "Fresh take 🚀 #botWrites")
+
+
 class TweetGeneratorTests(unittest.TestCase):
     def test_run_once_exits_cleanly_when_config_load_fails(self) -> None:
         buffer = StringIO()
@@ -1044,6 +1166,130 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("2026-05-31 10:00 UTC", telegram_text)
         self.assertEqual(telegram_text.count("https://example.com/ai-agents"), 1)
         self.assertIn("Using RSS news:", buffer.getvalue())
+
+    def test_run_once_bluesky_only_posts_and_logs(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            POST_TO_X="false",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["coffee", "witty"]):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Coffee is back. ☕", 1.0, 2),
+                    ):
+                        with patch.object(
+                            tweet_generator, "post_to_bluesky", return_value=published
+                        ) as mock_bluesky:
+                            with patch.object(
+                                tweet_generator, "post_tweet_to_x"
+                            ) as mock_x:
+                                with patch.object(
+                                    tweet_generator, "send_telegram_message"
+                                ) as mock_telegram:
+                                    with patch("sys.stdout", buffer):
+                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_bluesky.assert_called_once_with(config, "Coffee is back. ☕ #botWrites")
+        mock_x.assert_not_called()
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn(
+            "Tweet URL: https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
+            log_content,
+        )
+        self.assertIn("Coffee is back. ☕ #botWrites", log_content)
+        self.assertIn("Tweet posted and logged.", buffer.getvalue())
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Coffee is back. ☕ #botWrites", telegram_text)
+
+    def test_run_once_bluesky_failure_sends_failure_notification_without_log(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            POST_TO_X="false",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["coffee", "witty"]):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Coffee is back. ☕", 1.0, 1),
+                    ):
+                        with patch.object(
+                            tweet_generator,
+                            "post_to_bluesky",
+                            side_effect=RuntimeError("Bluesky posting failed: rate limited"),
+                        ):
+                            with patch.object(
+                                tweet_generator, "post_tweet_to_x"
+                            ) as mock_x:
+                                with patch.object(
+                                    tweet_generator, "send_telegram_message"
+                                ) as mock_telegram:
+                                    with patch("sys.stdout", buffer):
+                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_x.assert_not_called()
+        self.assertFalse(config.log_file_path.exists())
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Tweet bot failed", telegram_text)
+        self.assertIn("Bluesky posting failed: rate limited", telegram_text)
+        self.assertIn("Could not complete tweet run:", buffer.getvalue())
+
+    def test_run_once_bluesky_enabled_does_not_enter_manual_mode(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            POST_TO_X="false",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        published = MagicMock(url="https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 1),
+                ):
+                    with patch.object(
+                        tweet_generator, "post_to_bluesky", return_value=published
+                    ):
+                        with patch.object(
+                            tweet_generator, "send_discord_message"
+                        ) as mock_manual_message:
+                            with patch.object(tweet_generator, "send_discord_embed"):
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_manual_message.assert_not_called()
+        self.assertNotIn("Tweet ready for manual posting.", buffer.getvalue())
 
     def test_run_once_manual_mode_sends_discord_embed_and_post_text(self) -> None:
         buffer = StringIO()

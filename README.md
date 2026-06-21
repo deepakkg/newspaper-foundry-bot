@@ -1,6 +1,6 @@
 # Gemma Tweet Bot
 
-This bot fetches recent topic news from Google News RSS, generates short tweets with an OpenAI-compatible LLM API, posts them to X, records each successful post in GitHub, and can send Telegram and Discord notifications.
+This bot fetches recent topic news from Google News RSS, generates short posts with an OpenAI-compatible LLM API, posts them to Bluesky or X, records each successful post in GitHub, and can send Telegram and Discord notifications.
 
 ## GitHub Actions schedule
 
@@ -18,6 +18,7 @@ GitHub cron uses UTC, so the workflow file maps these to `00:30`, `06:30`, `12:3
 Store these in repository Settings -> Secrets and variables -> Actions -> Secrets:
 
 - `LLM_API_KEY`
+- `BLUESKY_APP_PASSWORD`
 - `X_API_KEY`
 - `X_API_KEY_SECRET`
 - `X_ACCESS_TOKEN`
@@ -41,6 +42,9 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `NEWS_RECENCY_HOURS`
 - `NEWS_REGION`
 - `NEWS_LANGUAGE`
+- `POST_TO_BLUESKY`
+- `BLUESKY_HANDLE`
+- `BLUESKY_SERVICE_URL`
 - `POST_TO_X`
 - `X_USERNAME`
 - `TELEGRAM_NOTIFICATIONS_ENABLED`
@@ -56,10 +60,23 @@ NEWS_ENABLED=true
 NEWS_RECENCY_HOURS=48
 NEWS_REGION=US
 NEWS_LANGUAGE=en
-POST_TO_X=true
+POST_TO_BLUESKY=true
+BLUESKY_SERVICE_URL=https://bsky.social
+POST_TO_X=false
 TELEGRAM_NOTIFICATIONS_ENABLED=false
 DISCORD_NOTIFICATIONS_ENABLED=false
 ```
+
+For Bluesky publishing, create an app password in Bluesky for the bot account, then set:
+
+```text
+POST_TO_BLUESKY=true
+BLUESKY_HANDLE=your-handle.bsky.social
+BLUESKY_SERVICE_URL=https://bsky.social
+BLUESKY_APP_PASSWORD=your_app_password
+```
+
+When `POST_TO_BLUESKY=true`, Bluesky is the primary publisher. Keep `POST_TO_X=false` while X posting is not free. If both Bluesky and X publishing are disabled, the bot runs in manual mode and sends the final post text to notifications.
 
 Choose `LLM_BASE_URL`, `LLM_MODEL`, and `LLM_API_KEY` based on the provider you want to use.
 Do not use a provider's website URL as `LLM_BASE_URL`. For example,
@@ -105,11 +122,11 @@ when invoked.
 
 ## Logs and notifications
 
-GitHub Actions writes successful posts to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
+GitHub Actions writes successful auto-published posts to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
 
 To view the log in GitHub, switch the branch selector from `main` to `tweet-history` and open `tweet-history.md`.
 
-When a recent RSS item is used, the log also includes the news title, source, published time, and URL.
+When a recent RSS item is used, the log also includes the news title, source, published time, and URL. Manual-mode generated posts are not written to tweet history.
 
 For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 
