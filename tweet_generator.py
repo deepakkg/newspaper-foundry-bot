@@ -6,28 +6,26 @@ import socket
 import sys
 import threading
 import time
-from datetime import timezone
 
 from openai import OpenAIError
 
 from bluesky_publisher import post_to_bluesky
 from config import AppConfig, load_config
-from discord_sender import send_discord_embed, send_discord_message
 from generator import build_client, generate_valid_tweet
-from logger import (
-    append_log_entry,
-    build_failure_telegram_summary,
-    build_telegram_summary,
-    build_tweet_log_entry,
-)
+from logger import append_log_entry, build_tweet_log_entry
 from news_fetcher import NewsItem, fetch_latest_news
+from notifications import (
+    format_news_published_at,
+    send_failure_notifications,
+    send_manual_notifications,
+    send_success_notifications,
+)
 from publisher import (
     build_post_text,
     build_post_text_without_url,
     max_generated_text_chars,
     post_tweet_to_x,
 )
-from telegram_sender import send_telegram_message
 
 
 def spinner(stop_event: threading.Event, message: str = "Generating tweet") -> None:
@@ -66,12 +64,6 @@ def is_timeout_exception(exc: Exception) -> bool:
     return "timed out" in lowered or "timeout" in lowered
 
 
-def format_news_published_at(news_item: NewsItem) -> str:
-    return news_item.published_at.astimezone(timezone.utc).strftime(
-        "%Y-%m-%d %H:%M UTC"
-    )
-
-
 def describe_failure(exc: Exception, config: AppConfig | None = None) -> str:
     if isinstance(exc, OpenAIError):
         if looks_like_html_response(str(exc)):
@@ -91,304 +83,6 @@ def describe_failure(exc: Exception, config: AppConfig | None = None) -> str:
 def looks_like_html_response(message: str) -> bool:
     lowered = message.lower()
     return "<!doctype html" in lowered or "<html" in lowered
-
-
-def send_telegram_safely(
-    config: AppConfig,
-    message_text: str,
-    *,
-    warning_prefix: str,
-) -> None:
-    if not config.telegram_notifications_enabled:
-        return
-    if not config.telegram_bot_token or not config.telegram_chat_id:
-        print(
-            f"{warning_prefix}: TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID "
-            "must both be set."
-        )
-        return
-
-    try:
-        send_telegram_message(config, message_text)
-    except Exception as exc:
-        print(f"{warning_prefix}: {exc}")
-
-
-def format_discord_field_value(value: str | None) -> str:
-    return value if value else "Not available"
-
-
-def build_discord_success_embed(
-    *,
-    topic: str,
-    tone: str,
-    tweet_text: str,
-    time_taken_seconds: float,
-    attempts: int,
-    news_item: NewsItem | None,
-) -> dict[str, object]:
-    fields: list[dict[str, object]] = [
-        {"name": "Topic", "value": topic, "inline": True},
-        {"name": "Tone", "value": tone, "inline": True},
-        {"name": "Attempts", "value": str(attempts), "inline": True},
-        {
-            "name": "Time taken",
-            "value": f"{time_taken_seconds:.2f} seconds",
-            "inline": True,
-        },
-    ]
-    if news_item:
-        fields.extend(
-            [
-                {
-                    "name": "News title",
-                    "value": format_discord_field_value(news_item.title),
-                    "inline": False,
-                },
-                {
-                    "name": "News source",
-                    "value": format_discord_field_value(news_item.source),
-                    "inline": True,
-                },
-                {
-                    "name": "News published",
-                    "value": format_news_published_at(news_item),
-                    "inline": True,
-                },
-            ]
-        )
-    fields.append({"name": "Final tweet", "value": tweet_text, "inline": False})
-    return {"title": "Tweet posted", "color": 0x2ECC71, "fields": fields}
-
-
-def build_discord_manual_embed(
-    *,
-    topic: str,
-    tone: str,
-    time_taken_seconds: float,
-    attempts: int,
-    news_item: NewsItem | None,
-) -> dict[str, object]:
-    fields: list[dict[str, object]] = [
-        {"name": "Topic", "value": topic, "inline": True},
-        {"name": "Tone", "value": tone, "inline": True},
-        {"name": "Attempts", "value": str(attempts), "inline": True},
-        {
-            "name": "Time taken",
-            "value": f"{time_taken_seconds:.2f} seconds",
-            "inline": True,
-        },
-    ]
-    if news_item:
-        fields.extend(
-            [
-                {
-                    "name": "News title",
-                    "value": format_discord_field_value(news_item.title),
-                    "inline": False,
-                },
-                {
-                    "name": "News source",
-                    "value": format_discord_field_value(news_item.source),
-                    "inline": True,
-                },
-                {
-                    "name": "News published",
-                    "value": format_news_published_at(news_item),
-                    "inline": True,
-                },
-            ]
-        )
-    return {"title": "Tweet ready", "color": 0x3498DB, "fields": fields}
-
-
-def build_discord_failure_embed(
-    *,
-    topic: str | None,
-    tone: str | None,
-    news_item: NewsItem | None,
-    error_message: str,
-) -> dict[str, object]:
-    fields: list[dict[str, object]] = [
-        {"name": "Topic", "value": format_discord_field_value(topic), "inline": True},
-        {"name": "Tone", "value": format_discord_field_value(tone), "inline": True},
-    ]
-    if news_item:
-        fields.extend(
-            [
-                {
-                    "name": "News title",
-                    "value": format_discord_field_value(news_item.title),
-                    "inline": False,
-                },
-                {
-                    "name": "News source",
-                    "value": format_discord_field_value(news_item.source),
-                    "inline": True,
-                },
-                {
-                    "name": "News published",
-                    "value": format_news_published_at(news_item),
-                    "inline": True,
-                },
-            ]
-        )
-    fields.append({"name": "Error", "value": error_message, "inline": False})
-    return {"title": "Tweet bot failed", "color": 0xE74C3C, "fields": fields}
-
-
-def send_discord_safely(
-    config: AppConfig,
-    embed: dict[str, object],
-    *,
-    warning_prefix: str,
-) -> None:
-    if not config.discord_notifications_enabled:
-        return
-    if not config.discord_webhook_url:
-        print(f"{warning_prefix}: DISCORD_WEBHOOK_URL must be set.")
-        return
-
-    try:
-        send_discord_embed(config, embed)
-    except Exception as exc:
-        print(f"{warning_prefix}: {exc}")
-
-
-def send_discord_message_safely(
-    config: AppConfig,
-    message_text: str,
-    *,
-    warning_prefix: str,
-) -> None:
-    if not config.discord_notifications_enabled:
-        return
-    if not config.discord_webhook_url:
-        print(f"{warning_prefix}: DISCORD_WEBHOOK_URL must be set.")
-        return
-
-    try:
-        send_discord_message(config, message_text)
-    except Exception as exc:
-        print(f"{warning_prefix}: {exc}")
-
-
-def send_failure_notifications(
-    config: AppConfig,
-    *,
-    topic: str | None,
-    tone: str | None,
-    news_item: NewsItem | None,
-    error_message: str,
-) -> None:
-    news_published_at = format_news_published_at(news_item) if news_item else None
-    send_telegram_safely(
-        config,
-        build_failure_telegram_summary(
-            topic=topic,
-            tone=tone,
-            error_message=error_message,
-            news_title=news_item.title if news_item else None,
-            news_source=news_item.source if news_item else None,
-            news_published_at=news_published_at,
-            news_url=news_item.link if news_item else None,
-        ),
-        warning_prefix="Warning: Telegram failure alert delivery failed",
-    )
-    send_discord_safely(
-        config,
-        build_discord_failure_embed(
-            topic=topic,
-            tone=tone,
-            news_item=news_item,
-            error_message=error_message,
-        ),
-        warning_prefix="Warning: Discord failure alert delivery failed",
-    )
-
-
-def send_success_notifications(
-    config: AppConfig,
-    *,
-    topic: str,
-    tone: str,
-    final_post_text: str,
-    elapsed: float,
-    attempts: int,
-    news_item: NewsItem | None,
-) -> None:
-    news_published_at = format_news_published_at(news_item) if news_item else None
-    send_telegram_safely(
-        config,
-        build_telegram_summary(
-            topic=topic,
-            tone=tone,
-            tweet_text=final_post_text,
-            time_taken_seconds=elapsed,
-            attempts=attempts,
-            news_title=news_item.title if news_item else None,
-            news_source=news_item.source if news_item else None,
-            news_published_at=news_published_at,
-            news_url=news_item.link if news_item else None,
-        ),
-        warning_prefix="Warning: Telegram delivery failed",
-    )
-    send_discord_safely(
-        config,
-        build_discord_success_embed(
-            topic=topic,
-            tone=tone,
-            tweet_text=final_post_text,
-            time_taken_seconds=elapsed,
-            attempts=attempts,
-            news_item=news_item,
-        ),
-        warning_prefix="Warning: Discord delivery failed",
-    )
-
-
-def send_manual_notifications(
-    config: AppConfig,
-    *,
-    topic: str,
-    tone: str,
-    final_post_text: str,
-    elapsed: float,
-    attempts: int,
-    news_item: NewsItem | None,
-) -> None:
-    news_published_at = format_news_published_at(news_item) if news_item else None
-    send_telegram_safely(
-        config,
-        build_telegram_summary(
-            topic=topic,
-            tone=tone,
-            tweet_text=final_post_text,
-            time_taken_seconds=elapsed,
-            attempts=attempts,
-            news_title=news_item.title if news_item else None,
-            news_source=news_item.source if news_item else None,
-            news_published_at=news_published_at,
-            news_url=news_item.link if news_item else None,
-        ),
-        warning_prefix="Warning: Telegram delivery failed",
-    )
-    send_discord_safely(
-        config,
-        build_discord_manual_embed(
-            topic=topic,
-            tone=tone,
-            time_taken_seconds=elapsed,
-            attempts=attempts,
-            news_item=news_item,
-        ),
-        warning_prefix="Warning: Discord delivery failed",
-    )
-    send_discord_message_safely(
-        config,
-        final_post_text,
-        warning_prefix="Warning: Discord delivery failed",
-    )
 
 
 def run_once() -> int:
