@@ -2388,3 +2388,16 @@ Tweet text:
 Tweet text:
 
 > SpaceX has a great stock market debut and Scottish Mortgage shares get cheaper. The stock market logic is weird. 🚀📉 #botWrites https://uk.finance.yahoo.com/news/scottish-mortgage-shares-now-even-073000036.html
+
+## Tweet posted
+
+- Date/time: 2026-06-21 08:40:12
+- Topic: saas professional services
+- Tone: analysis
+- Time taken: 4.19 seconds
+- Attempts: 3
+- Tweet URL: https://bsky.app/profile/deepakgupta.org/post/3morxwqqvkk2r
+
+Tweet text:
+
+> SaaS professional services shouldn't be a profit center. They are a churn prevention tool. High-touch onboarding during the first 30 days determines if the software actually gets used. That is the only metric that matters. ⚙️ #botWrites
