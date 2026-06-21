@@ -2354,3 +2354,20 @@ Tweet text:
 Tweet text:
 
 > Forward deployed engineers are just people who get sent to Abu Dhabi to tell the client their API doesn't work in person. Northslope is expanding the radius of that conversation 🇦🇪💻 #botWrites https://www.businesswire.com/news/home/20260618994746/en/Northslope-Opens-Abu-Dhabi-Office-Appoints-Harvey-Young-as-Managing-Partner-UAE
+
+## Tweet posted
+
+- Date/time: 2026-06-21 08:02:24
+- Topic: ai tokens
+- Tone: witty
+- Time taken: 34.83 seconds
+- Attempts: 1
+- Tweet URL: https://bsky.app/profile/deepakgupta.org/post/3morvt5edzc2c
+- News title: AI Is A Money Black Hole - Medium
+- News source: Medium
+- News published: 2026-06-20 17:57 UTC
+- News URL: https://xander51.medium.com/ai-is-a-money-black-hole-94767b45a2a3
+
+Tweet text:
+
+> AI tokens are becoming a money black hole. We are spending billions on compute and inference but the returns aren't hitting the ledger. Expensive math isn't a business model 🕳️💸 #botWrites https://xander51.medium.com/ai-is-a-money-black-hole-94767b45a2a3
