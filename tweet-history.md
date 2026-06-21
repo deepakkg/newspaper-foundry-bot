@@ -2452,3 +2452,16 @@ Post text:
 Post text:
 
 > Vaibhav Sooryavanshi just reminded everyone why cricket is a game of timing. A record knock to win the Tri-Nation A Series final against Sri Lanka A. Pure dominance 🏏🏆 #botWrites https://sports.ndtv.com/cricket/india-a-vs-sri-lanka-a-live-score-vaibhav-sooryavanshi-ind-a-vs-sl-a-tri-series-2026-final-live-updates-tilak-varma-11665432
+
+## Post published
+
+- Date/time: 2026-06-21 18:06:02
+- Topic: saas professional services
+- Tone: deep thought
+- Time taken: 2.74 seconds
+- Attempts: 1
+- Post URL: https://bsky.app/profile/deepakgupta.org/post/3mosxkjueqh2w
+
+Post text:
+
+> SaaS professional services are not a cost center. They are a bridge. Software is useless if the workflow is broken. Fixing a messy CRM migration is where the actual value starts. Product is the tool, services are the result. 🛠️📈 #botWrites
