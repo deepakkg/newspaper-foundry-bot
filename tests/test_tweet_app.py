@@ -40,10 +40,14 @@ from news_fetcher import (
     resolve_news_url,
     strip_html,
 )
-from publisher import build_post_text, max_generated_text_chars
+from publisher import build_post_text, build_post_text_without_url, max_generated_text_chars
 from telegram_sender import send_telegram_message
 import tweet_generator
-from bluesky_publisher import build_bluesky_post_url, post_to_bluesky
+from bluesky_publisher import (
+    build_bluesky_post_url,
+    fetch_link_card_metadata,
+    post_to_bluesky,
+)
 
 
 def write_env_file(path: Path, **overrides: str) -> None:
@@ -956,6 +960,12 @@ class PublisherTests(unittest.TestCase):
             "Fresh take 🚀 #botWrites https://example.com/news",
         )
 
+    def test_build_post_text_without_url_appends_hashtag_only(self) -> None:
+        self.assertEqual(
+            build_post_text_without_url("Fresh take 🚀"),
+            "Fresh take 🚀 #botWrites",
+        )
+
     def test_max_generated_text_chars_reserves_suffix_space(self) -> None:
         self.assertEqual(max_generated_text_chars(280), 269)
         self.assertEqual(
@@ -976,7 +986,7 @@ class BlueskyPublisherTests(unittest.TestCase):
             "https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
         )
 
-    def test_post_to_bluesky_logs_in_and_posts_text(self) -> None:
+    def test_post_to_bluesky_without_news_url_sends_plain_text(self) -> None:
         tmp_dir, config = load_temp_config(
             POST_TO_BLUESKY="true",
             BLUESKY_HANDLE="example.bsky.social",
@@ -995,13 +1005,171 @@ class BlueskyPublisherTests(unittest.TestCase):
 
         mock_client.assert_called_once_with(base_url="https://bsky.social")
         client.login.assert_called_once_with("example.bsky.social", "app-password")
-        client.send_post.assert_called_once_with("Fresh take 🚀 #botWrites")
+        client.send_post.assert_called_once_with("Fresh take 🚀 #botWrites", embed=None)
         self.assertEqual(published.uri, "at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b")
         self.assertEqual(published.cid, "bafyexample")
         self.assertEqual(
             published.url,
             "https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
         )
+
+    def test_fetch_link_card_metadata_reads_open_graph_fields(self) -> None:
+        response = MagicMock(
+            url="https://example.com/story",
+            text=(
+                '<meta property="og:title" content="Publisher headline">'
+                '<meta property="og:description" content="Publisher summary">'
+                '<meta property="og:image" content="/image.jpg">'
+            ),
+        )
+
+        with patch("bluesky_publisher.requests.get", return_value=response) as mock_get:
+            metadata = fetch_link_card_metadata(
+                "https://example.com/story",
+                fallback_title="RSS headline",
+                fallback_description="RSS summary",
+            )
+
+        mock_get.assert_called_once()
+        response.raise_for_status.assert_called_once()
+        self.assertEqual(metadata.title, "Publisher headline")
+        self.assertEqual(metadata.description, "Publisher summary")
+        self.assertEqual(metadata.image_url, "https://example.com/image.jpg")
+
+    def test_fetch_link_card_metadata_falls_back_on_failure(self) -> None:
+        with patch(
+            "bluesky_publisher.requests.get",
+            side_effect=requests.RequestException("metadata failed"),
+        ):
+            metadata = fetch_link_card_metadata(
+                "https://example.com/story",
+                fallback_title="RSS headline",
+                fallback_description="RSS summary",
+            )
+
+        self.assertEqual(metadata.title, "RSS headline")
+        self.assertEqual(metadata.description, "RSS summary")
+        self.assertIsNone(metadata.image_url)
+
+    def test_post_to_bluesky_with_news_url_sends_external_embed(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.upload_blob.return_value = SimpleNamespace(
+            blob={"ref": {"$link": "blob-ref"}, "mimeType": "image/jpeg", "size": 10}
+        )
+        client.send_post.return_value = SimpleNamespace(
+            uri="at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b",
+            cid="bafyexample",
+        )
+        metadata_response = MagicMock(
+            url="https://example.com/story",
+            text=(
+                '<meta property="og:title" content="Publisher headline">'
+                '<meta property="og:description" content="Publisher summary">'
+                '<meta property="og:image" content="https://example.com/image.jpg">'
+            ),
+        )
+        image_response = MagicMock(
+            headers={"Content-Type": "image/jpeg"},
+            content=b"image-bytes",
+        )
+
+        with patch("bluesky_publisher.Client", return_value=client):
+            with patch(
+                "bluesky_publisher.requests.get",
+                side_effect=[metadata_response, image_response],
+            ):
+                post_to_bluesky(
+                    config,
+                    "Fresh take 🚀 #botWrites",
+                    news_url="https://example.com/story",
+                    news_title="RSS headline",
+                    news_summary="RSS summary",
+                )
+
+        client.upload_blob.assert_called_once_with(b"image-bytes")
+        call_kwargs = client.send_post.call_args.kwargs
+        self.assertEqual(client.send_post.call_args.args[0], "Fresh take 🚀 #botWrites")
+        embed = call_kwargs["embed"]
+        self.assertEqual(embed.external.uri, "https://example.com/story")
+        self.assertEqual(embed.external.title, "Publisher headline")
+        self.assertEqual(embed.external.description, "Publisher summary")
+        self.assertEqual(embed.external.thumb.ref.link, "blob-ref")
+
+    def test_post_to_bluesky_falls_back_to_rss_metadata(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.send_post.return_value = SimpleNamespace(
+            uri="at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b",
+            cid="bafyexample",
+        )
+
+        with patch("bluesky_publisher.Client", return_value=client):
+            with patch(
+                "bluesky_publisher.requests.get",
+                side_effect=requests.RequestException("metadata failed"),
+            ):
+                post_to_bluesky(
+                    config,
+                    "Fresh take 🚀 #botWrites",
+                    news_url="https://example.com/story",
+                    news_title="RSS headline",
+                    news_summary="RSS summary",
+                )
+
+        embed = client.send_post.call_args.kwargs["embed"]
+        self.assertEqual(embed.external.uri, "https://example.com/story")
+        self.assertEqual(embed.external.title, "RSS headline")
+        self.assertEqual(embed.external.description, "RSS summary")
+        self.assertIsNone(embed.external.thumb)
+
+    def test_post_to_bluesky_continues_when_thumbnail_upload_fails(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.upload_blob.side_effect = RuntimeError("upload failed")
+        client.send_post.return_value = SimpleNamespace(
+            uri="at://did:plc:abc123/app.bsky.feed.post/3k4duaz5vfs2b",
+            cid="bafyexample",
+        )
+        metadata_response = MagicMock(
+            url="https://example.com/story",
+            text='<meta property="og:image" content="https://example.com/image.jpg">',
+        )
+        image_response = MagicMock(
+            headers={"Content-Type": "image/jpeg"},
+            content=b"image-bytes",
+        )
+
+        with patch("bluesky_publisher.Client", return_value=client):
+            with patch(
+                "bluesky_publisher.requests.get",
+                side_effect=[metadata_response, image_response],
+            ):
+                post_to_bluesky(
+                    config,
+                    "Fresh take 🚀 #botWrites",
+                    news_url="https://example.com/story",
+                    news_title="RSS headline",
+                    news_summary="RSS summary",
+                )
+
+        embed = client.send_post.call_args.kwargs["embed"]
+        self.assertIsNone(embed.external.thumb)
 
     def test_post_to_bluesky_raises_clear_error_on_failure(self) -> None:
         tmp_dir, config = load_temp_config(
@@ -1170,6 +1338,7 @@ class TweetGeneratorTests(unittest.TestCase):
     def test_run_once_bluesky_only_posts_and_logs(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
             POST_TO_BLUESKY="true",
             BLUESKY_HANDLE="example.bsky.social",
             BLUESKY_APP_PASSWORD="app-password",
@@ -1180,39 +1349,63 @@ class TweetGeneratorTests(unittest.TestCase):
         )
         self.addCleanup(tmp_dir.cleanup)
         published = MagicMock(url="https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b")
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["coffee", "witty"]):
+                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "witty"]):
                     with patch.object(
                         tweet_generator,
-                        "generate_valid_tweet",
-                        return_value=("Coffee is back. ☕", 1.0, 2),
+                        "fetch_latest_news",
+                        return_value=news_item,
                     ):
                         with patch.object(
-                            tweet_generator, "post_to_bluesky", return_value=published
-                        ) as mock_bluesky:
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            return_value=("AI agents are moving into support queues. 🤖", 1.0, 2),
+                        ):
                             with patch.object(
-                                tweet_generator, "post_tweet_to_x"
-                            ) as mock_x:
+                                tweet_generator, "post_to_bluesky", return_value=published
+                            ) as mock_bluesky:
                                 with patch.object(
-                                    tweet_generator, "send_telegram_message"
-                                ) as mock_telegram:
-                                    with patch("sys.stdout", buffer):
-                                        result = tweet_generator.run_once()
+                                    tweet_generator, "post_tweet_to_x"
+                                ) as mock_x:
+                                    with patch.object(
+                                        tweet_generator, "send_telegram_message"
+                                    ) as mock_telegram:
+                                        with patch("sys.stdout", buffer):
+                                            result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
-        mock_bluesky.assert_called_once_with(config, "Coffee is back. ☕ #botWrites")
+        mock_bluesky.assert_called_once_with(
+            config,
+            "AI agents are moving into support queues. 🤖 #botWrites",
+            news_url="https://example.com/ai-agents",
+            news_title="AI agents reshape support workflows",
+            news_summary="Companies are deploying agents to resolve support tickets.",
+        )
         mock_x.assert_not_called()
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn(
             "Tweet URL: https://bsky.app/profile/example.bsky.social/post/3k4duaz5vfs2b",
             log_content,
         )
-        self.assertIn("Coffee is back. ☕ #botWrites", log_content)
+        self.assertIn(
+            "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
+            log_content,
+        )
         self.assertIn("Tweet posted and logged.", buffer.getvalue())
         telegram_text = mock_telegram.call_args.args[1]
-        self.assertIn("Coffee is back. ☕ #botWrites", telegram_text)
+        self.assertIn(
+            "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
+            telegram_text,
+        )
 
     def test_run_once_bluesky_failure_sends_failure_notification_without_log(self) -> None:
         buffer = StringIO()

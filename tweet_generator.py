@@ -21,7 +21,12 @@ from logger import (
     build_tweet_log_entry,
 )
 from news_fetcher import NewsItem, fetch_latest_news
-from publisher import build_post_text, max_generated_text_chars, post_tweet_to_x
+from publisher import (
+    build_post_text,
+    build_post_text_without_url,
+    max_generated_text_chars,
+    post_tweet_to_x,
+)
 from telegram_sender import send_telegram_message
 
 
@@ -439,7 +444,13 @@ def run_once() -> int:
 
         final_post_text = build_post_text(tweet, news_url)
         if config.post_to_bluesky:
-            published = post_to_bluesky(config, final_post_text)
+            published = post_to_bluesky(
+                config,
+                build_post_text_without_url(tweet),
+                news_url=news_url,
+                news_title=news_item.title if news_item else None,
+                news_summary=news_item.summary if news_item else None,
+            )
         elif config.post_to_x:
             published = post_tweet_to_x(config, tweet, news_url=news_url)
         else:

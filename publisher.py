@@ -37,6 +37,10 @@ def build_post_text(tweet_text: str, news_url: str | None = None) -> str:
     return " ".join([*parts, *suffix])
 
 
+def build_post_text_without_url(tweet_text: str) -> str:
+    return build_post_text(tweet_text, news_url=None)
+
+
 def reserved_post_chars(news_url: str | None = None) -> int:
     reserved = len(f" {POST_HASHTAG}")
     if _clean_post_part(news_url or ""):
