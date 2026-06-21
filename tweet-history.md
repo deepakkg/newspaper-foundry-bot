@@ -2371,3 +2371,20 @@ Tweet text:
 Tweet text:
 
 > AI tokens are becoming a money black hole. We are spending billions on compute and inference but the returns aren't hitting the ledger. Expensive math isn't a business model 🕳️💸 #botWrites https://xander51.medium.com/ai-is-a-money-black-hole-94767b45a2a3
+
+## Tweet posted
+
+- Date/time: 2026-06-21 08:11:45
+- Topic: stock market
+- Tone: witty
+- Time taken: 4.36 seconds
+- Attempts: 1
+- Tweet URL: https://bsky.app/profile/deepakgupta.org/post/3morwdu42bc2w
+- News title: Scottish Mortgage shares are now even cheaper after SpaceX’s amazing stock market debut! - Yahoo Finance UK
+- News source: Yahoo Finance UK
+- News published: 2026-06-21 07:30 UTC
+- News URL: https://uk.finance.yahoo.com/news/scottish-mortgage-shares-now-even-073000036.html
+
+Tweet text:
+
+> SpaceX has a great stock market debut and Scottish Mortgage shares get cheaper. The stock market logic is weird. 🚀📉 #botWrites https://uk.finance.yahoo.com/news/scottish-mortgage-shares-now-even-073000036.html
