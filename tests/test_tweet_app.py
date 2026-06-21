@@ -14,7 +14,7 @@ import requests
 from openai import OpenAIError
 
 from config import load_config
-from discord_sender import send_discord_embed
+from discord_sender import send_discord_embed, send_discord_message
 from generator import (
     build_compact_prompt,
     build_minimal_prompt,
@@ -1045,6 +1045,137 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(telegram_text.count("https://example.com/ai-agents"), 1)
         self.assertIn("Using RSS news:", buffer.getvalue())
 
+    def test_run_once_manual_mode_sends_discord_embed_and_post_text(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_X="false",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "fetch_latest_news",
+                    return_value=news_item,
+                ):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("AI agents are moving into support queues. 🤖", 1.0, 1),
+                    ):
+                        with patch.object(
+                            tweet_generator, "post_tweet_to_x"
+                        ) as mock_post:
+                            with patch.object(
+                                tweet_generator, "send_discord_embed"
+                            ) as mock_discord_embed:
+                                with patch.object(
+                                    tweet_generator, "send_discord_message"
+                                ) as mock_discord_message:
+                                    with patch("sys.stdout", buffer):
+                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_post.assert_not_called()
+        self.assertFalse(config.log_file_path.exists())
+        embed = mock_discord_embed.call_args.args[1]
+        self.assertEqual(embed["title"], "Tweet ready")
+        self.assertIn(
+            {"name": "News title", "value": "AI agents reshape support workflows", "inline": False},
+            embed["fields"],
+        )
+        self.assertNotIn("Final tweet", [field["name"] for field in embed["fields"]])
+        mock_discord_message.assert_called_once_with(
+            config,
+            "AI agents are moving into support queues. 🤖 #botWrites https://example.com/ai-agents",
+        )
+        self.assertIn("Tweet ready for manual posting.", buffer.getvalue())
+
+    def test_run_once_manual_mode_sends_telegram_success_summary(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_X="false",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["coffee", "witty"]):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Coffee is back. ☕", 1.0, 2),
+                    ):
+                        with patch.object(
+                            tweet_generator, "post_tweet_to_x"
+                        ) as mock_post:
+                            with patch.object(
+                                tweet_generator, "send_telegram_message"
+                            ) as mock_telegram:
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_post.assert_not_called()
+        self.assertFalse(config.log_file_path.exists())
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Topic: coffee", telegram_text)
+        self.assertIn("Tone: witty", telegram_text)
+        self.assertIn("Attempts: 2", telegram_text)
+        self.assertIn("Coffee is back. ☕ #botWrites", telegram_text)
+        self.assertNotIn("Tweet bot failed", telegram_text)
+
+    def test_run_once_manual_mode_without_news_sends_post_text_without_link(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_X="false",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator, "fetch_latest_news", return_value=None):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_valid_tweet",
+                        return_value=("Learning still rewards curiosity. 📚", 1.0, 1),
+                    ):
+                        with patch.object(
+                            tweet_generator, "post_tweet_to_x"
+                        ) as mock_post:
+                            with patch.object(tweet_generator, "send_discord_embed"):
+                                with patch.object(
+                                    tweet_generator, "send_discord_message"
+                                ) as mock_discord_message:
+                                    with patch("sys.stdout", buffer):
+                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_post.assert_not_called()
+        mock_discord_message.assert_called_once_with(
+            config,
+            "Learning still rewards curiosity. 📚 #botWrites",
+        )
+        self.assertFalse(config.log_file_path.exists())
+        self.assertIn("Using generic topic prompt", buffer.getvalue())
+
     def test_run_once_sends_failure_telegram_when_generation_fails(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(
@@ -1662,6 +1793,36 @@ class DiscordSenderTests(unittest.TestCase):
         with patch("discord_sender.requests.post", return_value=response):
             with self.assertRaisesRegex(RuntimeError, "Discord send failed: bad webhook"):
                 send_discord_embed(config, {"title": "Tweet posted", "fields": []})
+
+    def test_send_discord_message_accepts_success_response(self) -> None:
+        tmp_dir, config = load_temp_config(
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=204, text="", reason="No Content")
+
+        with patch("discord_sender.requests.post", return_value=response) as mock_post:
+            send_discord_message(config, "Fresh take 🚀 #botWrites")
+
+        mock_post.assert_called_once_with(
+            "https://discord.com/api/webhooks/1/token",
+            json={
+                "content": "Fresh take 🚀 #botWrites",
+                "allowed_mentions": {"parse": []},
+            },
+            timeout=config.timeout_seconds,
+        )
+
+    def test_send_discord_message_raises_clear_error(self) -> None:
+        tmp_dir, config = load_temp_config(
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=400, text="bad webhook", reason="Bad Request")
+
+        with patch("discord_sender.requests.post", return_value=response):
+            with self.assertRaisesRegex(RuntimeError, "Discord send failed: bad webhook"):
+                send_discord_message(config, "Fresh take 🚀 #botWrites")
 
     def test_send_discord_embed_accepts_empty_success_response(self) -> None:
         tmp_dir, config = load_temp_config(

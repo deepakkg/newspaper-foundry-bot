@@ -11,7 +11,7 @@ from datetime import timezone
 from openai import OpenAIError
 
 from config import AppConfig, load_config
-from discord_sender import send_discord_embed
+from discord_sender import send_discord_embed, send_discord_message
 from generator import build_client, generate_valid_tweet
 from logger import (
     append_log_entry,
@@ -155,6 +155,47 @@ def build_discord_success_embed(
     return {"title": "Tweet posted", "color": 0x2ECC71, "fields": fields}
 
 
+def build_discord_manual_embed(
+    *,
+    topic: str,
+    tone: str,
+    time_taken_seconds: float,
+    attempts: int,
+    news_item: NewsItem | None,
+) -> dict[str, object]:
+    fields: list[dict[str, object]] = [
+        {"name": "Topic", "value": topic, "inline": True},
+        {"name": "Tone", "value": tone, "inline": True},
+        {"name": "Attempts", "value": str(attempts), "inline": True},
+        {
+            "name": "Time taken",
+            "value": f"{time_taken_seconds:.2f} seconds",
+            "inline": True,
+        },
+    ]
+    if news_item:
+        fields.extend(
+            [
+                {
+                    "name": "News title",
+                    "value": format_discord_field_value(news_item.title),
+                    "inline": False,
+                },
+                {
+                    "name": "News source",
+                    "value": format_discord_field_value(news_item.source),
+                    "inline": True,
+                },
+                {
+                    "name": "News published",
+                    "value": format_news_published_at(news_item),
+                    "inline": True,
+                },
+            ]
+        )
+    return {"title": "Tweet ready", "color": 0x3498DB, "fields": fields}
+
+
 def build_discord_failure_embed(
     *,
     topic: str | None,
@@ -204,6 +245,24 @@ def send_discord_safely(
 
     try:
         send_discord_embed(config, embed)
+    except Exception as exc:
+        print(f"{warning_prefix}: {exc}")
+
+
+def send_discord_message_safely(
+    config: AppConfig,
+    message_text: str,
+    *,
+    warning_prefix: str,
+) -> None:
+    if not config.discord_notifications_enabled:
+        return
+    if not config.discord_webhook_url:
+        print(f"{warning_prefix}: DISCORD_WEBHOOK_URL must be set.")
+        return
+
+    try:
+        send_discord_message(config, message_text)
     except Exception as exc:
         print(f"{warning_prefix}: {exc}")
 
@@ -282,6 +341,50 @@ def send_success_notifications(
     )
 
 
+def send_manual_notifications(
+    config: AppConfig,
+    *,
+    topic: str,
+    tone: str,
+    final_post_text: str,
+    elapsed: float,
+    attempts: int,
+    news_item: NewsItem | None,
+) -> None:
+    news_published_at = format_news_published_at(news_item) if news_item else None
+    send_telegram_safely(
+        config,
+        build_telegram_summary(
+            topic=topic,
+            tone=tone,
+            tweet_text=final_post_text,
+            time_taken_seconds=elapsed,
+            attempts=attempts,
+            news_title=news_item.title if news_item else None,
+            news_source=news_item.source if news_item else None,
+            news_published_at=news_published_at,
+            news_url=news_item.link if news_item else None,
+        ),
+        warning_prefix="Warning: Telegram delivery failed",
+    )
+    send_discord_safely(
+        config,
+        build_discord_manual_embed(
+            topic=topic,
+            tone=tone,
+            time_taken_seconds=elapsed,
+            attempts=attempts,
+            news_item=news_item,
+        ),
+        warning_prefix="Warning: Discord delivery failed",
+    )
+    send_discord_message_safely(
+        config,
+        final_post_text,
+        warning_prefix="Warning: Discord delivery failed",
+    )
+
+
 def run_once() -> int:
     process_start = time.perf_counter()
     try:
@@ -333,10 +436,22 @@ def run_once() -> int:
             max_tweet_chars=max_generated_text_chars(config.max_tweet_chars, news_url),
         )
 
-        if not config.post_to_x:
-            raise RuntimeError("POST_TO_X is disabled. Enable it to post and log tweets.")
-
         final_post_text = build_post_text(tweet, news_url)
+        if not config.post_to_x:
+            stop_spinner(stop_event, spinner_thread)
+            elapsed = time.perf_counter() - process_start
+            send_manual_notifications(
+                config,
+                topic=topic,
+                tone=tone,
+                final_post_text=final_post_text,
+                elapsed=elapsed,
+                attempts=attempts,
+                news_item=news_item,
+            )
+            print("Tweet ready for manual posting.")
+            return 0
+
         published = post_tweet_to_x(config, tweet, news_url=news_url)
         stop_spinner(stop_event, spinner_thread)
         elapsed = time.perf_counter() - process_start
