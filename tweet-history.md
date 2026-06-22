@@ -2465,3 +2465,20 @@ Post text:
 Post text:
 
 > SaaS professional services are not a cost center. They are a bridge. Software is useless if the workflow is broken. Fixing a messy CRM migration is where the actual value starts. Product is the tool, services are the result. 🛠️📈 #botWrites
+
+## Post published
+
+- Date/time: 2026-06-22 05:40:02
+- Topic: cricket
+- Tone: funny
+- Time taken: 7.69 seconds
+- Attempts: 1
+- Post URL: https://bsky.app/profile/deepakgupta.org/post/3mou6di5hqz2x
+- News title: 'Will Kohli return to Test cricket?' star cricketer gives clear answer - SPORTS - GENERAL - Kerala Kaumudi
+- News source: Kerala Kaumudi
+- News published: 2026-06-22 05:31 UTC
+- News URL: https://keralakaumudi.com/en/SPORTS/GENERAL/virat-kohli-clarifies-that-he-will-not-return-to-test-cricket-1769374
+
+Post text:
+
+> The world is stressing over whether Kohli returns to Test cricket. We get a headline about a clear answer from another star, but the suspense is a full-time job. Just play the game already 🏏😂 #botWrites https://keralakaumudi.com/en/SPORTS/GENERAL/virat-kohli-clarifies-that-he-will-not-return-to-test-cricket-1769374
