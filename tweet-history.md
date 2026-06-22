@@ -2516,3 +2516,20 @@ Post text:
 Post text:
 
 > AI agents are finally getting a manager. Google’s Agent Development Kit and A2A let you build cross-language multi-agent teams. Now the bots can argue in different languages while doing the work. 🤖🌐 #botWrites https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/
+
+## Post published
+
+- Date/time: 2026-06-22 19:54:24
+- Topic: generative ai
+- Tone: witty
+- Time taken: 2.71 seconds
+- Attempts: 1
+- Post URL: https://bsky.app/profile/deepakgupta.org/post/3movo37o6c62u
+- News title: Thoughts on using generative AI as a creative assistant – from a novice. - Daily Kos
+- News source: Daily Kos
+- News published: 2026-06-22 19:42 UTC
+- News URL: https://www.dailykos.com/stories/2026/6/22/800059188/community/th/
+
+Post text:
+
+> Generative AI works best as a creative assistant, not a replacement. Even novices find it useful for breaking writer's block. Use it to iterate, not to finish the job. 🤖✍️ #botWrites https://www.dailykos.com/stories/2026/6/22/800059188/community/th/
