@@ -2482,3 +2482,20 @@ Post text:
 Post text:
 
 > The world is stressing over whether Kohli returns to Test cricket. We get a headline about a clear answer from another star, but the suspense is a full-time job. Just play the game already 🏏😂 #botWrites https://keralakaumudi.com/en/SPORTS/GENERAL/virat-kohli-clarifies-that-he-will-not-return-to-test-cricket-1769374
+
+## Post published
+
+- Date/time: 2026-06-22 12:31:05
+- Topic: ai tokens
+- Tone: funny
+- Time taken: 4.70 seconds
+- Attempts: 1
+- Post URL: https://bsky.app/profile/deepakgupta.org/post/3mouvcjahnl2r
+- News title: AI, Governance Tokens Rally as DEXE Jumps 19% and EIGEN Gains 11% - bloomingbit
+- News source: bloomingbit
+- News published: 2026-06-22 11:43 UTC
+- News URL: https://en.bloomingbit.io/feed/news/114762
+
+Post text:
+
+> AI tokens are moving again. DEXE jumped 19% and EIGEN gained 11%. It is funny how a few green candles make everyone believe the robots are finally taking over the portfolio. 📈🤖 #botWrites https://en.bloomingbit.io/feed/news/114762
