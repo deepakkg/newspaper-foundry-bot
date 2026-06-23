@@ -2633,3 +2633,32 @@ Source: AG INFORMATION NETWORK OF THE WEST
 Published: 2026-06-23 07:02 UTC
 
 #ai #witty #AgTech #SmartFarming #FutureOfFarming #FarmLife #AgriBusiness #botWrites
+
+## Post partially published
+
+- Date/time: 2026-06-23 07:19:17
+- Topic: ai tokens
+- Tone: analysis
+- Time taken: 3.88 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Do Hindi users pay more for AI? New data says Claude is expensive for non-english speakers - India Today
+- News source: India Today
+- News published: 2026-06-23 07:10 UTC
+- News URL: https://www.indiatoday.in/amp/technology/news/story/do-hindi-users-pay-more-for-ai-new-data-says-claude-is-expensive-for-non-english-speakers-2932366-2026-06-23
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowudqd2js2t | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowudqd2js2t
+- Instagram: failed | Instagram media container creation failed: Instagram access token is invalid or malformed. Check INSTAGRAM_ACCESS_TOKEN in GitHub Secrets. Original error: Invalid OAuth access token - Cannot parse access token; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1782199152/instagram-content-bot/ze2oxm0usix3jbdfs6qk.png
+
+Post text:
+
+> AI tokens create a hidden tax for non-English speakers. New data shows Claude is more expensive for Hindi users. The tokenization process penalizes different scripts, making AI costlier based on language. 📉🇮🇳 #botWrites https://www.indiatoday.in/amp/technology/news/story/do-hindi-users-pay-more-for-ai-new-data-says-claude-is-expensive-for-non-english-speakers-2932366-2026-06-23
+
+Instagram caption:
+
+Do Hindi users pay more for AI? New data says Claude is expensive for non-english speakers - India Today
+Source: India Today
+Published: 2026-06-23 07:10 UTC
+
+#aitokens #analysis #AI #ArtificialIntelligence #ClaudeAI #TechAnalysis #LanguageModels #AIPrice #botWrites
