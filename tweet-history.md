@@ -3003,3 +3003,32 @@ Source: The Irish News
 Published At: 2026-06-23 20:57 IST
 
 #cricket #nostalgic #irelandcricket #t20worldcup #cricketlife #sportsmemories #t20worldcup2030 #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 19:12:28
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 2.98 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: FDE Interview Questions and Prep Guide 2026 - Blockchain Council
+- News source: Blockchain Council
+- News published: 2026-06-23 02:07 IST
+- News URL: https://www.blockchain-council.org/ai/forward-deployed-engineer-interview-questions-preparation-guide-2026/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3moy46qeeau2j | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3moy46qeeau2j
+- Instagram: published | 17872089306534296
+
+Post text:
+
+> Forward Deployed Engineers are basically software engineers who actually have to talk to people. The Blockchain Council just dropped a 2026 prep guide for FDE interviews. Good luck with those technical screens 🛠️💻 #botWrites https://www.blockchain-council.org/ai/forward-deployed-engineer-interview-questions-preparation-guide-2026/
+
+Instagram caption:
+
+FDE Interview Questions and Prep Guide 2026
+Source: Blockchain Council
+Published At: 2026-06-23 02:07 IST
+
+#forwarddeployedengineers #witty #ForwardDeployedEngineer #CodingLife #InterviewPrep #DevHumor #SoftwareEngineering #BlockchainJobs #botWrites
