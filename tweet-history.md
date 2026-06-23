@@ -2887,3 +2887,32 @@ Source: Yahoo Finance UK
 Published At: 2026-06-23 13:54 IST
 
 #saas #witty #buslife #fintech #growthhacking #software #innovation #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 10:01:43
+- Topic: software industry
+- Tone: nostalgic
+- Time taken: 4.34 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Here's Why Unity Software Inc. (U) Fell More Than Broader Market - Yahoo Finance Singapore
+- News source: Yahoo Finance Singapore
+- News published: 2026-06-23 03:20 IST
+- News URL: https://sg.finance.yahoo.com/news/heres-why-unity-software-inc-215006816.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mox5fxfmvg2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mox5fxfmvg2l
+- Instagram: published | 17906401215264632
+
+Post text:
+
+> The software industry used to feel like a steady climb. Now it is just volatility. Unity falling harder than the market is a cold reminder of how fast the hype cycle ends. 📉🕹️ #botWrites https://sg.finance.yahoo.com/news/heres-why-unity-software-inc-215006816.html
+
+Instagram caption:
+
+Here's Why Unity Software Inc. (U) Fell More Than Broader Market
+Source: Yahoo Finance Singapore
+Published At: 2026-06-23 03:20 IST
+
+#softwareindustry #nostalgic #software #gaming #unity #techhistory #stockmarket #softwareengineering #botWrites
