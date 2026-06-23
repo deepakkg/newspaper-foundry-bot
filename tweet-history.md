@@ -2829,3 +2829,32 @@ News source: Blockchain Council
 News published: 2026-06-22 20:37 UTC
 
 #forwarddeployedengineers #funny #forwarddeployedengineer #softwareengineering #codinghumor #techinterview #blockchain #developerlife #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 09:35:25
+- Topic: saas
+- Tone: nostalgic
+- Time taken: 2.68 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Journeo Secures £1.3m Metroline Manchester Deal to Supply Bus Safety and SaaS Solutions (JNEO) - Yahoo Finance UK
+- News source: Yahoo Finance UK
+- News published: 2026-06-23 08:24 UTC
+- News URL: https://uk.finance.yahoo.com/news/journeo-secures-1-3m-metroline-082414607.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mox3x2oeji2t | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mox3x2oeji2t
+- Instagram: published | 17991918035800710
+
+Post text:
+
+> SaaS used to be about simple apps. Now it runs the physical world. Journeo securing a £1.3m deal for bus safety in Manchester shows how software now manages the actual streets we walk on. 🚌⚙️ #botWrites https://uk.finance.yahoo.com/news/journeo-secures-1-3m-metroline-082414607.html
+
+Instagram caption:
+
+News title: Journeo Secures £1.3m Metroline Manchester Deal to Supply Bus Safety and SaaS Solutions (JNEO)
+News source: Yahoo Finance UK
+News published: 2026-06-23 08:24 UTC
+
+#saas #nostalgic #publictransport #manchester #innovation #techtrends #buslife #botWrites
