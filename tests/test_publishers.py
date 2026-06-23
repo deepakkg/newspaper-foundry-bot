@@ -14,6 +14,7 @@ import requests
 from openai import OpenAIError
 
 import notifications
+import instagram_image
 import tweet_generator
 from bluesky_publisher import build_bluesky_post_url, post_to_bluesky
 from config import load_config
@@ -35,7 +36,11 @@ from instagram_content import (
     fallback_hashtags,
     generate_instagram_hashtags,
 )
-from instagram_image import build_instagram_image_body_text, render_instagram_image
+from instagram_image import (
+    build_instagram_image_body_text,
+    extract_emojis,
+    render_instagram_image,
+)
 from instagram_publisher import publish_instagram_image
 from link_preview import fetch_link_card_metadata
 from logger import (
@@ -147,6 +152,72 @@ class InstagramImageTests(unittest.TestCase):
         self.assertNotIn("#botWrites", cleaned)
         self.assertNotIn("https://", cleaned)
 
+    def test_build_instagram_image_body_text_removes_emoji_leftovers(self) -> None:
+        cleaned = build_instagram_image_body_text(
+            "Cricket changed the game ⚙️\u200d\u20e3 □□ #botWrites"
+        )
+
+        self.assertEqual(cleaned, "Cricket changed the game.")
+        self.assertNotIn("\ufe0f", cleaned)
+        self.assertNotIn("\u200d", cleaned)
+        self.assertNotIn("\u20e3", cleaned)
+        self.assertNotIn("□", cleaned)
+
+    def test_build_instagram_image_body_text_removes_keycap_emoji_without_stray_digit(
+        self,
+    ) -> None:
+        cleaned = build_instagram_image_body_text("Top story 1️⃣ #botWrites")
+
+        self.assertEqual(cleaned, "Top story.")
+
+    def test_build_instagram_image_body_text_adds_period_when_missing(self) -> None:
+        self.assertEqual(
+            build_instagram_image_body_text("Cricket changed the game 🏏"),
+            "Cricket changed the game.",
+        )
+
+    def test_build_instagram_image_body_text_preserves_sentence_punctuation(self) -> None:
+        self.assertEqual(
+            build_instagram_image_body_text("Cricket changed the game! 🏏"),
+            "Cricket changed the game!",
+        )
+
+    def test_extract_emojis_reads_raw_llm_text(self) -> None:
+        self.assertEqual(extract_emojis("Cricket changed the game 🏏📉"), "🏏📉")
+
+    def test_render_instagram_image_skips_emoji_line_when_unsupported(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            with patch.object(instagram_image, "_load_emoji_font", return_value=None):
+                render_instagram_image("Cricket changed the game 🏏", output_path)
+
+            from PIL import Image
+
+            with Image.open(output_path) as image:
+                self.assertEqual(image.size, (1080, 1080))
+
+    def test_render_instagram_image_draws_supported_emoji_as_separate_line(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            emoji_font = MagicMock()
+            emoji_font.getbbox.return_value = (0, 0, 40, 40)
+            drawn_text: list[tuple[str, bool]] = []
+
+            def capture_centered_text(*args, **kwargs):
+                drawn_text.append((args[1], kwargs.get("embedded_color", False)))
+
+            with patch.object(instagram_image, "_load_emoji_font", return_value=emoji_font):
+                with patch.object(instagram_image, "_emoji_text_renders_cleanly", return_value=True):
+                    with patch.object(
+                        instagram_image,
+                        "_draw_centered_text",
+                        side_effect=capture_centered_text,
+                    ):
+                        render_instagram_image("Cricket changed the game 🏏", output_path)
+
+            self.assertIn(("🏏", True), drawn_text)
+            self.assertIn(("#botWrites", False), drawn_text)
+
     def test_render_instagram_image_creates_square_png(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             output_path = Path(tmp_dir) / "post.png"
@@ -246,6 +317,39 @@ class InstagramPublisherTests(unittest.TestCase):
                     image_url="https://example.com/image.png",
                     caption="Caption",
                 )
+
+    def test_publish_instagram_image_explains_invalid_token_error(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="bad-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=400)
+        response.json.return_value = {
+            "error": {
+                "message": "Invalid OAuth access token - Cannot parse access token"
+            }
+        }
+
+        with patch("instagram_publisher.requests.post", return_value=response):
+            with self.assertRaisesRegex(
+                RuntimeError,
+                "Instagram access token is invalid or malformed",
+            ) as error:
+                publish_instagram_image(
+                    config,
+                    image_url="https://example.com/image.png",
+                    caption="Caption",
+                )
+
+        self.assertIn(
+            "Original error: Invalid OAuth access token - Cannot parse access token",
+            str(error.exception),
+        )
 
 class BlueskyPublisherTests(unittest.TestCase):
     def test_build_bluesky_post_url_uses_record_key(self) -> None:

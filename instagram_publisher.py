@@ -7,6 +7,12 @@ import requests
 from config import AppConfig
 
 
+INVALID_TOKEN_MESSAGE = (
+    "Instagram access token is invalid or malformed. "
+    "Check INSTAGRAM_ACCESS_TOKEN in GitHub Secrets."
+)
+
+
 @dataclass(frozen=True)
 class PublishedInstagramPost:
     media_id: str
@@ -27,6 +33,16 @@ def _extract_error(payload: dict[str, object]) -> str:
     return str(payload)
 
 
+def _format_error(message: str) -> str:
+    normalized = message.lower()
+    if (
+        "invalid oauth access token" in normalized
+        or "cannot parse access token" in normalized
+    ):
+        return f"{INVALID_TOKEN_MESSAGE} Original error: {message}"
+    return message
+
+
 def _read_json_response(response: requests.Response, context: str) -> dict[str, object]:
     try:
         payload = response.json()
@@ -34,7 +50,9 @@ def _read_json_response(response: requests.Response, context: str) -> dict[str, 
         raise RuntimeError(f"Instagram {context} returned a non-JSON response.") from exc
 
     if response.status_code >= 400:
-        raise RuntimeError(f"Instagram {context} failed: {_extract_error(payload)}")
+        raise RuntimeError(
+            f"Instagram {context} failed: {_format_error(_extract_error(payload))}"
+        )
     return payload
 
 

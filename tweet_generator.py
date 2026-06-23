@@ -21,7 +21,7 @@ from discord_approval import (
 )
 from generator import build_client, generate_valid_tweet
 from instagram_content import build_instagram_caption, generate_instagram_hashtags
-from instagram_image import build_instagram_image_body_text, render_instagram_image
+from instagram_image import render_instagram_image
 from instagram_publisher import publish_instagram_image
 from logger import PlatformLogResult, append_log_entry, build_run_log_entry
 from news_fetcher import NewsItem, fetch_latest_news
@@ -121,7 +121,7 @@ def publish_enabled_platforms(
             if instagram_caption is None:
                 raise RuntimeError("Instagram caption was not generated.")
             image_path = render_instagram_image(
-                build_instagram_image_body_text(tweet),
+                tweet,
                 image_output_path(config, topic),
             )
             uploaded = upload_image_to_cloudinary(config, image_path)

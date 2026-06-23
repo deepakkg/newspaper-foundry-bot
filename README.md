@@ -118,6 +118,8 @@ CLOUDINARY_FOLDER=content-bot
 
 Instagram posts use a Pillow-generated square image and a caption built from the news headline, source, published time, topic/tone hashtags, LLM-suggested hashtags, and `#botWrites` as the final hashtag.
 
+`INSTAGRAM_ACCESS_TOKEN` must be the raw Meta access token only. Do not include quotes, labels, a `Bearer ` prefix, extra spaces, or copied markdown formatting. If Instagram reports that the token cannot be parsed, regenerate or re-copy the token into the GitHub Secret.
+
 Keep `POST_TO_X=false` while X posting is not free. If Bluesky, Instagram, and X publishing are all disabled, the bot runs in manual mode and sends the final post text to notifications.
 
 Choose `LLM_BASE_URL`, `LLM_MODEL`, and `LLM_API_KEY` based on the provider you want to use.

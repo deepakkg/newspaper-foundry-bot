@@ -212,7 +212,7 @@ class TweetGeneratorTests(unittest.TestCase):
         mock_render.assert_called_once()
         self.assertEqual(
             mock_render.call_args.args[0],
-            "AI agents need better handoffs.",
+            "AI agents need better handoffs. 🤖",
         )
         mock_upload.assert_called_once()
         mock_publish.assert_called_once()
