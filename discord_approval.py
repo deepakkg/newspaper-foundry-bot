@@ -98,6 +98,16 @@ def build_approval_embed(request: ApprovalRequest) -> dict[str, object]:
     return {"title": "Post awaiting approval", "color": 0xF1C40F, "fields": fields}
 
 
+def parse_discord_channel_id(value: str | None) -> int:
+    try:
+        channel_id = int(value or "")
+    except ValueError as exc:
+        raise RuntimeError("DISCORD_CHANNEL_ID must be a numeric Discord channel ID.") from exc
+    if channel_id <= 0:
+        raise RuntimeError("DISCORD_CHANNEL_ID must be a numeric Discord channel ID.")
+    return channel_id
+
+
 def request_discord_approval(
     config: AppConfig,
     approval_request: ApprovalRequest,
@@ -114,12 +124,14 @@ async def _request_discord_approval(
     except ImportError as exc:
         raise RuntimeError("discord.py package is not installed.") from exc
 
+    channel_id = parse_discord_channel_id(config.discord_channel_id)
     intents = discord.Intents.default()
     client = discord.Client(intents=intents)
     decision: ApprovalDecision = ApprovalDecision(status="expired")
     ready_event = asyncio.Event()
     decision_event = asyncio.Event()
     sent_message = None
+    ready_error: Exception | None = None
 
     class ApprovalView(discord.ui.View):
         def __init__(self) -> None:
@@ -162,13 +174,17 @@ async def _request_discord_approval(
 
     @client.event
     async def on_ready() -> None:
-        nonlocal sent_message
-        channel = client.get_channel(int(config.discord_channel_id or 0))
-        if channel is None:
-            channel = await client.fetch_channel(int(config.discord_channel_id or 0))
-        embed = discord.Embed.from_dict(build_approval_embed(approval_request))
-        sent_message = await channel.send(embed=embed, view=view)
-        ready_event.set()
+        nonlocal ready_error, sent_message
+        try:
+            channel = client.get_channel(channel_id)
+            if channel is None:
+                channel = await client.fetch_channel(channel_id)
+            embed = discord.Embed.from_dict(build_approval_embed(approval_request))
+            sent_message = await channel.send(embed=embed, view=view)
+        except Exception as exc:
+            ready_error = exc
+        finally:
+            ready_event.set()
 
     client_task = asyncio.create_task(client.start(config.discord_bot_token or ""))
     ready_task = asyncio.create_task(ready_event.wait())
@@ -182,6 +198,10 @@ async def _request_discord_approval(
             client_task.result()
         if ready_task not in done:
             raise RuntimeError("Discord approval bot did not become ready.")
+        if ready_error is not None:
+            raise RuntimeError(
+                f"Discord approval setup failed: {ready_error}"
+            ) from ready_error
         await asyncio.wait_for(
             decision_event.wait(),
             timeout=config.approval_timeout_minutes * 60,

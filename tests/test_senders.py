@@ -17,7 +17,12 @@ import notifications
 import tweet_generator
 from bluesky_publisher import build_bluesky_post_url, post_to_bluesky
 from config import load_config
-from discord_approval import ApprovalRequest, build_approval_embed, is_authorized_approver
+from discord_approval import (
+    ApprovalRequest,
+    build_approval_embed,
+    is_authorized_approver,
+    parse_discord_channel_id,
+)
 from discord_sender import send_discord_embed, send_discord_message
 from generator import (
     build_compact_prompt,
@@ -185,6 +190,13 @@ class DiscordApprovalTests(unittest.TestCase):
         self.assertIn("Article URL", field_names)
         self.assertIn("Final post", field_names)
         self.assertIn("Instagram caption preview", field_names)
+
+    def test_parse_discord_channel_id_rejects_invalid_values(self) -> None:
+        self.assertEqual(parse_discord_channel_id("12345"), 12345)
+        with self.assertRaisesRegex(
+            RuntimeError, "DISCORD_CHANNEL_ID must be a numeric Discord channel ID"
+        ):
+            parse_discord_channel_id("not-a-channel")
 
 
 if __name__ == "__main__":
