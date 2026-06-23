@@ -2771,3 +2771,32 @@ News title: CallMiner Enhances Real-Time Agent Performance, CX with New AI Capab
 News source: MarTech Cube
 News published: 2026-06-23 07:50 UTC
 Hashtags: #aiagents #witty #cx #customerexperience #martech #futureofwork #aisolutions #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 08:18:11
+- Topic: stock market
+- Tone: deep thought
+- Time taken: 2.85 seconds
+- Attempts: 2
+- Decision by: deepakgupta1
+- News title: 1 Screaming Buy Value Stock Hiding in Plain Sight - Yahoo Finance
+- News source: Yahoo Finance
+- News published: 2026-06-23 07:45 UTC
+- News URL: https://finance.yahoo.com/markets/stocks/articles/1-screaming-buy-value-stock-074500623.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowxmtpz5p2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowxmtpz5p2w
+- Instagram: published | 18090196724071886
+
+Post text:
+
+> The stock market rewards those who look where others don't. A screaming buy value stock hiding in plain sight proves that obvious isn't always priced in. Patience beats the hype 📉. #botWrites https://finance.yahoo.com/markets/stocks/articles/1-screaming-buy-value-stock-074500623.html
+
+Instagram caption:
+
+News title: 1 Screaming Buy Value Stock Hiding in Plain Sight
+News source: Yahoo Finance
+News published: 2026-06-23 07:45 UTC
+
+#stockmarket #deepthought #valueinvesting #investingmindset #financialfreedom #stocks #wealthbuilding #botWrites
