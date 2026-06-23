@@ -2800,3 +2800,32 @@ News source: Yahoo Finance
 News published: 2026-06-23 07:45 UTC
 
 #stockmarket #deepthought #valueinvesting #investingmindset #financialfreedom #stocks #wealthbuilding #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 08:26:28
+- Topic: forward deployed engineers
+- Tone: funny
+- Time taken: 4.11 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: FDE Interview Questions and Prep Guide 2026 - Blockchain Council
+- News source: Blockchain Council
+- News published: 2026-06-22 20:37 UTC
+- News URL: https://www.blockchain-council.org/ai/forward-deployed-engineer-interview-questions-preparation-guide-2026/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowy3s7kad2t | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowy3s7kad2t
+- Instagram: published | 18129632515618109
+
+Post text:
+
+> Forward Deployed Engineers are just devs who can't hide from the customers. Blockchain Council released a 2026 prep guide for FDE interviews. Good luck explaining a smart contract bug while the client stares at you 💻🚀 #botWrites https://www.blockchain-council.org/ai/forward-deployed-engineer-interview-questions-preparation-guide-2026/
+
+Instagram caption:
+
+News title: FDE Interview Questions and Prep Guide 2026
+News source: Blockchain Council
+News published: 2026-06-22 20:37 UTC
+
+#forwarddeployedengineers #funny #forwarddeployedengineer #softwareengineering #codinghumor #techinterview #blockchain #developerlife #botWrites
