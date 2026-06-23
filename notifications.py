@@ -4,7 +4,11 @@ from datetime import timezone
 
 from config import AppConfig
 from discord_sender import send_discord_embed, send_discord_message
-from logger import build_failure_telegram_summary, build_telegram_summary
+from logger import (
+    PlatformLogResult,
+    build_failure_telegram_summary,
+    build_telegram_summary,
+)
 from news_fetcher import NewsItem
 from telegram_sender import send_telegram_message
 
@@ -40,6 +44,20 @@ def format_discord_field_value(value: str | None) -> str:
     return value if value else "Not available"
 
 
+def format_platform_results(platform_results: list[PlatformLogResult]) -> str:
+    lines: list[str] = []
+    for result in platform_results:
+        detail_parts = [result.status]
+        if result.url:
+            detail_parts.append(result.url)
+        if result.identifier:
+            detail_parts.append(result.identifier)
+        if result.error:
+            detail_parts.append(result.error)
+        lines.append(f"{result.platform}: {' | '.join(detail_parts)}")
+    return "\n".join(lines)
+
+
 def build_discord_success_embed(
     *,
     topic: str,
@@ -48,6 +66,8 @@ def build_discord_success_embed(
     time_taken_seconds: float,
     attempts: int,
     news_item: NewsItem | None,
+    platform_results: list[PlatformLogResult] | None = None,
+    partial: bool = False,
 ) -> dict[str, object]:
     fields: list[dict[str, object]] = [
         {"name": "Topic", "value": topic, "inline": True},
@@ -79,8 +99,20 @@ def build_discord_success_embed(
                 },
             ]
         )
+    if platform_results:
+        fields.append(
+            {
+                "name": "Platform results",
+                "value": format_platform_results(platform_results)[:1024],
+                "inline": False,
+            }
+        )
     fields.append({"name": "Final post", "value": tweet_text, "inline": False})
-    return {"title": "Post published", "color": 0x2ECC71, "fields": fields}
+    return {
+        "title": "Post partially published" if partial else "Post published",
+        "color": 0xF39C12 if partial else 0x2ECC71,
+        "fields": fields,
+    }
 
 
 def build_discord_manual_embed(
@@ -238,6 +270,8 @@ def send_success_notifications(
     elapsed: float,
     attempts: int,
     news_item: NewsItem | None,
+    platform_results: list[PlatformLogResult] | None = None,
+    partial: bool = False,
 ) -> None:
     news_published_at = format_news_published_at(news_item) if news_item else None
     send_telegram_safely(
@@ -252,6 +286,8 @@ def send_success_notifications(
             news_source=news_item.source if news_item else None,
             news_published_at=news_published_at,
             news_url=news_item.link if news_item else None,
+            platform_results=platform_results,
+            partial=partial,
         ),
         warning_prefix="Warning: Telegram delivery failed",
     )
@@ -264,6 +300,8 @@ def send_success_notifications(
             time_taken_seconds=elapsed,
             attempts=attempts,
             news_item=news_item,
+            platform_results=platform_results,
+            partial=partial,
         ),
         warning_prefix="Warning: Discord delivery failed",
     )

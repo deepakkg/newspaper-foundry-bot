@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import random
+import re
 import textwrap
 from pathlib import Path
 
@@ -14,6 +15,22 @@ INNER_BORDER_WIDTH = 1
 BACKGROUND = (246, 239, 224)
 INK = (20, 20, 18)
 MUTED_BLUE = (81, 107, 128)
+BOT_HASHTAG = "#botWrites"
+URL_PATTERN = re.compile(r"https?://\S+|www\.\S+", re.IGNORECASE)
+HASHTAG_PATTERN = re.compile(r"#[A-Za-z0-9_]+")
+EMOJI_PATTERN = re.compile(
+    "["
+    "\U0001F300-\U0001F5FF"
+    "\U0001F600-\U0001F64F"
+    "\U0001F680-\U0001F6FF"
+    "\U0001F700-\U0001F77F"
+    "\U0001F780-\U0001F7FF"
+    "\U0001F900-\U0001F9FF"
+    "\U0001FA70-\U0001FAFF"
+    "\u2600-\u26FF"
+    "\u2700-\u27BF"
+    "]"
+)
 
 
 def _load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -84,10 +101,37 @@ def _add_paper_texture(image: Image.Image, seed_text: str) -> None:
         )
 
 
-def render_instagram_image(post_text: str, output_path: Path) -> Path:
+def build_instagram_image_body_text(post_text: str) -> str:
+    without_urls = URL_PATTERN.sub("", post_text)
+    without_hashtags = HASHTAG_PATTERN.sub("", without_urls)
+    without_emojis = EMOJI_PATTERN.sub("", without_hashtags)
+    return " ".join(without_emojis.split())
+
+
+def _draw_centered_text(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    *,
+    y: int,
+    font: ImageFont.ImageFont,
+    fill: tuple[int, int, int],
+) -> None:
+    box = draw.textbbox((0, 0), text, font=font)
+    text_width = box[2] - box[0]
+    x = (IMAGE_SIZE - text_width) // 2
+    draw.text((x, y), text, font=font, fill=fill)
+
+
+def render_instagram_image(
+    post_text: str,
+    output_path: Path,
+    *,
+    footer_text: str = BOT_HASHTAG,
+) -> Path:
+    image_body_text = build_instagram_image_body_text(post_text)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     image = Image.new("RGB", (IMAGE_SIZE, IMAGE_SIZE), BACKGROUND)
-    _add_paper_texture(image, post_text)
+    _add_paper_texture(image, image_body_text or post_text)
     draw = ImageDraw.Draw(image)
 
     draw.rounded_rectangle(
@@ -105,19 +149,23 @@ def render_instagram_image(post_text: str, output_path: Path) -> Path:
     draw.rectangle((120, 124, 250, 132), fill=MUTED_BLUE)
 
     max_width = 820
-    max_height = 730
+    footer_font = _load_font(26)
+    footer_box = draw.textbbox((0, 0), footer_text, font=footer_font)
+    footer_height = footer_box[3] - footer_box[1]
+    footer_y = IMAGE_SIZE - 142
+    max_height = footer_y - 230
     font_size = 58
     lines: list[str] = []
     font: ImageFont.ImageFont = _load_font(font_size)
     while font_size >= 34:
         font = _load_font(font_size)
-        lines = _wrap_text(draw, post_text, font, max_width)
+        lines = _wrap_text(draw, image_body_text, font, max_width)
         if _text_height(draw, lines, font) <= max_height:
             break
         font_size -= 4
 
     total_height = _text_height(draw, lines, font)
-    y = (IMAGE_SIZE - total_height) // 2
+    y = max(150, (footer_y - total_height) // 2)
     for line in lines:
         box = draw.textbbox((0, 0), line, font=font)
         line_width = box[2] - box[0]
@@ -125,6 +173,14 @@ def render_instagram_image(post_text: str, output_path: Path) -> Path:
         x = (IMAGE_SIZE - line_width) // 2
         draw.text((x, y), line, font=font, fill=INK)
         y += line_height + 22
+
+    _draw_centered_text(
+        draw,
+        footer_text,
+        y=footer_y - footer_height,
+        font=footer_font,
+        fill=INK,
+    )
 
     image.save(output_path, format="PNG")
     return output_path

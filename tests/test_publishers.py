@@ -35,7 +35,7 @@ from instagram_content import (
     fallback_hashtags,
     generate_instagram_hashtags,
 )
-from instagram_image import render_instagram_image
+from instagram_image import build_instagram_image_body_text, render_instagram_image
 from instagram_publisher import publish_instagram_image
 from link_preview import fetch_link_card_metadata
 from logger import (
@@ -137,6 +137,16 @@ class InstagramContentTests(unittest.TestCase):
 
 
 class InstagramImageTests(unittest.TestCase):
+    def test_build_instagram_image_body_text_removes_urls_hashtags_and_emojis(self) -> None:
+        cleaned = build_instagram_image_body_text(
+            "India loves an inquiry. 🚒📉 #botWrites https://www.bbc.com/news/story"
+        )
+
+        self.assertEqual(cleaned, "India loves an inquiry.")
+        self.assertNotIn("🚒", cleaned)
+        self.assertNotIn("#botWrites", cleaned)
+        self.assertNotIn("https://", cleaned)
+
     def test_render_instagram_image_creates_square_png(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             output_path = Path(tmp_dir) / "post.png"

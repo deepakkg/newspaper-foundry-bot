@@ -21,7 +21,7 @@ from discord_approval import (
 )
 from generator import build_client, generate_valid_tweet
 from instagram_content import build_instagram_caption, generate_instagram_hashtags
-from instagram_image import render_instagram_image
+from instagram_image import build_instagram_image_body_text, render_instagram_image
 from instagram_publisher import publish_instagram_image
 from logger import PlatformLogResult, append_log_entry, build_run_log_entry
 from news_fetcher import NewsItem, fetch_latest_news
@@ -63,6 +63,22 @@ def image_output_path(config: AppConfig, topic: str) -> Path:
     return config.generated_image_dir / f"{timestamp}-{safe_slug}.png"
 
 
+def format_platform_result(result: PlatformLogResult) -> str:
+    detail_parts = [result.status]
+    if result.url:
+        detail_parts.append(result.url)
+    if result.identifier:
+        detail_parts.append(result.identifier)
+    if result.error:
+        detail_parts.append(result.error)
+    return f"{result.platform}: {' | '.join(detail_parts)}"
+
+
+def print_platform_results(results: list[PlatformLogResult]) -> None:
+    for result in results:
+        print(format_platform_result(result))
+
+
 def publish_enabled_platforms(
     config: AppConfig,
     *,
@@ -100,14 +116,16 @@ def publish_enabled_platforms(
             )
 
     if config.post_to_instagram:
+        cloudinary_url: str | None = None
         try:
             if instagram_caption is None:
                 raise RuntimeError("Instagram caption was not generated.")
             image_path = render_instagram_image(
-                final_post_text,
+                build_instagram_image_body_text(tweet),
                 image_output_path(config, topic),
             )
             uploaded = upload_image_to_cloudinary(config, image_path)
+            cloudinary_url = uploaded.secure_url
             published = publish_instagram_image(
                 config,
                 image_url=uploaded.secure_url,
@@ -123,8 +141,17 @@ def publish_enabled_platforms(
                 )
             )
         except Exception as exc:
+            error_message = str(exc)
+            if cloudinary_url:
+                error_message = (
+                    f"{error_message}; Cloudinary URL: {cloudinary_url}"
+                )
             results.append(
-                PlatformLogResult(platform="Instagram", status="failed", error=str(exc))
+                PlatformLogResult(
+                    platform="Instagram",
+                    status="failed",
+                    error=error_message,
+                )
             )
 
     if config.post_to_x:
@@ -341,6 +368,7 @@ def run_once() -> int:
             news_item=news_item,
             instagram_caption=instagram_caption,
         )
+        print_platform_results(outcome.results)
 
         if outcome.success_count == 0:
             append_log_entry(
@@ -368,8 +396,9 @@ def run_once() -> int:
             )
             raise RuntimeError(f"All enabled platforms failed to publish. {errors}")
 
+        partial = any(result.status == "failed" for result in outcome.results)
         log_entry = build_run_log_entry(
-            title="Post published",
+            title="Post partially published" if partial else "Post published",
             topic=topic,
             tone=tone,
             post_text=final_post_text,
@@ -392,8 +421,13 @@ def run_once() -> int:
             elapsed=elapsed,
             attempts=attempts,
             news_item=news_item,
+            platform_results=outcome.results,
+            partial=partial,
         )
-        print("Post published and logged.")
+        if partial:
+            print("Post partially published and logged.")
+        else:
+            print("Post published and logged.")
         return 0
     except Exception as exc:
         stop_spinner(stop_event, spinner_thread)

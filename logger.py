@@ -80,8 +80,11 @@ def build_telegram_summary(
     news_source: str | None = None,
     news_url: str | None = None,
     news_published_at: str | None = None,
+    platform_results: list[PlatformLogResult] | None = None,
+    partial: bool = False,
 ) -> str:
     lines = [
+        "Post partially published" if partial else "Post published",
         f"Topic: {topic}",
         f"Tone: {tone}",
         f"Time taken: {time_taken_seconds:.2f} seconds",
@@ -97,6 +100,17 @@ def build_telegram_summary(
         )
         if news_published_at:
             lines.append(f"Published: {news_published_at}")
+    if platform_results:
+        lines.extend(["", "Platform results:"])
+        for result in platform_results:
+            detail_parts = [result.status]
+            if result.url:
+                detail_parts.append(result.url)
+            if result.identifier:
+                detail_parts.append(result.identifier)
+            if result.error:
+                detail_parts.append(result.error)
+            lines.append(f"{result.platform}: {' | '.join(detail_parts)}")
     lines.extend(
         [
             "",

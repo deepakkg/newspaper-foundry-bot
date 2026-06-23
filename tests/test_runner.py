@@ -210,6 +210,10 @@ class TweetGeneratorTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         mock_render.assert_called_once()
+        self.assertEqual(
+            mock_render.call_args.args[0],
+            "AI agents need better handoffs.",
+        )
         mock_upload.assert_called_once()
         mock_publish.assert_called_once()
         caption = mock_publish.call_args.kwargs["caption"]
@@ -219,6 +223,90 @@ class TweetGeneratorTests(unittest.TestCase):
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn("- Instagram: published", log_content)
         self.assertIn("Instagram caption:", log_content)
+
+    def test_run_once_instagram_failure_reports_partial_publish(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 1),
+                ):
+                    with patch.object(
+                        tweet_generator,
+                        "generate_instagram_hashtags",
+                        return_value=["#Coffee"],
+                    ):
+                        with patch.object(
+                            tweet_generator,
+                            "request_discord_approval",
+                            return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
+                        ):
+                            with patch.object(
+                                tweet_generator,
+                                "post_to_bluesky",
+                                return_value=MagicMock(
+                                    url="https://bsky.app/profile/example.bsky.social/post/abc",
+                                    uri="at://did/post/abc",
+                                ),
+                            ):
+                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                    with patch.object(
+                                        tweet_generator,
+                                        "upload_image_to_cloudinary",
+                                        return_value=SimpleNamespace(
+                                            secure_url="https://res.cloudinary.com/demo/post.png",
+                                            public_id="content-bot/post",
+                                        ),
+                                    ):
+                                        with patch.object(
+                                            tweet_generator,
+                                            "publish_instagram_image",
+                                            side_effect=RuntimeError("bad image url"),
+                                        ):
+                                            with patch.object(notifications, "send_telegram_message") as mock_telegram:
+                                                with patch.object(notifications, "send_discord_embed") as mock_discord:
+                                                    with patch("sys.stdout", buffer):
+                                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        output = buffer.getvalue()
+        self.assertIn("Bluesky: published", output)
+        self.assertIn("Instagram: failed", output)
+        self.assertIn(
+            "Cloudinary URL: https://res.cloudinary.com/demo/post.png",
+            output,
+        )
+        self.assertIn("Post partially published and logged.", output)
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Post partially published", telegram_text)
+        self.assertIn("Instagram: failed", telegram_text)
+        embed = mock_discord.call_args.args[1]
+        self.assertEqual(embed["title"], "Post partially published")
+        self.assertIn("Instagram: failed", str(embed))
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("## Post partially published", log_content)
+        self.assertIn("- Bluesky: published", log_content)
+        self.assertIn("- Instagram: failed", log_content)
 
     def test_run_once_one_platform_failure_still_logs_success_for_other_platforms(self) -> None:
         tmp_dir, config = load_temp_config(
