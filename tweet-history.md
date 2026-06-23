@@ -2858,3 +2858,32 @@ News source: Yahoo Finance UK
 News published: 2026-06-23 08:24 UTC
 
 #saas #nostalgic #publictransport #manchester #innovation #techtrends #buslife #botWrites
+
+## Post declined
+
+- Date/time: 2026-06-23 09:58:56
+- Topic: saas
+- Tone: witty
+- Time taken: 3.65 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Journeo Secures £1.3m Metroline Manchester Deal to Supply Bus Safety and SaaS Solutions (JNEO) - Yahoo Finance UK
+- News source: Yahoo Finance UK
+- News published: 2026-06-23 13:54 IST
+- News URL: https://uk.finance.yahoo.com/news/journeo-secures-1-3m-metroline-082414607.html
+
+Platform results:
+- Bluesky: not published | declined
+- Instagram: not published | declined
+
+Post text:
+
+> SaaS is most effective when it solves a physical problem. Journeo just proved it with a £1.3m deal for bus safety in Manchester. Software is better when it actually keeps people safe on a commute. 🚌💻 #botWrites https://uk.finance.yahoo.com/news/journeo-secures-1-3m-metroline-082414607.html
+
+Instagram caption:
+
+Journeo Secures £1.3m Metroline Manchester Deal to Supply Bus Safety and SaaS Solutions (JNEO)
+Source: Yahoo Finance UK
+Published At: 2026-06-23 13:54 IST
+
+#saas #witty #buslife #fintech #growthhacking #software #innovation #botWrites
