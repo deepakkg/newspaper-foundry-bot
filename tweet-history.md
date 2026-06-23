@@ -2974,3 +2974,32 @@ Source: Search Engine Roundtable
 Published At: 2026-06-23 17:11 IST
 
 #generativeai #hottake #googlesearch #seo #ai #googleupdate #searchconsole #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 15:31:34
+- Topic: cricket
+- Tone: nostalgic
+- Time taken: 6.80 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: E3.5m Stormont funding boost ahead of 2030 T20 Cricket World Cup - The Irish News
+- News source: The Irish News
+- News published: 2026-06-23 20:57 IST
+- News URL: https://www.irishnews.com/sport/e35m-stormont-funding-boost-ahead-of-2030-t20-cricket-world-cup-XV7XKHLBYJD77PA4XU55BCBHWQ/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3moxptjzlrw2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3moxptjzlrw2w
+- Instagram: published | 18094463069211298
+
+Post text:
+
+> Cricket used to be a backyard game with a worn-out tennis ball. Now Stormont is putting E3.5m into the sport for the 2030 T20 World Cup. It is a long way from the old parks. Good to see it grow. 🏏🇮🇪 #botWrites https://www.irishnews.com/sport/e35m-stormont-funding-boost-ahead-of-2030-t20-cricket-world-cup-XV7XKHLBYJD77PA4XU55BCBHWQ/
+
+Instagram caption:
+
+E3.5m Stormont funding boost ahead of 2030 T20 Cricket World Cup
+Source: The Irish News
+Published At: 2026-06-23 20:57 IST
+
+#cricket #nostalgic #irelandcricket #t20worldcup #cricketlife #sportsmemories #t20worldcup2030 #botWrites
