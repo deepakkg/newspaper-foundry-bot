@@ -11,6 +11,7 @@ from news_fetcher import NewsItem
 
 BOT_HASHTAG = "#botWrites"
 HASHTAG_PATTERN = re.compile(r"#[A-Za-z][A-Za-z0-9_]{1,40}")
+SOURCE_SUFFIX_SEPARATORS = (" - ", " – ", " — ")
 
 
 def normalize_hashtag(value: str) -> str | None:
@@ -111,6 +112,21 @@ def format_news_published(news_item: NewsItem | None) -> str | None:
     return news_item.published_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
+def format_caption_news_title(title: str, source: str) -> str:
+    cleaned_title = " ".join(title.split())
+    cleaned_source = " ".join(source.split())
+    if not cleaned_title:
+        return "Not available"
+    if not cleaned_source:
+        return cleaned_title
+
+    for separator in SOURCE_SUFFIX_SEPARATORS:
+        suffix = f"{separator}{cleaned_source}"
+        if cleaned_title.lower().endswith(suffix.lower()):
+            return cleaned_title[: -len(suffix)].rstrip()
+    return cleaned_title
+
+
 def build_instagram_caption(
     *,
     topic: str,
@@ -121,16 +137,12 @@ def build_instagram_caption(
     published = format_news_published(news_item)
     if news_item:
         lines: list[str] = [
-            f"News title: {news_item.title or 'Not available'}",
+            f"News title: {format_caption_news_title(news_item.title, news_item.source)}",
             f"News source: {news_item.source or 'Not available'}",
             f"News published: {published or 'Not available'}",
         ]
     else:
-        lines = [
-            "News title: Not available",
-            "News source: Not available",
-            "News published: Not available",
-        ]
+        lines = []
 
     hashtags: list[str] = []
     seen: set[str] = set()
@@ -152,5 +164,7 @@ def build_instagram_caption(
     hashtags = [tag for tag in hashtags if tag.lower() != BOT_HASHTAG.lower()]
     hashtags = hashtags[:11]
     hashtags.append(BOT_HASHTAG)
-    lines.append(f"Hashtags: {' '.join(hashtags)}")
+    if lines:
+        lines.append("")
+    lines.append(" ".join(hashtags))
     return "\n".join(lines)

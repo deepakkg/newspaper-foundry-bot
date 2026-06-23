@@ -34,6 +34,7 @@ from instagram_content import (
     build_instagram_caption,
     extract_hashtags,
     fallback_hashtags,
+    format_caption_news_title,
     generate_instagram_hashtags,
 )
 from instagram_image import (
@@ -120,13 +121,14 @@ class InstagramContentTests(unittest.TestCase):
         self.assertIn("News title: AI agents reshape support workflows", caption)
         self.assertIn("News source: Example News", caption)
         self.assertIn("News published: 2026-05-31 10:00 UTC", caption)
-        self.assertIn("Hashtags: #aiagents #analysis #AI #SupportOps #botWrites", caption)
+        self.assertIn("#aiagents #analysis #AI #SupportOps #botWrites", caption)
+        self.assertNotIn("Hashtags:", caption)
         self.assertNotIn("Topic:", caption)
         self.assertNotIn("Tone:", caption)
         self.assertNotIn("https://example.com/ai-agents", caption)
         self.assertTrue(caption.strip().endswith("#botWrites"))
 
-    def test_build_instagram_caption_uses_not_available_without_news(self) -> None:
+    def test_build_instagram_caption_uses_hashtags_only_without_news(self) -> None:
         caption = build_instagram_caption(
             topic="saas professional services",
             tone="analysis",
@@ -134,16 +136,45 @@ class InstagramContentTests(unittest.TestCase):
             llm_hashtags=["#SaaS", "#BusinessAnalysis"],
         )
 
-        self.assertIn("News title: Not available", caption)
-        self.assertIn("News source: Not available", caption)
-        self.assertIn("News published: Not available", caption)
-        self.assertIn(
-            "Hashtags: #saasprofessionalservices #analysis #SaaS #BusinessAnalysis #botWrites",
+        self.assertEqual(
             caption,
+            "#saasprofessionalservices #analysis #SaaS #BusinessAnalysis #botWrites",
         )
-        self.assertNotIn("Topic:", caption)
-        self.assertNotIn("Tone:", caption)
         self.assertTrue(caption.strip().endswith("#botWrites"))
+
+    def test_format_caption_news_title_removes_matching_source_suffix(self) -> None:
+        self.assertEqual(
+            format_caption_news_title(
+                "CallMiner Enhances Real-Time Agent Performance, CX with New AI Capabilities - MarTech Cube",
+                "MarTech Cube",
+            ),
+            "CallMiner Enhances Real-Time Agent Performance, CX with New AI Capabilities",
+        )
+
+    def test_format_caption_news_title_removes_dash_variants(self) -> None:
+        self.assertEqual(
+            format_caption_news_title("Fresh headline – Example News", "Example News"),
+            "Fresh headline",
+        )
+        self.assertEqual(
+            format_caption_news_title("Fresh headline — Example News", "Example News"),
+            "Fresh headline",
+        )
+
+    def test_format_caption_news_title_preserves_non_matching_suffix(self) -> None:
+        self.assertEqual(
+            format_caption_news_title("Fresh headline - Other News", "Example News"),
+            "Fresh headline - Other News",
+        )
+
+    def test_format_caption_news_title_preserves_source_in_middle(self) -> None:
+        self.assertEqual(
+            format_caption_news_title(
+                "Example News explains why AI agents are changing support",
+                "Example News",
+            ),
+            "Example News explains why AI agents are changing support",
+        )
 
     def test_generate_instagram_hashtags_falls_back_on_invalid_llm_output(self) -> None:
         tmp_dir, config = load_temp_config()
