@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass
 
 import requests
@@ -11,6 +12,10 @@ INVALID_TOKEN_MESSAGE = (
     "Instagram access token is invalid or malformed. "
     "Check INSTAGRAM_ACCESS_TOKEN in GitHub Secrets."
 )
+MEDIA_READY_STATUS = "FINISHED"
+MEDIA_FAILURE_STATUSES = {"ERROR", "EXPIRED"}
+MEDIA_STATUS_POLL_ATTEMPTS = 8
+MEDIA_STATUS_POLL_SECONDS = 5
 
 
 @dataclass(frozen=True)
@@ -56,6 +61,47 @@ def _read_json_response(response: requests.Response, context: str) -> dict[str, 
     return payload
 
 
+def _wait_for_media_container(
+    config: AppConfig,
+    *,
+    base_url: str,
+    creation_id: str,
+) -> None:
+    last_status = "unknown"
+    for attempt in range(MEDIA_STATUS_POLL_ATTEMPTS):
+        status_response = requests.get(
+            f"{base_url}/{creation_id}",
+            params={
+                "fields": "status_code,status",
+                "access_token": config.instagram_access_token,
+            },
+            timeout=config.timeout_seconds,
+        )
+        status_payload = _read_json_response(status_response, "media container status")
+        status_code = status_payload.get("status_code")
+        status_text = status_payload.get("status")
+        if isinstance(status_code, str) and status_code.strip():
+            last_status = status_code.strip()
+        elif isinstance(status_text, str) and status_text.strip():
+            last_status = status_text.strip()
+
+        normalized_status = last_status.upper()
+        if normalized_status == MEDIA_READY_STATUS:
+            return
+        if normalized_status in MEDIA_FAILURE_STATUSES:
+            raise RuntimeError(
+                "Instagram media container processing failed: "
+                f"{last_status}. Response: {status_payload}"
+            )
+        if attempt < MEDIA_STATUS_POLL_ATTEMPTS - 1:
+            time.sleep(MEDIA_STATUS_POLL_SECONDS)
+
+    raise RuntimeError(
+        "Instagram media container was not ready for publishing after "
+        f"{MEDIA_STATUS_POLL_ATTEMPTS} checks. Last status: {last_status}"
+    )
+
+
 def publish_instagram_image(
     config: AppConfig,
     *,
@@ -76,6 +122,8 @@ def publish_instagram_image(
     creation_id = media_payload.get("id")
     if not isinstance(creation_id, str) or not creation_id.strip():
         raise RuntimeError("Instagram media container response did not include an ID.")
+
+    _wait_for_media_container(config, base_url=base_url, creation_id=creation_id)
 
     publish_response = requests.post(
         f"{base_url}/{config.instagram_account_id}/media_publish",

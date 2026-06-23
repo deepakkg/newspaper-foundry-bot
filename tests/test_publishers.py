@@ -294,6 +294,8 @@ class InstagramPublisherTests(unittest.TestCase):
         self.addCleanup(tmp_dir.cleanup)
         media_response = MagicMock(status_code=200)
         media_response.json.return_value = {"id": "container-1"}
+        status_response = MagicMock(status_code=200)
+        status_response.json.return_value = {"status_code": "FINISHED"}
         publish_response = MagicMock(status_code=200)
         publish_response.json.return_value = {
             "id": "media-1",
@@ -304,15 +306,21 @@ class InstagramPublisherTests(unittest.TestCase):
             "instagram_publisher.requests.post",
             side_effect=[media_response, publish_response],
         ) as mock_post:
-            published = publish_instagram_image(
-                config,
-                image_url="https://res.cloudinary.com/demo/post.png",
-                caption="Caption #botWrites",
-            )
+            with patch("instagram_publisher.requests.get", return_value=status_response) as mock_get:
+                published = publish_instagram_image(
+                    config,
+                    image_url="https://res.cloudinary.com/demo/post.png",
+                    caption="Caption #botWrites",
+                )
 
         self.assertEqual(published.media_id, "media-1")
         self.assertEqual(published.url, "https://instagram.com/p/abc")
         self.assertEqual(mock_post.call_count, 2)
+        mock_get.assert_called_once()
+        self.assertEqual(
+            mock_get.call_args.args[0],
+            "https://graph.instagram.com/v23.0/container-1",
+        )
         self.assertEqual(
             mock_post.call_args_list[0].args[0],
             "https://graph.instagram.com/v23.0/1789/media",
@@ -335,6 +343,8 @@ class InstagramPublisherTests(unittest.TestCase):
         self.addCleanup(tmp_dir.cleanup)
         media_response = MagicMock(status_code=200)
         media_response.json.return_value = {"id": "container-1"}
+        status_response = MagicMock(status_code=200)
+        status_response.json.return_value = {"status_code": "FINISHED"}
         publish_response = MagicMock(status_code=200)
         publish_response.json.return_value = {"id": "media-1"}
 
@@ -342,11 +352,12 @@ class InstagramPublisherTests(unittest.TestCase):
             "instagram_publisher.requests.post",
             side_effect=[media_response, publish_response],
         ) as mock_post:
-            publish_instagram_image(
-                config,
-                image_url="https://res.cloudinary.com/demo/post.png",
-                caption="Caption #botWrites",
-            )
+            with patch("instagram_publisher.requests.get", return_value=status_response):
+                publish_instagram_image(
+                    config,
+                    image_url="https://res.cloudinary.com/demo/post.png",
+                    caption="Caption #botWrites",
+                )
 
         self.assertEqual(
             mock_post.call_args_list[0].args[0],
@@ -356,6 +367,108 @@ class InstagramPublisherTests(unittest.TestCase):
             mock_post.call_args_list[1].args[0],
             "https://graph.facebook.com/v23.0/1789/media_publish",
         )
+
+    def test_publish_instagram_image_waits_for_media_container_to_finish(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        media_response = MagicMock(status_code=200)
+        media_response.json.return_value = {"id": "container-1"}
+        processing_response = MagicMock(status_code=200)
+        processing_response.json.return_value = {"status_code": "IN_PROGRESS"}
+        finished_response = MagicMock(status_code=200)
+        finished_response.json.return_value = {"status_code": "FINISHED"}
+        publish_response = MagicMock(status_code=200)
+        publish_response.json.return_value = {"id": "media-1"}
+
+        with patch(
+            "instagram_publisher.requests.post",
+            side_effect=[media_response, publish_response],
+        ) as mock_post:
+            with patch(
+                "instagram_publisher.requests.get",
+                side_effect=[processing_response, finished_response],
+            ) as mock_get:
+                with patch("instagram_publisher.time.sleep") as mock_sleep:
+                    published = publish_instagram_image(
+                        config,
+                        image_url="https://res.cloudinary.com/demo/post.png",
+                        caption="Caption #botWrites",
+                    )
+
+        self.assertEqual(published.media_id, "media-1")
+        self.assertEqual(mock_get.call_count, 2)
+        mock_sleep.assert_called_once_with(5)
+        self.assertEqual(mock_post.call_count, 2)
+
+    def test_publish_instagram_image_stops_when_media_container_fails(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        media_response = MagicMock(status_code=200)
+        media_response.json.return_value = {"id": "container-1"}
+        failed_response = MagicMock(status_code=200)
+        failed_response.json.return_value = {
+            "status_code": "ERROR",
+            "status": "Image fetch failed",
+        }
+
+        with patch("instagram_publisher.requests.post", return_value=media_response) as mock_post:
+            with patch("instagram_publisher.requests.get", return_value=failed_response):
+                with self.assertRaisesRegex(
+                    RuntimeError,
+                    "Instagram media container processing failed",
+                ):
+                    publish_instagram_image(
+                        config,
+                        image_url="https://res.cloudinary.com/demo/post.png",
+                        caption="Caption #botWrites",
+                    )
+
+        self.assertEqual(mock_post.call_count, 1)
+
+    def test_publish_instagram_image_times_out_waiting_for_media_container(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        media_response = MagicMock(status_code=200)
+        media_response.json.return_value = {"id": "container-1"}
+        processing_response = MagicMock(status_code=200)
+        processing_response.json.return_value = {"status_code": "IN_PROGRESS"}
+
+        with patch("instagram_publisher.requests.post", return_value=media_response) as mock_post:
+            with patch("instagram_publisher.requests.get", return_value=processing_response) as mock_get:
+                with patch("instagram_publisher.time.sleep"):
+                    with self.assertRaisesRegex(
+                        RuntimeError,
+                        "Instagram media container was not ready",
+                    ):
+                        publish_instagram_image(
+                            config,
+                            image_url="https://res.cloudinary.com/demo/post.png",
+                            caption="Caption #botWrites",
+                        )
+
+        self.assertEqual(mock_post.call_count, 1)
+        self.assertEqual(mock_get.call_count, 8)
 
     def test_publish_instagram_image_raises_clear_error(self) -> None:
         tmp_dir, config = load_temp_config(
