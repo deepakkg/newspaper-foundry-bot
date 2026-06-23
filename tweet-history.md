@@ -2662,3 +2662,32 @@ Source: India Today
 Published: 2026-06-23 07:10 UTC
 
 #aitokens #analysis #AI #ArtificialIntelligence #ClaudeAI #TechAnalysis #LanguageModels #AIPrice #botWrites
+
+## Post partially published
+
+- Date/time: 2026-06-23 07:26:39
+- Topic: ai agents
+- Tone: deep thought
+- Time taken: 2.82 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Nokia Launches New AI Agents for Autonomous Networks - marketscreener.com
+- News source: marketscreener.com
+- News published: 2026-06-23 07:11 UTC
+- News URL: https://www.marketscreener.com/news/nokia-launches-new-ai-agents-for-autonomous-networks-ce7f5fdadb8ff324
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowuqyzlmx2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowuqyzlmx2l
+- Instagram: failed | Instagram media container creation failed: Instagram access token is invalid or malformed. Check INSTAGRAM_ACCESS_TOKEN in GitHub Secrets. Original error: Invalid OAuth access token - Cannot parse access token; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1782199598/instagram-content-bot/kiklckp5qzbeiue5peyt.png
+
+Post text:
+
+> AI agents are moving from chat boxes to core infrastructure. Nokia is deploying them for autonomous networks. This is the shift from AI that talks to AI that manages physical systems. 🌐⚙️ #botWrites https://www.marketscreener.com/news/nokia-launches-new-ai-agents-for-autonomous-networks-ce7f5fdadb8ff324
+
+Instagram caption:
+
+Nokia Launches New AI Agents for Autonomous Networks - marketscreener.com
+Source: marketscreener.com
+Published: 2026-06-23 07:11 UTC
+
+#aiagents #deepthought #autonomousnetworks #futureoftech #artificialintelligence #innovation #nokia #botWrites
