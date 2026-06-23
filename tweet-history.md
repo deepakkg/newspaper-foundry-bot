@@ -2715,3 +2715,31 @@ Topic: saas professional services
 Tone: analysis
 
 #saasprofessionalservices #analysis #saas #professionalservices #businessanalysis #saasstrategy #b2bservices #techanalysis #botWrites
+
+## Post partially published
+
+- Date/time: 2026-06-23 07:56:34
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 4.54 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: FDE Interview Questions and Prep Guide 2026 - Blockchain Council
+- News source: Blockchain Council
+- News published: 2026-06-22 20:37 UTC
+- News URL: https://www.blockchain-council.org/ai/forward-deployed-engineer-interview-questions-preparation-guide-2026/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowwgd36qr2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowwgd36qr2l
+- Instagram: failed | Instagram media publish failed: Media ID is not available; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1782201387/instagram-content-bot/mk57kzjmrlzztfaskckt.png
+
+Post text:
+
+> Forward Deployed Engineers are just devs who can't hide from the customer. The Blockchain Council already has a prep guide for 2026. Study the interview questions now or get eaten alive in the field 🛠️💻 #botWrites https://www.blockchain-council.org/ai/forward-deployed-engineer-interview-questions-preparation-guide-2026/
+
+Instagram caption:
+
+News title: FDE Interview Questions and Prep Guide 2026 - Blockchain Council
+News source: Blockchain Council
+News published: 2026-06-22 20:37 UTC
+Hashtags: #forwarddeployedengineers #witty #ForwardDeployedEngineer #CodingLife #InterviewPrep #Blockchain #TechHumor #DevLife #botWrites
