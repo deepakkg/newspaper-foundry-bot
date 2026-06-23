@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 import re
-from datetime import timezone
 
 from openai import OpenAI
 
 from config import AppConfig
 from generator import extract_response_text, request_completion
 from news_fetcher import NewsItem
+from time_formatting import format_datetime_ist
 
 BOT_HASHTAG = "#botWrites"
 HASHTAG_PATTERN = re.compile(r"#[A-Za-z][A-Za-z0-9_]{1,40}")
@@ -109,7 +109,7 @@ def generate_instagram_hashtags(
 def format_news_published(news_item: NewsItem | None) -> str | None:
     if not news_item:
         return None
-    return news_item.published_at.astimezone(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return format_datetime_ist(news_item.published_at)
 
 
 def format_caption_news_title(title: str, source: str) -> str:
@@ -137,9 +137,9 @@ def build_instagram_caption(
     published = format_news_published(news_item)
     if news_item:
         lines: list[str] = [
-            f"News title: {format_caption_news_title(news_item.title, news_item.source)}",
-            f"News source: {news_item.source or 'Not available'}",
-            f"News published: {published or 'Not available'}",
+            format_caption_news_title(news_item.title, news_item.source),
+            f"Source: {news_item.source or 'Not available'}",
+            f"Published At: {published or 'Not available'}",
         ]
     else:
         lines = []

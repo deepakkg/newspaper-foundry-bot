@@ -120,10 +120,14 @@ class InstagramContentTests(unittest.TestCase):
             llm_hashtags=["#AI", "#SupportOps", "#botWrites"],
         )
 
-        self.assertIn("News title: AI agents reshape support workflows", caption)
-        self.assertIn("News source: Example News", caption)
-        self.assertIn("News published: 2026-05-31 10:00 UTC", caption)
+        lines = caption.splitlines()
+        self.assertEqual(lines[0], "AI agents reshape support workflows")
+        self.assertIn("Source: Example News", caption)
+        self.assertIn("Published At: 2026-05-31 15:30 IST", caption)
         self.assertIn("#aiagents #analysis #AI #SupportOps #botWrites", caption)
+        self.assertNotIn("News title:", caption)
+        self.assertNotIn("News source:", caption)
+        self.assertNotIn("News published:", caption)
         self.assertNotIn("Hashtags:", caption)
         self.assertNotIn("Topic:", caption)
         self.assertNotIn("Tone:", caption)

@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from datetime import timezone
-
 from config import AppConfig
 from discord_sender import send_discord_embed, send_discord_message
 from logger import (
@@ -11,12 +9,11 @@ from logger import (
 )
 from news_fetcher import NewsItem
 from telegram_sender import send_telegram_message
+from time_formatting import format_datetime_ist
 
 
 def format_news_published_at(news_item: NewsItem) -> str:
-    return news_item.published_at.astimezone(timezone.utc).strftime(
-        "%Y-%m-%d %H:%M UTC"
-    )
+    return format_datetime_ist(news_item.published_at)
 
 
 def send_telegram_safely(
@@ -79,6 +76,26 @@ def build_discord_success_embed(
             "inline": True,
         },
     ]
+    if news_item:
+        fields.extend(
+            [
+                {
+                    "name": "News title",
+                    "value": format_discord_field_value(news_item.title),
+                    "inline": False,
+                },
+                {
+                    "name": "News source",
+                    "value": format_discord_field_value(news_item.source),
+                    "inline": True,
+                },
+                {
+                    "name": "News published",
+                    "value": format_news_published_at(news_item),
+                    "inline": True,
+                },
+            ]
+        )
     if platform_results:
         fields.append(
             {

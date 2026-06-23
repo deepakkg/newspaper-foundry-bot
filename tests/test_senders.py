@@ -203,6 +203,8 @@ class DiscordApprovalTests(unittest.TestCase):
             ],
         )
         self.assertNotIn("Article URL", field_names)
+        field_values = {field["name"]: field["value"] for field in embed["fields"]}
+        self.assertEqual(field_values["News published"], "2026-05-31 15:30 IST")
 
     def test_parse_discord_channel_id_rejects_invalid_values(self) -> None:
         self.assertEqual(parse_discord_channel_id("12345"), 12345)

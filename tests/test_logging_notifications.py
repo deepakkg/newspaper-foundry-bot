@@ -93,13 +93,13 @@ class LoggerTests(unittest.TestCase):
             tweet_url="https://x.com/example/status/2",
             news_title="AI agents reshape support workflows",
             news_source="Example News",
-            news_published_at="2026-05-31 10:00 UTC",
+            news_published_at="2026-05-31 15:30 IST",
             news_url="https://example.com/ai-agents",
         )
 
         self.assertIn("News title: AI agents reshape support workflows", entry)
         self.assertIn("News source: Example News", entry)
-        self.assertIn("News published: 2026-05-31 10:00 UTC", entry)
+        self.assertIn("News published: 2026-05-31 15:30 IST", entry)
         self.assertIn("News URL: https://example.com/ai-agents", entry)
 
     def test_build_telegram_summary_excludes_full_log_and_url(self) -> None:
@@ -126,12 +126,12 @@ class LoggerTests(unittest.TestCase):
             news_title="AI agents reshape support workflows",
             news_source="Example News",
             news_url="https://example.com/news",
-            news_published_at="2026-05-31 10:00 UTC",
+            news_published_at="2026-05-31 15:30 IST",
         )
 
         self.assertIn("News reference:", summary)
         self.assertIn("AI agents reshape support workflows (Example News)", summary)
-        self.assertIn("Published: 2026-05-31 10:00 UTC", summary)
+        self.assertIn("Published: 2026-05-31 15:30 IST", summary)
         self.assertNotIn("\nhttps://example.com/news\n", summary)
         self.assertIn(
             "AI agents are moving. 🤖 #botWrites https://example.com/news", summary
@@ -147,14 +147,28 @@ class LoggerTests(unittest.TestCase):
             news_title="AI agents reshape support workflows",
             news_source="Example News",
             news_url="https://example.com/news",
-            news_published_at="2026-05-31 10:00 UTC",
+            news_published_at="2026-05-31 15:30 IST",
         )
 
         self.assertIn("Content bot failed", summary)
         self.assertIn("Generation failed", summary)
         self.assertIn("AI agents reshape support workflows (Example News)", summary)
-        self.assertIn("Published: 2026-05-31 10:00 UTC", summary)
+        self.assertIn("Published: 2026-05-31 15:30 IST", summary)
         self.assertIn("https://example.com/news", summary)
+
+    def test_format_news_published_at_converts_utc_to_ist(self) -> None:
+        news_item = NewsItem(
+            title="Journeo Secures Metroline Manchester Deal",
+            source="Yahoo Finance UK",
+            published_at=datetime(2026, 6, 23, 8, 24, tzinfo=timezone.utc),
+            link="https://example.com/news",
+            summary="A transport technology deal was announced.",
+        )
+
+        self.assertEqual(
+            notifications.format_news_published_at(news_item),
+            "2026-06-23 13:54 IST",
+        )
 
     def test_notification_and_log_copy_uses_generic_post_language(self) -> None:
         news_item = NewsItem(
@@ -261,11 +275,20 @@ class LoggerTests(unittest.TestCase):
                 "Tone",
                 "Attempts",
                 "Time taken",
+                "News title",
+                "News source",
+                "News published",
                 "Platform results",
                 "Final post",
             ],
         )
-        platform_results = embed["fields"][4]["value"]
+        self.assertEqual(
+            embed["fields"][4]["value"],
+            "AI agents reshape support workflows",
+        )
+        self.assertEqual(embed["fields"][5]["value"], "Example News")
+        self.assertEqual(embed["fields"][6]["value"], "2026-05-31 15:30 IST")
+        platform_results = embed["fields"][7]["value"]
         self.assertIn(
             "Bluesky: published | https://bsky.app/profile/example/post/abc | "
             "at://did:plc:abc/app.bsky.feed.post/abc",
@@ -275,3 +298,35 @@ class LoggerTests(unittest.TestCase):
             "Instagram: published | 18050706419551949",
             platform_results,
         )
+
+    def test_discord_manual_and_failure_embeds_use_ist_news_time(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        manual_embed = notifications.build_discord_manual_embed(
+            topic="ai agents",
+            tone="analysis",
+            time_taken_seconds=3.21,
+            attempts=1,
+            news_item=news_item,
+        )
+        failure_embed = notifications.build_discord_failure_embed(
+            topic="ai agents",
+            tone="analysis",
+            news_item=news_item,
+            error_message="Publishing failed",
+        )
+
+        manual_values = {
+            field["name"]: field["value"] for field in manual_embed["fields"]
+        }
+        failure_values = {
+            field["name"]: field["value"] for field in failure_embed["fields"]
+        }
+        self.assertEqual(manual_values["News published"], "2026-05-31 15:30 IST")
+        self.assertEqual(failure_values["News published"], "2026-05-31 15:30 IST")
