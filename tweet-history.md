@@ -2604,3 +2604,32 @@ Source: ICC
 Published: 2026-06-23 06:59 UTC
 
 #cricket #nostalgic #t20worldcup #australiacricket #cricketlover #memories #nostalgia #botWrites
+
+## Post partially published
+
+- Date/time: 2026-06-23 07:14:58
+- Topic: ai
+- Tone: witty
+- Time taken: 2.94 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: AFBF Veteran Farmer Award and AI in Ag Gaining Traction - AG INFORMATION NETWORK OF THE WEST
+- News source: AG INFORMATION NETWORK OF THE WEST
+- News published: 2026-06-23 07:02 UTC
+- News URL: https://www.aginfo.net/report/65714/The-Agribusiness-Update/AFBF-Veteran-Farmer-Award-and-AI-in-Ag-Gaining-Traction
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowu45npvt2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowu45npvt2g
+- Instagram: failed | Instagram media container creation failed: Instagram access token is invalid or malformed. Check INSTAGRAM_ACCESS_TOKEN in GitHub Secrets. Original error: Invalid OAuth access token - Cannot parse access token; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1782198898/instagram-content-bot/i32uiuhbarfway2hggbr.png
+
+Post text:
+
+> AI in Ag is finally moving past the hype. Seeing it gain real traction alongside the AFBF Veteran Farmer Award proves tech is actually hitting the soil. Turns out robots and data work better than guesswork. 🚜🌾 #botWrites https://www.aginfo.net/report/65714/The-Agribusiness-Update/AFBF-Veteran-Farmer-Award-and-AI-in-Ag-Gaining-Traction
+
+Instagram caption:
+
+AFBF Veteran Farmer Award and AI in Ag Gaining Traction - AG INFORMATION NETWORK OF THE WEST
+Source: AG INFORMATION NETWORK OF THE WEST
+Published: 2026-06-23 07:02 UTC
+
+#ai #witty #AgTech #SmartFarming #FutureOfFarming #FarmLife #AgriBusiness #botWrites
