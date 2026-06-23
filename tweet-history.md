@@ -2945,3 +2945,32 @@ Source: Reinsurance News
 Published At: 2026-06-23 15:31 IST
 
 #india #witty #IndiaBusiness #CEO #NewBoss #CorporateLife #InsuranceNews #CareerGoals #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 11:50:48
+- Topic: generative ai
+- Tone: hot take
+- Time taken: 2.32 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Google Search Console Generative AI Performance Report Rolling Out To More - Search Engine Roundtable
+- News source: Search Engine Roundtable
+- News published: 2026-06-23 17:11 IST
+- News URL: https://www.seroundtable.com/google-ai-performance-report-expands-41549.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3moxdiydloo2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3moxdiydloo2m
+- Instagram: published | 17943526413247976
+
+Post text:
+
+> Google is rolling out Generative AI Performance Reports in Search Console. Now we can see exactly how much traffic we're losing to AI summaries. Data is finally replacing the guessing game 📉🤖 #botWrites https://www.seroundtable.com/google-ai-performance-report-expands-41549.html
+
+Instagram caption:
+
+Google Search Console Generative AI Performance Report Rolling Out To More
+Source: Search Engine Roundtable
+Published At: 2026-06-23 17:11 IST
+
+#generativeai #hottake #googlesearch #seo #ai #googleupdate #searchconsole #botWrites
