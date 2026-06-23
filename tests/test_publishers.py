@@ -38,6 +38,7 @@ from instagram_content import (
     generate_instagram_hashtags,
 )
 from instagram_image import (
+    FOOTER_SAFE_TOP_Y,
     IMAGE_SIZE,
     build_instagram_image_body_text,
     extract_emojis,
@@ -239,6 +240,11 @@ class InstagramImageTests(unittest.TestCase):
     def test_extract_emojis_reads_raw_llm_text(self) -> None:
         self.assertEqual(extract_emojis("Cricket changed the game 🏏📉"), "🏏📉")
 
+    def test_footer_uses_monospace_font_loader(self) -> None:
+        footer_font = instagram_image._load_monospace_font(24)
+
+        self.assertIsNotNone(footer_font)
+
     def test_wrap_text_does_not_leave_final_period_alone(self) -> None:
         font = instagram_image._load_font(58)
         from PIL import Image, ImageDraw
@@ -316,7 +322,50 @@ class InstagramImageTests(unittest.TestCase):
                         render_instagram_image("Cricket changed the game 🏏", output_path)
 
             self.assertIn(("🏏", True), drawn_text)
-            self.assertIn(("#botWrites", False), drawn_text)
+            self.assertNotIn(("#botWrites", False), drawn_text)
+
+    def test_render_instagram_image_draws_footer_with_dedicated_helper(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            with patch.object(instagram_image, "_load_emoji_font", return_value=None):
+                with patch.object(
+                    instagram_image,
+                    "_draw_footer_label",
+                    wraps=instagram_image._draw_footer_label,
+                ) as mock_footer:
+                    render_instagram_image("Cricket changed the game 🏏", output_path)
+
+        mock_footer.assert_called_once()
+        self.assertEqual(mock_footer.call_args.args[1], "#botWrites")
+
+    def test_render_instagram_image_keeps_emoji_above_footer_zone(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            emoji_font = MagicMock()
+            emoji_font.getbbox.return_value = (0, 0, 40, 40)
+            emoji_positions: list[int] = []
+
+            def capture_centered_text(*args, **kwargs):
+                if args[1] == "💻🚀":
+                    emoji_positions.append(kwargs["y"])
+
+            with patch.object(instagram_image, "_load_emoji_font", return_value=emoji_font):
+                with patch.object(instagram_image, "_emoji_text_renders_cleanly", return_value=True):
+                    with patch.object(
+                        instagram_image,
+                        "_draw_centered_text",
+                        side_effect=capture_centered_text,
+                    ):
+                        render_instagram_image(
+                            "Forward Deployed Engineers are just devs who can't hide "
+                            "from the customers. Blockchain Council released a 2026 "
+                            "prep guide for FDE interviews. Good luck explaining a "
+                            "smart contract bug while the client stares at you. 💻🚀 #botWrites",
+                            output_path,
+                        )
+
+            self.assertTrue(emoji_positions)
+            self.assertLess(emoji_positions[0] + 58, FOOTER_SAFE_TOP_Y)
 
     def test_render_instagram_image_creates_square_png(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -342,6 +391,22 @@ class InstagramImageTests(unittest.TestCase):
                     "obvious isn't always priced in. Patience beats the hype. 📉 #botWrites",
                     output_path,
                 )
+
+            from PIL import Image
+
+            with Image.open(output_path) as image:
+                self.assertEqual(image.size, (1080, 1080))
+
+    def test_render_instagram_image_handles_footer_overlap_regression_text(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            render_instagram_image(
+                "Forward Deployed Engineers are just devs who can't hide from the "
+                "customers. Blockchain Council released a 2026 prep guide for FDE "
+                "interviews. Good luck explaining a smart contract bug while the "
+                "client stares at you. 💻🚀 #botWrites",
+                output_path,
+            )
 
             from PIL import Image
 

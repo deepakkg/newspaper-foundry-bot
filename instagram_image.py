@@ -17,6 +17,10 @@ BACKGROUND = (246, 239, 224)
 INK = (20, 20, 18)
 MUTED_BLUE = (81, 107, 128)
 BOT_HASHTAG = "#botWrites"
+INNER_BORDER_BOTTOM_Y = IMAGE_SIZE - 78
+FOOTER_SAFE_TOP_Y = INNER_BORDER_BOTTOM_Y - 92
+FOOTER_LABEL_PADDING_X = 18
+FOOTER_LABEL_PADDING_Y = 6
 URL_PATTERN = re.compile(r"https?://\S+|www\.\S+", re.IGNORECASE)
 HASHTAG_PATTERN = re.compile(r"#[A-Za-z0-9_]+")
 KEYCAP_SEQUENCE_PATTERN = re.compile(r"[0-9#*]\ufe0f?\u20e3")
@@ -51,6 +55,23 @@ def _load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
         "DejaVuSerif.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
         "/System/Library/Fonts/Supplemental/Georgia.ttf",
+    ):
+        try:
+            return ImageFont.truetype(font_name, size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
+
+
+def _load_monospace_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    for font_name in (
+        "DejaVuSansMono.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+        "/System/Library/Fonts/Menlo.ttc",
+        "/System/Library/Fonts/Monaco.ttf",
+        "Menlo.ttc",
+        "Monaco.ttf",
+        "Courier New.ttf",
     ):
         try:
             return ImageFont.truetype(font_name, size)
@@ -288,6 +309,33 @@ def _draw_centered_text(
     )
 
 
+def _draw_footer_label(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    *,
+    font: ImageFont.ImageFont,
+) -> tuple[int, int, int, int]:
+    box = draw.textbbox((0, 0), text, font=font)
+    text_width = box[2] - box[0]
+    text_height = box[3] - box[1]
+    label_width = text_width + FOOTER_LABEL_PADDING_X * 2
+    label_height = text_height + FOOTER_LABEL_PADDING_Y * 2
+    label_left = (IMAGE_SIZE - label_width) // 2
+    label_top = INNER_BORDER_BOTTOM_Y - label_height // 2
+    label_right = label_left + label_width
+    label_bottom = label_top + label_height
+    draw.rounded_rectangle(
+        (label_left, label_top, label_right, label_bottom),
+        radius=label_height // 2,
+        fill=BACKGROUND,
+        outline=None,
+    )
+    text_x = (IMAGE_SIZE - text_width) // 2
+    text_y = label_top + FOOTER_LABEL_PADDING_Y - box[1]
+    draw.text((text_x, text_y), text, font=font, fill=INK)
+    return label_left, label_top, label_right, label_bottom
+
+
 def render_instagram_image(
     post_text: str,
     output_path: Path,
@@ -316,13 +364,11 @@ def render_instagram_image(
     draw.rectangle((120, 124, 250, 132), fill=MUTED_BLUE)
 
     max_width = 820
-    footer_font = _load_font(26)
-    footer_box = draw.textbbox((0, 0), footer_text, font=footer_font)
-    footer_height = footer_box[3] - footer_box[1]
-    footer_y = IMAGE_SIZE - 142
+    footer_font = _load_monospace_font(24)
+    content_bottom_y = FOOTER_SAFE_TOP_Y
     emoji_gap = 34 if emoji_render else 0
     emoji_height = 58 if emoji_render else 0
-    max_height = footer_y - 230 - emoji_gap - emoji_height
+    max_height = content_bottom_y - 150 - emoji_gap - emoji_height
     font_size = 58
     lines: list[str] = []
     font: ImageFont.ImageFont = _load_font(font_size)
@@ -335,7 +381,9 @@ def render_instagram_image(
 
     text_height = _text_height(draw, lines, font)
     total_height = text_height + emoji_gap + emoji_height
-    y = max(150, (footer_y - total_height) // 2)
+    y = max(150, (content_bottom_y - total_height) // 2)
+    if y + total_height > content_bottom_y:
+        y = max(150, content_bottom_y - total_height)
     for line in lines:
         box = draw.textbbox((0, 0), line, font=font)
         line_width = box[2] - box[0]
@@ -355,13 +403,7 @@ def render_instagram_image(
             embedded_color=True,
         )
 
-    _draw_centered_text(
-        draw,
-        footer_text,
-        y=footer_y - footer_height,
-        font=footer_font,
-        fill=INK,
-    )
+    _draw_footer_label(draw, footer_text, font=footer_font)
 
     image.save(output_path, format="PNG")
     return output_path
