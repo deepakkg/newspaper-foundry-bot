@@ -2916,3 +2916,32 @@ Source: Yahoo Finance Singapore
 Published At: 2026-06-23 03:20 IST
 
 #softwareindustry #nostalgic #software #gaming #unity #techhistory #stockmarket #softwareengineering #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 10:10:11
+- Topic: india
+- Tone: witty
+- Time taken: 2.69 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Gallagher Re appoints Minesh Jani as CEO of India - Reinsurance News
+- News source: Reinsurance News
+- News published: 2026-06-23 15:31 IST
+- News URL: https://www.reinsurancene.ws/gallagher-re-appoints-minesh-jani-as-ceo-of-india/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mox5v3ki5o2t | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mox5v3ki5o2t
+- Instagram: published | 18013849154856239
+
+Post text:
+
+> Gallagher Re is betting on India. Appointing Minesh Jani as CEO shows they want a local grip on the reinsurance market. It is a practical move for a complex region. 🇮🇳📈 #botWrites https://www.reinsurancene.ws/gallagher-re-appoints-minesh-jani-as-ceo-of-india/
+
+Instagram caption:
+
+Gallagher Re appoints Minesh Jani as CEO of India
+Source: Reinsurance News
+Published At: 2026-06-23 15:31 IST
+
+#india #witty #IndiaBusiness #CEO #NewBoss #CorporateLife #InsuranceNews #CareerGoals #botWrites
