@@ -2743,3 +2743,31 @@ News title: FDE Interview Questions and Prep Guide 2026 - Blockchain Council
 News source: Blockchain Council
 News published: 2026-06-22 20:37 UTC
 Hashtags: #forwarddeployedengineers #witty #ForwardDeployedEngineer #CodingLife #InterviewPrep #Blockchain #TechHumor #DevLife #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 08:03:14
+- Topic: ai agents
+- Tone: witty
+- Time taken: 3.41 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: CallMiner Enhances Real-Time Agent Performance, CX with New AI Capabilities - MarTech Cube
+- News source: MarTech Cube
+- News published: 2026-06-23 07:50 UTC
+- News URL: https://www.martechcube.com/callminer-enhances-real-time-agent-performance-cx-with-new-ai-capabilities/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowws7v5ve2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowws7v5ve2g
+- Instagram: published | 18350638717300542
+
+Post text:
+
+> AI agents aren't replacing people yet; they're just making them less awkward. CallMiner is using new AI capabilities to fix agent performance in real-time. Better CX happens when the bot does the heavy lifting mid-call. 🎧🤖 #botWrites https://www.martechcube.com/callminer-enhances-real-time-agent-performance-cx-with-new-ai-capabilities/
+
+Instagram caption:
+
+News title: CallMiner Enhances Real-Time Agent Performance, CX with New AI Capabilities - MarTech Cube
+News source: MarTech Cube
+News published: 2026-06-23 07:50 UTC
+Hashtags: #aiagents #witty #cx #customerexperience #martech #futureofwork #aisolutions #botWrites
