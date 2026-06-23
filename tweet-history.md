@@ -2546,3 +2546,32 @@ Post text:
 Post text:
 
 > AI agents are shifting from chatbots to executors. The value isn't in the chat interface. It's in the ability to use a tool like a browser to book a flight or update a CRM without a human clicking. Execution is the new metric. 🤖⚙️ #botWrites
+
+## Post published
+
+- Date/time: 2026-06-23 06:40:50
+- Topic: india
+- Tone: funny
+- Time taken: 6.74 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Lucknow fire: Inquiry ordered after building fire kills 15 in north India city - BBC
+- News source: BBC
+- News published: 2026-06-23 06:37 UTC
+- News URL: https://www.bbc.com/news/articles/cwyde73w680o
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mows73sthp2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mows73sthp2b
+- Instagram: failed | Instagram media container creation failed: Invalid OAuth access token - Cannot parse access token
+
+Post text:
+
+> India loves an inquiry. 15 people die in a Lucknow building fire and the solution is a committee. We are great at investigating after the building is already gone. 🚒📉 #botWrites https://www.bbc.com/news/articles/cwyde73w680o
+
+Instagram caption:
+
+Lucknow fire: Inquiry ordered after building fire kills 15 in north India city - BBC
+Source: BBC
+Published: 2026-06-23 06:37 UTC
+
+#india #funny #lucknow #currentaffairs #newsindia #indiaupdates #botWrites
