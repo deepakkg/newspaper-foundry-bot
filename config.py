@@ -43,6 +43,7 @@ class AppConfig:
     post_to_instagram: bool
     instagram_account_id: str | None
     instagram_access_token: str | None
+    instagram_graph_base_url: str
     instagram_graph_api_version: str
     cloudinary_cloud_name: str | None
     cloudinary_api_key: str | None
@@ -167,6 +168,10 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     )
     instagram_account_id = os.getenv("INSTAGRAM_ACCOUNT_ID", "").strip() or None
     instagram_access_token = os.getenv("INSTAGRAM_ACCESS_TOKEN", "").strip() or None
+    instagram_graph_base_url = (
+        os.getenv("INSTAGRAM_GRAPH_BASE_URL", "https://graph.instagram.com").strip()
+        or "https://graph.instagram.com"
+    ).rstrip("/")
     instagram_graph_api_version = (
         os.getenv("INSTAGRAM_GRAPH_API_VERSION", "v23.0").strip() or "v23.0"
     )
@@ -304,6 +309,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         post_to_instagram=post_to_instagram,
         instagram_account_id=instagram_account_id,
         instagram_access_token=instagram_access_token,
+        instagram_graph_base_url=instagram_graph_base_url,
         instagram_graph_api_version=instagram_graph_api_version,
         cloudinary_cloud_name=cloudinary_cloud_name,
         cloudinary_api_key=cloudinary_api_key,

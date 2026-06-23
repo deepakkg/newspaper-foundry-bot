@@ -21,7 +21,7 @@ class PublishedInstagramPost:
 
 def _graph_base_url(config: AppConfig) -> str:
     version = config.instagram_graph_api_version.strip().lstrip("/")
-    return f"https://graph.facebook.com/{version}"
+    return f"{config.instagram_graph_base_url}/{version}"
 
 
 def _extract_error(payload: dict[str, object]) -> str:

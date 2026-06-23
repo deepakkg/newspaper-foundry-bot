@@ -221,8 +221,21 @@ class ConfigTests(unittest.TestCase):
         self.assertTrue(config.post_to_instagram)
         self.assertEqual(config.instagram_account_id, "1789")
         self.assertEqual(config.instagram_access_token, "ig-token")
+        self.assertEqual(config.instagram_graph_base_url, "https://graph.instagram.com")
         self.assertEqual(config.cloudinary_cloud_name, "cloud")
         self.assertEqual(config.cloudinary_folder, "content-bot")
+
+    def test_load_config_accepts_custom_instagram_graph_base_url(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                INSTAGRAM_GRAPH_BASE_URL="https://graph.facebook.com/",
+            )
+
+            config = load_config(env_path)
+
+        self.assertEqual(config.instagram_graph_base_url, "https://graph.facebook.com")
 
     def test_load_config_requires_instagram_and_cloudinary_credentials_when_enabled(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

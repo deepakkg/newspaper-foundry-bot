@@ -51,6 +51,7 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `BLUESKY_SERVICE_URL`
 - `POST_TO_INSTAGRAM`
 - `INSTAGRAM_ACCOUNT_ID`
+- `INSTAGRAM_GRAPH_BASE_URL`
 - `INSTAGRAM_GRAPH_API_VERSION`
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_FOLDER`
@@ -75,6 +76,7 @@ NEWS_LANGUAGE=en
 POST_TO_BLUESKY=true
 BLUESKY_SERVICE_URL=https://bsky.social
 POST_TO_INSTAGRAM=false
+INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com
 INSTAGRAM_GRAPH_API_VERSION=v23.0
 CLOUDINARY_FOLDER=content-bot
 POST_TO_X=false
@@ -108,6 +110,7 @@ For Instagram publishing, use an Instagram Creator or Business account connected
 ```text
 POST_TO_INSTAGRAM=true
 INSTAGRAM_ACCOUNT_ID=your_instagram_account_id
+INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com
 INSTAGRAM_GRAPH_API_VERSION=v23.0
 INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
@@ -118,7 +121,9 @@ CLOUDINARY_FOLDER=content-bot
 
 Instagram posts use a Pillow-generated square image and a caption built from the news headline, source, published time, topic/tone hashtags, LLM-suggested hashtags, and `#botWrites` as the final hashtag.
 
-`INSTAGRAM_ACCESS_TOKEN` must be the raw Meta access token only. Do not include quotes, labels, a `Bearer ` prefix, extra spaces, or copied markdown formatting. If Instagram reports that the token cannot be parsed, regenerate or re-copy the token into the GitHub Secret.
+Use `INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com` for Instagram-login tokens with `instagram_business_*` scopes. Use `https://graph.facebook.com` only if you switch to the Facebook-login Graph API flow.
+
+`INSTAGRAM_ACCESS_TOKEN` must be the raw Meta access token only. Do not include quotes, labels, a `Bearer ` prefix, extra spaces, or copied markdown formatting. If Meta's token debugger says the token is valid but posting reports that the token cannot be parsed, verify that `INSTAGRAM_GRAPH_BASE_URL` matches the token type.
 
 Keep `POST_TO_X=false` while X posting is not free. If Bluesky, Instagram, and X publishing are all disabled, the bot runs in manual mode and sends the final post text to notifications.
 

@@ -291,8 +291,49 @@ class InstagramPublisherTests(unittest.TestCase):
         self.assertEqual(published.media_id, "media-1")
         self.assertEqual(published.url, "https://instagram.com/p/abc")
         self.assertEqual(mock_post.call_count, 2)
-        self.assertIn("/1789/media", mock_post.call_args_list[0].args[0])
-        self.assertIn("/1789/media_publish", mock_post.call_args_list[1].args[0])
+        self.assertEqual(
+            mock_post.call_args_list[0].args[0],
+            "https://graph.instagram.com/v23.0/1789/media",
+        )
+        self.assertEqual(
+            mock_post.call_args_list[1].args[0],
+            "https://graph.instagram.com/v23.0/1789/media_publish",
+        )
+
+    def test_publish_instagram_image_accepts_custom_graph_base_url(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            INSTAGRAM_GRAPH_BASE_URL="https://graph.facebook.com",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        media_response = MagicMock(status_code=200)
+        media_response.json.return_value = {"id": "container-1"}
+        publish_response = MagicMock(status_code=200)
+        publish_response.json.return_value = {"id": "media-1"}
+
+        with patch(
+            "instagram_publisher.requests.post",
+            side_effect=[media_response, publish_response],
+        ) as mock_post:
+            publish_instagram_image(
+                config,
+                image_url="https://res.cloudinary.com/demo/post.png",
+                caption="Caption #botWrites",
+            )
+
+        self.assertEqual(
+            mock_post.call_args_list[0].args[0],
+            "https://graph.facebook.com/v23.0/1789/media",
+        )
+        self.assertEqual(
+            mock_post.call_args_list[1].args[0],
+            "https://graph.facebook.com/v23.0/1789/media_publish",
+        )
 
     def test_publish_instagram_image_raises_clear_error(self) -> None:
         tmp_dir, config = load_temp_config(
