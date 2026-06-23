@@ -38,6 +38,7 @@ from instagram_content import (
     generate_instagram_hashtags,
 )
 from instagram_image import (
+    IMAGE_SIZE,
     build_instagram_image_body_text,
     extract_emojis,
     render_instagram_image,
@@ -238,6 +239,52 @@ class InstagramImageTests(unittest.TestCase):
     def test_extract_emojis_reads_raw_llm_text(self) -> None:
         self.assertEqual(extract_emojis("Cricket changed the game 🏏📉"), "🏏📉")
 
+    def test_wrap_text_does_not_leave_final_period_alone(self) -> None:
+        font = instagram_image._load_font(58)
+        from PIL import Image, ImageDraw
+
+        draw = ImageDraw.Draw(Image.new("RGB", (IMAGE_SIZE, IMAGE_SIZE)))
+        text = (
+            "The stock market rewards those who look where others don't. A screaming "
+            "buy value stock hiding in plain sight proves that obvious isn't always "
+            "priced in. Patience beats the hype."
+        )
+
+        lines = instagram_image._wrap_text(draw, text, font, 820)
+
+        self.assertNotEqual(lines[-1], ".")
+        self.assertFalse(any(line.strip() in {".", "!", "?"} for line in lines))
+
+    def test_wrap_text_does_not_leave_exclamation_or_question_alone(self) -> None:
+        font = instagram_image._load_font(58)
+        from PIL import Image, ImageDraw
+
+        draw = ImageDraw.Draw(Image.new("RGB", (IMAGE_SIZE, IMAGE_SIZE)))
+
+        for punctuation in ("!", "?"):
+            lines = instagram_image._wrap_text(
+                draw,
+                f"Markets price the obvious slowly {punctuation}",
+                font,
+                610,
+            )
+            self.assertNotEqual(lines[-1], punctuation)
+            self.assertFalse(any(line.strip() == punctuation for line in lines))
+
+    def test_wrap_text_rebalances_tiny_final_line(self) -> None:
+        font = instagram_image._load_font(58)
+        from PIL import Image, ImageDraw
+
+        draw = ImageDraw.Draw(Image.new("RGB", (IMAGE_SIZE, IMAGE_SIZE)))
+        lines = instagram_image._wrap_text(
+            draw,
+            "Patience beats the hype.",
+            font,
+            690,
+        )
+
+        self.assertGreater(len(lines[-1].strip()), 2)
+
     def test_render_instagram_image_skips_emoji_line_when_unsupported(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             output_path = Path(tmp_dir) / "post.png"
@@ -284,6 +331,22 @@ class InstagramImageTests(unittest.TestCase):
             with Image.open(output_path) as image:
                 self.assertEqual(image.size, (1080, 1080))
                 self.assertEqual(image.format, "PNG")
+
+    def test_render_instagram_image_handles_stock_market_regression_text(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            with patch.object(instagram_image, "_load_emoji_font", return_value=None):
+                render_instagram_image(
+                    "The stock market rewards those who look where others don't. "
+                    "A screaming buy value stock hiding in plain sight proves that "
+                    "obvious isn't always priced in. Patience beats the hype. 📉 #botWrites",
+                    output_path,
+                )
+
+            from PIL import Image
+
+            with Image.open(output_path) as image:
+                self.assertEqual(image.size, (1080, 1080))
 
 
 class CloudinaryUploaderTests(unittest.TestCase):

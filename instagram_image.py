@@ -40,6 +40,7 @@ EMOJI_PATTERN = re.compile(
     "]"
 )
 TERMINAL_PUNCTUATION = (".", "!", "?")
+ORPHAN_PUNCTUATION = set(".!?;:,")
 
 
 def _load_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -85,6 +86,62 @@ def _text_height(draw: ImageDraw.ImageDraw, lines: list[str], font: ImageFont.Im
     return sum(heights) + (len(lines) - 1) * 22
 
 
+def _text_width(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont) -> int:
+    box = draw.textbbox((0, 0), text, font=font)
+    return box[2] - box[0]
+
+
+def _is_orphan_line(line: str) -> bool:
+    stripped = line.strip()
+    return bool(stripped) and all(char in ORPHAN_PUNCTUATION for char in stripped)
+
+
+def _is_awkward_final_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return True
+    if _is_orphan_line(stripped):
+        return True
+    return len(stripped) <= 2
+
+
+def _line_quality_ok(lines: list[str]) -> bool:
+    if not lines:
+        return False
+    if any(not line.strip() or _is_orphan_line(line) for line in lines):
+        return False
+    return not (len(lines) > 1 and _is_awkward_final_line(lines[-1]))
+
+
+def _rebalance_final_lines(
+    draw: ImageDraw.ImageDraw,
+    lines: list[str],
+    font: ImageFont.ImageFont,
+    max_width: int,
+) -> list[str]:
+    if len(lines) < 2 or not _is_awkward_final_line(lines[-1]):
+        return lines
+
+    previous_words = lines[-2].split()
+    final_words = lines[-1].split()
+    if len(previous_words) < 2:
+        return lines
+
+    for move_count in range(1, len(previous_words)):
+        new_previous = " ".join(previous_words[:-move_count])
+        new_final = " ".join([*previous_words[-move_count:], *final_words])
+        if not new_previous or not new_final:
+            continue
+        if _text_width(draw, new_previous, font) > max_width:
+            continue
+        if _text_width(draw, new_final, font) > max_width:
+            continue
+        candidate = [*lines[:-2], new_previous, new_final]
+        if _line_quality_ok(candidate):
+            return candidate
+    return lines
+
+
 def _wrap_text(
     draw: ImageDraw.ImageDraw,
     text: str,
@@ -96,19 +153,19 @@ def _wrap_text(
     current: list[str] = []
     for word in words:
         candidate = " ".join([*current, word])
-        if draw.textbbox((0, 0), candidate, font=font)[2] <= max_width:
+        if _text_width(draw, candidate, font) <= max_width:
             current.append(word)
             continue
         if current:
             lines.append(" ".join(current))
-        if draw.textbbox((0, 0), word, font=font)[2] > max_width:
+        if _text_width(draw, word, font) > max_width:
             lines.extend(textwrap.wrap(word, width=16))
             current = []
         else:
             current = [word]
     if current:
         lines.append(" ".join(current))
-    return lines
+    return _rebalance_final_lines(draw, lines, font, max_width)
 
 
 def _add_paper_texture(image: Image.Image, seed_text: str) -> None:
@@ -272,7 +329,7 @@ def render_instagram_image(
     while font_size >= 34:
         font = _load_font(font_size)
         lines = _wrap_text(draw, image_body_text, font, max_width)
-        if _text_height(draw, lines, font) <= max_height:
+        if _text_height(draw, lines, font) <= max_height and _line_quality_ok(lines):
             break
         font_size -= 4
 
