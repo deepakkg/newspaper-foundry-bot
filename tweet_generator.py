@@ -6,13 +6,24 @@ import socket
 import sys
 import threading
 import time
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
 
 from openai import OpenAIError
 
 from bluesky_publisher import post_to_bluesky
+from cloudinary_uploader import upload_image_to_cloudinary
 from config import AppConfig, load_config
+from discord_approval import (
+    ApprovalRequest,
+    request_discord_approval,
+)
 from generator import build_client, generate_valid_tweet
-from logger import append_log_entry, build_tweet_log_entry
+from instagram_content import build_instagram_caption, generate_instagram_hashtags
+from instagram_image import render_instagram_image
+from instagram_publisher import publish_instagram_image
+from logger import PlatformLogResult, append_log_entry, build_run_log_entry
 from news_fetcher import NewsItem, fetch_latest_news
 from notifications import (
     format_news_published_at,
@@ -26,6 +37,112 @@ from publisher import (
     max_generated_text_chars,
     post_tweet_to_x,
 )
+
+
+@dataclass(frozen=True)
+class PublishOutcome:
+    results: list[PlatformLogResult]
+    success_count: int
+
+
+def enabled_platforms(config: AppConfig) -> list[str]:
+    platforms: list[str] = []
+    if config.post_to_bluesky:
+        platforms.append("Bluesky")
+    if config.post_to_instagram:
+        platforms.append("Instagram")
+    if config.post_to_x:
+        platforms.append("X")
+    return platforms
+
+
+def image_output_path(config: AppConfig, topic: str) -> Path:
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    slug = "-".join(part for part in topic.lower().split() if part) or "post"
+    safe_slug = "".join(char for char in slug if char.isalnum() or char == "-")[:60]
+    return config.generated_image_dir / f"{timestamp}-{safe_slug}.png"
+
+
+def publish_enabled_platforms(
+    config: AppConfig,
+    *,
+    topic: str,
+    tweet: str,
+    final_post_text: str,
+    news_item: NewsItem | None,
+    instagram_caption: str | None,
+) -> PublishOutcome:
+    news_url = news_item.link if news_item else None
+    results: list[PlatformLogResult] = []
+    success_count = 0
+
+    if config.post_to_bluesky:
+        try:
+            published = post_to_bluesky(
+                config,
+                build_post_text_without_url(tweet),
+                news_url=news_url,
+                news_title=news_item.title if news_item else None,
+                news_summary=news_item.summary if news_item else None,
+            )
+            success_count += 1
+            results.append(
+                PlatformLogResult(
+                    platform="Bluesky",
+                    status="published",
+                    url=published.url,
+                    identifier=published.uri,
+                )
+            )
+        except Exception as exc:
+            results.append(
+                PlatformLogResult(platform="Bluesky", status="failed", error=str(exc))
+            )
+
+    if config.post_to_instagram:
+        try:
+            if instagram_caption is None:
+                raise RuntimeError("Instagram caption was not generated.")
+            image_path = render_instagram_image(
+                final_post_text,
+                image_output_path(config, topic),
+            )
+            uploaded = upload_image_to_cloudinary(config, image_path)
+            published = publish_instagram_image(
+                config,
+                image_url=uploaded.secure_url,
+                caption=instagram_caption,
+            )
+            success_count += 1
+            results.append(
+                PlatformLogResult(
+                    platform="Instagram",
+                    status="published",
+                    url=published.url,
+                    identifier=published.media_id,
+                )
+            )
+        except Exception as exc:
+            results.append(
+                PlatformLogResult(platform="Instagram", status="failed", error=str(exc))
+            )
+
+    if config.post_to_x:
+        try:
+            published = post_tweet_to_x(config, tweet, news_url=news_url)
+            success_count += 1
+            results.append(
+                PlatformLogResult(
+                    platform="X",
+                    status="published",
+                    url=published.url,
+                    identifier=published.tweet_id,
+                )
+            )
+        except Exception as exc:
+            results.append(PlatformLogResult(platform="X", status="failed", error=str(exc)))
+
+    return PublishOutcome(results=results, success_count=success_count)
 
 
 def spinner(stop_event: threading.Event, message: str = "Generating post") -> None:
@@ -137,17 +254,23 @@ def run_once() -> int:
         )
 
         final_post_text = build_post_text(tweet, news_url)
-        if config.post_to_bluesky:
-            published = post_to_bluesky(
-                config,
-                build_post_text_without_url(tweet),
-                news_url=news_url,
-                news_title=news_item.title if news_item else None,
-                news_summary=news_item.summary if news_item else None,
+        target_platforms = enabled_platforms(config)
+        instagram_caption = None
+        if config.post_to_instagram:
+            instagram_caption = build_instagram_caption(
+                topic=topic,
+                tone=tone,
+                news_item=news_item,
+                llm_hashtags=generate_instagram_hashtags(
+                    client,
+                    config,
+                    topic,
+                    tone,
+                    news_item,
+                ),
             )
-        elif config.post_to_x:
-            published = post_tweet_to_x(config, tweet, news_url=news_url)
-        else:
+
+        if not target_platforms:
             stop_spinner(stop_event, spinner_thread)
             elapsed = time.perf_counter() - process_start
             send_manual_notifications(
@@ -164,17 +287,101 @@ def run_once() -> int:
 
         stop_spinner(stop_event, spinner_thread)
         elapsed = time.perf_counter() - process_start
-        log_entry = build_tweet_log_entry(
+        approval = request_discord_approval(
+            config,
+            ApprovalRequest(
+                topic=topic,
+                tone=tone,
+                final_post_text=final_post_text,
+                instagram_caption=instagram_caption,
+                elapsed=elapsed,
+                attempts=attempts,
+                target_platforms=target_platforms,
+                news_item=news_item,
+            ),
+        )
+
+        if approval.status in {"declined", "expired"}:
+            title = "Post declined" if approval.status == "declined" else "Post expired"
+            append_log_entry(
+                config.log_file_path,
+                build_run_log_entry(
+                    title=title,
+                    topic=topic,
+                    tone=tone,
+                    post_text=final_post_text,
+                    time_taken_seconds=elapsed,
+                    attempts=attempts,
+                    platform_results=[
+                        PlatformLogResult(
+                            platform=platform,
+                            status="not published",
+                            error=approval.status,
+                        )
+                        for platform in target_platforms
+                    ],
+                    news_title=news_item.title if news_item else None,
+                    news_source=news_item.source if news_item else None,
+                    news_published_at=format_news_published_at(news_item)
+                    if news_item
+                    else None,
+                    news_url=news_item.link if news_item else None,
+                    instagram_caption=instagram_caption,
+                    decision_by=approval.username or approval.user_id,
+                ),
+            )
+            print("Post was not published.")
+            return 0
+
+        outcome = publish_enabled_platforms(
+            config,
+            topic=topic,
+            tweet=tweet,
+            final_post_text=final_post_text,
+            news_item=news_item,
+            instagram_caption=instagram_caption,
+        )
+
+        if outcome.success_count == 0:
+            append_log_entry(
+                config.log_file_path,
+                build_run_log_entry(
+                    title="Post publish failed",
+                    topic=topic,
+                    tone=tone,
+                    post_text=final_post_text,
+                    time_taken_seconds=elapsed,
+                    attempts=attempts,
+                    platform_results=outcome.results,
+                    news_title=news_item.title if news_item else None,
+                    news_source=news_item.source if news_item else None,
+                    news_published_at=format_news_published_at(news_item)
+                    if news_item
+                    else None,
+                    news_url=news_item.link if news_item else None,
+                    instagram_caption=instagram_caption,
+                    decision_by=approval.username or approval.user_id,
+                ),
+            )
+            errors = "; ".join(
+                f"{result.platform}: {result.error}" for result in outcome.results
+            )
+            raise RuntimeError(f"All enabled platforms failed to publish. {errors}")
+
+        log_entry = build_run_log_entry(
+            title="Post published",
             topic=topic,
             tone=tone,
-            tweet_text=final_post_text,
+            post_text=final_post_text,
             time_taken_seconds=elapsed,
             attempts=attempts,
-            tweet_url=published.url,
+            platform_results=outcome.results,
             news_title=news_item.title if news_item else None,
             news_source=news_item.source if news_item else None,
             news_published_at=format_news_published_at(news_item) if news_item else None,
             news_url=news_item.link if news_item else None,
+            instagram_caption=instagram_caption,
+            decision_by=approval.username or approval.user_id,
         )
         append_log_entry(config.log_file_path, log_entry)
         send_success_notifications(

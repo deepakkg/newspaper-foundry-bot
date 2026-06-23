@@ -17,6 +17,7 @@ import notifications
 import tweet_generator
 from bluesky_publisher import build_bluesky_post_url, post_to_bluesky
 from config import load_config
+from discord_approval import ApprovalRequest, build_approval_embed, is_authorized_approver
 from discord_sender import send_discord_embed, send_discord_message
 from generator import (
     build_compact_prompt,
@@ -145,6 +146,45 @@ class DiscordSenderTests(unittest.TestCase):
 
         with patch("discord_sender.requests.post", return_value=response):
             send_discord_embed(config, {"title": "Post published", "fields": []})
+
+
+class DiscordApprovalTests(unittest.TestCase):
+    def test_is_authorized_approver_checks_configured_user_ids(self) -> None:
+        tmp_dir, config = load_temp_config(DISCORD_APPROVER_USER_IDS="111,222")
+        self.addCleanup(tmp_dir.cleanup)
+
+        self.assertTrue(is_authorized_approver(config, "111"))
+        self.assertTrue(is_authorized_approver(config, 222))
+        self.assertFalse(is_authorized_approver(config, "333"))
+
+    def test_build_approval_embed_includes_required_details(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        embed = build_approval_embed(
+            ApprovalRequest(
+                topic="ai agents",
+                tone="analysis",
+                final_post_text="AI agents need better handoffs. 🤖 #botWrites https://example.com/ai-agents",
+                instagram_caption="AI agents reshape support workflows\n\n#aiagents #botWrites",
+                elapsed=4.2,
+                attempts=2,
+                target_platforms=["Bluesky", "Instagram"],
+                news_item=news_item,
+            )
+        )
+
+        self.assertEqual(embed["title"], "Post awaiting approval")
+        field_names = [field["name"] for field in embed["fields"]]
+        self.assertIn("Target platforms", field_names)
+        self.assertIn("Article URL", field_names)
+        self.assertIn("Final post", field_names)
+        self.assertIn("Instagram caption preview", field_names)
 
 
 if __name__ == "__main__":

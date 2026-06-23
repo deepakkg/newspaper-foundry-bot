@@ -1,6 +1,6 @@
 # Gemma Tweet Bot
 
-This bot fetches recent topic news from Google News RSS, generates short posts with an OpenAI-compatible LLM API, posts them to Bluesky or X, records each successful post in GitHub, and can send Telegram and Discord notifications.
+This bot fetches recent topic news from Google News RSS, generates short posts with an OpenAI-compatible LLM API, asks for Discord approval, then publishes to the enabled platforms: Bluesky, Instagram, X, or any combination of them.
 
 ## GitHub Actions schedule
 
@@ -19,10 +19,14 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Secret
 
 - `LLM_API_KEY`
 - `BLUESKY_APP_PASSWORD`
+- `INSTAGRAM_ACCESS_TOKEN`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
 - `X_API_KEY`
 - `X_API_KEY_SECRET`
 - `X_ACCESS_TOKEN`
 - `X_ACCESS_TOKEN_SECRET`
+- `DISCORD_BOT_TOKEN`
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
 - `DISCORD_WEBHOOK_URL`
@@ -45,8 +49,16 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `POST_TO_BLUESKY`
 - `BLUESKY_HANDLE`
 - `BLUESKY_SERVICE_URL`
+- `POST_TO_INSTAGRAM`
+- `INSTAGRAM_ACCOUNT_ID`
+- `INSTAGRAM_GRAPH_API_VERSION`
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_FOLDER`
 - `POST_TO_X`
 - `X_USERNAME`
+- `APPROVAL_TIMEOUT_MINUTES`
+- `DISCORD_CHANNEL_ID`
+- `DISCORD_APPROVER_USER_IDS`
 - `TELEGRAM_NOTIFICATIONS_ENABLED`
 - `DISCORD_NOTIFICATIONS_ENABLED`
 
@@ -62,7 +74,11 @@ NEWS_REGION=US
 NEWS_LANGUAGE=en
 POST_TO_BLUESKY=true
 BLUESKY_SERVICE_URL=https://bsky.social
+POST_TO_INSTAGRAM=false
+INSTAGRAM_GRAPH_API_VERSION=v23.0
+CLOUDINARY_FOLDER=content-bot
 POST_TO_X=false
+APPROVAL_TIMEOUT_MINUTES=90
 TELEGRAM_NOTIFICATIONS_ENABLED=false
 DISCORD_NOTIFICATIONS_ENABLED=false
 ```
@@ -76,7 +92,33 @@ BLUESKY_SERVICE_URL=https://bsky.social
 BLUESKY_APP_PASSWORD=your_app_password
 ```
 
-When `POST_TO_BLUESKY=true`, Bluesky is the primary publisher. Keep `POST_TO_X=false` while X posting is not free. If both Bluesky and X publishing are disabled, the bot runs in manual mode and sends the final post text to notifications.
+Publishing is approval-first. When any publishing platform is enabled, the bot sends a Discord approval request and waits up to `APPROVAL_TIMEOUT_MINUTES`. It publishes only after an allowed Discord user clicks Approve. Declined or expired runs are logged but not published.
+
+For Discord approval, set:
+
+```text
+DISCORD_BOT_TOKEN=your_discord_bot_token
+DISCORD_CHANNEL_ID=your_private_channel_id
+DISCORD_APPROVER_USER_IDS=your_user_id,another_user_id
+APPROVAL_TIMEOUT_MINUTES=90
+```
+
+For Instagram publishing, use an Instagram Creator or Business account connected to a Facebook Page, then set:
+
+```text
+POST_TO_INSTAGRAM=true
+INSTAGRAM_ACCOUNT_ID=your_instagram_account_id
+INSTAGRAM_GRAPH_API_VERSION=v23.0
+INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+CLOUDINARY_FOLDER=content-bot
+```
+
+Instagram posts use a Pillow-generated square image and a caption built from the news headline, source, published time, topic/tone hashtags, LLM-suggested hashtags, and `#botWrites` as the final hashtag.
+
+Keep `POST_TO_X=false` while X posting is not free. If Bluesky, Instagram, and X publishing are all disabled, the bot runs in manual mode and sends the final post text to notifications.
 
 Choose `LLM_BASE_URL`, `LLM_MODEL`, and `LLM_API_KEY` based on the provider you want to use.
 Do not use a provider's website URL as `LLM_BASE_URL`. For example,
@@ -122,15 +164,15 @@ when invoked.
 
 ## Logs and notifications
 
-GitHub Actions writes successful auto-published posts to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
+GitHub Actions writes successful published posts, declined approval runs, expired approval runs, and publish failures to `tweet-history.md` on a separate branch named `tweet-history`. This keeps the `main` branch stable, so routine bot runs do not create conflicts when code or workflow changes are pushed.
 
 To view the log in GitHub, switch the branch selector from `main` to `tweet-history` and open `tweet-history.md`.
 
-When a recent RSS item is used, the log also includes the news title, source, published time, and URL. Manual-mode generated posts are not written to the history log.
+When a recent RSS item is used, the log also includes the news title, source, published time, and URL. Successful published logs include each enabled platform result. Manual-mode generated posts are not written to the history log.
 
 For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 
-Notification channels are opt-in. Set `TELEGRAM_NOTIFICATIONS_ENABLED=true` to send Telegram summaries, and set `DISCORD_NOTIFICATIONS_ENABLED=true` to send Discord webhook embeds. If an enabled notification channel is missing credentials or fails to send, the bot prints a warning and continues.
+Notification channels are opt-in. Set `TELEGRAM_NOTIFICATIONS_ENABLED=true` to send Telegram summaries, and set `DISCORD_NOTIFICATIONS_ENABLED=true` to send Discord webhook embeds. Approval uses `DISCORD_BOT_TOKEN` and `DISCORD_CHANNEL_ID`, not the webhook. If an enabled notification channel is missing credentials or fails to send, the bot prints a warning and continues.
 
 Telegram requires:
 

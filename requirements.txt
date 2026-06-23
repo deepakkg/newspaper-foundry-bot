@@ -1,5 +1,8 @@
 atproto
+cloudinary
+discord.py
 openai
+Pillow
 python-dotenv
 requests
 requests-oauthlib

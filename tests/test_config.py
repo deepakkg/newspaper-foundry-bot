@@ -147,7 +147,7 @@ class ConfigTests(unittest.TestCase):
             ):
                 load_config(env_path)
 
-    def test_load_config_bluesky_does_not_require_x_credentials(self) -> None:
+    def test_load_config_requires_x_credentials_when_x_enabled_with_bluesky(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             env_path = Path(tmp_dir) / ".env"
             write_env_file(
@@ -158,10 +158,83 @@ class ConfigTests(unittest.TestCase):
                 POST_TO_X="true",
             )
 
+            with self.assertRaisesRegex(
+                ValueError,
+                "POST_TO_X is enabled but required X credentials are missing",
+            ):
+                load_config(env_path)
+
+    def test_load_config_accepts_approval_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                APPROVAL_TIMEOUT_MINUTES="45",
+                DISCORD_BOT_TOKEN="bot-token",
+                DISCORD_CHANNEL_ID="12345",
+                DISCORD_APPROVER_USER_IDS="111,222",
+            )
+
             config = load_config(env_path)
 
-        self.assertTrue(config.post_to_bluesky)
-        self.assertTrue(config.post_to_x)
+        self.assertEqual(config.approval_timeout_minutes, 45)
+        self.assertEqual(config.discord_bot_token, "bot-token")
+        self.assertEqual(config.discord_channel_id, "12345")
+        self.assertEqual(config.discord_approver_user_ids, ["111", "222"])
+
+    def test_load_config_requires_approval_settings_when_publishing_enabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                POST_TO_BLUESKY="true",
+                BLUESKY_HANDLE="example.bsky.social",
+                BLUESKY_APP_PASSWORD="app-password",
+                DISCORD_BOT_TOKEN="",
+                DISCORD_CHANNEL_ID="",
+                DISCORD_APPROVER_USER_IDS="",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "required Discord approval settings are missing",
+            ):
+                load_config(env_path)
+
+    def test_load_config_accepts_instagram_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                POST_TO_INSTAGRAM="true",
+                INSTAGRAM_ACCOUNT_ID="1789",
+                INSTAGRAM_ACCESS_TOKEN="ig-token",
+                INSTAGRAM_GRAPH_API_VERSION="v23.0",
+                CLOUDINARY_CLOUD_NAME="cloud",
+                CLOUDINARY_API_KEY="cloud-key",
+                CLOUDINARY_API_SECRET="cloud-secret",
+                CLOUDINARY_FOLDER="content-bot",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.post_to_instagram)
+        self.assertEqual(config.instagram_account_id, "1789")
+        self.assertEqual(config.instagram_access_token, "ig-token")
+        self.assertEqual(config.cloudinary_cloud_name, "cloud")
+        self.assertEqual(config.cloudinary_folder, "content-bot")
+
+    def test_load_config_requires_instagram_and_cloudinary_credentials_when_enabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, POST_TO_INSTAGRAM="true")
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "POST_TO_INSTAGRAM is enabled but required Instagram/Cloudinary "
+                "credentials are missing",
+            ):
+                load_config(env_path)
 
     def test_load_config_allows_missing_notification_credentials(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

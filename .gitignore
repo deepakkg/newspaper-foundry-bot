@@ -11,3 +11,4 @@ scheduler.log
 .pytest_cache/
 .coverage
 htmlcov/
+generated-posts/

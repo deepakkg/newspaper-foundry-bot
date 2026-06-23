@@ -36,6 +36,19 @@ class AppConfig:
     telegram_chat_id: str | None
     discord_notifications_enabled: bool
     discord_webhook_url: str | None
+    discord_bot_token: str | None
+    discord_channel_id: str | None
+    discord_approver_user_ids: list[str]
+    approval_timeout_minutes: int
+    post_to_instagram: bool
+    instagram_account_id: str | None
+    instagram_access_token: str | None
+    instagram_graph_api_version: str
+    cloudinary_cloud_name: str | None
+    cloudinary_api_key: str | None
+    cloudinary_api_secret: str | None
+    cloudinary_folder: str
+    generated_image_dir: Path
     log_file_path: Path
     news_enabled: bool
     news_recency_hours: int
@@ -76,6 +89,10 @@ def _parse_non_empty_text(value: str, name: str) -> str:
     if not normalized:
         raise ValueError(f"{name} must not be empty.")
     return normalized
+
+
+def _parse_optional_csv_list(value: str) -> list[str]:
+    return [item.strip() for item in value.split(",") if item.strip()]
 
 
 def _read_required_env(name: str) -> str:
@@ -137,9 +154,35 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         "DISCORD_NOTIFICATIONS_ENABLED",
     )
     discord_webhook_url = os.getenv("DISCORD_WEBHOOK_URL", "").strip() or None
+    discord_bot_token = os.getenv("DISCORD_BOT_TOKEN", "").strip() or None
+    discord_channel_id = os.getenv("DISCORD_CHANNEL_ID", "").strip() or None
+    discord_approver_user_ids = _parse_optional_csv_list(
+        os.getenv("DISCORD_APPROVER_USER_IDS", "")
+    )
+    approval_timeout_minutes = _parse_positive_int(
+        os.getenv("APPROVAL_TIMEOUT_MINUTES", "90"), "APPROVAL_TIMEOUT_MINUTES"
+    )
+    post_to_instagram = _parse_bool(
+        os.getenv("POST_TO_INSTAGRAM", "false"), "POST_TO_INSTAGRAM"
+    )
+    instagram_account_id = os.getenv("INSTAGRAM_ACCOUNT_ID", "").strip() or None
+    instagram_access_token = os.getenv("INSTAGRAM_ACCESS_TOKEN", "").strip() or None
+    instagram_graph_api_version = (
+        os.getenv("INSTAGRAM_GRAPH_API_VERSION", "v23.0").strip() or "v23.0"
+    )
+    cloudinary_cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME", "").strip() or None
+    cloudinary_api_key = os.getenv("CLOUDINARY_API_KEY", "").strip() or None
+    cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET", "").strip() or None
+    cloudinary_folder = (
+        os.getenv("CLOUDINARY_FOLDER", "content-bot").strip() or "content-bot"
+    )
     log_file_raw = (
         os.getenv("LOG_FILE_PATH", "logs/tweet-history.md").strip()
         or "logs/tweet-history.md"
+    )
+    generated_image_dir_raw = (
+        os.getenv("GENERATED_IMAGE_DIR", "generated-posts").strip()
+        or "generated-posts"
     )
     news_enabled = _parse_bool(os.getenv("NEWS_ENABLED", "true"), "NEWS_ENABLED")
     news_recency_hours = _parse_positive_int(
@@ -152,6 +195,9 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     log_file_path = Path(log_file_raw)
     if not log_file_path.is_absolute():
         log_file_path = PROJECT_ROOT / log_file_path
+    generated_image_dir = Path(generated_image_dir_raw)
+    if not generated_image_dir.is_absolute():
+        generated_image_dir = PROJECT_ROOT / generated_image_dir
 
     if post_to_bluesky:
         missing = [
@@ -169,7 +215,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
                 f"are missing: {missing_str}"
             )
 
-    if post_to_x and not post_to_bluesky:
+    if post_to_x:
         missing = [
             name
             for name, value in (
@@ -185,6 +231,43 @@ def load_config(env_path: Path | None = None) -> AppConfig:
             missing_str = ", ".join(missing)
             raise ValueError(
                 f"POST_TO_X is enabled but required X credentials are missing: {missing_str}"
+            )
+
+    if post_to_instagram:
+        missing = [
+            name
+            for name, value in (
+                ("INSTAGRAM_ACCOUNT_ID", instagram_account_id),
+                ("INSTAGRAM_ACCESS_TOKEN", instagram_access_token),
+                ("CLOUDINARY_CLOUD_NAME", cloudinary_cloud_name),
+                ("CLOUDINARY_API_KEY", cloudinary_api_key),
+                ("CLOUDINARY_API_SECRET", cloudinary_api_secret),
+            )
+            if not value
+        ]
+        if missing:
+            missing_str = ", ".join(missing)
+            raise ValueError(
+                "POST_TO_INSTAGRAM is enabled but required Instagram/Cloudinary "
+                f"credentials are missing: {missing_str}"
+            )
+
+    if post_to_bluesky or post_to_x or post_to_instagram:
+        missing = [
+            name
+            for name, value in (
+                ("DISCORD_BOT_TOKEN", discord_bot_token),
+                ("DISCORD_CHANNEL_ID", discord_channel_id),
+            )
+            if not value
+        ]
+        if not discord_approver_user_ids:
+            missing.append("DISCORD_APPROVER_USER_IDS")
+        if missing:
+            missing_str = ", ".join(missing)
+            raise ValueError(
+                "Publishing is enabled but required Discord approval settings "
+                f"are missing: {missing_str}"
             )
 
     if llm_base_url.startswith("https://") and llm_api_key is None:
@@ -214,6 +297,19 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         telegram_chat_id=telegram_chat_id,
         discord_notifications_enabled=discord_notifications_enabled,
         discord_webhook_url=discord_webhook_url,
+        discord_bot_token=discord_bot_token,
+        discord_channel_id=discord_channel_id,
+        discord_approver_user_ids=discord_approver_user_ids,
+        approval_timeout_minutes=approval_timeout_minutes,
+        post_to_instagram=post_to_instagram,
+        instagram_account_id=instagram_account_id,
+        instagram_access_token=instagram_access_token,
+        instagram_graph_api_version=instagram_graph_api_version,
+        cloudinary_cloud_name=cloudinary_cloud_name,
+        cloudinary_api_key=cloudinary_api_key,
+        cloudinary_api_secret=cloudinary_api_secret,
+        cloudinary_folder=cloudinary_folder,
+        generated_image_dir=generated_image_dir,
         log_file_path=log_file_path,
         news_enabled=news_enabled,
         news_recency_hours=news_recency_hours,

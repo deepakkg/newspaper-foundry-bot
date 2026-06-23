@@ -33,6 +33,19 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "TELEGRAM_NOTIFICATIONS_ENABLED": "false",
         "DISCORD_NOTIFICATIONS_ENABLED": "false",
         "DISCORD_WEBHOOK_URL": "",
+        "DISCORD_BOT_TOKEN": "test-discord-bot-token",
+        "DISCORD_CHANNEL_ID": "1234567890",
+        "DISCORD_APPROVER_USER_IDS": "111,222",
+        "APPROVAL_TIMEOUT_MINUTES": "90",
+        "POST_TO_INSTAGRAM": "false",
+        "INSTAGRAM_ACCOUNT_ID": "",
+        "INSTAGRAM_ACCESS_TOKEN": "",
+        "INSTAGRAM_GRAPH_API_VERSION": "v23.0",
+        "CLOUDINARY_CLOUD_NAME": "",
+        "CLOUDINARY_API_KEY": "",
+        "CLOUDINARY_API_SECRET": "",
+        "CLOUDINARY_FOLDER": "content-bot",
+        "GENERATED_IMAGE_DIR": str(Path(tempfile.gettempdir()) / "content-bot-test-images"),
     }
     values.update(overrides)
     path.write_text(

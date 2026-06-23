@@ -28,6 +28,15 @@ from generator import (
     validate_tweet,
 )
 from google_news_resolver import resolve_news_url
+from cloudinary_uploader import upload_image_to_cloudinary
+from instagram_content import (
+    build_instagram_caption,
+    extract_hashtags,
+    fallback_hashtags,
+    generate_instagram_hashtags,
+)
+from instagram_image import render_instagram_image
+from instagram_publisher import publish_instagram_image
 from link_preview import fetch_link_card_metadata
 from logger import (
     append_log_entry,
@@ -72,6 +81,161 @@ class PublisherTests(unittest.TestCase):
             max_generated_text_chars(280, "https://example.com/news"),
             245,
         )
+
+
+class InstagramContentTests(unittest.TestCase):
+    def test_extract_hashtags_filters_duplicates_and_bot_tag(self) -> None:
+        self.assertEqual(
+            extract_hashtags("#AI #SupportOps #AI #botWrites not-a-tag"),
+            ["#AI", "#SupportOps"],
+        )
+
+    def test_fallback_hashtags_include_topic_and_tone(self) -> None:
+        self.assertEqual(
+            fallback_hashtags("saas professional services", "analysis")[:2],
+            ["#saasprofessionalservices", "#analysis"],
+        )
+
+    def test_build_instagram_caption_ends_with_botwrites(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        caption = build_instagram_caption(
+            topic="ai agents",
+            tone="analysis",
+            news_item=news_item,
+            llm_hashtags=["#AI", "#SupportOps", "#botWrites"],
+        )
+
+        self.assertIn("AI agents reshape support workflows", caption)
+        self.assertIn("Source: Example News", caption)
+        self.assertIn("Published: 2026-05-31 10:00 UTC", caption)
+        self.assertNotIn("https://example.com/ai-agents", caption)
+        self.assertTrue(caption.strip().endswith("#botWrites"))
+
+    def test_generate_instagram_hashtags_falls_back_on_invalid_llm_output(self) -> None:
+        tmp_dir, config = load_temp_config()
+        self.addCleanup(tmp_dir.cleanup)
+        client = MagicMock()
+        client.chat.completions.create.return_value = chat_response("no tags here")
+
+        hashtags = generate_instagram_hashtags(
+            client,
+            config,
+            "ai agents",
+            "analysis",
+            None,
+        )
+
+        self.assertIn("#aiagents", [tag.lower() for tag in hashtags])
+        self.assertIn("#analysis", [tag.lower() for tag in hashtags])
+
+
+class InstagramImageTests(unittest.TestCase):
+    def test_render_instagram_image_creates_square_png(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "post.png"
+            render_instagram_image(
+                "SaaS professional services should reduce churn, not pad margins. ⚙️ #botWrites",
+                output_path,
+            )
+
+            from PIL import Image
+
+            with Image.open(output_path) as image:
+                self.assertEqual(image.size, (1080, 1080))
+                self.assertEqual(image.format, "PNG")
+
+
+class CloudinaryUploaderTests(unittest.TestCase):
+    def test_upload_image_to_cloudinary_returns_secure_url(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch(
+            "cloudinary.uploader.upload",
+            return_value={
+                "secure_url": "https://res.cloudinary.com/demo/post.png",
+                "public_id": "content-bot/post",
+            },
+        ) as mock_upload:
+            uploaded = upload_image_to_cloudinary(config, Path("/tmp/post.png"))
+
+        self.assertEqual(uploaded.secure_url, "https://res.cloudinary.com/demo/post.png")
+        self.assertEqual(uploaded.public_id, "content-bot/post")
+        mock_upload.assert_called_once()
+
+
+class InstagramPublisherTests(unittest.TestCase):
+    def test_publish_instagram_image_creates_and_publishes_container(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        media_response = MagicMock(status_code=200)
+        media_response.json.return_value = {"id": "container-1"}
+        publish_response = MagicMock(status_code=200)
+        publish_response.json.return_value = {
+            "id": "media-1",
+            "permalink": "https://instagram.com/p/abc",
+        }
+
+        with patch(
+            "instagram_publisher.requests.post",
+            side_effect=[media_response, publish_response],
+        ) as mock_post:
+            published = publish_instagram_image(
+                config,
+                image_url="https://res.cloudinary.com/demo/post.png",
+                caption="Caption #botWrites",
+            )
+
+        self.assertEqual(published.media_id, "media-1")
+        self.assertEqual(published.url, "https://instagram.com/p/abc")
+        self.assertEqual(mock_post.call_count, 2)
+        self.assertIn("/1789/media", mock_post.call_args_list[0].args[0])
+        self.assertIn("/1789/media_publish", mock_post.call_args_list[1].args[0])
+
+    def test_publish_instagram_image_raises_clear_error(self) -> None:
+        tmp_dir, config = load_temp_config(
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        response = MagicMock(status_code=400)
+        response.json.return_value = {"error": {"message": "bad image url"}}
+
+        with patch("instagram_publisher.requests.post", return_value=response):
+            with self.assertRaisesRegex(
+                RuntimeError,
+                "Instagram media container creation failed: bad image url",
+            ):
+                publish_instagram_image(
+                    config,
+                    image_url="https://example.com/image.png",
+                    caption="Caption",
+                )
 
 class BlueskyPublisherTests(unittest.TestCase):
     def test_build_bluesky_post_url_uses_record_key(self) -> None:
