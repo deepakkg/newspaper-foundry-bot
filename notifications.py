@@ -79,26 +79,6 @@ def build_discord_success_embed(
             "inline": True,
         },
     ]
-    if news_item:
-        fields.extend(
-            [
-                {
-                    "name": "News title",
-                    "value": format_discord_field_value(news_item.title),
-                    "inline": False,
-                },
-                {
-                    "name": "News source",
-                    "value": format_discord_field_value(news_item.source),
-                    "inline": True,
-                },
-                {
-                    "name": "News published",
-                    "value": format_news_published_at(news_item),
-                    "inline": True,
-                },
-            ]
-        )
     if platform_results:
         fields.append(
             {

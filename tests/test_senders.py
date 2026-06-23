@@ -186,10 +186,23 @@ class DiscordApprovalTests(unittest.TestCase):
 
         self.assertEqual(embed["title"], "Post awaiting approval")
         field_names = [field["name"] for field in embed["fields"]]
-        self.assertIn("Target platforms", field_names)
-        self.assertIn("Article URL", field_names)
-        self.assertIn("Final post", field_names)
-        self.assertIn("Instagram caption preview", field_names)
+        self.assertEqual(
+            field_names,
+            [
+                "Topic",
+                "Tone",
+                "News title",
+                "News source",
+                "News published",
+                "News URL",
+                "Attempts",
+                "Time taken",
+                "Target platforms",
+                "Final post",
+                "Instagram caption preview",
+            ],
+        )
+        self.assertNotIn("Article URL", field_names)
 
     def test_parse_discord_channel_id_rejects_invalid_values(self) -> None:
         self.assertEqual(parse_discord_channel_id("12345"), 12345)

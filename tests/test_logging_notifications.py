@@ -30,6 +30,7 @@ from generator import (
 from google_news_resolver import resolve_news_url
 from link_preview import fetch_link_card_metadata
 from logger import (
+    PlatformLogResult,
     append_log_entry,
     build_failure_telegram_summary,
     build_telegram_summary,
@@ -220,3 +221,57 @@ class LoggerTests(unittest.TestCase):
         self.assertIn("Final post", rendered_outputs[3])
         self.assertIn("Post ready", rendered_outputs[4])
         self.assertIn("Content bot failed", rendered_outputs[5])
+
+    def test_discord_success_embed_orders_platform_results_before_final_post(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape support workflows",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        embed = notifications.build_discord_success_embed(
+            topic="ai agents",
+            tone="analysis",
+            tweet_text="AI agents need better handoffs. 🤖 #botWrites",
+            time_taken_seconds=3.21,
+            attempts=1,
+            news_item=news_item,
+            platform_results=[
+                PlatformLogResult(
+                    platform="Bluesky",
+                    status="published",
+                    url="https://bsky.app/profile/example/post/abc",
+                    identifier="at://did:plc:abc/app.bsky.feed.post/abc",
+                ),
+                PlatformLogResult(
+                    platform="Instagram",
+                    status="published",
+                    identifier="18050706419551949",
+                ),
+            ],
+        )
+
+        field_names = [field["name"] for field in embed["fields"]]
+        self.assertEqual(
+            field_names,
+            [
+                "Topic",
+                "Tone",
+                "Attempts",
+                "Time taken",
+                "Platform results",
+                "Final post",
+            ],
+        )
+        platform_results = embed["fields"][4]["value"]
+        self.assertIn(
+            "Bluesky: published | https://bsky.app/profile/example/post/abc | "
+            "at://did:plc:abc/app.bsky.feed.post/abc",
+            platform_results,
+        )
+        self.assertIn(
+            "Instagram: published | 18050706419551949",
+            platform_results,
+        )

@@ -118,16 +118,19 @@ def build_instagram_caption(
     news_item: NewsItem | None,
     llm_hashtags: list[str],
 ) -> str:
-    lines: list[str] = []
+    published = format_news_published(news_item)
     if news_item:
-        lines.append(news_item.title)
-        lines.append(f"Source: {news_item.source or 'Unknown'}")
-        published = format_news_published(news_item)
-        if published:
-            lines.append(f"Published: {published}")
+        lines: list[str] = [
+            f"News title: {news_item.title or 'Not available'}",
+            f"News source: {news_item.source or 'Not available'}",
+            f"News published: {published or 'Not available'}",
+        ]
     else:
-        lines.append(f"Topic: {topic}")
-        lines.append(f"Tone: {tone}")
+        lines = [
+            "News title: Not available",
+            "News source: Not available",
+            "News published: Not available",
+        ]
 
     hashtags: list[str] = []
     seen: set[str] = set()
@@ -149,5 +152,5 @@ def build_instagram_caption(
     hashtags = [tag for tag in hashtags if tag.lower() != BOT_HASHTAG.lower()]
     hashtags = hashtags[:11]
     hashtags.append(BOT_HASHTAG)
-    lines.extend(["", " ".join(hashtags)])
+    lines.append(f"Hashtags: {' '.join(hashtags)}")
     return "\n".join(lines)

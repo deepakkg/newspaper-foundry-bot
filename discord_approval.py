@@ -43,6 +43,34 @@ def build_approval_embed(request: ApprovalRequest) -> dict[str, object]:
     fields: list[dict[str, object]] = [
         {"name": "Topic", "value": request.topic, "inline": True},
         {"name": "Tone", "value": request.tone, "inline": True},
+        {
+            "name": "News title",
+            "value": _field_value(
+                request.news_item.title if request.news_item else None
+            ),
+            "inline": False,
+        },
+        {
+            "name": "News source",
+            "value": _field_value(
+                request.news_item.source if request.news_item else None
+            ),
+            "inline": True,
+        },
+        {
+            "name": "News published",
+            "value": (
+                format_news_published_at(request.news_item)
+                if request.news_item
+                else "Not available"
+            ),
+            "inline": True,
+        },
+        {
+            "name": "News URL",
+            "value": _field_value(request.news_item.link if request.news_item else None),
+            "inline": False,
+        },
         {"name": "Attempts", "value": str(request.attempts), "inline": True},
         {
             "name": "Time taken",
@@ -55,31 +83,6 @@ def build_approval_embed(request: ApprovalRequest) -> dict[str, object]:
             "inline": False,
         },
     ]
-    if request.news_item:
-        fields.extend(
-            [
-                {
-                    "name": "News title",
-                    "value": _field_value(request.news_item.title),
-                    "inline": False,
-                },
-                {
-                    "name": "News source",
-                    "value": _field_value(request.news_item.source),
-                    "inline": True,
-                },
-                {
-                    "name": "News published",
-                    "value": format_news_published_at(request.news_item),
-                    "inline": True,
-                },
-                {
-                    "name": "Article URL",
-                    "value": _field_value(request.news_item.link),
-                    "inline": False,
-                },
-            ]
-        )
     fields.append(
         {
             "name": "Final post",

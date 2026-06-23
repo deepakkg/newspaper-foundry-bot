@@ -117,10 +117,32 @@ class InstagramContentTests(unittest.TestCase):
             llm_hashtags=["#AI", "#SupportOps", "#botWrites"],
         )
 
-        self.assertIn("AI agents reshape support workflows", caption)
-        self.assertIn("Source: Example News", caption)
-        self.assertIn("Published: 2026-05-31 10:00 UTC", caption)
+        self.assertIn("News title: AI agents reshape support workflows", caption)
+        self.assertIn("News source: Example News", caption)
+        self.assertIn("News published: 2026-05-31 10:00 UTC", caption)
+        self.assertIn("Hashtags: #aiagents #analysis #AI #SupportOps #botWrites", caption)
+        self.assertNotIn("Topic:", caption)
+        self.assertNotIn("Tone:", caption)
         self.assertNotIn("https://example.com/ai-agents", caption)
+        self.assertTrue(caption.strip().endswith("#botWrites"))
+
+    def test_build_instagram_caption_uses_not_available_without_news(self) -> None:
+        caption = build_instagram_caption(
+            topic="saas professional services",
+            tone="analysis",
+            news_item=None,
+            llm_hashtags=["#SaaS", "#BusinessAnalysis"],
+        )
+
+        self.assertIn("News title: Not available", caption)
+        self.assertIn("News source: Not available", caption)
+        self.assertIn("News published: Not available", caption)
+        self.assertIn(
+            "Hashtags: #saasprofessionalservices #analysis #SaaS #BusinessAnalysis #botWrites",
+            caption,
+        )
+        self.assertNotIn("Topic:", caption)
+        self.assertNotIn("Tone:", caption)
         self.assertTrue(caption.strip().endswith("#botWrites"))
 
     def test_generate_instagram_hashtags_falls_back_on_invalid_llm_output(self) -> None:
