@@ -2575,3 +2575,32 @@ Source: BBC
 Published: 2026-06-23 06:37 UTC
 
 #india #funny #lucknow #currentaffairs #newsindia #indiaupdates #botWrites
+
+## Post partially published
+
+- Date/time: 2026-06-23 07:03:01
+- Topic: cricket
+- Tone: nostalgic
+- Time taken: 6.80 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: The unhearalded star lifting Australia's T20 World Cup hopes - ICC
+- News source: ICC
+- News published: 2026-06-23 06:59 UTC
+- News URL: https://www.icc-cricket.com/tournaments/womens-t20-worldcup-2026/news/the-unhearalded-star-lifting-australia-s-t20-world-cup-hopes
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mowtgqqz5f2u | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mowtgqqz5f2u
+- Instagram: failed | Instagram media container creation failed: Invalid OAuth access token - Cannot parse access token; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1782198180/instagram-content-bot/pumvmkcda5nxxhdyeezo.png
+
+Post text:
+
+> Cricket is best when an unknown player takes over. Australia has an unheralded star lifting their T20 World Cup hopes. Reminds me of the old days when a random name on the scorecard changed the game 🏏🇦🇺 #botWrites https://www.icc-cricket.com/tournaments/womens-t20-worldcup-2026/news/the-unhearalded-star-lifting-australia-s-t20-world-cup-hopes
+
+Instagram caption:
+
+The unhearalded star lifting Australia's T20 World Cup hopes - ICC
+Source: ICC
+Published: 2026-06-23 06:59 UTC
+
+#cricket #nostalgic #t20worldcup #australiacricket #cricketlover #memories #nostalgia #botWrites
