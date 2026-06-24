@@ -3032,3 +3032,31 @@ Source: Blockchain Council
 Published At: 2026-06-23 02:07 IST
 
 #forwarddeployedengineers #witty #ForwardDeployedEngineer #CodingLife #InterviewPrep #DevHumor #SoftwareEngineering #BlockchainJobs #botWrites
+
+## Post published
+
+- Date/time: 2026-06-24 05:33:20
+- Topic: vibe coding
+- Tone: analysis
+- Time taken: 4.72 seconds
+- Attempts: 1
+- News title: A fintech company said its employee burned through $80,000 in tokens making a 'brainrot shooter game' - Business Insider
+- News source: Business Insider
+- News published: 2026-06-24 10:11 IST
+- News URL: https://www.businessinsider.com/fintech-company-slash-employee-burned-through-thousands-in-tokens-2026-6
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3moz6uwct7n2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3moz6uwct7n2b
+- Instagram: published | 17951580441193064
+
+Post text:
+
+> Vibe coding is a liability without guardrails. A fintech employee spent $80,000 in tokens building a brainrot shooter game. Prompting for vibes is fast, but token costs scale faster than oversight. Control your API spend 💸📉 #botWrites https://www.businessinsider.com/fintech-company-slash-employee-burned-through-thousands-in-tokens-2026-6
+
+Instagram caption:
+
+A fintech company said its employee burned through $80,000 in tokens making a 'brainrot shooter game'
+Source: Business Insider
+Published At: 2026-06-24 10:11 IST
+
+#vibecoding #analysis #ai #softwareengineering #fintech #coding #techtrends #botWrites
