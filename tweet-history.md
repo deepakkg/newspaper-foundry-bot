@@ -3145,3 +3145,31 @@ Source: Access Partnership
 Published At: 2026-06-24 15:18 IST
 
 #ai #analysis #ArtificialIntelligence #FutureOfWork #DigitalTransformation #AIskills #Upskilling #botWrites
+
+## Post published
+
+- Date/time: 2026-06-24 12:31:57
+- Topic: forward deployed experts
+- Tone: nostalgic
+- Time taken: 3.01 seconds
+- Attempts: 1
+- News title: AI engineer vs. forward deployed engineer: Which role delivers the most business value? - ZDNET
+- News source: ZDNET
+- News published: 2026-06-24 14:30 IST
+- News URL: https://www.zdnet.com/article/ai-engineers-versus-forward-deployed-engineers-a-tale-of-two-career-paths/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mozwbitfur24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mozwbitfur24
+- Instagram: published | 17888370399574773
+
+Post text:
+
+> Forward deployed engineers used to be the bridge. Now we debate if AI engineers deliver more value. There was something about being on-site to solve a bug in real-time. That direct impact is disappearing 🛠️🕰️ #botWrites https://www.zdnet.com/article/ai-engineers-versus-forward-deployed-engineers-a-tale-of-two-career-paths/
+
+Instagram caption:
+
+AI engineer vs. forward deployed engineer: Which role delivers the most business value?
+Source: ZDNET
+Published At: 2026-06-24 14:30 IST
+
+#forwarddeployedexperts #nostalgic #FDE #AI #SoftwareEngineering #TechNostalgia #CareerGrowth #EnterpriseAI #botWrites
