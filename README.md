@@ -1,17 +1,17 @@
 # Gemma Tweet Bot
 
-This bot fetches recent topic news from Google News RSS, generates short posts with an OpenAI-compatible LLM API, asks for Discord approval, then publishes to the enabled platforms: Bluesky, Instagram, X, or any combination of them.
+This bot fetches recent topic news from Google News RSS, generates short posts with an OpenAI-compatible LLM API, optionally asks for Discord approval, then publishes to the enabled platforms: Bluesky, Instagram, X, or any combination of them.
 
 ## GitHub Actions schedule
 
 The workflow has four explicit GitHub cron entries for these India-time slots:
 
-- 06:00 IST
+- 08:00 IST
 - 12:00 IST
-- 18:00 IST
-- 22:00 IST
+- 16:00 IST
+- 20:00 IST
 
-GitHub cron uses UTC, so the workflow file maps these to `00:30`, `06:30`, `12:30`, and `16:30` UTC.
+GitHub cron uses UTC, so the workflow file maps these to `02:30`, `06:30`, `10:30`, and `14:30` UTC.
 
 ## GitHub Secrets
 
@@ -57,6 +57,7 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `CLOUDINARY_FOLDER`
 - `POST_TO_X`
 - `X_USERNAME`
+- `APPROVAL_REQUIRED`
 - `APPROVAL_TIMEOUT_MINUTES`
 - `DISCORD_CHANNEL_ID`
 - `DISCORD_APPROVER_USER_IDS`
@@ -80,6 +81,7 @@ INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com
 INSTAGRAM_GRAPH_API_VERSION=v23.0
 CLOUDINARY_FOLDER=content-bot
 POST_TO_X=false
+APPROVAL_REQUIRED=true
 APPROVAL_TIMEOUT_MINUTES=90
 TELEGRAM_NOTIFICATIONS_ENABLED=false
 DISCORD_NOTIFICATIONS_ENABLED=false
@@ -94,11 +96,14 @@ BLUESKY_SERVICE_URL=https://bsky.social
 BLUESKY_APP_PASSWORD=your_app_password
 ```
 
-Publishing is approval-first. When any publishing platform is enabled, the bot sends a Discord approval request and waits up to `APPROVAL_TIMEOUT_MINUTES`. It publishes only after an allowed Discord user clicks Approve. Declined or expired runs are logged but not published.
+Publishing is approval-first by default. When any publishing platform is enabled and `APPROVAL_REQUIRED=true`, the bot sends a Discord approval request and waits up to `APPROVAL_TIMEOUT_MINUTES`. It publishes only after an allowed Discord user clicks Approve. Declined or expired runs are logged but not published.
+
+Set `APPROVAL_REQUIRED=false` to skip the approval gate and publish directly to the enabled platforms. Post-publish Discord and Telegram notification formats stay the same.
 
 For Discord approval, set:
 
 ```text
+APPROVAL_REQUIRED=true
 DISCORD_BOT_TOKEN=your_discord_bot_token
 DISCORD_CHANNEL_ID=your_private_channel_id
 DISCORD_APPROVER_USER_IDS=your_user_id,another_user_id
@@ -179,7 +184,7 @@ When a recent RSS item is used, the log also includes the news title, source, pu
 
 For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
 
-Notification channels are opt-in. Set `TELEGRAM_NOTIFICATIONS_ENABLED=true` to send Telegram summaries, and set `DISCORD_NOTIFICATIONS_ENABLED=true` to send Discord webhook embeds. Approval uses `DISCORD_BOT_TOKEN` and `DISCORD_CHANNEL_ID`, not the webhook. If an enabled notification channel is missing credentials or fails to send, the bot prints a warning and continues.
+Notification channels are opt-in. Set `TELEGRAM_NOTIFICATIONS_ENABLED=true` to send Telegram summaries, and set `DISCORD_NOTIFICATIONS_ENABLED=true` to send Discord webhook embeds. When `APPROVAL_REQUIRED=true`, approval uses `DISCORD_BOT_TOKEN` and `DISCORD_CHANNEL_ID`, not the webhook. If an enabled notification channel is missing credentials or fails to send, the bot prints a warning and continues.
 
 Telegram requires:
 

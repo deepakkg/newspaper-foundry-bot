@@ -105,6 +105,56 @@ class TweetGeneratorTests(unittest.TestCase):
         )
         self.assertIn("Post published and logged.", buffer.getvalue())
 
+    def test_run_once_direct_publish_skips_approval_when_disabled(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            APPROVAL_REQUIRED="false",
+            DISCORD_BOT_TOKEN="",
+            DISCORD_CHANNEL_ID="",
+            DISCORD_APPROVER_USER_IDS="",
+            DISCORD_NOTIFICATIONS_ENABLED="true",
+            DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/1/token",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "witty"]):
+                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                        with patch.object(
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            return_value=("AI agents are moving into support queues. 🤖", 1.0, 1),
+                        ):
+                            with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
+                                with patch.object(
+                                    tweet_generator,
+                                    "post_to_bluesky",
+                                    return_value=MagicMock(
+                                        url="https://bsky.app/profile/example.bsky.social/post/abc",
+                                        uri="at://did/post/abc",
+                                    ),
+                                ) as mock_bluesky:
+                                    with patch.object(notifications, "send_discord_embed") as mock_discord:
+                                        with patch("sys.stdout", buffer):
+                                            result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_approval.assert_not_called()
+        mock_bluesky.assert_called_once()
+        embed = mock_discord.call_args.args[1]
+        self.assertEqual(embed["title"], "Post published")
+        self.assertIn("Final post", [field["name"] for field in embed["fields"]])
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("## Post published", log_content)
+        self.assertIn("- Bluesky: published", log_content)
+        self.assertNotIn("Decision by:", log_content)
+        self.assertIn("Post published and logged.", buffer.getvalue())
+
     def test_run_once_declined_publishes_nowhere_and_logs_outcome(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(
@@ -349,6 +399,52 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("- Bluesky: failed | rate limited", log_content)
         self.assertIn("- X: published", log_content)
 
+    def test_run_once_direct_publish_reports_partial_publish(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            POST_TO_X="true",
+            X_API_KEY="key",
+            X_API_KEY_SECRET="secret",
+            X_ACCESS_TOKEN="token",
+            X_ACCESS_TOKEN_SECRET="token-secret",
+            X_USERNAME="example",
+            APPROVAL_REQUIRED="false",
+            DISCORD_BOT_TOKEN="",
+            DISCORD_CHANNEL_ID="",
+            DISCORD_APPROVER_USER_IDS="",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 1),
+                ):
+                    with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
+                        with patch.object(tweet_generator, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
+                            with patch.object(
+                                tweet_generator,
+                                "post_tweet_to_x",
+                                return_value=MagicMock(tweet_id="123", url="https://x.com/example/status/123"),
+                            ):
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_approval.assert_not_called()
+        output = buffer.getvalue()
+        self.assertIn("Bluesky: failed | rate limited", output)
+        self.assertIn("X: published", output)
+        self.assertIn("Post partially published and logged.", output)
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("## Post partially published", log_content)
+        self.assertNotIn("Decision by:", log_content)
+
     def test_run_once_all_platform_failures_send_failure_notification(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(
@@ -385,6 +481,44 @@ class TweetGeneratorTests(unittest.TestCase):
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn("## Post publish failed", log_content)
         self.assertNotIn("## Post published", log_content)
+
+    def test_run_once_direct_publish_all_failures_send_failure_notification(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            APPROVAL_REQUIRED="false",
+            DISCORD_BOT_TOKEN="",
+            DISCORD_CHANNEL_ID="",
+            DISCORD_APPROVER_USER_IDS="",
+            TELEGRAM_NOTIFICATIONS_ENABLED="true",
+            TELEGRAM_BOT_TOKEN="bot-token",
+            TELEGRAM_CHAT_ID="12345",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "generate_valid_tweet",
+                    return_value=("Coffee is back. ☕", 1.0, 1),
+                ):
+                    with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
+                        with patch.object(tweet_generator, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
+                            with patch.object(notifications, "send_telegram_message") as mock_telegram:
+                                with patch("sys.stdout", buffer):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_approval.assert_not_called()
+        telegram_text = mock_telegram.call_args.args[1]
+        self.assertIn("Content bot failed", telegram_text)
+        self.assertIn("All enabled platforms failed", telegram_text)
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("## Post publish failed", log_content)
+        self.assertNotIn("Decision by:", log_content)
 
     def test_run_once_manual_mode_still_sends_post_text_without_publishing(self) -> None:
         buffer = StringIO()

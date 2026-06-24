@@ -39,6 +39,7 @@ class AppConfig:
     discord_bot_token: str | None
     discord_channel_id: str | None
     discord_approver_user_ids: list[str]
+    approval_required: bool
     approval_timeout_minutes: int
     post_to_instagram: bool
     instagram_account_id: str | None
@@ -160,6 +161,9 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     discord_approver_user_ids = _parse_optional_csv_list(
         os.getenv("DISCORD_APPROVER_USER_IDS", "")
     )
+    approval_required = _parse_bool(
+        os.getenv("APPROVAL_REQUIRED", "true"), "APPROVAL_REQUIRED"
+    )
     approval_timeout_minutes = _parse_positive_int(
         os.getenv("APPROVAL_TIMEOUT_MINUTES", "90"), "APPROVAL_TIMEOUT_MINUTES"
     )
@@ -257,7 +261,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
                 f"credentials are missing: {missing_str}"
             )
 
-    if post_to_bluesky or post_to_x or post_to_instagram:
+    if approval_required and (post_to_bluesky or post_to_x or post_to_instagram):
         missing = [
             name
             for name, value in (
@@ -305,6 +309,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         discord_bot_token=discord_bot_token,
         discord_channel_id=discord_channel_id,
         discord_approver_user_ids=discord_approver_user_ids,
+        approval_required=approval_required,
         approval_timeout_minutes=approval_timeout_minutes,
         post_to_instagram=post_to_instagram,
         instagram_account_id=instagram_account_id,

@@ -36,6 +36,7 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "DISCORD_BOT_TOKEN": "test-discord-bot-token",
         "DISCORD_CHANNEL_ID": "1234567890",
         "DISCORD_APPROVER_USER_IDS": "111,222",
+        "APPROVAL_REQUIRED": "true",
         "APPROVAL_TIMEOUT_MINUTES": "90",
         "POST_TO_INSTAGRAM": "false",
         "INSTAGRAM_ACCOUNT_ID": "",

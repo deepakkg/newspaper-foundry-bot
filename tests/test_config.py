@@ -181,6 +181,41 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(config.discord_bot_token, "bot-token")
         self.assertEqual(config.discord_channel_id, "12345")
         self.assertEqual(config.discord_approver_user_ids, ["111", "222"])
+        self.assertTrue(config.approval_required)
+
+    def test_load_config_defaults_approval_required_to_true(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            env_path.write_text(
+                "\n".join(
+                    [
+                        "LLM_BASE_URL=http://localhost:11434/v1",
+                        "LLM_MODEL=gemma3:1b",
+                        "TOPICS=coffee",
+                        "TONES=witty",
+                        "POST_TO_X=false",
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            with patch.dict("os.environ", {}, clear=True):
+                config = load_config(env_path)
+
+        self.assertTrue(config.approval_required)
+
+    def test_load_config_accepts_disabled_approval(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                APPROVAL_REQUIRED="false",
+            )
+
+            config = load_config(env_path)
+
+        self.assertFalse(config.approval_required)
 
     def test_load_config_requires_approval_settings_when_publishing_enabled(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -200,6 +235,30 @@ class ConfigTests(unittest.TestCase):
                 "required Discord approval settings are missing",
             ):
                 load_config(env_path)
+
+    def test_load_config_does_not_require_approval_settings_when_approval_disabled(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                POST_TO_BLUESKY="true",
+                BLUESKY_HANDLE="example.bsky.social",
+                BLUESKY_APP_PASSWORD="app-password",
+                APPROVAL_REQUIRED="false",
+                DISCORD_BOT_TOKEN="",
+                DISCORD_CHANNEL_ID="",
+                DISCORD_APPROVER_USER_IDS="",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.post_to_bluesky)
+        self.assertFalse(config.approval_required)
+        self.assertIsNone(config.discord_bot_token)
+        self.assertIsNone(config.discord_channel_id)
+        self.assertEqual(config.discord_approver_user_ids, [])
 
     def test_load_config_accepts_instagram_settings(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

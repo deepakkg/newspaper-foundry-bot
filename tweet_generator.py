@@ -314,51 +314,54 @@ def run_once() -> int:
 
         stop_spinner(stop_event, spinner_thread)
         elapsed = time.perf_counter() - process_start
-        approval = request_discord_approval(
-            config,
-            ApprovalRequest(
-                topic=topic,
-                tone=tone,
-                final_post_text=final_post_text,
-                instagram_caption=instagram_caption,
-                elapsed=elapsed,
-                attempts=attempts,
-                target_platforms=target_platforms,
-                news_item=news_item,
-            ),
-        )
-
-        if approval.status in {"declined", "expired"}:
-            title = "Post declined" if approval.status == "declined" else "Post expired"
-            append_log_entry(
-                config.log_file_path,
-                build_run_log_entry(
-                    title=title,
+        decision_by = None
+        if config.approval_required:
+            approval = request_discord_approval(
+                config,
+                ApprovalRequest(
                     topic=topic,
                     tone=tone,
-                    post_text=final_post_text,
-                    time_taken_seconds=elapsed,
-                    attempts=attempts,
-                    platform_results=[
-                        PlatformLogResult(
-                            platform=platform,
-                            status="not published",
-                            error=approval.status,
-                        )
-                        for platform in target_platforms
-                    ],
-                    news_title=news_item.title if news_item else None,
-                    news_source=news_item.source if news_item else None,
-                    news_published_at=format_news_published_at(news_item)
-                    if news_item
-                    else None,
-                    news_url=news_item.link if news_item else None,
+                    final_post_text=final_post_text,
                     instagram_caption=instagram_caption,
-                    decision_by=approval.username or approval.user_id,
+                    elapsed=elapsed,
+                    attempts=attempts,
+                    target_platforms=target_platforms,
+                    news_item=news_item,
                 ),
             )
-            print("Post was not published.")
-            return 0
+            decision_by = approval.username or approval.user_id
+
+            if approval.status in {"declined", "expired"}:
+                title = "Post declined" if approval.status == "declined" else "Post expired"
+                append_log_entry(
+                    config.log_file_path,
+                    build_run_log_entry(
+                        title=title,
+                        topic=topic,
+                        tone=tone,
+                        post_text=final_post_text,
+                        time_taken_seconds=elapsed,
+                        attempts=attempts,
+                        platform_results=[
+                            PlatformLogResult(
+                                platform=platform,
+                                status="not published",
+                                error=approval.status,
+                            )
+                            for platform in target_platforms
+                        ],
+                        news_title=news_item.title if news_item else None,
+                        news_source=news_item.source if news_item else None,
+                        news_published_at=format_news_published_at(news_item)
+                        if news_item
+                        else None,
+                        news_url=news_item.link if news_item else None,
+                        instagram_caption=instagram_caption,
+                        decision_by=decision_by,
+                    ),
+                )
+                print("Post was not published.")
+                return 0
 
         outcome = publish_enabled_platforms(
             config,
@@ -388,7 +391,7 @@ def run_once() -> int:
                     else None,
                     news_url=news_item.link if news_item else None,
                     instagram_caption=instagram_caption,
-                    decision_by=approval.username or approval.user_id,
+                    decision_by=decision_by,
                 ),
             )
             errors = "; ".join(
@@ -410,7 +413,7 @@ def run_once() -> int:
             news_published_at=format_news_published_at(news_item) if news_item else None,
             news_url=news_item.link if news_item else None,
             instagram_caption=instagram_caption,
-            decision_by=approval.username or approval.user_id,
+            decision_by=decision_by,
         )
         append_log_entry(config.log_file_path, log_entry)
         send_success_notifications(
