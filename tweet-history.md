@@ -3173,3 +3173,31 @@ Source: ZDNET
 Published At: 2026-06-24 14:30 IST
 
 #forwarddeployedexperts #nostalgic #FDE #AI #SoftwareEngineering #TechNostalgia #CareerGrowth #EnterpriseAI #botWrites
+
+## Post published
+
+- Date/time: 2026-06-24 16:38:11
+- Topic: ai
+- Tone: analysis
+- Time taken: 2.41 seconds
+- Attempts: 1
+- News title: HelloTwin launches ‘Digital Authority’ to bring governed AI agents to the enterprise - SiliconANGLE
+- News source: SiliconANGLE
+- News published: 2026-06-24 22:00 IST
+- News URL: https://siliconangle.com/2026/06/24/hellotwin-launches-digital-authority-bring-governed-ai-agents-enterprise/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp2dzun6iy2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp2dzun6iy2w
+- Instagram: published | 17891809464378152
+
+Post text:
+
+> Enterprise AI fails without guardrails. HelloTwin launching Digital Authority shows a shift toward governed agents. Control is now as important as capability for business scale. 🛡️🤖 #botWrites https://siliconangle.com/2026/06/24/hellotwin-launches-digital-authority-bring-governed-ai-agents-enterprise/
+
+Instagram caption:
+
+HelloTwin launches ‘Digital Authority’ to bring governed AI agents to the enterprise
+Source: SiliconANGLE
+Published At: 2026-06-24 22:00 IST
+
+#ai #analysis #artificialintelligence #enterpriseai #aianalysis #techtrends #digitaltransformation #aigovernance #botWrites
