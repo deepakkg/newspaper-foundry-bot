@@ -3117,3 +3117,31 @@ Source: The Times of India
 Published At: 2026-06-24 07:10 IST
 
 #saas #hottake #KyunkiSaasBhiKabhiBahuThi #Tulsi #IndianSoapOperas #DramaAlert #TVShows #botWrites
+
+## Post published
+
+- Date/time: 2026-06-24 09:56:18
+- Topic: ai
+- Tone: analysis
+- Time taken: 2.96 seconds
+- Attempts: 1
+- News title: How to build AI skilling initiatives that last: the AI for All Workforce Skilling Policy Toolkit - Access Partnership
+- News source: Access Partnership
+- News published: 2026-06-24 15:18 IST
+- News URL: https://accesspartnership.com/reports/ai-for-all-workforce-skilling-policy-toolkit/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3moznl4mhde2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3moznl4mhde2b
+- Instagram: published | 18077584457674410
+
+Post text:
+
+> AI skilling fails when it is a one-off event. The AI for All Workforce Skilling Policy Toolkit from Access Partnership shows that lasting impact requires a structured policy approach, not random workshops. 🛠️📈 #botWrites https://accesspartnership.com/reports/ai-for-all-workforce-skilling-policy-toolkit/
+
+Instagram caption:
+
+How to build AI skilling initiatives that last: the AI for All Workforce Skilling Policy Toolkit
+Source: Access Partnership
+Published At: 2026-06-24 15:18 IST
+
+#ai #analysis #ArtificialIntelligence #FutureOfWork #DigitalTransformation #AIskills #Upskilling #botWrites
