@@ -3060,3 +3060,32 @@ Source: Business Insider
 Published At: 2026-06-24 10:11 IST
 
 #vibecoding #analysis #ai #softwareengineering #fintech #coding #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-06-24 05:39:32
+- Topic: saas professional services
+- Tone: nostalgic
+- Time taken: 2.89 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: 8 examples of small businesses building community on social media - Sprout Social
+- News source: Sprout Social
+- News published: 2026-06-23 06:03 IST
+- News URL: https://sproutsocial.com/insights/examples-of-small-businesses-building-community-on-social-media/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3moz77ycl7o2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3moz77ycl7o2r
+- Instagram: published | 17966802273086414
+
+Post text:
+
+> SaaS professional services used to be about the human touch. Sprout Social highlights how small businesses build community now. We need that same intimacy in implementation. A guided setup beats a generic PDF every time. 🛠️🤝 #botWrites https://sproutsocial.com/insights/examples-of-small-businesses-building-community-on-social-media/
+
+Instagram caption:
+
+8 examples of small businesses building community on social media
+Source: Sprout Social
+Published At: 2026-06-23 06:03 IST
+
+#saasprofessionalservices #nostalgic #saas #smallbusiness #communitybuilding #digitaltransformation #businessgrowth #nostalgia #botWrites
