@@ -3,11 +3,11 @@ name: Tweet Bot
 on:
   schedule:
     # GitHub cron uses UTC. These four entries map to:
-    # 06:00, 12:00, 18:00, and 22:00 in Asia/Kolkata.
-    - cron: "30 0 * * *"
+    # 08:00, 12:00, 16:00, and 20:00 in Asia/Kolkata.
+    - cron: "30 2 * * *"
     - cron: "30 6 * * *"
-    - cron: "30 12 * * *"
-    - cron: "30 16 * * *"
+    - cron: "30 10 * * *"
+    - cron: "30 14 * * *"
   workflow_dispatch:
 
 permissions:
