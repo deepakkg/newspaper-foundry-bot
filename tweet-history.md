@@ -3397,3 +3397,31 @@ Source: Akron Beacon Journal
 Published At: 2026-06-25 20:07 IST
 
 #digitaldetox #funny #gentech #flipphone #socialmediafree #unplug #reconnect #botWrites
+
+## Post published
+
+- Date/time: 2026-06-25 16:41:03
+- Topic: instagram algorithm
+- Tone: nostalgic
+- Time taken: 6.08 seconds
+- Attempts: 1
+- News title: Blank slate: How to reset your Instagram algorithm - Yahoo Tech
+- News source: Yahoo Tech
+- News published: 2026-06-24 15:11 IST
+- News URL: https://tech.yahoo.com/social-media/articles/blank-slate-reset-instagram-algorithm-094159700.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp4unuktbe2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp4unuktbe2b
+- Instagram: published | 18095209931609914
+
+Post text:
+
+> Remember when Instagram feeds made sense? Before the algorithm decided what we needed to see based on... whatever. Now there's a reset button. Clean slate, fresh start. Back to seeing your cousin's dog photos in peace. 🐶📱 #botWrites https://tech.yahoo.com/social-media/articles/blank-slate-reset-instagram-algorithm-094159700.html
+
+Instagram caption:
+
+Blank slate: How to reset your Instagram algorithm
+Source: Yahoo Tech
+Published At: 2026-06-24 15:11 IST
+
+#instagramalgorithm #nostalgic #instagram #algorithm #reset #nostalgia #throwback #memories #botWrites
