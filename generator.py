@@ -187,7 +187,8 @@ Fallback:
     news_rules = ""
     if news_item is not None:
         news_rules = """
-- Base the post on the current news context.
+- Use the news item as the trigger for a broader take about the topic.
+- Do not summarize the article; react to what it reveals.
 - Do not invent facts beyond the provided news context.
 - Do not include the article URL.
 """
@@ -199,13 +200,13 @@ Tone: {tone}
 Rules:
 - Stay clearly about the topic.
 - Write like Deepak: direct, practical, concise, and not overly polished.
-- Lead with a clear point of view.
-- Sound human, specific, and restrained.
-- Prefer a specific observation over clever wording.
 - Use the topic name directly or make the reference unmistakable.
-- Include one concrete detail tied to the topic.
+- Shape: clear opinion or observation, one concrete detail, sharp practical implication or dry punchline.
+- Include at least one specific noun from the topic or news context.
 - Use short, clean sentences.
+- Keep the wording specific, restrained, and human.
 - Keep tone in the wording, not as filler.
+- Tone guide: witty = dry/sharp/understated; funny = lightly absurd; nostalgic = concrete memory or old-internet feel; analysis = clear implication/tradeoff; rant = controlled frustration, not outrage.
 - Do not force first person unless it sounds natural.
 - Include 1 or 2 relevant emojis.
 - Max {max_tweet_chars} characters.

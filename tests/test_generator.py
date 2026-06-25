@@ -52,7 +52,7 @@ class GeneratorValidationTests(unittest.TestCase):
         prompt = build_prompt("saas professional services", "serious", 230, 1)
 
         self.assertIn("Write one post about:", prompt)
-        self.assertLess(len(prompt), 1200)
+        self.assertLess(len(prompt), 1400)
 
     def test_build_compact_prompt_is_shorter(self) -> None:
         full_prompt = build_prompt("saas professional services", "serious", 230, 2)
@@ -99,6 +99,8 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("AI agents reshape enterprise workflows", prompt)
         self.assertIn("Example News", prompt)
         self.assertIn("Include 1 or 2 relevant emojis.", prompt)
+        self.assertIn("Use the news item as the trigger", prompt)
+        self.assertIn("Do not summarize the article", prompt)
         self.assertIn("Do not include the article URL.", prompt)
 
     def test_build_prompt_includes_deepak_style_guidance(self) -> None:
@@ -106,6 +108,13 @@ class GeneratorValidationTests(unittest.TestCase):
 
         self.assertIn("Write like Deepak", prompt)
         self.assertIn("direct, practical, concise", prompt)
+        self.assertIn("clear opinion or observation", prompt)
+        self.assertIn("one concrete detail", prompt)
+        self.assertIn("sharp practical implication or dry punchline", prompt)
+        self.assertIn("specific noun", prompt)
+        self.assertIn("Tone guide", prompt)
+        self.assertIn("witty = dry/sharp/understated", prompt)
+        self.assertIn("analysis = clear implication/tradeoff", prompt)
         self.assertIn("Do not force first person", prompt)
         self.assertIn("Pseudo-profound", prompt)
         self.assertIn("The real lesson", prompt)
