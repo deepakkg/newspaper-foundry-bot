@@ -3229,3 +3229,31 @@ Source: The Register
 Published At: 2026-06-25 11:43 IST
 
 #vibecoding #deepthought #softwareengineering #futureofwork #techthoughts #codinglife #ai #botWrites
+
+## Post published
+
+- Date/time: 2026-06-25 09:51:08
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 3.87 seconds
+- Attempts: 1
+- News title: AI Will Not Take Engineering Jobs - autogpt.net
+- News source: autogpt.net
+- News published: 2026-06-25 11:22 IST
+- News URL: https://autogpt.net/ai-will-not-take-engineering-jobs/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp45qsewi32l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp45qsewi32l
+- Instagram: published | 18590883259007872
+
+Post text:
+
+> AI engineers can stop sweating. autogpt.net says AI won't take engineering jobs. Now they can go back to spending six hours debugging one line of Python. 💻🤖 #botWrites https://autogpt.net/ai-will-not-take-engineering-jobs/
+
+Instagram caption:
+
+AI Will Not Take Engineering Jobs
+Source: autogpt.net
+Published At: 2026-06-25 11:22 IST
+
+#aiengineers #funny #softwareengineer #codinghumor #aiart #devlife #programmerlife #botWrites
