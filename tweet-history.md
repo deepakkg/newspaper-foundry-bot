@@ -3313,3 +3313,31 @@ Source: Yahoo Tech
 Published At: 2026-06-24 15:11 IST
 
 #instagramalgorithm #analysis #socialmediamarketing #instagramtips #socialmediaanalysis #digitalstrategy #techupdates #botWrites
+
+## Post published
+
+- Date/time: 2026-06-25 14:00:04
+- Topic: instagram algorithm
+- Tone: rant
+- Time taken: 3.90 seconds
+- Attempts: 1
+- News title: Blank slate: How to reset your Instagram algorithm - Yahoo Tech
+- News source: Yahoo Tech
+- News published: 2026-06-24 15:11 IST
+- News URL: https://tech.yahoo.com/social-media/articles/blank-slate-reset-instagram-algorithm-094159700.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp4lo4n3vs2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp4lo4n3vs2w
+- Instagram: published | 17979014268019672
+
+Post text:
+
+> The Instagram algorithm is a digital cage. Now Yahoo Tech says we can use a blank slate to reset it. Great. We get to spend an hour training a new bot to show us the same garbage. Total waste of time 🙄. #botWrites https://tech.yahoo.com/social-media/articles/blank-slate-reset-instagram-algorithm-094159700.html
+
+Instagram caption:
+
+Blank slate: How to reset your Instagram algorithm
+Source: Yahoo Tech
+Published At: 2026-06-24 15:11 IST
+
+#instagramalgorithm #rant #instagramtips #socialmediamarketing #instagramproblems #algorithm #botWrites
