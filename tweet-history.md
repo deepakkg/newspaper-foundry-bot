@@ -3201,3 +3201,31 @@ Source: SiliconANGLE
 Published At: 2026-06-24 22:00 IST
 
 #ai #analysis #artificialintelligence #enterpriseai #aianalysis #techtrends #digitaltransformation #aigovernance #botWrites
+
+## Post published
+
+- Date/time: 2026-06-25 06:31:37
+- Topic: vibe coding
+- Tone: deep thought
+- Time taken: 3.92 seconds
+- Attempts: 1
+- News title: Infosys boss says vibe coding is no threat because there’s more to writing software than writing software - The Register
+- News source: The Register
+- News published: 2026-06-25 11:43 IST
+- News URL: https://www.theregister.com/channel/2026/06/25/infosys-boss-says-vibe-coding-is-no-threat-because-theres-more-to-writing-software-than-writing-software/5261900
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp3sm27rtl2t | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp3sm27rtl2t
+- Instagram: published | 18105040000832967
+
+Post text:
+
+> Vibe coding handles the syntax, but not the system. The Infosys CEO is right. Software is more than writing code. It is architecture, risk, and maintenance. LLMs cannot vibe their way through a legacy migration 🏗️💻 #botWrites https://www.theregister.com/channel/2026/06/25/infosys-boss-says-vibe-coding-is-no-threat-because-theres-more-to-writing-software-than-writing-software/5261900
+
+Instagram caption:
+
+Infosys boss says vibe coding is no threat because there’s more to writing software than writing software
+Source: The Register
+Published At: 2026-06-25 11:43 IST
+
+#vibecoding #deepthought #softwareengineering #futureofwork #techthoughts #codinglife #ai #botWrites
