@@ -3369,3 +3369,31 @@ Source: Fuel Cells Works
 Published At: 2026-06-24 19:17 IST
 
 #fde #nostalgic #hydrogen #cleanenergy #innovation #sustainability #futureenergy #greenhydrogen #botWrites
+
+## Post published
+
+- Date/time: 2026-06-25 16:38:14
+- Topic: digital detox
+- Tone: funny
+- Time taken: 11.67 seconds
+- Attempts: 4
+- News title: From 'digital detoxes' to flip phones, why Gen Z is turning anti-tech - Akron Beacon Journal
+- News source: Akron Beacon Journal
+- News published: 2026-06-25 20:07 IST
+- News URL: https://www.beaconjournal.com/story/news/technology/2026/06/25/young-adults-turning-anti-tech-flip-phones/89107381007/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp4uix2kk22w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp4uix2kk22w
+- Instagram: published | 17859047421661242
+
+Post text:
+
+> Gen Z is ditching smartphones for flip phones like they're auditioning for a 2005 reboot. Digital detox is now just called "being broke and confused by TikTok." 📴 #botWrites https://www.beaconjournal.com/story/news/technology/2026/06/25/young-adults-turning-anti-tech-flip-phones/89107381007/
+
+Instagram caption:
+
+From 'digital detoxes' to flip phones, why Gen Z is turning anti-tech
+Source: Akron Beacon Journal
+Published At: 2026-06-25 20:07 IST
+
+#digitaldetox #funny #gentech #flipphone #socialmediafree #unplug #reconnect #botWrites
