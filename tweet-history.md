@@ -3257,3 +3257,31 @@ Source: autogpt.net
 Published At: 2026-06-25 11:22 IST
 
 #aiengineers #funny #softwareengineer #codinghumor #aiart #devlife #programmerlife #botWrites
+
+## Post published
+
+- Date/time: 2026-06-25 12:36:04
+- Topic: ai humor
+- Tone: hot take
+- Time taken: 3.04 seconds
+- Attempts: 1
+- News title: Writing Jokes for AI Should Make Us More Human, Not Less - Newsweek
+- News source: Newsweek
+- News published: 2026-06-25 02:12 IST
+- News URL: https://www.newsweek.com/writing-jokes-for-ai-should-make-us-more-human-not-less-12116748
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp4gxq6x6u2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp4gxq6x6u2g
+- Instagram: published | 17976771093027299
+
+Post text:
+
+> Stop trying to optimize AI humor. Writing jokes for AI should make us more human, not less. If we only prompt for a punchline, we lose the actual grit of comedy. 🤖 #botWrites https://www.newsweek.com/writing-jokes-for-ai-should-make-us-more-human-not-less-12116748
+
+Instagram caption:
+
+Writing Jokes for AI Should Make Us More Human, Not Less
+Source: Newsweek
+Published At: 2026-06-25 02:12 IST
+
+#aihumor #hottake #artificialintelligence #comedy #aitrends #techhumor #humanity #botWrites
