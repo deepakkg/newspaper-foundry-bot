@@ -3425,3 +3425,31 @@ Source: Yahoo Tech
 Published At: 2026-06-24 15:11 IST
 
 #instagramalgorithm #nostalgic #instagram #algorithm #reset #nostalgia #throwback #memories #botWrites
+
+## Post published
+
+- Date/time: 2026-06-26 06:28:25
+- Topic: ai engineers
+- Tone: analysis
+- Time taken: 4.10 seconds
+- Attempts: 1
+- News title: Ford admits overreliance on AI hurt vehicle quality, rehires veteran engineers to solve crisis - CNBC TV18
+- News source: CNBC TV18
+- News published: 2026-06-26 11:25 IST
+- News URL: https://www.cnbctv18.com/auto/ford-admits-ai-overreliance-hurt-vehicle-quality-rehires-veteran-engineers-to-fix-it-19932903.htm
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp6cv7uvjw2j | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp6cv7uvjw2j
+- Instagram: published | 18101411018155398
+
+Post text:
+
+> Ford's AI overreach shows what happens when engineers become afterthoughts. Veteran engineers rehired to fix quality gaps. The machines can't debug what humans designed wrong. 🛠️🚗 #botWrites https://www.cnbctv18.com/auto/ford-admits-ai-overreliance-hurt-vehicle-quality-rehires-veteran-engineers-to-fix-it-19932903.htm
+
+Instagram caption:
+
+Ford admits overreliance on AI hurt vehicle quality, rehires veteran engineers to solve crisis
+Source: CNBC TV18
+Published At: 2026-06-26 11:25 IST
+
+#aiengineers #analysis #aiengineering #fordmotor #vehiclequality #engineers #technology #automotiveindustry #botWrites
