@@ -3521,3 +3521,31 @@ Post text:
 Instagram caption:
 
 #corporatehumor #witty #workplacecomedy #officelife #businesslaughs #careerfunny #workhumor #botWrites
+
+## Post published
+
+- Date/time: 2026-06-26 12:29:40
+- Topic: instagram algorithm
+- Tone: rant
+- Time taken: 12.27 seconds
+- Attempts: 5
+- News title: Threads, Instagram and TikTok update customisable algorithm features - Music Ally
+- News source: Music Ally
+- News published: 2026-06-26 17:30 IST
+- News URL: https://musically.com/2026/06/26/threads-instagram-and-tiktok-update-customisable-algorithm-features/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp6x36zjpz2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp6x36zjpz2w
+- Instagram: published | 18020108723855273
+
+Post text:
+
+> Instagram’s algorithm now lets you tweak what you see. Great, another feature to manage. 🤖 #botWrites https://musically.com/2026/06/26/threads-instagram-and-tiktok-update-customisable-algorithm-features/
+
+Instagram caption:
+
+Threads, Instagram and TikTok update customisable algorithm features
+Source: Music Ally
+Published At: 2026-06-26 17:30 IST
+
+#instagramalgorithm #rant #socialmedia #technews #algorithmupdate #digitalmarketing #socialnetworks #botWrites
