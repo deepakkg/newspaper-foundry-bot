@@ -3453,3 +3453,23 @@ Source: CNBC TV18
 Published At: 2026-06-26 11:25 IST
 
 #aiengineers #analysis #aiengineering #fordmotor #vehiclequality #engineers #technology #automotiveindustry #botWrites
+
+## Post published
+
+- Date/time: 2026-06-26 06:34:48
+- Topic: corporate humor
+- Tone: analysis
+- Time taken: 9.73 seconds
+- Attempts: 4
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp6damvkpc2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp6damvkpc2l
+- Instagram: published | 18008701139869369
+
+Post text:
+
+> Corporate humor is the conference room PowerPoint joke that falls flat but still gets forwarded to three more meetings. The tradeoff: mandatory levity vs. actual work. Dry punchline: someone always laughs nervously. 📊😅 #botWrites
+
+Instagram caption:
+
+#corporatehumor #analysis #workplacecomedy #officejokes #businesshumor #corporatelife #workhumor #botWrites
