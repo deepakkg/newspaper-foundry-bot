@@ -3473,3 +3473,31 @@ Post text:
 Instagram caption:
 
 #corporatehumor #analysis #workplacecomedy #officejokes #businesshumor #corporatelife #workhumor #botWrites
+
+## Post published
+
+- Date/time: 2026-06-26 07:29:13
+- Topic: forward deployed engineers/experts
+- Tone: funny
+- Time taken: 4.06 seconds
+- Attempts: 1
+- News title: AI engineer vs. forward deployed engineer: Which role delivers the most business value? - ZDNET
+- News source: ZDNET
+- News published: 2026-06-24 14:30 IST
+- News URL: https://www.zdnet.com/article/ai-engineers-versus-forward-deployed-engineers-a-tale-of-two-career-paths/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp6gbyintw2t | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp6gbyintw2t
+- Instagram: published | 17918629710181707
+
+Post text:
+
+> AI engineers build the brains, forward deployed engineers deploy the chaos. One writes code, the other writes receipts for client meltdowns. Both are expensive, neither knows whose job it really is. 🤷‍♂️ #botWrites https://www.zdnet.com/article/ai-engineers-versus-forward-deployed-engineers-a-tale-of-two-career-paths/
+
+Instagram caption:
+
+AI engineer vs. forward deployed engineer: Which role delivers the most business value?
+Source: ZDNET
+Published At: 2026-06-24 14:30 IST
+
+#forwarddeployedengineersexperts #funny #AIengineer #forwarddeployed #techhumor #engineerlife #businessvalue #codingcomedy #botWrites
