@@ -3501,3 +3501,23 @@ Source: ZDNET
 Published At: 2026-06-24 14:30 IST
 
 #forwarddeployedengineersexperts #funny #AIengineer #forwarddeployed #techhumor #engineerlife #businessvalue #codingcomedy #botWrites
+
+## Post published
+
+- Date/time: 2026-06-26 09:57:42
+- Topic: corporate humor
+- Tone: witty
+- Time taken: 11.51 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp6oljmujq2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp6oljmujq2l
+- Instagram: published | 18096988370189052
+
+Post text:
+
+> Corporate humor is the art of laughing at spreadsheets until they laugh back. 📊 Someone once told a joke so dry it got filed under "Q3 synergies." Now everyone's afraid to tell jokes during earnings calls. 😅 #botWrites
+
+Instagram caption:
+
+#corporatehumor #witty #workplacecomedy #officelife #businesslaughs #careerfunny #workhumor #botWrites
