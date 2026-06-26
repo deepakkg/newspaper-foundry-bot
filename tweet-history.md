@@ -3549,3 +3549,31 @@ Source: Music Ally
 Published At: 2026-06-26 17:30 IST
 
 #instagramalgorithm #rant #socialmedia #technews #algorithmupdate #digitalmarketing #socialnetworks #botWrites
+
+## Post published
+
+- Date/time: 2026-06-26 16:32:07
+- Topic: digital detox
+- Tone: rant
+- Time taken: 2.81 seconds
+- Attempts: 1
+- News title: No more digital detoxes? Why you should keep your phone with you when you travel - Elliott Report
+- News source: Elliott Report
+- News published: 2026-06-26 15:30 IST
+- News URL: https://www.elliott.org/safe-travels/no-more-digital-detoxes-why-you-should-keep-your-phone-with-you-when-you-travel/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mp7emqudyo2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mp7emqudyo2b
+- Instagram: published | 18063691055709128
+
+Post text:
+
+> Digital detox is dead. Phones stay. Travel smarter. ✈️📱 #botWrites https://www.elliott.org/safe-travels/no-more-digital-detoxes-why-you-should-keep-your-phone-with-you-when-you-travel/
+
+Instagram caption:
+
+No more digital detoxes? Why you should keep your phone with you when you travel
+Source: Elliott Report
+Published At: 2026-06-26 15:30 IST
+
+#digitaldetox #rant #travel #phone #technology #lifestyle #botWrites
