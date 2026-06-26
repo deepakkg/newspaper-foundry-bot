@@ -108,14 +108,18 @@ class GeneratorValidationTests(unittest.TestCase):
 
         self.assertIn("Write like Deepak", prompt)
         self.assertIn("direct, practical, concise", prompt)
-        self.assertIn("clear opinion or observation", prompt)
+        self.assertIn("clear observation", prompt)
         self.assertIn("one concrete detail", prompt)
-        self.assertIn("sharp practical implication or dry punchline", prompt)
+        self.assertIn("1-3 natural sentences", prompt)
+        self.assertIn("practical implication or understated joke", prompt)
         self.assertIn("specific noun", prompt)
         self.assertIn("Tone guide", prompt)
-        self.assertIn("witty = dry/sharp/understated", prompt)
-        self.assertIn("analysis = clear implication/tradeoff", prompt)
+        self.assertIn("witty=dry/sharp", prompt)
+        self.assertIn("analysis=implication/tradeoff", prompt)
         self.assertIn("Do not force first person", prompt)
+        self.assertIn("No section labels: Observation:", prompt)
+        self.assertNotIn("Shape:", prompt)
+        self.assertNotIn("sharp practical implication or dry punchline", prompt)
         self.assertIn("Pseudo-profound", prompt)
         self.assertIn("The real lesson", prompt)
         self.assertIn("More than two emojis", prompt)
@@ -283,3 +287,58 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertEqual(result, "pseudo-profound phrasing")
+
+    def test_rejects_dry_punchline_label_leak(self) -> None:
+        topic, topic_tokens = normalize_topic("corporate humor")
+        tweet = (
+            "Corporate humor is the conference room PowerPoint joke that still gets "
+            "forwarded to three more meetings. Dry punchline: someone always laughs "
+            "nervously. 📊"
+        )
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertEqual(result, "label leaked into post")
+
+    def test_rejects_the_tradeoff_label_leak(self) -> None:
+        topic, topic_tokens = normalize_topic("ai agents")
+        tweet = (
+            "AI agents make support queues look faster. The tradeoff: nobody knows "
+            "who owns the escalation path when the bot gives up. 🤖"
+        )
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertEqual(result, "label leaked into post")
+
+    def test_accepts_natural_tradeoff_word_without_label(self) -> None:
+        topic, topic_tokens = normalize_topic("ai agents")
+        tweet = (
+            "AI agents make escalation faster, but the tradeoff is messy ownership "
+            "when nobody knows who approved the handoff. 🤖"
+        )
+
+        result = validate_tweet(
+            tweet,
+            topic,
+            topic_tokens,
+            max_tweet_chars=230,
+            attempt_number=1,
+            max_retries=5,
+        )
+
+        self.assertIsNone(result)

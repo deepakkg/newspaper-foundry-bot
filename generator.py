@@ -104,6 +104,12 @@ PSEUDO_PROFOUND_PATTERNS = (
     re.compile(r"\bisn'?t\s+about\b.{0,100}\bit'?s\s+about\b"),
     re.compile(r"\bnot\s+just\s+about\b.{0,100}\bit'?s\s+about\b"),
 )
+LEAKED_LABEL_PATTERN = re.compile(
+    r"(?:^|[.!?\n]\s*)"
+    r"(?:observation|detail|implication|tradeoff|the tradeoff|punchline|"
+    r"dry punchline|takeaway|point of view)\s*:",
+    re.IGNORECASE,
+)
 
 
 def build_client(config: AppConfig) -> OpenAI:
@@ -200,13 +206,13 @@ Tone: {tone}
 Rules:
 - Stay clearly about the topic.
 - Write like Deepak: direct, practical, concise, and not overly polished.
-- Use the topic name directly or make the reference unmistakable.
-- Shape: clear opinion or observation, one concrete detail, sharp practical implication or dry punchline.
-- Include at least one specific noun from the topic or news context.
+- Name the topic or make it unmistakable.
+- Write 1-3 natural sentences: clear observation, one concrete detail, practical implication or understated joke.
+- Include one specific noun from the topic or news context.
 - Use short, clean sentences.
-- Keep the wording specific, restrained, and human.
+- Stay specific and restrained.
 - Keep tone in the wording, not as filler.
-- Tone guide: witty = dry/sharp/understated; funny = lightly absurd; nostalgic = concrete memory or old-internet feel; analysis = clear implication/tradeoff; rant = controlled frustration, not outrage.
+- Tone guide: witty=dry/sharp; funny=lightly absurd; nostalgic=memory/old internet; analysis=implication/tradeoff; rant=controlled frustration.
 - Do not force first person unless it sounds natural.
 - Include 1 or 2 relevant emojis.
 - Max {max_tweet_chars} characters.
@@ -214,6 +220,7 @@ Rules:
 
 Do not use:
 - Hashtags, labels, or quotes.
+- No section labels: Observation:, Detail:, Implication:, Tradeoff:, Punchline:, Dry punchline:, or Takeaway:.
 - Generic filler, work-stress drift, or meta commentary.
 - "Imagine this", "Picture a world", or "In a world where".
 - Pseudo-profound framing like "It's not about X, it's about Y" or "The real lesson".
@@ -306,6 +313,8 @@ def get_style_issue(text: str) -> str | None:
         return "too many emojis"
     if is_overdecorated(text):
         return "too much punctuation clutter"
+    if has_leaked_label(text):
+        return "label leaked into post"
 
     if any(phrase in lowered for phrase in HARD_FAIL_PHRASES):
         return "hard-fail filler phrasing"
@@ -321,6 +330,10 @@ def get_style_issue(text: str) -> str | None:
         return "pseudo-profound phrasing"
 
     return None
+
+
+def has_leaked_label(text: str) -> bool:
+    return bool(LEAKED_LABEL_PATTERN.search(text))
 
 
 def is_pseudo_profound(text: str) -> bool:
