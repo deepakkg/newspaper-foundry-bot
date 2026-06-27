@@ -52,6 +52,11 @@ class AppConfig:
     cloudinary_folder: str
     generated_image_dir: Path
     log_file_path: Path
+    article_links_enabled: bool
+    article_links_page_url: str | None
+    article_links_max_items: int
+    article_links_data_path: Path
+    article_links_html_path: Path
     news_enabled: bool
     news_recency_hours: int
     news_region: str
@@ -193,6 +198,13 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         os.getenv("GENERATED_IMAGE_DIR", "generated-posts").strip()
         or "generated-posts"
     )
+    article_links_enabled = _parse_bool(
+        os.getenv("ARTICLE_LINKS_ENABLED", "false"), "ARTICLE_LINKS_ENABLED"
+    )
+    article_links_page_url = os.getenv("ARTICLE_LINKS_PAGE_URL", "").strip() or None
+    article_links_max_items = _parse_positive_int(
+        os.getenv("ARTICLE_LINKS_MAX_ITEMS", "25"), "ARTICLE_LINKS_MAX_ITEMS"
+    )
     news_enabled = _parse_bool(os.getenv("NEWS_ENABLED", "true"), "NEWS_ENABLED")
     news_recency_hours = _parse_positive_int(
         os.getenv("NEWS_RECENCY_HOURS", "48"), "NEWS_RECENCY_HOURS"
@@ -207,6 +219,9 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     generated_image_dir = Path(generated_image_dir_raw)
     if not generated_image_dir.is_absolute():
         generated_image_dir = PROJECT_ROOT / generated_image_dir
+    article_links_dir = log_file_path.parent / "article-links"
+    article_links_data_path = article_links_dir / "links.json"
+    article_links_html_path = article_links_dir / "index.html"
 
     if post_to_bluesky:
         missing = [
@@ -322,6 +337,11 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         cloudinary_folder=cloudinary_folder,
         generated_image_dir=generated_image_dir,
         log_file_path=log_file_path,
+        article_links_enabled=article_links_enabled,
+        article_links_page_url=article_links_page_url,
+        article_links_max_items=article_links_max_items,
+        article_links_data_path=article_links_data_path,
+        article_links_html_path=article_links_html_path,
         news_enabled=news_enabled,
         news_recency_hours=news_recency_hours,
         news_region=news_region,

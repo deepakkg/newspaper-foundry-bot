@@ -133,6 +133,7 @@ def build_instagram_caption(
     tone: str,
     news_item: NewsItem | None,
     llm_hashtags: list[str],
+    article_link_in_bio: bool = False,
 ) -> str:
     published = format_news_published(news_item)
     if news_item:
@@ -167,4 +168,6 @@ def build_instagram_caption(
     if lines:
         lines.append("")
     lines.append(" ".join(hashtags))
+    if news_item and article_link_in_bio:
+        lines.extend(["", "Article link in bio."])
     return "\n".join(lines)

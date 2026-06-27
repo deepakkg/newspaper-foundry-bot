@@ -296,6 +296,46 @@ class ConfigTests(unittest.TestCase):
 
         self.assertEqual(config.instagram_graph_base_url, "https://graph.facebook.com")
 
+    def test_load_config_accepts_article_link_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            log_path = Path(tmp_dir) / "history" / "tweet-history.md"
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                LOG_FILE_PATH=str(log_path),
+                ARTICLE_LINKS_ENABLED="true",
+                ARTICLE_LINKS_PAGE_URL="https://example.github.io/bot/article-links/",
+                ARTICLE_LINKS_MAX_ITEMS="10",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.article_links_enabled)
+        self.assertEqual(
+            config.article_links_page_url,
+            "https://example.github.io/bot/article-links/",
+        )
+        self.assertEqual(config.article_links_max_items, 10)
+        self.assertEqual(
+            config.article_links_data_path,
+            log_path.parent / "article-links" / "links.json",
+        )
+        self.assertEqual(
+            config.article_links_html_path,
+            log_path.parent / "article-links" / "index.html",
+        )
+
+    def test_load_config_defaults_article_links_to_disabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path)
+
+            config = load_config(env_path)
+
+        self.assertFalse(config.article_links_enabled)
+        self.assertIsNone(config.article_links_page_url)
+        self.assertEqual(config.article_links_max_items, 25)
+
     def test_load_config_requires_instagram_and_cloudinary_credentials_when_enabled(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             env_path = Path(tmp_dir) / ".env"

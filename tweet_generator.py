@@ -12,6 +12,7 @@ from pathlib import Path
 
 from openai import OpenAIError
 
+from article_links import build_article_link_entry, update_article_links_page
 from bluesky_publisher import post_to_bluesky
 from cloudinary_uploader import upload_image_to_cloudinary
 from config import AppConfig, load_config
@@ -77,6 +78,40 @@ def format_platform_result(result: PlatformLogResult) -> str:
 def print_platform_results(results: list[PlatformLogResult]) -> None:
     for result in results:
         print(format_platform_result(result))
+
+
+def update_article_links_after_instagram_publish(
+    config: AppConfig,
+    *,
+    news_item: NewsItem | None,
+    results: list[PlatformLogResult],
+) -> None:
+    if not config.article_links_enabled or news_item is None:
+        return
+
+    instagram_result = next(
+        (
+            result
+            for result in results
+            if result.platform == "Instagram" and result.status == "published"
+        ),
+        None,
+    )
+    if instagram_result is None:
+        return
+
+    try:
+        update_article_links_page(
+            config,
+            build_article_link_entry(
+                news_item,
+                instagram_media_id=instagram_result.identifier,
+                instagram_url=instagram_result.url,
+            ),
+        )
+        print(f"Article link page updated: {news_item.link}")
+    except Exception as exc:
+        print(f"Warning: Article link page update failed: {exc}")
 
 
 def publish_enabled_platforms(
@@ -295,6 +330,7 @@ def run_once() -> int:
                     tone,
                     news_item,
                 ),
+                article_link_in_bio=config.article_links_enabled,
             )
 
         if not target_platforms:
@@ -372,6 +408,11 @@ def run_once() -> int:
             instagram_caption=instagram_caption,
         )
         print_platform_results(outcome.results)
+        update_article_links_after_instagram_publish(
+            config,
+            news_item=news_item,
+            results=outcome.results,
+        )
 
         if outcome.success_count == 0:
             append_log_entry(

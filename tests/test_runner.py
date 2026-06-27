@@ -274,6 +274,176 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("- Instagram: published", log_content)
         self.assertIn("Instagram caption:", log_content)
 
+    def test_run_once_updates_article_links_after_instagram_publish(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+            ARTICLE_LINKS_ENABLED="true",
+            APPROVAL_REQUIRED="false",
+            DISCORD_BOT_TOKEN="",
+            DISCORD_CHANNEL_ID="",
+            DISCORD_APPROVER_USER_IDS="",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        uploaded = SimpleNamespace(
+            secure_url="https://res.cloudinary.com/demo/post.png",
+            public_id="content-bot/post",
+        )
+        published = SimpleNamespace(media_id="179", url="https://instagram.com/p/abc")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                        with patch.object(
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            return_value=("AI agents need better handoffs. 🤖", 1.0, 1),
+                        ):
+                            with patch.object(
+                                tweet_generator,
+                                "generate_instagram_hashtags",
+                                return_value=["#AI", "#SupportOps"],
+                            ):
+                                with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
+                                    with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                        with patch.object(tweet_generator, "upload_image_to_cloudinary", return_value=uploaded):
+                                            with patch.object(tweet_generator, "publish_instagram_image", return_value=published) as mock_publish:
+                                                with patch("sys.stdout", buffer):
+                                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_approval.assert_not_called()
+        caption = mock_publish.call_args.kwargs["caption"]
+        self.assertTrue(caption.strip().endswith("Article link in bio."))
+        self.assertTrue(config.article_links_data_path.exists())
+        self.assertTrue(config.article_links_html_path.exists())
+        payload = config.article_links_data_path.read_text(encoding="utf-8")
+        self.assertIn("https://example.com/ai-agents", payload)
+        self.assertIn("179", payload)
+        self.assertIn("Article link page updated: https://example.com/ai-agents", buffer.getvalue())
+
+    def test_run_once_does_not_update_article_links_when_instagram_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+            ARTICLE_LINKS_ENABLED="true",
+            APPROVAL_REQUIRED="false",
+            DISCORD_BOT_TOKEN="",
+            DISCORD_CHANNEL_ID="",
+            DISCORD_APPROVER_USER_IDS="",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                        with patch.object(
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            return_value=("AI agents need better handoffs. 🤖", 1.0, 1),
+                        ):
+                            with patch.object(
+                                tweet_generator,
+                                "generate_instagram_hashtags",
+                                return_value=["#AI"],
+                            ):
+                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                    with patch.object(
+                                        tweet_generator,
+                                        "upload_image_to_cloudinary",
+                                        return_value=SimpleNamespace(
+                                            secure_url="https://res.cloudinary.com/demo/post.png",
+                                            public_id="content-bot/post",
+                                        ),
+                                    ):
+                                        with patch.object(
+                                            tweet_generator,
+                                            "publish_instagram_image",
+                                            side_effect=RuntimeError("bad image url"),
+                                        ):
+                                            with patch("sys.stdout", buffer):
+                                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertFalse(config.article_links_data_path.exists())
+        self.assertFalse(config.article_links_html_path.exists())
+        self.assertNotIn("Article link page updated", buffer.getvalue())
+
+    def test_run_once_warns_when_article_link_page_update_fails(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+            ARTICLE_LINKS_ENABLED="true",
+            APPROVAL_REQUIRED="false",
+            DISCORD_BOT_TOKEN="",
+            DISCORD_CHANNEL_ID="",
+            DISCORD_APPROVER_USER_IDS="",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                        with patch.object(
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            return_value=("AI agents need better handoffs. 🤖", 1.0, 1),
+                        ):
+                            with patch.object(
+                                tweet_generator,
+                                "generate_instagram_hashtags",
+                                return_value=["#AI"],
+                            ):
+                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                    with patch.object(
+                                        tweet_generator,
+                                        "upload_image_to_cloudinary",
+                                        return_value=SimpleNamespace(
+                                            secure_url="https://res.cloudinary.com/demo/post.png",
+                                            public_id="content-bot/post",
+                                        ),
+                                    ):
+                                        with patch.object(
+                                            tweet_generator,
+                                            "publish_instagram_image",
+                                            return_value=SimpleNamespace(
+                                                media_id="179",
+                                                url="https://instagram.com/p/abc",
+                                            ),
+                                        ):
+                                            with patch.object(
+                                                tweet_generator,
+                                                "update_article_links_page",
+                                                side_effect=OSError("disk full"),
+                                            ):
+                                                with patch("sys.stdout", buffer):
+                                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        self.assertIn("Warning: Article link page update failed: disk full", buffer.getvalue())
+        self.assertIn("Post published and logged.", buffer.getvalue())
+
     def test_run_once_instagram_failure_reports_partial_publish(self) -> None:
         buffer = StringIO()
         tmp_dir, config = load_temp_config(

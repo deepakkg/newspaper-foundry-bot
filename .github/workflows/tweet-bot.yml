@@ -46,6 +46,9 @@ jobs:
       CLOUDINARY_FOLDER: ${{ vars.CLOUDINARY_FOLDER || 'content-bot' }}
       CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
       CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+      ARTICLE_LINKS_ENABLED: ${{ vars.ARTICLE_LINKS_ENABLED || 'false' }}
+      ARTICLE_LINKS_PAGE_URL: ${{ vars.ARTICLE_LINKS_PAGE_URL }}
+      ARTICLE_LINKS_MAX_ITEMS: ${{ vars.ARTICLE_LINKS_MAX_ITEMS || '25' }}
       POST_TO_X: ${{ vars.POST_TO_X || 'false' }}
       X_API_KEY: ${{ secrets.X_API_KEY }}
       X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
@@ -93,6 +96,9 @@ jobs:
           git -C tweet-log-store config user.name "github-actions[bot]"
           git -C tweet-log-store config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C tweet-log-store add tweet-history.md
+          if [ -d tweet-log-store/article-links ]; then
+            git -C tweet-log-store add article-links
+          fi
           if git -C tweet-log-store diff --cached --quiet; then
             echo "No post history changes to commit."
           else

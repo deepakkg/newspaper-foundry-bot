@@ -47,6 +47,9 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "CLOUDINARY_API_KEY": "",
         "CLOUDINARY_API_SECRET": "",
         "CLOUDINARY_FOLDER": "content-bot",
+        "ARTICLE_LINKS_ENABLED": "false",
+        "ARTICLE_LINKS_PAGE_URL": "",
+        "ARTICLE_LINKS_MAX_ITEMS": "25",
         "GENERATED_IMAGE_DIR": str(Path(tempfile.gettempdir()) / "content-bot-test-images"),
     }
     values.update(overrides)

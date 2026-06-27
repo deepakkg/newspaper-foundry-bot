@@ -55,6 +55,9 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `INSTAGRAM_GRAPH_API_VERSION`
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_FOLDER`
+- `ARTICLE_LINKS_ENABLED`
+- `ARTICLE_LINKS_PAGE_URL`
+- `ARTICLE_LINKS_MAX_ITEMS`
 - `POST_TO_X`
 - `X_USERNAME`
 - `APPROVAL_REQUIRED`
@@ -80,6 +83,8 @@ POST_TO_INSTAGRAM=false
 INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com
 INSTAGRAM_GRAPH_API_VERSION=v23.0
 CLOUDINARY_FOLDER=content-bot
+ARTICLE_LINKS_ENABLED=false
+ARTICLE_LINKS_MAX_ITEMS=25
 POST_TO_X=false
 APPROVAL_REQUIRED=true
 APPROVAL_TIMEOUT_MINUTES=90
@@ -125,6 +130,16 @@ CLOUDINARY_FOLDER=content-bot
 ```
 
 Instagram posts use a Pillow-generated square image and a caption built from the news headline, source, published time, topic/tone hashtags, LLM-suggested hashtags, and `#botWrites` as the final hashtag.
+
+To keep article URLs available for Instagram followers, enable the optional GitHub Pages article index:
+
+```text
+ARTICLE_LINKS_ENABLED=true
+ARTICLE_LINKS_PAGE_URL=https://your-user.github.io/your-repo/article-links/
+ARTICLE_LINKS_MAX_ITEMS=25
+```
+
+When this is enabled, news-backed Instagram captions end with `Article link in bio.` The bot adds the resolved publisher article URL to `article-links/` on the `tweet-history` branch only after Instagram publishing succeeds. Set GitHub Pages to publish from the `tweet-history` branch, then add `ARTICLE_LINKS_PAGE_URL` to your Instagram bio. No separate Linktree account or OAuth setup is needed.
 
 Use `INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com` for Instagram-login tokens with `instagram_business_*` scopes. Use `https://graph.facebook.com` only if you switch to the Facebook-login Graph API flow.
 
