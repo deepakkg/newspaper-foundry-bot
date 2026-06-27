@@ -154,7 +154,12 @@ class InstagramContentTests(unittest.TestCase):
             article_link_in_bio=True,
         )
 
-        self.assertTrue(caption.strip().endswith("Article link in bio."))
+        lines = caption.splitlines()
+        self.assertEqual(lines[2], "Published At: 2026-05-31 15:30 IST")
+        self.assertEqual(lines[3], "Article link in bio.")
+        self.assertEqual(lines[4], "")
+        self.assertEqual(lines[5], "#aiagents #analysis #AI #botWrites")
+        self.assertTrue(caption.strip().endswith("#aiagents #analysis #AI #botWrites"))
         self.assertIn("#aiagents #analysis #AI #botWrites", caption)
         self.assertNotIn("https://example.com/ai-agents", caption)
 

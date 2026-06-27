@@ -321,7 +321,13 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         mock_approval.assert_not_called()
         caption = mock_publish.call_args.kwargs["caption"]
-        self.assertTrue(caption.strip().endswith("Article link in bio."))
+        caption_lines = caption.splitlines()
+        self.assertIn("Article link in bio.", caption_lines)
+        self.assertEqual(
+            caption_lines[caption_lines.index("Article link in bio.") + 1],
+            "",
+        )
+        self.assertTrue(caption.strip().endswith("#aiagents #analysis #AI #SupportOps #botWrites"))
         self.assertTrue(config.article_links_data_path.exists())
         self.assertTrue(config.article_links_html_path.exists())
         payload = config.article_links_data_path.read_text(encoding="utf-8")

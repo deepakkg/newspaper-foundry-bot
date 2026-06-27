@@ -142,6 +142,8 @@ def build_instagram_caption(
             f"Source: {news_item.source or 'Not available'}",
             f"Published At: {published or 'Not available'}",
         ]
+        if article_link_in_bio:
+            lines.append("Article link in bio.")
     else:
         lines = []
 
@@ -168,6 +170,4 @@ def build_instagram_caption(
     if lines:
         lines.append("")
     lines.append(" ".join(hashtags))
-    if news_item and article_link_in_bio:
-        lines.extend(["", "Article link in bio."])
     return "\n".join(lines)
