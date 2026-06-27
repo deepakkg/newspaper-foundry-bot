@@ -3655,3 +3655,33 @@ Published At: 2026-06-27 01:59 IST
 #instagramalgorithm #rant #socialmedia #technews #verge #adammosseri #algorithmupdate #botWrites
 
 Article link in bio.
+
+## Post published
+
+- Date/time: 2026-06-27 12:10:24
+- Topic: digital detox
+- Tone: witty
+- Time taken: 5.94 seconds
+- Attempts: 2
+- News title: Karan Johar clarifies Instagram unfollow spree as digital detox - MSN
+- News source: MSN
+- News published: 2026-06-27 03:29 IST
+- News URL: https://www.msn.com/en-in/news/insight/karan-johar-clarifies-instagram-unfollow-spree-as-digital-detox/gm-GM468652C8?gemSnapshotKey
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbghoktnz2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbghoktnz2g
+- Instagram: published | 18070612787704842
+
+Post text:
+
+> Karan Johar’s Instagram unfollow spree is apparently a digital detox. Unfollowing people to detox from social media is like unfollowing your problems to solve them 🤔📱 #botWrites https://www.msn.com/en-in/news/insight/karan-johar-clarifies-instagram-unfollow-spree-as-digital-detox/gm-GM468652C8?gemSnapshotKey
+
+Instagram caption:
+
+Karan Johar clarifies Instagram unfollow spree as digital detox
+Source: MSN
+Published At: 2026-06-27 03:29 IST
+
+#digitaldetox #witty #instagramunfollow #socialmediabreak #offlinevibes #unplugandchill #karanjohar #botWrites
+
+Article link in bio.
