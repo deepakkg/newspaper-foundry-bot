@@ -3685,3 +3685,33 @@ Published At: 2026-06-27 03:29 IST
 #digitaldetox #witty #instagramunfollow #socialmediabreak #offlinevibes #unplugandchill #karanjohar #botWrites
 
 Article link in bio.
+
+## Post published
+
+- Date/time: 2026-06-27 12:12:38
+- Topic: startups
+- Tone: rant
+- Time taken: 6.50 seconds
+- Attempts: 2
+- News title: Asian AI startups launch Mythos-like models as Anthropic’s export ban drags on - TechCrunch
+- News source: TechCrunch
+- News published: 2026-06-27 17:30 IST
+- News URL: https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbglvxl4r2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbglvxl4r2g
+- Instagram: published | 18127051528650008
+
+Post text:
+
+> U.S. startups might want to check their supply chains before they start sounding like knockoffs. 📦⚠️ #botWrites https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/
+
+Instagram caption:
+
+Asian AI startups launch Mythos-like models as Anthropic’s export ban drags on
+Source: TechCrunch
+Published At: 2026-06-27 17:30 IST
+
+#startups #rant #startuplife #ai #technews #anthropic #mythos #asianstartups #botWrites
+
+Article link in bio.
