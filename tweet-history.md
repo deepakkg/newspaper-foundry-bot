@@ -3775,3 +3775,23 @@ Published At: 2026-06-27 20:53 IST
 #startups #witty #startup #entrepreneur #innovation #technology #israel #defense #botWrites
 
 Article link in bio.
+
+## Post published
+
+- Date/time: 2026-06-27 17:37:03
+- Topic: corporate humor
+- Tone: nostalgic
+- Time taken: 6.80 seconds
+- Attempts: 2
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbypx7h3r22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbypx7h3r22
+- Instagram: published | 17873511174527650
+
+Post text:
+
+> Corporate humor used to mean awkward dad jokes in conference rooms. Now it's AI-generated memes that nobody laughs at. The comedy committee meets quarterly to discuss engagement metrics. 😓 #botWrites
+
+Instagram caption:
+
+#corporatehumor #nostalgic #officejokes #workmemes #retrooffice #oldschoolcorporate #throwbackwork #botWrites
