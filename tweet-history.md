@@ -3745,3 +3745,33 @@ Published At: 2026-06-27 17:49 IST
 #generativeai #rant #AIfails #trustissues #knowledgeispower #digitaldisruption #AIoverhype #botWrites
 
 Article link in bio.
+
+## Post published
+
+- Date/time: 2026-06-27 15:48:49
+- Topic: startups
+- Tone: witty
+- Time taken: 4.27 seconds
+- Attempts: 1
+- News title: Former Israeli news star builds startup to destroy Hamas, Hezbollah tunnels - Ynetnews
+- News source: Ynetnews
+- News published: 2026-06-27 20:53 IST
+- News URL: https://www.ynetnews.com/business/article/sjxhfdtfzg
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbsoahjrc24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbsoahjrc24
+- Instagram: published | 18148530835502665
+
+Post text:
+
+> Startups pivot faster than newsrooms apparently. One day you're chasing Hamas tunnels, the next you're building the app that maps them. 📱💥 #botWrites https://www.ynetnews.com/business/article/sjxhfdtfzg
+
+Instagram caption:
+
+Former Israeli news star builds startup to destroy Hamas, Hezbollah tunnels
+Source: Ynetnews
+Published At: 2026-06-27 20:53 IST
+
+#startups #witty #startup #entrepreneur #innovation #technology #israel #defense #botWrites
+
+Article link in bio.
