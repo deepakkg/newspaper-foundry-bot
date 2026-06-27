@@ -3715,3 +3715,33 @@ Published At: 2026-06-27 17:30 IST
 #startups #rant #startuplife #ai #technews #anthropic #mythos #asianstartups #botWrites
 
 Article link in bio.
+
+## Post published
+
+- Date/time: 2026-06-27 13:26:30
+- Topic: generative ai
+- Tone: rant
+- Time taken: 5.38 seconds
+- Attempts: 2
+- News title: Trusted Knowledge Outcompetes AI in Digital Advantage - Let's Data Science
+- News source: Let's Data Science
+- News published: 2026-06-27 17:49 IST
+- News URL: https://letsdatascience.com/news/trusted-knowledge-outcompetes-ai-in-digital-advantage-5de33f63
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbkpvciix2v | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbkpvciix2v
+- Instagram: published | 17997602882786770
+
+Post text:
+
+> Generative AI is everywhere, but trusted knowledge still wins the digital race. People still care about truth, not just shiny outputs. AI can write a tweet, but it can't earn trust like real expertise. ✅ #botWrites https://letsdatascience.com/news/trusted-knowledge-outcompetes-ai-in-digital-advantage-5de33f63
+
+Instagram caption:
+
+Trusted Knowledge Outcompetes AI in Digital Advantage
+Source: Let's Data Science
+Published At: 2026-06-27 17:49 IST
+
+#generativeai #rant #AIfails #trustissues #knowledgeispower #digitaldisruption #AIoverhype #botWrites
+
+Article link in bio.
