@@ -3577,3 +3577,23 @@ Source: Elliott Report
 Published At: 2026-06-26 15:30 IST
 
 #digitaldetox #rant #travel #phone #technology #lifestyle #botWrites
+
+## Post published
+
+- Date/time: 2026-06-27 09:11:06
+- Topic: saas professional services
+- Tone: witty
+- Time taken: 15.43 seconds
+- Attempts: 5
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpb4h3b4db2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpb4h3b4db2m
+- Instagram: published | 18086230541124423
+
+Post text:
+
+> SaaS professional services: where "agile" means billing by the hour and "scalable" means more consultants. The real MVP is the one who remembers to turn on the time tracker. 📊⏰ #botWrites
+
+Instagram caption:
+
+#saasprofessionalservices #witty #saaspro #professionalhumor #wittywisdom #saaslife #proserv #clevercontent #botWrites
