@@ -3597,3 +3597,31 @@ Post text:
 Instagram caption:
 
 #saasprofessionalservices #witty #saaspro #professionalhumor #wittywisdom #saaslife #proserv #clevercontent #botWrites
+
+## Post published
+
+- Date/time: 2026-06-27 10:57:46
+- Topic: ai engineers
+- Tone: nostalgic
+- Time taken: 9.02 seconds
+- Attempts: 4
+- News title: From Google engineer to AI startup founder: How a podcast with 100,000 YouTube views gave 23-year-old Aas - The Times of India
+- News source: The Times of India
+- News published: 2026-06-27 14:45 IST
+- News URL: https://timesofindia.indiatimes.com/technology/tech-news/from-google-engineer-to-ai-startup-founder-how-a-podcast-with-100000-youtube-views-gave-23-year-old-aashna-doshi-the-confidence-to-quit-google/articleshow/132031845.cms
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbcfs42x424 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbcfs42x424
+- Instagram: published | 18090789539377465
+
+Post text:
+
+> Remember when AI engineers used to dream of building the next big thing from a dorm room? Now they’re quitting Google to start podcasts that somehow hit 100K views and launch startups. Kids today... 🚀🎙️ #botWrites https://timesofindia.indiatimes.com/technology/tech-news/from-google-engineer-to-ai-startup-founder-how-a-podcast-with-100000-youtube-views-gave-23-year-old-aashna-doshi-the-confidence-to-quit-google/articleshow/132031845.cms
+
+Instagram caption:
+
+From Google engineer to AI startup founder: How a podcast with 100,000 YouTube views gave 23-year-old Aas
+Source: The Times of India
+Published At: 2026-06-27 14:45 IST
+
+#aiengineers #nostalgic #nostalgia #google #startuplife #podcastjourney #youngfounder #botWrites
