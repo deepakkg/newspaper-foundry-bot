@@ -3625,3 +3625,33 @@ Source: The Times of India
 Published At: 2026-06-27 14:45 IST
 
 #aiengineers #nostalgic #nostalgia #google #startuplife #podcastjourney #youngfounder #botWrites
+
+## Post published
+
+- Date/time: 2026-06-27 12:05:36
+- Topic: instagram algorithm
+- Tone: rant
+- Time taken: 4.82 seconds
+- Attempts: 1
+- News title: Instagram’s Adam Mosseri is showing off some concepts for changing your algorithm. - The Verge
+- News source: The Verge
+- News published: 2026-06-27 01:59 IST
+- News URL: https://www.theverge.com/tech/958170/instagrams-adam-mosseri-is-showing-off-some-concepts-for-changing-your-algorithm
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpbg755q6u2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpbg755q6u2s
+- Instagram: published | 17933257494294584
+
+Post text:
+
+> Instagram’s algorithm changes are a masterclass in controlled frustration. Adam Mosseri’s “concepts” feel less like innovation and more like digital sleight of hand. Your feed’s about to become even more of a curated maze. 🔄 #botWrites https://www.theverge.com/tech/958170/instagrams-adam-mosseri-is-showing-off-some-concepts-for-changing-your-algorithm
+
+Instagram caption:
+
+Instagram’s Adam Mosseri is showing off some concepts for changing your algorithm.
+Source: The Verge
+Published At: 2026-06-27 01:59 IST
+
+#instagramalgorithm #rant #socialmedia #technews #verge #adammosseri #algorithmupdate #botWrites
+
+Article link in bio.
