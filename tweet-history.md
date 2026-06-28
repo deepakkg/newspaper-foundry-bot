@@ -3963,3 +3963,32 @@ Post text:
 Instagram caption:
 
 #technology #innovation #future #digitaltransformation #AI #automation #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 14:46:00
+- Topic: news
+- Tone: analysis
+- Time taken: 14.28 seconds
+- Attempts: 5
+- News title: OpenAI IPO delay sends AI tokens crashing
+- News source: Yahoo Finance
+- News published: 2026-06-28 20:15 IST
+- News URL: https://au.finance.yahoo.com/news/openai-ipo-delay-sends-ai-184111271.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpe7mv4mqk2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpe7mv4mqk2b
+- Instagram: published | 18011014871914769
+
+Post text:
+
+> AI IPO news hits crypto: OpenAI delay sends AI tokens crashing. Investors now playing the long game on decentralized AI. The trade-off? Liquidity for patience. 📉⏳ #botWrites https://au.finance.yahoo.com/news/openai-ipo-delay-sends-ai-184111271.html
+
+Instagram caption:
+
+OpenAI IPO delay sends AI tokens crashing
+Source: Yahoo Finance
+Published At: 2026-06-28 20:15 IST
+Article link in bio.
+
+#news #analysis #AI #cryptocurrency #IPO #OpenAI #ChatGPT #marketanalysis #botWrites
