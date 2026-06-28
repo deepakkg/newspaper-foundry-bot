@@ -76,7 +76,14 @@ def command_kind(content: str) -> OnDemandKind | None:
         return "direct_post"
     if lowered == "/news" or lowered.startswith(("/news ", "/news\n", "/news\r")):
         return "news_url"
+    if starts_with_url(stripped):
+        return "news_url"
     return None
+
+
+def starts_with_url(content: str) -> bool:
+    match = URL_PATTERN.match(content)
+    return bool(match)
 
 
 def parse_on_demand_command(content: str, config: AppConfig) -> ParsedOnDemandRequest:
@@ -86,8 +93,14 @@ def parse_on_demand_command(content: str, config: AppConfig) -> ParsedOnDemandRe
 
     stripped = content.lstrip()
     command_parts = stripped.split(maxsplit=1)
-    body = command_parts[1].strip() if len(command_parts) > 1 else ""
-    if not body and "\n" in stripped:
+    lowered = stripped.lower()
+    if lowered == "/post" or lowered.startswith(("/post ", "/post\n", "/post\r")):
+        body = command_parts[1].strip() if len(command_parts) > 1 else ""
+    elif lowered == "/news" or lowered.startswith(("/news ", "/news\n", "/news\r")):
+        body = command_parts[1].strip() if len(command_parts) > 1 else ""
+    else:
+        body = stripped
+    if kind == "direct_post" and not body and "\n" in stripped:
         body = stripped.split("\n", 1)[1].strip()
 
     if kind == "direct_post":
@@ -139,8 +152,10 @@ def select_on_demand_request(
     if not candidates:
         return None
 
-    selected = _first_by_kind(candidates, "direct_post") or _first_by_kind(
-        candidates, "news_url"
+    selected = (
+        _first_by_kind(candidates, "direct_post")
+        or _first_explicit_news_command(candidates)
+        or _first_plain_url(candidates)
     )
     if selected is None:
         return None
@@ -164,6 +179,25 @@ def _first_by_kind(
 ) -> DiscordMessageSnapshot | None:
     for message in messages:
         if command_kind(message.content) == kind:
+            return message
+    return None
+
+
+def _first_explicit_news_command(
+    messages: list[DiscordMessageSnapshot],
+) -> DiscordMessageSnapshot | None:
+    for message in messages:
+        stripped = message.content.lstrip().lower()
+        if stripped == "/news" or stripped.startswith(("/news ", "/news\n", "/news\r")):
+            return message
+    return None
+
+
+def _first_plain_url(
+    messages: list[DiscordMessageSnapshot],
+) -> DiscordMessageSnapshot | None:
+    for message in messages:
+        if starts_with_url(message.content.lstrip()):
             return message
     return None
 
@@ -286,13 +320,27 @@ async def _fetch_next_on_demand_request(config: AppConfig) -> OnDemandRequest | 
                 )
                 for message in discord_messages
             ]
+            print(
+                "Checked Discord on-demand requests: "
+                f"{len(snapshots)} recent messages."
+            )
+            if snapshots and all(
+                not snapshot.author_is_bot and not snapshot.content
+                for snapshot in snapshots
+            ):
+                print(
+                    "Warning: Discord message content was empty for recent messages. "
+                    "Check the bot's Message Content Intent and channel permissions."
+                )
             selection = select_on_demand_request(snapshots, config)
             if selection is None:
+                print("No pending Discord on-demand request found.")
                 return
 
             message_by_id = {str(message.id): message for message in discord_messages}
             source_message = message_by_id[selection.message_id]
             if selection.error:
+                print(f"Discord on-demand request ignored: {selection.error}")
                 await source_message.reply(selection.error, mention_author=False)
                 return
             if selection.request is None:
@@ -306,6 +354,7 @@ async def _fetch_next_on_demand_request(config: AppConfig) -> OnDemandRequest | 
                     config,
                 )
             except Exception as exc:
+                print(f"Discord on-demand request could not be used: {exc}")
                 await source_message.reply(
                     f"Could not use on-demand request: {exc}",
                     mention_author=False,

@@ -54,6 +54,19 @@ class OnDemandRequestTests(unittest.TestCase):
         self.assertEqual(request.news_url, "https://example.com/story")
         self.assertEqual(request.tone, "deep thought")
 
+    def test_parse_plain_url_as_news_request(self) -> None:
+        tmp_dir, config = load_temp_config(TONES="witty,analysis")
+        self.addCleanup(tmp_dir.cleanup)
+
+        request = parse_on_demand_command(
+            "https://example.com/story tone=witty",
+            config,
+        )
+
+        self.assertEqual(request.kind, "news_url")
+        self.assertEqual(request.news_url, "https://example.com/story")
+        self.assertEqual(request.tone, "witty")
+
     def test_parse_news_url_with_invalid_tone_leaves_tone_unset(self) -> None:
         tmp_dir, config = load_temp_config(TONES="witty,analysis")
         self.addCleanup(tmp_dir.cleanup)
@@ -144,6 +157,32 @@ class OnDemandRequestTests(unittest.TestCase):
         self.assertIsNotNone(selected)
         self.assertEqual(selected.message_id, "2")
         self.assertEqual(selected.request.kind, "direct_post")
+
+    def test_select_prioritizes_explicit_news_before_plain_url(self) -> None:
+        tmp_dir, config = load_temp_config(DISCORD_APPROVER_USER_IDS="111")
+        self.addCleanup(tmp_dir.cleanup)
+
+        selected = select_on_demand_request(
+            [
+                DiscordMessageSnapshot(
+                    message_id="1",
+                    author_id="111",
+                    author_is_bot=False,
+                    content="https://example.com/plain",
+                ),
+                DiscordMessageSnapshot(
+                    message_id="2",
+                    author_id="111",
+                    author_is_bot=False,
+                    content="/news https://example.com/explicit",
+                ),
+            ],
+            config,
+        )
+
+        self.assertIsNotNone(selected)
+        self.assertEqual(selected.message_id, "2")
+        self.assertEqual(selected.request.news_url, "https://example.com/explicit")
 
     def test_fetch_news_item_from_url_reads_article_metadata(self) -> None:
         tmp_dir, config = load_temp_config()
