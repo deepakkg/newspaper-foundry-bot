@@ -14,6 +14,7 @@ import notifications
 import tweet_generator
 from discord_approval import ApprovalDecision
 from news_fetcher import NewsItem
+from on_demand_requests import OnDemandRequest
 from support import load_temp_config
 
 
@@ -154,6 +155,177 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("- Bluesky: published", log_content)
         self.assertNotIn("Decision by:", log_content)
         self.assertIn("Post published and logged.", buffer.getvalue())
+
+    def test_run_once_on_demand_direct_post_uses_supplied_text(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            ON_DEMAND_REQUESTS_ENABLED="true",
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+            APPROVAL_REQUIRED="false",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        request = OnDemandRequest(
+            kind="direct_post",
+            message_id="1",
+            author_id="111",
+            topic="on-demand post",
+            tone="direct",
+            post_text="This is the exact post text. ✍️",
+        )
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(
+                    tweet_generator,
+                    "fetch_next_on_demand_request",
+                    return_value=request,
+                ) as mock_intake:
+                    with patch.object(tweet_generator, "fetch_latest_news") as mock_news:
+                        with patch.object(tweet_generator, "generate_valid_tweet") as mock_generate:
+                            with patch.object(
+                                tweet_generator,
+                                "generate_instagram_hashtags_from_text",
+                                return_value=["#ExactPost", "#Writing"],
+                            ) as mock_hashtags:
+                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                    with patch.object(
+                                        tweet_generator,
+                                        "upload_image_to_cloudinary",
+                                        return_value=SimpleNamespace(
+                                            secure_url="https://res.cloudinary.com/demo/post.png",
+                                            public_id="content-bot/post",
+                                        ),
+                                    ):
+                                        with patch.object(
+                                            tweet_generator,
+                                            "publish_instagram_image",
+                                            return_value=SimpleNamespace(
+                                                media_id="179",
+                                                url="https://instagram.com/p/abc",
+                                            ),
+                                        ) as mock_publish:
+                                            with patch("sys.stdout", buffer):
+                                                result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_intake.assert_called_once()
+        mock_news.assert_not_called()
+        mock_generate.assert_not_called()
+        mock_hashtags.assert_called_once_with(
+            mock_hashtags.call_args.args[0],
+            config,
+            "This is the exact post text. ✍️",
+        )
+        caption = mock_publish.call_args.kwargs["caption"]
+        self.assertEqual(caption, "#ExactPost #Writing #botWrites")
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("This is the exact post text. ✍️ #botWrites", log_content)
+        self.assertIn("- Attempts: 0", log_content)
+        self.assertIn("Using on-demand direct post request.", buffer.getvalue())
+
+    def test_run_once_on_demand_news_url_uses_existing_generation_path(self) -> None:
+        buffer = StringIO()
+        tmp_dir, config = load_temp_config(
+            ON_DEMAND_REQUESTS_ENABLED="true",
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            APPROVAL_REQUIRED="false",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        news_item = sample_news()
+        request = OnDemandRequest(
+            kind="news_url",
+            message_id="1",
+            author_id="111",
+            topic="news",
+            tone=None,
+            news_item=news_item,
+        )
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", return_value="witty") as mock_choice:
+                    with patch.object(
+                        tweet_generator,
+                        "fetch_next_on_demand_request",
+                        return_value=request,
+                    ):
+                        with patch.object(tweet_generator, "fetch_latest_news") as mock_news:
+                            with patch.object(
+                                tweet_generator,
+                                "generate_valid_tweet",
+                                return_value=("AI agents need better handoffs. 🤖", 1.0, 2),
+                            ) as mock_generate:
+                                with patch.object(
+                                    tweet_generator,
+                                    "post_to_bluesky",
+                                    return_value=MagicMock(
+                                        url="https://bsky.app/profile/example.bsky.social/post/abc",
+                                        uri="at://did/post/abc",
+                                    ),
+                                ):
+                                    with patch("sys.stdout", buffer):
+                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_choice.assert_called_once_with(config.tones)
+        mock_news.assert_not_called()
+        mock_generate.assert_called_once()
+        self.assertEqual(mock_generate.call_args.args[2], "news")
+        self.assertEqual(mock_generate.call_args.args[3], "witty")
+        self.assertEqual(mock_generate.call_args.args[4], news_item)
+        log_content = config.log_file_path.read_text(encoding="utf-8")
+        self.assertIn("https://example.com/ai-agents", log_content)
+        self.assertIn("Using on-demand news URL:", buffer.getvalue())
+
+    def test_run_once_on_demand_no_request_falls_back_to_scheduled_flow(self) -> None:
+        tmp_dir, config = load_temp_config(
+            ON_DEMAND_REQUESTS_ENABLED="true",
+            NEWS_ENABLED="true",
+            POST_TO_BLUESKY="true",
+            BLUESKY_HANDLE="example.bsky.social",
+            BLUESKY_APP_PASSWORD="app-password",
+            APPROVAL_REQUIRED="false",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(
+                        tweet_generator,
+                        "fetch_next_on_demand_request",
+                        return_value=None,
+                    ) as mock_intake:
+                        with patch.object(
+                            tweet_generator,
+                            "fetch_latest_news",
+                            return_value=sample_news(),
+                        ) as mock_news:
+                            with patch.object(
+                                tweet_generator,
+                                "generate_valid_tweet",
+                                return_value=("AI agents need better handoffs. 🤖", 1.0, 1),
+                            ):
+                                with patch.object(
+                                    tweet_generator,
+                                    "post_to_bluesky",
+                                    return_value=MagicMock(
+                                        url="https://bsky.app/profile/example.bsky.social/post/abc",
+                                        uri="at://did/post/abc",
+                                    ),
+                                ):
+                                    result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_intake.assert_called_once()
+        mock_news.assert_called_once_with("ai agents", config)
 
     def test_run_once_declined_publishes_nowhere_and_logs_outcome(self) -> None:
         buffer = StringIO()

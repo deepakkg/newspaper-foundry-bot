@@ -39,6 +39,8 @@ class AppConfig:
     discord_bot_token: str | None
     discord_channel_id: str | None
     discord_approver_user_ids: list[str]
+    on_demand_requests_enabled: bool
+    on_demand_discord_lookback_limit: int
     approval_required: bool
     approval_timeout_minutes: int
     post_to_instagram: bool
@@ -165,6 +167,14 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     discord_channel_id = os.getenv("DISCORD_CHANNEL_ID", "").strip() or None
     discord_approver_user_ids = _parse_optional_csv_list(
         os.getenv("DISCORD_APPROVER_USER_IDS", "")
+    )
+    on_demand_requests_enabled = _parse_bool(
+        os.getenv("ON_DEMAND_REQUESTS_ENABLED", "false"),
+        "ON_DEMAND_REQUESTS_ENABLED",
+    )
+    on_demand_discord_lookback_limit = _parse_positive_int(
+        os.getenv("ON_DEMAND_DISCORD_LOOKBACK_LIMIT", "50"),
+        "ON_DEMAND_DISCORD_LOOKBACK_LIMIT",
     )
     approval_required = _parse_bool(
         os.getenv("APPROVAL_REQUIRED", "true"), "APPROVAL_REQUIRED"
@@ -294,6 +304,24 @@ def load_config(env_path: Path | None = None) -> AppConfig:
                 f"are missing: {missing_str}"
             )
 
+    if on_demand_requests_enabled:
+        missing = [
+            name
+            for name, value in (
+                ("DISCORD_BOT_TOKEN", discord_bot_token),
+                ("DISCORD_CHANNEL_ID", discord_channel_id),
+            )
+            if not value
+        ]
+        if not discord_approver_user_ids:
+            missing.append("DISCORD_APPROVER_USER_IDS")
+        if missing:
+            missing_str = ", ".join(missing)
+            raise ValueError(
+                "ON_DEMAND_REQUESTS_ENABLED is true but required Discord intake "
+                f"settings are missing: {missing_str}"
+            )
+
     if llm_base_url.startswith("https://") and llm_api_key is None:
         raise ValueError("LLM_API_KEY is required when using a hosted LLM endpoint.")
 
@@ -324,6 +352,8 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         discord_bot_token=discord_bot_token,
         discord_channel_id=discord_channel_id,
         discord_approver_user_ids=discord_approver_user_ids,
+        on_demand_requests_enabled=on_demand_requests_enabled,
+        on_demand_discord_lookback_limit=on_demand_discord_lookback_limit,
         approval_required=approval_required,
         approval_timeout_minutes=approval_timeout_minutes,
         post_to_instagram=post_to_instagram,

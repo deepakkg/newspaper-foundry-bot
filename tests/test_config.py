@@ -217,6 +217,48 @@ class ConfigTests(unittest.TestCase):
 
         self.assertFalse(config.approval_required)
 
+    def test_load_config_defaults_on_demand_requests_to_disabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path)
+
+            config = load_config(env_path)
+
+        self.assertFalse(config.on_demand_requests_enabled)
+        self.assertEqual(config.on_demand_discord_lookback_limit, 50)
+
+    def test_load_config_accepts_on_demand_request_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                ON_DEMAND_REQUESTS_ENABLED="true",
+                ON_DEMAND_DISCORD_LOOKBACK_LIMIT="75",
+            )
+
+            config = load_config(env_path)
+
+        self.assertTrue(config.on_demand_requests_enabled)
+        self.assertEqual(config.on_demand_discord_lookback_limit, 75)
+
+    def test_load_config_requires_discord_settings_when_on_demand_enabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                ON_DEMAND_REQUESTS_ENABLED="true",
+                DISCORD_BOT_TOKEN="",
+                DISCORD_CHANNEL_ID="",
+                DISCORD_APPROVER_USER_IDS="",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "ON_DEMAND_REQUESTS_ENABLED is true but required Discord intake "
+                "settings are missing",
+            ):
+                load_config(env_path)
+
     def test_load_config_requires_approval_settings_when_publishing_enabled(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             env_path = Path(tmp_dir) / ".env"

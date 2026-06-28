@@ -66,6 +66,24 @@ def fallback_hashtags(topic: str, tone: str) -> list[str]:
     return result
 
 
+def fallback_hashtags_from_text(post_text: str) -> list[str]:
+    tokens = re.findall(r"[A-Za-z][A-Za-z0-9]{2,}", post_text)
+    result: list[str] = []
+    seen: set[str] = set()
+    for token in tokens:
+        cleaned = normalize_hashtag(token)
+        if not cleaned:
+            continue
+        key = cleaned.lower()
+        if key == BOT_HASHTAG.lower() or key in seen:
+            continue
+        seen.add(key)
+        result.append(cleaned)
+        if len(result) >= 4:
+            break
+    return result
+
+
 def build_hashtag_prompt(topic: str, tone: str, news_item: NewsItem | None) -> str:
     news_block = ""
     if news_item:
@@ -79,6 +97,19 @@ News context:
 Topic: {topic}
 Tone: {tone}
 {news_block}
+Rules:
+- Return only hashtags separated by spaces.
+- Use simple discoverable Instagram hashtags.
+- Do not include #botWrites.
+- Do not include URLs, explanations, labels, or quotes.
+"""
+
+
+def build_text_hashtag_prompt(post_text: str) -> str:
+    return f"""Suggest 3 to 6 Instagram hashtags for this post text.
+Post text:
+{post_text}
+
 Rules:
 - Return only hashtags separated by spaces.
 - Use simple discoverable Instagram hashtags.
@@ -104,6 +135,23 @@ def generate_instagram_hashtags(
     except Exception:
         hashtags = []
     return hashtags or fallback_hashtags(topic, tone)
+
+
+def generate_instagram_hashtags_from_text(
+    client: OpenAI,
+    config: AppConfig,
+    post_text: str,
+) -> list[str]:
+    try:
+        response = request_completion(
+            config=config,
+            client=client,
+            prompt=build_text_hashtag_prompt(post_text),
+        )
+        hashtags = extract_hashtags(extract_response_text(response))
+    except Exception:
+        hashtags = []
+    return hashtags or fallback_hashtags_from_text(post_text)
 
 
 def format_news_published(news_item: NewsItem | None) -> str | None:
@@ -134,6 +182,7 @@ def build_instagram_caption(
     news_item: NewsItem | None,
     llm_hashtags: list[str],
     article_link_in_bio: bool = False,
+    include_topic_tone_hashtags: bool = True,
 ) -> str:
     published = format_news_published(news_item)
     if news_item:
@@ -149,12 +198,14 @@ def build_instagram_caption(
 
     hashtags: list[str] = []
     seen: set[str] = set()
-    for candidate in [
-        hashtag_from_text(topic),
-        hashtag_from_text(tone),
-        *llm_hashtags,
-        BOT_HASHTAG,
-    ]:
+    candidates = [*llm_hashtags, BOT_HASHTAG]
+    if include_topic_tone_hashtags:
+        candidates = [
+            hashtag_from_text(topic),
+            hashtag_from_text(tone),
+            *candidates,
+        ]
+    for candidate in candidates:
         cleaned = normalize_hashtag(candidate or "")
         if not cleaned:
             continue

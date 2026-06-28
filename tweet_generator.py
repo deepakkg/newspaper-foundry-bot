@@ -21,11 +21,16 @@ from discord_approval import (
     request_discord_approval,
 )
 from generator import build_client, generate_valid_tweet
-from instagram_content import build_instagram_caption, generate_instagram_hashtags
+from instagram_content import (
+    build_instagram_caption,
+    generate_instagram_hashtags,
+    generate_instagram_hashtags_from_text,
+)
 from instagram_image import render_instagram_image
 from instagram_publisher import publish_instagram_image
 from logger import PlatformLogResult, append_log_entry, build_run_log_entry
 from news_fetcher import NewsItem, fetch_latest_news
+from on_demand_requests import OnDemandRequest, fetch_next_on_demand_request
 from notifications import (
     format_news_published_at,
     send_failure_notifications,
@@ -275,6 +280,7 @@ def run_once() -> int:
     topic: str | None = None
     tone: str | None = None
     news_item: NewsItem | None = None
+    on_demand_request: OnDemandRequest | None = None
     stop_event: threading.Event | None = None
     spinner_thread: threading.Thread | None = None
 
@@ -282,20 +288,35 @@ def run_once() -> int:
         client = build_client(config)
         interactive_tty = sys.stdout.isatty()
 
-        topic = random.choice(config.topics)
-        tone = random.choice(config.tones)
-
-        if config.news_enabled:
+        if config.on_demand_requests_enabled:
             try:
-                news_item = fetch_latest_news(topic, config)
-                if news_item is None:
-                    print(
-                        f"No recent RSS news found for {topic}. Using generic topic prompt."
-                    )
-                else:
-                    print(f"Using RSS news: {news_item.title} ({news_item.source})")
+                on_demand_request = fetch_next_on_demand_request(config)
             except Exception as exc:
-                print(f"Warning: RSS news lookup failed for {topic}: {exc}")
+                print(f"Warning: Discord on-demand request lookup failed: {exc}")
+
+        if on_demand_request is not None:
+            topic = on_demand_request.topic
+            tone = on_demand_request.tone or random.choice(config.tones)
+            news_item = on_demand_request.news_item
+            if on_demand_request.kind == "direct_post":
+                print("Using on-demand direct post request.")
+            elif news_item is not None:
+                print(f"Using on-demand news URL: {news_item.title} ({news_item.source})")
+        else:
+            topic = random.choice(config.topics)
+            tone = random.choice(config.tones)
+
+            if config.news_enabled:
+                try:
+                    news_item = fetch_latest_news(topic, config)
+                    if news_item is None:
+                        print(
+                            f"No recent RSS news found for {topic}. Using generic topic prompt."
+                        )
+                    else:
+                        print(f"Using RSS news: {news_item.title} ({news_item.source})")
+                except Exception as exc:
+                    print(f"Warning: RSS news lookup failed for {topic}: {exc}")
 
         print("Generating post...")
         if interactive_tty:
@@ -306,31 +327,48 @@ def run_once() -> int:
             spinner_thread.start()
 
         news_url = news_item.link if news_item else None
-        tweet, _generation_elapsed, attempts = generate_valid_tweet(
-            client,
-            config,
-            topic,
-            tone,
-            news_item,
-            max_tweet_chars=max_generated_text_chars(config.max_tweet_chars, news_url),
-        )
+        if on_demand_request and on_demand_request.kind == "direct_post":
+            tweet = on_demand_request.post_text or ""
+            attempts = 0
+        else:
+            tweet, _generation_elapsed, attempts = generate_valid_tweet(
+                client,
+                config,
+                topic,
+                tone,
+                news_item,
+                max_tweet_chars=max_generated_text_chars(config.max_tweet_chars, news_url),
+            )
 
         final_post_text = build_post_text(tweet, news_url)
         target_platforms = enabled_platforms(config)
         instagram_caption = None
         if config.post_to_instagram:
-            instagram_caption = build_instagram_caption(
-                topic=topic,
-                tone=tone,
-                news_item=news_item,
-                llm_hashtags=generate_instagram_hashtags(
+            direct_post_request = (
+                on_demand_request is not None
+                and on_demand_request.kind == "direct_post"
+            )
+            if direct_post_request:
+                llm_hashtags = generate_instagram_hashtags_from_text(
+                    client,
+                    config,
+                    tweet,
+                )
+            else:
+                llm_hashtags = generate_instagram_hashtags(
                     client,
                     config,
                     topic,
                     tone,
                     news_item,
-                ),
+                )
+            instagram_caption = build_instagram_caption(
+                topic=topic,
+                tone=tone,
+                news_item=news_item,
+                llm_hashtags=llm_hashtags,
                 article_link_in_bio=config.article_links_enabled,
+                include_topic_tone_hashtags=not direct_post_request,
             )
 
         if not target_platforms:

@@ -64,6 +64,8 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `APPROVAL_TIMEOUT_MINUTES`
 - `DISCORD_CHANNEL_ID`
 - `DISCORD_APPROVER_USER_IDS`
+- `ON_DEMAND_REQUESTS_ENABLED`
+- `ON_DEMAND_DISCORD_LOOKBACK_LIMIT`
 - `TELEGRAM_NOTIFICATIONS_ENABLED`
 - `DISCORD_NOTIFICATIONS_ENABLED`
 
@@ -88,6 +90,8 @@ ARTICLE_LINKS_MAX_ITEMS=25
 POST_TO_X=false
 APPROVAL_REQUIRED=true
 APPROVAL_TIMEOUT_MINUTES=90
+ON_DEMAND_REQUESTS_ENABLED=false
+ON_DEMAND_DISCORD_LOOKBACK_LIMIT=50
 TELEGRAM_NOTIFICATIONS_ENABLED=false
 DISCORD_NOTIFICATIONS_ENABLED=false
 ```
@@ -114,6 +118,26 @@ DISCORD_CHANNEL_ID=your_private_channel_id
 DISCORD_APPROVER_USER_IDS=your_user_id,another_user_id
 APPROVAL_TIMEOUT_MINUTES=90
 ```
+
+To let the bot pick up one on-demand request from the same private Discord channel before the normal scheduled topic/RSS flow, set:
+
+```text
+ON_DEMAND_REQUESTS_ENABLED=true
+ON_DEMAND_DISCORD_LOOKBACK_LIMIT=50
+```
+
+Supported private-channel commands:
+
+```text
+/post This is the exact post text to publish.
+
+/post
+This is the exact post text to publish.
+
+/news https://example.com/article tone=witty
+```
+
+For `/news`, `tone=` is optional. If the tone is missing or not in `TONES`, the bot picks a random configured tone. Only users listed in `DISCORD_APPROVER_USER_IDS` can submit on-demand requests. The Discord bot needs View Channel, Read Message History, Send Messages, and Message Content Intent enabled in the Discord Developer Portal.
 
 For Instagram publishing, use an Instagram Creator or Business account connected to a Facebook Page, then set:
 
