@@ -3943,3 +3943,23 @@ Post text:
 Instagram caption:
 
 #corporatehumor #nostalgic #officehumor #workmemes #nostalgicvibes #throwbackthursday #funnybusiness #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 13:57:53
+- Topic: on-demand post
+- Tone: direct
+- Time taken: 4.74 seconds
+- Attempts: 0
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpe4wxc2u32s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpe4wxc2u32s
+- Instagram: published | 18140357401493103
+
+Post text:
+
+> Amara's Law: We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run. #botWrites
+
+Instagram caption:
+
+#technology #innovation #future #digitaltransformation #AI #automation #botWrites
