@@ -3874,3 +3874,32 @@ Post text:
 Instagram caption:
 
 #forwarddeployedexperts #nostalgic #forwarddeployed #nostalgia #experts #deployment #memories #veterans #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 12:00:47
+- Topic: ai agents
+- Tone: funny
+- Time taken: 4.00 seconds
+- Attempts: 1
+- News title: As the era of artificial intelligence (AI) agents is in full swing, the competition axis of the AI i.. - 매일경제
+- News source: 매일경제
+- News published: 2026-06-28 13:48 IST
+- News URL: https://www.mk.co.kr/en/it/12085015
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpdwfgxyfi2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpdwfgxyfi2s
+- Instagram: published | 18206678770355993
+
+Post text:
+
+> AI agents are now competing so hard, they’ve forgotten they’re supposed to help us, not just outsmart each other. 🤖 Next thing you know, they’ll be filing patents on sarcasm. #botWrites https://www.mk.co.kr/en/it/12085015
+
+Instagram caption:
+
+As the era of artificial intelligence (AI) agents is in full swing, the competition axis of the AI i..
+Source: 매일경제
+Published At: 2026-06-28 13:48 IST
+Article link in bio.
+
+#aiagents #funny #artificialintelligence #techhumor #AIcompetition #digitalagents #AIera #botWrites
