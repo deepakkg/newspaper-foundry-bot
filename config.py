@@ -123,6 +123,150 @@ def _normalize_llm_base_url(value: str) -> str:
     return normalized
 
 
+def _project_path(raw_path: str) -> Path:
+    path = Path(raw_path)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    return path
+
+
+def _missing_names(items: tuple[tuple[str, object | None], ...]) -> list[str]:
+    return [name for name, value in items if not value]
+
+
+def _validate_bluesky_config(
+    post_to_bluesky: bool,
+    *,
+    bluesky_handle: str | None,
+    bluesky_app_password: str | None,
+) -> None:
+    if not post_to_bluesky:
+        return
+    missing = _missing_names(
+        (
+            ("BLUESKY_HANDLE", bluesky_handle),
+            ("BLUESKY_APP_PASSWORD", bluesky_app_password),
+        )
+    )
+    if missing:
+        missing_str = ", ".join(missing)
+        raise ValueError(
+            "POST_TO_BLUESKY is enabled but required Bluesky credentials "
+            f"are missing: {missing_str}"
+        )
+
+
+def _validate_x_config(
+    post_to_x: bool,
+    *,
+    x_api_key: str | None,
+    x_api_key_secret: str | None,
+    x_access_token: str | None,
+    x_access_token_secret: str | None,
+    x_username: str | None,
+) -> None:
+    if not post_to_x:
+        return
+    missing = _missing_names(
+        (
+            ("X_API_KEY", x_api_key),
+            ("X_API_KEY_SECRET", x_api_key_secret),
+            ("X_ACCESS_TOKEN", x_access_token),
+            ("X_ACCESS_TOKEN_SECRET", x_access_token_secret),
+            ("X_USERNAME", x_username),
+        )
+    )
+    if missing:
+        missing_str = ", ".join(missing)
+        raise ValueError(
+            f"POST_TO_X is enabled but required X credentials are missing: {missing_str}"
+        )
+
+
+def _validate_instagram_config(
+    post_to_instagram: bool,
+    *,
+    instagram_account_id: str | None,
+    instagram_access_token: str | None,
+    cloudinary_cloud_name: str | None,
+    cloudinary_api_key: str | None,
+    cloudinary_api_secret: str | None,
+) -> None:
+    if not post_to_instagram:
+        return
+    missing = _missing_names(
+        (
+            ("INSTAGRAM_ACCOUNT_ID", instagram_account_id),
+            ("INSTAGRAM_ACCESS_TOKEN", instagram_access_token),
+            ("CLOUDINARY_CLOUD_NAME", cloudinary_cloud_name),
+            ("CLOUDINARY_API_KEY", cloudinary_api_key),
+            ("CLOUDINARY_API_SECRET", cloudinary_api_secret),
+        )
+    )
+    if missing:
+        missing_str = ", ".join(missing)
+        raise ValueError(
+            "POST_TO_INSTAGRAM is enabled but required Instagram/Cloudinary "
+            f"credentials are missing: {missing_str}"
+        )
+
+
+def _validate_discord_approval_config(
+    *,
+    approval_required: bool,
+    publishing_enabled: bool,
+    discord_bot_token: str | None,
+    discord_channel_id: str | None,
+    discord_approver_user_ids: list[str],
+) -> None:
+    if not approval_required or not publishing_enabled:
+        return
+    missing = _missing_names(
+        (
+            ("DISCORD_BOT_TOKEN", discord_bot_token),
+            ("DISCORD_CHANNEL_ID", discord_channel_id),
+        )
+    )
+    if not discord_approver_user_ids:
+        missing.append("DISCORD_APPROVER_USER_IDS")
+    if missing:
+        missing_str = ", ".join(missing)
+        raise ValueError(
+            "Publishing is enabled but required Discord approval settings "
+            f"are missing: {missing_str}"
+        )
+
+
+def _validate_on_demand_config(
+    *,
+    on_demand_requests_enabled: bool,
+    discord_bot_token: str | None,
+    discord_channel_id: str | None,
+    discord_approver_user_ids: list[str],
+) -> None:
+    if not on_demand_requests_enabled:
+        return
+    missing = _missing_names(
+        (
+            ("DISCORD_BOT_TOKEN", discord_bot_token),
+            ("DISCORD_CHANNEL_ID", discord_channel_id),
+        )
+    )
+    if not discord_approver_user_ids:
+        missing.append("DISCORD_APPROVER_USER_IDS")
+    if missing:
+        missing_str = ", ".join(missing)
+        raise ValueError(
+            "ON_DEMAND_REQUESTS_ENABLED is true but required Discord intake "
+            f"settings are missing: {missing_str}"
+        )
+
+
+def _validate_llm_credentials(llm_base_url: str, llm_api_key: str | None) -> None:
+    if llm_base_url.startswith("https://") and llm_api_key is None:
+        raise ValueError("LLM_API_KEY is required when using a hosted LLM endpoint.")
+
+
 def load_config(env_path: Path | None = None) -> AppConfig:
     resolved_env_path = env_path or DEFAULT_ENV_PATH
     load_dotenv(resolved_env_path, override=True)
@@ -223,107 +367,47 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     news_language = _parse_non_empty_text(
         os.getenv("NEWS_LANGUAGE", "en"), "NEWS_LANGUAGE"
     )
-    log_file_path = Path(log_file_raw)
-    if not log_file_path.is_absolute():
-        log_file_path = PROJECT_ROOT / log_file_path
-    generated_image_dir = Path(generated_image_dir_raw)
-    if not generated_image_dir.is_absolute():
-        generated_image_dir = PROJECT_ROOT / generated_image_dir
+    log_file_path = _project_path(log_file_raw)
+    generated_image_dir = _project_path(generated_image_dir_raw)
     article_links_dir = log_file_path.parent / "article-links"
     article_links_data_path = article_links_dir / "links.json"
     article_links_html_path = article_links_dir / "index.html"
 
-    if post_to_bluesky:
-        missing = [
-            name
-            for name, value in (
-                ("BLUESKY_HANDLE", bluesky_handle),
-                ("BLUESKY_APP_PASSWORD", bluesky_app_password),
-            )
-            if not value
-        ]
-        if missing:
-            missing_str = ", ".join(missing)
-            raise ValueError(
-                "POST_TO_BLUESKY is enabled but required Bluesky credentials "
-                f"are missing: {missing_str}"
-            )
-
-    if post_to_x:
-        missing = [
-            name
-            for name, value in (
-                ("X_API_KEY", x_api_key),
-                ("X_API_KEY_SECRET", x_api_key_secret),
-                ("X_ACCESS_TOKEN", x_access_token),
-                ("X_ACCESS_TOKEN_SECRET", x_access_token_secret),
-                ("X_USERNAME", x_username),
-            )
-            if not value
-        ]
-        if missing:
-            missing_str = ", ".join(missing)
-            raise ValueError(
-                f"POST_TO_X is enabled but required X credentials are missing: {missing_str}"
-            )
-
-    if post_to_instagram:
-        missing = [
-            name
-            for name, value in (
-                ("INSTAGRAM_ACCOUNT_ID", instagram_account_id),
-                ("INSTAGRAM_ACCESS_TOKEN", instagram_access_token),
-                ("CLOUDINARY_CLOUD_NAME", cloudinary_cloud_name),
-                ("CLOUDINARY_API_KEY", cloudinary_api_key),
-                ("CLOUDINARY_API_SECRET", cloudinary_api_secret),
-            )
-            if not value
-        ]
-        if missing:
-            missing_str = ", ".join(missing)
-            raise ValueError(
-                "POST_TO_INSTAGRAM is enabled but required Instagram/Cloudinary "
-                f"credentials are missing: {missing_str}"
-            )
-
-    if approval_required and (post_to_bluesky or post_to_x or post_to_instagram):
-        missing = [
-            name
-            for name, value in (
-                ("DISCORD_BOT_TOKEN", discord_bot_token),
-                ("DISCORD_CHANNEL_ID", discord_channel_id),
-            )
-            if not value
-        ]
-        if not discord_approver_user_ids:
-            missing.append("DISCORD_APPROVER_USER_IDS")
-        if missing:
-            missing_str = ", ".join(missing)
-            raise ValueError(
-                "Publishing is enabled but required Discord approval settings "
-                f"are missing: {missing_str}"
-            )
-
-    if on_demand_requests_enabled:
-        missing = [
-            name
-            for name, value in (
-                ("DISCORD_BOT_TOKEN", discord_bot_token),
-                ("DISCORD_CHANNEL_ID", discord_channel_id),
-            )
-            if not value
-        ]
-        if not discord_approver_user_ids:
-            missing.append("DISCORD_APPROVER_USER_IDS")
-        if missing:
-            missing_str = ", ".join(missing)
-            raise ValueError(
-                "ON_DEMAND_REQUESTS_ENABLED is true but required Discord intake "
-                f"settings are missing: {missing_str}"
-            )
-
-    if llm_base_url.startswith("https://") and llm_api_key is None:
-        raise ValueError("LLM_API_KEY is required when using a hosted LLM endpoint.")
+    _validate_bluesky_config(
+        post_to_bluesky,
+        bluesky_handle=bluesky_handle,
+        bluesky_app_password=bluesky_app_password,
+    )
+    _validate_x_config(
+        post_to_x,
+        x_api_key=x_api_key,
+        x_api_key_secret=x_api_key_secret,
+        x_access_token=x_access_token,
+        x_access_token_secret=x_access_token_secret,
+        x_username=x_username,
+    )
+    _validate_instagram_config(
+        post_to_instagram,
+        instagram_account_id=instagram_account_id,
+        instagram_access_token=instagram_access_token,
+        cloudinary_cloud_name=cloudinary_cloud_name,
+        cloudinary_api_key=cloudinary_api_key,
+        cloudinary_api_secret=cloudinary_api_secret,
+    )
+    _validate_discord_approval_config(
+        approval_required=approval_required,
+        publishing_enabled=post_to_bluesky or post_to_x or post_to_instagram,
+        discord_bot_token=discord_bot_token,
+        discord_channel_id=discord_channel_id,
+        discord_approver_user_ids=discord_approver_user_ids,
+    )
+    _validate_on_demand_config(
+        on_demand_requests_enabled=on_demand_requests_enabled,
+        discord_bot_token=discord_bot_token,
+        discord_channel_id=discord_channel_id,
+        discord_approver_user_ids=discord_approver_user_ids,
+    )
+    _validate_llm_credentials(llm_base_url, llm_api_key)
 
     return AppConfig(
         llm_base_url=llm_base_url,

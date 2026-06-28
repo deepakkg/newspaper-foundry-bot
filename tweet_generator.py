@@ -1,21 +1,15 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import random
 import socket
 import sys
 import threading
 import time
-from dataclasses import dataclass
-from datetime import datetime, timezone
-from pathlib import Path
 
 from openai import OpenAIError
 
-from article_links import build_article_link_entry, update_article_links_page
-from bluesky_publisher import post_to_bluesky
-from cloudinary_uploader import upload_image_to_cloudinary
 from config import AppConfig, load_config
+from content_source import select_content_source
 from discord_approval import (
     ApprovalRequest,
     request_discord_approval,
@@ -26,190 +20,24 @@ from instagram_content import (
     generate_instagram_hashtags,
     generate_instagram_hashtags_from_text,
 )
-from instagram_image import render_instagram_image
-from instagram_publisher import publish_instagram_image
 from logger import PlatformLogResult, append_log_entry, build_run_log_entry
-from news_fetcher import NewsItem, fetch_latest_news
-from on_demand_requests import OnDemandRequest, fetch_next_on_demand_request
+from news_fetcher import NewsItem
 from notifications import (
     format_news_published_at,
     send_failure_notifications,
     send_manual_notifications,
     send_success_notifications,
 )
+from publishing_flow import (
+    enabled_platforms,
+    print_platform_results,
+    publish_enabled_platforms,
+    update_article_links_after_instagram_publish,
+)
 from publisher import (
     build_post_text,
-    build_post_text_without_url,
     max_generated_text_chars,
-    post_tweet_to_x,
 )
-
-
-@dataclass(frozen=True)
-class PublishOutcome:
-    results: list[PlatformLogResult]
-    success_count: int
-
-
-def enabled_platforms(config: AppConfig) -> list[str]:
-    platforms: list[str] = []
-    if config.post_to_bluesky:
-        platforms.append("Bluesky")
-    if config.post_to_instagram:
-        platforms.append("Instagram")
-    if config.post_to_x:
-        platforms.append("X")
-    return platforms
-
-
-def image_output_path(config: AppConfig, topic: str) -> Path:
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    slug = "-".join(part for part in topic.lower().split() if part) or "post"
-    safe_slug = "".join(char for char in slug if char.isalnum() or char == "-")[:60]
-    return config.generated_image_dir / f"{timestamp}-{safe_slug}.png"
-
-
-def format_platform_result(result: PlatformLogResult) -> str:
-    detail_parts = [result.status]
-    if result.url:
-        detail_parts.append(result.url)
-    if result.identifier:
-        detail_parts.append(result.identifier)
-    if result.error:
-        detail_parts.append(result.error)
-    return f"{result.platform}: {' | '.join(detail_parts)}"
-
-
-def print_platform_results(results: list[PlatformLogResult]) -> None:
-    for result in results:
-        print(format_platform_result(result))
-
-
-def update_article_links_after_instagram_publish(
-    config: AppConfig,
-    *,
-    news_item: NewsItem | None,
-    results: list[PlatformLogResult],
-) -> None:
-    if not config.article_links_enabled or news_item is None:
-        return
-
-    instagram_result = next(
-        (
-            result
-            for result in results
-            if result.platform == "Instagram" and result.status == "published"
-        ),
-        None,
-    )
-    if instagram_result is None:
-        return
-
-    try:
-        update_article_links_page(
-            config,
-            build_article_link_entry(
-                news_item,
-                instagram_media_id=instagram_result.identifier,
-                instagram_url=instagram_result.url,
-            ),
-        )
-        print(f"Article link page updated: {news_item.link}")
-    except Exception as exc:
-        print(f"Warning: Article link page update failed: {exc}")
-
-
-def publish_enabled_platforms(
-    config: AppConfig,
-    *,
-    topic: str,
-    tweet: str,
-    final_post_text: str,
-    news_item: NewsItem | None,
-    instagram_caption: str | None,
-) -> PublishOutcome:
-    news_url = news_item.link if news_item else None
-    results: list[PlatformLogResult] = []
-    success_count = 0
-
-    if config.post_to_bluesky:
-        try:
-            published = post_to_bluesky(
-                config,
-                build_post_text_without_url(tweet),
-                news_url=news_url,
-                news_title=news_item.title if news_item else None,
-                news_summary=news_item.summary if news_item else None,
-            )
-            success_count += 1
-            results.append(
-                PlatformLogResult(
-                    platform="Bluesky",
-                    status="published",
-                    url=published.url,
-                    identifier=published.uri,
-                )
-            )
-        except Exception as exc:
-            results.append(
-                PlatformLogResult(platform="Bluesky", status="failed", error=str(exc))
-            )
-
-    if config.post_to_instagram:
-        cloudinary_url: str | None = None
-        try:
-            if instagram_caption is None:
-                raise RuntimeError("Instagram caption was not generated.")
-            image_path = render_instagram_image(
-                tweet,
-                image_output_path(config, topic),
-            )
-            uploaded = upload_image_to_cloudinary(config, image_path)
-            cloudinary_url = uploaded.secure_url
-            published = publish_instagram_image(
-                config,
-                image_url=uploaded.secure_url,
-                caption=instagram_caption,
-            )
-            success_count += 1
-            results.append(
-                PlatformLogResult(
-                    platform="Instagram",
-                    status="published",
-                    url=published.url,
-                    identifier=published.media_id,
-                )
-            )
-        except Exception as exc:
-            error_message = str(exc)
-            if cloudinary_url:
-                error_message = (
-                    f"{error_message}; Cloudinary URL: {cloudinary_url}"
-                )
-            results.append(
-                PlatformLogResult(
-                    platform="Instagram",
-                    status="failed",
-                    error=error_message,
-                )
-            )
-
-    if config.post_to_x:
-        try:
-            published = post_tweet_to_x(config, tweet, news_url=news_url)
-            success_count += 1
-            results.append(
-                PlatformLogResult(
-                    platform="X",
-                    status="published",
-                    url=published.url,
-                    identifier=published.tweet_id,
-                )
-            )
-        except Exception as exc:
-            results.append(PlatformLogResult(platform="X", status="failed", error=str(exc)))
-
-    return PublishOutcome(results=results, success_count=success_count)
 
 
 def spinner(stop_event: threading.Event, message: str = "Generating post") -> None:
@@ -280,7 +108,6 @@ def run_once() -> int:
     topic: str | None = None
     tone: str | None = None
     news_item: NewsItem | None = None
-    on_demand_request: OnDemandRequest | None = None
     stop_event: threading.Event | None = None
     spinner_thread: threading.Thread | None = None
 
@@ -288,35 +115,11 @@ def run_once() -> int:
         client = build_client(config)
         interactive_tty = sys.stdout.isatty()
 
-        if config.on_demand_requests_enabled:
-            try:
-                on_demand_request = fetch_next_on_demand_request(config)
-            except Exception as exc:
-                print(f"Warning: Discord on-demand request lookup failed: {exc}")
-
-        if on_demand_request is not None:
-            topic = on_demand_request.topic
-            tone = on_demand_request.tone or random.choice(config.tones)
-            news_item = on_demand_request.news_item
-            if on_demand_request.kind == "direct_post":
-                print("Using on-demand direct post request.")
-            elif news_item is not None:
-                print(f"Using on-demand news URL: {news_item.title} ({news_item.source})")
-        else:
-            topic = random.choice(config.topics)
-            tone = random.choice(config.tones)
-
-            if config.news_enabled:
-                try:
-                    news_item = fetch_latest_news(topic, config)
-                    if news_item is None:
-                        print(
-                            f"No recent RSS news found for {topic}. Using generic topic prompt."
-                        )
-                    else:
-                        print(f"Using RSS news: {news_item.title} ({news_item.source})")
-                except Exception as exc:
-                    print(f"Warning: RSS news lookup failed for {topic}: {exc}")
+        content_source = select_content_source(config)
+        topic = content_source.topic
+        tone = content_source.tone
+        news_item = content_source.news_item
+        on_demand_request = content_source.on_demand_request
 
         print("Generating post...")
         if interactive_tty:

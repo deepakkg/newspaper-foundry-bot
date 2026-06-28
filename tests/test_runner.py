@@ -10,7 +10,9 @@ from unittest.mock import MagicMock, patch
 import requests
 from openai import OpenAIError
 
+import content_source
 import notifications
+import publishing_flow
 import tweet_generator
 from discord_approval import ApprovalDecision
 from news_fetcher import NewsItem
@@ -77,16 +79,16 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "witty"]):
-                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "witty"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
                         with patch.object(
                             tweet_generator,
                             "generate_valid_tweet",
                             return_value=("AI agents are moving into support queues. 🤖", 1.0, 1),
                         ):
                             with patch.object(tweet_generator, "request_discord_approval", side_effect=approve):
-                                with patch.object(tweet_generator, "post_to_bluesky", side_effect=bluesky) as mock_bluesky:
-                                    with patch.object(tweet_generator, "post_tweet_to_x", side_effect=x_post) as mock_x:
+                                with patch.object(publishing_flow, "post_to_bluesky", side_effect=bluesky) as mock_bluesky:
+                                    with patch.object(publishing_flow, "post_tweet_to_x", side_effect=x_post) as mock_x:
                                         with patch.object(notifications, "send_telegram_message"):
                                             with patch("sys.stdout", buffer):
                                                 result = tweet_generator.run_once()
@@ -124,8 +126,8 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "witty"]):
-                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "witty"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
                         with patch.object(
                             tweet_generator,
                             "generate_valid_tweet",
@@ -133,7 +135,7 @@ class TweetGeneratorTests(unittest.TestCase):
                         ):
                             with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
                                 with patch.object(
-                                    tweet_generator,
+                                    publishing_flow,
                                     "post_to_bluesky",
                                     return_value=MagicMock(
                                         url="https://bsky.app/profile/example.bsky.social/post/abc",
@@ -181,20 +183,20 @@ class TweetGeneratorTests(unittest.TestCase):
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
                 with patch.object(
-                    tweet_generator,
+                    content_source,
                     "fetch_next_on_demand_request",
                     return_value=request,
                 ) as mock_intake:
-                    with patch.object(tweet_generator, "fetch_latest_news") as mock_news:
+                    with patch.object(content_source, "fetch_latest_news") as mock_news:
                         with patch.object(tweet_generator, "generate_valid_tweet") as mock_generate:
                             with patch.object(
                                 tweet_generator,
                                 "generate_instagram_hashtags_from_text",
                                 return_value=["#ExactPost", "#Writing"],
                             ) as mock_hashtags:
-                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")):
                                     with patch.object(
-                                        tweet_generator,
+                                        publishing_flow,
                                         "upload_image_to_cloudinary",
                                         return_value=SimpleNamespace(
                                             secure_url="https://res.cloudinary.com/demo/post.png",
@@ -202,7 +204,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                         ),
                                     ):
                                         with patch.object(
-                                            tweet_generator,
+                                            publishing_flow,
                                             "publish_instagram_image",
                                             return_value=SimpleNamespace(
                                                 media_id="179",
@@ -250,20 +252,20 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", return_value="witty") as mock_choice:
+                with patch.object(content_source.random, "choice", return_value="witty") as mock_choice:
                     with patch.object(
-                        tweet_generator,
+                        content_source,
                         "fetch_next_on_demand_request",
                         return_value=request,
                     ):
-                        with patch.object(tweet_generator, "fetch_latest_news") as mock_news:
+                        with patch.object(content_source, "fetch_latest_news") as mock_news:
                             with patch.object(
                                 tweet_generator,
                                 "generate_valid_tweet",
                                 return_value=("AI agents need better handoffs. 🤖", 1.0, 2),
                             ) as mock_generate:
                                 with patch.object(
-                                    tweet_generator,
+                                    publishing_flow,
                                     "post_to_bluesky",
                                     return_value=MagicMock(
                                         url="https://bsky.app/profile/example.bsky.social/post/abc",
@@ -297,14 +299,14 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "analysis"]):
                     with patch.object(
-                        tweet_generator,
+                        content_source,
                         "fetch_next_on_demand_request",
                         return_value=None,
                     ) as mock_intake:
                         with patch.object(
-                            tweet_generator,
+                            content_source,
                             "fetch_latest_news",
                             return_value=sample_news(),
                         ) as mock_news:
@@ -314,7 +316,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                 return_value=("AI agents need better handoffs. 🤖", 1.0, 1),
                             ):
                                 with patch.object(
-                                    tweet_generator,
+                                    publishing_flow,
                                     "post_to_bluesky",
                                     return_value=MagicMock(
                                         url="https://bsky.app/profile/example.bsky.social/post/abc",
@@ -348,7 +350,7 @@ class TweetGeneratorTests(unittest.TestCase):
                         "request_discord_approval",
                         return_value=ApprovalDecision(status="declined", user_id="111", username="Deepak"),
                     ):
-                        with patch.object(tweet_generator, "post_to_bluesky") as mock_bluesky:
+                        with patch.object(publishing_flow, "post_to_bluesky") as mock_bluesky:
                             with patch("sys.stdout", buffer):
                                 result = tweet_generator.run_once()
 
@@ -382,7 +384,7 @@ class TweetGeneratorTests(unittest.TestCase):
                         "request_discord_approval",
                         return_value=ApprovalDecision(status="expired"),
                     ):
-                        with patch.object(tweet_generator, "post_tweet_to_x") as mock_x:
+                        with patch.object(publishing_flow, "post_tweet_to_x") as mock_x:
                             result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
@@ -408,8 +410,8 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
-                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
                         with patch.object(
                             tweet_generator,
                             "generate_valid_tweet",
@@ -425,9 +427,9 @@ class TweetGeneratorTests(unittest.TestCase):
                                     "request_discord_approval",
                                     return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
                                 ):
-                                    with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")) as mock_render:
-                                        with patch.object(tweet_generator, "upload_image_to_cloudinary", return_value=uploaded) as mock_upload:
-                                            with patch.object(tweet_generator, "publish_instagram_image", return_value=published) as mock_publish:
+                                    with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")) as mock_render:
+                                        with patch.object(publishing_flow, "upload_image_to_cloudinary", return_value=uploaded) as mock_upload:
+                                            with patch.object(publishing_flow, "publish_instagram_image", return_value=published) as mock_publish:
                                                 result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
@@ -471,8 +473,8 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
-                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
                         with patch.object(
                             tweet_generator,
                             "generate_valid_tweet",
@@ -484,9 +486,9 @@ class TweetGeneratorTests(unittest.TestCase):
                                 return_value=["#AI", "#SupportOps"],
                             ):
                                 with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
-                                    with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
-                                        with patch.object(tweet_generator, "upload_image_to_cloudinary", return_value=uploaded):
-                                            with patch.object(tweet_generator, "publish_instagram_image", return_value=published) as mock_publish:
+                                    with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                        with patch.object(publishing_flow, "upload_image_to_cloudinary", return_value=uploaded):
+                                            with patch.object(publishing_flow, "publish_instagram_image", return_value=published) as mock_publish:
                                                 with patch("sys.stdout", buffer):
                                                     result = tweet_generator.run_once()
 
@@ -527,8 +529,8 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
-                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
                         with patch.object(
                             tweet_generator,
                             "generate_valid_tweet",
@@ -539,9 +541,9 @@ class TweetGeneratorTests(unittest.TestCase):
                                 "generate_instagram_hashtags",
                                 return_value=["#AI"],
                             ):
-                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")):
                                     with patch.object(
-                                        tweet_generator,
+                                        publishing_flow,
                                         "upload_image_to_cloudinary",
                                         return_value=SimpleNamespace(
                                             secure_url="https://res.cloudinary.com/demo/post.png",
@@ -549,7 +551,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                         ),
                                     ):
                                         with patch.object(
-                                            tweet_generator,
+                                            publishing_flow,
                                             "publish_instagram_image",
                                             side_effect=RuntimeError("bad image url"),
                                         ):
@@ -581,8 +583,8 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["ai agents", "analysis"]):
-                    with patch.object(tweet_generator, "fetch_latest_news", return_value=sample_news()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
                         with patch.object(
                             tweet_generator,
                             "generate_valid_tweet",
@@ -593,9 +595,9 @@ class TweetGeneratorTests(unittest.TestCase):
                                 "generate_instagram_hashtags",
                                 return_value=["#AI"],
                             ):
-                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")):
                                     with patch.object(
-                                        tweet_generator,
+                                        publishing_flow,
                                         "upload_image_to_cloudinary",
                                         return_value=SimpleNamespace(
                                             secure_url="https://res.cloudinary.com/demo/post.png",
@@ -603,7 +605,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                         ),
                                     ):
                                         with patch.object(
-                                            tweet_generator,
+                                            publishing_flow,
                                             "publish_instagram_image",
                                             return_value=SimpleNamespace(
                                                 media_id="179",
@@ -611,7 +613,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                             ),
                                         ):
                                             with patch.object(
-                                                tweet_generator,
+                                                publishing_flow,
                                                 "update_article_links_page",
                                                 side_effect=OSError("disk full"),
                                             ):
@@ -660,16 +662,16 @@ class TweetGeneratorTests(unittest.TestCase):
                             return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
                         ):
                             with patch.object(
-                                tweet_generator,
+                                publishing_flow,
                                 "post_to_bluesky",
                                 return_value=MagicMock(
                                     url="https://bsky.app/profile/example.bsky.social/post/abc",
                                     uri="at://did/post/abc",
                                 ),
                             ):
-                                with patch.object(tweet_generator, "render_instagram_image", return_value=Path("/tmp/post.png")):
+                                with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")):
                                     with patch.object(
-                                        tweet_generator,
+                                        publishing_flow,
                                         "upload_image_to_cloudinary",
                                         return_value=SimpleNamespace(
                                             secure_url="https://res.cloudinary.com/demo/post.png",
@@ -677,7 +679,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                         ),
                                     ):
                                         with patch.object(
-                                            tweet_generator,
+                                            publishing_flow,
                                             "publish_instagram_image",
                                             side_effect=RuntimeError("bad image url"),
                                         ):
@@ -732,9 +734,9 @@ class TweetGeneratorTests(unittest.TestCase):
                         "request_discord_approval",
                         return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
                     ):
-                        with patch.object(tweet_generator, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
+                        with patch.object(publishing_flow, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
                             with patch.object(
-                                tweet_generator,
+                                publishing_flow,
                                 "post_tweet_to_x",
                                 return_value=MagicMock(tweet_id="123", url="https://x.com/example/status/123"),
                             ):
@@ -774,9 +776,9 @@ class TweetGeneratorTests(unittest.TestCase):
                     return_value=("Coffee is back. ☕", 1.0, 1),
                 ):
                     with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
-                        with patch.object(tweet_generator, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
+                        with patch.object(publishing_flow, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
                             with patch.object(
-                                tweet_generator,
+                                publishing_flow,
                                 "post_tweet_to_x",
                                 return_value=MagicMock(tweet_id="123", url="https://x.com/example/status/123"),
                             ):
@@ -817,7 +819,7 @@ class TweetGeneratorTests(unittest.TestCase):
                         "request_discord_approval",
                         return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
                     ):
-                        with patch.object(tweet_generator, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
+                        with patch.object(publishing_flow, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
                             with patch.object(notifications, "send_telegram_message") as mock_telegram:
                                 with patch("sys.stdout", buffer):
                                     result = tweet_generator.run_once()
@@ -854,7 +856,7 @@ class TweetGeneratorTests(unittest.TestCase):
                     return_value=("Coffee is back. ☕", 1.0, 1),
                 ):
                     with patch.object(tweet_generator, "request_discord_approval") as mock_approval:
-                        with patch.object(tweet_generator, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
+                        with patch.object(publishing_flow, "post_to_bluesky", side_effect=RuntimeError("rate limited")):
                             with patch.object(notifications, "send_telegram_message") as mock_telegram:
                                 with patch("sys.stdout", buffer):
                                     result = tweet_generator.run_once()
@@ -916,7 +918,7 @@ class TweetGeneratorTests(unittest.TestCase):
 
         with patch.object(tweet_generator, "load_config", return_value=config):
             with patch.object(tweet_generator, "build_client", return_value=object()):
-                with patch.object(tweet_generator.random, "choice", side_effect=["learning", "serious"]):
+                with patch.object(content_source.random, "choice", side_effect=["learning", "serious"]):
                     with patch.object(
                         tweet_generator,
                         "generate_valid_tweet",
