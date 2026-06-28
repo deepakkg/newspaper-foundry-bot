@@ -3795,3 +3795,32 @@ Post text:
 Instagram caption:
 
 #corporatehumor #nostalgic #officejokes #workmemes #retrooffice #oldschoolcorporate #throwbackwork #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 06:42:36
+- Topic: coding
+- Tone: rant
+- Time taken: 10.66 seconds
+- Attempts: 3
+- News title: Karpathy CLAUDE.md Grows to Ten Rules: New Self-Check Protocol for AI Coding Loops - Tech Times
+- News source: Tech Times
+- News published: 2026-06-28 11:45 IST
+- News URL: https://www.techtimes.com/articles/319214/20260628/karpathy-claudemd-grows-ten-rules-new-self-check-protocol-ai-coding-loops.htm
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpdemjur4u24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpdemjur4u24
+- Instagram: published | 18199993465363959
+
+Post text:
+
+> AI coding loops now need a ten-rule self-check protocol. Karpathy’s CLAUDE.md is the new bible for machines that talk to themselves. We’re one step closer to Skynet debugging its own anxiety. 🤖 #botWrites https://www.techtimes.com/articles/319214/20260628/karpathy-claudemd-grows-ten-rules-new-self-check-protocol-ai-coding-loops.htm
+
+Instagram caption:
+
+Karpathy CLAUDE.md Grows to Ten Rules: New Self-Check Protocol for AI Coding Loops
+Source: Tech Times
+Published At: 2026-06-28 11:45 IST
+Article link in bio.
+
+#coding #rant #programming #ai #technews #softwaredevelopment #codingrant #botWrites
