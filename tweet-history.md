@@ -3923,3 +3923,23 @@ Post text:
 Instagram caption:
 
 #corporatehumor #rant #workrant #officecomedy #corporatelife #workplacefun #businesshumor #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 13:53:14
+- Topic: corporate humor
+- Tone: nostalgic
+- Time taken: 17.26 seconds
+- Attempts: 3
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpe4ohjdwl2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpe4ohjdwl2s
+- Instagram: published | 17943579897230175
+
+Post text:
+
+> Corporate humor used to live in awkward email signatures and desk calendars. Now it's all branded memes and Slack reactions. The water cooler doesn't stand a chance. 📧😄 #botWrites
+
+Instagram caption:
+
+#corporatehumor #nostalgic #officehumor #workmemes #nostalgicvibes #throwbackthursday #funnybusiness #botWrites
