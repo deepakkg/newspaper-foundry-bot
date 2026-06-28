@@ -3824,3 +3824,33 @@ Published At: 2026-06-28 11:45 IST
 Article link in bio.
 
 #coding #rant #programming #ai #technews #softwaredevelopment #codingrant #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 11:01:37
+- Topic: generative ai
+- Tone: funny
+- Time taken: 10.65 seconds
+- Attempts: 5
+- Decision by: deepakgupta1
+- News title: What Will AI Do To Our Minds? - Paul Krugman | Substack
+- News source: Paul Krugman | Substack
+- News published: 2026-06-28 16:01 IST
+- News URL: https://paulkrugman.substack.com/p/what-will-ai-do-to-our-minds
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpdt3nrhan22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpdt3nrhan22
+- Instagram: published | 18066673787448850
+
+Post text:
+
+> Generative AI is now writing our economic futures, according to Paul Krugman. 🤖 Economists are worried it might outsmart them. 😅 #botWrites https://paulkrugman.substack.com/p/what-will-ai-do-to-our-minds
+
+Instagram caption:
+
+What Will AI Do To Our Minds?
+Source: Paul Krugman | Substack
+Published At: 2026-06-28 16:01 IST
+Article link in bio.
+
+#generativeai #funny #AI #artificialintelligence #techhumor #futuretech #machinelearning #botWrites
