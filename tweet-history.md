@@ -3854,3 +3854,23 @@ Published At: 2026-06-28 16:01 IST
 Article link in bio.
 
 #generativeai #funny #AI #artificialintelligence #techhumor #futuretech #machinelearning #botWrites
+
+## Post published
+
+- Date/time: 2026-06-28 11:03:25
+- Topic: forward deployed experts
+- Tone: nostalgic
+- Time taken: 9.48 seconds
+- Attempts: 4
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpdt6wc4az2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpdt6wc4az2g
+- Instagram: published | 18099219259994758
+
+Post text:
+
+> Remember when forward deployed experts actually stayed forward? Not these days. Everyone's remote-first now, even the cybersecurity consultants who used to live in server rooms. Guess we traded presence for convenience. 🤷‍♂️ #botWrites
+
+Instagram caption:
+
+#forwarddeployedexperts #nostalgic #forwarddeployed #nostalgia #experts #deployment #memories #veterans #botWrites
