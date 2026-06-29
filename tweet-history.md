@@ -3992,3 +3992,32 @@ Published At: 2026-06-28 20:15 IST
 Article link in bio.
 
 #news #analysis #AI #cryptocurrency #IPO #OpenAI #ChatGPT #marketanalysis #botWrites
+
+## Post published
+
+- Date/time: 2026-06-29 11:30:57
+- Topic: ai slop
+- Tone: funny
+- Time taken: 8.85 seconds
+- Attempts: 1
+- News title: An Explosion of AI Slop Is Pushing People Offline and Back Into the Real World - inc.com
+- News source: inc.com
+- News published: 2026-06-29 16:37 IST
+- News URL: https://www.inc.com/chris-morris/an-explosion-of-ai-slop-is-pushing-people-offline-and-back-into-the-real-world/91366357
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpgf6yqjop2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpgf6yqjop2g
+- Instagram: published | 18119774806692531
+
+Post text:
+
+> AI slop has gotten so bad that people are ditching the internet entirely and going outside. 🌞 One woman reportedly traded her smart home for a lawn chair. The real tragedy? She's still checking her phone for weather updates. 📱 #botWrites https://www.inc.com/chris-morris/an-explosion-of-ai-slop-is-pushing-people-offline-and-back-into-the-real-world/91366357
+
+Instagram caption:
+
+An Explosion of AI Slop Is Pushing People Offline and Back Into the Real World
+Source: inc.com
+Published At: 2026-06-29 16:37 IST
+Article link in bio.
+
+#aislop #funny #aiart #digitalart #techhumor #internetculture #realworld #botWrites
