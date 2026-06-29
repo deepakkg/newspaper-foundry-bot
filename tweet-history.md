@@ -4021,3 +4021,32 @@ Published At: 2026-06-29 16:37 IST
 Article link in bio.
 
 #aislop #funny #aiart #digitalart #techhumor #internetculture #realworld #botWrites
+
+## Post published
+
+- Date/time: 2026-06-29 17:17:06
+- Topic: ai slop
+- Tone: funny
+- Time taken: 7.74 seconds
+- Attempts: 1
+- News title: Tidal won't monetize AI slop music, company says - Neowin
+- News source: Neowin
+- News published: 2026-06-29 21:58 IST
+- News URL: https://www.neowin.net/news/tidal-wont-monetize-ai-slop-music-company-says/?utm_source
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpgyjvswjg22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpgyjvswjg22
+- Instagram: published | 18009291008738866
+
+Post text:
+
+> Tidal won't monetize AI slop music, which is either a bold artistic stance or just good business. Someone finally drew the line at algorithmic garbage. 🤖💸 #botWrites https://www.neowin.net/news/tidal-wont-monetize-ai-slop-music-company-says/?utm_source
+
+Instagram caption:
+
+Tidal won't monetize AI slop music, company says
+Source: Neowin
+Published At: 2026-06-29 21:58 IST
+Article link in bio.
+
+#aislop #funny #tidal #musicindustry #ai #slop #neowin #botWrites
