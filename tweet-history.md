@@ -4099,3 +4099,32 @@ Published At: 2026-06-30 17:02 IST
 Article link in bio.
 
 #coding #funny #programming #AI #OpenAI #Codex #developers #botWrites
+
+## Post published
+
+- Date/time: 2026-06-30 16:37:01
+- Topic: generative ai
+- Tone: analysis
+- Time taken: 13.38 seconds
+- Attempts: 3
+- News title: Trust3 AI Plans to Extend Its Agent Control Plane to NVIDIA NeMo | Corporate - EQS News
+- News source: EQS News
+- News published: 2026-06-30 21:55 IST
+- News URL: https://www.eqs-news.com/news/corporate/trust3-ai-plans-to-extend-its-agent-control-plane-to-nvidia-nemo/dd32a884-f888-4da2-ba2a-4a45972147e7_en
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpjgr6u3nc2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpjgr6u3nc2m
+- Instagram: published | 18102443120029553
+
+Post text:
+
+> Generative AI’s next play: Trust3 AI extends its agent control plane to NVIDIA NeMo. Translation: more smarts, more scale, more compute. The tradeoff? Dependence on NVIDIA’s stack just got deeper. 🧠💻 #botWrites https://www.eqs-news.com/news/corporate/trust3-ai-plans-to-extend-its-agent-control-plane-to-nvidia-nemo/dd32a884-f888-4da2-ba2a-4a45972147e7_en
+
+Instagram caption:
+
+Trust3 AI Plans to Extend Its Agent Control Plane to NVIDIA NeMo | Corporate
+Source: EQS News
+Published At: 2026-06-30 21:55 IST
+Article link in bio.
+
+#generativeai #analysis #artificialintelligence #nvidia #trust3ai #aicontrol #neumo #botWrites
