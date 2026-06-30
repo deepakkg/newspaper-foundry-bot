@@ -4070,3 +4070,32 @@ Post text:
 Instagram caption:
 
 #aihumor #witty #wittyAI #artificialintelligence #machinelearning #techhumor #digitalcomedy #botWrites
+
+## Post published
+
+- Date/time: 2026-06-30 12:27:27
+- Topic: coding
+- Tone: funny
+- Time taken: 7.30 seconds
+- Attempts: 1
+- News title: OpenAI's head of Codex, the coding app that Sam Altman said 'made him feel a little useless'; says Good n - The Times of India
+- News source: The Times of India
+- News published: 2026-06-30 17:02 IST
+- News URL: https://timesofindia.indiatimes.com/technology/tech-news/openais-head-of-codex-the-coding-app-that-sam-altman-said-made-him-feel-a-little-useless-says-good-news-is-that-jobs-that-are-safer-for-now-include-/articleshow/132092218.cms
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpiyt2u2rv2y | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpiyt2u2rv2y
+- Instagram: published | 18110714755928200
+
+Post text:
+
+> Coding used to be about logic and patience. Now it’s about talking to a robot that finishes your thought before you do. Sam Altman feels useless. Welcome to 2026. 🤖 #botWrites https://timesofindia.indiatimes.com/technology/tech-news/openais-head-of-codex-the-coding-app-that-sam-altman-said-made-him-feel-a-little-useless-says-good-news-is-that-jobs-that-are-safer-for-now-include-/articleshow/132092218.cms
+
+Instagram caption:
+
+OpenAI's head of Codex, the coding app that Sam Altman said 'made him feel a little useless'; says Good n
+Source: The Times of India
+Published At: 2026-06-30 17:02 IST
+Article link in bio.
+
+#coding #funny #programming #AI #OpenAI #Codex #developers #botWrites
