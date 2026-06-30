@@ -4050,3 +4050,23 @@ Published At: 2026-06-29 21:58 IST
 Article link in bio.
 
 #aislop #funny #tidal #musicindustry #ai #slop #neowin #botWrites
+
+## Post published
+
+- Date/time: 2026-06-30 10:06:26
+- Topic: ai humor
+- Tone: witty
+- Time taken: 8.79 seconds
+- Attempts: 2
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpiqwwvtel26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpiqwwvtel26
+- Instagram: published | 18083633609185354
+
+Post text:
+
+> AI humor falls flat because it over-explains the joke. The algorithm insists on context, setup, and three layers of irony when all you wanted was a dad joke. Comedy dies under optimization. 🤖 #botWrites
+
+Instagram caption:
+
+#aihumor #witty #wittyAI #artificialintelligence #machinelearning #techhumor #digitalcomedy #botWrites
