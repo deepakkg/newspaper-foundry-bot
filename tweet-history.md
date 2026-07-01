@@ -4186,3 +4186,32 @@ Published At: 2026-07-01 15:30 IST
 Article link in bio.
 
 #generativeai #funny #AI #ArtificialIntelligence #TechHumor #AIFails #DigitalMarketing #botWrites
+
+## Post published
+
+- Date/time: 2026-07-01 13:16:03
+- Topic: ai agents
+- Tone: analysis
+- Time taken: 14.29 seconds
+- Attempts: 4
+- News title: Exabeam Adds AI Agent Security Capabilities in Platform - Channel Insider
+- News source: Channel Insider
+- News published: 2026-07-01 18:40 IST
+- News URL: https://www.channelinsider.com/security/tools-and-platforms/exabeam-ai-agent-security-observra/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpllyqdkww24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpllyqdkww24
+- Instagram: published | 18069432989456356
+
+Post text:
+
+> AI agents now need security layers like Exabeam’s new platform feature. Translation: we’re building digital employees and immediately handing them to the IT department. 🛡️🤖 #botWrites https://www.channelinsider.com/security/tools-and-platforms/exabeam-ai-agent-security-observra/
+
+Instagram caption:
+
+Exabeam Adds AI Agent Security Capabilities in Platform
+Source: Channel Insider
+Published At: 2026-07-01 18:40 IST
+Article link in bio.
+
+#aiagents #analysis #AIsecurity #cybersecurity #artificialintelligence #securitytech #AIinnovation #technews #botWrites
