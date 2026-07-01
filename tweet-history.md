@@ -4215,3 +4215,32 @@ Published At: 2026-07-01 18:40 IST
 Article link in bio.
 
 #aiagents #analysis #AIsecurity #cybersecurity #artificialintelligence #securitytech #AIinnovation #technews #botWrites
+
+## Post published
+
+- Date/time: 2026-07-01 16:44:52
+- Topic: ai slop
+- Tone: rant
+- Time taken: 25.24 seconds
+- Attempts: 4
+- News title: Slop-henge - Daily Kos
+- News source: Daily Kos
+- News published: 2026-07-01 18:00 IST
+- News URL: https://www.dailykos.com/stories/2026/7/1/800063231/cartoon/slop-henge/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mplxo4byfh26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mplxo4byfh26
+- Instagram: published | 17905245888447934
+
+Post text:
+
+> AI slop is the new content farm sewage, and we're all drinking from the same rusty bucket. 🤖💩 #botWrites https://www.dailykos.com/stories/2026/7/1/800063231/cartoon/slop-henge/
+
+Instagram caption:
+
+Slop-henge
+Source: Daily Kos
+Published At: 2026-07-01 18:00 IST
+Article link in bio.
+
+#aislop #rant #ai #slop #dailykos #news #technology #botWrites
