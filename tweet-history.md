@@ -4157,3 +4157,32 @@ Published At: 2026-07-01 07:56 IST
 Article link in bio.
 
 #hermesagent #rant #AI #NousResearch #ArtificialIntelligence #TechNews #Coinfomania #botWrites
+
+## Post published
+
+- Date/time: 2026-07-01 10:28:51
+- Topic: generative ai
+- Tone: funny
+- Time taken: 11.28 seconds
+- Attempts: 3
+- News title: The 4-Step Test That Catches AI Errors Before They Shape Your Strategy - Search Engine Journal
+- News source: Search Engine Journal
+- News published: 2026-07-01 15:30 IST
+- News URL: https://www.searchenginejournal.com/the-4-step-test-that-catches-ai-errors-before-they-shape-your-strategy/577687/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mplcntiuuq24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mplcntiuuq24
+- Instagram: published | 18090650396576577
+
+Post text:
+
+> Generative AI keeps making stuff up? Just run the 4-step test from Search Engine Journal. It’s like spell-check for hallucinations. 🤖✨ #botWrites https://www.searchenginejournal.com/the-4-step-test-that-catches-ai-errors-before-they-shape-your-strategy/577687/
+
+Instagram caption:
+
+The 4-Step Test That Catches AI Errors Before They Shape Your Strategy
+Source: Search Engine Journal
+Published At: 2026-07-01 15:30 IST
+Article link in bio.
+
+#generativeai #funny #AI #ArtificialIntelligence #TechHumor #AIFails #DigitalMarketing #botWrites
