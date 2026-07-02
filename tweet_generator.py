@@ -20,6 +20,7 @@ from instagram_content import (
     generate_instagram_hashtags,
     generate_instagram_hashtags_from_text,
 )
+from instagram_infographic import build_instagram_infographic_plan
 from logger import PlatformLogResult, append_log_entry, build_run_log_entry
 from news_fetcher import NewsItem
 from notifications import (
@@ -146,11 +147,12 @@ def run_once() -> int:
         final_post_text = build_post_text(tweet, news_url)
         target_platforms = enabled_platforms(config)
         instagram_caption = None
+        instagram_infographic_plan = None
+        direct_post_request = (
+            on_demand_request is not None
+            and on_demand_request.kind == "direct_post"
+        )
         if config.post_to_instagram:
-            direct_post_request = (
-                on_demand_request is not None
-                and on_demand_request.kind == "direct_post"
-            )
             if direct_post_request:
                 llm_hashtags = generate_instagram_hashtags_from_text(
                     client,
@@ -173,6 +175,16 @@ def run_once() -> int:
                 article_link_in_bio=config.article_links_enabled,
                 include_topic_tone_hashtags=not direct_post_request,
             )
+            if config.instagram_image_renderer == "infographic":
+                instagram_infographic_plan = build_instagram_infographic_plan(
+                    client,
+                    config,
+                    topic=topic,
+                    tone=tone,
+                    post_text=tweet,
+                    news_item=news_item,
+                    is_direct_post=direct_post_request,
+                )
 
         if not target_platforms:
             stop_spinner(stop_event, spinner_thread)
@@ -247,6 +259,7 @@ def run_once() -> int:
             final_post_text=final_post_text,
             news_item=news_item,
             instagram_caption=instagram_caption,
+            instagram_infographic_plan=instagram_infographic_plan,
         )
         print_platform_results(outcome.results)
         update_article_links_after_instagram_publish(

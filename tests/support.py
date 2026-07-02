@@ -45,6 +45,8 @@ def write_env_file(path: Path, **overrides: str) -> None:
         "INSTAGRAM_ACCESS_TOKEN": "",
         "INSTAGRAM_GRAPH_BASE_URL": "https://graph.instagram.com",
         "INSTAGRAM_GRAPH_API_VERSION": "v23.0",
+        "INSTAGRAM_IMAGE_RENDERER": "quote_card",
+        "INSTAGRAM_INFOGRAPHIC_STYLE": "auto",
         "CLOUDINARY_CLOUD_NAME": "",
         "CLOUDINARY_API_KEY": "",
         "CLOUDINARY_API_SECRET": "",

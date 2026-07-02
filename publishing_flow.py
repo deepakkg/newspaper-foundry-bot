@@ -8,6 +8,7 @@ from article_links import build_article_link_entry, update_article_links_page
 from bluesky_publisher import post_to_bluesky
 from cloudinary_uploader import upload_image_to_cloudinary
 from config import AppConfig
+from instagram_infographic import InfographicPlan, render_instagram_infographic
 from instagram_image import render_instagram_image
 from instagram_publisher import publish_instagram_image
 from logger import PlatformLogResult
@@ -97,6 +98,7 @@ def publish_enabled_platforms(
     final_post_text: str,
     news_item: NewsItem | None,
     instagram_caption: str | None,
+    instagram_infographic_plan: InfographicPlan | None = None,
 ) -> PublishOutcome:
     _ = final_post_text
     news_url = news_item.link if news_item else None
@@ -131,10 +133,18 @@ def publish_enabled_platforms(
         try:
             if instagram_caption is None:
                 raise RuntimeError("Instagram caption was not generated.")
-            image_path = render_instagram_image(
-                tweet,
-                image_output_path(config, topic),
-            )
+            if config.instagram_image_renderer == "infographic":
+                if instagram_infographic_plan is None:
+                    raise RuntimeError("Instagram infographic plan was not generated.")
+                image_path = render_instagram_infographic(
+                    instagram_infographic_plan,
+                    image_output_path(config, topic),
+                )
+            else:
+                image_path = render_instagram_image(
+                    tweet,
+                    image_output_path(config, topic),
+                )
             uploaded = upload_image_to_cloudinary(config, image_path)
             cloudinary_url = uploaded.secure_url
             published = publish_instagram_image(

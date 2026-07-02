@@ -9,6 +9,13 @@ from dotenv import load_dotenv
 
 DEFAULT_ENV_PATH = Path(__file__).resolve().parent / ".env"
 PROJECT_ROOT = Path(__file__).resolve().parent
+INSTAGRAM_IMAGE_RENDERERS = {"quote_card", "infographic"}
+INSTAGRAM_INFOGRAPHIC_STYLES = {
+    "auto",
+    "foundry_editorial",
+    "foundry_schematic",
+    "foundry_briefing",
+}
 
 
 @dataclass(frozen=True)
@@ -48,6 +55,8 @@ class AppConfig:
     instagram_access_token: str | None
     instagram_graph_base_url: str
     instagram_graph_api_version: str
+    instagram_image_renderer: str
+    instagram_infographic_style: str
     cloudinary_cloud_name: str | None
     cloudinary_api_key: str | None
     cloudinary_api_secret: str | None
@@ -98,6 +107,14 @@ def _parse_non_empty_text(value: str, name: str) -> str:
     if not normalized:
         raise ValueError(f"{name} must not be empty.")
     return normalized
+
+
+def _parse_choice(value: str, name: str, choices: set[str]) -> str:
+    normalized = value.strip().lower()
+    if normalized in choices:
+        return normalized
+    choices_text = ", ".join(sorted(choices))
+    raise ValueError(f"{name} must be one of: {choices_text}.")
 
 
 def _parse_optional_csv_list(value: str) -> list[str]:
@@ -338,6 +355,16 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     instagram_graph_api_version = (
         os.getenv("INSTAGRAM_GRAPH_API_VERSION", "v23.0").strip() or "v23.0"
     )
+    instagram_image_renderer = _parse_choice(
+        os.getenv("INSTAGRAM_IMAGE_RENDERER", "quote_card"),
+        "INSTAGRAM_IMAGE_RENDERER",
+        INSTAGRAM_IMAGE_RENDERERS,
+    )
+    instagram_infographic_style = _parse_choice(
+        os.getenv("INSTAGRAM_INFOGRAPHIC_STYLE", "auto"),
+        "INSTAGRAM_INFOGRAPHIC_STYLE",
+        INSTAGRAM_INFOGRAPHIC_STYLES,
+    )
     cloudinary_cloud_name = os.getenv("CLOUDINARY_CLOUD_NAME", "").strip() or None
     cloudinary_api_key = os.getenv("CLOUDINARY_API_KEY", "").strip() or None
     cloudinary_api_secret = os.getenv("CLOUDINARY_API_SECRET", "").strip() or None
@@ -445,6 +472,8 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         instagram_access_token=instagram_access_token,
         instagram_graph_base_url=instagram_graph_base_url,
         instagram_graph_api_version=instagram_graph_api_version,
+        instagram_image_renderer=instagram_image_renderer,
+        instagram_infographic_style=instagram_infographic_style,
         cloudinary_cloud_name=cloudinary_cloud_name,
         cloudinary_api_key=cloudinary_api_key,
         cloudinary_api_secret=cloudinary_api_secret,

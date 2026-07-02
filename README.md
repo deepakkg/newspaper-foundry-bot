@@ -53,6 +53,8 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `INSTAGRAM_ACCOUNT_ID`
 - `INSTAGRAM_GRAPH_BASE_URL`
 - `INSTAGRAM_GRAPH_API_VERSION`
+- `INSTAGRAM_IMAGE_RENDERER`
+- `INSTAGRAM_INFOGRAPHIC_STYLE`
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_FOLDER`
 - `ARTICLE_LINKS_ENABLED`
@@ -84,6 +86,8 @@ BLUESKY_SERVICE_URL=https://bsky.social
 POST_TO_INSTAGRAM=false
 INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com
 INSTAGRAM_GRAPH_API_VERSION=v23.0
+INSTAGRAM_IMAGE_RENDERER=quote_card
+INSTAGRAM_INFOGRAPHIC_STYLE=auto
 CLOUDINARY_FOLDER=content-bot
 ARTICLE_LINKS_ENABLED=false
 ARTICLE_LINKS_MAX_ITEMS=25
@@ -146,6 +150,8 @@ POST_TO_INSTAGRAM=true
 INSTAGRAM_ACCOUNT_ID=your_instagram_account_id
 INSTAGRAM_GRAPH_BASE_URL=https://graph.instagram.com
 INSTAGRAM_GRAPH_API_VERSION=v23.0
+INSTAGRAM_IMAGE_RENDERER=quote_card
+INSTAGRAM_INFOGRAPHIC_STYLE=auto
 INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
@@ -153,7 +159,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 CLOUDINARY_FOLDER=content-bot
 ```
 
-Instagram posts use a Pillow-generated square image and a caption built from the news headline, source, published time, topic/tone hashtags, LLM-suggested hashtags, and `#botWrites` as the final hashtag.
+Instagram posts use a Pillow-generated image and a caption built from the news headline, source, published time, topic/tone hashtags, LLM-suggested hashtags, and `#botWrites` as the final hashtag. `INSTAGRAM_IMAGE_RENDERER=quote_card` keeps the existing square quote-card image. `INSTAGRAM_IMAGE_RENDERER=infographic` creates a feed-safe vertical infographic image using Pillow. Set `INSTAGRAM_INFOGRAPHIC_STYLE=auto`, `foundry_editorial`, `foundry_schematic`, or `foundry_briefing`.
 
 To keep article URLs available for Instagram followers, enable the optional GitHub Pages article index:
 

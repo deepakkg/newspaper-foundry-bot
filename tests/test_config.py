@@ -323,8 +323,46 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(config.instagram_account_id, "1789")
         self.assertEqual(config.instagram_access_token, "ig-token")
         self.assertEqual(config.instagram_graph_base_url, "https://graph.instagram.com")
+        self.assertEqual(config.instagram_image_renderer, "quote_card")
+        self.assertEqual(config.instagram_infographic_style, "auto")
         self.assertEqual(config.cloudinary_cloud_name, "cloud")
         self.assertEqual(config.cloudinary_folder, "content-bot")
+
+    def test_load_config_accepts_instagram_infographic_settings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(
+                env_path,
+                INSTAGRAM_IMAGE_RENDERER="infographic",
+                INSTAGRAM_INFOGRAPHIC_STYLE="foundry_schematic",
+            )
+
+            config = load_config(env_path)
+
+        self.assertEqual(config.instagram_image_renderer, "infographic")
+        self.assertEqual(config.instagram_infographic_style, "foundry_schematic")
+
+    def test_load_config_rejects_invalid_instagram_image_renderer(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, INSTAGRAM_IMAGE_RENDERER="poster")
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "INSTAGRAM_IMAGE_RENDERER must be one of: infographic, quote_card",
+            ):
+                load_config(env_path)
+
+    def test_load_config_rejects_invalid_instagram_infographic_style(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path, INSTAGRAM_INFOGRAPHIC_STYLE="neon")
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "INSTAGRAM_INFOGRAPHIC_STYLE must be one of:",
+            ):
+                load_config(env_path)
 
     def test_load_config_accepts_custom_instagram_graph_base_url(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

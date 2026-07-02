@@ -15,6 +15,7 @@ import notifications
 import publishing_flow
 import tweet_generator
 from discord_approval import ApprovalDecision
+from instagram_infographic import InfographicBlock, InfographicPlan
 from news_fetcher import NewsItem
 from on_demand_requests import OnDemandRequest
 from support import load_temp_config
@@ -428,11 +429,13 @@ class TweetGeneratorTests(unittest.TestCase):
                                     return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
                                 ):
                                     with patch.object(publishing_flow, "render_instagram_image", return_value=Path("/tmp/post.png")) as mock_render:
-                                        with patch.object(publishing_flow, "upload_image_to_cloudinary", return_value=uploaded) as mock_upload:
-                                            with patch.object(publishing_flow, "publish_instagram_image", return_value=published) as mock_publish:
-                                                result = tweet_generator.run_once()
+                                        with patch.object(tweet_generator, "build_instagram_infographic_plan") as mock_plan:
+                                            with patch.object(publishing_flow, "upload_image_to_cloudinary", return_value=uploaded) as mock_upload:
+                                                with patch.object(publishing_flow, "publish_instagram_image", return_value=published) as mock_publish:
+                                                    result = tweet_generator.run_once()
 
         self.assertEqual(result, 0)
+        mock_plan.assert_not_called()
         mock_render.assert_called_once()
         self.assertEqual(
             mock_render.call_args.args[0],
@@ -447,6 +450,78 @@ class TweetGeneratorTests(unittest.TestCase):
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn("- Instagram: published", log_content)
         self.assertIn("Instagram caption:", log_content)
+
+    def test_run_once_infographic_mode_uses_infographic_renderer(self) -> None:
+        tmp_dir, config = load_temp_config(
+            NEWS_ENABLED="true",
+            POST_TO_INSTAGRAM="true",
+            INSTAGRAM_ACCOUNT_ID="1789",
+            INSTAGRAM_ACCESS_TOKEN="ig-token",
+            INSTAGRAM_IMAGE_RENDERER="infographic",
+            INSTAGRAM_INFOGRAPHIC_STYLE="foundry_briefing",
+            CLOUDINARY_CLOUD_NAME="cloud",
+            CLOUDINARY_API_KEY="cloud-key",
+            CLOUDINARY_API_SECRET="cloud-secret",
+        )
+        self.addCleanup(tmp_dir.cleanup)
+        plan = InfographicPlan(
+            title="AI agents need handoffs",
+            blocks=[
+                InfographicBlock("Signal", "Agents are entering support queues."),
+                InfographicBlock("Risk", "Bad handoffs create support debt."),
+            ],
+            takeaway="Automation still needs ownership.",
+            style="foundry_briefing",
+            source_kind="news",
+        )
+        uploaded = SimpleNamespace(
+            secure_url="https://res.cloudinary.com/demo/post.png",
+            public_id="content-bot/post",
+        )
+        published = SimpleNamespace(media_id="179", url="https://instagram.com/p/abc")
+
+        with patch.object(tweet_generator, "load_config", return_value=config):
+            with patch.object(tweet_generator, "build_client", return_value=object()):
+                with patch.object(content_source.random, "choice", side_effect=["ai agents", "analysis"]):
+                    with patch.object(content_source, "fetch_latest_news", return_value=sample_news()):
+                        with patch.object(
+                            tweet_generator,
+                            "generate_valid_tweet",
+                            return_value=("AI agents need better handoffs. 🤖", 1.0, 1),
+                        ):
+                            with patch.object(
+                                tweet_generator,
+                                "generate_instagram_hashtags",
+                                return_value=["#AI", "#SupportOps"],
+                            ):
+                                with patch.object(
+                                    tweet_generator,
+                                    "build_instagram_infographic_plan",
+                                    return_value=plan,
+                                ) as mock_plan:
+                                    with patch.object(
+                                        tweet_generator,
+                                        "request_discord_approval",
+                                        return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
+                                    ):
+                                        with patch.object(publishing_flow, "render_instagram_image") as mock_quote_render:
+                                            with patch.object(
+                                                publishing_flow,
+                                                "render_instagram_infographic",
+                                                return_value=Path("/tmp/post.png"),
+                                            ) as mock_infographic_render:
+                                                with patch.object(publishing_flow, "upload_image_to_cloudinary", return_value=uploaded) as mock_upload:
+                                                    with patch.object(publishing_flow, "publish_instagram_image", return_value=published) as mock_publish:
+                                                        result = tweet_generator.run_once()
+
+        self.assertEqual(result, 0)
+        mock_plan.assert_called_once()
+        self.assertEqual(mock_plan.call_args.kwargs["post_text"], "AI agents need better handoffs. 🤖")
+        mock_quote_render.assert_not_called()
+        mock_infographic_render.assert_called_once()
+        self.assertIs(mock_infographic_render.call_args.args[0], plan)
+        mock_upload.assert_called_once()
+        mock_publish.assert_called_once()
 
     def test_run_once_updates_article_links_after_instagram_publish(self) -> None:
         buffer = StringIO()
