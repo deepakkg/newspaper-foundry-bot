@@ -4392,3 +4392,32 @@ Published At: 2026-07-02 14:29 IST
 Article link in bio.
 
 #aiengineers #funny #agenticai #codinghumor #aiart #techlife #developerlife #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 10:34:54
+- Topic: millennials
+- Tone: nostalgic
+- Time taken: 37.13 seconds
+- Attempts: 1
+- News title: Millennials Are Buying Blue Collar Small Businesses To AI-Proof Their Future - Forbes
+- News source: Forbes
+- News published: 2026-07-02 16:00 IST
+- News URL: https://www.forbes.com/sites/johnschroyer/2026/07/02/millennials-are-buying-blue-collar-small-businesses-to-ai-proof-their-future/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpnthjvtoc2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpnthjvtoc2s
+- Instagram: published | 17902416585455052
+
+Post text:
+
+> Millennials are buying blue collar businesses to escape AI. We went from dial-up internet to owning HVAC companies. Back to the tangible stuff. 🛠️📺 #botWrites https://www.forbes.com/sites/johnschroyer/2026/07/02/millennials-are-buying-blue-collar-small-businesses-to-ai-proof-their-future/
+
+Instagram caption:
+
+Millennials Are Buying Blue Collar Small Businesses To AI-Proof Their Future
+Source: Forbes
+Published At: 2026-07-02 16:00 IST
+Article link in bio.
+
+#millennials #nostalgic #nostalgia #smallbusiness #bluecollar #careerchange #futureofwork #botWrites
