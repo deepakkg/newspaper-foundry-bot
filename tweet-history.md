@@ -4421,3 +4421,23 @@ Published At: 2026-07-02 16:00 IST
 Article link in bio.
 
 #millennials #nostalgic #nostalgia #smallbusiness #bluecollar #careerchange #futureofwork #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 10:37:01
+- Topic: saas professional services
+- Tone: funny
+- Time taken: 21.08 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpntlbypnj2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpntlbypnj2a
+- Instagram: published | 17931840951323345
+
+Post text:
+
+> SaaS professional services are just paying someone to tell you the software actually works. It is a high-priced implementation fee for a manual you didn't read. 💸 #botWrites
+
+Instagram caption:
+
+#saasprofessionalservices #funny #saas #consulting #techhumor #b2b #agency #softwareasaservice #botWrites
