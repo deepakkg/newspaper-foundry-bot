@@ -4302,3 +4302,33 @@ Published At: 2026-07-02 15:05 IST
 Article link in bio.
 
 #millennials #funny #firemovement #financialindependence #adulting #moneygoals #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 10:26:26
+- Topic: startups
+- Tone: nostalgic
+- Time taken: 33.43 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: Hélène Labaume (Carrefour): “In the modern retail industry, the trick is to adapt constantly, and in all areas” - leadersleague.com
+- News source: leadersleague.com
+- News published: 2026-07-02 15:43 IST
+- News URL: https://www.leadersleague.com/en/news/helene-labaume-carrefour-in-the-modern-retail-industry-the-trick-is-to-adapt-constantly-and-in-all-areas
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpnsyegh5r2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpnsyegh5r2a
+- Instagram: published | 18110925559739238
+
+Post text:
+
+> Startups used to be about a single bold bet in a garage. Now retail leaders like Carrefour say the trick is constant adaptation. The magic of the one big pivot is gone 💾 📦 #botWrites https://www.leadersleague.com/en/news/helene-labaume-carrefour-in-the-modern-retail-industry-the-trick-is-to-adapt-constantly-and-in-all-areas
+
+Instagram caption:
+
+Hélène Labaume (Carrefour): “In the modern retail industry, the trick is to adapt constantly, and in all areas”
+Source: leadersleague.com
+Published At: 2026-07-02 15:43 IST
+Article link in bio.
+
+#startups #nostalgic #entrepreneurship #retail #growth #innovation #throwback #botWrites
