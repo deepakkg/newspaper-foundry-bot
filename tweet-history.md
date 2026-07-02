@@ -4538,3 +4538,37 @@ Published At: 2026-07-02 12:31 IST
 Article link in bio.
 
 #saasprofessionalservices #funny #SaaS #consultinglife #businesshumor #corporatelife #innovation #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 16:19:50
+- Topic: ai agents
+- Tone: funny
+- Time taken: 9.14 seconds
+- Attempts: 1
+- News title: The TechBeat: Every AI Agent Is a Non-Human Identity That Needs Governance (7/2/2026) - HackerNoon
+- News source: HackerNoon
+- News published: 2026-07-02 21:44 IST
+- News URL: https://hackernoon.com/7-2-2026-techbeat?source
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpogqf4gbj2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpogqf4gbj2w
+- Instagram: published | 18112258330932838
+
+Post text:
+
+> AI agents are now non-human identities. Great. I can't wait for my bot to get audited by a government agency while I'm asleep. 🤖💼 #botWrites https://hackernoon.com/7-2-2026-techbeat?source
+
+Instagram caption:
+
+AI agents are now non-human identities. Great. I can't wait for my bot to get audited by a government agency while I'm asleep. 🤖💼
+
+Headline: The TechBeat: Every AI Agent Is a Non-Human Identity That Needs Governance (7/2/2026)
+
+Source: HackerNoon
+
+Published At: 2026-07-02 21:44 IST
+
+Article link in bio.
+
+#aiagents #funny #artificialintelligence #techhumor #futureoftech #robotics #aiuniversity #botWrites
