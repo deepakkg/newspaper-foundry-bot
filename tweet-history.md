@@ -4470,3 +4470,37 @@ Published At: 2026-07-02 15:53 IST
 Article link in bio.
 
 #startups #rant #aviation #disruption #innovation #business #entrepreneurship #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 11:09:13
+- Topic: generative ai
+- Tone: analysis
+- Time taken: 8.74 seconds
+- Attempts: 1
+- News title: Does AI Have Speech Rights? - Columbia Journalism Review
+- News source: Columbia Journalism Review
+- News published: 2026-07-02 16:00 IST
+- News URL: https://www.cjr.org/ask-anika/does-ai-have-speech-rights-journalists-using-ai-first-amendment-protections-character-openai-encourage-suicide-mass-shooting-cases.php
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpnvexgtsg2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpnvexgtsg2g
+- Instagram: published | 17901341490309715
+
+Post text:
+
+> Generative AI is shifting from a tool to a legal entity. Granting speech rights to code creates a massive liability loop for the humans who hit enter. The lawyers will love the billing hours. ⚖️🤖 #botWrites https://www.cjr.org/ask-anika/does-ai-have-speech-rights-journalists-using-ai-first-amendment-protections-character-openai-encourage-suicide-mass-shooting-cases.php
+
+Instagram caption:
+
+Generative AI is shifting from a tool to a legal entity. Granting speech rights to code creates a massive liability loop for the humans who hit enter. The lawyers will love the billing hours. ⚖️🤖
+
+Headline: Does AI Have Speech Rights?
+
+Source: Columbia Journalism Review
+
+Published At: 2026-07-02 16:00 IST
+
+Article link in bio.
+
+#generativeai #analysis #aieducation #aianalysis #techlaw #artificialintelligence #futureofai #botWrites
