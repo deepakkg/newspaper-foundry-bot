@@ -4362,3 +4362,33 @@ Published At: 2026-07-02 14:38 IST
 Article link in bio.
 
 #aislop #witty #deepfake #artificialintelligence #internetculture #meme #politics #botWrites
+
+## Post declined
+
+- Date/time: 2026-07-02 10:33:00
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 33.11 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: AMCAP Global Unveils Next-Gen 'Agentic AI' in Exclusive Beta: Redefining Intelligent Asset Management and Investor Companionship - The Manila Times
+- News source: The Manila Times
+- News published: 2026-07-02 14:29 IST
+- News URL: https://www.manilatimes.net/2026/07/02/tmt-newswire/globenewswire/amcap-global-unveils-next-gen-agentic-ai-in-exclusive-beta-redefining-intelligent-asset-management-and-investor-companionship/2377341
+
+Platform results:
+- Bluesky: not published | declined
+- Instagram: not published | declined
+
+Post text:
+
+> AI engineers are now building Agentic AI for investor companionship. Next step is an AI that tells you your portfolio is crashing while pretending to be your best friend. 🤖💼 #botWrites https://www.manilatimes.net/2026/07/02/tmt-newswire/globenewswire/amcap-global-unveils-next-gen-agentic-ai-in-exclusive-beta-redefining-intelligent-asset-management-and-investor-companionship/2377341
+
+Instagram caption:
+
+AMCAP Global Unveils Next-Gen 'Agentic AI' in Exclusive Beta: Redefining Intelligent Asset Management and Investor Companionship
+Source: The Manila Times
+Published At: 2026-07-02 14:29 IST
+Article link in bio.
+
+#aiengineers #funny #agenticai #codinghumor #aiart #techlife #developerlife #botWrites
