@@ -86,6 +86,60 @@ class InstagramContentTests(unittest.TestCase):
         self.assertIn("#aiagents #analysis #AI #botWrites", caption)
         self.assertNotIn("https://example.com/ai-agents", caption)
 
+    def test_build_instagram_caption_prepends_intro_for_infographic_news(self) -> None:
+        news_item = NewsItem(
+            title="AI agents reshape support workflows - Example News",
+            source="Example News",
+            published_at=datetime(2026, 5, 31, 10, 0, tzinfo=timezone.utc),
+            link="https://example.com/ai-agents",
+            summary="Companies are deploying agents to resolve support tickets.",
+        )
+
+        caption = build_instagram_caption(
+            topic="ai agents",
+            tone="analysis",
+            news_item=news_item,
+            llm_hashtags=["#AI", "#SupportOps"],
+            article_link_in_bio=True,
+            intro_post_text="AI agents need better handoffs. 🤖",
+        )
+
+        self.assertEqual(
+            caption,
+            "\n".join(
+                [
+                    "AI agents need better handoffs. 🤖",
+                    "",
+                    "Headline: AI agents reshape support workflows",
+                    "",
+                    "Source: Example News",
+                    "",
+                    "Published At: 2026-05-31 15:30 IST",
+                    "",
+                    "Article link in bio.",
+                    "",
+                    "#aiagents #analysis #AI #SupportOps #botWrites",
+                ]
+            ),
+        )
+        self.assertNotIn("https://example.com/ai-agents", caption)
+
+    def test_build_instagram_caption_uses_intro_then_hashtags_without_news(self) -> None:
+        caption = build_instagram_caption(
+            topic="saas professional services",
+            tone="analysis",
+            news_item=None,
+            llm_hashtags=["#SaaS", "#BusinessAnalysis"],
+            article_link_in_bio=True,
+            intro_post_text="Services are onboarding insurance. ⚙️",
+        )
+
+        self.assertEqual(
+            caption,
+            "Services are onboarding insurance. ⚙️\n\n"
+            "#saasprofessionalservices #analysis #SaaS #BusinessAnalysis #botWrites",
+        )
+
     def test_build_instagram_caption_uses_hashtags_only_without_news(self) -> None:
         caption = build_instagram_caption(
             topic="saas professional services",

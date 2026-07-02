@@ -174,6 +174,9 @@ def run_once() -> int:
                 llm_hashtags=llm_hashtags,
                 article_link_in_bio=config.article_links_enabled,
                 include_topic_tone_hashtags=not direct_post_request,
+                intro_post_text=tweet
+                if config.instagram_image_renderer == "infographic"
+                else None,
             )
             if config.instagram_image_renderer == "infographic":
                 instagram_infographic_plan = build_instagram_infographic_plan(

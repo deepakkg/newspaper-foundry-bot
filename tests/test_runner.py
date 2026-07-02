@@ -444,6 +444,7 @@ class TweetGeneratorTests(unittest.TestCase):
         mock_upload.assert_called_once()
         mock_publish.assert_called_once()
         caption = mock_publish.call_args.kwargs["caption"]
+        self.assertNotIn("AI agents need better handoffs. 🤖", caption)
         self.assertIn("AI agents reshape support workflows", caption)
         self.assertIn("#aiagents", caption.lower())
         self.assertTrue(caption.strip().endswith("#botWrites"))
@@ -503,7 +504,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                         tweet_generator,
                                         "request_discord_approval",
                                         return_value=ApprovalDecision(status="approved", user_id="111", username="Deepak"),
-                                    ):
+                                    ) as mock_approval:
                                         with patch.object(publishing_flow, "render_instagram_image") as mock_quote_render:
                                             with patch.object(
                                                 publishing_flow,
@@ -522,6 +523,14 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIs(mock_infographic_render.call_args.args[0], plan)
         mock_upload.assert_called_once()
         mock_publish.assert_called_once()
+        caption = mock_publish.call_args.kwargs["caption"]
+        self.assertTrue(caption.startswith("AI agents need better handoffs. 🤖\n\n"))
+        self.assertIn("Headline: AI agents reshape support workflows", caption)
+        self.assertIn("\n\nSource: Example News\n\n", caption)
+        self.assertIn("\n\nPublished At: 2026-05-31 15:30 IST\n\n", caption)
+        self.assertTrue(caption.strip().endswith("#aiagents #analysis #AI #SupportOps #botWrites"))
+        approval_caption = mock_approval.call_args.args[1].instagram_caption
+        self.assertEqual(approval_caption, caption)
 
     def test_run_once_updates_article_links_after_instagram_publish(self) -> None:
         buffer = StringIO()

@@ -37,9 +37,26 @@ def build_instagram_caption(
     llm_hashtags: list[str],
     article_link_in_bio: bool = False,
     include_topic_tone_hashtags: bool = True,
+    intro_post_text: str | None = None,
 ) -> str:
     published = format_news_published(news_item)
-    if news_item:
+    intro = " ".join((intro_post_text or "").split())
+    if intro and news_item:
+        lines: list[str] = [
+            intro,
+            "",
+            f"Headline: {format_caption_news_title(news_item.title, news_item.source)}",
+            "",
+            f"Source: {news_item.source or 'Not available'}",
+            "",
+            f"Published At: {published or 'Not available'}",
+            "",
+        ]
+        if article_link_in_bio:
+            lines.extend(["Article link in bio.", ""])
+    elif intro:
+        lines = [intro, ""]
+    elif news_item:
         lines: list[str] = [
             format_caption_news_title(news_item.title, news_item.source),
             f"Source: {news_item.source or 'Not available'}",
@@ -72,7 +89,7 @@ def build_instagram_caption(
     hashtags = [tag for tag in hashtags if tag.lower() != BOT_HASHTAG.lower()]
     hashtags = hashtags[:11]
     hashtags.append(BOT_HASHTAG)
-    if lines:
+    if lines and lines[-1] != "":
         lines.append("")
     lines.append(" ".join(hashtags))
     return "\n".join(lines)
