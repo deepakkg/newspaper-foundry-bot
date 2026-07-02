@@ -4332,3 +4332,33 @@ Published At: 2026-07-02 15:43 IST
 Article link in bio.
 
 #startups #nostalgic #entrepreneurship #retail #growth #innovation #throwback #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 10:30:08
+- Topic: ai slop
+- Tone: witty
+- Time taken: 35.98 seconds
+- Attempts: 1
+- Decision by: deepakgupta1
+- News title: 'Doctor' Trump Posts Bonkers AI Slop Video Mocking His 'So Far Gone' Celebrity Critics - Yahoo
+- News source: Yahoo
+- News published: 2026-07-02 14:38 IST
+- News URL: https://www.yahoo.com/news/politics/articles/doctor-trump-posts-bonkers-ai-090803207.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpnt6xplzn2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpnt6xplzn2s
+- Instagram: published | 18071465318343451
+
+Post text:
+
+> AI slop is the new political strategy. We've reached the era of the bonkers generated video. Low effort is now a feature, not a bug 🤖🎨 #botWrites https://www.yahoo.com/news/politics/articles/doctor-trump-posts-bonkers-ai-090803207.html
+
+Instagram caption:
+
+'Doctor' Trump Posts Bonkers AI Slop Video Mocking His 'So Far Gone' Celebrity Critics
+Source: Yahoo
+Published At: 2026-07-02 14:38 IST
+Article link in bio.
+
+#aislop #witty #deepfake #artificialintelligence #internetculture #meme #politics #botWrites
