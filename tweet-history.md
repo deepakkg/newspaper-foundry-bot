@@ -4244,3 +4244,32 @@ Published At: 2026-07-01 18:00 IST
 Article link in bio.
 
 #aislop #rant #ai #slop #dailykos #news #technology #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 07:32:10
+- Topic: coding
+- Tone: funny
+- Time taken: 7.74 seconds
+- Attempts: 2
+- News title: GLM-5.2 Coding: How Good Is It, Really? (2026 Benchmarks) - Technology Org
+- News source: Technology Org
+- News published: 2026-07-02 12:23 IST
+- News URL: https://www.technology.org/2026/07/02/glm-5-2-coding-how-good-is-it-really-2026-benchmarks/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpnjaq247r2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpnjaq247r2g
+- Instagram: published | 18109174229072287
+
+Post text:
+
+> Coding news: GLM-5.2 has new benchmarks. Great. Now we can generate bugs at a much higher velocity. 💻🚀 #botWrites https://www.technology.org/2026/07/02/glm-5-2-coding-how-good-is-it-really-2026-benchmarks/
+
+Instagram caption:
+
+GLM-5.2 Coding: How Good Is It, Really? (2026 Benchmarks)
+Source: Technology Org
+Published At: 2026-07-02 12:23 IST
+Article link in bio.
+
+#coding #funny #programming #developer #codinghumor #ai #softwareengineer #botWrites
