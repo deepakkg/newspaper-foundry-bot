@@ -63,6 +63,26 @@ TECHNICAL_KEYWORDS = {
     "token",
 }
 QUOTE_MARKERS = {"direct", "quote", "post", "on-demand"}
+INCOMPLETE_END_WORDS = {
+    "a",
+    "an",
+    "and",
+    "as",
+    "at",
+    "against",
+    "by",
+    "for",
+    "from",
+    "in",
+    "into",
+    "of",
+    "on",
+    "or",
+    "the",
+    "their",
+    "to",
+    "with",
+}
 
 
 @dataclass(frozen=True)
@@ -78,6 +98,13 @@ class InfographicPlan:
     takeaway: str
     style: str
     source_kind: str
+
+
+@dataclass(frozen=True)
+class TextFit:
+    font: ImageFont.ImageFont
+    lines: list[str]
+    line_gap: int
 
 
 def build_instagram_infographic_plan(
@@ -190,8 +217,10 @@ Rules:
 - Use 2 to 4 blocks.
 - Title max 72 characters.
 - Each label max 24 characters.
-- Each block text max 110 characters.
+- Each block text max 90 characters; shorter is better for schematic layouts.
 - Takeaway max 120 characters.
+- Every block and takeaway must be a complete standalone sentence.
+- Do not end a block or takeaway with a conjunction, preposition, or dangling phrase.
 - Do not include URLs, hashtags, emojis, markdown, explanations, or labels outside JSON.
 - Do not invent facts beyond the post text and news context.
 """
@@ -214,7 +243,7 @@ def validate_infographic_plan(
     style: str,
     source_kind: str,
 ) -> InfographicPlan:
-    title = clean_infographic_text(str(payload.get("title", "")))[:72].strip()
+    title = _shorten_heading(clean_infographic_text(str(payload.get("title", ""))), 72)
     raw_blocks = payload.get("blocks")
     if not title or not isinstance(raw_blocks, list):
         raise ValueError("Infographic response is missing title or blocks.")
@@ -223,22 +252,22 @@ def validate_infographic_plan(
     for item in raw_blocks:
         if not isinstance(item, dict):
             continue
-        label = clean_infographic_text(str(item.get("label", "")))[:24].strip()
-        text = clean_infographic_text(str(item.get("text", "")))[:110].strip()
+        label = _shorten_heading(clean_infographic_text(str(item.get("label", ""))), 24)
+        text = _shorten(clean_infographic_text(str(item.get("text", ""))), 90)
         if label and text:
-            blocks.append(InfographicBlock(label=label, text=_ensure_terminal(text)))
+            blocks.append(InfographicBlock(label=label, text=text))
     blocks = blocks[:4]
     if len(blocks) < 2:
         raise ValueError("Infographic response must include at least two valid blocks.")
 
-    takeaway = clean_infographic_text(str(payload.get("takeaway", "")))[:120].strip()
+    takeaway = _shorten(clean_infographic_text(str(payload.get("takeaway", ""))), 120)
     if not takeaway:
         raise ValueError("Infographic response is missing takeaway.")
 
     return InfographicPlan(
         title=title,
         blocks=blocks,
-        takeaway=_ensure_terminal(takeaway),
+        takeaway=takeaway,
         style=style,
         source_kind=source_kind,
     )
@@ -269,7 +298,7 @@ def fallback_infographic_plan(
     if news_item:
         summary = clean_infographic_text(news_item.summary or news_item.title)
         return InfographicPlan(
-            title=_shorten(clean_infographic_text(news_item.title), 72),
+            title=_shorten_heading(clean_infographic_text(news_item.title), 72),
             blocks=[
                 InfographicBlock(label="Source", text=_shorten(news_item.source, 110)),
                 InfographicBlock(label="Context", text=_shorten(_ensure_terminal(summary), 110)),
@@ -281,7 +310,7 @@ def fallback_infographic_plan(
         )
 
     return InfographicPlan(
-        title=_shorten(topic.title(), 72),
+        title=_shorten_heading(topic.title(), 72),
         blocks=[
             InfographicBlock(label="Topic", text=_shorten(_ensure_terminal(topic), 110)),
             InfographicBlock(label="Tone", text=_shorten(_ensure_terminal(tone), 110)),
@@ -319,11 +348,43 @@ def _ensure_terminal(text: str) -> str:
     return cleaned
 
 
-def _shorten(text: str, limit: int) -> str:
-    cleaned = " ".join(text.split())
+def _last_word(text: str) -> str:
+    match = re.search(r"([A-Za-z0-9']+)[.!?]?$", text.strip())
+    return match.group(1).lower() if match else ""
+
+
+def _ends_with_incomplete_word(text: str) -> bool:
+    return _last_word(text) in INCOMPLETE_END_WORDS
+
+
+def _shorten_heading(text: str, limit: int) -> str:
+    cleaned = " ".join(text.split()).strip()
     if len(cleaned) <= limit:
         return cleaned
     shortened = cleaned[: limit - 1].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    return shortened or cleaned[:limit].rstrip(" ,;:-")
+
+
+def _shorten(text: str, limit: int) -> str:
+    cleaned = " ".join(text.split())
+    if not cleaned:
+        return ""
+    if len(cleaned) <= limit and not _ends_with_incomplete_word(cleaned):
+        return _ensure_terminal(cleaned)
+
+    bounded = cleaned[:limit].rstrip(" ,;:-")
+    sentence_matches = list(re.finditer(r"[.!?]", bounded))
+    for match in reversed(sentence_matches):
+        candidate = bounded[: match.end()].strip()
+        if candidate and not _ends_with_incomplete_word(candidate):
+            return _ensure_terminal(candidate)
+
+    words = bounded.split()
+    while words and _ends_with_incomplete_word(" ".join(words)):
+        words.pop()
+    shortened = " ".join(words).rstrip(" ,;:-")
+    if not shortened:
+        shortened = cleaned[:limit].rsplit(" ", 1)[0].rstrip(" ,;:-")
     return _ensure_terminal(shortened)
 
 
@@ -338,9 +399,13 @@ def render_instagram_infographic(
     _add_texture(image, f"{plan.title} {plan.takeaway}")
     draw = ImageDraw.Draw(image)
 
-    if plan.style == "foundry_schematic":
+    style = plan.style
+    if style == "foundry_schematic" and not _schematic_can_fit_full_plan(draw, plan):
+        style = "foundry_briefing"
+
+    if style == "foundry_schematic":
         _draw_schematic(draw, plan)
-    elif plan.style == "foundry_briefing":
+    elif style == "foundry_briefing":
         _draw_briefing(draw, plan)
     else:
         _draw_editorial(draw, plan)
@@ -383,16 +448,51 @@ def _draw_schematic(draw: ImageDraw.ImageDraw, plan: InfographicPlan) -> None:
     draw.rectangle((88, 102, 260, 110), fill=MUTED_BLUE)
     _draw_title(draw, plan.title, y=148, font_size=52, max_width=870)
     axis_x = 138
-    draw.line((axis_x, 374, axis_x, 990), fill=MUTED_BLUE, width=4)
-    block_top = 350
-    block_height = 150
+    block_top, block_gap, block_height, last_block_bottom, takeaway_y = _schematic_layout(
+        len(plan.blocks)
+    )
+    draw.line((axis_x, 374, axis_x, min(1000, last_block_bottom + 34)), fill=MUTED_BLUE, width=4)
     for index, block in enumerate(plan.blocks):
-        y = block_top + index * (block_height + 24)
+        y = block_top + index * (block_height + block_gap)
         dot_y = y + 28
         draw.ellipse((axis_x - 11, dot_y - 11, axis_x + 11, dot_y + 11), fill=MUTED_BLUE)
         draw.line((axis_x + 18, dot_y, 212, dot_y), fill=MUTED_BLUE, width=2)
-        _draw_schematic_block(draw, y, block)
-    _draw_takeaway(draw, plan.takeaway, y=1068)
+        _draw_schematic_block(draw, y, block, height=block_height)
+    _draw_takeaway(draw, plan.takeaway, y=takeaway_y)
+
+
+def _schematic_layout(block_count: int) -> tuple[int, int, int, int, int]:
+    block_top = 340
+    block_gap = 24
+    safe_count = max(1, block_count)
+    base_takeaway_y = 1080
+    available_height = base_takeaway_y - block_top - 56
+    block_height = min(
+        180,
+        max(150, (available_height - block_gap * (safe_count - 1)) // safe_count),
+    )
+    last_block_bottom = block_top + safe_count * block_height + (safe_count - 1) * block_gap
+    takeaway_y = max(1048, min(1096, last_block_bottom + 46))
+    return block_top, block_gap, block_height, last_block_bottom, takeaway_y
+
+
+def _schematic_can_fit_full_plan(draw: ImageDraw.ImageDraw, plan: InfographicPlan) -> bool:
+    _block_top, _block_gap, block_height, _last_block_bottom, _takeaway_y = _schematic_layout(
+        len(plan.blocks)
+    )
+    block_text_height = max(72, block_height - 74)
+    return all(
+        _text_fits_without_shortening(
+            draw,
+            block.text,
+            width=650,
+            height=block_text_height,
+            start_font_size=34,
+            min_font_size=25,
+            max_lines=3,
+        )
+        for block in plan.blocks
+    )
 
 
 def _draw_briefing(draw: ImageDraw.ImageDraw, plan: InfographicPlan) -> None:
@@ -428,12 +528,20 @@ def _draw_title(
     font_size: int,
     max_width: int,
 ) -> None:
-    font = _load_font(font_size)
-    lines = _wrap_lines(draw, title, font, max_width, max_lines=3)
-    for line in lines:
-        width = _text_width(draw, line, font)
-        draw.text(((INFOGRAPHIC_WIDTH - width) // 2, y), line, font=font, fill=INK)
-        y += _line_height(draw, line, font) + 16
+    fit = _fit_text_to_box(
+        draw,
+        title,
+        width=max_width,
+        height=210,
+        start_font_size=font_size,
+        min_font_size=38,
+        max_lines=3,
+        terminal=False,
+    )
+    for line in fit.lines:
+        width = _text_width(draw, line, fit.font)
+        draw.text(((INFOGRAPHIC_WIDTH - width) // 2, y), line, font=fit.font, fill=INK)
+        y += _line_height(draw, line, fit.font) + fit.line_gap
 
 
 def _draw_editorial_block(
@@ -443,29 +551,49 @@ def _draw_editorial_block(
     index: int,
 ) -> None:
     label_font = _load_monospace_font(26)
-    text_font = _load_font(38)
     draw.text((112, y + 4), f"{index:02}", font=label_font, fill=MUTED_BLUE)
     draw.text((180, y + 4), block.label.upper(), font=label_font, fill=INK)
     draw.line((180, y + 42, 920, y + 42), fill=WARM_GRAY, width=2)
-    _draw_wrapped(draw, block.text, x=180, y=y + 62, width=760, font=text_font, max_lines=3)
+    _draw_wrapped_box(
+        draw,
+        block.text,
+        x=180,
+        y=y + 62,
+        width=760,
+        height=86,
+        start_font_size=38,
+        min_font_size=28,
+        max_lines=3,
+    )
 
 
 def _draw_schematic_block(
     draw: ImageDraw.ImageDraw,
     y: int,
     block: InfographicBlock,
+    *,
+    height: int,
 ) -> None:
     label_font = _load_monospace_font(24)
-    text_font = _load_font(34)
     draw.rounded_rectangle(
-        (212, y, 932, y + 142),
+        (212, y, 932, y + height),
         radius=18,
         fill=(249, 244, 234),
         outline=MUTED_BLUE,
         width=2,
     )
     draw.text((238, y + 20), block.label.upper(), font=label_font, fill=MUTED_BLUE)
-    _draw_wrapped(draw, block.text, x=238, y=y + 58, width=650, font=text_font, max_lines=2)
+    _draw_wrapped_box(
+        draw,
+        block.text,
+        x=238,
+        y=y + 58,
+        width=650,
+        height=max(72, height - 74),
+        start_font_size=34,
+        min_font_size=25,
+        max_lines=3,
+    )
 
 
 def _briefing_positions(count: int) -> list[tuple[int, int, int, int]]:
@@ -488,25 +616,25 @@ def _draw_briefing_card(
     block: InfographicBlock,
 ) -> None:
     label_font = _load_monospace_font(23)
-    text_font = _load_font(32)
     draw.rounded_rectangle(rect, radius=22, fill=(249, 244, 234), outline=WARM_GRAY, width=2)
-    left, top, right, _bottom = rect
+    left, top, right, bottom = rect
     draw.rectangle((left + 24, top + 26, left + 92, top + 34), fill=MUTED_BLUE)
     draw.text((left + 24, top + 54), block.label.upper(), font=label_font, fill=MUTED_BLUE)
-    _draw_wrapped(
+    _draw_wrapped_box(
         draw,
         block.text,
         x=left + 24,
         y=top + 94,
         width=right - left - 48,
-        font=text_font,
-        max_lines=3,
+        height=bottom - top - 116,
+        start_font_size=32,
+        min_font_size=24,
+        max_lines=4,
     )
 
 
 def _draw_takeaway(draw: ImageDraw.ImageDraw, takeaway: str, *, y: int) -> None:
     label_font = _load_monospace_font(24)
-    text_font = _load_font(34)
     draw.rounded_rectangle(
         (104, y, 976, y + 138),
         radius=24,
@@ -514,7 +642,17 @@ def _draw_takeaway(draw: ImageDraw.ImageDraw, takeaway: str, *, y: int) -> None:
         outline=None,
     )
     draw.text((132, y + 24), "TAKEAWAY", font=label_font, fill=MUTED_BLUE)
-    _draw_wrapped(draw, takeaway, x=132, y=y + 62, width=812, font=text_font, max_lines=2)
+    _draw_wrapped_box(
+        draw,
+        takeaway,
+        x=132,
+        y=y + 62,
+        width=812,
+        height=58,
+        start_font_size=34,
+        min_font_size=25,
+        max_lines=2,
+    )
 
 
 def _draw_portrait_footer(draw: ImageDraw.ImageDraw, footer_text: str) -> None:
@@ -548,7 +686,7 @@ def _wrap_lines(
     font: ImageFont.ImageFont,
     max_width: int,
     *,
-    max_lines: int,
+    max_lines: int | None = None,
 ) -> list[str]:
     words = text.split()
     lines: list[str] = []
@@ -560,34 +698,115 @@ def _wrap_lines(
             continue
         if current:
             lines.append(" ".join(current))
-        if len(lines) >= max_lines:
-            break
         if _text_width(draw, word, font) > max_width:
             lines.extend(textwrap.wrap(word, width=16))
             current = []
         else:
             current = [word]
-    if current and len(lines) < max_lines:
+    if current:
         lines.append(" ".join(current))
-    if len(lines) > max_lines:
-        lines = lines[:max_lines]
     return lines or [text[:32]]
 
 
-def _draw_wrapped(
+def _fit_text_to_box(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    *,
+    width: int,
+    height: int,
+    start_font_size: int,
+    min_font_size: int,
+    max_lines: int | None,
+    terminal: bool = True,
+) -> TextFit:
+    cleaned = " ".join(text.split()).strip()
+    if terminal:
+        cleaned = _ensure_terminal(cleaned)
+    candidates = [cleaned]
+    for limit in range(min(len(cleaned) - 1, 120), 34, -8):
+        shortened = _shorten(cleaned, limit) if terminal else _shorten_heading(cleaned, limit)
+        if shortened and shortened not in candidates:
+            candidates.append(shortened)
+
+    for candidate in candidates:
+        for font_size in range(start_font_size, min_font_size - 1, -2):
+            font = _load_font(font_size)
+            lines = _wrap_lines(draw, candidate, font, width, max_lines=max_lines)
+            if max_lines is not None and len(lines) > max_lines:
+                continue
+            line_gap = max(6, font_size // 4)
+            if _lines_height(draw, lines, font, line_gap) <= height:
+                return TextFit(font=font, lines=lines, line_gap=line_gap)
+
+    fallback = _shorten(cleaned, 48) if terminal else _shorten_heading(cleaned, 48)
+    font = _load_font(min_font_size)
+    lines = _wrap_lines(draw, fallback, font, width, max_lines=max_lines)
+    while max_lines is not None and len(lines) > max_lines and len(fallback) > 20:
+        fallback = _shorten(fallback, max(20, len(fallback) - 8)) if terminal else _shorten_heading(
+            fallback, max(20, len(fallback) - 8)
+        )
+        lines = _wrap_lines(draw, fallback, font, width, max_lines=max_lines)
+    line_gap = max(5, min_font_size // 5)
+    return TextFit(font=font, lines=lines, line_gap=line_gap)
+
+
+def _text_fits_without_shortening(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    *,
+    width: int,
+    height: int,
+    start_font_size: int,
+    min_font_size: int,
+    max_lines: int | None,
+) -> bool:
+    cleaned = _ensure_terminal(" ".join(text.split()).strip())
+    for font_size in range(start_font_size, min_font_size - 1, -2):
+        font = _load_font(font_size)
+        lines = _wrap_lines(draw, cleaned, font, width, max_lines=max_lines)
+        if max_lines is not None and len(lines) > max_lines:
+            continue
+        line_gap = max(6, font_size // 4)
+        if _lines_height(draw, lines, font, line_gap) <= height:
+            return True
+    return False
+
+
+def _draw_wrapped_box(
     draw: ImageDraw.ImageDraw,
     text: str,
     *,
     x: int,
     y: int,
     width: int,
-    font: ImageFont.ImageFont,
-    max_lines: int,
+    height: int,
+    start_font_size: int,
+    min_font_size: int,
+    max_lines: int | None,
 ) -> None:
-    lines = _wrap_lines(draw, text, font, width, max_lines=max_lines)
-    for line in lines:
-        draw.text((x, y), line, font=font, fill=INK)
-        y += _line_height(draw, line, font) + 10
+    fit = _fit_text_to_box(
+        draw,
+        text,
+        width=width,
+        height=height,
+        start_font_size=start_font_size,
+        min_font_size=min_font_size,
+        max_lines=max_lines,
+    )
+    for line in fit.lines:
+        draw.text((x, y), line, font=fit.font, fill=INK)
+        y += _line_height(draw, line, fit.font) + fit.line_gap
+
+
+def _lines_height(
+    draw: ImageDraw.ImageDraw,
+    lines: list[str],
+    font: ImageFont.ImageFont,
+    line_gap: int,
+) -> int:
+    if not lines:
+        return 0
+    return sum(_line_height(draw, line, font) for line in lines) + line_gap * (len(lines) - 1)
 
 
 def _line_height(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.ImageFont) -> int:

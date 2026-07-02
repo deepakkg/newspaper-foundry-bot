@@ -11,11 +11,16 @@ from instagram_infographic import (
     INFOGRAPHIC_WIDTH,
     InfographicBlock,
     InfographicPlan,
+    _fit_text_to_box,
+    _last_word,
+    _wrap_lines,
+    build_infographic_prompt,
     build_instagram_infographic_plan,
     clean_infographic_text,
     fallback_infographic_plan,
     render_instagram_infographic,
     select_infographic_style,
+    validate_infographic_plan,
 )
 from news_fetcher import NewsItem
 from support import chat_response, load_temp_config
@@ -118,6 +123,18 @@ class InstagramInfographicTests(unittest.TestCase):
         self.assertNotIn("https://", str(plan))
         self.assertNotIn("#botWrites", str(plan))
 
+    def test_infographic_prompt_asks_for_complete_standalone_sentences(self) -> None:
+        prompt = build_infographic_prompt(
+            topic="blue collar businesses",
+            tone="analysis",
+            post_text="Millennials are buying HVAC companies.",
+            news_item=sample_news(),
+        )
+
+        self.assertIn("complete standalone sentence", prompt)
+        self.assertIn("Do not end a block or takeaway", prompt)
+        self.assertIn("shorter is better for schematic layouts", prompt)
+
     def test_invalid_llm_plan_falls_back_safely(self) -> None:
         tmp_dir, config = load_temp_config(INSTAGRAM_IMAGE_RENDERER="infographic")
         self.addCleanup(tmp_dir.cleanup)
@@ -137,6 +154,81 @@ class InstagramInfographicTests(unittest.TestCase):
         self.assertEqual(plan.source_kind, "news")
         self.assertGreaterEqual(len(plan.blocks), 2)
         self.assertNotIn("https://", str(plan))
+
+    def test_validate_plan_repairs_incomplete_block_endings(self) -> None:
+        plan = validate_infographic_plan(
+            {
+                "title": "Blue collar shift",
+                "blocks": [
+                    {
+                        "label": "Motivation",
+                        "text": "Moving toward tangible trades to AI-proof their careers against",
+                    },
+                    {"label": "Risk", "text": "Teams keep waiting and"},
+                    {"label": "Pattern", "text": "The new owners trust their"},
+                ],
+                "takeaway": "The signal is stronger than their",
+            },
+            style="foundry_schematic",
+            source_kind="news",
+        )
+
+        endings = [_last_word(block.text) for block in plan.blocks]
+        endings.append(_last_word(plan.takeaway))
+        self.assertNotIn("against", endings)
+        self.assertNotIn("and", endings)
+        self.assertNotIn("their", endings)
+        for block in plan.blocks:
+            self.assertTrue(block.text.endswith((".", "!", "?")))
+        self.assertTrue(plan.takeaway.endswith((".", "!", "?")))
+
+    def test_wrap_lines_no_longer_drops_words_at_line_limit(self) -> None:
+        from PIL import Image, ImageDraw
+
+        text = "Millennials are acquiring small blue collar businesses to secure their future."
+        image = Image.new("RGB", (INFOGRAPHIC_WIDTH, INFOGRAPHIC_HEIGHT))
+        draw = ImageDraw.Draw(image)
+        fit = _fit_text_to_box(
+            draw,
+            text,
+            width=650,
+            height=96,
+            start_font_size=34,
+            min_font_size=25,
+            max_lines=3,
+        )
+
+        lines = _wrap_lines(draw, text, fit.font, 650, max_lines=2)
+
+        self.assertIn("future", " ".join(lines))
+
+    def test_fit_text_to_box_keeps_schematic_text_complete(self) -> None:
+        from PIL import Image, ImageDraw
+
+        examples = [
+            "Millennials are acquiring small blue collar businesses to secure their future.",
+            "Moving toward tangible trades to AI-proof their careers against automation.",
+            "A transition from the digital era of dial-up internet to owning HVAC and plumbing businesses.",
+        ]
+        image = Image.new("RGB", (INFOGRAPHIC_WIDTH, INFOGRAPHIC_HEIGHT))
+        draw = ImageDraw.Draw(image)
+
+        for text in examples:
+            with self.subTest(text=text):
+                fit = _fit_text_to_box(
+                    draw,
+                    text,
+                    width=650,
+                    height=106,
+                    start_font_size=34,
+                    min_font_size=25,
+                    max_lines=3,
+                )
+                fitted_text = " ".join(fit.lines)
+
+                self.assertTrue(fitted_text.endswith((".", "!", "?")))
+                self.assertNotIn(_last_word(fitted_text), {"against", "and", "their"})
+                self.assertLessEqual(len(fit.lines), 3)
 
     def test_render_instagram_infographic_creates_portrait_png_for_all_styles(self) -> None:
         for style in ("foundry_editorial", "foundry_schematic", "foundry_briefing"):
@@ -162,6 +254,38 @@ class InstagramInfographicTests(unittest.TestCase):
                     with Image.open(output_path) as image:
                         self.assertEqual(image.size, (INFOGRAPHIC_WIDTH, INFOGRAPHIC_HEIGHT))
                         self.assertEqual(image.format, "PNG")
+
+    def test_render_instagram_infographic_handles_long_schematic_blocks(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "schematic-long.png"
+            plan = InfographicPlan(
+                title="From Dial-Up to Blue Collar",
+                blocks=[
+                    InfographicBlock(
+                        "The Shift",
+                        "Millennials are acquiring small blue collar businesses to secure their future.",
+                    ),
+                    InfographicBlock(
+                        "Motivation",
+                        "Moving toward tangible trades to AI-proof their careers against automation.",
+                    ),
+                    InfographicBlock(
+                        "Evolution",
+                        "A transition from the digital era of dial-up internet to owning HVAC and plumbing businesses.",
+                    ),
+                ],
+                takeaway="Millennials are returning to tangible services to escape AI risks.",
+                style="foundry_schematic",
+                source_kind="news",
+            )
+
+            render_instagram_infographic(plan, output_path)
+
+            from PIL import Image
+
+            with Image.open(output_path) as image:
+                self.assertEqual(image.size, (INFOGRAPHIC_WIDTH, INFOGRAPHIC_HEIGHT))
+                self.assertEqual(image.format, "PNG")
 
     def test_fallback_plan_removes_article_url_and_hashtags(self) -> None:
         plan = fallback_infographic_plan(
