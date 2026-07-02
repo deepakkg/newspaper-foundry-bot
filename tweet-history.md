@@ -4441,3 +4441,32 @@ Post text:
 Instagram caption:
 
 #saasprofessionalservices #funny #saas #consulting #techhumor #b2b #agency #softwareasaservice #botWrites
+
+## Post published
+
+- Date/time: 2026-07-02 10:48:43
+- Topic: startups
+- Tone: rant
+- Time taken: 6.92 seconds
+- Attempts: 1
+- News title: In Mojave Desert, startup JetZero builds novel plane to take on Airbus and Boeing - Reuters
+- News source: Reuters
+- News published: 2026-07-02 15:53 IST
+- News URL: https://www.reuters.com/business/media-telecom/mojave-desert-startup-jetzero-builds-novel-plane-take-airbus-boeing-2026-07-02/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpnua7gvge2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpnua7gvge2g
+- Instagram: published | 17865156393635347
+
+Post text:
+
+> Startups love acting like they can disrupt everything. Now JetZero thinks it can take on Boeing and Airbus with one plane. Good luck with the regulations. 🙄✈️ #botWrites https://www.reuters.com/business/media-telecom/mojave-desert-startup-jetzero-builds-novel-plane-take-airbus-boeing-2026-07-02/
+
+Instagram caption:
+
+In Mojave Desert, startup JetZero builds novel plane to take on Airbus and Boeing
+Source: Reuters
+Published At: 2026-07-02 15:53 IST
+Article link in bio.
+
+#startups #rant #aviation #disruption #innovation #business #entrepreneurship #botWrites
