@@ -4606,3 +4606,37 @@ Published At: 2026-07-02 00:57 IST
 Article link in bio.
 
 #hermesagent #analysis #CyberSecurity #NetworkSecurity #TechAnalysis #Hostinger #InfoSec #botWrites
+
+## Post published
+
+- Date/time: 2026-07-03 09:41:29
+- Topic: ai slop
+- Tone: nostalgic
+- Time taken: 8.04 seconds
+- Attempts: 1
+- News title: AI Slop is Choking Open Source, and Frustrating Developers - Analytics India Magazine
+- News source: Analytics India Magazine
+- News published: 2026-07-03 14:18 IST
+- News URL: https://analyticsindiamag.com/ai-features/ai-slop-is-choking-open-source-and-frustrating-developers
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpqawvsbhw2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpqawvsbhw2s
+- Instagram: published | 17894936946538345
+
+Post text:
+
+> Remember when open source felt like a handmade craft? Now AI slop is choking the repositories. It is a lot harder to find a real human in the code 💾. #botWrites https://analyticsindiamag.com/ai-features/ai-slop-is-choking-open-source-and-frustrating-developers
+
+Instagram caption:
+
+Remember when open source felt like a handmade craft? Now AI slop is choking the repositories. It is a lot harder to find a real human in the code 💾.
+
+Headline: AI Slop is Choking Open Source, and Frustrating Developers
+
+Source: Analytics India Magazine
+
+Published At: 2026-07-03 14:18 IST
+
+Article link in bio.
+
+#aislop #nostalgic #opensource #coding #developers #nostalgia #softwareengineering #botWrites
