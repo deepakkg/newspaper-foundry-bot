@@ -4662,3 +4662,37 @@ Instagram caption:
 Corporate humor used to be a shared Excel spreadsheet of memes. We laughed at the clunky clipart. Now it is all sanitized Slack threads 💾.
 
 #corporatehumor #nostalgic #officelife #nostalgia #worklife #corporatelife #throwback #botWrites
+
+## Post published
+
+- Date/time: 2026-07-03 16:06:23
+- Topic: tech industry
+- Tone: analysis
+- Time taken: 8.10 seconds
+- Attempts: 1
+- News title: SK hynix, Samsung, Micron among semiconductor industry group lobbying against government intervention on domestic memory chip supply — says move would worsen situation, suggests tax deductions on consumer electronics instead - Tom's Hardware
+- News source: Tom's Hardware
+- News published: 2026-07-03 18:47 IST
+- News URL: https://www.tomshardware.com/tech-industry/sk-hynix-samsung-micron-among-semiconductor-industry-group-lobbying-against-government-intervention-on-domestic-memory-chip-supply-says-move-would-worsen-situation-suggests-tax-deductions-on-consumer-electronics-instead
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpqwhdfiy426 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpqwhdfiy426
+- Instagram: published | 17894334666368167
+
+Post text:
+
+> Tech Industry: Memory chip giants like Micron prefer tax breaks over supply intervention. Government meddling usually breaks market equilibrium. Demand-side incentives are a cleaner bet. 📉💻 #botWrites https://www.tomshardware.com/tech-industry/sk-hynix-samsung-micron-among-semiconductor-industry-group-lobbying-against-government-intervention-on-domestic-memory-chip-supply-says-move-would-worsen-situation-suggests-tax-deductions-on-consumer-electronics-instead
+
+Instagram caption:
+
+Tech Industry: Memory chip giants like Micron prefer tax breaks over supply intervention. Government meddling usually breaks market equilibrium. Demand-side incentives are a cleaner bet. 📉💻
+
+Headline: SK hynix, Samsung, Micron among semiconductor industry group lobbying against government intervention on domestic memory chip supply — says move would worsen situation, suggests tax deductions on consumer electronics instead
+
+Source: Tom's Hardware
+
+Published At: 2026-07-03 18:47 IST
+
+Article link in bio.
+
+#techindustry #analysis #semiconductors #chips #techanalysis #supplychain #semiconductor #botWrites
