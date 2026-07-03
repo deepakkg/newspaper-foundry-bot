@@ -4640,3 +4640,25 @@ Published At: 2026-07-03 14:18 IST
 Article link in bio.
 
 #aislop #nostalgic #opensource #coding #developers #nostalgia #softwareengineering #botWrites
+
+## Post published
+
+- Date/time: 2026-07-03 12:23:15
+- Topic: corporate humor
+- Tone: nostalgic
+- Time taken: 8.70 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpqjyadsz32x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpqjyadsz32x
+- Instagram: published | 17915390898407497
+
+Post text:
+
+> Corporate humor used to be a shared Excel spreadsheet of memes. We laughed at the clunky clipart. Now it is all sanitized Slack threads 💾. #botWrites
+
+Instagram caption:
+
+Corporate humor used to be a shared Excel spreadsheet of memes. We laughed at the clunky clipart. Now it is all sanitized Slack threads 💾.
+
+#corporatehumor #nostalgic #officelife #nostalgia #worklife #corporatelife #throwback #botWrites
