@@ -4572,3 +4572,37 @@ Published At: 2026-07-02 21:44 IST
 Article link in bio.
 
 #aiagents #funny #artificialintelligence #techhumor #futureoftech #robotics #aiuniversity #botWrites
+
+## Post published
+
+- Date/time: 2026-07-03 06:08:50
+- Topic: hermes agent
+- Tone: analysis
+- Time taken: 7.95 seconds
+- Attempts: 1
+- News title: Hermes Agent Security: 7-Layer Defense Setup Guide - Hostinger
+- News source: Hostinger
+- News published: 2026-07-02 00:57 IST
+- News URL: https://www.hostinger.com/tutorials/hermes-agent-security
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mppv2npewv2g | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mppv2npewv2g
+- Instagram: published | 18602342668010843
+
+Post text:
+
+> Hermes Agent needs a 7-layer defense to stay secure. That is a lot of overhead for one tool. Complexity usually equals more ways to break things. 🛡️⚙️ #botWrites https://www.hostinger.com/tutorials/hermes-agent-security
+
+Instagram caption:
+
+Hermes Agent needs a 7-layer defense to stay secure. That is a lot of overhead for one tool. Complexity usually equals more ways to break things. 🛡️⚙️
+
+Headline: Hermes Agent Security: 7-Layer Defense Setup Guide
+
+Source: Hostinger
+
+Published At: 2026-07-02 00:57 IST
+
+Article link in bio.
+
+#hermesagent #analysis #CyberSecurity #NetworkSecurity #TechAnalysis #Hostinger #InfoSec #botWrites
