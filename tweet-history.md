@@ -4730,3 +4730,37 @@ Published At: 2026-07-04 05:22 IST
 Article link in bio.
 
 #hermesagent #funny #ai #budgetbuild #techhumor #artificialintelligence #dell #hermesai #botWrites
+
+## Post published
+
+- Date/time: 2026-07-04 09:04:52
+- Topic: corporate humor
+- Tone: funny
+- Time taken: 9.86 seconds
+- Attempts: 1
+- News title: From Corporate Engineer to Comedy Star: KDLIVE's Inspiring Journey in Gujarati Stand-Up - Hindustan Metro
+- News source: Hindustan Metro
+- News published: 2026-07-03 21:06 IST
+- News URL: https://hindustanmetro.com/from-corporate-engineer-to-comedy-star-kdlives-inspiring-journey-in-gujarati-stand-up
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpspecuc3z2v | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpspecuc3z2v
+- Instagram: published | 18086979068386682
+
+Post text:
+
+> Corporate humor is just a survival skill. KDLIVE proved that being a corporate engineer is the perfect training for stand-up. The transition from spreadsheets to punchlines is the ultimate career pivot. 🎤📈 #botWrites https://hindustanmetro.com/from-corporate-engineer-to-comedy-star-kdlives-inspiring-journey-in-gujarati-stand-up
+
+Instagram caption:
+
+Corporate humor is just a survival skill. KDLIVE proved that being a corporate engineer is the perfect training for stand-up. The transition from spreadsheets to punchlines is the ultimate career pivot. 🎤📈
+
+Headline: From Corporate Engineer to Comedy Star: KDLIVE's Inspiring Journey in Gujarati Stand-Up
+
+Source: Hindustan Metro
+
+Published At: 2026-07-03 21:06 IST
+
+Article link in bio.
+
+#corporatehumor #funny #corporatelife #standupcomedy #engineerlife #gujarati #careerchange #botWrites
