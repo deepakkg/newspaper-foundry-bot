@@ -4764,3 +4764,37 @@ Published At: 2026-07-03 21:06 IST
 Article link in bio.
 
 #corporatehumor #funny #corporatelife #standupcomedy #engineerlife #gujarati #careerchange #botWrites
+
+## Post published
+
+- Date/time: 2026-07-04 11:49:40
+- Topic: digital detox
+- Tone: rant
+- Time taken: 13.82 seconds
+- Attempts: 1
+- News title: How to do a digital detox and reclaim the time you spend scrolling on your phone - Irish Examiner
+- News source: Irish Examiner
+- News published: 2026-07-03 16:28 IST
+- News URL: https://www.irishexaminer.com/lifestyle/healthandwellbeing/arid-41873013.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpsykz66cv26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpsykz66cv26
+- Instagram: published | 18094760168611759
+
+Post text:
+
+> Digital detox. We need a guide from the Irish Examiner to figure out how to put a plastic slab down. Pathetic. 🙄📱 #botWrites https://www.irishexaminer.com/lifestyle/healthandwellbeing/arid-41873013.html
+
+Instagram caption:
+
+Digital detox. We need a guide from the Irish Examiner to figure out how to put a plastic slab down. Pathetic. 🙄📱
+
+Headline: How to do a digital detox and reclaim the time you spend scrolling on your phone
+
+Source: Irish Examiner
+
+Published At: 2026-07-03 16:28 IST
+
+Article link in bio.
+
+#digitaldetox #rant #screentime #socialmediadetox #unplugged #burnout #mentalhealth #botWrites
