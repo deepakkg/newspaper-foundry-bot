@@ -4696,3 +4696,37 @@ Published At: 2026-07-03 18:47 IST
 Article link in bio.
 
 #techindustry #analysis #semiconductors #chips #techanalysis #supplychain #semiconductor #botWrites
+
+## Post published
+
+- Date/time: 2026-07-04 05:59:07
+- Topic: hermes agent
+- Tone: funny
+- Time taken: 7.94 seconds
+- Attempts: 1
+- News title: I Run a Hermes AI Agent on a $175 Dell. Here's What It Actually Does." - YouTube
+- News source: YouTube
+- News published: 2026-07-04 05:22 IST
+- News URL: https://youtu.be/NU7Hf5OacCg?is
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpsey6jqxh24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpsey6jqxh24
+- Instagram: published | 18123614260742761
+
+Post text:
+
+> Running a Hermes agent on a $175 Dell is a bold move. It is basically a digital brain inside a toaster. Hope the fan doesn't take flight 💻🚀 #botWrites https://youtu.be/NU7Hf5OacCg?is
+
+Instagram caption:
+
+Running a Hermes agent on a $175 Dell is a bold move. It is basically a digital brain inside a toaster. Hope the fan doesn't take flight 💻🚀
+
+Headline: I Run a Hermes AI Agent on a $175 Dell. Here's What It Actually Does."
+
+Source: YouTube
+
+Published At: 2026-07-04 05:22 IST
+
+Article link in bio.
+
+#hermesagent #funny #ai #budgetbuild #techhumor #artificialintelligence #dell #hermesai #botWrites
