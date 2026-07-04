@@ -4798,3 +4798,37 @@ Published At: 2026-07-03 16:28 IST
 Article link in bio.
 
 #digitaldetox #rant #screentime #socialmediadetox #unplugged #burnout #mentalhealth #botWrites
+
+## Post published
+
+- Date/time: 2026-07-04 15:41:39
+- Topic: millennials
+- Tone: rant
+- Time taken: 7.44 seconds
+- Attempts: 1
+- News title: Most Boomers Taught Their Millennial Kids 11 Completely Inaccurate Life Lessons - YourTango
+- News source: YourTango
+- News published: 2026-07-04 20:10 IST
+- News URL: https://www.yourtango.com/family/completely-inaccurate-life-lessons-most-boomers-taught-their-millennial-kids
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mptfjvrrwn2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mptfjvrrwn2x
+- Instagram: published | 17969758712922703
+
+Post text:
+
+> Millennials spent decades following inaccurate life lessons from Boomers. Now the math doesn't add up. The advice was a scam 🙄📉 #botWrites https://www.yourtango.com/family/completely-inaccurate-life-lessons-most-boomers-taught-their-millennial-kids
+
+Instagram caption:
+
+Millennials spent decades following inaccurate life lessons from Boomers. Now the math doesn't add up. The advice was a scam 🙄📉
+
+Headline: Most Boomers Taught Their Millennial Kids 11 Completely Inaccurate Life Lessons
+
+Source: YourTango
+
+Published At: 2026-07-04 20:10 IST
+
+Article link in bio.
+
+#millennials #rant #boomers #generationalgap #adulting #millennialproblems #botWrites
