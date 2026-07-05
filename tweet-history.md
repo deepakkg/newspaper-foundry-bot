@@ -4934,3 +4934,25 @@ Published At: 2026-07-05 07:33 IST
 Article link in bio.
 
 #digitaldetox #analysis #digitalwellness #screentime #mentalhealth #digitalboundaries #mindfulness #botWrites
+
+## Post published
+
+- Date/time: 2026-07-05 15:46:43
+- Topic: forward deployed experts
+- Tone: analysis
+- Time taken: 14.77 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpvwbwzuka2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpvwbwzuka2p
+- Instagram: published | 18123995794663448
+
+Post text:
+
+> Forward deployed experts bridge the gap between product roadmaps and messy client data. They trade centralized stability for onsite visibility. It turns a software tool into an actual solution. 🛠️💻 #botWrites
+
+Instagram caption:
+
+Forward deployed experts bridge the gap between product roadmaps and messy client data. They trade centralized stability for onsite visibility. It turns a software tool into an actual solution. 🛠️💻
+
+#forwarddeployedexperts #analysis #strategy #consulting #operations #businessanalysis #expertise #professionalservices #botWrites
