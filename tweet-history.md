@@ -4900,3 +4900,37 @@ Published At: 2026-07-05 13:09 IST
 Article link in bio.
 
 #forwarddeployedengineers #witty #ForwardDeployed #AWS #AI #SoftwareEngineer #TechNews #CloudComputing #botWrites
+
+## Post published
+
+- Date/time: 2026-07-05 11:51:01
+- Topic: digital detox
+- Tone: analysis
+- Time taken: 6.70 seconds
+- Attempts: 1
+- News title: Ditch the detox, set boundaries - Deccan Herald
+- News source: Deccan Herald
+- News published: 2026-07-05 07:33 IST
+- News URL: https://www.deccanherald.com/health/healthcare/ditch-the-detox-set-boundaries-4060931
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpvj4e77er2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpvj4e77er2s
+- Instagram: published | 17916914472203462
+
+Post text:
+
+> Digital detox is a temporary fix. Permanent boundaries are the only way to manage a screen. The tradeoff is constant discipline over a one-week break. 📱📉 #botWrites https://www.deccanherald.com/health/healthcare/ditch-the-detox-set-boundaries-4060931
+
+Instagram caption:
+
+Digital detox is a temporary fix. Permanent boundaries are the only way to manage a screen. The tradeoff is constant discipline over a one-week break. 📱📉
+
+Headline: Ditch the detox, set boundaries
+
+Source: Deccan Herald
+
+Published At: 2026-07-05 07:33 IST
+
+Article link in bio.
+
+#digitaldetox #analysis #digitalwellness #screentime #mentalhealth #digitalboundaries #mindfulness #botWrites
