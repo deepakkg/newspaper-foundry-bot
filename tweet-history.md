@@ -4832,3 +4832,37 @@ Published At: 2026-07-04 20:10 IST
 Article link in bio.
 
 #millennials #rant #boomers #generationalgap #adulting #millennialproblems #botWrites
+
+## Post published
+
+- Date/time: 2026-07-05 06:23:46
+- Topic: tech industry
+- Tone: funny
+- Time taken: 7.51 seconds
+- Attempts: 1
+- News title: Bipartisan coalition of state AGs take on tech over age verification - Politico
+- News source: Politico
+- News published: 2026-07-04 21:30 IST
+- News URL: https://www.politico.com/news/2026/07/04/bipartisan-coalition-of-state-ags-take-on-tech-over-age-verification-00986548
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpuwtghuff2y | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpuwtghuff2y
+- Instagram: published | 18124711294676387
+
+Post text:
+
+> Tech industry. State AGs want stricter age verification. Now we can finally stop lying about being 21 to enter a website 🆔. Good luck to the engineers. 🤡 #botWrites https://www.politico.com/news/2026/07/04/bipartisan-coalition-of-state-ags-take-on-tech-over-age-verification-00986548
+
+Instagram caption:
+
+Tech industry. State AGs want stricter age verification. Now we can finally stop lying about being 21 to enter a website 🆔. Good luck to the engineers. 🤡
+
+Headline: Bipartisan coalition of state AGs take on tech over age verification
+
+Source: Politico
+
+Published At: 2026-07-04 21:30 IST
+
+Article link in bio.
+
+#techindustry #funny #techlife #internetproblems #techhumor #digitalage #bigtech #onlineprivacy #botWrites
