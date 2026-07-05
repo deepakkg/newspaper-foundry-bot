@@ -4866,3 +4866,37 @@ Published At: 2026-07-04 21:30 IST
 Article link in bio.
 
 #techindustry #funny #techlife #internetproblems #techhumor #digitalage #bigtech #onlineprivacy #botWrites
+
+## Post published
+
+- Date/time: 2026-07-05 09:26:43
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 6.68 seconds
+- Attempts: 1
+- News title: Amazon invests $1B to deploy engineers into enterprises for AI initiatives - MSN
+- News source: MSN
+- News published: 2026-07-05 13:09 IST
+- News URL: https://www.msn.com/en-us/news/technology/amazon-invests-1b-to-deploy-engineers-into-enterprises-for-ai-initiatives/ar-AA26TrWB
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpvb2gokur2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpvb2gokur2s
+- Instagram: published | 18105173129013451
+
+Post text:
+
+> Amazon is spending $1B to send forward deployed engineers into the wild. Turns out the best way to sell AI is to actually send a human to fix the prompt. 🛠️💻 #botWrites https://www.msn.com/en-us/news/technology/amazon-invests-1b-to-deploy-engineers-into-enterprises-for-ai-initiatives/ar-AA26TrWB
+
+Instagram caption:
+
+Amazon is spending $1B to send forward deployed engineers into the wild. Turns out the best way to sell AI is to actually send a human to fix the prompt. 🛠️💻
+
+Headline: Amazon invests $1B to deploy engineers into enterprises for AI initiatives
+
+Source: MSN
+
+Published At: 2026-07-05 13:09 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #witty #ForwardDeployed #AWS #AI #SoftwareEngineer #TechNews #CloudComputing #botWrites
