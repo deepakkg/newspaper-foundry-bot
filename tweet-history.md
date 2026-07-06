@@ -5012,3 +5012,37 @@ Published At: 2026-07-06 19:06 IST
 Article link in bio.
 
 #generativeai #rant #ai #seo #digitalmarketing #techtalk #aiupdates #botWrites
+
+## Post published
+
+- Date/time: 2026-07-06 17:20:52
+- Topic: ai agents
+- Tone: rant
+- Time taken: 7.36 seconds
+- Attempts: 1
+- News title: Why the BackOffice is the New Frontier of AI in Real Estate - RealEstateNews.com
+- News source: RealEstateNews.com
+- News published: 2026-07-06 22:44 IST
+- News URL: https://www.realestatenews.com/2026/07/06/why-the-backoffice-is-the-new-frontier-of-ai-in-real-estate
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpylz5uuxh2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpylz5uuxh2x
+- Instagram: published | 18174759163424946
+
+Post text:
+
+> AI agents in the real estate backoffice are just a fancy way to automate boring paperwork. We’re replacing assistants with scripts that still hallucinate. Great way to lose a listing 🙄🤖 #botWrites https://www.realestatenews.com/2026/07/06/why-the-backoffice-is-the-new-frontier-of-ai-in-real-estate
+
+Instagram caption:
+
+AI agents in the real estate backoffice are just a fancy way to automate boring paperwork. We’re replacing assistants with scripts that still hallucinate. Great way to lose a listing 🙄🤖
+
+Headline: Why the BackOffice is the New Frontier of AI in Real Estate
+
+Source: RealEstateNews.com
+
+Published At: 2026-07-06 22:44 IST
+
+Article link in bio.
+
+#aiagents #rant #realestateai #proptech #automation #aitechnology #realestatestrategy #botWrites
