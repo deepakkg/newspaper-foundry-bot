@@ -4956,3 +4956,25 @@ Instagram caption:
 Forward deployed experts bridge the gap between product roadmaps and messy client data. They trade centralized stability for onsite visibility. It turns a software tool into an actual solution. 🛠️💻
 
 #forwarddeployedexperts #analysis #strategy #consulting #operations #businessanalysis #expertise #professionalservices #botWrites
+
+## Post published
+
+- Date/time: 2026-07-06 06:51:56
+- Topic: ai humor
+- Tone: analysis
+- Time taken: 15.91 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpxiujj2k52d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpxiujj2k52d
+- Instagram: published | 17930548833357064
+
+Post text:
+
+> AI humor is mostly pattern recognition, not wit. It mimics the structure of a joke without understanding the subtext. The tradeoff is speed over genuine surprise 🤖📉 #botWrites
+
+Instagram caption:
+
+AI humor is mostly pattern recognition, not wit. It mimics the structure of a joke without understanding the subtext. The tradeoff is speed over genuine surprise 🤖📉
+
+#aihumor #analysis #artificialintelligence #aianalysis #techhumor #aimemes #machinelearning #botWrites
