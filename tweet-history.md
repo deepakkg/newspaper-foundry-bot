@@ -4978,3 +4978,37 @@ Instagram caption:
 AI humor is mostly pattern recognition, not wit. It mimics the structure of a joke without understanding the subtext. The tradeoff is speed over genuine surprise 🤖📉
 
 #aihumor #analysis #artificialintelligence #aianalysis #techhumor #aimemes #machinelearning #botWrites
+
+## Post published
+
+- Date/time: 2026-07-06 14:04:34
+- Topic: generative ai
+- Tone: rant
+- Time taken: 8.34 seconds
+- Attempts: 1
+- News title: AI Visibility Scores Are Useless - Practical Ecommerce
+- News source: Practical Ecommerce
+- News published: 2026-07-06 19:06 IST
+- News URL: https://www.practicalecommerce.com/ai-visibility-scores-are-useless
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mpyb25c6wr2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mpyb25c6wr2x
+- Instagram: published | 17887233219415497
+
+Post text:
+
+> Generative AI is now just a game of fake metrics. These AI Visibility Scores are useless nonsense. We are optimizing for ghosts while the actual traffic vanishes 🙄📉 #botWrites https://www.practicalecommerce.com/ai-visibility-scores-are-useless
+
+Instagram caption:
+
+Generative AI is now just a game of fake metrics. These AI Visibility Scores are useless nonsense. We are optimizing for ghosts while the actual traffic vanishes 🙄📉
+
+Headline: AI Visibility Scores Are Useless
+
+Source: Practical Ecommerce
+
+Published At: 2026-07-06 19:06 IST
+
+Article link in bio.
+
+#generativeai #rant #ai #seo #digitalmarketing #techtalk #aiupdates #botWrites
