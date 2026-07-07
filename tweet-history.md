@@ -5148,3 +5148,37 @@ Published At: 2026-07-07 15:20 IST
 Article link in bio.
 
 #millennials #rant #generationalgap #millennialproblems #adulting #generationgap #botWrites
+
+## Post published
+
+- Date/time: 2026-07-07 16:56:01
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 7.29 seconds
+- Attempts: 1
+- News title: Forget the Model Wars. Vendors Are Now Competing on Enterprise AI Deployment - CX Today
+- News source: CX Today
+- News published: 2026-07-07 21:16 IST
+- News URL: https://www.cxtoday.com/ai-automation-in-cx/forget-the-model-wars-vendors-are-now-competing-on-enterprise-ai-deployment/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq333lxet324 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq333lxet324
+- Instagram: published | 18075579008330384
+
+Post text:
+
+> AI engineers are moving from prompting a model to wrestling with enterprise deployment. It turns out the hardest part isn't the intelligence, it's the plumbing. Good luck with the legacy APIs 🛠️⚙️ #botWrites https://www.cxtoday.com/ai-automation-in-cx/forget-the-model-wars-vendors-are-now-competing-on-enterprise-ai-deployment/
+
+Instagram caption:
+
+AI engineers are moving from prompting a model to wrestling with enterprise deployment. It turns out the hardest part isn't the intelligence, it's the plumbing. Good luck with the legacy APIs 🛠️⚙️
+
+Headline: Forget the Model Wars. Vendors Are Now Competing on Enterprise AI Deployment
+
+Source: CX Today
+
+Published At: 2026-07-07 21:16 IST
+
+Article link in bio.
+
+#aiengineers #witty #deploymenthell #enterpriseai #mlops #softwareengineering #deploymentovermodels #botWrites
