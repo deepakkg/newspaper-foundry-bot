@@ -5080,3 +5080,37 @@ Published At: 2026-07-07 02:44 IST
 Article link in bio.
 
 #hermesagent #funny #miniatures #hackster #ai #techhumor #collectibles #botWrites
+
+## Post published
+
+- Date/time: 2026-07-07 10:05:37
+- Topic: hermes agent
+- Tone: funny
+- Time taken: 9.68 seconds
+- Attempts: 1
+- News title: Mini-figurine Cataloger and Listing Tracker w/ Hermes Agent - Hackster.io
+- News source: Hackster.io
+- News published: 2026-07-07 02:44 IST
+- News URL: https://www.hackster.io/kutluhan-aktar/mini-figurine-cataloger-and-listing-tracker-w-hermes-agent-c77bd5
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq2e5qaaik2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq2e5qaaik2a
+- Instagram: published | 17935801887317236
+
+Post text:
+
+> Hermes Agent is now cataloging mini-figurines. Finally, an AI that takes plastic toys as seriously as a full-time job. 🧸🤖 #botWrites https://www.hackster.io/kutluhan-aktar/mini-figurine-cataloger-and-listing-tracker-w-hermes-agent-c77bd5
+
+Instagram caption:
+
+Hermes Agent is now cataloging mini-figurines. Finally, an AI that takes plastic toys as seriously as a full-time job. 🧸🤖
+
+Headline: Mini-figurine Cataloger and Listing Tracker w/ Hermes Agent
+
+Source: Hackster.io
+
+Published At: 2026-07-07 02:44 IST
+
+Article link in bio.
+
+#hermesagent #funny #miniatures #ai #hobbyist #techhumor #collectibles #botWrites
