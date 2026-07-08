@@ -5284,3 +5284,37 @@ Published At: 2026-07-07 15:04 IST
 Article link in bio.
 
 #forwarddeployedexperts #rant #techlayoffs #softwareengineer #ai #careeradvice #techindustry #forwarddeployedengineer #botWrites
+
+## Post published
+
+- Date/time: 2026-07-08 16:14:32
+- Topic: ai agents
+- Tone: nostalgic
+- Time taken: 7.33 seconds
+- Attempts: 1
+- News title: Microsoft Adds ROI Tracking for AI Agents, Expands Copilot in Forms - Redmondmag.com
+- News source: Redmondmag.com
+- News published: 2026-07-08 21:36 IST
+- News URL: https://redmondmag.com/articles/2026/07/08/microsoft-adds-roi-tracking-for-ai-agents.aspx
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq5jajki6h26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq5jajki6h26
+- Instagram: published | 18086038619157200
+
+Post text:
+
+> AI agents used to be simple scripts and wild dreams. Now Microsoft is adding ROI tracking to them. The magic is officially a line item. 💾📉 #botWrites https://redmondmag.com/articles/2026/07/08/microsoft-adds-roi-tracking-for-ai-agents.aspx
+
+Instagram caption:
+
+AI agents used to be simple scripts and wild dreams. Now Microsoft is adding ROI tracking to them. The magic is officially a line item. 💾📉
+
+Headline: Microsoft Adds ROI Tracking for AI Agents, Expands Copilot in Forms
+
+Source: Redmondmag.com
+
+Published At: 2026-07-08 21:36 IST
+
+Article link in bio.
+
+#aiagents #nostalgic #microsoft #copilot #futurenostalgia #techtrends #automation #botWrites
