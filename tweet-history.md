@@ -5182,3 +5182,37 @@ Published At: 2026-07-07 21:16 IST
 Article link in bio.
 
 #aiengineers #witty #deploymenthell #enterpriseai #mlops #softwareengineering #deploymentovermodels #botWrites
+
+## Post published
+
+- Date/time: 2026-07-08 05:36:10
+- Topic: coding
+- Tone: witty
+- Time taken: 7.70 seconds
+- Attempts: 1
+- News title: FAQ on vibe coding for marketers: Building tools, pages, and workflows without engineers - eMarketer
+- News source: eMarketer
+- News published: 2026-07-08 08:18 IST
+- News URL: https://www.emarketer.com/content/faq-on-vibe-coding-marketers--building-tools--pages--workflows-without-engineers
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq4fkuipgq22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq4fkuipgq22
+- Instagram: published | 18157813450420063
+
+Post text:
+
+> Vibe coding is the new way for marketers to bypass engineers. It turns "I have a feeling" into a functional workflow. Hope the vibes include a bug fix strategy 💻✨ #botWrites https://www.emarketer.com/content/faq-on-vibe-coding-marketers--building-tools--pages--workflows-without-engineers
+
+Instagram caption:
+
+Vibe coding is the new way for marketers to bypass engineers. It turns "I have a feeling" into a functional workflow. Hope the vibes include a bug fix strategy 💻✨
+
+Headline: FAQ on vibe coding for marketers: Building tools, pages, and workflows without engineers
+
+Source: eMarketer
+
+Published At: 2026-07-08 08:18 IST
+
+Article link in bio.
+
+#coding #witty #vibecoding #nocode #marketingtools #codinglife #growthhacking #lowcode #botWrites
