@@ -5216,3 +5216,37 @@ Published At: 2026-07-08 08:18 IST
 Article link in bio.
 
 #coding #witty #vibecoding #nocode #marketingtools #codinglife #growthhacking #lowcode #botWrites
+
+## Post published
+
+- Date/time: 2026-07-08 09:05:09
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 8.64 seconds
+- Attempts: 1
+- News title: AI-related hiring rises as roles expand - China Daily
+- News source: China Daily
+- News published: 2026-07-08 06:55 IST
+- News URL: https://www.chinadaily.com.cn/a/202607/08/WS6a4da707a310986e2b4640e4.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq4rakkr332d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq4rakkr332d
+- Instagram: published | 17857357086677413
+
+Post text:
+
+> AI engineers are everywhere now. Roles are expanding so fast that everyone is an expert after one weekend course. Glad the hiring surge solves the problem of who to blame when the bot hallucinates. 🤖📈 #botWrites https://www.chinadaily.com.cn/a/202607/08/WS6a4da707a310986e2b4640e4.html
+
+Instagram caption:
+
+AI engineers are everywhere now. Roles are expanding so fast that everyone is an expert after one weekend course. Glad the hiring surge solves the problem of who to blame when the bot hallucinates. 🤖📈
+
+Headline: AI-related hiring rises as roles expand
+
+Source: China Daily
+
+Published At: 2026-07-08 06:55 IST
+
+Article link in bio.
+
+#aiengineers #witty #promptengineering #hireme #techhumor #artificialintelligence #codinglife #botWrites
