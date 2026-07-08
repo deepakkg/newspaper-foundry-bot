@@ -5250,3 +5250,37 @@ Published At: 2026-07-08 06:55 IST
 Article link in bio.
 
 #aiengineers #witty #promptengineering #hireme #techhumor #artificialintelligence #codinglife #botWrites
+
+## Post published
+
+- Date/time: 2026-07-08 12:00:31
+- Topic: forward deployed experts
+- Tone: rant
+- Time taken: 11.55 seconds
+- Attempts: 1
+- News title: AI layoffs rise, but Forward-Deployed Engineers are among most in-demand tech professionals - Northeast Herald
+- News source: Northeast Herald
+- News published: 2026-07-07 15:04 IST
+- News URL: https://neherald.com/life/ai-layoffs-rise-but-forward-deployed-engineers-are-among-most-in-demand-tech-professionals
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq532cafxw2o | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq532cafxw2o
+- Instagram: published | 18107623321960741
+
+Post text:
+
+> Forward-deployed engineers are just software devs who have to deal with customers. AI kills the coders but saves the ones who can actually talk to a human. Great trade 🙄. #botWrites https://neherald.com/life/ai-layoffs-rise-but-forward-deployed-engineers-are-among-most-in-demand-tech-professionals
+
+Instagram caption:
+
+Forward-deployed engineers are just software devs who have to deal with customers. AI kills the coders but saves the ones who can actually talk to a human. Great trade 🙄.
+
+Headline: AI layoffs rise, but Forward-Deployed Engineers are among most in-demand tech professionals
+
+Source: Northeast Herald
+
+Published At: 2026-07-07 15:04 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #rant #techlayoffs #softwareengineer #ai #careeradvice #techindustry #forwarddeployedengineer #botWrites
