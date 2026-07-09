@@ -5386,3 +5386,37 @@ Published At: 2026-07-09 14:42 IST
 Article link in bio.
 
 #millennials #rant #genz #livemusic #concerts #relatable #botWrites
+
+## Post published
+
+- Date/time: 2026-07-09 17:01:46
+- Topic: ai agents
+- Tone: analysis
+- Time taken: 9.34 seconds
+- Attempts: 1
+- News title: Collectly's AI Agent and RCM Platform for Patient Billing Now Available in Connection Hub on Epic Showroom - Yahoo Finance Singapore
+- News source: Yahoo Finance Singapore
+- News published: 2026-07-09 21:58 IST
+- News URL: https://sg.finance.yahoo.com/news/collectlys-ai-agent-rcm-platform-162800235.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqa4dkdgk62e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqa4dkdgk62e
+- Instagram: published | 18159004882467768
+
+Post text:
+
+> AI agents are moving from chat boxes to deep systems integration. Collectly hitting the Epic Showroom shows agents shifting toward high-stakes operational workflows. This is where the real ROI happens. 🏥🤖 #botWrites https://sg.finance.yahoo.com/news/collectlys-ai-agent-rcm-platform-162800235.html
+
+Instagram caption:
+
+AI agents are moving from chat boxes to deep systems integration. Collectly hitting the Epic Showroom shows agents shifting toward high-stakes operational workflows. This is where the real ROI happens. 🏥🤖
+
+Headline: Collectly's AI Agent and RCM Platform for Patient Billing Now Available in Connection Hub on Epic Showroom
+
+Source: Yahoo Finance Singapore
+
+Published At: 2026-07-09 21:58 IST
+
+Article link in bio.
+
+#aiagents #analysis #healthtech #healthcareai #rcm #digitalhealth #aianalysis #botWrites
