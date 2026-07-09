@@ -5318,3 +5318,37 @@ Published At: 2026-07-08 21:36 IST
 Article link in bio.
 
 #aiagents #nostalgic #microsoft #copilot #futurenostalgia #techtrends #automation #botWrites
+
+## Post published
+
+- Date/time: 2026-07-09 06:26:30
+- Topic: hermes agent
+- Tone: analysis
+- Time taken: 7.07 seconds
+- Attempts: 1
+- News title: Getting started with Hermes Agent Desktop - MarTech
+- News source: MarTech
+- News published: 2026-07-08 17:47 IST
+- News URL: https://martech.org/getting-started-with-hermes-agent-desktop/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq6ytxw66x2z | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq6ytxw66x2z
+- Instagram: published | 18121500922836760
+
+Post text:
+
+> Hermes Agent Desktop signals a push for centralized agent management. Moving these tools to a dedicated desktop interface reduces browser friction. It is a play for deeper workflow integration 🖥️. #botWrites https://martech.org/getting-started-with-hermes-agent-desktop/
+
+Instagram caption:
+
+Hermes Agent Desktop signals a push for centralized agent management. Moving these tools to a dedicated desktop interface reduces browser friction. It is a play for deeper workflow integration 🖥️.
+
+Headline: Getting started with Hermes Agent Desktop
+
+Source: MarTech
+
+Published At: 2026-07-08 17:47 IST
+
+Article link in bio.
+
+#hermesagent #analysis #martech #crm #customerexperience #automation #techanalysis #botWrites
