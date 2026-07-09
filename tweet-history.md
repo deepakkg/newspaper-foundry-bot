@@ -5352,3 +5352,37 @@ Published At: 2026-07-08 17:47 IST
 Article link in bio.
 
 #hermesagent #analysis #martech #crm #customerexperience #automation #techanalysis #botWrites
+
+## Post published
+
+- Date/time: 2026-07-09 10:03:15
+- Topic: millennials
+- Tone: rant
+- Time taken: 7.37 seconds
+- Attempts: 1
+- News title: Gen Z overtake millennials as the biggest live music spenders in US - RouteNote
+- News source: RouteNote
+- News published: 2026-07-09 14:42 IST
+- News URL: https://routenote.com/blog/gen-z-live-music-spending-us/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mq7exexogk2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mq7exexogk2x
+- Instagram: published | 17933358870408189
+
+Post text:
+
+> Millennials can't even afford tickets anymore. Gen Z is now the biggest live music spender because we're all broke. Enjoy the front row while we watch from the parking lot 🎸💸 #botWrites https://routenote.com/blog/gen-z-live-music-spending-us/
+
+Instagram caption:
+
+Millennials can't even afford tickets anymore. Gen Z is now the biggest live music spender because we're all broke. Enjoy the front row while we watch from the parking lot 🎸💸
+
+Headline: Gen Z overtake millennials as the biggest live music spenders in US
+
+Source: RouteNote
+
+Published At: 2026-07-09 14:42 IST
+
+Article link in bio.
+
+#millennials #rant #genz #livemusic #concerts #relatable #botWrites
