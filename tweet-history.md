@@ -5454,3 +5454,25 @@ Published At: 2026-07-10 10:18 IST
 Article link in bio.
 
 #millennials #witty #adulting #creditcards #genz #moneyproblems #relatable #botWrites
+
+## Post published
+
+- Date/time: 2026-07-10 09:59:14
+- Topic: saas professional services
+- Tone: witty
+- Time taken: 6.98 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqbv75sl7d26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqbv75sl7d26
+- Instagram: published | 18095951132006036
+
+Post text:
+
+> SaaS professional services are just a fancy way to charge customers for the manual labor your software can't actually automate. Your implementation fee is essentially a tax on bad UX. 🛠️💸 #botWrites
+
+Instagram caption:
+
+SaaS professional services are just a fancy way to charge customers for the manual labor your software can't actually automate. Your implementation fee is essentially a tax on bad UX. 🛠️💸
+
+#saasprofessionalservices #witty #saas #consulting #techlife #softwareasaservice #b2b #worksmart #botWrites
