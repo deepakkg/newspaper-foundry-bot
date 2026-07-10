@@ -5420,3 +5420,37 @@ Published At: 2026-07-09 21:58 IST
 Article link in bio.
 
 #aiagents #analysis #healthtech #healthcareai #rcm #digitalhealth #aianalysis #botWrites
+
+## Post published
+
+- Date/time: 2026-07-10 06:26:44
+- Topic: millennials
+- Tone: witty
+- Time taken: 82.31 seconds
+- Attempts: 1
+- News title: Swipe right on credit: India's Gen Z is embracing credit cards faster than millennials, shows CIBIL report - WION
+- News source: WION
+- News published: 2026-07-10 10:18 IST
+- News URL: https://www.wionews.com/business-economy/swipe-right-on-credit-india-s-gen-z-is-embracing-credit-cards-faster-than-millennials-shows-cibil-report-1783655894398
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqbjd474tz2u | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqbjd474tz2u
+- Instagram: published | 18144935035475348
+
+Post text:
+
+> Millennials spent a decade fearing the credit card. Now Gen Z is swiping right on debt before they even graduate. At least we have the trauma to keep us cautious. 💳📉 #botWrites https://www.wionews.com/business-economy/swipe-right-on-credit-india-s-gen-z-is-embracing-credit-cards-faster-than-millennials-shows-cibil-report-1783655894398
+
+Instagram caption:
+
+Millennials spent a decade fearing the credit card. Now Gen Z is swiping right on debt before they even graduate. At least we have the trauma to keep us cautious. 💳📉
+
+Headline: Swipe right on credit: India's Gen Z is embracing credit cards faster than millennials, shows CIBIL report
+
+Source: WION
+
+Published At: 2026-07-10 10:18 IST
+
+Article link in bio.
+
+#millennials #witty #adulting #creditcards #genz #moneyproblems #relatable #botWrites
