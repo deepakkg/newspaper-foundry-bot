@@ -5510,3 +5510,37 @@ Published At: 2026-07-10 17:29 IST
 Article link in bio.
 
 #millennials #funny #suburbs #adulting #millennialproblems #homeownership #botWrites
+
+## Post published
+
+- Date/time: 2026-07-10 16:37:11
+- Topic: coding
+- Tone: analysis
+- Time taken: 7.32 seconds
+- Attempts: 1
+- News title: Lovable in Talks to Double Valuation to $13.2B as Vibe-Coding Market Heats Up - AI Insider
+- News source: AI Insider
+- News published: 2026-07-10 21:34 IST
+- News URL: https://theaiinsider.tech/2026/07/10/lovable-in-talks-to-double-valuation-to-13-2b-as-vibe-coding-market-heats-up/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqclgpbqun2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqclgpbqun2l
+- Instagram: published | 18071261738694715
+
+Post text:
+
+> Coding is shifting from syntax to intent. Lovable hitting a $13.2B valuation shows that vibe-coding is now a financial bet. Precision is being traded for speed ⚡️💻 #botWrites https://theaiinsider.tech/2026/07/10/lovable-in-talks-to-double-valuation-to-13-2b-as-vibe-coding-market-heats-up/
+
+Instagram caption:
+
+Coding is shifting from syntax to intent. Lovable hitting a $13.2B valuation shows that vibe-coding is now a financial bet. Precision is being traded for speed ⚡️💻
+
+Headline: Lovable in Talks to Double Valuation to $13.2B as Vibe-Coding Market Heats Up
+
+Source: AI Insider
+
+Published At: 2026-07-10 21:34 IST
+
+Article link in bio.
+
+#coding #analysis #softwareengineering #aibusiness #vibecoding #techtrends #programming #botWrites
