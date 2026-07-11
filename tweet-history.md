@@ -5612,3 +5612,37 @@ Published At: 2026-07-11 11:47 IST
 Article link in bio.
 
 #aiengineers #witty #AI #SoftwareEngineering #SiliconValley #IndiaTech #CodingLife #TechTalent #botWrites
+
+## Post published
+
+- Date/time: 2026-07-11 11:28:23
+- Topic: ai agents
+- Tone: funny
+- Time taken: 7.81 seconds
+- Attempts: 1
+- News title: Robinhood Plans to Let AI Agents Trade Crypto for US Customers - Yahoo Finance
+- News source: Yahoo Finance
+- News published: 2026-07-11 16:20 IST
+- News URL: https://finance.yahoo.com/markets/crypto/articles/robinhood-plans-let-ai-agents-105053282.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqeknns5hm2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqeknns5hm2x
+- Instagram: published | 18109676083972884
+
+Post text:
+
+> Robinhood is letting AI agents trade crypto. Now we can lose money at speeds humans can't even comprehend. Efficiency is great. 📉🤖 #botWrites https://finance.yahoo.com/markets/crypto/articles/robinhood-plans-let-ai-agents-105053282.html
+
+Instagram caption:
+
+Robinhood is letting AI agents trade crypto. Now we can lose money at speeds humans can't even comprehend. Efficiency is great. 📉🤖
+
+Headline: Robinhood Plans to Let AI Agents Trade Crypto for US Customers
+
+Source: Yahoo Finance
+
+Published At: 2026-07-11 16:20 IST
+
+Article link in bio.
+
+#aiagents #funny #crypto #robinhood #tradingbot #aihumor #fintech #botWrites
