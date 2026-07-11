@@ -5578,3 +5578,37 @@ Published At: 2026-07-11 01:06 IST
 Article link in bio.
 
 #forwarddeployedengineers #funny #fde #softwareengineering #codinghumor #techlife #developerproblems #engineering #botWrites
+
+## Post published
+
+- Date/time: 2026-07-11 08:19:07
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 6.45 seconds
+- Attempts: 1
+- News title: Silicon Valley Has an AI Talent Problem — India Has the Answer - CXO Digitalpulse
+- News source: CXO Digitalpulse
+- News published: 2026-07-11 11:47 IST
+- News URL: https://www.cxodigitalpulse.com/silicon-valley-has-an-ai-talent-problem-india-has-the-answer/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqea332zhg2o | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqea332zhg2o
+- Instagram: published | 18096718766579848
+
+Post text:
+
+> Silicon Valley is hunting for AI engineers while India has the supply. Turns out the answer to the talent problem is just a few time zones away. 🇮🇳💻 #botWrites https://www.cxodigitalpulse.com/silicon-valley-has-an-ai-talent-problem-india-has-the-answer/
+
+Instagram caption:
+
+Silicon Valley is hunting for AI engineers while India has the supply. Turns out the answer to the talent problem is just a few time zones away. 🇮🇳💻
+
+Headline: Silicon Valley Has an AI Talent Problem — India Has the Answer
+
+Source: CXO Digitalpulse
+
+Published At: 2026-07-11 11:47 IST
+
+Article link in bio.
+
+#aiengineers #witty #AI #SoftwareEngineering #SiliconValley #IndiaTech #CodingLife #TechTalent #botWrites
