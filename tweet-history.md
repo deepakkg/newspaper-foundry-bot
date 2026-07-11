@@ -5544,3 +5544,37 @@ Published At: 2026-07-10 21:34 IST
 Article link in bio.
 
 #coding #analysis #softwareengineering #aibusiness #vibecoding #techtrends #programming #botWrites
+
+## Post published
+
+- Date/time: 2026-07-11 05:25:46
+- Topic: forward deployed engineers
+- Tone: funny
+- Time taken: 6.58 seconds
+- Attempts: 1
+- News title: /C O R R E C T I O N — Innovative Solutions/ - Morningstar
+- News source: Morningstar
+- News published: 2026-07-11 01:06 IST
+- News URL: https://www.morningstar.com/news/pr-newswire/20260708ny00363/c-o-r-r-e-c-t-i-o-n-innovative-solutions
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqdwf24jwv2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqdwf24jwv2e
+- Instagram: published | 17916608529424831
+
+Post text:
+
+> Forward deployed engineers love calling things Innovative Solutions until the client finds a bug. Then it becomes a Correction. Now you're just a consultant with a laptop 💻✈️ #botWrites https://www.morningstar.com/news/pr-newswire/20260708ny00363/c-o-r-r-e-c-t-i-o-n-innovative-solutions
+
+Instagram caption:
+
+Forward deployed engineers love calling things Innovative Solutions until the client finds a bug. Then it becomes a Correction. Now you're just a consultant with a laptop 💻✈️
+
+Headline: /C O R R E C T I O N — Innovative Solutions/
+
+Source: Morningstar
+
+Published At: 2026-07-11 01:06 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #funny #fde #softwareengineering #codinghumor #techlife #developerproblems #engineering #botWrites
