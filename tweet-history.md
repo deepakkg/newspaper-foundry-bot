@@ -5668,3 +5668,37 @@ Instagram caption:
 AI humor is mostly just a hallucination with a punchline. The LLM confidently tells a joke about a toaster that makes no sense. We laugh because we are scared. 🤖️
 
 #aihumor #witty #artificialintelligence #aimemes #robotics #techhumor #chatgpt #botWrites
+
+## Post published
+
+- Date/time: 2026-07-12 05:41:38
+- Topic: ai humor
+- Tone: witty
+- Time taken: 6.40 seconds
+- Attempts: 1
+- News title: 72 Hilariously Accurate Memes About AI - AOL.com
+- News source: AOL.com
+- News published: 2026-07-12 06:19 IST
+- News URL: https://www.aol.com/articles/72-funny-relatable-memes-anyone-050102634.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqghqe3lil2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqghqe3lil2e
+- Instagram: published | 18018371813885009
+
+Post text:
+
+> AI humor is peaking. AOL is now curating memes about the tech that will eventually write them. We are laughing at the glitch before the glitch replaces the comedian 🤖📉 #botWrites https://www.aol.com/articles/72-funny-relatable-memes-anyone-050102634.html
+
+Instagram caption:
+
+AI humor is peaking. AOL is now curating memes about the tech that will eventually write them. We are laughing at the glitch before the glitch replaces the comedian 🤖📉
+
+Headline: 72 Hilariously Accurate Memes About AI
+
+Source: AOL.com
+
+Published At: 2026-07-12 06:19 IST
+
+Article link in bio.
+
+#aihumor #witty #aimemes #artificialintelligence #techhumor #robotics #aiart #botWrites
