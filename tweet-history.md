@@ -5736,3 +5736,37 @@ Published At: 2026-07-12 11:29 IST
 Article link in bio.
 
 #aislop #nostalgic #christophernolan #cinema #filmmaking #nostalgia #analog #antiai #botWrites
+
+## Post published
+
+- Date/time: 2026-07-12 11:35:37
+- Topic: ai agents
+- Tone: funny
+- Time taken: 8.23 seconds
+- Attempts: 1
+- News title: How to Evaluate AI Agents Before You Ship Them to Real Users - Startup Fortune
+- News source: Startup Fortune
+- News published: 2026-07-12 15:01 IST
+- News URL: https://startupfortune.com/how-to-evaluate-ai-agents-before-you-ship-them-to-real-users/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqh3jarteh2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqh3jarteh2d
+- Instagram: published | 18270952843294870
+
+Post text:
+
+> AI agents are great until they decide to hallucinate your entire budget. Evaluate them before you ship them to real users. Your reputation is a poor substitute for a test environment 🤖📉 #botWrites https://startupfortune.com/how-to-evaluate-ai-agents-before-you-ship-them-to-real-users/
+
+Instagram caption:
+
+AI agents are great until they decide to hallucinate your entire budget. Evaluate them before you ship them to real users. Your reputation is a poor substitute for a test environment 🤖📉
+
+Headline: How to Evaluate AI Agents Before You Ship Them to Real Users
+
+Source: Startup Fortune
+
+Published At: 2026-07-12 15:01 IST
+
+Article link in bio.
+
+#aiagents #funny #artificialintelligence #developerhumor #startuplyfe #techfails #codinglife #botWrites
