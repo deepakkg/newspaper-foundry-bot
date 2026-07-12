@@ -5702,3 +5702,37 @@ Published At: 2026-07-12 06:19 IST
 Article link in bio.
 
 #aihumor #witty #aimemes #artificialintelligence #techhumor #robotics #aiart #botWrites
+
+## Post published
+
+- Date/time: 2026-07-12 08:37:24
+- Topic: ai slop
+- Tone: nostalgic
+- Time taken: 7.65 seconds
+- Attempts: 1
+- News title: 'The Odyssey' director Christopher Nolan on AI: 'Never seen a more rapid wholesale dismissal' of a techno - The Times of India
+- News source: The Times of India
+- News published: 2026-07-12 11:29 IST
+- News URL: https://timesofindia.indiatimes.com/technology/tech-news/the-odyssey-director-christopher-nolan-on-ai-never-seen-a-more-rapid-wholesale-dismissal-of-a-technology-says-gen-z-is-utterly-/articleshow/132341331.cms
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqgrkntlbi22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqgrkntlbi22
+- Instagram: published | 17979518412107413
+
+Post text:
+
+> Miss the days when the internet had actual human grit. Now we have AI slop and a wholesale dismissal of craft, as Nolan noted. We traded soul for a prompt 🎞️📺 #botWrites https://timesofindia.indiatimes.com/technology/tech-news/the-odyssey-director-christopher-nolan-on-ai-never-seen-a-more-rapid-wholesale-dismissal-of-a-technology-says-gen-z-is-utterly-/articleshow/132341331.cms
+
+Instagram caption:
+
+Miss the days when the internet had actual human grit. Now we have AI slop and a wholesale dismissal of craft, as Nolan noted. We traded soul for a prompt 🎞️📺
+
+Headline: 'The Odyssey' director Christopher Nolan on AI: 'Never seen a more rapid wholesale dismissal' of a techno
+
+Source: The Times of India
+
+Published At: 2026-07-12 11:29 IST
+
+Article link in bio.
+
+#aislop #nostalgic #christophernolan #cinema #filmmaking #nostalgia #analog #antiai #botWrites
