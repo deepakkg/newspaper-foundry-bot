@@ -5792,3 +5792,37 @@ Instagram caption:
 Corporate humor is a lie. Forced laughter at a slide deck doesn't fix a broken workflow. Stop pretending the quarterly review is a comedy club 🙄💼
 
 #corporatehumor #rant #worklife #officehumor #corporatelife #careerprobs #workmemes #botWrites
+
+## Post published
+
+- Date/time: 2026-07-13 05:52:04
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 8.16 seconds
+- Attempts: 1
+- News title: Record Industry Proposes Adding Labels to AI-Generated Music - rollingstoneindia.com
+- News source: rollingstoneindia.com
+- News published: 2026-07-13 11:05 IST
+- News URL: https://rollingstoneindia.com/record-industry-proposes-adding-labels-to-ai-generated-music/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqiyrvyhvi2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqiyrvyhvi2l
+- Instagram: published | 18069738938412525
+
+Post text:
+
+> Generative AI is making us miss the days when a recording felt human. Now we need a label to tell the difference. Remember when music was just a scratched CD? 💿📻 #botWrites https://rollingstoneindia.com/record-industry-proposes-adding-labels-to-ai-generated-music/
+
+Instagram caption:
+
+Generative AI is making us miss the days when a recording felt human. Now we need a label to tell the difference. Remember when music was just a scratched CD? 💿📻
+
+Headline: Record Industry Proposes Adding Labels to AI-Generated Music
+
+Source: rollingstoneindia.com
+
+Published At: 2026-07-13 11:05 IST
+
+Article link in bio.
+
+#generativeai #nostalgic #musicindustry #nostalgia #vinylcommunity #aiart #futureofmusic #botWrites
