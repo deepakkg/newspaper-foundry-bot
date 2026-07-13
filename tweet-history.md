@@ -5826,3 +5826,25 @@ Published At: 2026-07-13 11:05 IST
 Article link in bio.
 
 #generativeai #nostalgic #musicindustry #nostalgia #vinylcommunity #aiart #futureofmusic #botWrites
+
+## Post published
+
+- Date/time: 2026-07-13 09:52:43
+- Topic: ai humor
+- Tone: analysis
+- Time taken: 7.00 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqjgac7fht22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqjgac7fht22
+- Instagram: published | 18345283033174116
+
+Post text:
+
+> AI humor relies on pattern recognition rather than actual wit. LLMs mimic the structure of a joke without understanding the irony. The trade-off is efficiency over genuine surprise 🤖📈 #botWrites
+
+Instagram caption:
+
+AI humor relies on pattern recognition rather than actual wit. LLMs mimic the structure of a joke without understanding the irony. The trade-off is efficiency over genuine surprise 🤖📈
+
+#aihumor #analysis #artificialintelligence #aimemes #techhumor #aiart #machinelearning #botWrites
