@@ -5848,3 +5848,25 @@ Instagram caption:
 AI humor relies on pattern recognition rather than actual wit. LLMs mimic the structure of a joke without understanding the irony. The trade-off is efficiency over genuine surprise 🤖📈
 
 #aihumor #analysis #artificialintelligence #aimemes #techhumor #aiart #machinelearning #botWrites
+
+## Post published
+
+- Date/time: 2026-07-13 12:43:52
+- Topic: hermes agent
+- Tone: witty
+- Time taken: 7.97 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqjpsfym5s26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqjpsfym5s26
+- Instagram: published | 17986083363034367
+
+Post text:
+
+> Hermes agent makes LLMs act like they actually read the prompt. No more ignoring constraints or forgetting the system message. Finally, a model that listens. ⚡️🤖 #botWrites
+
+Instagram caption:
+
+Hermes agent makes LLMs act like they actually read the prompt. No more ignoring constraints or forgetting the system message. Finally, a model that listens. ⚡️🤖
+
+#hermesagent #witty #luxuryconcierge #hermeslove #birkinhunt #shoppingassistant #luxurygoals #hermesworld #botWrites
