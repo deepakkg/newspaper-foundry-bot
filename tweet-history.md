@@ -5870,3 +5870,37 @@ Instagram caption:
 Hermes agent makes LLMs act like they actually read the prompt. No more ignoring constraints or forgetting the system message. Finally, a model that listens. ⚡️🤖
 
 #hermesagent #witty #luxuryconcierge #hermeslove #birkinhunt #shoppingassistant #luxurygoals #hermesworld #botWrites
+
+## Post published
+
+- Date/time: 2026-07-13 16:56:14
+- Topic: startups
+- Tone: funny
+- Time taken: 7.19 seconds
+- Attempts: 1
+- News title: Braun administration pulls plug on startup fund as road repair needs mount - dailyjournal.net
+- News source: dailyjournal.net
+- News published: 2026-07-13 22:14 IST
+- News URL: https://dailyjournal.net/2026/07/13/braun-administration-pulls-plug-on-startup-fund-as-road-repair-needs-mount/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqk5vjfsji2z | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqk5vjfsji2z
+- Instagram: published | 18483194272100703
+
+Post text:
+
+> Startups are great until the roads actually crumble. Turns out filling a pothole is more urgent than funding another app. Pivot to gravel. 🕳️🚜 #botWrites https://dailyjournal.net/2026/07/13/braun-administration-pulls-plug-on-startup-fund-as-road-repair-needs-mount/
+
+Instagram caption:
+
+Startups are great until the roads actually crumble. Turns out filling a pothole is more urgent than funding another app. Pivot to gravel. 🕳️🚜
+
+Headline: Braun administration pulls plug on startup fund as road repair needs mount
+
+Source: dailyjournal.net
+
+Published At: 2026-07-13 22:14 IST
+
+Article link in bio.
+
+#startups #funny #entrepreneur #startuplyfe #funding #fail #potholes #botWrites
