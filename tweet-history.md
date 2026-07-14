@@ -5972,3 +5972,37 @@ Published At: 2026-07-14 17:10 IST
 Article link in bio.
 
 #aiagents #funny #customerexperience #techhumor #amazon #salesforce #automation #botWrites
+
+## Post published
+
+- Date/time: 2026-07-14 15:57:09
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 9.62 seconds
+- Attempts: 1
+- News title: Decentralized AI project Nous Research in talks to raise $75M at $1.5B valuation: report - The Block
+- News source: The Block
+- News published: 2026-07-14 19:54 IST
+- News URL: https://www.theblock.co/amp/post/408237/decentralized-ai-project-nous-research-in-talks-to-raise-75m-at-1-5b-valuation-report
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqml2sfgx72u | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqml2sfgx72u
+- Instagram: published | 18114193427306347
+
+Post text:
+
+> Nous Research is chasing a $1.5B valuation while the Hermes agent still struggles with basic logic. Funding doesn't fix bad weights. 🙄💸 #botWrites https://www.theblock.co/amp/post/408237/decentralized-ai-project-nous-research-in-talks-to-raise-75m-at-1-5b-valuation-report
+
+Instagram caption:
+
+Nous Research is chasing a $1.5B valuation while the Hermes agent still struggles with basic logic. Funding doesn't fix bad weights. 🙄💸
+
+Headline: Decentralized AI project Nous Research in talks to raise $75M at $1.5B valuation: report
+
+Source: The Block
+
+Published At: 2026-07-14 19:54 IST
+
+Article link in bio.
+
+#hermesagent #rant #AI #Crypto #Web3 #NousResearch #TechNews #VentureCapital #botWrites
