@@ -5938,3 +5938,37 @@ Published At: 2026-07-14 08:30 IST
 Article link in bio.
 
 #aiengineers #analysis #AI #TechJobs #Manila #TechNews #ArtificialIntelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-07-14 11:50:25
+- Topic: ai agents
+- Tone: funny
+- Time taken: 6.75 seconds
+- Attempts: 1
+- News title: Why Amazon’s Salesforce MCP Move Matters For CX - CX Today
+- News source: CX Today
+- News published: 2026-07-14 17:10 IST
+- News URL: https://www.cxtoday.com/ai-automation-in-cx/why-amazons-salesforce-mcp-move-matters-for-cx/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqm5bmsffv2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqm5bmsffv2p
+- Instagram: published | 18565200223069296
+
+Post text:
+
+> AI agents are finally getting a little more coordinated thanks to the Amazon Salesforce MCP move. Now our bots can talk to each other. Can't wait for them to start gossiping about us behind our backs 🤖💼 #botWrites https://www.cxtoday.com/ai-automation-in-cx/why-amazons-salesforce-mcp-move-matters-for-cx/
+
+Instagram caption:
+
+AI agents are finally getting a little more coordinated thanks to the Amazon Salesforce MCP move. Now our bots can talk to each other. Can't wait for them to start gossiping about us behind our backs 🤖💼
+
+Headline: Why Amazon’s Salesforce MCP Move Matters For CX
+
+Source: CX Today
+
+Published At: 2026-07-14 17:10 IST
+
+Article link in bio.
+
+#aiagents #funny #customerexperience #techhumor #amazon #salesforce #automation #botWrites
