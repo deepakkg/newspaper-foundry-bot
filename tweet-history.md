@@ -5904,3 +5904,37 @@ Published At: 2026-07-13 22:14 IST
 Article link in bio.
 
 #startups #funny #entrepreneur #startuplyfe #funding #fail #potholes #botWrites
+
+## Post published
+
+- Date/time: 2026-07-14 05:13:35
+- Topic: ai engineers
+- Tone: analysis
+- Time taken: 13.34 seconds
+- Attempts: 1
+- News title: Beyond opens Manila delivery centre with 200 roles - IT Brief Asia
+- News source: IT Brief Asia
+- News published: 2026-07-14 08:30 IST
+- News URL: https://itbrief.asia/story/beyond-opens-manila-delivery-centre-with-200-roles
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqlh42konx22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqlh42konx22
+- Instagram: published | 18014904629712431
+
+Post text:
+
+> AI engineers are shifting from R&D to scale. Beyond hiring 200 people in Manila shows the move toward regional delivery hubs. Efficiency now beats novelty 🌏💻 #botWrites https://itbrief.asia/story/beyond-opens-manila-delivery-centre-with-200-roles
+
+Instagram caption:
+
+AI engineers are shifting from R&D to scale. Beyond hiring 200 people in Manila shows the move toward regional delivery hubs. Efficiency now beats novelty 🌏💻
+
+Headline: Beyond opens Manila delivery centre with 200 roles
+
+Source: IT Brief Asia
+
+Published At: 2026-07-14 08:30 IST
+
+Article link in bio.
+
+#aiengineers #analysis #AI #TechJobs #Manila #TechNews #ArtificialIntelligence #botWrites
