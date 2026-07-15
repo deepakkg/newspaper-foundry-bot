@@ -6108,3 +6108,37 @@ Published At: 2026-07-15 16:06 IST
 Article link in bio.
 
 #aiengineers #funny #aiengineer #codinghumor #softwareengineer #artificialintelligence #techlife #devlife #botWrites
+
+## Post published
+
+- Date/time: 2026-07-15 16:01:42
+- Topic: forward deployed experts
+- Tone: analysis
+- Time taken: 11.70 seconds
+- Attempts: 1
+- News title: Michael Watson: Hedge Funds Should Fire Their Forward-Deployed Engineers and Hire Domain Experts With AI - finance.biggo.com
+- News source: finance.biggo.com
+- News published: 2026-07-14 19:39 IST
+- News URL: https://finance.biggo.com/news/272f2fe15434b67e
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqp3rtlbdb25 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqp3rtlbdb25
+- Instagram: published | 17954784933183444
+
+Post text:
+
+> Forward deployed experts. AI flips the script: domain knowledge now beats raw coding speed. Hedge funds will trade engineers for experts who know how to prompt. Coding is becoming a commodity 📉. #botWrites https://finance.biggo.com/news/272f2fe15434b67e
+
+Instagram caption:
+
+Forward deployed experts. AI flips the script: domain knowledge now beats raw coding speed. Hedge funds will trade engineers for experts who know how to prompt. Coding is becoming a commodity 📉.
+
+Headline: Michael Watson: Hedge Funds Should Fire Their Forward-Deployed Engineers and Hire Domain Experts With AI
+
+Source: finance.biggo.com
+
+Published At: 2026-07-14 19:39 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #analysis #hedgefunds #artificialintelligence #fintech #domainexpertise #quantitativefinance #futureofwork #botWrites
