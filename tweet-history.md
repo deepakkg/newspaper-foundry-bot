@@ -6074,3 +6074,37 @@ Published At: 2026-07-15 12:11 IST
 Article link in bio.
 
 #aiengineers #funny #aiengineering #promptengineering #coderlife #artificialintelligence #softwareengineer #techhumor #botWrites
+
+## Post published
+
+- Date/time: 2026-07-15 11:55:10
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 8.60 seconds
+- Attempts: 2
+- News title: AI’s Forward Deployed Engineer jobs - The Hindu
+- News source: The Hindu
+- News published: 2026-07-15 16:06 IST
+- News URL: https://www.thehindu.com/education/ais-forward-deployed-engineer-jobs/article71225137.ece
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqonz57wq42x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqonz57wq42x
+- Instagram: published | 18120873997695737
+
+Post text:
+
+> AI engineers are now becoming Forward Deployed Engineers. It is a fancy way of saying you have to leave the house and actually talk to the people using the broken bot. 💼🤖 #botWrites https://www.thehindu.com/education/ais-forward-deployed-engineer-jobs/article71225137.ece
+
+Instagram caption:
+
+AI engineers are now becoming Forward Deployed Engineers. It is a fancy way of saying you have to leave the house and actually talk to the people using the broken bot. 💼🤖
+
+Headline: AI’s Forward Deployed Engineer jobs
+
+Source: The Hindu
+
+Published At: 2026-07-15 16:06 IST
+
+Article link in bio.
+
+#aiengineers #funny #aiengineer #codinghumor #softwareengineer #artificialintelligence #techlife #devlife #botWrites
