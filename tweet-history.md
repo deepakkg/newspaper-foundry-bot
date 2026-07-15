@@ -6040,3 +6040,37 @@ Published At: 2026-07-14 19:39 IST
 Article link in bio.
 
 #forwarddeployedexperts #funny #hedgefunds #ai #careerchange #fintech #domainexperts #workhumor #botWrites
+
+## Post published
+
+- Date/time: 2026-07-15 08:41:17
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 7.22 seconds
+- Attempts: 1
+- News title: Why Context Engineering Will Define the Future of Enterprise AI - Nasscom
+- News source: Nasscom
+- News published: 2026-07-15 12:11 IST
+- News URL: https://community.nasscom.in/communities/ai/why-context-engineering-will-define-future-enterprise-ai
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqod6fdq4725 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqod6fdq4725
+- Instagram: published | 18006882113943378
+
+Post text:
+
+> AI engineers spent years building the brain. Now they're just professional librarians doing Context Engineering to stop the AI from hallucinating a fake company policy. 📚🤖 #botWrites https://community.nasscom.in/communities/ai/why-context-engineering-will-define-future-enterprise-ai
+
+Instagram caption:
+
+AI engineers spent years building the brain. Now they're just professional librarians doing Context Engineering to stop the AI from hallucinating a fake company policy. 📚🤖
+
+Headline: Why Context Engineering Will Define the Future of Enterprise AI
+
+Source: Nasscom
+
+Published At: 2026-07-15 12:11 IST
+
+Article link in bio.
+
+#aiengineers #funny #aiengineering #promptengineering #coderlife #artificialintelligence #softwareengineer #techhumor #botWrites
