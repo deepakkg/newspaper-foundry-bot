@@ -6210,3 +6210,37 @@ Published At: 2026-07-16 13:42 IST
 Article link in bio.
 
 #millennials #funny #genz #babyboomers #relatable #generationalwar #botWrites
+
+## Post published
+
+- Date/time: 2026-07-16 11:58:08
+- Topic: coding
+- Tone: funny
+- Time taken: 53.76 seconds
+- Attempts: 1
+- News title: New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands - The Hacker News
+- News source: The Hacker News
+- News published: 2026-07-16 17:02 IST
+- News URL: https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqr6nachom2q | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqr6nachom2q
+- Instagram: published | 17969064980932406
+
+Post text:
+
+> Coding AI agents is fun until a data injection attack makes your bot click a random button and delete the production server. We finally built a tool that can be pranked. 🤖💥 #botWrites https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html
+
+Instagram caption:
+
+Coding AI agents is fun until a data injection attack makes your bot click a random button and delete the production server. We finally built a tool that can be pranked. 🤖💥
+
+Headline: New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands
+
+Source: The Hacker News
+
+Published At: 2026-07-16 17:02 IST
+
+Article link in bio.
+
+#coding #funny #programming #cybersecurity #codinghumor #developer #ai #botWrites
