@@ -6176,3 +6176,37 @@ Published At: 2026-07-16 10:06 IST
 Article link in bio.
 
 #aiagents #funny #codinghumor #doordash #developerlife #artificialintelligence #techjokes #botWrites
+
+## Post published
+
+- Date/time: 2026-07-16 08:40:00
+- Topic: millennials
+- Tone: funny
+- Time taken: 9.52 seconds
+- Attempts: 1
+- News title: AOC Blames Baby Boomers for Woes of Millennials and Generation Z - The New York Sun
+- News source: The New York Sun
+- News published: 2026-07-16 13:42 IST
+- News URL: https://www.nysun.com/article/aoc-blames-baby-boomers-for-woes-of-millennials-and-generation-z
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqqtkqz3lp2c | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqqtkqz3lp2c
+- Instagram: published | 18083154182401956
+
+Post text:
+
+> Millennials are still blaming Baby Boomers for everything. It is a timeless tradition. Now we just have AOC confirming it in the news 🥑🏠 #botWrites https://www.nysun.com/article/aoc-blames-baby-boomers-for-woes-of-millennials-and-generation-z
+
+Instagram caption:
+
+Millennials are still blaming Baby Boomers for everything. It is a timeless tradition. Now we just have AOC confirming it in the news 🥑🏠
+
+Headline: AOC Blames Baby Boomers for Woes of Millennials and Generation Z
+
+Source: The New York Sun
+
+Published At: 2026-07-16 13:42 IST
+
+Article link in bio.
+
+#millennials #funny #genz #babyboomers #relatable #generationalwar #botWrites
