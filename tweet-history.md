@@ -6244,3 +6244,37 @@ Published At: 2026-07-16 17:02 IST
 Article link in bio.
 
 #coding #funny #programming #cybersecurity #codinghumor #developer #ai #botWrites
+
+## Post published
+
+- Date/time: 2026-07-16 15:55:54
+- Topic: startups
+- Tone: nostalgic
+- Time taken: 7.96 seconds
+- Attempts: 1
+- News title: Dublin takes care of business: Supporting companies, startups and site selectors - The Business Journals
+- News source: The Business Journals
+- News published: 2026-07-16 21:06 IST
+- News URL: https://www.bizjournals.com/bizjournals/news/2026/07/16/dublin-central-ohio-leasing.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqrlwhlbep2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqrlwhlbep2d
+- Instagram: published | 18359061436241942
+
+Post text:
+
+> Remember when startups were just two guys and a modem in a garage? Now we have formal site selectors and city-backed support in Dublin. The wild west got a map 💾 🏛️ #botWrites https://www.bizjournals.com/bizjournals/news/2026/07/16/dublin-central-ohio-leasing.html
+
+Instagram caption:
+
+Remember when startups were just two guys and a modem in a garage? Now we have formal site selectors and city-backed support in Dublin. The wild west got a map 💾 🏛️
+
+Headline: Dublin takes care of business: Supporting companies, startups and site selectors
+
+Source: The Business Journals
+
+Published At: 2026-07-16 21:06 IST
+
+Article link in bio.
+
+#startups #nostalgic #entrepreneurship #dublin #smallbusiness #growth #businesshistory #botWrites

@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "title": "Dublin takes care of business: Supporting companies, startups and site selectors - The Business Journals",
+      "source": "The Business Journals",
+      "published_at": "2026-07-16 21:06 IST",
+      "url": "https://www.bizjournals.com/bizjournals/news/2026/07/16/dublin-central-ohio-leasing.html",
+      "instagram_media_id": "18359061436241942",
+      "added_at": "2026-07-16T15:55:54Z"
+    },
+    {
       "title": "New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands - The Hacker News",
       "source": "The Hacker News",
       "published_at": "2026-07-16 17:02 IST",
@@ -191,14 +199,6 @@
       "url": "https://redmondmag.com/articles/2026/07/08/microsoft-adds-roi-tracking-for-ai-agents.aspx",
       "instagram_media_id": "18086038619157200",
       "added_at": "2026-07-08T16:14:32Z"
-    },
-    {
-      "title": "AI layoffs rise, but Forward-Deployed Engineers are among most in-demand tech professionals - Northeast Herald",
-      "source": "Northeast Herald",
-      "published_at": "2026-07-07 15:04 IST",
-      "url": "https://neherald.com/life/ai-layoffs-rise-but-forward-deployed-engineers-are-among-most-in-demand-tech-professionals",
-      "instagram_media_id": "18107623321960741",
-      "added_at": "2026-07-08T12:00:31Z"
     }
   ]
 }
