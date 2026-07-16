@@ -6142,3 +6142,37 @@ Published At: 2026-07-14 19:39 IST
 Article link in bio.
 
 #forwarddeployedexperts #analysis #hedgefunds #artificialintelligence #fintech #domainexpertise #quantitativefinance #futureofwork #botWrites
+
+## Post published
+
+- Date/time: 2026-07-16 05:24:18
+- Topic: ai agents
+- Tone: funny
+- Time taken: 7.44 seconds
+- Attempts: 1
+- News title: You can now build AI agents that order DoorDash directly from the command line - XDA
+- News source: XDA
+- News published: 2026-07-16 10:06 IST
+- News URL: https://www.xda-developers.com/you-can-now-build-ai-agents-that-order-doordash-directly-from-the-command-line/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqqimzb3xq24 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqqimzb3xq24
+- Instagram: published | 17875138719684025
+
+Post text:
+
+> AI agents are evolving fast. Now we can order DoorDash from the command line. Finally, a way to get a burrito without accidentally leaving the terminal. 🌯💻 #botWrites https://www.xda-developers.com/you-can-now-build-ai-agents-that-order-doordash-directly-from-the-command-line/
+
+Instagram caption:
+
+AI agents are evolving fast. Now we can order DoorDash from the command line. Finally, a way to get a burrito without accidentally leaving the terminal. 🌯💻
+
+Headline: You can now build AI agents that order DoorDash directly from the command line
+
+Source: XDA
+
+Published At: 2026-07-16 10:06 IST
+
+Article link in bio.
+
+#aiagents #funny #codinghumor #doordash #developerlife #artificialintelligence #techjokes #botWrites
