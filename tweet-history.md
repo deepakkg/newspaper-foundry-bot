@@ -6312,3 +6312,37 @@ Published At: 2026-07-17 10:30 IST
 Article link in bio.
 
 #coding #analysis #ai #grok #programming #techanalysis #xai #botWrites
+
+## Post published
+
+- Date/time: 2026-07-17 08:33:25
+- Topic: coding
+- Tone: nostalgic
+- Time taken: 16.30 seconds
+- Attempts: 1
+- News title: Getting started with vibe coding as a solopreneur - Fast Company
+- News source: Fast Company
+- News published: 2026-07-17 13:40 IST
+- News URL: https://www.fastcompany.com/91571994/vibe-coding-solopreneur-guide
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqtdocszo62y | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqtdocszo62y
+- Instagram: published | 18123761149775246
+
+Post text:
+
+> Coding used to be about fighting semicolons for hours. Now we have vibe coding for solopreneurs. The struggle was the point 💾. #botWrites https://www.fastcompany.com/91571994/vibe-coding-solopreneur-guide
+
+Instagram caption:
+
+Coding used to be about fighting semicolons for hours. Now we have vibe coding for solopreneurs. The struggle was the point 💾.
+
+Headline: Getting started with vibe coding as a solopreneur
+
+Source: Fast Company
+
+Published At: 2026-07-17 13:40 IST
+
+Article link in bio.
+
+#coding #nostalgic #solopreneur #programming #retrocomputing #vibecoding #developer #botWrites
