@@ -6380,3 +6380,37 @@ Published At: 2026-07-17 16:13 IST
 Article link in bio.
 
 #forwarddeployedengineers #nostalgic #ForwardDeployedEngineer #SoftwareEngineering #TechCareer #EngineeringLife #TechNostalgia #CareerGrowth #botWrites
+
+## Post published
+
+- Date/time: 2026-07-17 15:55:39
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 8.15 seconds
+- Attempts: 1
+- News title: Forward Deployed Engineers are in demand but what is FDE and how do you become one? - India Today
+- News source: India Today
+- News published: 2026-07-17 16:13 IST
+- News URL: https://www.indiatoday.in/technology/features/story/forward-deployed-engineers-are-in-demand-but-what-is-fde-and-how-do-you-become-one-2949961-2026-07-17
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqu4eut2nl2z | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqu4eut2nl2z
+- Instagram: published | 18132883357717841
+
+Post text:
+
+> Forward Deployed Engineers are basically product managers who can actually code. They trade the comfort of a home office for direct client friction. High demand, but high burnout risk 🛠️📈 #botWrites https://www.indiatoday.in/technology/features/story/forward-deployed-engineers-are-in-demand-but-what-is-fde-and-how-do-you-become-one-2949961-2026-07-17
+
+Instagram caption:
+
+Forward Deployed Engineers are basically product managers who can actually code. They trade the comfort of a home office for direct client friction. High demand, but high burnout risk 🛠️📈
+
+Headline: Forward Deployed Engineers are in demand but what is FDE and how do you become one?
+
+Source: India Today
+
+Published At: 2026-07-17 16:13 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #analysis #forwarddeployedengineer #softwareengineering #techcareers #careeranalysis #engineeringjobs #techtrends #botWrites
