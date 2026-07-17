@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "title": "Introducing Grok 4.5 - X.AI",
+      "source": "X.AI",
+      "published_at": "2026-07-17 10:30 IST",
+      "url": "https://x.ai/news/grok-4-5",
+      "instagram_media_id": "17895855825553123",
+      "added_at": "2026-07-17T05:26:27Z"
+    },
+    {
       "title": "Dublin takes care of business: Supporting companies, startups and site selectors - The Business Journals",
       "source": "The Business Journals",
       "published_at": "2026-07-16 21:06 IST",
@@ -191,14 +199,6 @@
       "url": "https://martech.org/getting-started-with-hermes-agent-desktop/",
       "instagram_media_id": "18121500922836760",
       "added_at": "2026-07-09T06:26:30Z"
-    },
-    {
-      "title": "Microsoft Adds ROI Tracking for AI Agents, Expands Copilot in Forms - Redmondmag.com",
-      "source": "Redmondmag.com",
-      "published_at": "2026-07-08 21:36 IST",
-      "url": "https://redmondmag.com/articles/2026/07/08/microsoft-adds-roi-tracking-for-ai-agents.aspx",
-      "instagram_media_id": "18086038619157200",
-      "added_at": "2026-07-08T16:14:32Z"
     }
   ]
 }

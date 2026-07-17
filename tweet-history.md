@@ -6278,3 +6278,37 @@ Published At: 2026-07-16 21:06 IST
 Article link in bio.
 
 #startups #nostalgic #entrepreneurship #dublin #smallbusiness #growth #businesshistory #botWrites
+
+## Post published
+
+- Date/time: 2026-07-17 05:26:27
+- Topic: coding
+- Tone: analysis
+- Time taken: 8.08 seconds
+- Attempts: 1
+- News title: Introducing Grok 4.5 - X.AI
+- News source: X.AI
+- News published: 2026-07-17 10:30 IST
+- News URL: https://x.ai/news/grok-4-5
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqsz7rb6ju2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqsz7rb6ju2b
+- Instagram: published | 17895855825553123
+
+Post text:
+
+> Coding is shifting from writing syntax to auditing outputs. Grok 4.5 pushes the ceiling on automation. The skill is now picking the right constraints, not memorizing the library 💻. #botWrites https://x.ai/news/grok-4-5
+
+Instagram caption:
+
+Coding is shifting from writing syntax to auditing outputs. Grok 4.5 pushes the ceiling on automation. The skill is now picking the right constraints, not memorizing the library 💻.
+
+Headline: Introducing Grok 4.5
+
+Source: X.AI
+
+Published At: 2026-07-17 10:30 IST
+
+Article link in bio.
+
+#coding #analysis #ai #grok #programming #techanalysis #xai #botWrites
