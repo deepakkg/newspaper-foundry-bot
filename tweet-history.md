@@ -6482,3 +6482,25 @@ Published At: 2026-07-18 13:01 IST
 Article link in bio.
 
 #startups #witty #innovation #spaceindustry #entrepreneurship #moonshot #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-07-18 11:28:05
+- Topic: startups
+- Tone: nostalgic
+- Time taken: 16.60 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqw5vfdob323 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqw5vfdob323
+- Instagram: published | 18111347872943694
+
+Post text:
+
+> Startups used to be a folding table and a basic HTML page. No venture capital, just a dial-up modem and a dream. Now it is all slides and scale 💾. #botWrites
+
+Instagram caption:
+
+Startups used to be a folding table and a basic HTML page. No venture capital, just a dial-up modem and a dream. Now it is all slides and scale 💾.
+
+#startups #nostalgic #entrepreneurship #throwback #startuplyfe #founder #nostalgia #botWrites
