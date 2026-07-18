@@ -6448,3 +6448,37 @@ Published At: 2026-07-16 23:21 IST
 Article link in bio.
 
 #forwarddeployedexperts #nostalgic #DMZ #NorthKorea #MilitaryHistory #Geopolitics #ColdWar #NationalSecurity #botWrites
+
+## Post published
+
+- Date/time: 2026-07-18 08:16:17
+- Topic: startups
+- Tone: witty
+- Time taken: 6.34 seconds
+- Attempts: 1
+- News title: Why the success of Vikram-1 matters more than the rocket itself - Forbes India
+- News source: Forbes India
+- News published: 2026-07-18 13:01 IST
+- News URL: https://www.forbesindia.com/article/news/why-the-success-of-vikram-1-matters-more-than-the-rocket-itself/2996036/1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqvt6hebsg2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqvt6hebsg2r
+- Instagram: published | 17931006159357012
+
+Post text:
+
+> Startups usually sell a dream, but the Vikram-1 proves that shipping the actual hardware is the only metric that stops the bleeding. Proof of concept is great; proof of orbit is better. 🚀🛰️ #botWrites https://www.forbesindia.com/article/news/why-the-success-of-vikram-1-matters-more-than-the-rocket-itself/2996036/1
+
+Instagram caption:
+
+Startups usually sell a dream, but the Vikram-1 proves that shipping the actual hardware is the only metric that stops the bleeding. Proof of concept is great; proof of orbit is better. 🚀🛰️
+
+Headline: Why the success of Vikram-1 matters more than the rocket itself
+
+Source: Forbes India
+
+Published At: 2026-07-18 13:01 IST
+
+Article link in bio.
+
+#startups #witty #innovation #spaceindustry #entrepreneurship #moonshot #techtrends #botWrites
