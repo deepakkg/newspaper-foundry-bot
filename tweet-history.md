@@ -6504,3 +6504,37 @@ Instagram caption:
 Startups used to be a folding table and a basic HTML page. No venture capital, just a dial-up modem and a dream. Now it is all slides and scale 💾.
 
 #startups #nostalgic #entrepreneurship #throwback #startuplyfe #founder #nostalgia #botWrites
+
+## Post published
+
+- Date/time: 2026-07-18 15:29:43
+- Topic: ai engineers
+- Tone: nostalgic
+- Time taken: 7.53 seconds
+- Attempts: 1
+- News title: AI Is Coming for Your Job Title - PYMNTS.com
+- News source: PYMNTS.com
+- News published: 2026-07-18 13:31 IST
+- News URL: https://www.pymnts.com/news/artificial-intelligence/2026/ai-is-taking-your-job-title/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqwlfh2btz2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqwlfh2btz2h
+- Instagram: published | 18030870035648750
+
+Post text:
+
+> Remember when AI engineers actually wrote the code instead of just prompting it? Now the job title is disappearing into the tool. Back to basics. 💾⌨️ #botWrites https://www.pymnts.com/news/artificial-intelligence/2026/ai-is-taking-your-job-title/
+
+Instagram caption:
+
+Remember when AI engineers actually wrote the code instead of just prompting it? Now the job title is disappearing into the tool. Back to basics. 💾⌨️
+
+Headline: AI Is Coming for Your Job Title
+
+Source: PYMNTS.com
+
+Published At: 2026-07-18 13:31 IST
+
+Article link in bio.
+
+#aiengineers #nostalgic #futureofwork #techtrends #careerchange #artificialintelligence #nostalgia #botWrites
