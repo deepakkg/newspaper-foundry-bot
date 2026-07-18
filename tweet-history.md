@@ -6414,3 +6414,37 @@ Published At: 2026-07-17 16:13 IST
 Article link in bio.
 
 #forwarddeployedengineers #analysis #forwarddeployedengineer #softwareengineering #techcareers #careeranalysis #engineeringjobs #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-07-18 05:08:31
+- Topic: forward deployed experts
+- Tone: nostalgic
+- Time taken: 9.41 seconds
+- Attempts: 1
+- News title: North Korean buildings near DMZ could be rocket infrastructure, experts say - Radio Free Asia
+- News source: Radio Free Asia
+- News published: 2026-07-16 23:21 IST
+- News URL: https://www.rfa.org/english/korea/2026/07/16/north-korea-rocket-shelter-buildings/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqviorcqeh2c | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqviorcqeh2c
+- Instagram: published | 18093802877370575
+
+Post text:
+
+> Forward deployed experts used to be guys with binoculars and a map. Now it is satellite imagery of rocket infrastructure. The game changed 💾 🛰️ #botWrites https://www.rfa.org/english/korea/2026/07/16/north-korea-rocket-shelter-buildings/
+
+Instagram caption:
+
+Forward deployed experts used to be guys with binoculars and a map. Now it is satellite imagery of rocket infrastructure. The game changed 💾 🛰️
+
+Headline: North Korean buildings near DMZ could be rocket infrastructure, experts say
+
+Source: Radio Free Asia
+
+Published At: 2026-07-16 23:21 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #nostalgic #DMZ #NorthKorea #MilitaryHistory #Geopolitics #ColdWar #NationalSecurity #botWrites
