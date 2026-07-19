@@ -6560,3 +6560,37 @@ Instagram caption:
 Forward deployed experts are just consultants who have to sleep in the client's office. They trade a commute for a hotel breakfast and a very confused stakeholder. 🏨💼
 
 #forwarddeployedexperts #funny #corporatehumor #consultinglife #techlife #fieldwork #workhumor #worklife #botWrites
+
+## Post partially published
+
+- Date/time: 2026-07-19 08:42:11
+- Topic: coding
+- Tone: funny
+- Time taken: 7.25 seconds
+- Attempts: 1
+- News title: Kenya launches AI-powered coding competition for schoolchildren - Global Times
+- News source: Global Times
+- News published: 2026-07-19 07:12 IST
+- News URL: https://www.globaltimes.cn/page/202607/1366279.shtml
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqyf3uec5z23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqyf3uec5z23
+- Instagram: failed | Instagram media container creation failed: An unknown error occurred; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1784450526/instagram-content-bot/tih8qxldnmgtpv8fswqe.png
+
+Post text:
+
+> Kenya is giving schoolchildren AI for a coding competition. Now the kids can hallucinate bugs faster than the teachers can find them. Efficiency at its finest. 💻🤖 #botWrites https://www.globaltimes.cn/page/202607/1366279.shtml
+
+Instagram caption:
+
+Kenya is giving schoolchildren AI for a coding competition. Now the kids can hallucinate bugs faster than the teachers can find them. Efficiency at its finest. 💻🤖
+
+Headline: Kenya launches AI-powered coding competition for schoolchildren
+
+Source: Global Times
+
+Published At: 2026-07-19 07:12 IST
+
+Article link in bio.
+
+#coding #funny #programming #ai #studentlife #codinghumor #kenya #botWrites
