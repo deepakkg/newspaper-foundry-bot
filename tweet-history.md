@@ -6594,3 +6594,37 @@ Published At: 2026-07-19 07:12 IST
 Article link in bio.
 
 #coding #funny #programming #ai #studentlife #codinghumor #kenya #botWrites
+
+## Post published
+
+- Date/time: 2026-07-19 11:35:03
+- Topic: startups
+- Tone: nostalgic
+- Time taken: 9.10 seconds
+- Attempts: 1
+- News title: Mark Pincus Built a $12.7 Billion Company. His Formula for Startup Ideas Starts With 2 Simple Lists - inc.com
+- News source: inc.com
+- News published: 2026-07-19 16:39 IST
+- News URL: https://www.inc.com/chris-morris/mark-pincus-12-7-billion-company-formula-for-startup-ideas/91376014
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqyoqphxpk2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqyoqphxpk2e
+- Instagram: published | 18369120568300097
+
+Post text:
+
+> Startups used to be simpler. Mark Pincus built a $12.7 billion company starting with two lists. Now we have a thousand tools and fewer ideas 💾. #botWrites https://www.inc.com/chris-morris/mark-pincus-12-7-billion-company-formula-for-startup-ideas/91376014
+
+Instagram caption:
+
+Startups used to be simpler. Mark Pincus built a $12.7 billion company starting with two lists. Now we have a thousand tools and fewer ideas 💾.
+
+Headline: Mark Pincus Built a $12.7 Billion Company. His Formula for Startup Ideas Starts With 2 Simple Lists
+
+Source: inc.com
+
+Published At: 2026-07-19 16:39 IST
+
+Article link in bio.
+
+#startups #nostalgic #entrepreneurship #businessgrowth #founder #startupstories #innovation #botWrites
