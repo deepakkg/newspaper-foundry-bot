@@ -6628,3 +6628,25 @@ Published At: 2026-07-19 16:39 IST
 Article link in bio.
 
 #startups #nostalgic #entrepreneurship #businessgrowth #founder #startupstories #innovation #botWrites
+
+## Post published
+
+- Date/time: 2026-07-19 15:30:34
+- Topic: saas professional services
+- Tone: rant
+- Time taken: 7.53 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqz3vw7v4y27 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqz3vw7v4y27
+- Instagram: published | 17879167416654715
+
+Post text:
+
+> SaaS professional services are just expensive bandaids for broken UX. Paying a consultant to configure a dashboard manually is a failure of product design. Stop selling hours to hide bad software. 📉 #botWrites
+
+Instagram caption:
+
+SaaS professional services are just expensive bandaids for broken UX. Paying a consultant to configure a dashboard manually is a failure of product design. Stop selling hours to hide bad software. 📉
+
+#saasprofessionalservices #rant #saas #professionalservices #consulting #b2b #startup #businessrant #botWrites
