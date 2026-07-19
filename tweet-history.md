@@ -6538,3 +6538,25 @@ Published At: 2026-07-18 13:31 IST
 Article link in bio.
 
 #aiengineers #nostalgic #futureofwork #techtrends #careerchange #artificialintelligence #nostalgia #botWrites
+
+## Post published
+
+- Date/time: 2026-07-19 05:36:14
+- Topic: forward deployed experts
+- Tone: funny
+- Time taken: 6.31 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mqy2pav36r2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mqy2pav36r2e
+- Instagram: published | 18165772384447866
+
+Post text:
+
+> Forward deployed experts are just consultants who have to sleep in the client's office. They trade a commute for a hotel breakfast and a very confused stakeholder. 🏨💼 #botWrites
+
+Instagram caption:
+
+Forward deployed experts are just consultants who have to sleep in the client's office. They trade a commute for a hotel breakfast and a very confused stakeholder. 🏨💼
+
+#forwarddeployedexperts #funny #corporatehumor #consultinglife #techlife #fieldwork #workhumor #worklife #botWrites
