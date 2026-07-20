@@ -6728,3 +6728,37 @@ Instagram caption:
 Forward deployed experts are just engineers who can't stop talking to customers. They ship code in the middle of a boardroom. It is high-stakes debugging with an audience 🛠️💼
 
 #forwarddeployedexperts #witty #bootsontheground #fieldwork #problemsovlers #expertmode #deploymentlife #techlife #botWrites
+
+## Post published
+
+- Date/time: 2026-07-20 16:09:24
+- Topic: millennials
+- Tone: rant
+- Time taken: 39.99 seconds
+- Attempts: 1
+- News title: The '90s style trends millennials and Gen Z both love right now - Yahoo
+- News source: Yahoo
+- News published: 2026-07-20 21:02 IST
+- News URL: https://shopping.yahoo.com/style/clothing/article/the-90s-style-trends-millennials-and-gen-z-both-love-right-now-153230318.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr3ok7ryvo2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr3ok7ryvo2m
+- Instagram: published | 17939488341074606
+
+Post text:
+
+> Millennials are paying a premium to wear the same trends they spent a decade trying to forget. These 90s style trends are just expensive nostalgia for people who can't move on. Stop buying the cargo pants 🙄👖 #botWrites https://shopping.yahoo.com/style/clothing/article/the-90s-style-trends-millennials-and-gen-z-both-love-right-now-153230318.html
+
+Instagram caption:
+
+Millennials are paying a premium to wear the same trends they spent a decade trying to forget. These 90s style trends are just expensive nostalgia for people who can't move on. Stop buying the cargo pants 🙄👖
+
+Headline: The '90s style trends millennials and Gen Z both love right now
+
+Source: Yahoo
+
+Published At: 2026-07-20 21:02 IST
+
+Article link in bio.
+
+#millennials #rant #nostalgia #generationalgap #fashionrant #millennialproblems #botWrites
