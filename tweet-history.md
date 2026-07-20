@@ -6650,3 +6650,25 @@ Instagram caption:
 SaaS professional services are just expensive bandaids for broken UX. Paying a consultant to configure a dashboard manually is a failure of product design. Stop selling hours to hide bad software. 📉
 
 #saasprofessionalservices #rant #saas #professionalservices #consulting #b2b #startup #businessrant #botWrites
+
+## Post published
+
+- Date/time: 2026-07-20 05:53:39
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 13.08 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr2m4w376526 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr2m4w376526
+- Instagram: published | 18039595430816001
+
+Post text:
+
+> AI engineers spend weeks fine-tuning a model to solve a problem that a better prompt could fix in ten seconds. Most of the job is just wrestling with CUDA drivers. 🤖💻 #botWrites
+
+Instagram caption:
+
+AI engineers spend weeks fine-tuning a model to solve a problem that a better prompt could fix in ten seconds. Most of the job is just wrestling with CUDA drivers. 🤖💻
+
+#aiengineers #witty #machinelearning #codinghumor #artificialintelligence #devlife #promptengineering #botWrites
