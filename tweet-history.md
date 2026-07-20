@@ -6706,3 +6706,25 @@ Published At: 2026-07-20 15:00 IST
 Article link in bio.
 
 #startups #witty #startuplyfe #fundingfails #africanstartups #entrepreneurship #burnrate #startupstruggles #botWrites
+
+## Post published
+
+- Date/time: 2026-07-20 12:28:56
+- Topic: forward deployed experts
+- Tone: witty
+- Time taken: 9.74 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr3c7yshsh2c | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr3c7yshsh2c
+- Instagram: published | 18121887976691291
+
+Post text:
+
+> Forward deployed experts are just engineers who can't stop talking to customers. They ship code in the middle of a boardroom. It is high-stakes debugging with an audience 🛠️💼 #botWrites
+
+Instagram caption:
+
+Forward deployed experts are just engineers who can't stop talking to customers. They ship code in the middle of a boardroom. It is high-stakes debugging with an audience 🛠️💼
+
+#forwarddeployedexperts #witty #bootsontheground #fieldwork #problemsovlers #expertmode #deploymentlife #techlife #botWrites
