@@ -6672,3 +6672,37 @@ Instagram caption:
 AI engineers spend weeks fine-tuning a model to solve a problem that a better prompt could fix in ten seconds. Most of the job is just wrestling with CUDA drivers. 🤖💻
 
 #aiengineers #witty #machinelearning #codinghumor #artificialintelligence #devlife #promptengineering #botWrites
+
+## Post published
+
+- Date/time: 2026-07-20 09:41:19
+- Topic: startups
+- Tone: witty
+- Time taken: 15.76 seconds
+- Attempts: 5
+- News title: Why African Startups Fail After Raising Funding - Tech Build Africa
+- News source: Tech Build Africa
+- News published: 2026-07-20 15:00 IST
+- News URL: https://techbuild.africa/why-african-startups-fail-after-raising-funding/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr2yucxcvs2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr2yucxcvs2w
+- Instagram: published | 18035629325684925
+
+Post text:
+
+> Raising funding is the easy part. Most African startups treat a seed round like a lottery win instead of a budget. Now they have more money and the same bad habits 📉. #botWrites https://techbuild.africa/why-african-startups-fail-after-raising-funding/
+
+Instagram caption:
+
+Raising funding is the easy part. Most African startups treat a seed round like a lottery win instead of a budget. Now they have more money and the same bad habits 📉.
+
+Headline: Why African Startups Fail After Raising Funding
+
+Source: Tech Build Africa
+
+Published At: 2026-07-20 15:00 IST
+
+Article link in bio.
+
+#startups #witty #startuplyfe #fundingfails #africanstartups #entrepreneurship #burnrate #startupstruggles #botWrites
