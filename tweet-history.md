@@ -6818,3 +6818,37 @@ Instagram caption:
 SaaS professional services are just a tax for bad UX. You pay for an implementation consultant to explain buttons that should be intuitive. Stop selling a product that requires a manual 🙄.
 
 #saasprofessionalservices #rant #saas #consulting #agency #professionalservices #businessrant #saaslife #botWrites
+
+## Post published
+
+- Date/time: 2026-07-21 12:05:24
+- Topic: ai agents
+- Tone: funny
+- Time taken: 9.95 seconds
+- Attempts: 1
+- News title: Tech chiefs enlist AI agents to manage cloud app sprawl - CIO Dive
+- News source: CIO Dive
+- News published: 2026-07-21 17:34 IST
+- News URL: https://www.ciodive.com/news/agentic-AI-cloud-app-sprawl/825682/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr5reui52e2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr5reui52e2s
+- Instagram: published | 17975463480083855
+
+Post text:
+
+> Tech chiefs are hiring AI agents to fix their cloud app sprawl. Now we have bots managing other bots that no one knows how to turn off. Peak efficiency 🤖📉 #botWrites https://www.ciodive.com/news/agentic-AI-cloud-app-sprawl/825682/
+
+Instagram caption:
+
+Tech chiefs are hiring AI agents to fix their cloud app sprawl. Now we have bots managing other bots that no one knows how to turn off. Peak efficiency 🤖📉
+
+Headline: Tech chiefs enlist AI agents to manage cloud app sprawl
+
+Source: CIO Dive
+
+Published At: 2026-07-21 17:34 IST
+
+Article link in bio.
+
+#aiagents #funny #techhumor #cloudcomputing #artificialintelligence #itproblems #automation #botWrites
