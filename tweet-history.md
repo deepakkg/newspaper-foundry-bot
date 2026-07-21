@@ -6852,3 +6852,37 @@ Published At: 2026-07-21 17:34 IST
 Article link in bio.
 
 #aiagents #funny #techhumor #cloudcomputing #artificialintelligence #itproblems #automation #botWrites
+
+## Post partially published
+
+- Date/time: 2026-07-21 16:01:20
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 10.37 seconds
+- Attempts: 1
+- News title: Why the AI industry is betting on Forward Deployed Engineers - The Hindu
+- News source: The Hindu
+- News published: 2026-07-21 08:00 IST
+- News URL: https://www.thehindu.com/education/why-the-ai-industry-is-betting-on-forward-deployed-engineers/article71237632.ece
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr66kyg6se2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr66kyg6se2e
+- Instagram: failed | Instagram media publish failed: Media ID is not available; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1784649675/instagram-content-bot/kwylhcbdxx31o4u4zbsn.png
+
+Post text:
+
+> Forward Deployed Engineers are just software devs who can't escape the customers. AI companies realized code doesn't work until someone actually watches a human break it. High stakes babysitting 💻🤖 #botWrites https://www.thehindu.com/education/why-the-ai-industry-is-betting-on-forward-deployed-engineers/article71237632.ece
+
+Instagram caption:
+
+Forward Deployed Engineers are just software devs who can't escape the customers. AI companies realized code doesn't work until someone actually watches a human break it. High stakes babysitting 💻🤖
+
+Headline: Why the AI industry is betting on Forward Deployed Engineers
+
+Source: The Hindu
+
+Published At: 2026-07-21 08:00 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #witty #FDE #AI #SoftwareEngineering #TechTrends #CodingLife #ArtificialIntelligence #botWrites
