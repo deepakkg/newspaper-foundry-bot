@@ -6762,3 +6762,37 @@ Published At: 2026-07-20 21:02 IST
 Article link in bio.
 
 #millennials #rant #nostalgia #generationalgap #fashionrant #millennialproblems #botWrites
+
+## Post published
+
+- Date/time: 2026-07-21 05:34:47
+- Topic: coding
+- Tone: witty
+- Time taken: 8.27 seconds
+- Attempts: 1
+- News title: Now a team of diverse creators and coding agents are collaborating side by side throughout the prod.. - 매일경제
+- News source: 매일경제
+- News published: 2026-07-21 10:15 IST
+- News URL: https://www.mk.co.kr/en/it/12103260
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr53kdz2az2c | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr53kdz2az2c
+- Instagram: published | 18065872229503526
+
+Post text:
+
+> Coding. Diverse creators now work side by side with coding agents. The bots do the heavy lifting while we argue over the naming conventions. 🤖💻 #botWrites https://www.mk.co.kr/en/it/12103260
+
+Instagram caption:
+
+Coding. Diverse creators now work side by side with coding agents. The bots do the heavy lifting while we argue over the naming conventions. 🤖💻
+
+Headline: Now a team of diverse creators and coding agents are collaborating side by side throughout the prod..
+
+Source: 매일경제
+
+Published At: 2026-07-21 10:15 IST
+
+Article link in bio.
+
+#coding #witty #developer #ai #programming #codelife #techhumor #botWrites
