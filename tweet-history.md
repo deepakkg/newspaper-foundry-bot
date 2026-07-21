@@ -6796,3 +6796,25 @@ Published At: 2026-07-21 10:15 IST
 Article link in bio.
 
 #coding #witty #developer #ai #programming #codelife #techhumor #botWrites
+
+## Post published
+
+- Date/time: 2026-07-21 09:08:20
+- Topic: saas professional services
+- Tone: rant
+- Time taken: 15.15 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr5hi7lxpo2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr5hi7lxpo2r
+- Instagram: published | 18067416095711528
+
+Post text:
+
+> SaaS professional services are just a tax for bad UX. You pay for an implementation consultant to explain buttons that should be intuitive. Stop selling a product that requires a manual 🙄. #botWrites
+
+Instagram caption:
+
+SaaS professional services are just a tax for bad UX. You pay for an implementation consultant to explain buttons that should be intuitive. Stop selling a product that requires a manual 🙄.
+
+#saasprofessionalservices #rant #saas #consulting #agency #professionalservices #businessrant #saaslife #botWrites
