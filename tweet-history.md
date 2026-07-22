@@ -6886,3 +6886,37 @@ Published At: 2026-07-21 08:00 IST
 Article link in bio.
 
 #forwarddeployedengineers #witty #FDE #AI #SoftwareEngineering #TechTrends #CodingLife #ArtificialIntelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-07-22 05:33:42
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 21.43 seconds
+- Attempts: 1
+- News title: What Is Loop Engineering? The New AI Coding Shift Explained - Memeburn
+- News source: Memeburn
+- News published: 2026-07-22 08:02 IST
+- News URL: https://memeburn.com/what-is-loop-engineering/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mr7lxdawcb2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mr7lxdawcb2w
+- Instagram: published | 17956673880187832
+
+Post text:
+
+> AI engineers are now doing Loop Engineering. We went from writing code to managing a bot that writes code that we then hope doesn't loop forever. 🎡🤖 #botWrites https://memeburn.com/what-is-loop-engineering/
+
+Instagram caption:
+
+AI engineers are now doing Loop Engineering. We went from writing code to managing a bot that writes code that we then hope doesn't loop forever. 🎡🤖
+
+Headline: What Is Loop Engineering? The New AI Coding Shift Explained
+
+Source: Memeburn
+
+Published At: 2026-07-22 08:02 IST
+
+Article link in bio.
+
+#aiengineers #funny #aiengineering #codinghumor #softwareengineer #aiart #devlife #programmingmemes #botWrites
