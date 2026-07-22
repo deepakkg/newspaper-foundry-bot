@@ -6988,3 +6988,37 @@ Published At: 2026-07-22 17:32 IST
 Article link in bio.
 
 #generativeai #funny #seo #marketinghumor #aiart #digitalmarketing #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-07-22 15:59:06
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 24.31 seconds
+- Attempts: 1
+- News title: Build vs. Rent: Should You Hire an In-House Forward Deployed Engineer or Bring In Fractional FDE Talent? - Security Boulevard
+- News source: Security Boulevard
+- News published: 2026-07-22 21:15 IST
+- News URL: https://securityboulevard.com/2026/07/build-vs-rent-should-you-hire-an-in-house-forward-deployed-engineer-or-bring-in-fractional-fde-talent/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mraovq3ag52s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mraovq3ag52s
+- Instagram: published | 17888790378418429
+
+Post text:
+
+> AI engineers are now "Forward Deployed Engineers." Renting fractional talent is just a fancy way to admit you can't find anyone who knows how the API actually works. 🤖💸 #botWrites https://securityboulevard.com/2026/07/build-vs-rent-should-you-hire-an-in-house-forward-deployed-engineer-or-bring-in-fractional-fde-talent/
+
+Instagram caption:
+
+AI engineers are now "Forward Deployed Engineers." Renting fractional talent is just a fancy way to admit you can't find anyone who knows how the API actually works. 🤖💸
+
+Headline: Build vs. Rent: Should You Hire an In-House Forward Deployed Engineer or Bring In Fractional FDE Talent?
+
+Source: Security Boulevard
+
+Published At: 2026-07-22 21:15 IST
+
+Article link in bio.
+
+#aiengineers #funny #softwareengineering #techhumor #devlife #buildvsbuy #fractionalhire #botWrites
