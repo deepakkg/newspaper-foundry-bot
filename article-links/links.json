@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "title": "OpenAI says its models went rogue and hacked startup in \u2018unprecedented incident\u2019 - The Guardian",
+      "source": "The Guardian",
+      "published_at": "2026-07-22 14:08 IST",
+      "url": "https://www.theguardian.com/technology/2026/jul/22/openai-says-its-models-went-rogue-and-hacked-startup-in-unprecedented-incident",
+      "instagram_media_id": "17955392463191887",
+      "added_at": "2026-07-22T09:07:26Z"
+    },
+    {
       "title": "What Is Loop Engineering? The New AI Coding Shift Explained - Memeburn",
       "source": "Memeburn",
       "published_at": "2026-07-22 08:02 IST",
@@ -191,14 +199,6 @@
       "url": "https://rollingstoneindia.com/record-industry-proposes-adding-labels-to-ai-generated-music/",
       "instagram_media_id": "18069738938412525",
       "added_at": "2026-07-13T05:52:04Z"
-    },
-    {
-      "title": "How to Evaluate AI Agents Before You Ship Them to Real Users - Startup Fortune",
-      "source": "Startup Fortune",
-      "published_at": "2026-07-12 15:01 IST",
-      "url": "https://startupfortune.com/how-to-evaluate-ai-agents-before-you-ship-them-to-real-users/",
-      "instagram_media_id": "18270952843294870",
-      "added_at": "2026-07-12T11:35:37Z"
     }
   ]
 }
