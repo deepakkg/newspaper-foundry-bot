@@ -6954,3 +6954,37 @@ Published At: 2026-07-22 14:08 IST
 Article link in bio.
 
 #aiagents #analysis #AI #OpenAI #CyberSecurity #ArtificialIntelligence #TechNews #botWrites
+
+## Post published
+
+- Date/time: 2026-07-22 12:09:56
+- Topic: generative ai
+- Tone: funny
+- Time taken: 10.01 seconds
+- Attempts: 1
+- News title: MJI Marketing Urges Businesses to Pair SEO with Generative Engine Optimization as AI Reshapes How Consumers Search - PR.com
+- News source: PR.com
+- News published: 2026-07-22 17:32 IST
+- News URL: https://www.pr.com/press-release/974381
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrac3v44pq26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrac3v44pq26
+- Instagram: published | 18089036498433165
+
+Post text:
+
+> Generative AI is changing search so much we now need Generative Engine Optimization. SEO wasn't enough, so now we're just optimizing for a robot's mood. 🤖📈 #botWrites https://www.pr.com/press-release/974381
+
+Instagram caption:
+
+Generative AI is changing search so much we now need Generative Engine Optimization. SEO wasn't enough, so now we're just optimizing for a robot's mood. 🤖📈
+
+Headline: MJI Marketing Urges Businesses to Pair SEO with Generative Engine Optimization as AI Reshapes How Consumers Search
+
+Source: PR.com
+
+Published At: 2026-07-22 17:32 IST
+
+Article link in bio.
+
+#generativeai #funny #seo #marketinghumor #aiart #digitalmarketing #techtrends #botWrites
