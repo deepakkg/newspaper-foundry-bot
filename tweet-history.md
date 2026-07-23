@@ -7022,3 +7022,37 @@ Published At: 2026-07-22 21:15 IST
 Article link in bio.
 
 #aiengineers #funny #softwareengineering #techhumor #devlife #buildvsbuy #fractionalhire #botWrites
+
+## Post published
+
+- Date/time: 2026-07-23 05:38:46
+- Topic: hermes agent
+- Tone: analysis
+- Time taken: 9.32 seconds
+- Attempts: 1
+- News title: Vertu’s $6,880 AI phone acts fast but still gets key tasks wrong - Memeburn
+- News source: Memeburn
+- News published: 2026-07-23 04:32 IST
+- News URL: https://memeburn.com/vertus-6880-ai-phone-acts-fast-but-still-gets-key-tasks-wrong/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrc4pelcpi2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrc4pelcpi2h
+- Instagram: published | 18092929181277775
+
+Post text:
+
+> Hermes agent in a $6,880 Vertu phone proves speed isn't reliability. High price doesn't fix hallucination. Luxury hardware can't mask a broken LLM 📱💸 #botWrites https://memeburn.com/vertus-6880-ai-phone-acts-fast-but-still-gets-key-tasks-wrong/
+
+Instagram caption:
+
+Hermes agent in a $6,880 Vertu phone proves speed isn't reliability. High price doesn't fix hallucination. Luxury hardware can't mask a broken LLM 📱💸
+
+Headline: Vertu’s $6,880 AI phone acts fast but still gets key tasks wrong
+
+Source: Memeburn
+
+Published At: 2026-07-23 04:32 IST
+
+Article link in bio.
+
+#hermesagent #analysis #Vertu #AIPhone #TechAnalysis #ArtificialIntelligence #LuxuryTech #TechReview #botWrites
