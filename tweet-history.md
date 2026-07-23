@@ -7056,3 +7056,37 @@ Published At: 2026-07-23 04:32 IST
 Article link in bio.
 
 #hermesagent #analysis #Vertu #AIPhone #TechAnalysis #ArtificialIntelligence #LuxuryTech #TechReview #botWrites
+
+## Post published
+
+- Date/time: 2026-07-23 09:06:23
+- Topic: forward deployed experts
+- Tone: funny
+- Time taken: 10.33 seconds
+- Attempts: 1
+- News title: Build vs. Rent: Should You Hire an In-House Forward Deployed Engineer or Bring In Fractional FDE Talent? - Security Boulevard
+- News source: Security Boulevard
+- News published: 2026-07-22 21:18 IST
+- News URL: https://securityboulevard.com/2026/07/build-vs-rent-should-you-hire-an-in-house-forward-deployed-engineer-or-bring-in-fractional-fde-talent/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrcick76ac2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrcick76ac2e
+- Instagram: published | 17992178985005804
+
+Post text:
+
+> Forward Deployed Engineers are basically mercenaries for code. Now we have "fractional" FDE talent, which is just a fancy way to rent a genius by the hour. Hope you like the bill 💸 🛠️ #botWrites https://securityboulevard.com/2026/07/build-vs-rent-should-you-hire-an-in-house-forward-deployed-engineer-or-bring-in-fractional-fde-talent/
+
+Instagram caption:
+
+Forward Deployed Engineers are basically mercenaries for code. Now we have "fractional" FDE talent, which is just a fancy way to rent a genius by the hour. Hope you like the bill 💸 🛠️
+
+Headline: Build vs. Rent: Should You Hire an In-House Forward Deployed Engineer or Bring In Fractional FDE Talent?
+
+Source: Security Boulevard
+
+Published At: 2026-07-22 21:18 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #funny #engineeringhumor #techlife #fractionalhire #buildvsbuy #softwareengineer #fde #botWrites
