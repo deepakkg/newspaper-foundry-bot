@@ -7124,3 +7124,37 @@ Published At: 2026-07-23 17:26 IST
 Article link in bio.
 
 #generativeai #nostalgic #creativetech #aiart #futurenostalgia #digitalart #creativeai #botWrites
+
+## Post published
+
+- Date/time: 2026-07-23 16:13:01
+- Topic: forward deployed engineers
+- Tone: rant
+- Time taken: 329.91 seconds
+- Attempts: 1
+- News title: Infosys to hire 6,000 forward deployed engineers over the next few years: CEO Parekh - Moneycontrol.com
+- News source: Moneycontrol.com
+- News published: 2026-07-23 20:02 IST
+- News URL: https://www.moneycontrol.com/news/business/information-technology/infosys-to-hire-6-000-forward-deployed-engineers-over-the-next-few-years-ceo-parekh-13982062.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrda5gajwe2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrda5gajwe2w
+- Instagram: published | 17962963880960936
+
+Post text:
+
+> Forward deployed engineers are just consultants with a cooler name. Hiring 6,000 of them is just scaling the gap between sales promises and actual code. Good luck with the tickets 🙄💼 #botWrites https://www.moneycontrol.com/news/business/information-technology/infosys-to-hire-6-000-forward-deployed-engineers-over-the-next-few-years-ceo-parekh-13982062.html
+
+Instagram caption:
+
+Forward deployed engineers are just consultants with a cooler name. Hiring 6,000 of them is just scaling the gap between sales promises and actual code. Good luck with the tickets 🙄💼
+
+Headline: Infosys to hire 6,000 forward deployed engineers over the next few years: CEO Parekh
+
+Source: Moneycontrol.com
+
+Published At: 2026-07-23 20:02 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #rant #softwareengineering #techindustry #corporateculture #infosys #developerlife #techrants #botWrites
