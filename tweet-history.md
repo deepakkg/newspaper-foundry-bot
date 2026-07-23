@@ -7090,3 +7090,37 @@ Published At: 2026-07-22 21:18 IST
 Article link in bio.
 
 #forwarddeployedexperts #funny #engineeringhumor #techlife #fractionalhire #buildvsbuy #softwareengineer #fde #botWrites
+
+## Post published
+
+- Date/time: 2026-07-23 12:08:27
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 8.38 seconds
+- Attempts: 1
+- News title: Freefolk appoints Matt Fisher as first head of creative technology - Broadcast
+- News source: Broadcast
+- News published: 2026-07-23 17:26 IST
+- News URL: https://www.broadcastnow.co.uk/post-and-vfx/freefolk-appoints-matt-fisher-as-first-head-of-creative-technology/5218853.article
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrcsi4kyka22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrcsi4kyka22
+- Instagram: published | 18109510075981735
+
+Post text:
+
+> Generative AI is making creative technology a corporate role now. Remember when we just messed around with weird plugins in a bedroom? Now Matt Fisher gets a title for it 💾. #botWrites https://www.broadcastnow.co.uk/post-and-vfx/freefolk-appoints-matt-fisher-as-first-head-of-creative-technology/5218853.article
+
+Instagram caption:
+
+Generative AI is making creative technology a corporate role now. Remember when we just messed around with weird plugins in a bedroom? Now Matt Fisher gets a title for it 💾.
+
+Headline: Freefolk appoints Matt Fisher as first head of creative technology
+
+Source: Broadcast
+
+Published At: 2026-07-23 17:26 IST
+
+Article link in bio.
+
+#generativeai #nostalgic #creativetech #aiart #futurenostalgia #digitalart #creativeai #botWrites
