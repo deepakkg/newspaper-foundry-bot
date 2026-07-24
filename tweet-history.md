@@ -7158,3 +7158,37 @@ Published At: 2026-07-23 20:02 IST
 Article link in bio.
 
 #forwarddeployedengineers #rant #softwareengineering #techindustry #corporateculture #infosys #developerlife #techrants #botWrites
+
+## Post published
+
+- Date/time: 2026-07-24 05:35:13
+- Topic: ai agents
+- Tone: nostalgic
+- Time taken: 9.15 seconds
+- Attempts: 1
+- News title: Mind against machine: World's top hackers, AI agents clash in Seoul - The Korea Times
+- News source: The Korea Times
+- News published: 2026-07-24 10:44 IST
+- News URL: https://www.koreatimes.co.kr/business/tech-science/20260724/mind-against-machine-worlds-top-hackers-ai-agents-clash-in-seoul
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mremxwl54j2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mremxwl54j2w
+- Instagram: published | 17974293936095778
+
+Post text:
+
+> Remember when hackers actually had to type? Now AI agents are clashing in Seoul. The game is faster, but we lost the charm of the command line 💾. #botWrites https://www.koreatimes.co.kr/business/tech-science/20260724/mind-against-machine-worlds-top-hackers-ai-agents-clash-in-seoul
+
+Instagram caption:
+
+Remember when hackers actually had to type? Now AI agents are clashing in Seoul. The game is faster, but we lost the charm of the command line 💾.
+
+Headline: Mind against machine: World's top hackers, AI agents clash in Seoul
+
+Source: The Korea Times
+
+Published At: 2026-07-24 10:44 IST
+
+Article link in bio.
+
+#aiagents #nostalgic #cybersecurity #artificialintelligence #retrofuture #techhistory #seoul #botWrites
