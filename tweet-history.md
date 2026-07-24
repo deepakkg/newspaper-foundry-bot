@@ -7260,3 +7260,37 @@ Published At: 2026-07-24 13:36 IST
 Article link in bio.
 
 #aiengineers #nostalgic #artificialintelligence #techhistory #softwareengineering #openai #futureofwork #botWrites
+
+## Post published
+
+- Date/time: 2026-07-24 15:54:34
+- Topic: forward deployed engineers
+- Tone: nostalgic
+- Time taken: 11.79 seconds
+- Attempts: 1
+- News title: Inside Indian IT's Scramble to Build an Army of Forward Deployed Engineers - analyticsindiamag.com
+- News source: analyticsindiamag.com
+- News published: 2026-07-24 19:05 IST
+- News URL: https://analyticsindiamag.com/it-services/inside-indian-its-scramble-to-build-an-army-of-forward-deployed-engineers
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrfplh6uov22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrfplh6uov22
+- Instagram: published | 18118024436318147
+
+Post text:
+
+> Remember when we just called this "going to the client site"? Now Indian IT is rebranding it as an army of Forward Deployed Engineers. Same suitcase, different title 💼✈️ #botWrites https://analyticsindiamag.com/it-services/inside-indian-its-scramble-to-build-an-army-of-forward-deployed-engineers
+
+Instagram caption:
+
+Remember when we just called this "going to the client site"? Now Indian IT is rebranding it as an army of Forward Deployed Engineers. Same suitcase, different title 💼✈️
+
+Headline: Inside Indian IT's Scramble to Build an Army of Forward Deployed Engineers
+
+Source: analyticsindiamag.com
+
+Published At: 2026-07-24 19:05 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #nostalgic #fde #softwareengineering #indianit #techtrends #careerjourney #codinglife #botWrites
