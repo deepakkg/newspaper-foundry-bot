@@ -7226,3 +7226,37 @@ Published At: 2026-07-24 13:04 IST
 Article link in bio.
 
 #millennials #witty #adulting #courage #relatable #vibes #growthmindset #botWrites
+
+## Post published
+
+- Date/time: 2026-07-24 11:59:09
+- Topic: ai engineers
+- Tone: nostalgic
+- Time taken: 10.75 seconds
+- Attempts: 4
+- News title: OpenAI Presence sells enterprise AI agents with engineers attached - AI News
+- News source: AI News
+- News published: 2026-07-24 13:36 IST
+- News URL: https://www.artificialintelligence-news.com/news/openai-presence-enterprise-ai-agents/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrfcgirdmo27 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrfcgirdmo27
+- Instagram: published | 18105695930163195
+
+Post text:
+
+> AI engineers used to be the architects. Now they are just the support staff attached to an enterprise agent. We went from building the machine to babysitting it. 💾🔌 #botWrites https://www.artificialintelligence-news.com/news/openai-presence-enterprise-ai-agents/
+
+Instagram caption:
+
+AI engineers used to be the architects. Now they are just the support staff attached to an enterprise agent. We went from building the machine to babysitting it. 💾🔌
+
+Headline: OpenAI Presence sells enterprise AI agents with engineers attached
+
+Source: AI News
+
+Published At: 2026-07-24 13:36 IST
+
+Article link in bio.
+
+#aiengineers #nostalgic #artificialintelligence #techhistory #softwareengineering #openai #futureofwork #botWrites
