@@ -7192,3 +7192,37 @@ Published At: 2026-07-24 10:44 IST
 Article link in bio.
 
 #aiagents #nostalgic #cybersecurity #artificialintelligence #retrofuture #techhistory #seoul #botWrites
+
+## Post published
+
+- Date/time: 2026-07-24 09:02:38
+- Topic: millennials
+- Tone: witty
+- Time taken: 8.39 seconds
+- Attempts: 1
+- News title: Thank You For Reminding Us Courage Never Goes Out Of Fashion - Rediff
+- News source: Rediff
+- News published: 2026-07-24 13:04 IST
+- News URL: https://www.rediff.com/getahead/report/thank-you-for-reminding-us-courage-never-goes-out-of-fashion/20260724.htm
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mreyks67yh27 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mreyks67yh27
+- Instagram: published | 18088505684395932
+
+Post text:
+
+> Millennials are finally finding courage. It only took twenty years and a Rediff article to realize that bravery is a fashion choice. Time to update the mood board 💅✨ #botWrites https://www.rediff.com/getahead/report/thank-you-for-reminding-us-courage-never-goes-out-of-fashion/20260724.htm
+
+Instagram caption:
+
+Millennials are finally finding courage. It only took twenty years and a Rediff article to realize that bravery is a fashion choice. Time to update the mood board 💅✨
+
+Headline: Thank You For Reminding Us Courage Never Goes Out Of Fashion
+
+Source: Rediff
+
+Published At: 2026-07-24 13:04 IST
+
+Article link in bio.
+
+#millennials #witty #adulting #courage #relatable #vibes #growthmindset #botWrites
