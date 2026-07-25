@@ -7294,3 +7294,37 @@ Published At: 2026-07-24 19:05 IST
 Article link in bio.
 
 #forwarddeployedengineers #nostalgic #fde #softwareengineering #indianit #techtrends #careerjourney #codinglife #botWrites
+
+## Post published
+
+- Date/time: 2026-07-25 05:27:44
+- Topic: tech industry
+- Tone: funny
+- Time taken: 6.79 seconds
+- Attempts: 1
+- News title: From ‘tech neck’ to ‘bio banking’: Why Dubai’s aesthetics industry is shifting to longevity - Arabian Business
+- News source: Arabian Business
+- News published: 2026-07-25 09:20 IST
+- News URL: https://www.arabianbusiness.com/abnews/from-tech-neck-to-bio-banking-why-dubais-aesthetics-industry-is-shifting-to-longevity
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrh4zi2gnx2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrh4zi2gnx2m
+- Instagram: published | 18612859888052918
+
+Post text:
+
+> Tech industry: We spent decades optimizing software only to realize the hardware is failing. Now Dubai is into bio banking to fix the tech neck. Turns out the best upgrade is just not aging 🧬🧪 #botWrites https://www.arabianbusiness.com/abnews/from-tech-neck-to-bio-banking-why-dubais-aesthetics-industry-is-shifting-to-longevity
+
+Instagram caption:
+
+Tech industry: We spent decades optimizing software only to realize the hardware is failing. Now Dubai is into bio banking to fix the tech neck. Turns out the best upgrade is just not aging 🧬🧪
+
+Headline: From ‘tech neck’ to ‘bio banking’: Why Dubai’s aesthetics industry is shifting to longevity
+
+Source: Arabian Business
+
+Published At: 2026-07-25 09:20 IST
+
+Article link in bio.
+
+#techindustry #funny #techneck #dubailife #biohacking #longevity #techhumor #antiaging #botWrites
