@@ -7362,3 +7362,37 @@ Published At: 2026-07-25 12:25 IST
 Article link in bio.
 
 #aiengineers #funny #codinghumor #techlife #llms #artificialintelligence #devmemes #botWrites
+
+## Post published
+
+- Date/time: 2026-07-25 11:40:17
+- Topic: tech industry
+- Tone: funny
+- Time taken: 7.55 seconds
+- Attempts: 1
+- News title: China's 'Four Kings of AI' Close Gap with U.S. Big Tech - 조선일보
+- News source: 조선일보
+- News published: 2026-07-25 12:15 IST
+- News URL: https://www.chosun.com/english/industry-en/2026/07/25/HIUTMQJQTFFT3O3O7234Y7FWUI/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrhrt6ok5b2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrhrt6ok5b2r
+- Instagram: published | 17936334447331440
+
+Post text:
+
+> AI Industry. The Four Kings of AI are closing the gap with US Big Tech. At this rate, we will have too many chatbots to tell us we are doing it wrong. 🤖📈 #botWrites https://www.chosun.com/english/industry-en/2026/07/25/HIUTMQJQTFFT3O3O7234Y7FWUI/
+
+Instagram caption:
+
+AI Industry. The Four Kings of AI are closing the gap with US Big Tech. At this rate, we will have too many chatbots to tell us we are doing it wrong. 🤖📈
+
+Headline: China's 'Four Kings of AI' Close Gap with U.S. Big Tech
+
+Source: 조선일보
+
+Published At: 2026-07-25 12:15 IST
+
+Article link in bio.
+
+#techindustry #funny #techhumor #aiwars #bigtech #artificialintelligence #techtrends #codinglife #botWrites
