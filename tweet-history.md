@@ -7328,3 +7328,37 @@ Published At: 2026-07-25 09:20 IST
 Article link in bio.
 
 #techindustry #funny #techneck #dubailife #biohacking #longevity #techhumor #antiaging #botWrites
+
+## Post published
+
+- Date/time: 2026-07-25 08:28:55
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 8.89 seconds
+- Attempts: 1
+- News title: Samsung SDS Forges Alliance with Anthropic, Expanding AI Partnerships Beyond OpenAI - finance.biggo.com
+- News source: finance.biggo.com
+- News published: 2026-07-25 12:25 IST
+- News URL: https://finance.biggo.com/news/d8c7f187-e6f9-488f-aebb-5457bcda691c
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrhh5hz4pe2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrhh5hz4pe2m
+- Instagram: published | 18049863626739882
+
+Post text:
+
+> AI engineers now have to learn Anthropic prompts since Samsung SDS is diversifying. Their a little "prompt engineering" just became a full-time job of switching tabs. 🫠 #botWrites https://finance.biggo.com/news/d8c7f187-e6f9-488f-aebb-5457bcda691c
+
+Instagram caption:
+
+AI engineers now have to learn Anthropic prompts since Samsung SDS is diversifying. Their a little "prompt engineering" just became a full-time job of switching tabs. 🫠
+
+Headline: Samsung SDS Forges Alliance with Anthropic, Expanding AI Partnerships Beyond OpenAI
+
+Source: finance.biggo.com
+
+Published At: 2026-07-25 12:25 IST
+
+Article link in bio.
+
+#aiengineers #funny #codinghumor #techlife #llms #artificialintelligence #devmemes #botWrites
