@@ -7498,3 +7498,37 @@ Published At: 2026-07-26 13:59 IST
 Article link in bio.
 
 #coding #funny #programming #developer #codinghumor #ai #softwareengineering #botWrites
+
+## Post published
+
+- Date/time: 2026-07-26 11:42:11
+- Topic: ai engineers
+- Tone: analysis
+- Time taken: 8.52 seconds
+- Attempts: 1
+- News title: Anthropic and Blackstone's $1.5B Ode bets enterprise AI value lives in implementation, not models - MarketScale
+- News source: MarketScale
+- News published: 2026-07-26 02:05 IST
+- News URL: https://www.marketscale.com/industries/software-and-technology/anthropic-and-blackstones-15b-ode-bets-enterprise-ai-value-lives-in-implementation-not-models
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrkcfxnujj2q | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrkcfxnujj2q
+- Instagram: published | 18109768577065852
+
+Post text:
+
+> AI engineers are shifting from model tuning to implementation. The $1.5B Ode bet proves the money is now in the plumbing, not the weights. Being a wrapper expert is the new power move 🛠️📈 #botWrites https://www.marketscale.com/industries/software-and-technology/anthropic-and-blackstones-15b-ode-bets-enterprise-ai-value-lives-in-implementation-not-models
+
+Instagram caption:
+
+AI engineers are shifting from model tuning to implementation. The $1.5B Ode bet proves the money is now in the plumbing, not the weights. Being a wrapper expert is the new power move 🛠️📈
+
+Headline: Anthropic and Blackstone's $1.5B Ode bets enterprise AI value lives in implementation, not models
+
+Source: MarketScale
+
+Published At: 2026-07-26 02:05 IST
+
+Article link in bio.
+
+#aiengineers #analysis #aiengineering #enterpriseai #artificialintelligence #machinelearning #techanalysis #aiimplementation #botWrites
