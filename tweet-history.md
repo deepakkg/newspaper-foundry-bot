@@ -7430,3 +7430,37 @@ Published At: 2026-07-25 15:55 IST
 Article link in bio.
 
 #forwarddeployedengineers #nostalgic #forwarddeployed #softwareengineering #techhistory #enterpriseai #codinglife #innovation #botWrites
+
+## Post published
+
+- Date/time: 2026-07-26 05:45:07
+- Topic: forward deployed engineers
+- Tone: nostalgic
+- Time taken: 7.97 seconds
+- Attempts: 1
+- News title: Anthropic and Blackstone's $1.5B joint venture Ode bets enterprise AI value lives in implementation, not models - MarketScale
+- News source: MarketScale
+- News published: 2026-07-25 15:55 IST
+- News URL: https://www.marketscale.com/industries/software-and-technology/anthropic-and-blackstones-15b-joint-venture-ode-bets-enterprise-ai-value-lives-in-implementation-not-models
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrjohgytt22m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrjohgytt22m
+- Instagram: published | 18077018345496396
+
+Post text:
+
+> Forward deployed engineers are back. The $1.5B Ode venture proves it. We used to call this just shipping software on-site before the cloud tried to hide the implementation. 💾📦 #botWrites https://www.marketscale.com/industries/software-and-technology/anthropic-and-blackstones-15b-joint-venture-ode-bets-enterprise-ai-value-lives-in-implementation-not-models
+
+Instagram caption:
+
+Forward deployed engineers are back. The $1.5B Ode venture proves it. We used to call this just shipping software on-site before the cloud tried to hide the implementation. 💾📦
+
+Headline: Anthropic and Blackstone's $1.5B joint venture Ode bets enterprise AI value lives in implementation, not models
+
+Source: MarketScale
+
+Published At: 2026-07-25 15:55 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #nostalgic #FDE #EnterpriseAI #SoftwareEngineering #TechNostalgia #AIImplementation #FutureOfWork #botWrites
