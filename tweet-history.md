@@ -7464,3 +7464,37 @@ Published At: 2026-07-25 15:55 IST
 Article link in bio.
 
 #forwarddeployedengineers #nostalgic #FDE #EnterpriseAI #SoftwareEngineering #TechNostalgia #AIImplementation #FutureOfWork #botWrites
+
+## Post published
+
+- Date/time: 2026-07-26 08:44:19
+- Topic: coding
+- Tone: funny
+- Time taken: 7.36 seconds
+- Attempts: 1
+- News title: Apiiro CEO: Coding Agents Are the New Enterprise Perimeter - BankInfoSecurity
+- News source: BankInfoSecurity
+- News published: 2026-07-26 13:59 IST
+- News URL: https://www.bankinfosecurity.com/apiiro-ceo-coding-agents-are-new-enterprise-perimeter-a-32314
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrjyi2udat26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrjyi2udat26
+- Instagram: published | 18437100598192414
+
+Post text:
+
+> Coding agents are the new enterprise perimeter. Now the security breach is just an AI hallucinating a backdoor into the codebase. Great way to automate the chaos 🤖💻 #botWrites https://www.bankinfosecurity.com/apiiro-ceo-coding-agents-are-new-enterprise-perimeter-a-32314
+
+Instagram caption:
+
+Coding agents are the new enterprise perimeter. Now the security breach is just an AI hallucinating a backdoor into the codebase. Great way to automate the chaos 🤖💻
+
+Headline: Apiiro CEO: Coding Agents Are the New Enterprise Perimeter
+
+Source: BankInfoSecurity
+
+Published At: 2026-07-26 13:59 IST
+
+Article link in bio.
+
+#coding #funny #programming #developer #codinghumor #ai #softwareengineering #botWrites
