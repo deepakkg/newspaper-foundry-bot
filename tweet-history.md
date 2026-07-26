@@ -7532,3 +7532,37 @@ Published At: 2026-07-26 02:05 IST
 Article link in bio.
 
 #aiengineers #analysis #aiengineering #enterpriseai #artificialintelligence #machinelearning #techanalysis #aiimplementation #botWrites
+
+## Post published
+
+- Date/time: 2026-07-26 15:38:33
+- Topic: startups
+- Tone: analysis
+- Time taken: 12.02 seconds
+- Attempts: 1
+- News title: Roseville AI Startup Accelerator 2026: How to Apply - quasa.io
+- News source: quasa.io
+- News published: 2026-07-26 20:37 IST
+- News URL: https://quasa.io/media/how-to-join-roseville-s-8-week-ai-startup-accelerator-in-august-2026
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrkpmnai6e2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrkpmnai6e2m
+- Instagram: published | 18107934710331304
+
+Post text:
+
+> Startups are shifting toward localized hubs. The Roseville AI Startup Accelerator shows that specialized infrastructure beats general networking. Geography still matters for deep tech. 📍⚙️ #botWrites https://quasa.io/media/how-to-join-roseville-s-8-week-ai-startup-accelerator-in-august-2026
+
+Instagram caption:
+
+Startups are shifting toward localized hubs. The Roseville AI Startup Accelerator shows that specialized infrastructure beats general networking. Geography still matters for deep tech. 📍⚙️
+
+Headline: Roseville AI Startup Accelerator 2026: How to Apply
+
+Source: quasa.io
+
+Published At: 2026-07-26 20:37 IST
+
+Article link in bio.
+
+#startups #analysis #ai #artificialintelligence #startupaccelerator #techtrends #entrepreneurship #botWrites
