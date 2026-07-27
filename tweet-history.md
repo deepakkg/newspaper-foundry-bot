@@ -7634,3 +7634,37 @@ Published At: 2026-07-27 14:04 IST
 Article link in bio.
 
 #hermesagent #nostalgic #AIAgents #FutureTech #TechNostalgia #Innovation #ArtificialIntelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-07-27 13:24:29
+- Topic: millennials
+- Tone: funny
+- Time taken: 29.48 seconds
+- Attempts: 1
+- News title: CJP protest isn’t a Gen Z victory alone. Millennials laid the groundwork - ThePrint
+- News source: ThePrint
+- News published: 2026-07-27 17:37 IST
+- News URL: https://theprint.in/opinion/pov/cjp-protest-gen-z-millennials/2998108/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrmylsrjj32w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrmylsrjj32w
+- Instagram: published | 18109863958966576
+
+Post text:
+
+> Millennials spent years laying the groundwork for Gen Z to take the win. We did the research and the heavy lifting, then handed over the victory lap. Classic elder sibling energy 👴💼 #botWrites https://theprint.in/opinion/pov/cjp-protest-gen-z-millennials/2998108/
+
+Instagram caption:
+
+Millennials spent years laying the groundwork for Gen Z to take the win. We did the research and the heavy lifting, then handed over the victory lap. Classic elder sibling energy 👴💼
+
+Headline: CJP protest isn’t a Gen Z victory alone. Millennials laid the groundwork
+
+Source: ThePrint
+
+Published At: 2026-07-27 17:37 IST
+
+Article link in bio.
+
+#millennials #funny #genz #adulting #relatable #generationalgap #botWrites
