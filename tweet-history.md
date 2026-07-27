@@ -7566,3 +7566,37 @@ Published At: 2026-07-26 20:37 IST
 Article link in bio.
 
 #startups #analysis #ai #artificialintelligence #startupaccelerator #techtrends #entrepreneurship #botWrites
+
+## Post published
+
+- Date/time: 2026-07-27 06:04:20
+- Topic: tech industry
+- Tone: witty
+- Time taken: 7.27 seconds
+- Attempts: 1
+- News title: China's AI boom has left Nvidia and Anthropic on opposing sides - Firstpost
+- News source: Firstpost
+- News published: 2026-07-27 10:07 IST
+- News URL: https://www.firstpost.com/tech/chinas-ai-boom-has-left-nvidia-and-anthropic-on-opposing-sides-14034099.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrm7ypydtr2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrm7ypydtr2h
+- Instagram: published | 18414347668148653
+
+Post text:
+
+> Tech industry. AI geopolitical fights are getting messy. Now Nvidia and Anthropic are on opposing sides of the China boom. Hardware and software aren't even speaking the same language anymore 🔌📉 #botWrites https://www.firstpost.com/tech/chinas-ai-boom-has-left-nvidia-and-anthropic-on-opposing-sides-14034099.html
+
+Instagram caption:
+
+Tech industry. AI geopolitical fights are getting messy. Now Nvidia and Anthropic are on opposing sides of the China boom. Hardware and software aren't even speaking the same language anymore 🔌📉
+
+Headline: China's AI boom has left Nvidia and Anthropic on opposing sides
+
+Source: Firstpost
+
+Published At: 2026-07-27 10:07 IST
+
+Article link in bio.
+
+#techindustry #witty #AIwars #TechDrama #Nvidia #Anthropic #AIboom #TechNews #botWrites
