@@ -7668,3 +7668,37 @@ Published At: 2026-07-27 17:37 IST
 Article link in bio.
 
 #millennials #funny #genz #adulting #relatable #generationalgap #botWrites
+
+## Post published
+
+- Date/time: 2026-07-27 16:38:54
+- Topic: tech industry
+- Tone: rant
+- Time taken: 13.74 seconds
+- Attempts: 2
+- News title: Tech industry leaders join to form Open Secure AI Alliance to promote safety and security - SiliconANGLE
+- News source: SiliconANGLE
+- News published: 2026-07-27 21:35 IST
+- News URL: https://siliconangle.com/2026/07/27/tech-industry-leaders-join-form-open-secure-ai-alliance-promote-safety-security/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrndhg3bak2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrndhg3bak2s
+- Instagram: published | 18170657575435668
+
+Post text:
+
+> Tech industry leaders love forming an alliance to fix the mess they created. Another "Open Secure AI Alliance" won't stop the race to the bottom. Safety is usually a footnote until the lawsuit hits. 🙄 #botWrites https://siliconangle.com/2026/07/27/tech-industry-leaders-join-form-open-secure-ai-alliance-promote-safety-security/
+
+Instagram caption:
+
+Tech industry leaders love forming an alliance to fix the mess they created. Another "Open Secure AI Alliance" won't stop the race to the bottom. Safety is usually a footnote until the lawsuit hits. 🙄
+
+Headline: Tech industry leaders join to form Open Secure AI Alliance to promote safety and security
+
+Source: SiliconANGLE
+
+Published At: 2026-07-27 21:35 IST
+
+Article link in bio.
+
+#techindustry #rant #AI #techtrends #artificialintelligence #bigtech #techlife #botWrites
