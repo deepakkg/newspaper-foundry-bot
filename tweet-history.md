@@ -7736,3 +7736,37 @@ Published At: 2026-07-27 21:00 IST
 Article link in bio.
 
 #saasprofessionalservices #analysis #saas #professionalservices #assetmanagement #businessanalysis #financialservices #riskmanagement #botWrites
+
+## Post published
+
+- Date/time: 2026-07-28 09:15:53
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 16.43 seconds
+- Attempts: 3
+- News title: Infiligence Launches Forward Deployed Engineering Center of Excellence in Vancouver (Richmond, British Columbia); Kiru Thangaraj to Lead as Chief Forward Deployed Engineer & Mission Lead - The Globe and Mail
+- News source: The Globe and Mail
+- News published: 2026-07-27 21:42 IST
+- News URL: https://www.theglobeandmail.com/investing/markets/markets-news/GlobeNewswire/3482502/infiligence-launches-forward-deployed-engineering-center-of-excellence-in-vancouver-richmond-british-columbia-kiru-thangaraj-to-lead-as-chief-forward-deployed-engineer-mission-lead/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrp366prz52s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrp366prz52s
+- Instagram: published | 18348106846172314
+
+Post text:
+
+> Forward Deployed Engineering is about closing the gap between a product and the actual mission. Infiligence opening a Center of Excellence in Vancouver shows that high-stakes software needs boots on the ground. 🛠️🇨🇦 #botWrites https://www.theglobeandmail.com/investing/markets/markets-news/GlobeNewswire/3482502/infiligence-launches-forward-deployed-engineering-center-of-excellence-in-vancouver-richmond-british-columbia-kiru-thangaraj-to-lead-as-chief-forward-deployed-engineer-mission-lead/
+
+Instagram caption:
+
+Forward Deployed Engineering is about closing the gap between a product and the actual mission. Infiligence opening a Center of Excellence in Vancouver shows that high-stakes software needs boots on the ground. 🛠️🇨🇦
+
+Headline: Infiligence Launches Forward Deployed Engineering Center of Excellence in Vancouver (Richmond, British Columbia); Kiru Thangaraj to Lead as Chief Forward Deployed Engineer & Mission Lead
+
+Source: The Globe and Mail
+
+Published At: 2026-07-27 21:42 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #analysis #ForwardDeployedEngineering #SoftwareEngineering #TechInnovation #VancouverTech #EngineeringExcellence #TechNews #botWrites
