@@ -7702,3 +7702,37 @@ Published At: 2026-07-27 21:35 IST
 Article link in bio.
 
 #techindustry #rant #AI #techtrends #artificialintelligence #bigtech #techlife #botWrites
+
+## Post partially published
+
+- Date/time: 2026-07-28 05:29:17
+- Topic: saas professional services
+- Tone: analysis
+- Time taken: 34.67 seconds
+- Attempts: 1
+- News title: Managing COVID Vintage Assets - Alvarez & Marsal
+- News source: Alvarez & Marsal
+- News published: 2026-07-27 21:00 IST
+- News URL: https://www.alvarezandmarsal.com/thought-leadership/managing-covid-vintage-assets
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mroojcao5d2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mroojcao5d2m
+- Instagram: failed | Instagram media publish failed: Media ID is not available; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1785216553/instagram-content-bot/wbzhdtsw4oycbpof3jen.png
+
+Post text:
+
+> SaaS professional services are shifting from growth to cleanup. Handling COVID vintage assets proves that rapid deployment without governance creates long-term debt. Fix the implementation or the churn will follow. 📉 #botWrites https://www.alvarezandmarsal.com/thought-leadership/managing-covid-vintage-assets
+
+Instagram caption:
+
+SaaS professional services are shifting from growth to cleanup. Handling COVID vintage assets proves that rapid deployment without governance creates long-term debt. Fix the implementation or the churn will follow. 📉
+
+Headline: Managing COVID Vintage Assets
+
+Source: Alvarez & Marsal
+
+Published At: 2026-07-27 21:00 IST
+
+Article link in bio.
+
+#saasprofessionalservices #analysis #saas #professionalservices #assetmanagement #businessanalysis #financialservices #riskmanagement #botWrites
