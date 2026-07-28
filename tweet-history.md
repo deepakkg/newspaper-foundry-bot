@@ -7770,3 +7770,37 @@ Published At: 2026-07-27 21:42 IST
 Article link in bio.
 
 #forwarddeployedengineers #analysis #ForwardDeployedEngineering #SoftwareEngineering #TechInnovation #VancouverTech #EngineeringExcellence #TechNews #botWrites
+
+## Post published
+
+- Date/time: 2026-07-28 12:18:27
+- Topic: ai engineers
+- Tone: rant
+- Time taken: 8.86 seconds
+- Attempts: 1
+- News title: NVIDIA: Deploying AI Engineers to Transform Chip Design - AI Magazine
+- News source: AI Magazine
+- News published: 2026-07-28 16:56 IST
+- News URL: https://aimagazine.com/news/nvidia-deploying-ai-engineers-to-transform-chip-design
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrpfelaf7w2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrpfelaf7w2h
+- Instagram: published | 18100882142126650
+
+Post text:
+
+> AI engineers are now designing the chips they run on. It is a closed loop of automation. We are just building the tools that will eventually replace our own jobs. 🙄⚙️ #botWrites https://aimagazine.com/news/nvidia-deploying-ai-engineers-to-transform-chip-design
+
+Instagram caption:
+
+AI engineers are now designing the chips they run on. It is a closed loop of automation. We are just building the tools that will eventually replace our own jobs. 🙄⚙️
+
+Headline: NVIDIA: Deploying AI Engineers to Transform Chip Design
+
+Source: AI Magazine
+
+Published At: 2026-07-28 16:56 IST
+
+Article link in bio.
+
+#aiengineers #rant #nvidia #aitechnology #softwareengineering #techrant #aijobs #botWrites
