@@ -7838,3 +7838,37 @@ Published At: 2026-07-28 19:26 IST
 Article link in bio.
 
 #aiengineers #analysis #AItalent #techhiring #startupgrowth #AIspecialists #IndiaTech #botWrites
+
+## Post published
+
+- Date/time: 2026-07-29 05:36:51
+- Topic: millennials
+- Tone: analysis
+- Time taken: 12.47 seconds
+- Attempts: 1
+- News title: TRGGRD!: Sugar Mercado at Hori7on Jeromy, MILLENNIALS vs GEN Z, MAGPUPUKSAAN! (EP 110) | GMA Entertainment - GMA Network
+- News source: GMA Network
+- News published: 2026-07-29 10:13 IST
+- News URL: https://www.gmanetwork.com/entertainment/videos/trggrd-sugar-mercado-at-hori7on-jeromy-millennials-vs-gen-z-magpupuksaan-ep-110/323305?ref
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrr7fehfrg22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrr7fehfrg22
+- Instagram: published | 18069662987459594
+
+Post text:
+
+> Millennials vs Gen Z is the new default entertainment loop. TRGGRD! shows the shift from shared values to generational friction for views. It is a trade-off of kinship for engagement. 📉⚖️ #botWrites https://www.gmanetwork.com/entertainment/videos/trggrd-sugar-mercado-at-hori7on-jeromy-millennials-vs-gen-z-magpupuksaan-ep-110/323305?ref
+
+Instagram caption:
+
+Millennials vs Gen Z is the new default entertainment loop. TRGGRD! shows the shift from shared values to generational friction for views. It is a trade-off of kinship for engagement. 📉⚖️
+
+Headline: TRGGRD!: Sugar Mercado at Hori7on Jeromy, MILLENNIALS vs GEN Z, MAGPUPUKSAAN! (EP 110) | GMA Entertainment
+
+Source: GMA Network
+
+Published At: 2026-07-29 10:13 IST
+
+Article link in bio.
+
+#millennials #analysis #genz #generationalgap #cultureanalysis #trendanalysis #sociology #botWrites
