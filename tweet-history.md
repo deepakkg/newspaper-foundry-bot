@@ -7906,3 +7906,37 @@ Published At: 2026-07-29 14:44 IST
 Article link in bio.
 
 #aiagents #analysis #artificialintelligence #cybersecurity #techanalysis #ai #futureoftech #botWrites
+
+## Post published
+
+- Date/time: 2026-07-29 12:26:38
+- Topic: ai engineers
+- Tone: nostalgic
+- Time taken: 7.95 seconds
+- Attempts: 1
+- News title: AI engineers say the technology is moving too fast to control - The Independent
+- News source: The Independent
+- News published: 2026-07-29 16:40 IST
+- News URL: https://www.independent.co.uk/bulletin/news/openai-anthropic-google-deepmind-ai-slowdown-b3023724.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrrwc6lrfz2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrrwc6lrfz2m
+- Instagram: published | 18401889526085426
+
+Post text:
+
+> AI engineers used to build things that stayed built. Now it moves too fast to control. Remember when a codebase actually sat still for a month? 💾 ⏳ #botWrites https://www.independent.co.uk/bulletin/news/openai-anthropic-google-deepmind-ai-slowdown-b3023724.html
+
+Instagram caption:
+
+AI engineers used to build things that stayed built. Now it moves too fast to control. Remember when a codebase actually sat still for a month? 💾 ⏳
+
+Headline: AI engineers say the technology is moving too fast to control
+
+Source: The Independent
+
+Published At: 2026-07-29 16:40 IST
+
+Article link in bio.
+
+#aiengineers #nostalgic #ai #artificialintelligence #aieducation #techhistory #futureoftech #engineering #botWrites
