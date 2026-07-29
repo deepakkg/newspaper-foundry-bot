@@ -7940,3 +7940,37 @@ Published At: 2026-07-29 16:40 IST
 Article link in bio.
 
 #aiengineers #nostalgic #ai #artificialintelligence #aieducation #techhistory #futureoftech #engineering #botWrites
+
+## Post published
+
+- Date/time: 2026-07-29 16:06:47
+- Topic: tech industry
+- Tone: analysis
+- Time taken: 369.92 seconds
+- Attempts: 1
+- News title: Can Seattle’s booming matchmaking industry solve the ‘relationship recession?’ - KUOW
+- News source: KUOW
+- News published: 2026-07-29 21:13 IST
+- News URL: https://www.kuow.org/economy/2026-07-29/can-seattles-booming-matchmaking-industry-solve-the-relationship-recession
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrsclsf2eo2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrsclsf2eo2a
+- Instagram: published | 18105044333121614
+
+Post text:
+
+> Tech industry: Algorithms failed the intimacy test. Seattle is now paying humans to fix the relationship recession. Efficiency isn't a proxy for compatibility 📉. #botWrites https://www.kuow.org/economy/2026-07-29/can-seattles-booming-matchmaking-industry-solve-the-relationship-recession
+
+Instagram caption:
+
+Tech industry: Algorithms failed the intimacy test. Seattle is now paying humans to fix the relationship recession. Efficiency isn't a proxy for compatibility 📉.
+
+Headline: Can Seattle’s booming matchmaking industry solve the ‘relationship recession?’
+
+Source: KUOW
+
+Published At: 2026-07-29 21:13 IST
+
+Article link in bio.
+
+#techindustry #analysis #matchmaking #seattle #techtrends #sociology #datingapps #botWrites
