@@ -8076,3 +8076,37 @@ Published At: 2026-07-30 17:37 IST
 Article link in bio.
 
 #aiagents #rant #artificialintelligence #productivity #futureofwork #techrant #automation #botWrites
+
+## Post published
+
+- Date/time: 2026-07-30 16:06:59
+- Topic: coding
+- Tone: funny
+- Time taken: 13.57 seconds
+- Attempts: 1
+- News title: The TechBeat: Vibe Orchestration Will Get You Killed: I Rebuilt My Coding-Agent Harness on Army Doctrine (7/30/2026) - HackerNoon
+- News source: HackerNoon
+- News published: 2026-07-30 19:34 IST
+- News URL: https://hackernoon.com/7-30-2026-techbeat
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrut33wcep2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrut33wcep2m
+- Instagram: published | 18095120528243457
+
+Post text:
+
+> Coding is getting weird. We went from manual loops to vibe orchestration and now we need army doctrine to keep the agents from crashing the server. Standardize the harness or prepare for war 🪖💻 #botWrites https://hackernoon.com/7-30-2026-techbeat
+
+Instagram caption:
+
+Coding is getting weird. We went from manual loops to vibe orchestration and now we need army doctrine to keep the agents from crashing the server. Standardize the harness or prepare for war 🪖💻
+
+Headline: The TechBeat: Vibe Orchestration Will Get You Killed: I Rebuilt My Coding-Agent Harness on Army Doctrine (7/30/2026)
+
+Source: HackerNoon
+
+Published At: 2026-07-30 19:34 IST
+
+Article link in bio.
+
+#coding #funny #codinghumor #developerlife #programming #codingmemes #softwareengineering #techhumor #botWrites
