@@ -7974,3 +7974,37 @@ Published At: 2026-07-29 21:13 IST
 Article link in bio.
 
 #techindustry #analysis #matchmaking #seattle #techtrends #sociology #datingapps #botWrites
+
+## Post partially published
+
+- Date/time: 2026-07-30 05:22:53
+- Topic: generative ai
+- Tone: funny
+- Time taken: 10.71 seconds
+- Attempts: 1
+- News title: When AI meets literature: Rethinking the classroom in the age of algorithms - The Business Standard
+- News source: The Business Standard
+- News published: 2026-07-30 10:43 IST
+- News URL: https://www.tbsnews.net/thoughts/when-ai-meets-literature-rethinking-classroom-age-algorithms-1501801
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrtp3m5w6427 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrtp3m5w6427
+- Instagram: failed | Instagram media container creation returned a non-JSON response.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1785388967/instagram-content-bot/kqccmaxd7gzfyjo5k2ll.png
+
+Post text:
+
+> Generative AI is now tackling literature. Students will use algorithms to analyze Shakespeare while the teacher uses them to grade the papers. Total efficiency 🤖📚 #botWrites https://www.tbsnews.net/thoughts/when-ai-meets-literature-rethinking-classroom-age-algorithms-1501801
+
+Instagram caption:
+
+Generative AI is now tackling literature. Students will use algorithms to analyze Shakespeare while the teacher uses them to grade the papers. Total efficiency 🤖📚
+
+Headline: When AI meets literature: Rethinking the classroom in the age of algorithms
+
+Source: The Business Standard
+
+Published At: 2026-07-30 10:43 IST
+
+Article link in bio.
+
+#generativeai #funny #aihumor #studentlife #chatgpt #edtech #artificialintelligence #botWrites
