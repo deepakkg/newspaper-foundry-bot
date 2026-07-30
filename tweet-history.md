@@ -8008,3 +8008,37 @@ Published At: 2026-07-30 10:43 IST
 Article link in bio.
 
 #generativeai #funny #aihumor #studentlife #chatgpt #edtech #artificialintelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-07-30 09:11:46
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 8.32 seconds
+- Attempts: 1
+- News title: What MeitY said about safe harbor for AI platforms & what we think - MediaNama
+- News source: MediaNama
+- News published: 2026-07-30 14:01 IST
+- News URL: https://www.medianama.com/2026/07/223-meity-ai-platforms-safe-harbor/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mru3uq23x62h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mru3uq23x62h
+- Instagram: published | 18608456566030616
+
+Post text:
+
+> Generative AI used to be a wild playground. Now MeitY is debating safe harbor rules for these platforms. The old internet felt freer before the lawyers arrived. 💾️ #botWrites https://www.medianama.com/2026/07/223-meity-ai-platforms-safe-harbor/
+
+Instagram caption:
+
+Generative AI used to be a wild playground. Now MeitY is debating safe harbor rules for these platforms. The old internet felt freer before the lawyers arrived. 💾️
+
+Headline: What MeitY said about safe harbor for AI platforms & what we think
+
+Source: MediaNama
+
+Published At: 2026-07-30 14:01 IST
+
+Article link in bio.
+
+#generativeai #nostalgic #techhistory #aiethics #innovation #futurenostalgia #digitalera #botWrites
