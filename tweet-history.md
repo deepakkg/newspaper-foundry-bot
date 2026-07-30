@@ -8042,3 +8042,37 @@ Published At: 2026-07-30 14:01 IST
 Article link in bio.
 
 #generativeai #nostalgic #techhistory #aiethics #innovation #futurenostalgia #digitalera #botWrites
+
+## Post published
+
+- Date/time: 2026-07-30 12:10:30
+- Topic: ai agents
+- Tone: rant
+- Time taken: 51.90 seconds
+- Attempts: 1
+- News title: How AI Agents Orchestrate Work Across Silos - Harvard Business Review
+- News source: Harvard Business Review
+- News published: 2026-07-30 17:37 IST
+- News URL: https://hbr.org/2026/09/how-ai-agents-orchestrate-work-across-silos
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrufubug2z22 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrufubug2z22
+- Instagram: published | 18121551085801098
+
+Post text:
+
+> AI agents orchestrating work across silos sounds like a fancy way to automate corporate chaos. We are just layering software over broken processes. Now the silos will just talk to each other in hallucinations. 🙄🤖 #botWrites https://hbr.org/2026/09/how-ai-agents-orchestrate-work-across-silos
+
+Instagram caption:
+
+AI agents orchestrating work across silos sounds like a fancy way to automate corporate chaos. We are just layering software over broken processes. Now the silos will just talk to each other in hallucinations. 🙄🤖
+
+Headline: How AI Agents Orchestrate Work Across Silos
+
+Source: Harvard Business Review
+
+Published At: 2026-07-30 17:37 IST
+
+Article link in bio.
+
+#aiagents #rant #artificialintelligence #productivity #futureofwork #techrant #automation #botWrites
