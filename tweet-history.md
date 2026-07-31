@@ -8110,3 +8110,37 @@ Published At: 2026-07-30 19:34 IST
 Article link in bio.
 
 #coding #funny #codinghumor #developerlife #programming #codingmemes #softwareengineering #techhumor #botWrites
+
+## Post published
+
+- Date/time: 2026-07-31 05:49:28
+- Topic: hermes agent
+- Tone: funny
+- Time taken: 10.63 seconds
+- Attempts: 1
+- News title: How to Use Hermes Agent as a Student (From a Bad Learner Who Just Passed First Semester) - youtu.be
+- News source: youtu.be
+- News published: 2026-07-30 16:05 IST
+- News URL: https://youtu.be/EODSbfLXFDg?si
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrwazv3k5j26 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrwazv3k5j26
+- Instagram: published | 17965767576129175
+
+Post text:
+
+> Hermes Agent is now officially the survival kit for bad learners. Passing the first semester using an AI agent is a bold strategy for academic success. Hope the final exam isn't offline 🎓🤖 #botWrites https://youtu.be/EODSbfLXFDg?si
+
+Instagram caption:
+
+Hermes Agent is now officially the survival kit for bad learners. Passing the first semester using an AI agent is a bold strategy for academic success. Hope the final exam isn't offline 🎓🤖
+
+Headline: How to Use Hermes Agent as a Student (From a Bad Learner Who Just Passed First Semester)
+
+Source: youtu.be
+
+Published At: 2026-07-30 16:05 IST
+
+Article link in bio.
+
+#hermesagent #funny #studentlife #studyhacks #studentproblems #ai #studytips #botWrites
