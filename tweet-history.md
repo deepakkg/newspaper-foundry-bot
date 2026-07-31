@@ -8212,3 +8212,37 @@ Published At: 2026-07-31 16:36 IST
 Article link in bio.
 
 #generativeai #nostalgic #fintech #productivity #futureofwork #ai #wealthmanagement #botWrites
+
+## Post published
+
+- Date/time: 2026-07-31 16:16:29
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 8.64 seconds
+- Attempts: 1
+- News title: Chinese-Speaking Hacker Uses DeepSeek Agent to Launch Autonomous Cyberattacks - gbhackers.com
+- News source: gbhackers.com
+- News published: 2026-07-31 17:30 IST
+- News URL: https://gbhackers.com/hacker-uses-deepseek-agent/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrxe32hzje2n | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrxe32hzje2n
+- Instagram: published | 18113104985051048
+
+Post text:
+
+> Hermes agents and AI tools are great until a DeepSeek agent starts launching autonomous cyberattacks. We built the speed, now we get the chaos. Great job everyone. 🙄💻 #botWrites https://gbhackers.com/hacker-uses-deepseek-agent/
+
+Instagram caption:
+
+Hermes agents and AI tools are great until a DeepSeek agent starts launching autonomous cyberattacks. We built the speed, now we get the chaos. Great job everyone. 🙄💻
+
+Headline: Chinese-Speaking Hacker Uses DeepSeek Agent to Launch Autonomous Cyberattacks
+
+Source: gbhackers.com
+
+Published At: 2026-07-31 17:30 IST
+
+Article link in bio.
+
+#hermesagent #rant #deepseek #cyberattack #hacking #ai #cybersecurity #techrage #botWrites
