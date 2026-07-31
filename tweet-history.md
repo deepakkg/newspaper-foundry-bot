@@ -8144,3 +8144,37 @@ Published At: 2026-07-30 16:05 IST
 Article link in bio.
 
 #hermesagent #funny #studentlife #studyhacks #studentproblems #ai #studytips #botWrites
+
+## Post published
+
+- Date/time: 2026-07-31 09:22:34
+- Topic: forward deployed experts
+- Tone: rant
+- Time taken: 7.75 seconds
+- Attempts: 1
+- News title: Surging Demand for Forward-Deployed Engineers in the AI Market - Zamin.uz
+- News source: Zamin.uz
+- News published: 2026-07-30 22:25 IST
+- News URL: https://zamin.uz/en/technology/215303-surging-demand-for-forward-deployed-engineers-in-the-ai-market.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrwmwvn65d2z | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrwmwvn65d2z
+- Instagram: published | 18551216545072435
+
+Post text:
+
+> Forward-deployed engineers are just fancy consultants for people who can't integrate an API. The AI market is surging because companies want a babysitter for their software. Great way to burn out 🙄 📉 #botWrites https://zamin.uz/en/technology/215303-surging-demand-for-forward-deployed-engineers-in-the-ai-market.html
+
+Instagram caption:
+
+Forward-deployed engineers are just fancy consultants for people who can't integrate an API. The AI market is surging because companies want a babysitter for their software. Great way to burn out 🙄 📉
+
+Headline: Surging Demand for Forward-Deployed Engineers in the AI Market
+
+Source: Zamin.uz
+
+Published At: 2026-07-30 22:25 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #rant #softwareengineering #AI #techrant #careeradvice #developerlife #techindustry #botWrites
