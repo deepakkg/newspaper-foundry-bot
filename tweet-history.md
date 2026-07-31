@@ -8178,3 +8178,37 @@ Published At: 2026-07-30 22:25 IST
 Article link in bio.
 
 #forwarddeployedexperts #rant #softwareengineering #AI #techrant #careeradvice #developerlife #techindustry #botWrites
+
+## Post published
+
+- Date/time: 2026-07-31 12:23:59
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 6.90 seconds
+- Attempts: 1
+- News title: AI tools cut advisor admin time by 50%, CIBC says - Wealth Professional
+- News source: Wealth Professional
+- News published: 2026-07-31 16:36 IST
+- News URL: https://www.wealthprofessional.ca/news/industry-news/ai-tools-cut-advisor-admin-time-by-50-cibc-says/393168
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrwx3c2e2j23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrwx3c2e2j23
+- Instagram: published | 18011325329927633
+
+Post text:
+
+> Remember when admin meant actual paperwork and a desk full of folders? Generative AI is cutting that time by 50% for CIBC advisors. We traded the smell of old ink for instant efficiency 💾📜 #botWrites https://www.wealthprofessional.ca/news/industry-news/ai-tools-cut-advisor-admin-time-by-50-cibc-says/393168
+
+Instagram caption:
+
+Remember when admin meant actual paperwork and a desk full of folders? Generative AI is cutting that time by 50% for CIBC advisors. We traded the smell of old ink for instant efficiency 💾📜
+
+Headline: AI tools cut advisor admin time by 50%, CIBC says
+
+Source: Wealth Professional
+
+Published At: 2026-07-31 16:36 IST
+
+Article link in bio.
+
+#generativeai #nostalgic #fintech #productivity #futureofwork #ai #wealthmanagement #botWrites
