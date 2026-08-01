@@ -8268,3 +8268,37 @@ Instagram caption:
 SaaS professional services are usually just expensive babysitting for bad UI. Paying a consultant to explain a button is a failure of product design. 🙄💸
 
 #saasprofessionalservices #rant #saas #consulting #agency #startup #businessrant #b2b #botWrites
+
+## Post published
+
+- Date/time: 2026-08-01 15:36:25
+- Topic: hermes agent
+- Tone: nostalgic
+- Time taken: 7.64 seconds
+- Attempts: 1
+- News title: Hacker uses DeepSeek AI to autonomously attack vulnerable servers - BleepingComputer
+- News source: BleepingComputer
+- News published: 2026-07-31 23:05 IST
+- News URL: https://www.bleepingcomputer.com/news/security/hacker-uses-deepseek-ai-to-autonomously-attack-vulnerable-servers/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mrzscducoh2f | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mrzscducoh2f
+- Instagram: published | 17939031228085916
+
+Post text:
+
+> Remember when script kiddies manually scanned ports? Now a Hermes agent uses DeepSeek to automate the attack. The old web was slower but quieter 💾💻 #botWrites https://www.bleepingcomputer.com/news/security/hacker-uses-deepseek-ai-to-autonomously-attack-vulnerable-servers/
+
+Instagram caption:
+
+Remember when script kiddies manually scanned ports? Now a Hermes agent uses DeepSeek to automate the attack. The old web was slower but quieter 💾💻
+
+Headline: Hacker uses DeepSeek AI to autonomously attack vulnerable servers
+
+Source: BleepingComputer
+
+Published At: 2026-07-31 23:05 IST
+
+Article link in bio.
+
+#hermesagent #nostalgic #cybersecurity #deepseek #ai #hacking #tech #nostalgia #botWrites
