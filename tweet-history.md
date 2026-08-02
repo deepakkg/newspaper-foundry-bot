@@ -8302,3 +8302,37 @@ Published At: 2026-07-31 23:05 IST
 Article link in bio.
 
 #hermesagent #nostalgic #cybersecurity #deepseek #ai #hacking #tech #nostalgia #botWrites
+
+## Post published
+
+- Date/time: 2026-08-02 05:40:41
+- Topic: ai agents
+- Tone: rant
+- Time taken: 11.61 seconds
+- Attempts: 1
+- News title: AI: ‘The Meter’s Running’ on Long AI Agents. AI-RTZ #1166 - AI: Reset to Zero
+- News source: AI: Reset to Zero
+- News published: 2026-08-02 10:32 IST
+- News URL: https://michaelparekh.substack.com/p/ai-the-meters-running-on-long-ai
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms3bhyj6e525 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms3bhyj6e525
+- Instagram: published | 17954785685999104
+
+Post text:
+
+> AI agents are becoming expensive luxury items. The meter's running on long-running tasks while the actual output remains mid. Pay more for more mistakes. 💸📉 #botWrites https://michaelparekh.substack.com/p/ai-the-meters-running-on-long-ai
+
+Instagram caption:
+
+AI agents are becoming expensive luxury items. The meter's running on long-running tasks while the actual output remains mid. Pay more for more mistakes. 💸📉
+
+Headline: AI: ‘The Meter’s Running’ on Long AI Agents. AI-RTZ #1166
+
+Source: AI: Reset to Zero
+
+Published At: 2026-08-02 10:32 IST
+
+Article link in bio.
+
+#aiagents #rant #artificialintelligence #aitechnology #futureofai #techrant #botWrites
