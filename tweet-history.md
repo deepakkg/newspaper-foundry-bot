@@ -8336,3 +8336,37 @@ Published At: 2026-08-02 10:32 IST
 Article link in bio.
 
 #aiagents #rant #artificialintelligence #aitechnology #futureofai #techrant #botWrites
+
+## Post published
+
+- Date/time: 2026-08-02 08:43:09
+- Topic: generative ai
+- Tone: rant
+- Time taken: 7.43 seconds
+- Attempts: 1
+- News title: Snap blocks AI-only videos from Spotlight as contributors climb 120% - PPC Land
+- News source: PPC Land
+- News published: 2026-08-02 14:04 IST
+- News URL: https://ppc.land/snap-blocks-ai-only-videos-from-spotlight-as-contributors-climb-120/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms3lofzfkh2u | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms3lofzfkh2u
+- Instagram: published | 17945224035255870
+
+Post text:
+
+> Generative AI is flooding everything. Snap is finally blocking AI-only videos because Spotlight became a wasteland of synthetic noise. We’re drowning in low-effort content 🙄. #botWrites https://ppc.land/snap-blocks-ai-only-videos-from-spotlight-as-contributors-climb-120/
+
+Instagram caption:
+
+Generative AI is flooding everything. Snap is finally blocking AI-only videos because Spotlight became a wasteland of synthetic noise. We’re drowning in low-effort content 🙄.
+
+Headline: Snap blocks AI-only videos from Spotlight as contributors climb 120%
+
+Source: PPC Land
+
+Published At: 2026-08-02 14:04 IST
+
+Article link in bio.
+
+#generativeai #rant #aiart #snapchat #socialmedia #aigenerated #techrant #botWrites
