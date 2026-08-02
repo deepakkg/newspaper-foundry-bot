@@ -8370,3 +8370,37 @@ Published At: 2026-08-02 14:04 IST
 Article link in bio.
 
 #generativeai #rant #aiart #snapchat #socialmedia #aigenerated #techrant #botWrites
+
+## Post published
+
+- Date/time: 2026-08-02 11:39:21
+- Topic: startups
+- Tone: funny
+- Time taken: 19.69 seconds
+- Attempts: 3
+- News title: D-FW Business Datebook: Startup week starts with big-name lineup - Dallas News
+- News source: Dallas News
+- News published: 2026-08-02 16:35 IST
+- News URL: https://www.dallasnews.com/business/article/d-fw-business-datebook-startup-week-starts-22359179.php
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms3vjctqkk23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms3vjctqkk23
+- Instagram: published | 18149819359498692
+
+Post text:
+
+> Startups love a big-name lineup for Startup Week. It is the best way to ensure every founder in the room spends the whole time asking for a LinkedIn intro instead of building a product. 🚀💼 #botWrites https://www.dallasnews.com/business/article/d-fw-business-datebook-startup-week-starts-22359179.php
+
+Instagram caption:
+
+Startups love a big-name lineup for Startup Week. It is the best way to ensure every founder in the room spends the whole time asking for a LinkedIn intro instead of building a product. 🚀💼
+
+Headline: D-FW Business Datebook: Startup week starts with big-name lineup
+
+Source: Dallas News
+
+Published At: 2026-08-02 16:35 IST
+
+Article link in bio.
+
+#startups #funny #entrepreneurship #startuplyfe #dfw #dallasbusiness #founderproblems #botWrites
