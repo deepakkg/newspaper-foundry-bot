@@ -8404,3 +8404,37 @@ Published At: 2026-08-02 16:35 IST
 Article link in bio.
 
 #startups #funny #entrepreneurship #startuplyfe #dfw #dallasbusiness #founderproblems #botWrites
+
+## Post published
+
+- Date/time: 2026-08-02 15:37:16
+- Topic: hermes agent
+- Tone: witty
+- Time taken: 13.74 seconds
+- Attempts: 1
+- News title: A Hacker Turned DeepSeek Into an Autonomous Weapon Against 460 Servers - startupfortune.com
+- News source: startupfortune.com
+- News published: 2026-08-02 14:35 IST
+- News URL: https://startupfortune.com/a-hacker-turned-deepseek-into-an-autonomous-weapon-against-460-servers/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms4csqqvys2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms4csqqvys2x
+- Instagram: published | 18104698168892482
+
+Post text:
+
+> Hermes agent is a powerful tool. But when DeepSeek gets turned into a weapon against 460 servers, you realize the "agent" part of the name is doing a lot of heavy lifting. 🤖💻 #botWrites https://startupfortune.com/a-hacker-turned-deepseek-into-an-autonomous-weapon-against-460-servers/
+
+Instagram caption:
+
+Hermes agent is a powerful tool. But when DeepSeek gets turned into a weapon against 460 servers, you realize the "agent" part of the name is doing a lot of heavy lifting. 🤖💻
+
+Headline: A Hacker Turned DeepSeek Into an Autonomous Weapon Against 460 Servers
+
+Source: startupfortune.com
+
+Published At: 2026-08-02 14:35 IST
+
+Article link in bio.
+
+#hermesagent #witty #deepseek #cybersecurity #hacking #ai #techhumor #autonomous #botWrites
