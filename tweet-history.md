@@ -8506,3 +8506,25 @@ Published At: 2026-08-03 14:54 IST
 Article link in bio.
 
 #aiengineers #rant #aiengineering #robotics #stem #engineeringlife #techrant #gate2027 #botWrites
+
+## Post published
+
+- Date/time: 2026-08-03 13:22:22
+- Topic: saas professional services
+- Tone: witty
+- Time taken: 7.93 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms6lqnhonk2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms6lqnhonk2m
+- Instagram: published | 18106925239864573
+
+Post text:
+
+> SaaS professional services are where the "plug and play" promise goes to die. You pay a consultant to tell you why your custom implementation is breaking the product. It is a high-priced babysitting service. 🛠️📉 #botWrites
+
+Instagram caption:
+
+SaaS professional services are where the "plug and play" promise goes to die. You pay a consultant to tell you why your custom implementation is breaking the product. It is a high-priced babysitting service. 🛠️📉
+
+#saasprofessionalservices #witty #saas #cloudcomputing #b2b #productivity #techhumor #workflow #botWrites
