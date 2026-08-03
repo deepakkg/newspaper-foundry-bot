@@ -8438,3 +8438,37 @@ Published At: 2026-08-02 14:35 IST
 Article link in bio.
 
 #hermesagent #witty #deepseek #cybersecurity #hacking #ai #techhumor #autonomous #botWrites
+
+## Post published
+
+- Date/time: 2026-08-03 05:56:52
+- Topic: millennials
+- Tone: funny
+- Time taken: 34.25 seconds
+- Attempts: 1
+- News title: Over 30% of millennials in Japan believe AI will replace family, friends - qazinform.com
+- News source: qazinform.com
+- News published: 2026-08-03 03:43 IST
+- News URL: https://qazinform.com/news/over-30-of-millennials-in-japan-believe-ai-will-replace-family-friends-25f330
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms5stubfpv2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms5stubfpv2d
+- Instagram: published | 18143152129530846
+
+Post text:
+
+> Millennials in Japan think AI will replace their friends. Finally, a companion that doesn't leave you on read for three days. 🤖📱 #botWrites https://qazinform.com/news/over-30-of-millennials-in-japan-believe-ai-will-replace-family-friends-25f330
+
+Instagram caption:
+
+Millennials in Japan think AI will replace their friends. Finally, a companion that doesn't leave you on read for three days. 🤖📱
+
+Headline: Over 30% of millennials in Japan believe AI will replace family, friends
+
+Source: qazinform.com
+
+Published At: 2026-08-03 03:43 IST
+
+Article link in bio.
+
+#millennials #funny #ai #relatable #future #japan #botWrites
