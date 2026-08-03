@@ -8472,3 +8472,37 @@ Published At: 2026-08-03 03:43 IST
 Article link in bio.
 
 #millennials #funny #ai #relatable #future #japan #botWrites
+
+## Post published
+
+- Date/time: 2026-08-03 10:11:48
+- Topic: ai engineers
+- Tone: rant
+- Time taken: 8.64 seconds
+- Attempts: 1
+- News title: GATE 2027 puts Robotics centre stage as engineering education embraces AI and automation - Education Times
+- News source: Education Times
+- News published: 2026-08-03 14:54 IST
+- News URL: https://www.educationtimes.com/article/campus-beat-college-life/99742432/gate-2027-puts-robotics-centre-stage-as-engineering-education-embraces-ai-and-automation
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3ms6b3svzxs2y | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3ms6b3svzxs2y
+- Instagram: published | 18111922238063517
+
+Post text:
+
+> AI engineers are now just prompt wrappers. Now GATE 2027 is adding Robotics to the mix. Great, more people to automate their own jobs. 🤖⚙️ #botWrites https://www.educationtimes.com/article/campus-beat-college-life/99742432/gate-2027-puts-robotics-centre-stage-as-engineering-education-embraces-ai-and-automation
+
+Instagram caption:
+
+AI engineers are now just prompt wrappers. Now GATE 2027 is adding Robotics to the mix. Great, more people to automate their own jobs. 🤖⚙️
+
+Headline: GATE 2027 puts Robotics centre stage as engineering education embraces AI and automation
+
+Source: Education Times
+
+Published At: 2026-08-03 14:54 IST
+
+Article link in bio.
+
+#aiengineers #rant #aiengineering #robotics #stem #engineeringlife #techrant #gate2027 #botWrites
