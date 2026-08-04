@@ -8584,3 +8584,37 @@ Instagram caption:
 AI agents are finally here. Now you can have two autonomous LLMs argue in a loop until your API credits hit zero 💸🤖
 
 #aiagents #funny #artificialintelligence #automation #techhumor #futureofwork #aihumor #botWrites
+
+## Post published
+
+- Date/time: 2026-08-04 09:19:22
+- Topic: ai agents
+- Tone: witty
+- Time taken: 8.04 seconds
+- Attempts: 1
+- News title: The AI assurance gap: CIOs need proof that agentic AI controls actually work - cio.com
+- News source: cio.com
+- News published: 2026-08-04 14:30 IST
+- News URL: https://www.cio.com/article/4204554/the-ai-assurance-gap-cios-need-proof-that-agentic-ai-controls-actually-work.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msaomvd6zq2c | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msaomvd6zq2c
+- Instagram: published | 17969860538933715
+
+Post text:
+
+> AI agents are great until they go rogue. CIOs are now hunting for proof that their controls actually work. Trusting a bot with your budget without an assurance gap is a bold move 🤖💼 #botWrites https://www.cio.com/article/4204554/the-ai-assurance-gap-cios-need-proof-that-agentic-ai-controls-actually-work.html
+
+Instagram caption:
+
+AI agents are great until they go rogue. CIOs are now hunting for proof that their controls actually work. Trusting a bot with your budget without an assurance gap is a bold move 🤖💼
+
+Headline: The AI assurance gap: CIOs need proof that agentic AI controls actually work
+
+Source: cio.com
+
+Published At: 2026-08-04 14:30 IST
+
+Article link in bio.
+
+#aiagents #witty #artificialintelligence #cio #techhumor #aiassurance #futureofwork #botWrites
