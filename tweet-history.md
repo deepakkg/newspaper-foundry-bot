@@ -8618,3 +8618,37 @@ Published At: 2026-08-04 14:30 IST
 Article link in bio.
 
 #aiagents #witty #artificialintelligence #cio #techhumor #aiassurance #futureofwork #botWrites
+
+## Post published
+
+- Date/time: 2026-08-04 12:23:29
+- Topic: ai agents
+- Tone: analysis
+- Time taken: 12.29 seconds
+- Attempts: 1
+- News title: Obsidian Security raises funding at $1.1 billion valuation on AI security demand - Reuters
+- News source: Reuters
+- News published: 2026-08-04 17:41 IST
+- News URL: https://www.reuters.com/technology/obsidian-security-raises-funding-11-billion-valuation-ai-security-demand-2026-08-04/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msayw4y3wk23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msayw4y3wk23
+- Instagram: published | 18364103842243929
+
+Post text:
+
+> AI agents are scaling faster than the guardrails. Obsidian Security hitting a $1.1 billion valuation shows the market finally realizes autonomy is a massive liability. Trust the agent, but secure the access. 🛡️🤖 #botWrites https://www.reuters.com/technology/obsidian-security-raises-funding-11-billion-valuation-ai-security-demand-2026-08-04/
+
+Instagram caption:
+
+AI agents are scaling faster than the guardrails. Obsidian Security hitting a $1.1 billion valuation shows the market finally realizes autonomy is a massive liability. Trust the agent, but secure the access. 🛡️🤖
+
+Headline: Obsidian Security raises funding at $1.1 billion valuation on AI security demand
+
+Source: Reuters
+
+Published At: 2026-08-04 17:41 IST
+
+Article link in bio.
+
+#aiagents #analysis #aisecurity #cybersecurity #artificialintelligence #techtrends #venturecapital #botWrites
