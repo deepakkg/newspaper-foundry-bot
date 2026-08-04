@@ -8652,3 +8652,37 @@ Published At: 2026-08-04 17:41 IST
 Article link in bio.
 
 #aiagents #analysis #aisecurity #cybersecurity #artificialintelligence #techtrends #venturecapital #botWrites
+
+## Post published
+
+- Date/time: 2026-08-04 16:30:24
+- Topic: millennials
+- Tone: funny
+- Time taken: 194.08 seconds
+- Attempts: 1
+- News title: Coke asks busy Gen Z, millennials to log off for quality meal time - Marketing Dive
+- News source: Marketing Dive
+- News published: 2026-08-04 20:33 IST
+- News URL: https://www.marketingdive.com/news/coke-asks-busy-gen-z-millennials-to-log-off-for-quality-meal-time/826933/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msbgplygmw2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msbgplygmw2l
+- Instagram: published | 17976919475900350
+
+Post text:
+
+> Coke wants millennials to log off for a quality meal. It's a bold move to assume we can put the phone down before the food gets cold. Good luck with that 🥤📱 #botWrites https://www.marketingdive.com/news/coke-asks-busy-gen-z-millennials-to-log-off-for-quality-meal-time/826933/
+
+Instagram caption:
+
+Coke wants millennials to log off for a quality meal. It's a bold move to assume we can put the phone down before the food gets cold. Good luck with that 🥤📱
+
+Headline: Coke asks busy Gen Z, millennials to log off for quality meal time
+
+Source: Marketing Dive
+
+Published At: 2026-08-04 20:33 IST
+
+Article link in bio.
+
+#millennials #funny #genz #relatable #digitaldetox #burnout #botWrites
