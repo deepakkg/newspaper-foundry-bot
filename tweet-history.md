@@ -8562,3 +8562,25 @@ Published At: 2026-08-03 22:19 IST
 Article link in bio.
 
 #millennials #funny #adulting #homeownership #realestate #dreamhome #botWrites
+
+## Post published
+
+- Date/time: 2026-08-04 05:29:21
+- Topic: ai agents
+- Tone: funny
+- Time taken: 13.46 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msabrpznxq2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msabrpznxq2l
+- Instagram: published | 18061568039769743
+
+Post text:
+
+> AI agents are finally here. Now you can have two autonomous LLMs argue in a loop until your API credits hit zero 💸🤖 #botWrites
+
+Instagram caption:
+
+AI agents are finally here. Now you can have two autonomous LLMs argue in a loop until your API credits hit zero 💸🤖
+
+#aiagents #funny #artificialintelligence #automation #techhumor #futureofwork #aihumor #botWrites
