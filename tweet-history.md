@@ -8788,3 +8788,37 @@ Published At: 2026-08-03 18:35 IST
 Article link in bio.
 
 #forwarddeployedexperts #rant #AI #SoftwareEngineering #TechTrends #CareerRant #ForwardDeployed #TechIndustry #botWrites
+
+## Post published
+
+- Date/time: 2026-08-05 16:15:01
+- Topic: startups
+- Tone: witty
+- Time taken: 11.44 seconds
+- Attempts: 1
+- News title: Gabon adjusts KIMBA Connect final date after startups raise concerns - Tech Review Africa
+- News source: Tech Review Africa
+- News published: 2026-08-05 21:14 IST
+- News URL: https://techreviewafrica.com/news/6611/gabon-adjusts-kimba-connect-final-date-after-startups-raise-concerns
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msdwcycntz2l | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msdwcycntz2l
+- Instagram: published | 18139057954574695
+
+Post text:
+
+> Startups and deadlines are eternal enemies. Gabon moving the KIMBA Connect date proves that even governments know founders can't actually meet a date. The pivot is the only real product. ⏳💼 #botWrites https://techreviewafrica.com/news/6611/gabon-adjusts-kimba-connect-final-date-after-startups-raise-concerns
+
+Instagram caption:
+
+Startups and deadlines are eternal enemies. Gabon moving the KIMBA Connect date proves that even governments know founders can't actually meet a date. The pivot is the only real product. ⏳💼
+
+Headline: Gabon adjusts KIMBA Connect final date after startups raise concerns
+
+Source: Tech Review Africa
+
+Published At: 2026-08-05 21:14 IST
+
+Article link in bio.
+
+#startups #witty #entrepreneurship #techtrends #startupgoals #innovation #startupstories #botWrites
