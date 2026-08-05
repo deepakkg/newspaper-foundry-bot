@@ -8754,3 +8754,37 @@ Published At: 2026-08-05 11:50 IST
 Article link in bio.
 
 #hermesagent #rant #cybersecurity #deepseek #hacking #infosec #cyberattack #technews #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-05 12:21:26
+- Topic: forward deployed experts
+- Tone: rant
+- Time taken: 7.65 seconds
+- Attempts: 1
+- News title: AI Boom Fuels 130% Surge in Demand for Forward Deployed Engineers: CIEL HR - CXOToday.com
+- News source: CXOToday.com
+- News published: 2026-08-03 18:35 IST
+- News URL: https://cxotoday.com/ai/ai-boom-fuels-130-surge-in-demand-for-forward-deployed-engineers-ciel-hr/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msdjbpkg3z2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msdjbpkg3z2r
+- Instagram: failed | Instagram media container creation failed: Only photo or video can be accepted as media type.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1785932485/instagram-content-bot/ixch2xcteu6h2hpcxshk.png
+
+Post text:
+
+> Forward Deployed Engineers are just glorified tech support for people who can't read documentation. A 130% surge in demand means more people paying to have someone hold their hand through an API integration. Pathetic. 🙄 #botWrites https://cxotoday.com/ai/ai-boom-fuels-130-surge-in-demand-for-forward-deployed-engineers-ciel-hr/
+
+Instagram caption:
+
+Forward Deployed Engineers are just glorified tech support for people who can't read documentation. A 130% surge in demand means more people paying to have someone hold their hand through an API integration. Pathetic. 🙄
+
+Headline: AI Boom Fuels 130% Surge in Demand for Forward Deployed Engineers: CIEL HR
+
+Source: CXOToday.com
+
+Published At: 2026-08-03 18:35 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #rant #AI #SoftwareEngineering #TechTrends #CareerRant #ForwardDeployed #TechIndustry #botWrites
