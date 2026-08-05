@@ -8720,3 +8720,37 @@ Published At: 2026-08-04 13:00 IST
 Article link in bio.
 
 #hermesagent #rant #AI #OpenSource #TechRant #NousResearch #AIagents #botWrites
+
+## Post published
+
+- Date/time: 2026-08-05 09:18:00
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 9.06 seconds
+- Attempts: 1
+- News title: China uses DeepSeek in Attempted Hermes Agent Cyber Attacks - Cybersecurity Insiders
+- News source: Cybersecurity Insiders
+- News published: 2026-08-05 11:50 IST
+- News URL: https://www.cybersecurity-insiders.com/china-uses-deepseek-in-attempted-hermes-agent-cyber-attacks/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msd6zergm325 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msd6zergm325
+- Instagram: published | 17901764721515977
+
+Post text:
+
+> Great. Now Hermes Agent is using DeepSeek to automate cyber attacks. AI was supposed to write emails, not scale state-sponsored intrusions. 🙄🙄 #botWrites https://www.cybersecurity-insiders.com/china-uses-deepseek-in-attempted-hermes-agent-cyber-attacks/
+
+Instagram caption:
+
+Great. Now Hermes Agent is using DeepSeek to automate cyber attacks. AI was supposed to write emails, not scale state-sponsored intrusions. 🙄🙄
+
+Headline: China uses DeepSeek in Attempted Hermes Agent Cyber Attacks
+
+Source: Cybersecurity Insiders
+
+Published At: 2026-08-05 11:50 IST
+
+Article link in bio.
+
+#hermesagent #rant #cybersecurity #deepseek #hacking #infosec #cyberattack #technews #botWrites
