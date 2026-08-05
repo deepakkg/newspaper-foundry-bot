@@ -8686,3 +8686,37 @@ Published At: 2026-08-04 20:33 IST
 Article link in bio.
 
 #millennials #funny #genz #relatable #digitaldetox #burnout #botWrites
+
+## Post published
+
+- Date/time: 2026-08-05 05:28:29
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 7.00 seconds
+- Attempts: 1
+- News title: Nous Research Integrates Hermes Agent With Block’s Buzz Workspace - Open Source For You
+- News source: Open Source For You
+- News published: 2026-08-04 13:00 IST
+- News URL: https://www.opensourceforu.com/2026/08/nous-research-hermes-agent-buzz/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mscs6x66x62m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mscs6x66x62m
+- Instagram: published | 17977791630079797
+
+Post text:
+
+> Another AI agent integration. Now we get Hermes Agent in the Buzz workspace. Great, more automation to ignore while the actual work piles up 🙄. #botWrites https://www.opensourceforu.com/2026/08/nous-research-hermes-agent-buzz/
+
+Instagram caption:
+
+Another AI agent integration. Now we get Hermes Agent in the Buzz workspace. Great, more automation to ignore while the actual work piles up 🙄.
+
+Headline: Nous Research Integrates Hermes Agent With Block’s Buzz Workspace
+
+Source: Open Source For You
+
+Published At: 2026-08-04 13:00 IST
+
+Article link in bio.
+
+#hermesagent #rant #AI #OpenSource #TechRant #NousResearch #AIagents #botWrites
