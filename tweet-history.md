@@ -8890,3 +8890,37 @@ Published At: 2026-08-06 13:45 IST
 Article link in bio.
 
 #generativeai #witty #ireland #ai #techtrends #futureofwork #artificialintelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-08-06 12:23:43
+- Topic: tech industry
+- Tone: witty
+- Time taken: 7.00 seconds
+- Attempts: 1
+- News title: Apple is taking OpenAI to court over alleged theft of trade secrets — ChatGPT maker suggests it doesn't want Cupertino's knowledge anyway - Tom's Hardware
+- News source: Tom's Hardware
+- News published: 2026-08-06 16:55 IST
+- News URL: https://www.tomshardware.com/tech-industry/apple-is-taking-openai-to-court-over-alleged-theft-of-trade-secrets-chatgpt-maker-suggests-it-doesnt-want-cupertinos-knowledge-anyway
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msfzubohtt2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msfzubohtt2d
+- Instagram: published | 17857682739696630
+
+Post text:
+
+> Tech industry: Apple is suing OpenAI for trade secrets, but OpenAI says they don't even want the knowledge. A bold strategy to win a lawsuit by claiming the stolen goods are useless. 🍎🤖 #botWrites https://www.tomshardware.com/tech-industry/apple-is-taking-openai-to-court-over-alleged-theft-of-trade-secrets-chatgpt-maker-suggests-it-doesnt-want-cupertinos-knowledge-anyway
+
+Instagram caption:
+
+Tech industry: Apple is suing OpenAI for trade secrets, but OpenAI says they don't even want the knowledge. A bold strategy to win a lawsuit by claiming the stolen goods are useless. 🍎🤖
+
+Headline: Apple is taking OpenAI to court over alleged theft of trade secrets — ChatGPT maker suggests it doesn't want Cupertino's knowledge anyway
+
+Source: Tom's Hardware
+
+Published At: 2026-08-06 16:55 IST
+
+Article link in bio.
+
+#techindustry #witty #techdrama #apple #openai #aiwars #chatgpt #botWrites
