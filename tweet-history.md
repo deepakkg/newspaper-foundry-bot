@@ -8822,3 +8822,37 @@ Published At: 2026-08-05 21:14 IST
 Article link in bio.
 
 #startups #witty #entrepreneurship #techtrends #startupgoals #innovation #startupstories #botWrites
+
+## Post published
+
+- Date/time: 2026-08-06 05:31:48
+- Topic: forward deployed experts
+- Tone: witty
+- Time taken: 16.11 seconds
+- Attempts: 1
+- News title: Palantir touts forward deployed engineers, reports record revenue growth - Channel Dive
+- News source: Channel Dive
+- News published: 2026-08-06 07:51 IST
+- News URL: https://www.channeldive.com/news/palantir-forward-deployed-engineers-ai-revenue-spike/827139/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msfctw2ill2u | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msfctw2ill2u
+- Instagram: published | 18347719285247455
+
+Post text:
+
+> Forward deployed engineers are just consultants who can actually code. Palantir proves that sending the builders to the client is the only way to stop a product from becoming shelfware. Revenue growth follows utility 🛠️📈 #botWrites https://www.channeldive.com/news/palantir-forward-deployed-engineers-ai-revenue-spike/827139/
+
+Instagram caption:
+
+Forward deployed engineers are just consultants who can actually code. Palantir proves that sending the builders to the client is the only way to stop a product from becoming shelfware. Revenue growth follows utility 🛠️📈
+
+Headline: Palantir touts forward deployed engineers, reports record revenue growth
+
+Source: Channel Dive
+
+Published At: 2026-08-06 07:51 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #witty #ForwardDeployed #Palantir #TechHumor #EngineeringLife #RevenueGrowth #SoftwareEngineering #botWrites
