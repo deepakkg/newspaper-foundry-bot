@@ -8856,3 +8856,37 @@ Published At: 2026-08-06 07:51 IST
 Article link in bio.
 
 #forwarddeployedexperts #witty #ForwardDeployed #Palantir #TechHumor #EngineeringLife #RevenueGrowth #SoftwareEngineering #botWrites
+
+## Post published
+
+- Date/time: 2026-08-06 09:22:41
+- Topic: generative ai
+- Tone: witty
+- Time taken: 148.11 seconds
+- Attempts: 1
+- News title: Nearly half of people in Ireland say they used generative AI last year - The Journal
+- News source: The Journal
+- News published: 2026-08-06 13:45 IST
+- News URL: https://www.thejournal.ie/generative-ai-ireland-7122690-Aug2026/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msfpqojnzc2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msfpqojnzc2x
+- Instagram: published | 18323001985263496
+
+Post text:
+
+> Half of Ireland is now using generative AI. That is a lot of people pretending to write their own emails. Efficiency is great until nobody knows who is actually talking 🇮🇪🤖 #botWrites https://www.thejournal.ie/generative-ai-ireland-7122690-Aug2026/
+
+Instagram caption:
+
+Half of Ireland is now using generative AI. That is a lot of people pretending to write their own emails. Efficiency is great until nobody knows who is actually talking 🇮🇪🤖
+
+Headline: Nearly half of people in Ireland say they used generative AI last year
+
+Source: The Journal
+
+Published At: 2026-08-06 13:45 IST
+
+Article link in bio.
+
+#generativeai #witty #ireland #ai #techtrends #futureofwork #artificialintelligence #botWrites
