@@ -8924,3 +8924,37 @@ Published At: 2026-08-06 16:55 IST
 Article link in bio.
 
 #techindustry #witty #techdrama #apple #openai #aiwars #chatgpt #botWrites
+
+## Post published
+
+- Date/time: 2026-08-07 04:36:03
+- Topic: saas professional services
+- Tone: rant
+- Time taken: 20.48 seconds
+- Attempts: 1
+- News title: SMRT: Revenue up 4% and net loss halved in Q2 2026, with SaaS and services driving margin gains - TradingView
+- News source: TradingView
+- News published: 2026-08-05 18:21 IST
+- News URL: https://www.tradingview.com/news/urn:summary_document_report:quartr.com:3667266:0-smrt-revenue-up-4-and-net-loss-halved-in-q2-2026-with-saas-and-services-driving-margin-gains/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mshq6yw2za2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mshq6yw2za2d
+- Instagram: published | 18121686610630843
+
+Post text:
+
+> SaaS professional services are just a fancy way to hide that the software is too hard to use. Even SMRT is using services to prop up margins. Stop selling complexity and just build a product that works. 🙄 #botWrites https://www.tradingview.com/news/urn:summary_document_report:quartr.com:3667266:0-smrt-revenue-up-4-and-net-loss-halved-in-q2-2026-with-saas-and-services-driving-margin-gains/
+
+Instagram caption:
+
+SaaS professional services are just a fancy way to hide that the software is too hard to use. Even SMRT is using services to prop up margins. Stop selling complexity and just build a product that works. 🙄
+
+Headline: SMRT: Revenue up 4% and net loss halved in Q2 2026, with SaaS and services driving margin gains
+
+Source: TradingView
+
+Published At: 2026-08-05 18:21 IST
+
+Article link in bio.
+
+#saasprofessionalservices #rant #SaaS #ProfessionalServices #BusinessRant #TechIndustry #B2B #MarginGains #botWrites
