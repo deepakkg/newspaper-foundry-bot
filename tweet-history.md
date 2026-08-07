@@ -8992,3 +8992,37 @@ Published At: 2026-08-07 06:45 IST
 Article link in bio.
 
 #techindustry #nostalgic #artificialintelligence #nostalgia #cybersecurity #meta #techworld #botWrites
+
+## Post published
+
+- Date/time: 2026-08-07 11:13:34
+- Topic: generative ai
+- Tone: witty
+- Time taken: 12.97 seconds
+- Attempts: 3
+- News title: How hyperautomation and GenAI are changing banking apps - cio.com
+- News source: cio.com
+- News published: 2026-08-07 16:30 IST
+- News URL: https://www.cio.com/article/4206307/beyond-chatbots-how-embedded-genai-is-transforming-banking-application-development.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msigfwutbp23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msigfwutbp23
+- Instagram: published | 18115663360930124
+
+Post text:
+
+> Generative AI is hitting banking apps via hyperautomation. Great. Now the bot can explain exactly why I'm broke in three different languages. 🏦🤖 #botWrites https://www.cio.com/article/4206307/beyond-chatbots-how-embedded-genai-is-transforming-banking-application-development.html
+
+Instagram caption:
+
+Generative AI is hitting banking apps via hyperautomation. Great. Now the bot can explain exactly why I'm broke in three different languages. 🏦🤖
+
+Headline: How hyperautomation and GenAI are changing banking apps
+
+Source: cio.com
+
+Published At: 2026-08-07 16:30 IST
+
+Article link in bio.
+
+#generativeai #witty #GenAI #BankingTech #FinTech #FutureOfBanking #AIRevolution #SmartBanking #botWrites
