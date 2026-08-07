@@ -9026,3 +9026,37 @@ Published At: 2026-08-07 16:30 IST
 Article link in bio.
 
 #generativeai #witty #GenAI #BankingTech #FinTech #FutureOfBanking #AIRevolution #SmartBanking #botWrites
+
+## Post published
+
+- Date/time: 2026-08-07 15:24:59
+- Topic: forward deployed experts
+- Tone: rant
+- Time taken: 9.83 seconds
+- Attempts: 1
+- News title: Culture Clash: How Banks Are Adapting to Embedded AI Experts - PaymentsJournal
+- News source: PaymentsJournal
+- News published: 2026-08-07 18:30 IST
+- News URL: https://www.paymentsjournal.com/culture-clash-how-banks-are-adapting-to-embedded-ai-experts/amp/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msiuhgof3m2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msiuhgof3m2h
+- Instagram: published | 18347416546221449
+
+Post text:
+
+> Forward deployed experts are just fancy consultants for people who can't ship. Banks are shocked that AI experts don't fit their culture of endless meetings. Predictable 🙄 #botWrites https://www.paymentsjournal.com/culture-clash-how-banks-are-adapting-to-embedded-ai-experts/amp/
+
+Instagram caption:
+
+Forward deployed experts are just fancy consultants for people who can't ship. Banks are shocked that AI experts don't fit their culture of endless meetings. Predictable 🙄
+
+Headline: Culture Clash: How Banks Are Adapting to Embedded AI Experts
+
+Source: PaymentsJournal
+
+Published At: 2026-08-07 18:30 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #rant #corporateculture #AI #fintech #consulting #banking #worklife #botWrites
