@@ -9060,3 +9060,37 @@ Published At: 2026-08-07 18:30 IST
 Article link in bio.
 
 #forwarddeployedexperts #rant #corporateculture #AI #fintech #consulting #banking #worklife #botWrites
+
+## Post published
+
+- Date/time: 2026-08-08 03:49:41
+- Topic: generative ai
+- Tone: rant
+- Time taken: 6.26 seconds
+- Attempts: 1
+- News title: SNU undergraduate Hyunsoo Lee publishes multiple papers in generative visual computing at leading international conferences - EurekAlert!
+- News source: EurekAlert!
+- News published: 2026-08-08 08:28 IST
+- News URL: https://www.eurekalert.org/news-releases/1139354
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msk636zev62r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msk636zev62r
+- Instagram: published | 18090302285435112
+
+Post text:
+
+> Generative AI is moving too fast. An undergraduate like Hyunsoo Lee is already flooding leading conferences with papers. We are optimizing ourselves into obsolescence before graduation. 🙄📉 #botWrites https://www.eurekalert.org/news-releases/1139354
+
+Instagram caption:
+
+Generative AI is moving too fast. An undergraduate like Hyunsoo Lee is already flooding leading conferences with papers. We are optimizing ourselves into obsolescence before graduation. 🙄📉
+
+Headline: SNU undergraduate Hyunsoo Lee publishes multiple papers in generative visual computing at leading international conferences
+
+Source: EurekAlert!
+
+Published At: 2026-08-08 08:28 IST
+
+Article link in bio.
+
+#generativeai #rant #ai #tech #machinelearning #research #innovation #botWrites
