@@ -9094,3 +9094,37 @@ Published At: 2026-08-08 08:28 IST
 Article link in bio.
 
 #generativeai #rant #ai #tech #machinelearning #research #innovation #botWrites
+
+## Post published
+
+- Date/time: 2026-08-08 07:28:16
+- Topic: startups
+- Tone: funny
+- Time taken: 10.57 seconds
+- Attempts: 1
+- News title: Situational Awareness invested $500 million in chip startup Source Foundry - Yahoo Finance UK
+- News source: Yahoo Finance UK
+- News published: 2026-08-08 11:00 IST
+- News URL: https://uk.finance.yahoo.com/news/situational-awareness-invested-500-million-053010201.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mskkbv4gfk2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mskkbv4gfk2r
+- Instagram: published | 17990430656833670
+
+Post text:
+
+> Startups are wild. Situational Awareness drops $500 million on Source Foundry and suddenly a few engineers in a garage are the most important people in the room. Hope they know how to use a printer 💸💻 #botWrites https://uk.finance.yahoo.com/news/situational-awareness-invested-500-million-053010201.html
+
+Instagram caption:
+
+Startups are wild. Situational Awareness drops $500 million on Source Foundry and suddenly a few engineers in a garage are the most important people in the room. Hope they know how to use a printer 💸💻
+
+Headline: Situational Awareness invested $500 million in chip startup Source Foundry
+
+Source: Yahoo Finance UK
+
+Published At: 2026-08-08 11:00 IST
+
+Article link in bio.
+
+#startups #funny #venturecapital #techhumor #chips #funding #entrepreneurship #botWrites
