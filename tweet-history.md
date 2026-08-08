@@ -9128,3 +9128,37 @@ Published At: 2026-08-08 11:00 IST
 Article link in bio.
 
 #startups #funny #venturecapital #techhumor #chips #funding #entrepreneurship #botWrites
+
+## Post published
+
+- Date/time: 2026-08-08 10:57:07
+- Topic: millennials
+- Tone: witty
+- Time taken: 7.19 seconds
+- Attempts: 1
+- News title: Meet the 33-year-old CEO betting on boomers chasing their grandkids—and millennials selling their first house - Fortune
+- News source: Fortune
+- News published: 2026-08-08 15:30 IST
+- News URL: https://fortune.com/2026/08/08/kelley-blue-book-homes-john-liss-millennials-boomers/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mskvxd6yc72a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mskvxd6yc72a
+- Instagram: published | 18088889780166501
+
+Post text:
+
+> Millennials are finally selling their first house. Now a 33-year-old CEO is betting on the profit. The cycle of wealth transfer is just a new way to get charged a fee. 🏠📉 #botWrites https://fortune.com/2026/08/08/kelley-blue-book-homes-john-liss-millennials-boomers/
+
+Instagram caption:
+
+Millennials are finally selling their first house. Now a 33-year-old CEO is betting on the profit. The cycle of wealth transfer is just a new way to get charged a fee. 🏠📉
+
+Headline: Meet the 33-year-old CEO betting on boomers chasing their grandkids—and millennials selling their first house
+
+Source: Fortune
+
+Published At: 2026-08-08 15:30 IST
+
+Article link in bio.
+
+#millennials #witty #realestate #boomers #adulting #housingmarket #generationgap #botWrites
