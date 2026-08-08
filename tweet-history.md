@@ -9162,3 +9162,37 @@ Published At: 2026-08-08 15:30 IST
 Article link in bio.
 
 #millennials #witty #realestate #boomers #adulting #housingmarket #generationgap #botWrites
+
+## Post published
+
+- Date/time: 2026-08-08 14:58:36
+- Topic: tech industry
+- Tone: witty
+- Time taken: 13.22 seconds
+- Attempts: 4
+- News title: Just How Bad Are AI Data Centers for Your Local Water? - Gizmodo
+- News source: Gizmodo
+- News published: 2026-08-08 15:30 IST
+- News URL: https://gizmodo.com/just-how-bad-are-ai-data-centers-for-your-local-water-2000795372
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msldh7dikh23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msldh7dikh23
+- Instagram: published | 18121400953832535
+
+Post text:
+
+> Tech industry logic is wild. We trade local water for AI data centers to automate emails. Great deal for the planet. 💧🤖 #botWrites https://gizmodo.com/just-how-bad-are-ai-data-centers-for-your-local-water-2000795372
+
+Instagram caption:
+
+Tech industry logic is wild. We trade local water for AI data centers to automate emails. Great deal for the planet. 💧🤖
+
+Headline: Just How Bad Are AI Data Centers for Your Local Water?
+
+Source: Gizmodo
+
+Published At: 2026-08-08 15:30 IST
+
+Article link in bio.
+
+#techindustry #witty #AI #TechNews #WaterCrisis #Sustainability #DataCenters #TechHumor #botWrites
