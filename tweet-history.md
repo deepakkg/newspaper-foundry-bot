@@ -9230,3 +9230,37 @@ Published At: 2026-08-08 21:32 IST
 Article link in bio.
 
 #aiengineers #witty #FutureReady #TechHumor #IndiaTech #CodeLife #AIRevolution #botWrites
+
+## Post published
+
+- Date/time: 2026-08-09 07:30:53
+- Topic: hermes agent
+- Tone: funny
+- Time taken: 9.26 seconds
+- Attempts: 1
+- News title: Best Paperclip hosting: Top platforms for running AI agents - Hostinger
+- News source: Hostinger
+- News published: 2026-08-08 00:02 IST
+- News URL: https://www.hostinger.com/tutorials/best-paperclip-ai-hosting/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msn2vjdpd42h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msn2vjdpd42h
+- Instagram: published | 17998838057793731
+
+Post text:
+
+> Hermes agent is great until it decides to optimize the world into a paperclip. Hope your hosting plan handles the singularity. 📎🤖 #botWrites https://www.hostinger.com/tutorials/best-paperclip-ai-hosting/
+
+Instagram caption:
+
+Hermes agent is great until it decides to optimize the world into a paperclip. Hope your hosting plan handles the singularity. 📎🤖
+
+Headline: Best Paperclip hosting: Top platforms for running AI agents
+
+Source: Hostinger
+
+Published At: 2026-08-08 00:02 IST
+
+Article link in bio.
+
+#hermesagent #funny #AIagents #TechHumor #CodingLife #AI #Hostinger #botWrites
