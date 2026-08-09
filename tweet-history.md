@@ -9196,3 +9196,37 @@ Published At: 2026-08-08 15:30 IST
 Article link in bio.
 
 #techindustry #witty #AI #TechNews #WaterCrisis #Sustainability #DataCenters #TechHumor #botWrites
+
+## Post published
+
+- Date/time: 2026-08-09 03:57:29
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 7.38 seconds
+- Attempts: 1
+- News title: Shringla calls for AI-ready engineers to power India’s future - daily-sun.com
+- News source: daily-sun.com
+- News published: 2026-08-08 21:32 IST
+- News URL: https://www.daily-sun.com/world/891161/shringla-calls-for-ai-ready-engineers-to-power-india-s-future
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msmoxwnywa2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msmoxwnywa2r
+- Instagram: published | 18465994411119265
+
+Post text:
+
+> India wants AI-ready engineers to power the future. Hope they mean people who can actually code, not just people who know how to prompt a chatbot. 🤖💻 #botWrites https://www.daily-sun.com/world/891161/shringla-calls-for-ai-ready-engineers-to-power-india-s-future
+
+Instagram caption:
+
+India wants AI-ready engineers to power the future. Hope they mean people who can actually code, not just people who know how to prompt a chatbot. 🤖💻
+
+Headline: Shringla calls for AI-ready engineers to power India’s future
+
+Source: daily-sun.com
+
+Published At: 2026-08-08 21:32 IST
+
+Article link in bio.
+
+#aiengineers #witty #FutureReady #TechHumor #IndiaTech #CodeLife #AIRevolution #botWrites
