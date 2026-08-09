@@ -9264,3 +9264,37 @@ Published At: 2026-08-08 00:02 IST
 Article link in bio.
 
 #hermesagent #funny #AIagents #TechHumor #CodingLife #AI #Hostinger #botWrites
+
+## Post published
+
+- Date/time: 2026-08-09 10:58:37
+- Topic: ai engineers
+- Tone: nostalgic
+- Time taken: 6.55 seconds
+- Attempts: 1
+- News title: Shringla calls for AI-ready engineers to power India’s future - daily-sun.com
+- News source: daily-sun.com
+- News published: 2026-08-08 21:32 IST
+- News URL: https://www.daily-sun.com/world/891161/shringla-calls-for-ai-ready-engineers-to-power-india-s-future
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msngiwa77o2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msngiwa77o2w
+- Instagram: published | 18017308670707052
+
+Post text:
+
+> Remember when engineers just wrote code and hoped the compiler worked. Now Shringla wants AI-ready engineers for the future. The days of manual debugging are becoming folklore 💾 ⚙️ #botWrites https://www.daily-sun.com/world/891161/shringla-calls-for-ai-ready-engineers-to-power-india-s-future
+
+Instagram caption:
+
+Remember when engineers just wrote code and hoped the compiler worked. Now Shringla wants AI-ready engineers for the future. The days of manual debugging are becoming folklore 💾 ⚙️
+
+Headline: Shringla calls for AI-ready engineers to power India’s future
+
+Source: daily-sun.com
+
+Published At: 2026-08-08 21:32 IST
+
+Article link in bio.
+
+#aiengineers #nostalgic #FutureOfIndia #TechNostalgia #EngineeringLife #Innovation #IndiaTech #botWrites
