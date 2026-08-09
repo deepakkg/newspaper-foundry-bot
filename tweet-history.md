@@ -9298,3 +9298,25 @@ Published At: 2026-08-08 21:32 IST
 Article link in bio.
 
 #aiengineers #nostalgic #FutureOfIndia #TechNostalgia #EngineeringLife #Innovation #IndiaTech #botWrites
+
+## Post published
+
+- Date/time: 2026-08-09 15:01:03
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 12.91 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msnu2j4i6u23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msnu2j4i6u23
+- Instagram: published | 18103889510233396
+
+Post text:
+
+> Forward deployed engineers trade a clean roadmap for customer chaos. They fix a bug in production while the client watches. It is the fastest way to kill technical debt or create more of it. 🛠️💻 #botWrites
+
+Instagram caption:
+
+Forward deployed engineers trade a clean roadmap for customer chaos. They fix a bug in production while the client watches. It is the fastest way to kill technical debt or create more of it. 🛠️💻
+
+#forwarddeployedengineers #analysis #softwareengineering #fde #systemsdesign #techanalysis #engineering #softwarearchitecture #botWrites
