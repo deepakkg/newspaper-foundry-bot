@@ -9398,3 +9398,37 @@ Instagram caption:
 Millennials traded stable pensions for the gig economy. They are the first generation to master the side hustle out of necessity. Flexibility is just a polite word for instability. 📉💼
 
 #millennials #analysis #sociology #trendanalysis #generationalgap #demographics #culturalinsights #botWrites
+
+## Post published
+
+- Date/time: 2026-08-10 15:31:25
+- Topic: tech industry
+- Tone: nostalgic
+- Time taken: 55.17 seconds
+- Attempts: 2
+- News title: AI data center bans surge past 500 nationwide as local US politicians begin blocking new developments — growing public outrage and bipartisan pushback threaten big tech expansion plans - Tom's Hardware
+- News source: Tom's Hardware
+- News published: 2026-08-10 17:55 IST
+- News URL: https://www.tomshardware.com/tech-industry/data-centers/ai-data-center-bans-surge-past-500-nationwide-as-local-us-politicians-begin-blocking-new-developments-growing-public-outrage-and-bipartisan-pushback-threaten-big-tech-expansion-plans
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msqg7n6dqr2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msqg7n6dqr2w
+- Instagram: published | 18105552680113485
+
+Post text:
+
+> Tech industry used to be about small servers in garages. Now 500 bans on AI data centers show the scale got too big. We missed the era when tech stayed invisible. 💾🔌 #botWrites https://www.tomshardware.com/tech-industry/data-centers/ai-data-center-bans-surge-past-500-nationwide-as-local-us-politicians-begin-blocking-new-developments-growing-public-outrage-and-bipartisan-pushback-threaten-big-tech-expansion-plans
+
+Instagram caption:
+
+Tech industry used to be about small servers in garages. Now 500 bans on AI data centers show the scale got too big. We missed the era when tech stayed invisible. 💾🔌
+
+Headline: AI data center bans surge past 500 nationwide as local US politicians begin blocking new developments — growing public outrage and bipartisan pushback threaten big tech expansion plans
+
+Source: Tom's Hardware
+
+Published At: 2026-08-10 17:55 IST
+
+Article link in bio.
+
+#techindustry #nostalgic #tech #innovation #ai #bigtech #nostalgia #future #botWrites
