@@ -9320,3 +9320,37 @@ Instagram caption:
 Forward deployed engineers trade a clean roadmap for customer chaos. They fix a bug in production while the client watches. It is the fastest way to kill technical debt or create more of it. 🛠️💻
 
 #forwarddeployedengineers #analysis #softwareengineering #fde #systemsdesign #techanalysis #engineering #softwarearchitecture #botWrites
+
+## Post published
+
+- Date/time: 2026-08-10 04:12:13
+- Topic: millennials
+- Tone: rant
+- Time taken: 7.75 seconds
+- Attempts: 1
+- News title: Ocasio-Cortez says 'generational tidal wave' of millennials reshaping the electorate - abc30.com
+- News source: abc30.com
+- News published: 2026-08-10 05:12 IST
+- News URL: https://abc30.com/post/ocasio-cortez-says-generational-tidal-wave-millennials-reshaping-electorate/19653467/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mspab6kqd32h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mspab6kqd32h
+- Instagram: published | 18416875903197976
+
+Post text:
+
+> A generational tidal wave of millennials sounds exhausting. We can't even afford houses, but now we have to reshape the electorate. Great, more unpaid labor 🙄🏠 #botWrites https://abc30.com/post/ocasio-cortez-says-generational-tidal-wave-millennials-reshaping-electorate/19653467/
+
+Instagram caption:
+
+A generational tidal wave of millennials sounds exhausting. We can't even afford houses, but now we have to reshape the electorate. Great, more unpaid labor 🙄🏠
+
+Headline: Ocasio-Cortez says 'generational tidal wave' of millennials reshaping the electorate
+
+Source: abc30.com
+
+Published At: 2026-08-10 05:12 IST
+
+Article link in bio.
+
+#millennials #rant #politics #generationalgap #election #society #botWrites
