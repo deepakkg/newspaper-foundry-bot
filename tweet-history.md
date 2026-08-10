@@ -9354,3 +9354,25 @@ Published At: 2026-08-10 05:12 IST
 Article link in bio.
 
 #millennials #rant #politics #generationalgap #election #society #botWrites
+
+## Post published
+
+- Date/time: 2026-08-10 08:12:35
+- Topic: hermes agent
+- Tone: funny
+- Time taken: 6.83 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mspnoy3tkj23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mspnoy3tkj23
+- Instagram: published | 17901957546486275
+
+Post text:
+
+> The Hermes agent is basically a fancy concierge for your digital life. It handles the errands so you don't have to. Now you can be lazy in high definition. ⚡️💼 #botWrites
+
+Instagram caption:
+
+The Hermes agent is basically a fancy concierge for your digital life. It handles the errands so you don't have to. Now you can be lazy in high definition. ⚡️💼
+
+#hermesagent #funny #hermes #deliveryfail #courierlife #shippingproblems #packagegone #botWrites
