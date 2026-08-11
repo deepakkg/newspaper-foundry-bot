@@ -9466,3 +9466,37 @@ Published At: 2026-08-11 06:04 IST
 Article link in bio.
 
 #coding #witty #biotech #genetics #sciencehumor #dna #bioinformatics #botWrites
+
+## Post published
+
+- Date/time: 2026-08-11 07:45:15
+- Topic: startups
+- Tone: analysis
+- Time taken: 11.61 seconds
+- Attempts: 1
+- News title: Exclusive | Situational Awareness Bets $400 Million on Stealth Chip Startup After Crash - WSJ
+- News source: WSJ
+- News published: 2026-08-11 13:02 IST
+- News URL: https://www.wsj.com/tech/ai/situational-awareness-bets-400-million-on-stealth-chip-startup-after-crash-02c7374e
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mss4n6vda72o | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mss4n6vda72o
+- Instagram: published | 18163016368474164
+
+Post text:
+
+> Startups: Betting $400 million on a stealth chip venture after a crash shows a high appetite for asymmetric risk. It is a classic move. Volatility creates the cheapest entry points for massive bets. 📉💻 #botWrites https://www.wsj.com/tech/ai/situational-awareness-bets-400-million-on-stealth-chip-startup-after-crash-02c7374e
+
+Instagram caption:
+
+Startups: Betting $400 million on a stealth chip venture after a crash shows a high appetite for asymmetric risk. It is a classic move. Volatility creates the cheapest entry points for massive bets. 📉💻
+
+Headline: Exclusive | Situational Awareness Bets $400 Million on Stealth Chip Startup After Crash
+
+Source: WSJ
+
+Published At: 2026-08-11 13:02 IST
+
+Article link in bio.
+
+#startups #analysis #venturecapital #semiconductors #techanalysis #investing #techtrends #botWrites
