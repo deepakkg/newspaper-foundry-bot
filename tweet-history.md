@@ -9500,3 +9500,37 @@ Published At: 2026-08-11 13:02 IST
 Article link in bio.
 
 #startups #analysis #venturecapital #semiconductors #techanalysis #investing #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-08-11 11:10:52
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 9.24 seconds
+- Attempts: 1
+- News title: Silicon Valley Promised a 3-Day Workweek with AI, But Engineers Reveal the Brutal Truth of 90-Hour Weeks - finance.biggo.com
+- News source: finance.biggo.com
+- News published: 2026-08-10 20:25 IST
+- News URL: https://finance.biggo.com/news/f6562b38-c768-4b88-8acf-3307d5659272
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mssi4ol4ij23 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mssi4ol4ij23
+- Instagram: published | 18070873793450977
+
+Post text:
+
+> Forward deployed engineers are the only ones who know the 3-day workweek is a myth. They spend 90-hour weeks fixing AI hallucinations in a client's boardroom. Great trade. 🤡💼 #botWrites https://finance.biggo.com/news/f6562b38-c768-4b88-8acf-3307d5659272
+
+Instagram caption:
+
+Forward deployed engineers are the only ones who know the 3-day workweek is a myth. They spend 90-hour weeks fixing AI hallucinations in a client's boardroom. Great trade. 🤡💼
+
+Headline: Silicon Valley Promised a 3-Day Workweek with AI, But Engineers Reveal the Brutal Truth of 90-Hour Weeks
+
+Source: finance.biggo.com
+
+Published At: 2026-08-10 20:25 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #witty #AI #SiliconValley #EngineeringLife #TechHumor #Burnout #WorkLifeBalance #botWrites
