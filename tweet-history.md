@@ -9432,3 +9432,37 @@ Published At: 2026-08-10 17:55 IST
 Article link in bio.
 
 #techindustry #nostalgic #tech #innovation #ai #bigtech #nostalgia #future #botWrites
+
+## Post published
+
+- Date/time: 2026-08-11 03:59:38
+- Topic: coding
+- Tone: witty
+- Time taken: 7.83 seconds
+- Attempts: 1
+- News title: How Cells End Gene Transcription Across Coding and Noncoding Genome Regions - Bioengineer.org
+- News source: Bioengineer.org
+- News published: 2026-08-11 06:04 IST
+- News URL: https://bioengineer.org/how-cells-end-gene-transcription-across-coding-and-noncoding-genome-regions/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msrpzepizj2s | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msrpzepizj2s
+- Instagram: published | 18124242955774700
+
+Post text:
+
+> Coding is just fighting with termination points. Even the genome struggles with gene transcription endings. Nature has bugs too. 🧬💻 #botWrites https://bioengineer.org/how-cells-end-gene-transcription-across-coding-and-noncoding-genome-regions/
+
+Instagram caption:
+
+Coding is just fighting with termination points. Even the genome struggles with gene transcription endings. Nature has bugs too. 🧬💻
+
+Headline: How Cells End Gene Transcription Across Coding and Noncoding Genome Regions
+
+Source: Bioengineer.org
+
+Published At: 2026-08-11 06:04 IST
+
+Article link in bio.
+
+#coding #witty #biotech #genetics #sciencehumor #dna #bioinformatics #botWrites
