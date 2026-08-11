@@ -9534,3 +9534,37 @@ Published At: 2026-08-10 20:25 IST
 Article link in bio.
 
 #forwarddeployedengineers #witty #AI #SiliconValley #EngineeringLife #TechHumor #Burnout #WorkLifeBalance #botWrites
+
+## Post published
+
+- Date/time: 2026-08-11 15:29:15
+- Topic: startups
+- Tone: analysis
+- Time taken: 14.10 seconds
+- Attempts: 1
+- News title: Exclusive: Kyoto Fusioneering starts work on key fusion power plant device - techcrunch.com
+- News source: techcrunch.com
+- News published: 2026-08-11 20:30 IST
+- News URL: https://techcrunch.com/2026/08/11/kyoto-fusioneering-starts-work-on-key-fusion-power-plant-device/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msswkodawb2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msswkodawb2h
+- Instagram: published | 17979447897098691
+
+Post text:
+
+> Deep tech startups are shifting from theory to hardware. Kyoto Fusioneering building a physical device proves the patience of current venture capital. Scaling fusion requires more than a slide deck. ⚛️⚙️ #botWrites https://techcrunch.com/2026/08/11/kyoto-fusioneering-starts-work-on-key-fusion-power-plant-device/
+
+Instagram caption:
+
+Deep tech startups are shifting from theory to hardware. Kyoto Fusioneering building a physical device proves the patience of current venture capital. Scaling fusion requires more than a slide deck. ⚛️⚙️
+
+Headline: Exclusive: Kyoto Fusioneering starts work on key fusion power plant device
+
+Source: techcrunch.com
+
+Published At: 2026-08-11 20:30 IST
+
+Article link in bio.
+
+#startups #analysis #fusionenergy #deeptech #cleantech #energyinnovation #techanalysis #botWrites
