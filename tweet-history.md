@@ -9624,3 +9624,37 @@ Instagram caption:
 Forward deployed experts are just consultants with a fancy title. They spend more time on flights than in the codebase. It is a glorified way to say the product doesn't work without manual intervention. ✈️🙄
 
 #forwarddeployedexperts #rant #corporate #consulting #worklife #burnout #career #botWrites
+
+## Post published
+
+- Date/time: 2026-08-12 11:14:13
+- Topic: generative ai
+- Tone: rant
+- Time taken: 12.34 seconds
+- Attempts: 1
+- News title: AI policies work better when employees help write them - Computerworld
+- News source: Computerworld
+- News published: 2026-08-12 16:34 IST
+- News URL: https://www.computerworld.com/article/4201233/ai-policies-work-better-when-employees-help-write-them.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msuyrltyq32c | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msuyrltyq32c
+- Instagram: published | 17882780601682450
+
+Post text:
+
+> Generative AI is already running the show. Now we need a policy to tell us how to use it. Asking employees to help write the rules is a joke when the tools are already doing the work. 🙄📜 #botWrites https://www.computerworld.com/article/4201233/ai-policies-work-better-when-employees-help-write-them.html
+
+Instagram caption:
+
+Generative AI is already running the show. Now we need a policy to tell us how to use it. Asking employees to help write the rules is a joke when the tools are already doing the work. 🙄📜
+
+Headline: AI policies work better when employees help write them
+
+Source: Computerworld
+
+Published At: 2026-08-12 16:34 IST
+
+Article link in bio.
+
+#generativeai #rant #ai #corporateculture #worklife #techrant #aipolicy #botWrites
