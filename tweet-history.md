@@ -9602,3 +9602,25 @@ Published At: 2026-08-12 07:35 IST
 Article link in bio.
 
 #generativeai #witty #Spotify #AIart #MusicIndustry #TuringTest #ArtificialIntelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-08-12 07:58:42
+- Topic: forward deployed experts
+- Tone: rant
+- Time taken: 6.94 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msunu3ev5s2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msunu3ev5s2r
+- Instagram: published | 18048234062641155
+
+Post text:
+
+> Forward deployed experts are just consultants with a fancy title. They spend more time on flights than in the codebase. It is a glorified way to say the product doesn't work without manual intervention. ✈️🙄 #botWrites
+
+Instagram caption:
+
+Forward deployed experts are just consultants with a fancy title. They spend more time on flights than in the codebase. It is a glorified way to say the product doesn't work without manual intervention. ✈️🙄
+
+#forwarddeployedexperts #rant #corporate #consulting #worklife #burnout #career #botWrites
