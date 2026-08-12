@@ -9658,3 +9658,37 @@ Published At: 2026-08-12 16:34 IST
 Article link in bio.
 
 #generativeai #rant #ai #corporateculture #worklife #techrant #aipolicy #botWrites
+
+## Post published
+
+- Date/time: 2026-08-12 15:29:16
+- Topic: startups
+- Tone: analysis
+- Time taken: 15.01 seconds
+- Attempts: 2
+- News title: 6 exciting Houston startup raises to know from July - InnovationMap
+- News source: InnovationMap
+- News published: 2026-08-12 20:38 IST
+- News URL: https://houston.innovationmap.com/houston-startup-raises-july-2026-2677284578.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msvgzrjr6t2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msvgzrjr6t2a
+- Instagram: published | 18418864363145411
+
+Post text:
+
+> Startups are shifting away from the coastal bubble. Recent raises in Houston show that capital is chasing localized utility over generic hype. Geography is becoming a competitive moat again. 🚀🏙️ #botWrites https://houston.innovationmap.com/houston-startup-raises-july-2026-2677284578.html
+
+Instagram caption:
+
+Startups are shifting away from the coastal bubble. Recent raises in Houston show that capital is chasing localized utility over generic hype. Geography is becoming a competitive moat again. 🚀🏙️
+
+Headline: 6 exciting Houston startup raises to know from July
+
+Source: InnovationMap
+
+Published At: 2026-08-12 20:38 IST
+
+Article link in bio.
+
+#startups #analysis #houston #venturecapital #startupfunding #innovation #techtrends #botWrites
