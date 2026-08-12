@@ -9568,3 +9568,37 @@ Published At: 2026-08-11 20:30 IST
 Article link in bio.
 
 #startups #analysis #fusionenergy #deeptech #cleantech #energyinnovation #techanalysis #botWrites
+
+## Post published
+
+- Date/time: 2026-08-12 04:20:53
+- Topic: generative ai
+- Tone: witty
+- Time taken: 9.83 seconds
+- Attempts: 1
+- News title: Spotify asks artists to disclose whether they’re humans or AI - The Malaysian Reserve
+- News source: The Malaysian Reserve
+- News published: 2026-08-12 07:35 IST
+- News URL: https://themalaysianreserve.com/2026/08/12/spotify-asks-artists-to-disclose-whether-theyre-humans-or-ai/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msubojh2ul2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msubojh2ul2r
+- Instagram: published | 18142242448559542
+
+Post text:
+
+> Generative AI is reaching the Turing test for playlists. Spotify now wants artists to disclose if they are humans. Soon we will need a CAPTCHA to prove we can actually feel the beat. 🤖🎧 #botWrites https://themalaysianreserve.com/2026/08/12/spotify-asks-artists-to-disclose-whether-theyre-humans-or-ai/
+
+Instagram caption:
+
+Generative AI is reaching the Turing test for playlists. Spotify now wants artists to disclose if they are humans. Soon we will need a CAPTCHA to prove we can actually feel the beat. 🤖🎧
+
+Headline: Spotify asks artists to disclose whether they’re humans or AI
+
+Source: The Malaysian Reserve
+
+Published At: 2026-08-12 07:35 IST
+
+Article link in bio.
+
+#generativeai #witty #Spotify #AIart #MusicIndustry #TuringTest #ArtificialIntelligence #botWrites
