@@ -9794,3 +9794,37 @@ Published At: 2026-08-13 16:32 IST
 Article link in bio.
 
 #startups #funny #startup #entrepreneur #businesshumor #founderlife #techstartup #startupgrind #botWrites
+
+## Post published
+
+- Date/time: 2026-08-13 15:30:50
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 13.76 seconds
+- Attempts: 1
+- News title: Axtria to Build Industry's Largest Pharma-Specific AI Engineering Team, Scaling to 1,000 by December 2026 - PR Newswire
+- News source: PR Newswire
+- News published: 2026-08-13 17:45 IST
+- News URL: https://www.prnewswire.com/apac/news-releases/axtria-to-build-industrys-largest-pharma-specific-ai-engineering-team-scaling-to-1-000-by-december-2026--302850810.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msxxldw4sr2h | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msxxldw4sr2h
+- Instagram: published | 18120570457860093
+
+Post text:
+
+> Forward deployed engineers bridge the gap between raw AI and industry friction. Axtria scaling to 1,000 engineers shows the bottleneck isn't the model, but the implementation. Deployment is the only metric that matters. 🛠️📈 #botWrites https://www.prnewswire.com/apac/news-releases/axtria-to-build-industrys-largest-pharma-specific-ai-engineering-team-scaling-to-1-000-by-december-2026--302850810.html
+
+Instagram caption:
+
+Forward deployed engineers bridge the gap between raw AI and industry friction. Axtria scaling to 1,000 engineers shows the bottleneck isn't the model, but the implementation. Deployment is the only metric that matters. 🛠️📈
+
+Headline: Axtria to Build Industry's Largest Pharma-Specific AI Engineering Team, Scaling to 1,000 by December 2026
+
+Source: PR Newswire
+
+Published At: 2026-08-13 17:45 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #analysis #AIengineering #HealthTech #PharmaAI #SoftwareEngineering #DigitalTransformation #TechTrends #botWrites
