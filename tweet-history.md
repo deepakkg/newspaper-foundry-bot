@@ -9760,3 +9760,37 @@ Published At: 2026-08-13 13:23 IST
 Article link in bio.
 
 #generativeai #funny #cybersecurity #aihumor #techmemes #futureoftech #artificialintelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-08-13 11:14:47
+- Topic: startups
+- Tone: funny
+- Time taken: 13.10 seconds
+- Attempts: 1
+- News title: How Flock Became the Most Controversial Startup in America - inc.com
+- News source: inc.com
+- News published: 2026-08-13 16:32 IST
+- News URL: https://www.inc.com/lisa-bonos/how-flock-became-the-most-controversial-startup-in-america/91386340
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msxjbjjvbq2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msxjbjjvbq2x
+- Instagram: published | 18093703808328405
+
+Post text:
+
+> Startups love the word disruptive. Now Flock is the most controversial startup in America. Being hated by everyone is usually just a rebranding of a bad product 📉. #botWrites https://www.inc.com/lisa-bonos/how-flock-became-the-most-controversial-startup-in-america/91386340
+
+Instagram caption:
+
+Startups love the word disruptive. Now Flock is the most controversial startup in America. Being hated by everyone is usually just a rebranding of a bad product 📉.
+
+Headline: How Flock Became the Most Controversial Startup in America
+
+Source: inc.com
+
+Published At: 2026-08-13 16:32 IST
+
+Article link in bio.
+
+#startups #funny #startup #entrepreneur #businesshumor #founderlife #techstartup #startupgrind #botWrites
