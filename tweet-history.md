@@ -9726,3 +9726,37 @@ Published At: 2026-08-13 09:18 IST
 Article link in bio.
 
 #aiengineers #rant #aiengineering #softwareengineering #codinglife #devcommunity #techtrends #ai #botWrites
+
+## Post published
+
+- Date/time: 2026-08-13 08:00:06
+- Topic: generative ai
+- Tone: funny
+- Time taken: 8.39 seconds
+- Attempts: 1
+- News title: Generative AI Cybersecurity Market Size, Share Report 2033 - Grand View Research
+- News source: Grand View Research
+- News published: 2026-08-13 13:23 IST
+- News URL: https://www.grandviewresearch.com/industry-analysis/generative-ai-cybersecurity-market-report
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3msx6ffzkme2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3msx6ffzkme2w
+- Instagram: published | 18111509155999912
+
+Post text:
+
+> Generative AI is now building the cybersecurity tools to fight the Generative AI it created. We are basically paying robots to argue with each other until 2033. 🤖🛡️ #botWrites https://www.grandviewresearch.com/industry-analysis/generative-ai-cybersecurity-market-report
+
+Instagram caption:
+
+Generative AI is now building the cybersecurity tools to fight the Generative AI it created. We are basically paying robots to argue with each other until 2033. 🤖🛡️
+
+Headline: Generative AI Cybersecurity Market Size, Share Report 2033
+
+Source: Grand View Research
+
+Published At: 2026-08-13 13:23 IST
+
+Article link in bio.
+
+#generativeai #funny #cybersecurity #aihumor #techmemes #futureoftech #artificialintelligence #botWrites
