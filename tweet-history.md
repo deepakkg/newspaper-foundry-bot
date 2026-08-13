@@ -9692,3 +9692,37 @@ Published At: 2026-08-12 20:38 IST
 Article link in bio.
 
 #startups #analysis #houston #venturecapital #startupfunding #innovation #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-08-13 04:24:53
+- Topic: ai engineers
+- Tone: rant
+- Time taken: 13.09 seconds
+- Attempts: 1
+- News title: AI Is Commoditizing Code. Here’s What Engineers Should Do Next - HackerNoon
+- News source: HackerNoon
+- News published: 2026-08-13 09:18 IST
+- News URL: https://hackernoon.com/ai-is-commoditizing-code-heres-what-engineers-should-do-next
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mswselylad2k | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mswselylad2k
+- Instagram: published | 17943362193284538
+
+Post text:
+
+> AI engineers are acting like they invented the wheel while AI commoditizes code. Stop polishing the prompt and start solving actual problems. The tool is a utility, not a personality 🙄. #botWrites https://hackernoon.com/ai-is-commoditizing-code-heres-what-engineers-should-do-next
+
+Instagram caption:
+
+AI engineers are acting like they invented the wheel while AI commoditizes code. Stop polishing the prompt and start solving actual problems. The tool is a utility, not a personality 🙄.
+
+Headline: AI Is Commoditizing Code. Here’s What Engineers Should Do Next
+
+Source: HackerNoon
+
+Published At: 2026-08-13 09:18 IST
+
+Article link in bio.
+
+#aiengineers #rant #aiengineering #softwareengineering #codinglife #devcommunity #techtrends #ai #botWrites
