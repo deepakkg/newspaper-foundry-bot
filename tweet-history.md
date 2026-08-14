@@ -9828,3 +9828,37 @@ Published At: 2026-08-13 17:45 IST
 Article link in bio.
 
 #forwarddeployedengineers #analysis #AIengineering #HealthTech #PharmaAI #SoftwareEngineering #DigitalTransformation #TechTrends #botWrites
+
+## Post published
+
+- Date/time: 2026-08-14 04:21:51
+- Topic: tech industry
+- Tone: nostalgic
+- Time taken: 9.67 seconds
+- Attempts: 1
+- News title: Taiwan tech dividend expansion to accelerate non-tech industry upgrades - digitimes
+- News source: digitimes
+- News published: 2026-08-14 07:57 IST
+- News URL: https://www.digitimes.com/news/a20260814PD210/taiwan-dividend-investment-financing-manufacturing.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mszcnzmqw22a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mszcnzmqw22a
+- Instagram: published | 18089381480540205
+
+Post text:
+
+> Tech industry. Remember when hardware was a standalone tool? Now the tech dividend is upgrading everything else. The old boundaries are gone 💾🔌 #botWrites https://www.digitimes.com/news/a20260814PD210/taiwan-dividend-investment-financing-manufacturing.html
+
+Instagram caption:
+
+Tech industry. Remember when hardware was a standalone tool? Now the tech dividend is upgrading everything else. The old boundaries are gone 💾🔌
+
+Headline: Taiwan tech dividend expansion to accelerate non-tech industry upgrades
+
+Source: digitimes
+
+Published At: 2026-08-14 07:57 IST
+
+Article link in bio.
+
+#techindustry #nostalgic #techhistory #digitaltransformation #taiwantech #innovation #techevolution #industrygrowth #botWrites
