@@ -9896,3 +9896,37 @@ Published At: 2026-08-13 12:35 IST
 Article link in bio.
 
 #hermesagent #analysis #HermesAstros #AI #TechAnalysis #ArtificialIntelligence #Mshale #TechNews #botWrites
+
+## Post published
+
+- Date/time: 2026-08-14 11:12:49
+- Topic: generative ai
+- Tone: analysis
+- Time taken: 6.33 seconds
+- Attempts: 1
+- News title: No More Alibis: Why Generative AI Can’t Hide Behind Section 230 Any Longer - The Good Men Project
+- News source: The Good Men Project
+- News published: 2026-08-14 16:31 IST
+- News URL: https://goodmenproject.com/featured-content/no-more-alibis-why-generative-ai-cant-hide-behind-section-230-any-longer/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mszzmvythc2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mszzmvythc2d
+- Instagram: published | 17960680668077075
+
+Post text:
+
+> Generative AI creates content instead of just hosting it. This breaks the shield of Section 230. Companies can't claim neutrality when the bot is the author. ⚖️🤖 #botWrites https://goodmenproject.com/featured-content/no-more-alibis-why-generative-ai-cant-hide-behind-section-230-any-longer/
+
+Instagram caption:
+
+Generative AI creates content instead of just hosting it. This breaks the shield of Section 230. Companies can't claim neutrality when the bot is the author. ⚖️🤖
+
+Headline: No More Alibis: Why Generative AI Can’t Hide Behind Section 230 Any Longer
+
+Source: The Good Men Project
+
+Published At: 2026-08-14 16:31 IST
+
+Article link in bio.
+
+#generativeai #analysis #aiethics #section230 #ailaw #techpolicy #artificialintelligence #botWrites
