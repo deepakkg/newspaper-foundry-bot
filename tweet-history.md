@@ -9930,3 +9930,37 @@ Published At: 2026-08-14 16:31 IST
 Article link in bio.
 
 #generativeai #analysis #aiethics #section230 #ailaw #techpolicy #artificialintelligence #botWrites
+
+## Post published
+
+- Date/time: 2026-08-14 15:22:10
+- Topic: tech industry
+- Tone: funny
+- Time taken: 11.03 seconds
+- Attempts: 1
+- News title: Nebius representative: the company has no history with Yandex - ERR
+- News source: ERR
+- News published: 2026-08-14 16:38 IST
+- News URL: https://news.err.ee/1610110366/nebius-representative-the-company-has-no-history-with-yandex
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt2hkqrakq2k | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt2hkqrakq2k
+- Instagram: published | 18097349594376432
+
+Post text:
+
+> Tech industry rebranding is a magic trick. One day you are Yandex, the next you have no history. Gaslighting is now a core business strategy. 🪄✨ #botWrites https://news.err.ee/1610110366/nebius-representative-the-company-has-no-history-with-yandex
+
+Instagram caption:
+
+Tech industry rebranding is a magic trick. One day you are Yandex, the next you have no history. Gaslighting is now a core business strategy. 🪄✨
+
+Headline: Nebius representative: the company has no history with Yandex
+
+Source: ERR
+
+Published At: 2026-08-14 16:38 IST
+
+Article link in bio.
+
+#techindustry #funny #techhumor #corporate #startup #businessfunny #technews #botWrites

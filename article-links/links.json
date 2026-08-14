@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "title": "Nebius representative: the company has no history with Yandex - ERR",
+      "source": "ERR",
+      "published_at": "2026-08-14 16:38 IST",
+      "url": "https://news.err.ee/1610110366/nebius-representative-the-company-has-no-history-with-yandex",
+      "instagram_media_id": "18097349594376432",
+      "added_at": "2026-08-14T15:22:10Z"
+    },
+    {
       "title": "No More Alibis: Why Generative AI Can\u2019t Hide Behind Section 230 Any Longer - The Good Men Project",
       "source": "The Good Men Project",
       "published_at": "2026-08-14 16:31 IST",
@@ -191,14 +199,6 @@
       "url": "https://www.cio.com/article/4206307/beyond-chatbots-how-embedded-genai-is-transforming-banking-application-development.html",
       "instagram_media_id": "18115663360930124",
       "added_at": "2026-08-07T11:13:34Z"
-    },
-    {
-      "title": "Tech industry\u2019s 'rogue AI' problem gets worse as Meta\u2019s AI reportedly hacked another company - themarysue.com",
-      "source": "themarysue.com",
-      "published_at": "2026-08-07 06:45 IST",
-      "url": "https://www.themarysue.com/tech-industrys-rogue-ai-problem-gets-worse-as-metas-ai-reportedly-hacked-another-company/",
-      "instagram_media_id": "18016991423712487",
-      "added_at": "2026-08-07T07:50:53Z"
     }
   ]
 }
