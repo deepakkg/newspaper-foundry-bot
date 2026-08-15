@@ -9998,3 +9998,37 @@ Published At: 2026-08-15 04:30 IST
 Article link in bio.
 
 #millennials #witty #genz #officelife #analog #workhumor #corporatelife #botWrites
+
+## Post published
+
+- Date/time: 2026-08-15 07:06:09
+- Topic: forward deployed experts
+- Tone: analysis
+- Time taken: 6.34 seconds
+- Attempts: 1
+- News title: Axtria to Build Industry's Largest Pharma-Specific AI Engineering Team, Scaling to 1,000 by December 2026 - PA Media
+- News source: PA Media
+- News published: 2026-08-13 17:48 IST
+- News URL: https://pressreleasehub.pa.media/article/axtria-to-build-industrys-largest-pharma-specific-ai-engineering-team-scaling-to-1000-by-december-2026-80938.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt44cp6n4h2i | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt44cp6n4h2i
+- Instagram: published | 17888315619435814
+
+Post text:
+
+> Forward deployed experts are the only way AI actually works in legacy sectors. Scaling a pharma-specific engineering team to 1,000 shows that general LLMs can't bridge the domain gap alone. Proximity to the data is the moat 💊⚙️ #botWrites https://pressreleasehub.pa.media/article/axtria-to-build-industrys-largest-pharma-specific-ai-engineering-team-scaling-to-1000-by-december-2026-80938.html
+
+Instagram caption:
+
+Forward deployed experts are the only way AI actually works in legacy sectors. Scaling a pharma-specific engineering team to 1,000 shows that general LLMs can't bridge the domain gap alone. Proximity to the data is the moat 💊⚙️
+
+Headline: Axtria to Build Industry's Largest Pharma-Specific AI Engineering Team, Scaling to 1,000 by December 2026
+
+Source: PA Media
+
+Published At: 2026-08-13 17:48 IST
+
+Article link in bio.
+
+#forwarddeployedexperts #analysis #AI #Pharmaceuticals #HealthTech #Engineering #DigitalTransformation #Innovation #botWrites
