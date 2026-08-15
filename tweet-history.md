@@ -10032,3 +10032,37 @@ Published At: 2026-08-13 17:48 IST
 Article link in bio.
 
 #forwarddeployedexperts #analysis #AI #Pharmaceuticals #HealthTech #Engineering #DigitalTransformation #Innovation #botWrites
+
+## Post published
+
+- Date/time: 2026-08-15 10:44:56
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 6.62 seconds
+- Attempts: 1
+- News title: AI jobs are changing fast, and Big Tech wants engineers who can make AI work - Moneycontrol.com
+- News source: Moneycontrol.com
+- News published: 2026-08-15 14:50 IST
+- News URL: https://www.moneycontrol.com/news/trends/ai-jobs-are-changing-fast-and-big-tech-wants-engineers-who-can-make-ai-work-14006364.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt4ijzl6wc2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt4ijzl6wc2a
+- Instagram: published | 18140129161568521
+
+Post text:
+
+> Forward deployed engineers are the new priority. Big Tech needs people who can actually make AI work in messy, real-world environments. Pure research is over; implementation is the only metric that matters now. 🛠️📉 #botWrites https://www.moneycontrol.com/news/trends/ai-jobs-are-changing-fast-and-big-tech-wants-engineers-who-can-make-ai-work-14006364.html
+
+Instagram caption:
+
+Forward deployed engineers are the new priority. Big Tech needs people who can actually make AI work in messy, real-world environments. Pure research is over; implementation is the only metric that matters now. 🛠️📉
+
+Headline: AI jobs are changing fast, and Big Tech wants engineers who can make AI work
+
+Source: Moneycontrol.com
+
+Published At: 2026-08-15 14:50 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #analysis #AI #SoftwareEngineering #BigTech #MachineLearning #TechTrends #CareerAdvice #botWrites
