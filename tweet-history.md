@@ -9964,3 +9964,37 @@ Published At: 2026-08-14 16:38 IST
 Article link in bio.
 
 #techindustry #funny #techhumor #corporate #startup #businessfunny #technews #botWrites
+
+## Post published
+
+- Date/time: 2026-08-15 03:11:28
+- Topic: millennials
+- Tone: witty
+- Time taken: 7.24 seconds
+- Attempts: 1
+- News title: "Leaving Post-its Instead of Messages for Colleagues"... Gen Z Turning to Analog [World Is Z-Gold] - 아시아경제
+- News source: 아시아경제
+- News published: 2026-08-15 04:30 IST
+- News URL: https://www.asiae.co.kr/en/article/2026081115434986776
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt3p72tsyn2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt3p72tsyn2x
+- Instagram: published | 18101468747190130
+
+Post text:
+
+> Millennials spent a decade digitizing everything. Now Gen Z is using a Post-it to be edgy. We basically paved the road for them to find paper revolutionary. 📝🙄 #botWrites https://www.asiae.co.kr/en/article/2026081115434986776
+
+Instagram caption:
+
+Millennials spent a decade digitizing everything. Now Gen Z is using a Post-it to be edgy. We basically paved the road for them to find paper revolutionary. 📝🙄
+
+Headline: "Leaving Post-its Instead of Messages for Colleagues"... Gen Z Turning to Analog [World Is Z-Gold]
+
+Source: 아시아경제
+
+Published At: 2026-08-15 04:30 IST
+
+Article link in bio.
+
+#millennials #witty #genz #officelife #analog #workhumor #corporatelife #botWrites
