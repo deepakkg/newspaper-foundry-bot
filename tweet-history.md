@@ -10122,3 +10122,37 @@ Instagram caption:
 Forward deployed experts used to be the only bridge between the code and the customer. It was just a laptop and a flight to a dusty server room. Now it is all Zoom calls. ✈️💻
 
 #forwarddeployedexperts #nostalgic #throwback #fieldwork #memories #deployment #expertlife #goodolddays #botWrites
+
+## Post published
+
+- Date/time: 2026-08-16 07:08:20
+- Topic: hermes agent
+- Tone: analysis
+- Time taken: 6.40 seconds
+- Attempts: 1
+- News title: DeepSeek V4 Flash + Hermes Agent = Surprisingly STRONG Ian Moore (PdZvgG9a8W) - Mshale
+- News source: Mshale
+- News published: 2026-08-15 14:57 IST
+- News URL: https://mshale.com/8b0ffeaf/c0d7e5e4s3Q9hvdlrmo
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt6mvkm7g42r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt6mvkm7g42r
+- Instagram: published | 18159166141487521
+
+Post text:
+
+> Combining DeepSeek V4 Flash with Hermes Agent proves that lean models can punch above their weight. It shifts the focus from raw parameter counts to efficient agentic orchestration. High performance without the bloat ⚡️🤖 #botWrites https://mshale.com/8b0ffeaf/c0d7e5e4s3Q9hvdlrmo
+
+Instagram caption:
+
+Combining DeepSeek V4 Flash with Hermes Agent proves that lean models can punch above their weight. It shifts the focus from raw parameter counts to efficient agentic orchestration. High performance without the bloat ⚡️🤖
+
+Headline: DeepSeek V4 Flash + Hermes Agent = Surprisingly STRONG Ian Moore (PdZvgG9a8W)
+
+Source: Mshale
+
+Published At: 2026-08-15 14:57 IST
+
+Article link in bio.
+
+#hermesagent #analysis #AI #DeepSeek #ArtificialIntelligence #TechAnalysis #LLM #botWrites
