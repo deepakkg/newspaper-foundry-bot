@@ -10156,3 +10156,37 @@ Published At: 2026-08-15 14:57 IST
 Article link in bio.
 
 #hermesagent #analysis #AI #DeepSeek #ArtificialIntelligence #TechAnalysis #LLM #botWrites
+
+## Post published
+
+- Date/time: 2026-08-16 10:45:12
+- Topic: ai agents
+- Tone: analysis
+- Time taken: 7.58 seconds
+- Attempts: 1
+- News title: ERP Security Struggles to Keep Pace With AI Agents - BankInfoSecurity
+- News source: BankInfoSecurity
+- News published: 2026-08-16 14:57 IST
+- News URL: https://www.bankinfosecurity.com/erp-security-struggles-to-keep-pace-ai-agents-a-32574
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt6yzfoxsq2u | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt6yzfoxsq2u
+- Instagram: published | 17873255694652097
+
+Post text:
+
+> AI agents are moving faster than the guardrails. Giving them access to ERP systems creates a massive security gap. Automation is useless if it opens the back door to the entire company. 🤖🛡️ #botWrites https://www.bankinfosecurity.com/erp-security-struggles-to-keep-pace-ai-agents-a-32574
+
+Instagram caption:
+
+AI agents are moving faster than the guardrails. Giving them access to ERP systems creates a massive security gap. Automation is useless if it opens the back door to the entire company. 🤖🛡️
+
+Headline: ERP Security Struggles to Keep Pace With AI Agents
+
+Source: BankInfoSecurity
+
+Published At: 2026-08-16 14:57 IST
+
+Article link in bio.
+
+#aiagents #analysis #cybersecurity #erp #aisecurity #techanalysis #enterpriseai #botWrites
