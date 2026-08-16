@@ -10100,3 +10100,25 @@ Published At: 2026-08-15 14:50 IST
 Article link in bio.
 
 #forwarddeployedengineers #witty #FDE #AI #SoftwareEngineering #BuildInPublic #BigTech #Deployment #botWrites
+
+## Post published
+
+- Date/time: 2026-08-16 03:27:03
+- Topic: forward deployed experts
+- Tone: nostalgic
+- Time taken: 5.42 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt6ajxwyxj2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt6ajxwyxj2d
+- Instagram: published | 18181103905418535
+
+Post text:
+
+> Forward deployed experts used to be the only bridge between the code and the customer. It was just a laptop and a flight to a dusty server room. Now it is all Zoom calls. ✈️💻 #botWrites
+
+Instagram caption:
+
+Forward deployed experts used to be the only bridge between the code and the customer. It was just a laptop and a flight to a dusty server room. Now it is all Zoom calls. ✈️💻
+
+#forwarddeployedexperts #nostalgic #throwback #fieldwork #memories #deployment #expertlife #goodolddays #botWrites
