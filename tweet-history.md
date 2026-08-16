@@ -10190,3 +10190,37 @@ Published At: 2026-08-16 14:57 IST
 Article link in bio.
 
 #aiagents #analysis #cybersecurity #erp #aisecurity #techanalysis #enterpriseai #botWrites
+
+## Post published
+
+- Date/time: 2026-08-16 14:48:45
+- Topic: startups
+- Tone: analysis
+- Time taken: 7.48 seconds
+- Attempts: 2
+- News title: 14 startups tapped to solve major economic challenges - khmertimeskh.com
+- News source: khmertimeskh.com
+- News published: 2026-08-16 17:43 IST
+- News URL: https://www.khmertimeskh.com/502005369/14-startups-tapped-to-solve-major-economic-challenges/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mt7gmy2nyo2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mt7gmy2nyo2x
+- Instagram: published | 18067876739556543
+
+Post text:
+
+> Startups are now the primary tool for solving economic challenges. Tapping 14 companies at once shows a shift toward outsourced innovation. The risk is betting on scale before the product actually works. 📉📈 #botWrites https://www.khmertimeskh.com/502005369/14-startups-tapped-to-solve-major-economic-challenges/
+
+Instagram caption:
+
+Startups are now the primary tool for solving economic challenges. Tapping 14 companies at once shows a shift toward outsourced innovation. The risk is betting on scale before the product actually works. 📉📈
+
+Headline: 14 startups tapped to solve major economic challenges
+
+Source: khmertimeskh.com
+
+Published At: 2026-08-16 17:43 IST
+
+Article link in bio.
+
+#startups #analysis #entrepreneurship #economics #innovation #businessanalysis #startupgrowth #botWrites
