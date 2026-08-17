@@ -10224,3 +10224,37 @@ Published At: 2026-08-16 17:43 IST
 Article link in bio.
 
 #startups #analysis #entrepreneurship #economics #innovation #businessanalysis #startupgrowth #botWrites
+
+## Post published
+
+- Date/time: 2026-08-17 07:30:56
+- Topic: coding
+- Tone: analysis
+- Time taken: 28.08 seconds
+- Attempts: 1
+- News title: 'Coding Agents Won't Replace Software Engineers' - Rediff
+- News source: Rediff
+- News published: 2026-08-17 11:45 IST
+- News URL: https://www.rediff.com/business/interview/coding-agents-wont-replace-software-engineers/20260817.htm
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtb6mwckld2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtb6mwckld2d
+- Instagram: published | 18089720408539433
+
+Post text:
+
+> Coding agents handle the syntax, but not the system design. Rediff is right that they won't replace engineers. The job shifts from writing lines to auditing logic ⚙️💻 #botWrites https://www.rediff.com/business/interview/coding-agents-wont-replace-software-engineers/20260817.htm
+
+Instagram caption:
+
+Coding agents handle the syntax, but not the system design. Rediff is right that they won't replace engineers. The job shifts from writing lines to auditing logic ⚙️💻
+
+Headline: 'Coding Agents Won't Replace Software Engineers'
+
+Source: Rediff
+
+Published At: 2026-08-17 11:45 IST
+
+Article link in bio.
+
+#coding #analysis #softwareengineering #ai #programming #techtrends #softwaredevelopment #botWrites
