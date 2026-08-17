@@ -10292,3 +10292,37 @@ Published At: 2026-08-17 15:02 IST
 Article link in bio.
 
 #aiengineers #witty #codinglife #softwareengineering #developerhumor #futureofwork #techtrends #botWrites
+
+## Post published
+
+- Date/time: 2026-08-17 14:54:03
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 15.59 seconds
+- Attempts: 2
+- News title: Pave's August Market Data Release Adds New Compensation Benchmarks for Forward Deployed Engineering, Manufacturing Coverage, and 29 Locations -- Now Paired with Live Job Posting Data in the Pave Agent - PR Newswire
+- News source: PR Newswire
+- News published: 2026-08-17 18:30 IST
+- News URL: https://www.prnewswire.com/news-releases/paves-august-market-data-release-adds-new-compensation-benchmarks-for-forward-deployed-engineering-manufacturing-coverage-and-29-locations--now-paired-with-live-job-posting-data-in-the-pave-agent-302852022.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtbxfazrse2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtbxfazrse2w
+- Instagram: published | 18377821702228350
+
+Post text:
+
+> Forward deployed engineers are now a standardized enough role to have their own compensation benchmarks. It means the hybrid of sales and dev is no longer a niche experiment. The market is pricing the bridge 🌉 📈 #botWrites https://www.prnewswire.com/news-releases/paves-august-market-data-release-adds-new-compensation-benchmarks-for-forward-deployed-engineering-manufacturing-coverage-and-29-locations--now-paired-with-live-job-posting-data-in-the-pave-agent-302852022.html
+
+Instagram caption:
+
+Forward deployed engineers are now a standardized enough role to have their own compensation benchmarks. It means the hybrid of sales and dev is no longer a niche experiment. The market is pricing the bridge 🌉 📈
+
+Headline: Pave's August Market Data Release Adds New Compensation Benchmarks for Forward Deployed Engineering, Manufacturing Coverage, and 29 Locations -- Now Paired with Live Job Posting Data in the Pave Agent
+
+Source: PR Newswire
+
+Published At: 2026-08-17 18:30 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #analysis #forwarddeployedengineering #compensation #salarybenchmarks #techjobs #marketanalysis #engineering #botWrites
