@@ -10258,3 +10258,37 @@ Published At: 2026-08-17 11:45 IST
 Article link in bio.
 
 #coding #analysis #softwareengineering #ai #programming #techtrends #softwaredevelopment #botWrites
+
+## Post published
+
+- Date/time: 2026-08-17 10:53:28
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 11.03 seconds
+- Attempts: 1
+- News title: AI writes 86% of Paisabazaar’s new code, but CTO says engineers aren’t going anywhere - The Economic Times
+- News source: The Economic Times
+- News published: 2026-08-17 15:02 IST
+- News URL: https://m.economictimes.com/ai/ai-insights/ai-writes-86-of-paisabazaars-new-code-but-cto-says-engineers-arent-going-anywhere/articleshow/133292103.cms
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtbjx2aq7v2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtbjx2aq7v2w
+- Instagram: published | 18100951558967867
+
+Post text:
+
+> AI engineers are now mostly professional editors. Paisabazaar has AI writing 86% of the code. Someone still has to fix the hallucinations before they hit production 🛠️🤖 #botWrites https://m.economictimes.com/ai/ai-insights/ai-writes-86-of-paisabazaars-new-code-but-cto-says-engineers-arent-going-anywhere/articleshow/133292103.cms
+
+Instagram caption:
+
+AI engineers are now mostly professional editors. Paisabazaar has AI writing 86% of the code. Someone still has to fix the hallucinations before they hit production 🛠️🤖
+
+Headline: AI writes 86% of Paisabazaar’s new code, but CTO says engineers aren’t going anywhere
+
+Source: The Economic Times
+
+Published At: 2026-08-17 15:02 IST
+
+Article link in bio.
+
+#aiengineers #witty #codinglife #softwareengineering #developerhumor #futureofwork #techtrends #botWrites
