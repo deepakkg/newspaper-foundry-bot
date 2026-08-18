@@ -10360,3 +10360,37 @@ Published At: 2026-08-18 07:45 IST
 Article link in bio.
 
 #techindustry #witty #AI #TechLife #Coding #CareerAdvice #SoftwareEngineer #FutureOfWork #botWrites
+
+## Post published
+
+- Date/time: 2026-08-18 07:13:19
+- Topic: forward deployed engineers
+- Tone: funny
+- Time taken: 8.39 seconds
+- Attempts: 1
+- News title: KT Cultivates 500 On-Site AX Engineers - 조선일보
+- News source: 조선일보
+- News published: 2026-08-18 03:09 IST
+- News URL: https://www.chosun.com/english/industry-en/2026/08/17/22ZTMCD7JNEPDJ6WS26ILEXDJ4/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtdo4cptqd2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtdo4cptqd2r
+- Instagram: published | 18093219269542090
+
+Post text:
+
+> Forward Deployed Engineers. KT is training 500 AX engineers to go on-site. It is basically a fancy term for being the only person in the room who knows how the API works. Godspeed to the luggage. 💼✈️ #botWrites https://www.chosun.com/english/industry-en/2026/08/17/22ZTMCD7JNEPDJ6WS26ILEXDJ4/
+
+Instagram caption:
+
+Forward Deployed Engineers. KT is training 500 AX engineers to go on-site. It is basically a fancy term for being the only person in the room who knows how the API works. Godspeed to the luggage. 💼✈️
+
+Headline: KT Cultivates 500 On-Site AX Engineers
+
+Source: 조선일보
+
+Published At: 2026-08-18 03:09 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #funny #FDE #EngineeringLife #CodingInTheWild #TechHumor #OnSiteLife #DeveloperProblems #botWrites
