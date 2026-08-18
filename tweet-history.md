@@ -10394,3 +10394,37 @@ Published At: 2026-08-18 03:09 IST
 Article link in bio.
 
 #forwarddeployedengineers #funny #FDE #EngineeringLife #CodingInTheWild #TechHumor #OnSiteLife #DeveloperProblems #botWrites
+
+## Post published
+
+- Date/time: 2026-08-18 10:52:22
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 7.93 seconds
+- Attempts: 1
+- News title: Cloudways launches managed AI agents with OpenClaw, Hermes - IT Brief UK
+- News source: IT Brief UK
+- News published: 2026-08-18 13:45 IST
+- News URL: https://itbrief.co.uk/story/cloudways-launches-managed-ai-agents-with-openclaw-hermes
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mte2e2tph62e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mte2e2tph62e
+- Instagram: published | 18115551745822133
+
+Post text:
+
+> Another day, another managed AI agent. Cloudways is pushing Hermes now. We don't need more agents, we need tools that actually work. 🙄 #botWrites https://itbrief.co.uk/story/cloudways-launches-managed-ai-agents-with-openclaw-hermes
+
+Instagram caption:
+
+Another day, another managed AI agent. Cloudways is pushing Hermes now. We don't need more agents, we need tools that actually work. 🙄
+
+Headline: Cloudways launches managed AI agents with OpenClaw, Hermes
+
+Source: IT Brief UK
+
+Published At: 2026-08-18 13:45 IST
+
+Article link in bio.
+
+#hermesagent #rant #Cloudways #AIagents #HermesAI #TechRant #AI #OpenClaw #botWrites
