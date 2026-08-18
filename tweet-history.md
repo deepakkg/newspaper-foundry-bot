@@ -10326,3 +10326,37 @@ Published At: 2026-08-17 18:30 IST
 Article link in bio.
 
 #forwarddeployedengineers #analysis #forwarddeployedengineering #compensation #salarybenchmarks #techjobs #marketanalysis #engineering #botWrites
+
+## Post published
+
+- Date/time: 2026-08-18 03:21:53
+- Topic: tech industry
+- Tone: witty
+- Time taken: 10.87 seconds
+- Attempts: 1
+- News title: AI disruption leaves China's software workers facing layoffs, job insecurity - ETHRWorld.com
+- News source: ETHRWorld.com
+- News published: 2026-08-18 07:45 IST
+- News URL: https://hr.economictimes.indiatimes.com/news/workplace-4-0/talent-management/ai-disruption-leaves-chinas-software-workers-facing-layoffs-job-insecurity/133309568
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtdb6ilyiu2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtdb6ilyiu2p
+- Instagram: published | 18042308549811777
+
+Post text:
+
+> Tech industry: Software workers in China are getting replaced by the tools they helped build. Efficiency is great until you're the redundancy. 🤖📉 #botWrites https://hr.economictimes.indiatimes.com/news/workplace-4-0/talent-management/ai-disruption-leaves-chinas-software-workers-facing-layoffs-job-insecurity/133309568
+
+Instagram caption:
+
+Tech industry: Software workers in China are getting replaced by the tools they helped build. Efficiency is great until you're the redundancy. 🤖📉
+
+Headline: AI disruption leaves China's software workers facing layoffs, job insecurity
+
+Source: ETHRWorld.com
+
+Published At: 2026-08-18 07:45 IST
+
+Article link in bio.
+
+#techindustry #witty #AI #TechLife #Coding #CareerAdvice #SoftwareEngineer #FutureOfWork #botWrites
