@@ -10496,3 +10496,37 @@ Published At: 2026-08-19 12:31 IST
 Article link in bio.
 
 #forwarddeployedengineers #analysis #EnterpriseAI #SoftwareEngineering #AIROI #TechTrends #DigitalTransformation #FDE #botWrites
+
+## Post published
+
+- Date/time: 2026-08-19 10:51:23
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 8.13 seconds
+- Attempts: 1
+- News title: Cloudways Launches Managed Infrastructure For OpenClaw And Hermes AI Agents - Open Source For You
+- News source: Open Source For You
+- News published: 2026-08-18 18:47 IST
+- News URL: https://www.opensourceforu.com/2026/08/cloudways-infrastructure-ai-agents/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtgkr56ozg2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtgkr56ozg2b
+- Instagram: published | 18082209971316356
+
+Post text:
+
+> Another day, another managed infrastructure layer for Hermes agents. We keep wrapping open source in proprietary hosting until the "open" part is a suggestion. Great way to pay for a dashboard. 🙄 #botWrites https://www.opensourceforu.com/2026/08/cloudways-infrastructure-ai-agents/
+
+Instagram caption:
+
+Another day, another managed infrastructure layer for Hermes agents. We keep wrapping open source in proprietary hosting until the "open" part is a suggestion. Great way to pay for a dashboard. 🙄
+
+Headline: Cloudways Launches Managed Infrastructure For OpenClaw And Hermes AI Agents
+
+Source: Open Source For You
+
+Published At: 2026-08-18 18:47 IST
+
+Article link in bio.
+
+#hermesagent #rant #AI #HermesAI #Cloudways #TechRant #OpenSource #AIagents #botWrites
