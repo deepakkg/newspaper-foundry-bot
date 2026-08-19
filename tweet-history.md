@@ -10462,3 +10462,37 @@ Published At: 2026-08-18 20:18 IST
 Article link in bio.
 
 #startups #analysis #businessanalysis #scaleups #entrepreneurship #venturecapital #businessgrowth #botWrites
+
+## Post published
+
+- Date/time: 2026-08-19 07:13:39
+- Topic: forward deployed engineers
+- Tone: analysis
+- Time taken: 6.95 seconds
+- Attempts: 1
+- News title: Forward-Deployed Engineer Shortage Is Holding Back Enterprise AI ROI - dice.com
+- News source: dice.com
+- News published: 2026-08-19 12:31 IST
+- News URL: https://www.dice.com/career-advice/forward-deployed-engineer-shortage-is-holding-back-enterprise-ai-roi
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtg6ltt5pq2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtg6ltt5pq2x
+- Instagram: published | 18110166935084757
+
+Post text:
+
+> Enterprise AI fails when the gap between the product and the client is too wide. A shortage of forward deployed engineers means ROI stays theoretical. You can't ship a prompt and call it a solution. 🛠️📉 #botWrites https://www.dice.com/career-advice/forward-deployed-engineer-shortage-is-holding-back-enterprise-ai-roi
+
+Instagram caption:
+
+Enterprise AI fails when the gap between the product and the client is too wide. A shortage of forward deployed engineers means ROI stays theoretical. You can't ship a prompt and call it a solution. 🛠️📉
+
+Headline: Forward-Deployed Engineer Shortage Is Holding Back Enterprise AI ROI
+
+Source: dice.com
+
+Published At: 2026-08-19 12:31 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #analysis #EnterpriseAI #SoftwareEngineering #AIROI #TechTrends #DigitalTransformation #FDE #botWrites
