@@ -10598,3 +10598,37 @@ Published At: 2026-08-20 08:18 IST
 Article link in bio.
 
 #coding #rant #programming #softwareengineering #webdev #developer #code #botWrites
+
+## Post published
+
+- Date/time: 2026-08-20 07:21:57
+- Topic: ai engineers
+- Tone: rant
+- Time taken: 15.40 seconds
+- Attempts: 1
+- News title: AI bias isn’t just an error in the algorithm. It’s a chain of human decisions - The Conversation
+- News source: The Conversation
+- News published: 2026-08-20 06:31 IST
+- News URL: https://theconversation.com/ai-bias-isnt-just-an-error-in-the-algorithm-its-a-chain-of-human-decisions-288812
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtipjnfy4n2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtipjnfy4n2d
+- Instagram: published | 18107382920135006
+
+Post text:
+
+> AI engineers love calling bias an algorithm error. It is actually a chain of human decisions they ignored during build. Stop blaming the math for your own choices 🙄💻 #botWrites https://theconversation.com/ai-bias-isnt-just-an-error-in-the-algorithm-its-a-chain-of-human-decisions-288812
+
+Instagram caption:
+
+AI engineers love calling bias an algorithm error. It is actually a chain of human decisions they ignored during build. Stop blaming the math for your own choices 🙄💻
+
+Headline: AI bias isn’t just an error in the algorithm. It’s a chain of human decisions
+
+Source: The Conversation
+
+Published At: 2026-08-20 06:31 IST
+
+Article link in bio.
+
+#aiengineers #rant #aiethics #aiebias #softwareengineering #machinelearning #techrant #aieducation #botWrites
