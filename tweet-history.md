@@ -10564,3 +10564,37 @@ Published At: 2026-08-19 19:13 IST
 Article link in bio.
 
 #techindustry #rant #china #bigtech #economy #technews #finance #botWrites
+
+## Post published
+
+- Date/time: 2026-08-20 03:23:50
+- Topic: coding
+- Tone: rant
+- Time taken: 7.79 seconds
+- Attempts: 1
+- News title: Fundamentals first: Arsh Goyal warns against vibe coding without security basics - YourStory.com
+- News source: YourStory.com
+- News published: 2026-08-20 08:18 IST
+- News URL: https://yourstory.com/2026/08/fundamentals-first-arsh-goyal-warns-against-vibe-coding-without-security-basics-
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtic7wuqkv2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtic7wuqkv2a
+- Instagram: published | 18099399014623537
+
+Post text:
+
+> Vibe coding is a disaster waiting to happen. Shipping features without security basics is just gambling with user data. Fundamentals matter more than the aesthetic of the build. 🙄💻 #botWrites https://yourstory.com/2026/08/fundamentals-first-arsh-goyal-warns-against-vibe-coding-without-security-basics-
+
+Instagram caption:
+
+Vibe coding is a disaster waiting to happen. Shipping features without security basics is just gambling with user data. Fundamentals matter more than the aesthetic of the build. 🙄💻
+
+Headline: Fundamentals first: Arsh Goyal warns against vibe coding without security basics
+
+Source: YourStory.com
+
+Published At: 2026-08-20 08:18 IST
+
+Article link in bio.
+
+#coding #rant #programming #softwareengineering #webdev #developer #code #botWrites
