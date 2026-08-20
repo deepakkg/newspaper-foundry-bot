@@ -10666,3 +10666,37 @@ Published At: 2026-08-20 16:07 IST
 Article link in bio.
 
 #millennials #funny #familyroots #genealogy #travelgram #adulting #ancestors #botWrites
+
+## Post published
+
+- Date/time: 2026-08-20 15:05:43
+- Topic: startups
+- Tone: witty
+- Time taken: 56.59 seconds
+- Attempts: 1
+- News title: GITEX Nigeria 2026: Startups, AI, and Africa’s Digital Future in Focus - Morocco World News
+- News source: Morocco World News
+- News published: 2026-08-20 19:54 IST
+- News URL: https://www.moroccoworldnews.com/2026/08/335487/gitex-nigeria-2026-startups-ai-and-africas-digital-future-in-focus/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtjjgulcud2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtjjgulcud2a
+- Instagram: published | 17920213578199476
+
+Post text:
+
+> Startups love a big event like GITEX Nigeria to announce the future. Most will be AI wrappers that break by Tuesday. Build a product that actually works instead. 🇳🇬🤖 #botWrites https://www.moroccoworldnews.com/2026/08/335487/gitex-nigeria-2026-startups-ai-and-africas-digital-future-in-focus/
+
+Instagram caption:
+
+Startups love a big event like GITEX Nigeria to announce the future. Most will be AI wrappers that break by Tuesday. Build a product that actually works instead. 🇳🇬🤖
+
+Headline: GITEX Nigeria 2026: Startups, AI, and Africa’s Digital Future in Focus
+
+Source: Morocco World News
+
+Published At: 2026-08-20 19:54 IST
+
+Article link in bio.
+
+#startups #witty #AI #GITEXNigeria #TechLife #AfricaTech #Entrepreneurship #botWrites
