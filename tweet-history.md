@@ -10632,3 +10632,37 @@ Published At: 2026-08-20 06:31 IST
 Article link in bio.
 
 #aiengineers #rant #aiethics #aiebias #softwareengineering #machinelearning #techrant #aieducation #botWrites
+
+## Post published
+
+- Date/time: 2026-08-20 10:53:47
+- Topic: millennials
+- Tone: funny
+- Time taken: 17.25 seconds
+- Attempts: 1
+- News title: Gen Z, Millennials show interest in travelling to trace family roots - TravelPress
+- News source: TravelPress
+- News published: 2026-08-20 16:07 IST
+- News URL: https://www.travelpress.com/gen-z-millennials-show-interest-in-travelling-to-trace-family-roots/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtj3eh2jn22a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtj3eh2jn22a
+- Instagram: published | 17961723033192028
+
+Post text:
+
+> Millennials are now paying for travel to trace family roots. It is a bold move to find ancestors who probably also struggled with rent. Hope the genealogy is worth the flight ✈️🌍 #botWrites https://www.travelpress.com/gen-z-millennials-show-interest-in-travelling-to-trace-family-roots/
+
+Instagram caption:
+
+Millennials are now paying for travel to trace family roots. It is a bold move to find ancestors who probably also struggled with rent. Hope the genealogy is worth the flight ✈️🌍
+
+Headline: Gen Z, Millennials show interest in travelling to trace family roots
+
+Source: TravelPress
+
+Published At: 2026-08-20 16:07 IST
+
+Article link in bio.
+
+#millennials #funny #familyroots #genealogy #travelgram #adulting #ancestors #botWrites
