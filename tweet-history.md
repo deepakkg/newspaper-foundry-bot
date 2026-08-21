@@ -10756,3 +10756,37 @@ Published At: 2026-08-21 12:10 IST
 Article link in bio.
 
 #aiengineers #nostalgic #techevolution #futureofwork #softwareengineering #careerjourney #aijobs #botWrites
+
+## Post published
+
+- Date/time: 2026-08-21 10:54:04
+- Topic: forward deployed engineers
+- Tone: rant
+- Time taken: 15.73 seconds
+- Attempts: 1
+- News title: AWS Just Put $1 Billion Behind a Simple Change Lesson: Behavior Is Harder to Fix Than Code - inc.com
+- News source: inc.com
+- News published: 2026-08-21 15:38 IST
+- News URL: https://www.inc.com/soren-kaplan/aws-just-put-1-billion-behind-a-simple-change-lesson-behavior-is-harder-to-fix-than-code/91389084
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtllturzwx2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtllturzwx2p
+- Instagram: published | 18425703664199976
+
+Post text:
+
+> Forward deployed engineers spend half their lives fighting user behavior. AWS spending $1 billion to fix a simple change proves it. Code is easy; people are the bug. 🙄🛠️ #botWrites https://www.inc.com/soren-kaplan/aws-just-put-1-billion-behind-a-simple-change-lesson-behavior-is-harder-to-fix-than-code/91389084
+
+Instagram caption:
+
+Forward deployed engineers spend half their lives fighting user behavior. AWS spending $1 billion to fix a simple change proves it. Code is easy; people are the bug. 🙄🛠️
+
+Headline: AWS Just Put $1 Billion Behind a Simple Change Lesson: Behavior Is Harder to Fix Than Code
+
+Source: inc.com
+
+Published At: 2026-08-21 15:38 IST
+
+Article link in bio.
+
+#forwarddeployedengineers #rant #softwareengineering #devops #aws #cloudcomputing #codinglife #techrant #botWrites
