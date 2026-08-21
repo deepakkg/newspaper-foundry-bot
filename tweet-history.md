@@ -10790,3 +10790,37 @@ Published At: 2026-08-21 15:38 IST
 Article link in bio.
 
 #forwarddeployedengineers #rant #softwareengineering #devops #aws #cloudcomputing #codinglife #techrant #botWrites
+
+## Post published
+
+- Date/time: 2026-08-21 15:03:47
+- Topic: startups
+- Tone: witty
+- Time taken: 17.20 seconds
+- Attempts: 1
+- News title: ​Hawaii’s Young People Are Fleeing Paradise. Can Tech Startups Keep Them? - WSJ
+- News source: WSJ
+- News published: 2026-08-21 20:02 IST
+- News URL: https://www.wsj.com/business/entrepreneurship/hawaii-tourism-tech-jobs-9630f68b
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtlzsjr7nn2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtlzsjr7nn2a
+- Instagram: published | 18115699957941912
+
+Post text:
+
+> Startups usually thrive on chaos, not scenery. Using tech to stop a brain drain in Hawaii is a bold bet. Turns out paradise isn't enough if you can't find a seed round. 🏝️💻 #botWrites https://www.wsj.com/business/entrepreneurship/hawaii-tourism-tech-jobs-9630f68b
+
+Instagram caption:
+
+Startups usually thrive on chaos, not scenery. Using tech to stop a brain drain in Hawaii is a bold bet. Turns out paradise isn't enough if you can't find a seed round. 🏝️💻
+
+Headline: ​Hawaii’s Young People Are Fleeing Paradise. Can Tech Startups Keep Them?
+
+Source: WSJ
+
+Published At: 2026-08-21 20:02 IST
+
+Article link in bio.
+
+#startups #witty #startup #techlife #hawaii #braindrain #innovation #entrepreneur #botWrites
