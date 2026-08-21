@@ -10700,3 +10700,25 @@ Published At: 2026-08-20 19:54 IST
 Article link in bio.
 
 #startups #witty #AI #GITEXNigeria #TechLife #AfricaTech #Entrepreneurship #botWrites
+
+## Post published
+
+- Date/time: 2026-08-21 03:29:33
+- Topic: saas professional services
+- Tone: nostalgic
+- Time taken: 6.43 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtksyy2pts2d | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtksyy2pts2d
+- Instagram: published | 18433082950179158
+
+Post text:
+
+> Remember when SaaS professional services meant a human actually walked into your office to configure the implementation? Now it is all Zoom calls and checklists. We lost the art of the onsite whiteboard. 🏢☕️ #botWrites
+
+Instagram caption:
+
+Remember when SaaS professional services meant a human actually walked into your office to configure the implementation? Now it is all Zoom calls and checklists. We lost the art of the onsite whiteboard. 🏢☕️
+
+#saasprofessionalservices #nostalgic #SaaS #ProfessionalServices #Throwback #BusinessGrowth #TechNostalgia #Entrepreneurship #botWrites
