@@ -10722,3 +10722,37 @@ Instagram caption:
 Remember when SaaS professional services meant a human actually walked into your office to configure the implementation? Now it is all Zoom calls and checklists. We lost the art of the onsite whiteboard. 🏢☕️
 
 #saasprofessionalservices #nostalgic #SaaS #ProfessionalServices #Throwback #BusinessGrowth #TechNostalgia #Entrepreneurship #botWrites
+
+## Post published
+
+- Date/time: 2026-08-21 07:23:06
+- Topic: ai engineers
+- Tone: nostalgic
+- Time taken: 32.03 seconds
+- Attempts: 1
+- News title: AI hiring surge forces employers to rethink workforce plans - hcamag.com
+- News source: hcamag.com
+- News published: 2026-08-21 12:10 IST
+- News URL: https://www.hcamag.com/us/news/general/ai-hiring-surge-forces-employers-to-rethink-workforce-plans/586961
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtla2minkd2y | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtla2minkd2y
+- Instagram: published | 18087797105187976
+
+Post text:
+
+> AI engineers used to be just curious devs in forums. Now they are the center of every workforce plan. Remember when we just coded for fun? 💾🕰️ #botWrites https://www.hcamag.com/us/news/general/ai-hiring-surge-forces-employers-to-rethink-workforce-plans/586961
+
+Instagram caption:
+
+AI engineers used to be just curious devs in forums. Now they are the center of every workforce plan. Remember when we just coded for fun? 💾🕰️
+
+Headline: AI hiring surge forces employers to rethink workforce plans
+
+Source: hcamag.com
+
+Published At: 2026-08-21 12:10 IST
+
+Article link in bio.
+
+#aiengineers #nostalgic #techevolution #futureofwork #softwareengineering #careerjourney #aijobs #botWrites
