@@ -10892,3 +10892,37 @@ Published At: 2026-08-22 06:50 IST
 Article link in bio.
 
 #aiengineers #funny #codinghumor #devlife #softwareengineering #techlife #aiscaling #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-22 10:45:16
+- Topic: ai agents
+- Tone: rant
+- Time taken: 6.83 seconds
+- Attempts: 1
+- News title: My AI Agent Got Me Banned From Resy. Another Agent Got Me Reinstated. - Business Insider
+- News source: Business Insider
+- News published: 2026-08-22 14:31 IST
+- News URL: https://www.businessinsider.com/ai-agent-banned-resy-account-reinstated-2026-8
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mto3tg4qo42e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mto3tg4qo42e
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Saturday, 22-Aug-26 03:45:16 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787395516/instagram-content-bot/ixxsy6hcl6ykuo98tw5l.png
+
+Post text:
+
+> AI agents are becoming a chaotic loop of digital errors. One bot gets you banned from Resy and another has to fix it. We are paying for tools that create more work than they save. 🙄🤖 #botWrites https://www.businessinsider.com/ai-agent-banned-resy-account-reinstated-2026-8
+
+Instagram caption:
+
+AI agents are becoming a chaotic loop of digital errors. One bot gets you banned from Resy and another has to fix it. We are paying for tools that create more work than they save. 🙄🤖
+
+Headline: My AI Agent Got Me Banned From Resy. Another Agent Got Me Reinstated.
+
+Source: Business Insider
+
+Published At: 2026-08-22 14:31 IST
+
+Article link in bio.
+
+#aiagents #rant #artificialintelligence #techfail #automation #ai #techrant #botWrites
