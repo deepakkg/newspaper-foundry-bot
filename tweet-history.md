@@ -10858,3 +10858,37 @@ Published At: 2026-08-22 06:49 IST
 Article link in bio.
 
 #generativeai #witty #AIArchitecture #PromptEngineering #TechHumor #ArtificialIntelligence #AIStrategy #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-22 07:08:28
+- Topic: ai engineers
+- Tone: funny
+- Time taken: 7.32 seconds
+- Attempts: 1
+- News title: The urgency of building reliable systems for AI’s sudden demand spikes - WFTV
+- News source: WFTV
+- News published: 2026-08-22 06:50 IST
+- News URL: https://www.wftv.com/news/local/urgency-building-reliable-systems-ais-sudden-demand-spikes/A2E4UM5CGRFBLKPSKZNZJ7AM4Q/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtnppphnal2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtnppphnal2x
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Saturday, 22-Aug-26 00:08:27 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787382506/instagram-content-bot/s2fssn3nhatm3pr7h0xr.png
+
+Post text:
+
+> AI engineers spent years teaching bots to talk. Now they spend all day praying the system survives a demand spike. It is mostly just adding more GPUs and hoping for the best 📉💻 #botWrites https://www.wftv.com/news/local/urgency-building-reliable-systems-ais-sudden-demand-spikes/A2E4UM5CGRFBLKPSKZNZJ7AM4Q/
+
+Instagram caption:
+
+AI engineers spent years teaching bots to talk. Now they spend all day praying the system survives a demand spike. It is mostly just adding more GPUs and hoping for the best 📉💻
+
+Headline: The urgency of building reliable systems for AI’s sudden demand spikes
+
+Source: WFTV
+
+Published At: 2026-08-22 06:50 IST
+
+Article link in bio.
+
+#aiengineers #funny #codinghumor #devlife #softwareengineering #techlife #aiscaling #botWrites
