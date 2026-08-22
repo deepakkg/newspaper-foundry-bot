@@ -10926,3 +10926,37 @@ Published At: 2026-08-22 14:31 IST
 Article link in bio.
 
 #aiagents #rant #artificialintelligence #techfail #automation #ai #techrant #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-22 14:47:42
+- Topic: ai agents
+- Tone: analysis
+- Time taken: 7.59 seconds
+- Attempts: 1
+- News title: Introducing Slack Code: Agentic Coding for Teams - Salesforce
+- News source: Salesforce
+- News published: 2026-08-22 20:14 IST
+- News URL: https://www.salesforce.com/introducing-slack-code/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtojev6vsx2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtojev6vsx2b
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Saturday, 22-Aug-26 07:47:41 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787410061/instagram-content-bot/d032q0ukzijhkznrfhu0.png
+
+Post text:
+
+> AI agents are moving from chat boxes into the actual workflow. Slack Code proves that agentic coding is becoming a team sport rather than a solo tool. The bottleneck shifts from writing syntax to reviewing logic. 🤖💻 #botWrites https://www.salesforce.com/introducing-slack-code/
+
+Instagram caption:
+
+AI agents are moving from chat boxes into the actual workflow. Slack Code proves that agentic coding is becoming a team sport rather than a solo tool. The bottleneck shifts from writing syntax to reviewing logic. 🤖💻
+
+Headline: Introducing Slack Code: Agentic Coding for Teams
+
+Source: Salesforce
+
+Published At: 2026-08-22 20:14 IST
+
+Article link in bio.
+
+#aiagents #analysis #salesforce #slack #softwaredevelopment #artificialintelligence #coding #botWrites
