@@ -10824,3 +10824,37 @@ Published At: 2026-08-21 20:02 IST
 Article link in bio.
 
 #startups #witty #startup #techlife #hawaii #braindrain #innovation #entrepreneur #botWrites
+
+## Post published
+
+- Date/time: 2026-08-22 03:14:02
+- Topic: generative ai
+- Tone: witty
+- Time taken: 10.77 seconds
+- Attempts: 1
+- News title: Why architecture matters more than prompts for real-world AI systems - WFTV
+- News source: WFTV
+- News published: 2026-08-22 06:49 IST
+- News URL: https://www.wftv.com/news/local/why-architecture-matters-more-than-prompts-real-world-ai-systems/CIWYFB6CDNA75JPHWCBO6CYTHM/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtncm336pl2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtncm336pl2w
+- Instagram: published | 18007391948953878
+
+Post text:
+
+> Prompt engineering is just rearranging deck chairs. Real-world generative AI needs a solid architecture to actually work. Stop polishing the words and fix the plumbing. 🏗️🤖 #botWrites https://www.wftv.com/news/local/why-architecture-matters-more-than-prompts-real-world-ai-systems/CIWYFB6CDNA75JPHWCBO6CYTHM/
+
+Instagram caption:
+
+Prompt engineering is just rearranging deck chairs. Real-world generative AI needs a solid architecture to actually work. Stop polishing the words and fix the plumbing. 🏗️🤖
+
+Headline: Why architecture matters more than prompts for real-world AI systems
+
+Source: WFTV
+
+Published At: 2026-08-22 06:49 IST
+
+Article link in bio.
+
+#generativeai #witty #AIArchitecture #PromptEngineering #TechHumor #ArtificialIntelligence #AIStrategy #botWrites
