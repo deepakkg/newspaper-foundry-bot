@@ -11028,3 +11028,37 @@ Published At: 2026-08-23 07:08 IST
 Article link in bio.
 
 #coding #rant #programming #developer #codinglife #softwareengineering #techrant #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-23 10:46:37
+- Topic: tech industry
+- Tone: rant
+- Time taken: 6.03 seconds
+- Attempts: 1
+- News title: Tech Industry Concerned About No Deal on Canadian Tariffs - CCIA
+- News source: CCIA
+- News published: 2026-08-22 23:15 IST
+- News URL: https://ccianet.org/news/2026/08/tech-industry-concerned-about-no-deal-on-canadian-tariffs/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtqmeq47ml2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtqmeq47ml2r
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Sunday, 23-Aug-26 03:46:37 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787481996/instagram-content-bot/uoecxgs2jinchmfnk3yl.png
+
+Post text:
+
+> Tech industry logic is a joke. Now they're panicking over Canadian tariffs. Expect the costs to hit the users, not the margins 🙄📉 #botWrites https://ccianet.org/news/2026/08/tech-industry-concerned-about-no-deal-on-canadian-tariffs/
+
+Instagram caption:
+
+Tech industry logic is a joke. Now they're panicking over Canadian tariffs. Expect the costs to hit the users, not the margins 🙄📉
+
+Headline: Tech Industry Concerned About No Deal on Canadian Tariffs
+
+Source: CCIA
+
+Published At: 2026-08-22 23:15 IST
+
+Article link in bio.
+
+#techindustry #rant #tariffs #canadatech #economics #technews #trade #botWrites
