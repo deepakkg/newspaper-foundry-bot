@@ -10960,3 +10960,37 @@ Published At: 2026-08-22 20:14 IST
 Article link in bio.
 
 #aiagents #analysis #salesforce #slack #softwaredevelopment #artificialintelligence #coding #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-23 03:28:56
+- Topic: coding
+- Tone: funny
+- Time taken: 7.27 seconds
+- Attempts: 1
+- News title: Laguna S 2.1: High-End Agentic Coding Model - Dynamic Business
+- News source: Dynamic Business
+- News published: 2026-08-23 07:08 IST
+- News URL: https://dynamicbusiness.com/ai-tools/laguna-s-2-1-high-end-agentic-coding-model.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtptw44xov2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtptw44xov2x
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Saturday, 22-Aug-26 20:28:56 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787455736/instagram-content-bot/xylhxgjxqdngj1rsthqc.png
+
+Post text:
+
+> Coding is getting too automated. Laguna S 2.1 is an agentic model that might actually write the code better than the human. Now we can spend eight hours debugging an AI's mistake instead of our own 🤖💻 #botWrites https://dynamicbusiness.com/ai-tools/laguna-s-2-1-high-end-agentic-coding-model.html
+
+Instagram caption:
+
+Coding is getting too automated. Laguna S 2.1 is an agentic model that might actually write the code better than the human. Now we can spend eight hours debugging an AI's mistake instead of our own 🤖💻
+
+Headline: Laguna S 2.1: High-End Agentic Coding Model
+
+Source: Dynamic Business
+
+Published At: 2026-08-23 07:08 IST
+
+Article link in bio.
+
+#coding #funny #programmerhumor #codinglife #developer #ai #softwareengineering #botWrites
