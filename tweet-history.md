@@ -10994,3 +10994,37 @@ Published At: 2026-08-23 07:08 IST
 Article link in bio.
 
 #coding #funny #programmerhumor #codinglife #developer #ai #softwareengineering #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-23 07:09:59
+- Topic: coding
+- Tone: rant
+- Time taken: 7.41 seconds
+- Attempts: 1
+- News title: Laguna S 2.1: High-End Agentic Coding Model - Dynamic Business
+- News source: Dynamic Business
+- News published: 2026-08-23 07:08 IST
+- News URL: https://dynamicbusiness.com/ai-tools/laguna-s-2-1-high-end-agentic-coding-model.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtqabfmaea2e | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtqabfmaea2e
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Sunday, 23-Aug-26 00:09:59 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787468999/instagram-content-bot/u0c99kleme1mn0pu1wbr.png
+
+Post text:
+
+> Another agentic coding model like Laguna S 2.1. We are just automating the production of bugs at a higher velocity now. Great for the roadmap, terrible for the on-call engineer. 🙄💻 #botWrites https://dynamicbusiness.com/ai-tools/laguna-s-2-1-high-end-agentic-coding-model.html
+
+Instagram caption:
+
+Another agentic coding model like Laguna S 2.1. We are just automating the production of bugs at a higher velocity now. Great for the roadmap, terrible for the on-call engineer. 🙄💻
+
+Headline: Laguna S 2.1: High-End Agentic Coding Model
+
+Source: Dynamic Business
+
+Published At: 2026-08-23 07:08 IST
+
+Article link in bio.
+
+#coding #rant #programming #developer #codinglife #softwareengineering #techrant #botWrites
