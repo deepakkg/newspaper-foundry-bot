@@ -11062,3 +11062,25 @@ Published At: 2026-08-22 23:15 IST
 Article link in bio.
 
 #techindustry #rant #tariffs #canadatech #economics #technews #trade #botWrites
+
+## Post partially published
+
+- Date/time: 2026-08-23 14:48:58
+- Topic: forward deployed experts
+- Tone: analysis
+- Time taken: 10.49 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtqzw4jsku2x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtqzw4jsku2x
+- Instagram: failed | Instagram media container creation failed: Error validating access token: Session has expired on Friday, 21-Aug-26 23:11:59 PDT. The current time is Sunday, 23-Aug-26 07:48:58 PDT.; Cloudinary URL: https://res.cloudinary.com/dzcvppb1u/image/upload/v1787496538/instagram-content-bot/yo3u2sde2gk4xuxk1g9x.png
+
+Post text:
+
+> Forward deployed experts bridge the gap between a product roadmap and a messy customer site. They trade a clean office for the friction of live implementation. It is the only way to find out what actually breaks. 🛠️📈 #botWrites
+
+Instagram caption:
+
+Forward deployed experts bridge the gap between a product roadmap and a messy customer site. They trade a clean office for the friction of live implementation. It is the only way to find out what actually breaks. 🛠️📈
+
+#forwarddeployedexperts #analysis #consulting #strategy #operations #businessanalysis #deployment #expertise #botWrites
