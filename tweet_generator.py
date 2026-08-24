@@ -37,6 +37,7 @@ from publishing_flow import (
 )
 from publisher import (
     build_post_text,
+    build_post_text_without_url,
     max_generated_text_chars,
 )
 
@@ -104,7 +105,7 @@ def run_once() -> int:
         config = load_config()
     except Exception as exc:
         print(f"Could not generate post: {exc}")
-        return 0
+        return 1
 
     topic: str | None = None
     tone: str | None = None
@@ -152,6 +153,12 @@ def run_once() -> int:
             on_demand_request is not None
             and on_demand_request.kind == "direct_post"
         )
+        platform_previews: dict[str, str] = {}
+        if config.post_to_bluesky:
+            platform_previews["Bluesky"] = build_post_text_without_url(tweet)
+        if config.post_to_x:
+            platform_previews["X"] = final_post_text
+
         if config.post_to_instagram:
             if direct_post_request:
                 llm_hashtags = generate_instagram_hashtags_from_text(
@@ -219,6 +226,7 @@ def run_once() -> int:
                     attempts=attempts,
                     target_platforms=target_platforms,
                     news_item=news_item,
+                    platform_previews=platform_previews,
                 ),
             )
             decision_by = approval.username or approval.user_id
@@ -341,7 +349,7 @@ def run_once() -> int:
             news_item=news_item,
             error_message=error_message,
         )
-        return 0
+        return 1
 
 
 def main() -> int:

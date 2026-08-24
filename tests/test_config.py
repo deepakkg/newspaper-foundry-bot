@@ -48,6 +48,15 @@ from telegram_sender import send_telegram_message
 
 
 class ConfigTests(unittest.TestCase):
+    def test_load_config_defaults_x_publishing_to_disabled(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".env"
+            write_env_file(env_path)
+
+            config = load_config(env_path)
+
+        self.assertFalse(config.post_to_x)
+
     def test_load_config_accepts_github_style_settings(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             log_path = Path(tmp_dir) / "logs" / "tweet-history.md"

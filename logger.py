@@ -1,10 +1,16 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timezone
 from dataclasses import dataclass
 from pathlib import Path
 
 LOG_TITLE = "# Post History"
+
+
+def _utc_timestamp() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace(
+        "+00:00", "Z"
+    )
 
 
 @dataclass(frozen=True)
@@ -30,7 +36,7 @@ def build_tweet_log_entry(
     news_published_at: str | None = None,
     news_url: str | None = None,
 ) -> str:
-    resolved_timestamp = timestamp or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    resolved_timestamp = timestamp or _utc_timestamp()
     lines = [
         "",
         "## Post published",
@@ -183,7 +189,7 @@ def build_run_log_entry(
     instagram_caption: str | None = None,
     decision_by: str | None = None,
 ) -> str:
-    resolved_timestamp = timestamp or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    resolved_timestamp = timestamp or _utc_timestamp()
     lines = [
         "",
         f"## {title}",

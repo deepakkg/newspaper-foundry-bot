@@ -22,6 +22,7 @@ class ApprovalRequest:
     attempts: int
     target_platforms: list[str]
     news_item: NewsItem | None = None
+    platform_previews: dict[str, str] | None = None
 
 
 @dataclass(frozen=True)
@@ -98,6 +99,15 @@ def build_approval_embed(request: ApprovalRequest) -> dict[str, object]:
                 "inline": False,
             }
         )
+    if request.platform_previews:
+        for platform, preview in request.platform_previews.items():
+            fields.append(
+                {
+                    "name": f"{platform} preview",
+                    "value": preview[:1024],
+                    "inline": False,
+                }
+            )
     return {"title": "Post awaiting approval", "color": 0xF1C40F, "fields": fields}
 
 

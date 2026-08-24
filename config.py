@@ -307,7 +307,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         os.getenv("BLUESKY_SERVICE_URL", "https://bsky.social").strip()
         or "https://bsky.social"
     ).rstrip("/")
-    post_to_x = _parse_bool(os.getenv("POST_TO_X", "true"), "POST_TO_X")
+    post_to_x = _parse_bool(os.getenv("POST_TO_X", "false"), "POST_TO_X")
     x_api_key = os.getenv("X_API_KEY", "").strip() or None
     x_api_key_secret = os.getenv("X_API_KEY_SECRET", "").strip() or None
     x_access_token = os.getenv("X_ACCESS_TOKEN", "").strip() or None

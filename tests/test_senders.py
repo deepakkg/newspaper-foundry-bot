@@ -181,6 +181,10 @@ class DiscordApprovalTests(unittest.TestCase):
                 attempts=2,
                 target_platforms=["Bluesky", "Instagram"],
                 news_item=news_item,
+                platform_previews={
+                    "Bluesky": "AI agents need better handoffs. 🤖 #botWrites",
+                    "X": "AI agents need better handoffs. 🤖 #botWrites https://example.com/ai-agents",
+                },
             )
         )
 
@@ -200,6 +204,8 @@ class DiscordApprovalTests(unittest.TestCase):
                 "Target platforms",
                 "Final post",
                 "Instagram caption preview",
+                "Bluesky preview",
+                "X preview",
             ],
         )
         self.assertNotIn("Article URL", field_names)

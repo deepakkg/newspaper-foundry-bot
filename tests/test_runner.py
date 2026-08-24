@@ -43,7 +43,7 @@ class TweetGeneratorTests(unittest.TestCase):
             with patch("sys.stdout", buffer):
                 result = tweet_generator.run_once()
 
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
         self.assertIn("Could not generate post:", buffer.getvalue())
 
     def test_run_once_approved_bluesky_and_x_publish_after_approval(self) -> None:
@@ -642,7 +642,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                             with patch("sys.stdout", buffer):
                                                 result = tweet_generator.run_once()
 
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
         self.assertFalse(config.article_links_data_path.exists())
         self.assertFalse(config.article_links_html_path.exists())
         self.assertNotIn("Article link page updated", buffer.getvalue())
@@ -908,7 +908,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                 with patch("sys.stdout", buffer):
                                     result = tweet_generator.run_once()
 
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn("Content bot failed", telegram_text)
         self.assertIn("All enabled platforms failed", telegram_text)
@@ -945,7 +945,7 @@ class TweetGeneratorTests(unittest.TestCase):
                                 with patch("sys.stdout", buffer):
                                     result = tweet_generator.run_once()
 
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
         mock_approval.assert_not_called()
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn("Content bot failed", telegram_text)
@@ -1012,7 +1012,7 @@ class TweetGeneratorTests(unittest.TestCase):
                             with patch("sys.stdout", buffer):
                                 result = tweet_generator.run_once()
 
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn("Content bot failed", telegram_text)
         self.assertIn("Could not generate a valid post", telegram_text)
@@ -1048,7 +1048,7 @@ class TweetGeneratorTests(unittest.TestCase):
                         with patch("sys.stdout", buffer):
                             result = tweet_generator.run_once()
 
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
         self.assertIn("Warning: Telegram failure alert delivery failed:", buffer.getvalue())
 
     def test_describe_failure_reports_llm_api_errors_generically(self) -> None:
