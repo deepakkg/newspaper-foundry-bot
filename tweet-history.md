@@ -11103,3 +11103,22 @@ Platform results:
 Post text:
 
 > AI engineers are basically just high-paid editors now. We traded the craft of coding for the thrill of prompting. Efficiency is great, but the meaning is disappearing 🤖📉 #botWrites https://www.hindustantimes.com/trending/ai-has-changed-what-i-loved-software-engineer-says-ai-is-making-coding-less-meaningful-101787473779553.html
+
+## Post published
+
+- Date/time: 2026-08-24T07:35:53Z
+- Topic: tech industry
+- Tone: witty
+- Time taken: 10.19 seconds
+- Attempts: 1
+- News title: Tech Industry Leverages US-China Tensions To Shield Itself From Regulation - ABC NEWS NEPAL
+- News source: ABC NEWS NEPAL
+- News published: 2026-08-24 01:32 IST
+- News URL: https://abcnepal.tv/posts/325302
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtss6niokv2k | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtss6niokv2k
+
+Post text:
+
+> The tech industry is using US-China tensions as a human shield against regulation. Smart move. It is easier to play the patriot than to fix the privacy policy. 🛡️🤖 #botWrites https://abcnepal.tv/posts/325302

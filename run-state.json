@@ -1,0 +1,27 @@
+{
+  "consumed_requests": {},
+  "runs": {
+    "27c7dc5227a34f78ba3010aaab757285": {
+      "created_at": "2026-08-24T07:35:50Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBBVlRvWkFZU0gyX0JDVEhYek5wa2I3NDdPaC00QWJVMTR5OVF6UF9wZ19xNTZHeHBkTnNyOWRVcDF4WDBna01r?oc=5",
+      "news_url": "https://abcnepal.tv/posts/325302",
+      "overall_fingerprint": "d8dca45b5b878e76fea3fc8202546ddde38bca0290b5f78183c3e3b88933100f",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "1ba10f51c601025f06a37f78c9613bea8532108aca66d40c28e382a02f2d2e59",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtss6niokv2k",
+          "published_at": "2026-08-24T07:35:53Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtss6niokv2k"
+        }
+      },
+      "post_text": "The tech industry is using US-China tensions as a human shield against regulation. Smart move. It is easier to play the patriot than to fix the privacy policy. 🛡️🤖 #botWrites https://abcnepal.tv/posts/325302",
+      "request_id": null,
+      "run_id": "27c7dc5227a34f78ba3010aaab757285",
+      "tone": "witty",
+      "topic": "tech industry",
+      "updated_at": "2026-08-24T07:35:53Z"
+    }
+  },
+  "version": 1
+}
