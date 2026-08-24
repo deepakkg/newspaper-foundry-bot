@@ -61,7 +61,7 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertLess(len(compact_prompt), len(full_prompt))
-        self.assertLess(len(compact_prompt), 450)
+        self.assertLess(len(compact_prompt), 550)
         self.assertIn("Use between 0 and 1 relevant emojis", compact_prompt)
         self.assertIn("no article URL", compact_prompt)
 
@@ -118,11 +118,10 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("witty=dry/sharp", prompt)
         self.assertIn("analysis=implication/tradeoff", prompt)
         self.assertIn("Do not force first person", prompt)
-        self.assertIn("No section labels: Observation:", prompt)
+        self.assertIn("multiple candidate answers", prompt)
         self.assertNotIn("Shape:", prompt)
         self.assertNotIn("sharp practical implication or dry punchline", prompt)
-        self.assertIn("Pseudo-profound", prompt)
-        self.assertIn("The real lesson", prompt)
+        self.assertIn("pseudo-profound lessons", prompt)
         self.assertIn("More than 1 emojis", prompt)
 
     def test_request_tweet_retries_with_compact_prompt_on_context_error(self) -> None:

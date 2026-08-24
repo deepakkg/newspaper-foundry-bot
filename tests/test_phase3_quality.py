@@ -8,9 +8,12 @@ from tempfile import TemporaryDirectory
 from content_source import choose_novel_tone, choose_novel_topic
 from generator import (
     build_prompt,
+    extract_structured_post,
     get_style_issue,
     is_near_duplicate,
     quality_score,
+    sequence_similarity,
+    tone_guidance,
     validate_tweet,
 )
 from news_fetcher import NewsItem, rank_news_items
@@ -70,6 +73,29 @@ class Phase3QualityTests(unittest.TestCase):
         self.assertEqual(score["relevance"], 1.0)
         self.assertGreaterEqual(score["specificity"], 0.75)
         self.assertGreaterEqual(score["concreteness"], 0.5)
+
+    def test_tone_guidance_can_be_overridden(self) -> None:
+        self.assertEqual(
+            tone_guidance("analysis", {"analysis": "focus on second-order effects"}),
+            "focus on second-order effects",
+        )
+
+    def test_sequence_similarity_is_available_for_duplicate_detection(self) -> None:
+        self.assertGreater(
+            sequence_similarity(
+                "AI agents need better handoffs in support queues.",
+                "AI agents need better handoffs across support queues.",
+            ),
+            0.8,
+        )
+
+    def test_structured_post_requires_fact_angle_and_post(self) -> None:
+        self.assertEqual(
+            extract_structured_post(
+                '{"fact":"Agents moved into support.","angle":"Ownership matters.","post":"The handoff is now the product. 🤖"}'
+            ),
+            "The handoff is now the product. 🤖",
+        )
 
     def test_emoji_policy_can_disable_emojis(self) -> None:
         self.assertEqual(

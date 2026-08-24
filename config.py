@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -77,6 +77,8 @@ class AppConfig:
     emoji_policy: str = "required"
     emoji_min: int = 1
     emoji_max: int = 2
+    tone_guidance: dict[str, str] = field(default_factory=dict)
+    structured_generation_enabled: bool = False
 
 
 def _parse_csv_list(value: str, name: str) -> list[str]:
@@ -324,6 +326,16 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     emoji_max = _parse_non_negative_int(os.getenv("EMOJI_MAX", "2"), "EMOJI_MAX")
     if emoji_min > emoji_max:
         raise ValueError("EMOJI_MIN must not be greater than EMOJI_MAX.")
+    tone_guidance: dict[str, str] = {}
+    for item in os.getenv("TONE_GUIDANCE", "").split(";"):
+        if "=" in item:
+            key, value = item.split("=", 1)
+            if key.strip() and value.strip():
+                tone_guidance[key.strip().lower()] = value.strip()
+    structured_generation_enabled = _parse_bool(
+        os.getenv("STRUCTURED_GENERATION_ENABLED", "false"),
+        "STRUCTURED_GENERATION_ENABLED",
+    )
     post_to_bluesky = _parse_bool(os.getenv("POST_TO_BLUESKY", "false"), "POST_TO_BLUESKY")
     bluesky_handle = os.getenv("BLUESKY_HANDLE", "").strip() or None
     bluesky_app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip() or None
@@ -477,6 +489,8 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         emoji_policy=emoji_policy,
         emoji_min=emoji_min,
         emoji_max=emoji_max,
+        tone_guidance=tone_guidance,
+        structured_generation_enabled=structured_generation_enabled,
         post_to_bluesky=post_to_bluesky,
         bluesky_handle=bluesky_handle,
         bluesky_app_password=bluesky_app_password,
