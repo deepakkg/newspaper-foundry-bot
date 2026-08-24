@@ -6,6 +6,7 @@ from urllib.parse import urljoin
 
 import requests
 
+from http_client import request_with_retry
 
 METADATA_TIMEOUT_SECONDS = 10
 USER_AGENT = "gemma-tweet-bot/1.0"
@@ -91,8 +92,10 @@ def fetch_link_card_metadata(
     description = fallback_description
     image_url: str | None = None
     try:
-        response = requests.get(
+        response = request_with_retry(
+            requests.get,
             url,
+            safe_to_retry=True,
             timeout=timeout_seconds,
             headers={"User-Agent": USER_AGENT},
         )
@@ -121,8 +124,10 @@ def fetch_thumbnail_bytes(
     if not image_url:
         return None
     try:
-        response = requests.get(
+        response = request_with_retry(
+            requests.get,
             image_url,
+            safe_to_retry=True,
             timeout=timeout_seconds,
             headers={"User-Agent": USER_AGENT},
         )

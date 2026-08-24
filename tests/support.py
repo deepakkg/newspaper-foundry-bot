@@ -67,6 +67,7 @@ def load_temp_config(**overrides: str):
     tmp_dir = tempfile.TemporaryDirectory()
     env_path = Path(tmp_dir.name) / ".env"
     overrides.setdefault("LOG_FILE_PATH", str(Path(tmp_dir.name) / "tweet-history.md"))
+    overrides.setdefault("RUN_STATE_PATH", str(Path(tmp_dir.name) / "run-state.json"))
     write_env_file(env_path, **overrides)
     config = load_config(env_path)
     return tmp_dir, config

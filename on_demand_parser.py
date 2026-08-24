@@ -107,17 +107,19 @@ def parse_requested_tone(content: str, configured_tones: list[str]) -> str | Non
 def select_on_demand_request(
     messages: list[DiscordMessageSnapshot],
     config: AppConfig,
+    processed_message_ids: set[str] | None = None,
 ) -> SelectedOnDemandRequest | None:
-    processed_message_ids = {
+    replied_message_ids = {
         message.referenced_message_id
         for message in messages
         if message.author_is_bot and message.referenced_message_id
     }
+    processed_ids = replied_message_ids | (processed_message_ids or set())
     candidates = [
         message
         for message in messages
         if not message.author_is_bot
-        and message.message_id not in processed_message_ids
+        and message.message_id not in processed_ids
         and command_kind(message.content) is not None
     ]
     if not candidates:

@@ -6,6 +6,7 @@ from dataclasses import dataclass
 import requests
 
 from config import AppConfig
+from http_client import request_with_retry
 
 
 INVALID_TOKEN_MESSAGE = (
@@ -69,8 +70,10 @@ def _wait_for_media_container(
 ) -> None:
     last_status = "unknown"
     for attempt in range(MEDIA_STATUS_POLL_ATTEMPTS):
-        status_response = requests.get(
+        status_response = request_with_retry(
+            requests.get,
             f"{base_url}/{creation_id}",
+            safe_to_retry=True,
             params={
                 "fields": "status_code,status",
                 "access_token": config.instagram_access_token,

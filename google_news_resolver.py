@@ -9,6 +9,7 @@ from urllib.parse import quote, urlparse
 
 import requests
 
+from http_client import request_with_retry
 
 GOOGLE_NEWS_BATCH_EXECUTE_URL = (
     "https://news.google.com/_/DotsSplashUi/data/batchexecute"
@@ -290,8 +291,10 @@ def decode_news_url_with_google(
     inner_payload: str, *, timeout_seconds: int
 ) -> str | None:
     try:
-        response = requests.post(
+        response = request_with_retry(
+            requests.post,
             GOOGLE_NEWS_BATCH_EXECUTE_URL,
+            safe_to_retry=True,
             params={"rpcids": GOOGLE_NEWS_DECODE_RPC_ID},
             data={"f.req": build_google_news_batch_payload(inner_payload)},
             timeout=min(timeout_seconds, 10),
@@ -315,8 +318,10 @@ def resolve_news_url(url: str, *, timeout_seconds: int) -> str:
         return cleaned_url
 
     try:
-        response = requests.get(
+        response = request_with_retry(
+            requests.get,
             cleaned_url,
+            safe_to_retry=True,
             timeout=min(timeout_seconds, 10),
             headers={"User-Agent": USER_AGENT},
             allow_redirects=True,

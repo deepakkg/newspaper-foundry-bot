@@ -12,3 +12,5 @@ scheduler.log
 .coverage
 htmlcov/
 generated-posts/
+logs/run-state.json
+logs/.run-state.json.lock

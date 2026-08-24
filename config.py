@@ -63,6 +63,7 @@ class AppConfig:
     cloudinary_folder: str
     generated_image_dir: Path
     log_file_path: Path
+    state_file_path: Path
     article_links_enabled: bool
     article_links_page_url: str | None
     article_links_max_items: int
@@ -379,6 +380,10 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         os.getenv("GENERATED_IMAGE_DIR", "generated-posts").strip()
         or "generated-posts"
     )
+    state_file_raw = (
+        os.getenv("RUN_STATE_PATH", "logs/run-state.json").strip()
+        or "logs/run-state.json"
+    )
     article_links_enabled = _parse_bool(
         os.getenv("ARTICLE_LINKS_ENABLED", "false"), "ARTICLE_LINKS_ENABLED"
     )
@@ -396,6 +401,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     )
     log_file_path = _project_path(log_file_raw)
     generated_image_dir = _project_path(generated_image_dir_raw)
+    state_file_path = _project_path(state_file_raw)
     article_links_dir = log_file_path.parent / "article-links"
     article_links_data_path = article_links_dir / "links.json"
     article_links_html_path = article_links_dir / "index.html"
@@ -480,6 +486,7 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         cloudinary_folder=cloudinary_folder,
         generated_image_dir=generated_image_dir,
         log_file_path=log_file_path,
+        state_file_path=state_file_path,
         article_links_enabled=article_links_enabled,
         article_links_page_url=article_links_page_url,
         article_links_max_items=article_links_max_items,

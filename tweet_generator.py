@@ -40,6 +40,7 @@ from publisher import (
     build_post_text_without_url,
     max_generated_text_chars,
 )
+from run_state import RunStateStore, content_hash, new_run_id
 
 
 def spinner(stop_event: threading.Event, message: str = "Generating post") -> None:
@@ -196,6 +197,16 @@ def run_once() -> int:
                     is_direct_post=direct_post_request,
                 )
 
+        run_id = new_run_id()
+        state_store = RunStateStore(config.state_file_path)
+        state_store.record_run(
+            run_id,
+            content_hash("run", final_post_text, news_url, instagram_caption),
+            topic,
+            tone,
+            request_id=on_demand_request.message_id if on_demand_request else None,
+        )
+
         if not target_platforms:
             stop_spinner(stop_event, spinner_thread)
             elapsed = time.perf_counter() - process_start
@@ -271,7 +282,11 @@ def run_once() -> int:
             news_item=news_item,
             instagram_caption=instagram_caption,
             instagram_infographic_plan=instagram_infographic_plan,
+            run_id=run_id,
+            state_store=state_store,
         )
+        if on_demand_request and outcome.success_count > 0:
+            state_store.mark_request_consumed(on_demand_request.message_id, run_id)
         print_platform_results(outcome.results)
         update_article_links_after_instagram_publish(
             config,
@@ -305,7 +320,10 @@ def run_once() -> int:
             )
             raise RuntimeError(f"All enabled platforms failed to publish. {errors}")
 
-        partial = any(result.status == "failed" for result in outcome.results)
+        partial = any(
+            result.status in {"failed", "publication uncertain"}
+            for result in outcome.results
+        )
         log_entry = build_run_log_entry(
             title="Post partially published" if partial else "Post published",
             topic=topic,

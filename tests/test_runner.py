@@ -775,7 +775,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         output = buffer.getvalue()
         self.assertIn("Bluesky: published", output)
-        self.assertIn("Instagram: failed", output)
+        self.assertIn("Instagram: publication uncertain", output)
         self.assertIn(
             "Cloudinary URL: https://res.cloudinary.com/demo/post.png",
             output,
@@ -783,14 +783,14 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertIn("Post partially published and logged.", output)
         telegram_text = mock_telegram.call_args.args[1]
         self.assertIn("Post partially published", telegram_text)
-        self.assertIn("Instagram: failed", telegram_text)
+        self.assertIn("Instagram: publication uncertain", telegram_text)
         embed = mock_discord.call_args.args[1]
         self.assertEqual(embed["title"], "Post partially published")
-        self.assertIn("Instagram: failed", str(embed))
+        self.assertIn("Instagram: publication uncertain", str(embed))
         log_content = config.log_file_path.read_text(encoding="utf-8")
         self.assertIn("## Post partially published", log_content)
         self.assertIn("- Bluesky: published", log_content)
-        self.assertIn("- Instagram: failed", log_content)
+        self.assertIn("- Instagram: publication uncertain", log_content)
 
     def test_run_once_one_platform_failure_still_logs_success_for_other_platforms(self) -> None:
         tmp_dir, config = load_temp_config(
@@ -830,7 +830,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         mock_telegram.assert_not_called()
         log_content = config.log_file_path.read_text(encoding="utf-8")
-        self.assertIn("- Bluesky: failed | rate limited", log_content)
+        self.assertIn("- Bluesky: publication uncertain | rate limited", log_content)
         self.assertIn("- X: published", log_content)
 
     def test_run_once_direct_publish_reports_partial_publish(self) -> None:
@@ -872,7 +872,7 @@ class TweetGeneratorTests(unittest.TestCase):
         self.assertEqual(result, 0)
         mock_approval.assert_not_called()
         output = buffer.getvalue()
-        self.assertIn("Bluesky: failed | rate limited", output)
+        self.assertIn("Bluesky: publication uncertain | rate limited", output)
         self.assertIn("X: published", output)
         self.assertIn("Post partially published and logged.", output)
         log_content = config.log_file_path.read_text(encoding="utf-8")

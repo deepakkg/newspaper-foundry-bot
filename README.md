@@ -70,6 +70,7 @@ Store these in repository Settings -> Secrets and variables -> Actions -> Variab
 - `ON_DEMAND_DISCORD_LOOKBACK_LIMIT`
 - `TELEGRAM_NOTIFICATIONS_ENABLED`
 - `DISCORD_NOTIFICATIONS_ENABLED`
+- `RUN_STATE_PATH`
 
 Recommended defaults:
 
@@ -98,6 +99,7 @@ ON_DEMAND_REQUESTS_ENABLED=false
 ON_DEMAND_DISCORD_LOOKBACK_LIMIT=50
 TELEGRAM_NOTIFICATIONS_ENABLED=false
 DISCORD_NOTIFICATIONS_ENABLED=false
+RUN_STATE_PATH=logs/run-state.json
 ```
 
 For Bluesky publishing, create an app password in Bluesky for the bot account, then set:
@@ -227,7 +229,7 @@ To view the log in GitHub, switch the branch selector from `main` to `tweet-hist
 
 When a recent RSS item is used, the log also includes the news title, source, published time, and URL. Successful published logs include each enabled platform result. Manual-mode generated posts are not written to the history log.
 
-For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`.
+For local runs, the default log path is `logs/tweet-history.md` unless `LOG_FILE_PATH` is set in `.env`. Durable run and publication state defaults to `logs/run-state.json` unless `RUN_STATE_PATH` is set. GitHub Actions stores both files on the `tweet-history` branch.
 
 Notification channels are opt-in. Set `TELEGRAM_NOTIFICATIONS_ENABLED=true` to send Telegram summaries, and set `DISCORD_NOTIFICATIONS_ENABLED=true` to send Discord webhook embeds. When `APPROVAL_REQUIRED=true`, approval uses `DISCORD_BOT_TOKEN` and `DISCORD_CHANNEL_ID`, not the webhook. If an enabled notification channel is missing credentials or fails to send, the bot prints a warning and continues.
 

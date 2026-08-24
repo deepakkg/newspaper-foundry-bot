@@ -11,6 +11,7 @@ import requests
 from config import AppConfig
 from discord_approval import parse_discord_channel_id
 from google_news_resolver import resolve_news_url
+from http_client import request_with_retry
 from link_preview import LinkMetadataParser, USER_AGENT, clean_card_text
 from news_fetcher import NewsItem
 from on_demand_parser import (
@@ -24,6 +25,7 @@ from on_demand_parser import (
     select_on_demand_request,
     starts_with_url,
 )
+from run_state import RunStateStore
 NEWS_DATE_KEYS = (
     "article:published_time",
     "og:article:published_time",
@@ -53,8 +55,10 @@ def fetch_news_item_from_url(
     now: datetime | None = None,
 ) -> NewsItem:
     resolved_url = resolve_news_url(url, timeout_seconds=config.timeout_seconds)
-    response = requests.get(
+    response = request_with_retry(
+        requests.get,
         resolved_url,
+        safe_to_retry=True,
         timeout=min(config.timeout_seconds, 20),
         headers={"User-Agent": USER_AGENT},
     )
@@ -176,7 +180,14 @@ async def _fetch_next_on_demand_request(config: AppConfig) -> OnDemandRequest | 
                     "Warning: Discord message content was empty for recent messages. "
                     "Check the bot's Message Content Intent and channel permissions."
                 )
-            selection = select_on_demand_request(snapshots, config)
+            processed_message_ids = RunStateStore(
+                config.state_file_path
+            ).consumed_request_ids()
+            selection = select_on_demand_request(
+                snapshots,
+                config,
+                processed_message_ids=processed_message_ids,
+            )
             if selection is None:
                 print("No pending Discord on-demand request found.")
                 return

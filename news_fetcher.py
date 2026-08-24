@@ -12,6 +12,7 @@ import requests
 
 from config import AppConfig
 from google_news_resolver import resolve_news_url
+from http_client import request_with_retry
 
 
 GOOGLE_NEWS_RSS_SEARCH_URL = "https://news.google.com/rss/search"
@@ -106,8 +107,10 @@ def fetch_latest_news(topic: str, config: AppConfig) -> NewsItem | None:
         language=config.news_language,
         region=config.news_region,
     )
-    response = requests.get(
+    response = request_with_retry(
+        requests.get,
         url,
+        safe_to_retry=True,
         timeout=min(config.timeout_seconds, 20),
         headers={"User-Agent": USER_AGENT},
     )

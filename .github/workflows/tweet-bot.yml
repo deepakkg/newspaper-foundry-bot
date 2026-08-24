@@ -71,6 +71,7 @@ jobs:
       ON_DEMAND_DISCORD_LOOKBACK_LIMIT: ${{ vars.ON_DEMAND_DISCORD_LOOKBACK_LIMIT || '50' }}
       GENERATED_IMAGE_DIR: generated-posts
       LOG_FILE_PATH: tweet-log-store/tweet-history.md
+      RUN_STATE_PATH: tweet-log-store/run-state.json
       TWEET_HISTORY_BRANCH: tweet-history
 
     steps:
@@ -100,6 +101,9 @@ jobs:
           git -C tweet-log-store config user.name "github-actions[bot]"
           git -C tweet-log-store config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C tweet-log-store add tweet-history.md
+          if [ -f tweet-log-store/run-state.json ]; then
+            git -C tweet-log-store add -f run-state.json
+          fi
           if [ -d tweet-log-store/article-links ]; then
             git -C tweet-log-store add article-links
           fi

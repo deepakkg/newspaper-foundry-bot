@@ -132,6 +132,32 @@ class OnDemandRequestTests(unittest.TestCase):
         self.assertEqual(selected.message_id, "3")
         self.assertEqual(selected.request.kind, "news_url")
 
+    def test_select_skips_ids_from_durable_state(self) -> None:
+        tmp_dir, config = load_temp_config(DISCORD_APPROVER_USER_IDS="111")
+        self.addCleanup(tmp_dir.cleanup)
+
+        selected = select_on_demand_request(
+            [
+                DiscordMessageSnapshot(
+                    message_id="1",
+                    author_id="111",
+                    author_is_bot=False,
+                    content="/post Already persisted.",
+                ),
+                DiscordMessageSnapshot(
+                    message_id="2",
+                    author_id="111",
+                    author_is_bot=False,
+                    content="/post Next request.",
+                ),
+            ],
+            config,
+            processed_message_ids={"1"},
+        )
+
+        self.assertIsNotNone(selected)
+        self.assertEqual(selected.message_id, "2")
+
     def test_select_prioritizes_direct_post_before_news_url(self) -> None:
         tmp_dir, config = load_temp_config(DISCORD_APPROVER_USER_IDS="111")
         self.addCleanup(tmp_dir.cleanup)
