@@ -221,6 +221,11 @@ Fallback:
 """
 
     emoji_rule = emoji_instruction(emoji_policy, emoji_min, emoji_max)
+    emoji_limit_rule = (
+        "More than two emojis or ellipsis."
+        if emoji_max == 2
+        else f"More than {emoji_max} emojis or ellipsis."
+    )
 
     return f"""Write one post about: {topic}
 Tone: {tone}
@@ -248,7 +253,7 @@ Do not use:
 - "Imagine this", "Picture a world", or "In a world where".
 - Pseudo-profound framing like "It's not about X, it's about Y" or "The real lesson".
 - Forced inspiration, grand lessons, or performative wisdom.
-- More than two emojis or ellipsis.
+- {emoji_limit_rule}
 - Comma-heavy chains.
 - Filler like "just", "kind of", "sort of", "my brain", "feels like static", "really feels", "seriously", or "honestly".
 

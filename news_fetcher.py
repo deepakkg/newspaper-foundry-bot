@@ -115,6 +115,16 @@ def rank_news_items(
     now: datetime | None = None,
 ) -> list[NewsItem]:
     excluded = {url.strip().lower() for url in (excluded_urls or set())}
+    if excluded:
+        available_items = [
+            item
+            for item in items
+            if item.link.strip().lower() not in excluded
+            and (item.source_url or "").strip().lower() not in excluded
+        ]
+        if not available_items:
+            return []
+        items = available_items
     resolved_now = now or datetime.now(timezone.utc)
     topic_tokens = _topic_tokens(topic)
 
@@ -124,8 +134,7 @@ def rank_news_items(
         summary_bonus = 1 if item.summary and item.summary != item.title else 0
         age_hours = max((resolved_now - item.published_at).total_seconds() / 3600, 0)
         recency = max(0.0, 48.0 - age_hours) / 48.0
-        prior_penalty = 100 if item.link.strip().lower() in excluded else 0
-        return (relevance * 10 + summary_bonus * 2 + recency - prior_penalty, -age_hours)
+        return (relevance * 10 + summary_bonus * 2 + recency, -age_hours)
 
     return sorted(items, key=score, reverse=True)
 
