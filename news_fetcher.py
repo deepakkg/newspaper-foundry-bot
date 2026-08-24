@@ -26,6 +26,7 @@ class NewsItem:
     published_at: datetime
     link: str
     summary: str
+    source_url: str | None = None
 
 
 def build_google_news_rss_url(topic: str, *, language: str, region: str) -> str:
@@ -95,13 +96,46 @@ def parse_rss_items(
                 published_at=published_at,
                 link=link,
                 summary=description,
+                source_url=link,
             )
         )
 
     return sorted(items, key=lambda news_item: news_item.published_at, reverse=True)
 
 
-def fetch_latest_news(topic: str, config: AppConfig) -> NewsItem | None:
+def _topic_tokens(topic: str) -> set[str]:
+    return {token for token in re.findall(r"[a-z0-9]+", topic.lower()) if len(token) > 2}
+
+
+def rank_news_items(
+    items: list[NewsItem],
+    topic: str,
+    *,
+    excluded_urls: set[str] | None = None,
+    now: datetime | None = None,
+) -> list[NewsItem]:
+    excluded = {url.strip().lower() for url in (excluded_urls or set())}
+    resolved_now = now or datetime.now(timezone.utc)
+    topic_tokens = _topic_tokens(topic)
+
+    def score(item: NewsItem) -> tuple[float, float]:
+        item_tokens = set(re.findall(r"[a-z0-9]+", f"{item.title} {item.summary}".lower()))
+        relevance = len(topic_tokens & item_tokens)
+        summary_bonus = 1 if item.summary and item.summary != item.title else 0
+        age_hours = max((resolved_now - item.published_at).total_seconds() / 3600, 0)
+        recency = max(0.0, 48.0 - age_hours) / 48.0
+        prior_penalty = 100 if item.link.strip().lower() in excluded else 0
+        return (relevance * 10 + summary_bonus * 2 + recency - prior_penalty, -age_hours)
+
+    return sorted(items, key=score, reverse=True)
+
+
+def fetch_recent_news(
+    topic: str,
+    config: AppConfig,
+    *,
+    excluded_urls: set[str] | None = None,
+) -> list[NewsItem]:
     url = build_google_news_rss_url(
         topic,
         language=config.news_language,
@@ -119,6 +153,16 @@ def fetch_latest_news(topic: str, config: AppConfig) -> NewsItem | None:
         response.text,
         recency_hours=config.news_recency_hours,
     )
+    return rank_news_items(items, topic, excluded_urls=excluded_urls)
+
+
+def fetch_latest_news(
+    topic: str,
+    config: AppConfig,
+    *,
+    excluded_urls: set[str] | None = None,
+) -> NewsItem | None:
+    items = fetch_recent_news(topic, config, excluded_urls=excluded_urls)
     if not items:
         return None
 

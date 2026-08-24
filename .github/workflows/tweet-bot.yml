@@ -29,6 +29,9 @@ jobs:
       MAX_TWEET_CHARS: ${{ vars.MAX_TWEET_CHARS || '230' }}
       MAX_RETRIES: ${{ vars.MAX_RETRIES || '5' }}
       LLM_TIMEOUT_SECONDS: ${{ vars.LLM_TIMEOUT_SECONDS || '120' }}
+      EMOJI_POLICY: ${{ vars.EMOJI_POLICY || 'required' }}
+      EMOJI_MIN: ${{ vars.EMOJI_MIN || '1' }}
+      EMOJI_MAX: ${{ vars.EMOJI_MAX || '2' }}
       NEWS_ENABLED: ${{ vars.NEWS_ENABLED || 'true' }}
       NEWS_RECENCY_HOURS: ${{ vars.NEWS_RECENCY_HOURS || '48' }}
       NEWS_REGION: ${{ vars.NEWS_REGION || 'US' }}

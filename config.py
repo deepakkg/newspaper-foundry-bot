@@ -28,6 +28,7 @@ class AppConfig:
     max_tweet_chars: int
     max_retries: int
     timeout_seconds: int
+
     post_to_bluesky: bool
     bluesky_handle: str | None
     bluesky_app_password: str | None
@@ -73,6 +74,9 @@ class AppConfig:
     news_recency_hours: int
     news_region: str
     news_language: str
+    emoji_policy: str = "required"
+    emoji_min: int = 1
+    emoji_max: int = 2
 
 
 def _parse_csv_list(value: str, name: str) -> list[str]:
@@ -91,6 +95,16 @@ def _parse_positive_int(value: str, name: str) -> int:
 
     if parsed <= 0:
         raise ValueError(f"{name} must be greater than 0.")
+    return parsed
+
+
+def _parse_non_negative_int(value: str, name: str) -> int:
+    try:
+        parsed = int(value)
+    except ValueError as exc:
+        raise ValueError(f"{name} must be an integer.") from exc
+    if parsed < 0:
+        raise ValueError(f"{name} must not be negative.")
     return parsed
 
 
@@ -301,6 +315,15 @@ def load_config(env_path: Path | None = None) -> AppConfig:
     timeout_seconds = _parse_positive_int(
         os.getenv("LLM_TIMEOUT_SECONDS", "120"), "LLM_TIMEOUT_SECONDS"
     )
+    emoji_policy = _parse_choice(
+        os.getenv("EMOJI_POLICY", "required"),
+        "EMOJI_POLICY",
+        {"required", "optional", "disabled"},
+    )
+    emoji_min = _parse_non_negative_int(os.getenv("EMOJI_MIN", "1"), "EMOJI_MIN")
+    emoji_max = _parse_non_negative_int(os.getenv("EMOJI_MAX", "2"), "EMOJI_MAX")
+    if emoji_min > emoji_max:
+        raise ValueError("EMOJI_MIN must not be greater than EMOJI_MAX.")
     post_to_bluesky = _parse_bool(os.getenv("POST_TO_BLUESKY", "false"), "POST_TO_BLUESKY")
     bluesky_handle = os.getenv("BLUESKY_HANDLE", "").strip() or None
     bluesky_app_password = os.getenv("BLUESKY_APP_PASSWORD", "").strip() or None
@@ -451,6 +474,9 @@ def load_config(env_path: Path | None = None) -> AppConfig:
         max_tweet_chars=max_tweet_chars,
         max_retries=max_retries,
         timeout_seconds=timeout_seconds,
+        emoji_policy=emoji_policy,
+        emoji_min=emoji_min,
+        emoji_max=emoji_max,
         post_to_bluesky=post_to_bluesky,
         bluesky_handle=bluesky_handle,
         bluesky_app_password=bluesky_app_password,

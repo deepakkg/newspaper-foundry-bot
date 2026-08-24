@@ -144,6 +144,7 @@ def run_once() -> int:
                 tone,
                 news_item,
                 max_tweet_chars=max_generated_text_chars(config.max_tweet_chars, news_url),
+                recent_posts=content_source.recent_post_texts,
             )
 
         final_post_text = build_post_text(tweet, news_url)
@@ -205,6 +206,9 @@ def run_once() -> int:
             topic,
             tone,
             request_id=on_demand_request.message_id if on_demand_request else None,
+            news_url=news_url,
+            news_source_url=news_item.source_url if news_item else None,
+            post_text=final_post_text,
         )
 
         if not target_platforms:

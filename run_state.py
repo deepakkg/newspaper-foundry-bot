@@ -113,6 +113,9 @@ class RunStateStore:
         tone: str,
         *,
         request_id: str | None = None,
+        news_url: str | None = None,
+        news_source_url: str | None = None,
+        post_text: str | None = None,
     ) -> None:
         def mutate(payload: dict[str, Any]) -> None:
             run = payload["runs"].setdefault(run_id, {})
@@ -123,6 +126,9 @@ class RunStateStore:
                     "topic": topic,
                     "tone": tone,
                     "request_id": request_id,
+                    "news_url": news_url,
+                    "news_source_url": news_source_url,
+                    "post_text": post_text,
                     "created_at": run.get("created_at") or _utc_timestamp(),
                     "updated_at": _utc_timestamp(),
                     "platforms": run.get("platforms", {}),
@@ -133,6 +139,35 @@ class RunStateStore:
 
     def get_run(self, run_id: str) -> dict[str, Any]:
         return dict(self._read()["runs"].get(run_id, {}))
+
+    def recent_runs(self, limit: int = 20) -> list[dict[str, Any]]:
+        payload = self._read()
+        runs = [
+            run
+            for run in payload["runs"].values()
+            if any(
+                isinstance(platform, dict)
+                and platform.get("status") == "published"
+                for platform in (run.get("platforms") or {}).values()
+            )
+        ]
+        runs.sort(key=lambda run: str(run.get("created_at", "")), reverse=True)
+        return [dict(run) for run in runs[:limit]]
+
+    def recent_post_texts(self, limit: int = 20) -> list[str]:
+        return [
+            str(run["post_text"])
+            for run in self.recent_runs(limit)
+            if run.get("post_text")
+        ]
+
+    def recent_news_urls(self, limit: int = 20) -> set[str]:
+        urls: set[str] = set()
+        for run in self.recent_runs(limit):
+            for key in ("news_url", "news_source_url"):
+                if run.get(key):
+                    urls.add(str(run[key]).strip().lower())
+        return urls
 
     def record_platform_intent(
         self, run_id: str, *, platform: str, fingerprint: str
