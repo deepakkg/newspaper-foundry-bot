@@ -96,7 +96,7 @@ class Phase3QualityTests(unittest.TestCase):
 
     def test_full_prompt_uses_configured_emoji_limit(self) -> None:
         prompt = build_prompt(
-            "AI agents", "analysis", 230, 1,
+            "AI agents", "witty", 230, 1,
             emoji_policy="required", emoji_min=2, emoji_max=4,
         )
         self.assertIn("More than 4 emojis", prompt)

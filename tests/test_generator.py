@@ -52,7 +52,7 @@ class GeneratorValidationTests(unittest.TestCase):
         prompt = build_prompt("saas professional services", "serious", 230, 1)
 
         self.assertIn("Write one post about:", prompt)
-        self.assertLess(len(prompt), 1400)
+        self.assertLess(len(prompt), 1600)
 
     def test_build_compact_prompt_is_shorter(self) -> None:
         full_prompt = build_prompt("saas professional services", "serious", 230, 2)
@@ -61,8 +61,8 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertLess(len(compact_prompt), len(full_prompt))
-        self.assertLess(len(compact_prompt), 400)
-        self.assertIn("Use 1 or 2 relevant emojis.", compact_prompt)
+        self.assertLess(len(compact_prompt), 450)
+        self.assertIn("Use between 0 and 1 relevant emojis", compact_prompt)
         self.assertIn("no article URL", compact_prompt)
 
     def test_build_minimal_prompt_is_shorter_than_compact(self) -> None:
@@ -74,8 +74,8 @@ class GeneratorValidationTests(unittest.TestCase):
         )
 
         self.assertLess(len(minimal_prompt), len(compact_prompt))
-        self.assertLess(len(minimal_prompt), 120)
-        self.assertIn("Add 1-2 emojis.", minimal_prompt)
+        self.assertLess(len(minimal_prompt), 190)
+        self.assertIn("Use between 0 and 1 relevant emojis", minimal_prompt)
         self.assertIn("No hashtag/link.", minimal_prompt)
 
     def test_build_topic_hint_shortens_long_topic(self) -> None:
@@ -98,8 +98,9 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("Current news context:", prompt)
         self.assertIn("AI agents reshape enterprise workflows", prompt)
         self.assertIn("Example News", prompt)
-        self.assertIn("Include 1 or 2 relevant emojis.", prompt)
+        self.assertIn("Use between 0 and 1 relevant emojis", prompt)
         self.assertIn("Use the news item as the trigger", prompt)
+        self.assertIn("one explicit fact", prompt)
         self.assertIn("Do not summarize the article", prompt)
         self.assertIn("Do not include the article URL.", prompt)
 
@@ -110,8 +111,8 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertIn("direct, practical, concise", prompt)
         self.assertIn("clear observation", prompt)
         self.assertIn("one concrete detail", prompt)
-        self.assertIn("1-3 natural sentences", prompt)
-        self.assertIn("practical implication or understated joke", prompt)
+        self.assertIn("1-2 natural sentences", prompt)
+        self.assertIn("serious and analysis tones should prefer a clear implication", prompt)
         self.assertIn("specific noun", prompt)
         self.assertIn("Tone guide", prompt)
         self.assertIn("witty=dry/sharp", prompt)
@@ -122,7 +123,7 @@ class GeneratorValidationTests(unittest.TestCase):
         self.assertNotIn("sharp practical implication or dry punchline", prompt)
         self.assertIn("Pseudo-profound", prompt)
         self.assertIn("The real lesson", prompt)
-        self.assertIn("More than two emojis", prompt)
+        self.assertIn("More than 1 emojis", prompt)
 
     def test_request_tweet_retries_with_compact_prompt_on_context_error(self) -> None:
         tmp_dir, config = load_temp_config()
