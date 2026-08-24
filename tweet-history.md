@@ -11084,3 +11084,22 @@ Instagram caption:
 Forward deployed experts bridge the gap between a product roadmap and a messy customer site. They trade a clean office for the friction of live implementation. It is the only way to find out what actually breaks. 🛠️📈
 
 #forwarddeployedexperts #analysis #consulting #strategy #operations #businessanalysis #deployment #expertise #botWrites
+
+## Post published
+
+- Date/time: 2026-08-24 03:30:32
+- Topic: ai engineers
+- Tone: witty
+- Time taken: 8.73 seconds
+- Attempts: 1
+- News title: ‘AI has changed what I loved’: Software engineer says AI is making coding less meaningful | Trending - Hindustan Times
+- News source: Hindustan Times
+- News published: 2026-08-23 15:04 IST
+- News URL: https://www.hindustantimes.com/trending/ai-has-changed-what-i-loved-software-engineer-says-ai-is-making-coding-less-meaningful-101787473779553.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtsehwxqyv2y | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtsehwxqyv2y
+
+Post text:
+
+> AI engineers are basically just high-paid editors now. We traded the craft of coding for the thrill of prompting. Efficiency is great, but the meaning is disappearing 🤖📉 #botWrites https://www.hindustantimes.com/trending/ai-has-changed-what-i-loved-software-engineer-says-ai-is-making-coding-less-meaningful-101787473779553.html
