@@ -42,6 +42,27 @@
       "tone": "witty",
       "topic": "tech industry",
       "updated_at": "2026-08-24T07:35:53Z"
+    },
+    "990a9a1789174c249c8e8591f1c0c0e2": {
+      "created_at": "2026-08-24T15:10:06Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVU93QUtIaEgzMEx6UjVuVHhIYzY3cmRQSlFCelNwZGU4b1ZNODZsWTRPcmxJeWw3cUtMTVRpckFiYU9KbWZSdUkxcUxmZUNCczlqbm1laXRDUWRxeXBhelN1LXppOWJFbmV4U0JGSkFQV1I3Z1RfSDMxTG8xUktBRHpSOFJqZmlyUWpLbkRFclg2OTg?oc=5",
+      "news_url": "https://tech.yahoo.com/ai/articles/really-needs-forward-deployed-engineers-084350877.html",
+      "overall_fingerprint": "4f4653b9f2bc52574b0d20beea629905f06b7bdb96ce280eb723d32ffbf4f7ce",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "aec474bf2109318087548d26b85c55d8427938af49f183931a211252c9c818b5",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mttlkwjkbi2b",
+          "published_at": "2026-08-24T15:10:09Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mttlkwjkbi2b"
+        }
+      },
+      "post_text": "Yahoo Tech asks who really needs Forward Deployed Engineers for AI. It turns out they are just expensive tourists who fix your prompt engineering in person. Your API is still broken ✈️💼 #botWrites https://tech.yahoo.com/ai/articles/really-needs-forward-deployed-engineers-084350877.html",
+      "request_id": null,
+      "run_id": "990a9a1789174c249c8e8591f1c0c0e2",
+      "tone": "funny",
+      "topic": "forward deployed engineers",
+      "updated_at": "2026-08-24T15:10:09Z"
     }
   },
   "version": 1

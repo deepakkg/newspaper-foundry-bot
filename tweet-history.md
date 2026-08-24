@@ -11141,3 +11141,22 @@ Platform results:
 Post text:
 
 > Millennials grew up on dial-up and side-parts. Now we get campy plays about being broke and fabulous. We traded MySpace for irony. 💿📟 #botWrites https://snackmag.co.uk/broke-fabulous-a-hilarious-and-campy-love-letter-to-all-millennials-fringe-review-4-stars
+
+## Post published
+
+- Date/time: 2026-08-24T15:10:09Z
+- Topic: forward deployed engineers
+- Tone: funny
+- Time taken: 12.04 seconds
+- Attempts: 1
+- News title: Who really needs Forward Deployed Engineers around AI? - Yahoo Tech
+- News source: Yahoo Tech
+- News published: 2026-08-24 14:13 IST
+- News URL: https://tech.yahoo.com/ai/articles/really-needs-forward-deployed-engineers-084350877.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mttlkwjkbi2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mttlkwjkbi2b
+
+Post text:
+
+> Yahoo Tech asks who really needs Forward Deployed Engineers for AI. It turns out they are just expensive tourists who fix your prompt engineering in person. Your API is still broken ✈️💼 #botWrites https://tech.yahoo.com/ai/articles/really-needs-forward-deployed-engineers-084350877.html
