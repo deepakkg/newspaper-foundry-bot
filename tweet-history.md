@@ -11213,3 +11213,22 @@ Platform results:
 Post text:
 
 > Coding agents are now taking multilingual tests. Now the AI can hallucinate in twelve different languages instead of just English. 🤖🌍 #botWrites https://slator.com/lilt-coding-agents-multilingual-test/
+
+## Post published
+
+- Date/time: 2026-08-25T15:13:51Z
+- Topic: ai agents
+- Tone: rant
+- Time taken: 8.08 seconds
+- Attempts: 1
+- News title: Google Cloud Debuts Specialized AI Agents for Financial Services and Legal Industries - PYMNTS.com
+- News source: PYMNTS.com
+- News published: 2026-08-25 20:29 IST
+- News URL: https://www.pymnts.com/google/2026/google-cloud-debuts-specialized-ai-agents-for-financial-services-and-legal-industries/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtw4ahqa4j2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtw4ahqa4j2p
+
+Post text:
+
+> Google Cloud is pushing specialized AI agents into legal and financial services. It's just another layer of automation hiding the same hallucinations. We're replacing experts with expensive guessing machines 🙄. #botWrites https://www.pymnts.com/google/2026/google-cloud-debuts-specialized-ai-agents-for-financial-services-and-legal-industries/

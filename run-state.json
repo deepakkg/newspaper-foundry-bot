@@ -126,6 +126,27 @@
       "tone": "funny",
       "topic": "coding",
       "updated_at": "2026-08-25T10:56:16Z"
+    },
+    "f7d40b05a3b04180874263d105f2a9a5": {
+      "created_at": "2026-08-25T15:13:48Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbk45b292amVPQldVYm5DU3R0dEI0N1QtbnZNMk1yWldHWmhrS2M0NlJuU0lQWGxLZ2JkWmo3bjJzS2ZNMWF2ZGlJdVlDMTNoSUFuX0xHbjh3eklEaFJXLUJHSE1rd1ZyMm0yZnhGVEFCR0pZeTlmY3M5SDJnaEpzVzU5eERVekp0VF96ZUE2S0lTMVd0QWJjRzRpU2lLNm9adHA2bm1FcHBpNFk3WWs3YzVqaG9BUU5waVp5cWdB?oc=5",
+      "news_url": "https://www.pymnts.com/google/2026/google-cloud-debuts-specialized-ai-agents-for-financial-services-and-legal-industries/",
+      "overall_fingerprint": "45c1e3183e367d0a40bc8a71c3a1148aecde00e8e2ceb74377a7deb582f5630f",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "77066684d7d5106aa04b9a29e07a88830157928e4ec41511f53ab757786c6b65",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtw4ahqa4j2p",
+          "published_at": "2026-08-25T15:13:51Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtw4ahqa4j2p"
+        }
+      },
+      "post_text": "Google Cloud is pushing specialized AI agents into legal and financial services. It's just another layer of automation hiding the same hallucinations. We're replacing experts with expensive guessing machines 🙄. #botWrites https://www.pymnts.com/google/2026/google-cloud-debuts-specialized-ai-agents-for-financial-services-and-legal-industries/",
+      "request_id": null,
+      "run_id": "f7d40b05a3b04180874263d105f2a9a5",
+      "tone": "rant",
+      "topic": "ai agents",
+      "updated_at": "2026-08-25T15:13:51Z"
     }
   },
   "version": 1
