@@ -43,6 +43,27 @@
       "topic": "tech industry",
       "updated_at": "2026-08-24T07:35:53Z"
     },
+    "455b3c9416e045e68d91dc5029f132b0": {
+      "created_at": "2026-08-25T07:23:43Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRTZMNk1zWUZYLXItdjItOWpobUliakh3T0oySTR4N21Tb09DcVpWZG5oNnhfa0RzaWFGVGw4Z01yNWhGTEF0Nlg1a0Q4M2ZCVmdoZER6R0thdzJUNTNiU2ZaakdEYW50UlFJams3X3pnMFpVUVVVYWNiMHJzaGhQU0FLNXRyOGIxVkJ1ZjZZZDhHUG4wa1ZGTkNlSzI5S2ZOeUJtVTBsMG94ZnZFck9jeHdjOUpqMnpqQ0JMWmEzRVBtQQ?oc=5",
+      "news_url": "https://memeburn.com/hermes-agent-is-now-four-times-bigger-than-claude-code-on-openrouter-heres-what-that-actually-measures/",
+      "overall_fingerprint": "5c0a0c0071aec6ce4b5c9ecc9c49f52c4f4c3c3d5f6bdcb51b921625f31e1d58",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "ff9fc31fda31e60670bac93aef1bf4fedcabdf47abc72c0dda967518ebf9b2dc",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtvbxuovdp2i",
+          "published_at": "2026-08-25T07:23:45Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtvbxuovdp2i"
+        }
+      },
+      "post_text": "Hermes Agent is four times bigger than Claude Code on OpenRouter. Volume doesn't mean quality. We're chasing scale instead of actual utility 🙄. #botWrites https://memeburn.com/hermes-agent-is-now-four-times-bigger-than-claude-code-on-openrouter-heres-what-that-actually-measures/",
+      "request_id": null,
+      "run_id": "455b3c9416e045e68d91dc5029f132b0",
+      "tone": "rant",
+      "topic": "hermes agent",
+      "updated_at": "2026-08-25T07:23:45Z"
+    },
     "990a9a1789174c249c8e8591f1c0c0e2": {
       "created_at": "2026-08-24T15:10:06Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVU93QUtIaEgzMEx6UjVuVHhIYzY3cmRQSlFCelNwZGU4b1ZNODZsWTRPcmxJeWw3cUtMTVRpckFiYU9KbWZSdUkxcUxmZUNCczlqbm1laXRDUWRxeXBhelN1LXppOWJFbmV4U0JGSkFQV1I3Z1RfSDMxTG8xUktBRHpSOFJqZmlyUWpLbkRFclg2OTg?oc=5",

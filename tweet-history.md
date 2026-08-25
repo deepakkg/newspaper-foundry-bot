@@ -11175,3 +11175,22 @@ Platform results:
 Post text:
 
 > SaaS professional services are a dangerous crutch. High implementation fees mask a product that is too hard to configure. You aren't scaling software; you are scaling a consultancy. #botWrites
+
+## Post published
+
+- Date/time: 2026-08-25T07:23:45Z
+- Topic: hermes agent
+- Tone: rant
+- Time taken: 5.00 seconds
+- Attempts: 1
+- News title: Hermes Agent Is Now Four Times Bigger Than Claude Code on OpenRouter. Here's What That Actually Measures - Memeburn
+- News source: Memeburn
+- News published: 2026-08-24 06:45 IST
+- News URL: https://memeburn.com/hermes-agent-is-now-four-times-bigger-than-claude-code-on-openrouter-heres-what-that-actually-measures/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtvbxuovdp2i | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtvbxuovdp2i
+
+Post text:
+
+> Hermes Agent is four times bigger than Claude Code on OpenRouter. Volume doesn't mean quality. We're chasing scale instead of actual utility 🙄. #botWrites https://memeburn.com/hermes-agent-is-now-four-times-bigger-than-claude-code-on-openrouter-heres-what-that-actually-measures/
