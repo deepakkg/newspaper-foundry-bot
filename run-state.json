@@ -105,6 +105,27 @@
       "tone": "analysis",
       "topic": "saas professional services",
       "updated_at": "2026-08-25T03:25:25Z"
+    },
+    "de4a729b57a9446aaeaa9440a5c7e6a2": {
+      "created_at": "2026-08-25T10:56:15Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsR0xOUWpIRGJ5Rmh5cGxDTUxtMWlSaFQ0Q2lFZno2aTFsT1VrcTVRTW12LWRBUnVlQlBWSDRLNWo3R3Z6d1JsNnVjLUZXQUxWdW0tWm9kdXFWaVMtR1ZSUmtqLXctNWM?oc=5",
+      "news_url": "https://slator.com/lilt-coding-agents-multilingual-test/",
+      "overall_fingerprint": "48da6f01bdcaa65879af9c91eca0d37cb70ca0f5b10e2dfb1afb5d11c409d3f2",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "ef400150b3c6cb34086ac751682262f337d9258ec5b7652a813d5ec35b4b589b",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtvntvmj4j2k",
+          "published_at": "2026-08-25T10:56:16Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtvntvmj4j2k"
+        }
+      },
+      "post_text": "Coding agents are now taking multilingual tests. Now the AI can hallucinate in twelve different languages instead of just English. 🤖🌍 #botWrites https://slator.com/lilt-coding-agents-multilingual-test/",
+      "request_id": null,
+      "run_id": "de4a729b57a9446aaeaa9440a5c7e6a2",
+      "tone": "funny",
+      "topic": "coding",
+      "updated_at": "2026-08-25T10:56:16Z"
     }
   },
   "version": 1
