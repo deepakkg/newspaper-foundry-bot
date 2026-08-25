@@ -63,6 +63,27 @@
       "tone": "funny",
       "topic": "forward deployed engineers",
       "updated_at": "2026-08-24T15:10:09Z"
+    },
+    "c8f797acc20c4c7198ff98b11e4136a3": {
+      "created_at": "2026-08-25T03:25:24Z",
+      "news_source_url": null,
+      "news_url": null,
+      "overall_fingerprint": "51bb971551c07f4c0eecdb8b55f8cbfaaa879fbbc2ee2a3629842771359fb1a1",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "4cacd0a30ae5c89535beacf50c425d2ca98db235a88a174053fe9d93cbff274f",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtuunpkpod2w",
+          "published_at": "2026-08-25T03:25:25Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtuunpkpod2w"
+        }
+      },
+      "post_text": "SaaS professional services are a dangerous crutch. High implementation fees mask a product that is too hard to configure. You aren't scaling software; you are scaling a consultancy. #botWrites",
+      "request_id": null,
+      "run_id": "c8f797acc20c4c7198ff98b11e4136a3",
+      "tone": "analysis",
+      "topic": "saas professional services",
+      "updated_at": "2026-08-25T03:25:25Z"
     }
   },
   "version": 1

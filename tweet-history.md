@@ -11160,3 +11160,18 @@ Platform results:
 Post text:
 
 > Yahoo Tech asks who really needs Forward Deployed Engineers for AI. It turns out they are just expensive tourists who fix your prompt engineering in person. Your API is still broken ✈️💼 #botWrites https://tech.yahoo.com/ai/articles/really-needs-forward-deployed-engineers-084350877.html
+
+## Post published
+
+- Date/time: 2026-08-25T03:25:25Z
+- Topic: saas professional services
+- Tone: analysis
+- Time taken: 7.79 seconds
+- Attempts: 3
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtuunpkpod2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtuunpkpod2w
+
+Post text:
+
+> SaaS professional services are a dangerous crutch. High implementation fees mask a product that is too hard to configure. You aren't scaling software; you are scaling a consultancy. #botWrites
