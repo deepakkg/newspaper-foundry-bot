@@ -127,6 +127,27 @@
       "topic": "forward deployed engineers",
       "updated_at": "2026-08-24T15:10:09Z"
     },
+    "c41f9b5f357941f4b52fdef96549112e": {
+      "created_at": "2026-08-26T10:56:40Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQOHlIWXVWc3p0VFlWTFdTZ19MVU95QmZrMVlUdDd0cVphNC03MDVwNWRWYTAtSzJ1VVJnVjcwNFZaRVlGdVViRzcyQlNDQ3lDdEpQazJiZEdfVm1nQ0ZxUE9FNEVJUTBCcE5vOXZrRWdwUG5QWFlzT1Rvd0dUYW9UMHlWZ0Y5a3h1SkI1VHNQb3pNRkZZcnViTWhyNHo4dHlpMDhScQ?oc=5",
+      "news_url": "https://www.essential-business.pt/2026/08/26/philip-morris-chooses-portugal-for-generative-ai-factory/",
+      "overall_fingerprint": "112aadb2f68a188350b120864d2c8546dbd1ba2037dd32ff76d0afe60323d7ba",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "fc880f1687e5d5ee87c98b533f4980cb0f6312dcb0e9fbb0d05af027cfa94e08",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mty6dk3kh32q",
+          "published_at": "2026-08-26T10:56:41Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mty6dk3kh32q"
+        }
+      },
+      "post_text": "Generative AI is moving into the tobacco business. Philip Morris is building a factory in Portugal. Now the addiction is digital. 🤖🇵🇹 #botWrites https://www.essential-business.pt/2026/08/26/philip-morris-chooses-portugal-for-generative-ai-factory/",
+      "request_id": null,
+      "run_id": "c41f9b5f357941f4b52fdef96549112e",
+      "tone": "witty",
+      "topic": "generative ai",
+      "updated_at": "2026-08-26T10:56:41Z"
+    },
     "c8f797acc20c4c7198ff98b11e4136a3": {
       "created_at": "2026-08-25T03:25:24Z",
       "news_source_url": null,

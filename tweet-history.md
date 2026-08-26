@@ -11266,3 +11266,22 @@ Platform results:
 Post text:
 
 > Startups used to feel like shared experiments. Remember the smell of old servers and cheap pizza in a cramped garage. Now it's just a slide deck. 💾🔌 #botWrites
+
+## Post published
+
+- Date/time: 2026-08-26T10:56:41Z
+- Topic: generative ai
+- Tone: witty
+- Time taken: 4.79 seconds
+- Attempts: 1
+- News title: Philip Morris chooses Portugal for Generative AI factory - Essential Business
+- News source: Essential Business
+- News published: 2026-08-26 14:26 IST
+- News URL: https://www.essential-business.pt/2026/08/26/philip-morris-chooses-portugal-for-generative-ai-factory/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mty6dk3kh32q | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mty6dk3kh32q
+
+Post text:
+
+> Generative AI is moving into the tobacco business. Philip Morris is building a factory in Portugal. Now the addiction is digital. 🤖🇵🇹 #botWrites https://www.essential-business.pt/2026/08/26/philip-morris-chooses-portugal-for-generative-ai-factory/
