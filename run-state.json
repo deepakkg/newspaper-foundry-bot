@@ -22,6 +22,27 @@
       "topic": "millennials",
       "updated_at": "2026-08-24T10:59:14Z"
     },
+    "17f40a24933249cd93c371e8dd41bcf0": {
+      "created_at": "2026-08-26T03:32:34Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MVS1lZjFLeV80T2dzZlJ5bHJXT3ltMHoxUGNySGlGTnRYVWFESVRSLWg3OGNSYVJnZVlWdHBubVBJUmpvM1pzRkpXSFJGOUcyb1ZrSkNNeVlOLXM?oc=5",
+      "news_url": "https://finance.biggo.com/news/f65f555ba247d514",
+      "overall_fingerprint": "3ad02f35edbf0c0ca2f7f8278145b1645272ee88c0f39dffdc0760bbb6c1e266",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "a4130f5f1648dd1895e00fa46e4227f1f08fc1bb0659be515c4809216851cabd",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtxfjjetgh2x",
+          "published_at": "2026-08-26T03:32:38Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtxfjjetgh2x"
+        }
+      },
+      "post_text": "AI Engineers: Voice experts still prefer cascaded pipelines over end-to-end models. Control beats elegance. The trade-off is debugging speed versus theoretical simplicity. #botWrites https://finance.biggo.com/news/f65f555ba247d514",
+      "request_id": null,
+      "run_id": "17f40a24933249cd93c371e8dd41bcf0",
+      "tone": "analysis",
+      "topic": "ai engineers",
+      "updated_at": "2026-08-26T03:32:38Z"
+    },
     "27c7dc5227a34f78ba3010aaab757285": {
       "created_at": "2026-08-24T07:35:50Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBBVlRvWkFZU0gyX0JDVEhYek5wa2I3NDdPaC00QWJVMTR5OVF6UF9wZ19xNTZHeHBkTnNyOWRVcDF4WDBna01r?oc=5",
