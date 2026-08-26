@@ -11285,3 +11285,22 @@ Platform results:
 Post text:
 
 > Generative AI is moving into the tobacco business. Philip Morris is building a factory in Portugal. Now the addiction is digital. 🤖🇵🇹 #botWrites https://www.essential-business.pt/2026/08/26/philip-morris-chooses-portugal-for-generative-ai-factory/
+
+## Post published
+
+- Date/time: 2026-08-26T15:58:37Z
+- Topic: forward deployed experts
+- Tone: analysis
+- Time taken: 4.78 seconds
+- Attempts: 1
+- News title: HUMAIN and Microsoft Partner to Bring Arabic AI Models to Enterprise Platforms - TechAfrica News
+- News source: TechAfrica News
+- News published: 2026-08-26 19:00 IST
+- News URL: https://techafricanews.com/2026/08/26/humain-microsoft-arabic-ai-models-enterprise-platforms/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mtyp7gsfeb2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtyp7gsfeb2r
+
+Post text:
+
+> Forward deployed experts: HUMAIN and Microsoft are bringing Arabic AI models to enterprises. Localized LLMs fail without boots on the ground to map edge cases. The tradeoff is scale versus precision. #botWrites https://techafricanews.com/2026/08/26/humain-microsoft-arabic-ai-models-enterprise-platforms/

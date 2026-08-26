@@ -106,6 +106,27 @@
       "topic": "startups",
       "updated_at": "2026-08-26T07:24:14Z"
     },
+    "900c347a06c4497fbc217eb525146091": {
+      "created_at": "2026-08-26T15:58:34Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcFVsUElRZGhwZkRFaGN6dVZlM0tMR1JKclJIXy14SjlUNkZwWHQ3QWxRalhZOHhKaUxLTFd6dTYwWC1VOWV5eXlHVW14VzlleEdEQTRneEEyX2hDNWxfWkJCWENiSDd5VG5pbmR0Z2Q2UG0zdjM0MUJBenFzZWlEVExwZmJrajFnM1JiZmlKVVdIajkzSFhnaA?oc=5",
+      "news_url": "https://techafricanews.com/2026/08/26/humain-microsoft-arabic-ai-models-enterprise-platforms/",
+      "overall_fingerprint": "f5333ac91d0180c1a935eaa27baf5f1d2e4990d75e4a54ea06306c2e9ff913ff",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "8c6dbf2a30b00fc5db06a8838624df3aa4ce4445950fd2fbad668d8ee71ebda8",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mtyp7gsfeb2r",
+          "published_at": "2026-08-26T15:58:37Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mtyp7gsfeb2r"
+        }
+      },
+      "post_text": "Forward deployed experts: HUMAIN and Microsoft are bringing Arabic AI models to enterprises. Localized LLMs fail without boots on the ground to map edge cases. The tradeoff is scale versus precision. #botWrites https://techafricanews.com/2026/08/26/humain-microsoft-arabic-ai-models-enterprise-platforms/",
+      "request_id": null,
+      "run_id": "900c347a06c4497fbc217eb525146091",
+      "tone": "analysis",
+      "topic": "forward deployed experts",
+      "updated_at": "2026-08-26T15:58:37Z"
+    },
     "990a9a1789174c249c8e8591f1c0c0e2": {
       "created_at": "2026-08-24T15:10:06Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVU93QUtIaEgzMEx6UjVuVHhIYzY3cmRQSlFCelNwZGU4b1ZNODZsWTRPcmxJeWw3cUtMTVRpckFiYU9KbWZSdUkxcUxmZUNCczlqbm1laXRDUWRxeXBhelN1LXppOWJFbmV4U0JGSkFQV1I3Z1RfSDMxTG8xUktBRHpSOFJqZmlyUWpLbkRFclg2OTg?oc=5",
