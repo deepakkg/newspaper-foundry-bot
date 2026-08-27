@@ -85,6 +85,27 @@
       "topic": "tech industry",
       "updated_at": "2026-08-24T07:35:53Z"
     },
+    "2ef54449bd584822aa430d7ba0939d94": {
+      "created_at": "2026-08-27T23:51:51Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0wQ3JDQ0xlWmpFc201RklRYXJBY1VtQTNEanVPZEF6aEJLVG9JRHpzVmdjYXJIQXI0QUY3cEFlal9LREtHYlUyZDJnNmxQd29TTzlvY1FUZl9XZ3o2ZmlSYS1YcTZzLTFiaWRJeWdB?oc=5",
+      "news_url": "https://mezha.net/eng/bukvy/82195eb0_techcrunch_disrupt_2026/",
+      "overall_fingerprint": "b10e3635e014edc73fa8c905f910e7599ed129a18ceffca134d2022816a4e869",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "20614da4aa39cc3b17debd057e7289b93ac9d33e59a04e2a460c141e3bc537b6",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu424moavz2w",
+          "published_at": "2026-08-27T23:51:52Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu424moavz2w"
+        }
+      },
+      "post_text": "TechCrunch Disrupt 2026 is focusing on the future of AI startups again. Every \"innovation\" is now just a wrapper for a prompt. Real software is dying for a trend 🙄. #botWrites https://mezha.net/eng/bukvy/82195eb0_techcrunch_disrupt_2026/",
+      "request_id": null,
+      "run_id": "2ef54449bd584822aa430d7ba0939d94",
+      "tone": "rant",
+      "topic": "startups",
+      "updated_at": "2026-08-27T23:51:52Z"
+    },
     "455b3c9416e045e68d91dc5029f132b0": {
       "created_at": "2026-08-25T07:23:43Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRTZMNk1zWUZYLXItdjItOWpobUliakh3T0oySTR4N21Tb09DcVpWZG5oNnhfa0RzaWFGVGw4Z01yNWhGTEF0Nlg1a0Q4M2ZCVmdoZER6R0thdzJUNTNiU2ZaakdEYW50UlFJams3X3pnMFpVUVVVYWNiMHJzaGhQU0FLNXRyOGIxVkJ1ZjZZZDhHUG4wa1ZGTkNlSzI5S2ZOeUJtVTBsMG94ZnZFck9jeHdjOUpqMnpqQ0JMWmEzRVBtQQ?oc=5",
