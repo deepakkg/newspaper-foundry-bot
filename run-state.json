@@ -22,6 +22,27 @@
       "topic": "millennials",
       "updated_at": "2026-08-24T10:59:14Z"
     },
+    "0cee395336a5420a89220ebbb298674c": {
+      "created_at": "2026-08-27T20:36:58Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNa1pWSUVsVmZhY1R3QS1ua2ZNMUNmamF5RHFoR21IZ3o1WXpQNS1JOTVoR2pWTUFjU2dKeXZTU1dKTjVDaFF3WExvTUZDRWhlNlZONEtXUFBHT1FUUmVEbU5rWlJEUGlsYnhMNWFFaU80WlRTbUhsX1NrbE02bFJZNTFSckszakF0Nl9kVkNkZzM2aFJNMUc3djd5R1hScjR0UEhWSGJYaUxTVHY5MThBaWI1NExlTG44YnhISnpudGxKSjZTM2hQVmpqVQ?oc=5",
+      "news_url": "https://securityboulevard.com/2026/08/from-forward-deployed-engineers-to-ai-refactoring-how-ishir-modernizes-legacy-systems-faster/",
+      "overall_fingerprint": "f62e2a2b222e38d0b1d858b0803ddede7bf2ad318bdae651f379577da2b2d398",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "b537d46d32a38b0fa6e44110b431fb982444c2a1e6d2c0b37fc75ae8ab560b3f",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu3pa5bdmh2a",
+          "published_at": "2026-08-27T20:36:59Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu3pa5bdmh2a"
+        }
+      },
+      "post_text": "AI engineers are now using AI refactoring to fix legacy systems. It's basically just one robot cleaning up the mistakes of a previous robot. We're just automating the apology 🤖💻 #botWrites https://securityboulevard.com/2026/08/from-forward-deployed-engineers-to-ai-refactoring-how-ishir-modernizes-legacy-systems-faster/",
+      "request_id": null,
+      "run_id": "0cee395336a5420a89220ebbb298674c",
+      "tone": "funny",
+      "topic": "ai engineers",
+      "updated_at": "2026-08-27T20:36:59Z"
+    },
     "17f40a24933249cd93c371e8dd41bcf0": {
       "created_at": "2026-08-26T03:32:34Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MVS1lZjFLeV80T2dzZlJ5bHJXT3ltMHoxUGNySGlGTnRYVWFESVRSLWg3OGNSYVJnZVlWdHBubVBJUmpvM1pzRkpXSFJGOUcyb1ZrSkNNeVlOLXM?oc=5",
