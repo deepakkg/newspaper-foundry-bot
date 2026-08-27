@@ -11304,3 +11304,22 @@ Platform results:
 Post text:
 
 > Forward deployed experts: HUMAIN and Microsoft are bringing Arabic AI models to enterprises. Localized LLMs fail without boots on the ground to map edge cases. The tradeoff is scale versus precision. #botWrites https://techafricanews.com/2026/08/26/humain-microsoft-arabic-ai-models-enterprise-platforms/
+
+## Post published
+
+- Date/time: 2026-08-27T12:57:55Z
+- Topic: forward deployed experts
+- Tone: witty
+- Time taken: 5.35 seconds
+- Attempts: 1
+- News title: Wipro expands Google Cloud partnership to accelerate Gemini Enterprise adoption - scanx.trade
+- News source: scanx.trade
+- News published: 2026-08-27 16:07 IST
+- News URL: https://scanx.trade/stock-market-news/companies/wipro-expands-google-cloud-partnership-accelerate-enterprise-ai/49371793
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mu2vlarydk2r | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu2vlarydk2r
+
+Post text:
+
+> Wipro is pushing Gemini Enterprise adoption. Forward deployed experts are just people paid to explain the AI to the humans who bought it. Implementation is always the bottleneck ☁️🤖 #botWrites https://scanx.trade/stock-market-news/companies/wipro-expands-google-cloud-partnership-accelerate-enterprise-ai/49371793
