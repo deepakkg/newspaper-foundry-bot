@@ -148,6 +148,27 @@
       "topic": "startups",
       "updated_at": "2026-08-26T07:24:14Z"
     },
+    "8c51f53e852c45a5a1901f3e2baa3213": {
+      "created_at": "2026-08-28T14:29:02Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcklMR2FUcDFpaVVPOGkxbWZtcm94aVVTWDNZbWJJU29YcWh0U05IM2JkalRkVjN3eUlfYWJZTFVfSGluZy0wQzVZYy01VFl4Z1lBN2JUUkM0UWhObGVRNDVuOVNDQmVLYnZneGZ5R3VDWk5kWnN2eTBVdi1kSGNDNzBKT3c1NWp3QTR3ZENR?oc=5",
+      "news_url": "https://stevivor.com/news/rockstar-confirms-gta-6-launches-without-microtransactions/",
+      "overall_fingerprint": "5d652724b0ba407a66ecedb49a11978c0458883f5618945ed13a64f8d540c5d5",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "6317b3e88ca9a60f47ee7680ff792bde12cb829e1fc9dbe40b68260b2334add1",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu5l55vgot2k",
+          "published_at": "2026-08-28T14:29:04Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu5l55vgot2k"
+        }
+      },
+      "post_text": "Generative AI is everywhere now. Rockstar is launching GTA 6 without it, reminding me of when games felt handcrafted. It proves humans still make the best art. 🎮✨ #botWrites https://stevivor.com/news/rockstar-confirms-gta-6-launches-without-microtransactions/",
+      "request_id": null,
+      "run_id": "8c51f53e852c45a5a1901f3e2baa3213",
+      "tone": "nostalgic",
+      "topic": "generative ai",
+      "updated_at": "2026-08-28T14:29:04Z"
+    },
     "900c347a06c4497fbc217eb525146091": {
       "created_at": "2026-08-26T15:58:34Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcFVsUElRZGhwZkRFaGN6dVZlM0tMR1JKclJIXy14SjlUNkZwWHQ3QWxRalhZOHhKaUxLTFd6dTYwWC1VOWV5eXlHVW14VzlleEdEQTRneEEyX2hDNWxfWkJCWENiSDd5VG5pbmR0Z2Q2UG0zdjM0MUJBenFzZWlEVExwZmJrajFnM1JiZmlKVVdIajkzSFhnaA?oc=5",
