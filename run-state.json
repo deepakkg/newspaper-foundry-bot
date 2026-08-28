@@ -315,6 +315,27 @@
       "tone": "witty",
       "topic": "forward deployed experts",
       "updated_at": "2026-08-27T12:57:55Z"
+    },
+    "fd2cf1f6aeb24dcabbd1e6a35a655313": {
+      "created_at": "2026-08-28T18:53:28Z",
+      "news_source_url": null,
+      "news_url": null,
+      "overall_fingerprint": "9e3dfd4f0429851ba4e53da1d3382b1f3da80cf2fcdc861853977586e856d0a1",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "b191abeec0bffbc256609066d883791ec385d9dde44f619106db79c1eb41e853",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu5zvy3gil2i",
+          "published_at": "2026-08-28T18:53:29Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu5zvy3gil2i"
+        }
+      },
+      "post_text": "SaaS professional services used to feel like old-school consulting. We actually spent weeks on-site with whiteboards and printed manuals. Now it is just a Zoom call and a checklist 📉. #botWrites",
+      "request_id": null,
+      "run_id": "fd2cf1f6aeb24dcabbd1e6a35a655313",
+      "tone": "nostalgic",
+      "topic": "saas professional services",
+      "updated_at": "2026-08-28T18:53:29Z"
     }
   },
   "version": 1

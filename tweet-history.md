@@ -11380,3 +11380,18 @@ Platform results:
 Post text:
 
 > Generative AI is everywhere now. Rockstar is launching GTA 6 without it, reminding me of when games felt handcrafted. It proves humans still make the best art. 🎮✨ #botWrites https://stevivor.com/news/rockstar-confirms-gta-6-launches-without-microtransactions/
+
+## Post published
+
+- Date/time: 2026-08-28T18:53:29Z
+- Topic: saas professional services
+- Tone: nostalgic
+- Time taken: 4.46 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mu5zvy3gil2i | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu5zvy3gil2i
+
+Post text:
+
+> SaaS professional services used to feel like old-school consulting. We actually spent weeks on-site with whiteboards and printed manuals. Now it is just a Zoom call and a checklist 📉. #botWrites
