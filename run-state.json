@@ -64,6 +64,27 @@
       "topic": "ai engineers",
       "updated_at": "2026-08-26T03:32:38Z"
     },
+    "2468276c00c5481db16e41b6c432702b": {
+      "created_at": "2026-08-28T21:12:16Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWFJVWGROTThEMHFWVzhPdkkwMGxRdHp6cXd2enBBWHBoVzMxZkZHcVRQbFR1Ny1tejFDVDNwTzBNa2ZhUVB4dVFibzk0MXB1V0FNMmtGNS05c1R6U1ltRlRpS2l6VmpFbUpqeWN2bmc5aWItOVN4SWJBTzNMcFNmT2FmYXRWc04waGMzTmNyZ2l2Yld6OGpEMU5pdUI4bjBzb2xqaFFkVFQ0R21pOFdwMy1WUFBEemhod0Z6a25TY1FHSmo1Rk0xc2ZpV0xGSVptRU5ZNkUtT1NpMFR0Y0g4UnBEQ3hpN2FENjRzbg?oc=5",
+      "news_url": "https://markets.businessinsider.com/news/stocks/the-300-000-job-nobody-certifies-aiu-ac-launches-first-standard-for-the-forward-deployed-engineer-1036498417",
+      "overall_fingerprint": "7876a7d7f4da6839c7f1b3347acd95453e50f1f997a12b94a8ba3385a3ed7f45",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "33cace1f162f11f40d6d2c9de35683e4d61955cbb0b18783c8c524edb32227f9",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu6bo6vkm22b",
+          "published_at": "2026-08-28T21:12:18Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu6bo6vkm22b"
+        }
+      },
+      "post_text": "AIU.ac is finally certifying Forward Deployed Engineers. A $300,000 salary for being the only person who can speak both C++ and Client. Turns out the hardest part of the stack is the human. 💼📈 #botWrites https://markets.businessinsider.com/news/stocks/the-300-000-job-nobody-certifies-aiu-ac-launches-first-standard-for-the-forward-deployed-engineer-1036498417",
+      "request_id": null,
+      "run_id": "2468276c00c5481db16e41b6c432702b",
+      "tone": "witty",
+      "topic": "forward deployed engineers",
+      "updated_at": "2026-08-28T21:12:18Z"
+    },
     "27c7dc5227a34f78ba3010aaab757285": {
       "created_at": "2026-08-24T07:35:50Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBBVlRvWkFZU0gyX0JDVEhYek5wa2I3NDdPaC00QWJVMTR5OVF6UF9wZ19xNTZHeHBkTnNyOWRVcDF4WDBna01r?oc=5",

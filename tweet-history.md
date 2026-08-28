@@ -11395,3 +11395,22 @@ Platform results:
 Post text:
 
 > SaaS professional services used to feel like old-school consulting. We actually spent weeks on-site with whiteboards and printed manuals. Now it is just a Zoom call and a checklist 📉. #botWrites
+
+## Post published
+
+- Date/time: 2026-08-28T21:12:18Z
+- Topic: forward deployed engineers
+- Tone: witty
+- Time taken: 4.79 seconds
+- Attempts: 1
+- News title: The $300,000 job nobody certifies: AIU.ac launches first standard for the Forward Deployed Engineer - markets.businessinsider.com
+- News source: markets.businessinsider.com
+- News published: 2026-08-27 20:07 IST
+- News URL: https://markets.businessinsider.com/news/stocks/the-300-000-job-nobody-certifies-aiu-ac-launches-first-standard-for-the-forward-deployed-engineer-1036498417
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mu6bo6vkm22b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu6bo6vkm22b
+
+Post text:
+
+> AIU.ac is finally certifying Forward Deployed Engineers. A $300,000 salary for being the only person who can speak both C++ and Client. Turns out the hardest part of the stack is the human. 💼📈 #botWrites https://markets.businessinsider.com/news/stocks/the-300-000-job-nobody-certifies-aiu-ac-launches-first-standard-for-the-forward-deployed-engineer-1036498417
