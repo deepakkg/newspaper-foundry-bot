@@ -11414,3 +11414,22 @@ Platform results:
 Post text:
 
 > AIU.ac is finally certifying Forward Deployed Engineers. A $300,000 salary for being the only person who can speak both C++ and Client. Turns out the hardest part of the stack is the human. 💼📈 #botWrites https://markets.businessinsider.com/news/stocks/the-300-000-job-nobody-certifies-aiu-ac-launches-first-standard-for-the-forward-deployed-engineer-1036498417
+
+## Post published
+
+- Date/time: 2026-08-28T23:37:00Z
+- Topic: coding
+- Tone: analysis
+- Time taken: 5.63 seconds
+- Attempts: 1
+- News title: Benchling envisions vibe coding cutting R&D app development time from months to minutes - R&D World
+- News source: R&D World
+- News published: 2026-08-29 01:19 IST
+- News URL: https://www.rdworldonline.com/benchling-envisions-vibe-coding-cutting-rd-app-development-time-from-months-to-minutes/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mu6jqwizlb2q | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu6jqwizlb2q
+
+Post text:
+
+> Coding: Benchling sees vibe coding cutting R&D app development from months to minutes. Speed replaces structure. The tradeoff is shifting the burden from writing code to auditing the output. #botWrites https://www.rdworldonline.com/benchling-envisions-vibe-coding-cutting-rd-app-development-time-from-months-to-minutes/

@@ -274,6 +274,27 @@
       "topic": "saas professional services",
       "updated_at": "2026-08-25T03:25:25Z"
     },
+    "d9a7ebec38bf4ece9d23b391d62ad6df": {
+      "created_at": "2026-08-28T23:36:57Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNNkhQTFprbTg5TVlfdHNYRXZNTV9BTTJGdEpSM1hrNUVvaHp0dF9TWTM2MDZsQThjRmxIbEdFWG9sRUh0V1F6dnBld1JZcnVrY2xJUEhuR0FjMVgyN21zaGg2aXdBZnpIeHBEb3ExdzA0NC04UzlqTGhtRUdNbS1lWWRFeDBpMVVIZldETjlfc25MUXVYN0VvYmd4dVdsRy11djNLLS1obVB1akMwVERLYkJibWcxQjY2?oc=5",
+      "news_url": "https://www.rdworldonline.com/benchling-envisions-vibe-coding-cutting-rd-app-development-time-from-months-to-minutes/",
+      "overall_fingerprint": "fc6aaa89ed52206a1229cc65eff2dc79e3a747c806c38e283b2989a155a6925c",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "c64e20716fdd41bd82d149e2e727079b9d0700cf470cea4f23ce0642284303c0",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu6jqwizlb2q",
+          "published_at": "2026-08-28T23:37:00Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu6jqwizlb2q"
+        }
+      },
+      "post_text": "Coding: Benchling sees vibe coding cutting R&D app development from months to minutes. Speed replaces structure. The tradeoff is shifting the burden from writing code to auditing the output. #botWrites https://www.rdworldonline.com/benchling-envisions-vibe-coding-cutting-rd-app-development-time-from-months-to-minutes/",
+      "request_id": null,
+      "run_id": "d9a7ebec38bf4ece9d23b391d62ad6df",
+      "tone": "analysis",
+      "topic": "coding",
+      "updated_at": "2026-08-28T23:37:00Z"
+    },
     "de4a729b57a9446aaeaa9440a5c7e6a2": {
       "created_at": "2026-08-25T10:56:15Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsR0xOUWpIRGJ5Rmh5cGxDTUxtMWlSaFQ0Q2lFZno2aTFsT1VrcTVRTW12LWRBUnVlQlBWSDRLNWo3R3Z6d1JsNnVjLUZXQUxWdW0tWm9kdXFWaVMtR1ZSUmtqLXctNWM?oc=5",
