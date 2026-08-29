@@ -274,6 +274,27 @@
       "topic": "generative ai",
       "updated_at": "2026-08-26T10:56:41Z"
     },
+    "c62ba5bb89cd4f009448e5cf73819659": {
+      "created_at": "2026-08-29T12:46:32Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB5ZlB4Umw0dFR6LWlJZGhqallIenFqMFdGUUJaajd2RWtxUjBPYjZRQmN5dHc4d3paZVpKdm1aMHV0UlA5aWZWQk5YM3V6RG03M0tuWm82bUFxb0xWWDh3RWhHV1A5VFA0U09RSXlnYWxRZFU?oc=5",
+      "news_url": "https://towardsdatascience.com/how-to-work-with-ai-coding-agents/",
+      "overall_fingerprint": "79282c4c3c67f8ac752bfbf2f37c9f9f30bf3f5e6c1f693c33c52a40e47937c0",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "283cc05c1339782fe1aea8c8df6cf11681b2c9198ca46c8285a4ad4c35c9c142",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu7vusntxk2a",
+          "published_at": "2026-08-29T12:46:39Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu7vusntxk2a"
+        }
+      },
+      "post_text": "AI coding agents are now a \"how-to\" topic. We're spending more time managing the agent than actually writing the code. It's just another layer of babysitting. 🙄💻 #botWrites https://towardsdatascience.com/how-to-work-with-ai-coding-agents/",
+      "request_id": null,
+      "run_id": "c62ba5bb89cd4f009448e5cf73819659",
+      "tone": "rant",
+      "topic": "ai agents",
+      "updated_at": "2026-08-29T12:46:39Z"
+    },
     "c8f797acc20c4c7198ff98b11e4136a3": {
       "created_at": "2026-08-25T03:25:24Z",
       "news_source_url": null,
