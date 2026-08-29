@@ -106,6 +106,27 @@
       "topic": "tech industry",
       "updated_at": "2026-08-24T07:35:53Z"
     },
+    "298cb93a2832411f97e631dd73fca25e": {
+      "created_at": "2026-08-29T09:15:20Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTVhjX1AwZFVCYlZUS1lTLTFhMmtQZ1p1QW1yd3NEVTRpN0RBOUZKT09PdGxvNy1IeXdkY2RibU9mM2pKTFlfT3U3bFZaR2NseDZXbi1WbzlEbjFkTE81TnpsbDFKNG56c0ZOU0F4eV9uYURQMmxHRk9lX1UwZjVwWUtsRTF5YlVJaTJManNBeXZ5M0J6cWJCQU40RDZvLVdKSUJ1SGxISWdyQ05UQWtvSkZadDU?oc=5",
+      "news_url": "https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/",
+      "overall_fingerprint": "3b201030eff0763413d0a640deb4f91593f957616a4e52ee639a973ed9e2d41d",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "954b2d358e9cc71383d520b18936625d3bd2b42e66467857fbd02cd4b76da644",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mu7k35rl4h2e",
+          "published_at": "2026-08-29T09:15:23Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mu7k35rl4h2e"
+        }
+      },
+      "post_text": "Hermes agent is installing unowned code in corporate networks. The AI is basically squatting in the office. Now the company pays for the electricity and the bot owns the place. 🤖🏢 #botWrites https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/",
+      "request_id": null,
+      "run_id": "298cb93a2832411f97e631dd73fca25e",
+      "tone": "funny",
+      "topic": "hermes agent",
+      "updated_at": "2026-08-29T09:15:23Z"
+    },
     "2ef54449bd584822aa430d7ba0939d94": {
       "created_at": "2026-08-27T23:51:51Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0wQ3JDQ0xlWmpFc201RklRYXJBY1VtQTNEanVPZEF6aEJLVG9JRHpzVmdjYXJIQXI0QUY3cEFlal9LREtHYlUyZDJnNmxQd29TTzlvY1FUZl9XZ3o2ZmlSYS1YcTZzLTFiaWRJeWdB?oc=5",
