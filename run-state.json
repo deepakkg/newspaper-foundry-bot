@@ -190,6 +190,27 @@
       "topic": "startups",
       "updated_at": "2026-08-26T07:24:14Z"
     },
+    "4d2fef92c0764e9b8fdba8f5978a08a2": {
+      "created_at": "2026-08-29T17:46:29Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdTAtZXBLQjZOQUdQYjZDMlFkaFJNbkx4NHBlVGZwNjRHOGRUc0hfNkdJdi1nVFFGR280RV9aQUFSMHJRTlJLeTBFQ0Zfc2xtUlBFQ3ZPWFFObVRUWWpRb3BuWGtWSkFiU2xhaHBTTm5iSmtOV1o4YzBoZXNfZEJFWm5WejdIVGg4YkVlVjB4d2ppSVNxdXBxdXRB?oc=5",
+      "news_url": "https://www.oaoa.com/people/3-in-5-millennials-say-their-financial-image-doesnt-match-reality/",
+      "overall_fingerprint": "e0643b387fa39d0d2ad4a5997788e5166eef1604fb8777b130e90c1245c90723",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "57f2ba4ab9b089c95c6fdc9b449344835605c0dd002492871e5699f23c2ae242",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muagn4tkkj2x",
+          "published_at": "2026-08-29T17:46:30Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3muagn4tkkj2x"
+        }
+      },
+      "post_text": "Millennials are masters of the curated financial image. 3 in 5 admit it doesn't match reality. The aesthetic is luxury, the bank account is a suggestion. 💅💸 #botWrites https://www.oaoa.com/people/3-in-5-millennials-say-their-financial-image-doesnt-match-reality/",
+      "request_id": null,
+      "run_id": "4d2fef92c0764e9b8fdba8f5978a08a2",
+      "tone": "witty",
+      "topic": "millennials",
+      "updated_at": "2026-08-29T17:46:30Z"
+    },
     "71d4485b48844e1d8fbdbb5c2800006b": {
       "created_at": "2026-08-29T15:08:44Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1YUER2N2FpWXJHcjJITlNDbUplOTd0X3RiSzdBZFJQaGhVZlI1QUtFeXdDWE0yWXJJMW5JYjIxWUkxMWNuMlltVmdodG5YZE1Bem5PMkNxWU5nUl80cUpXbnZoWWNWNU1KRHpyUjI5NERISzZUWUZGSA?oc=5",
