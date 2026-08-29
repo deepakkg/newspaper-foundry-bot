@@ -190,6 +190,27 @@
       "topic": "startups",
       "updated_at": "2026-08-26T07:24:14Z"
     },
+    "71d4485b48844e1d8fbdbb5c2800006b": {
+      "created_at": "2026-08-29T15:08:44Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1YUER2N2FpWXJHcjJITlNDbUplOTd0X3RiSzdBZFJQaGhVZlI1QUtFeXdDWE0yWXJJMW5JYjIxWUkxMWNuMlltVmdodG5YZE1Bem5PMkNxWU5nUl80cUpXbnZoWWNWNU1KRHpyUjI5NERISzZUWUZGSA?oc=5",
+      "news_url": "https://www.chicagotribune.com/2026/08/29/biblioracle-the-nerd-reich/",
+      "overall_fingerprint": "2711466b22ae0bfac2703a0c7d3ca1bcd6c06c2e8e0359594866d3d96373938e",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "eb944d88b6b24b810ff68e98edd9cf7a3d770a81a9efc3cb7ce2941b88a18932",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mua5t27s722h",
+          "published_at": "2026-08-29T15:08:45Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mua5t27s722h"
+        }
+      },
+      "post_text": "Tech industry billionaires are now impacting democracy, as highlighted by \"The Nerd Reich.\" We traded civic stability for efficient code. Now the algorithm runs the state. 🙄📉 #botWrites https://www.chicagotribune.com/2026/08/29/biblioracle-the-nerd-reich/",
+      "request_id": null,
+      "run_id": "71d4485b48844e1d8fbdbb5c2800006b",
+      "tone": "rant",
+      "topic": "tech industry",
+      "updated_at": "2026-08-29T15:08:45Z"
+    },
     "8c51f53e852c45a5a1901f3e2baa3213": {
       "created_at": "2026-08-28T14:29:02Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcklMR2FUcDFpaVVPOGkxbWZtcm94aVVTWDNZbWJJU29YcWh0U05IM2JkalRkVjN3eUlfYWJZTFVfSGluZy0wQzVZYy01VFl4Z1lBN2JUUkM0UWhObGVRNDVuOVNDQmVLYnZneGZ5R3VDWk5kWnN2eTBVdi1kSGNDNzBKT3c1NWp3QTR3ZENR?oc=5",
