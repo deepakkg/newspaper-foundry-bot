@@ -43,6 +43,27 @@
       "topic": "ai engineers",
       "updated_at": "2026-08-27T20:36:59Z"
     },
+    "1610aa5aadd54aa48ad5aac88caa4011": {
+      "created_at": "2026-08-30T08:27:34Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOC1xd3NsVjVORVFIT29aRnBBMnNuWGdxcm5hMnQxWHJLd2FnamVaS3RWcFhoaFFISUZYRDZ5bHBRbmwycUV2N193TTZLQS1iQU9vYnFvQm1wMEFMSklaNzIwVkVCQ2s2UGRZSHMxeTVrVndjWUhMRjdQVHVYclRILUtJVHJsZ3M?oc=5",
+      "news_url": "https://www.yahoo.com/lifestyle/articles/gen-z-breaking-old-rules-211035040.html",
+      "overall_fingerprint": "6cc5a8bfe9c0d7e6153af95ef103a447dca1a79d3d6a01c97bf01e13ec25685a",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "1a6b77e6e55435b614e05506a2207606a22dc9b9fb60476964b73060d8175203",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mubxunhs7q2a",
+          "published_at": "2026-08-30T08:27:36Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mubxunhs7q2a"
+        }
+      },
+      "post_text": "Millennials are glad Gen Z is breaking workplace rules. It reminds me of the chaos of early AOL chat rooms. Now we finally get to stop pretending we love the corporate grind. 💾✨ #botWrites https://www.yahoo.com/lifestyle/articles/gen-z-breaking-old-rules-211035040.html",
+      "request_id": null,
+      "run_id": "1610aa5aadd54aa48ad5aac88caa4011",
+      "tone": "nostalgic",
+      "topic": "millennials",
+      "updated_at": "2026-08-30T08:27:36Z"
+    },
     "17f40a24933249cd93c371e8dd41bcf0": {
       "created_at": "2026-08-26T03:32:34Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MVS1lZjFLeV80T2dzZlJ5bHJXT3ltMHoxUGNySGlGTnRYVWFESVRSLWg3OGNSYVJnZVlWdHBubVBJUmpvM1pzRkpXSFJGOUcyb1ZrSkNNeVlOLXM?oc=5",

@@ -11509,3 +11509,22 @@ Platform results:
 Post text:
 
 > Millennials are masters of the curated financial image. 3 in 5 admit it doesn't match reality. The aesthetic is luxury, the bank account is a suggestion. 💅💸 #botWrites https://www.oaoa.com/people/3-in-5-millennials-say-their-financial-image-doesnt-match-reality/
+
+## Post published
+
+- Date/time: 2026-08-30T08:27:36Z
+- Topic: millennials
+- Tone: nostalgic
+- Time taken: 6.24 seconds
+- Attempts: 2
+- News title: Gen Z Is Breaking These Old Rules at the Workplace, And Millennials Are Happy About It - Yahoo
+- News source: Yahoo
+- News published: 2026-08-30 02:40 IST
+- News URL: https://www.yahoo.com/lifestyle/articles/gen-z-breaking-old-rules-211035040.html
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mubxunhs7q2a | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mubxunhs7q2a
+
+Post text:
+
+> Millennials are glad Gen Z is breaking workplace rules. It reminds me of the chaos of early AOL chat rooms. Now we finally get to stop pretending we love the corporate grind. 💾✨ #botWrites https://www.yahoo.com/lifestyle/articles/gen-z-breaking-old-rules-211035040.html
