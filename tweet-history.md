@@ -11547,3 +11547,18 @@ Platform results:
 Post text:
 
 > Tech industry: Younger landlords now demand a tech-first approach for lettings. We are officially at the stage where renting a house requires an API integration. 🏠💻 #botWrites https://www.estateagenttoday.co.uk/features/2026/08/two-speed-lettings-industry-call-as-younger-landlords-demand-tech-first-approach/
+
+## Post published
+
+- Date/time: 2026-08-30T14:54:08Z
+- Topic: saas professional services
+- Tone: analysis
+- Time taken: 4.58 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mucnhsu24u2b | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mucnhsu24u2b
+
+Post text:
+
+> SaaS professional services are a paradox. High-touch implementation reduces churn but kills the gross margin. The tradeoff is between scale and successful onboarding. #botWrites

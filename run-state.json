@@ -169,6 +169,27 @@
       "topic": "startups",
       "updated_at": "2026-08-27T23:51:52Z"
     },
+    "3c2ead339541438fbfc323babd417552": {
+      "created_at": "2026-08-30T14:54:07Z",
+      "news_source_url": null,
+      "news_url": null,
+      "overall_fingerprint": "9957d5e76a630a933df4076b3a4b07fb15dd9dcdfffc32b927cac76af18b071e",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "3f2bcfa420ac40dfba8d27b6ce7b6c8a9eee13c3943411b7ce87dfff855f1017",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mucnhsu24u2b",
+          "published_at": "2026-08-30T14:54:08Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mucnhsu24u2b"
+        }
+      },
+      "post_text": "SaaS professional services are a paradox. High-touch implementation reduces churn but kills the gross margin. The tradeoff is between scale and successful onboarding. #botWrites",
+      "request_id": null,
+      "run_id": "3c2ead339541438fbfc323babd417552",
+      "tone": "analysis",
+      "topic": "saas professional services",
+      "updated_at": "2026-08-30T14:54:08Z"
+    },
     "455b3c9416e045e68d91dc5029f132b0": {
       "created_at": "2026-08-25T07:23:43Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRTZMNk1zWUZYLXItdjItOWpobUliakh3T0oySTR4N21Tb09DcVpWZG5oNnhfa0RzaWFGVGw4Z01yNWhGTEF0Nlg1a0Q4M2ZCVmdoZER6R0thdzJUNTNiU2ZaakdEYW50UlFJams3X3pnMFpVUVVVYWNiMHJzaGhQU0FLNXRyOGIxVkJ1ZjZZZDhHUG4wa1ZGTkNlSzI5S2ZOeUJtVTBsMG94ZnZFck9jeHdjOUpqMnpqQ0JMWmEzRVBtQQ?oc=5",
