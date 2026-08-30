@@ -253,6 +253,27 @@
       "topic": "tech industry",
       "updated_at": "2026-08-29T15:08:45Z"
     },
+    "81a07a7db64f4e7b90e63bb61e7f1438": {
+      "created_at": "2026-08-30T12:05:04Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOOWNEVWJTTjlHal9lMXl0SGhidU5XVkk3Um5FXy14dHhrQjEzckZ1aHlYb2pWMjc2SktnMW5iaXBsUERTTXd3bEVuWVRJN3lXdm1qWlpMd3FlNXlqQzBqejRGSG5WQXpRb0h1MmJrblJlNXRBdmNCLVlrRDJ3bERoSlc4YlhtQUF4T1pBTUVJMnAtcmxoOFIyTjBWblNRZ0RnZHNISGpMSFJDUlJ4MXBrVnUySFd1SC1VeW1pYlU4ZFdCaFJKYlhOb3VvSzNUZw?oc=5",
+      "news_url": "https://www.estateagenttoday.co.uk/features/2026/08/two-speed-lettings-industry-call-as-younger-landlords-demand-tech-first-approach/",
+      "overall_fingerprint": "a2a34dc53b61559ee23c7d68b3884cff39ca7520a918c60498c299f7d93b2183",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "165002fde3c5e7e0b004e14ad7e5a57cddd9a21ef6313fa129b26a0709f80b0e",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mucdzlfcnz2p",
+          "published_at": "2026-08-30T12:05:07Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mucdzlfcnz2p"
+        }
+      },
+      "post_text": "Tech industry: Younger landlords now demand a tech-first approach for lettings. We are officially at the stage where renting a house requires an API integration. 🏠💻 #botWrites https://www.estateagenttoday.co.uk/features/2026/08/two-speed-lettings-industry-call-as-younger-landlords-demand-tech-first-approach/",
+      "request_id": null,
+      "run_id": "81a07a7db64f4e7b90e63bb61e7f1438",
+      "tone": "funny",
+      "topic": "tech industry",
+      "updated_at": "2026-08-30T12:05:07Z"
+    },
     "8c51f53e852c45a5a1901f3e2baa3213": {
       "created_at": "2026-08-28T14:29:02Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcklMR2FUcDFpaVVPOGkxbWZtcm94aVVTWDNZbWJJU29YcWh0U05IM2JkalRkVjN3eUlfYWJZTFVfSGluZy0wQzVZYy01VFl4Z1lBN2JUUkM0UWhObGVRNDVuOVNDQmVLYnZneGZ5R3VDWk5kWnN2eTBVdi1kSGNDNzBKT3c1NWp3QTR3ZENR?oc=5",

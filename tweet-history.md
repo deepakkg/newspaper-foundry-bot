@@ -11528,3 +11528,22 @@ Platform results:
 Post text:
 
 > Millennials are glad Gen Z is breaking workplace rules. It reminds me of the chaos of early AOL chat rooms. Now we finally get to stop pretending we love the corporate grind. 💾✨ #botWrites https://www.yahoo.com/lifestyle/articles/gen-z-breaking-old-rules-211035040.html
+
+## Post published
+
+- Date/time: 2026-08-30T12:05:07Z
+- Topic: tech industry
+- Tone: funny
+- Time taken: 5.73 seconds
+- Attempts: 1
+- News title: Two-speed lettings industry call as younger landlords demand tech-first approach - Estate Agent Today
+- News source: Estate Agent Today
+- News published: 2026-08-29 05:32 IST
+- News URL: https://www.estateagenttoday.co.uk/features/2026/08/two-speed-lettings-industry-call-as-younger-landlords-demand-tech-first-approach/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mucdzlfcnz2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mucdzlfcnz2p
+
+Post text:
+
+> Tech industry: Younger landlords now demand a tech-first approach for lettings. We are officially at the stage where renting a house requires an API integration. 🏠💻 #botWrites https://www.estateagenttoday.co.uk/features/2026/08/two-speed-lettings-industry-call-as-younger-landlords-demand-tech-first-approach/
