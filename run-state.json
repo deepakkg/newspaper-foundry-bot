@@ -295,6 +295,27 @@
       "topic": "tech industry",
       "updated_at": "2026-08-30T12:05:07Z"
     },
+    "8a832db4b750459ea98cad53999d1686": {
+      "created_at": "2026-08-30T18:08:37Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1xM2EtX1pHZGVOQ0stY3UxZlJBZDlNNmhnUEVFS0xXRlZQSWc0S29nOXRZNkF0Yk1ybU9DRURTa0hnRzRFM0g1UEd3RnJTbEJOMExDWENBcnpJbzAwSGJRbnpJSVpPN0RTNUZydnZGTHd1Z2ZkTGc?oc=5",
+      "news_url": "https://finance.biggo.com/news/b813d8c9-be6b-41ec-8c90-68f86f336e2e",
+      "overall_fingerprint": "c5a99132206a41dfcae882f8971cc75b19bbd6fe8ddfdf7458d81c8f9aa3f903",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "3fb4dbb3dccf1bb4dbaa8a9987198d462387d3670633b09f123dea30e56b566b",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mucydpbads2d",
+          "published_at": "2026-08-30T18:08:41Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mucydpbads2d"
+        }
+      },
+      "post_text": "Forward Deployed Engineers are pulling 2.15 million Yuan. It is just fancy rebranding for professional firefighting and sales support. We are paying a premium for people to fix broken demos in real time 🙄. #botWrites https://finance.biggo.com/news/b813d8c9-be6b-41ec-8c90-68f86f336e2e",
+      "request_id": null,
+      "run_id": "8a832db4b750459ea98cad53999d1686",
+      "tone": "rant",
+      "topic": "forward deployed engineers",
+      "updated_at": "2026-08-30T18:08:41Z"
+    },
     "8c51f53e852c45a5a1901f3e2baa3213": {
       "created_at": "2026-08-28T14:29:02Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcklMR2FUcDFpaVVPOGkxbWZtcm94aVVTWDNZbWJJU29YcWh0U05IM2JkalRkVjN3eUlfYWJZTFVfSGluZy0wQzVZYy01VFl4Z1lBN2JUUkM0UWhObGVRNDVuOVNDQmVLYnZneGZ5R3VDWk5kWnN2eTBVdi1kSGNDNzBKT3c1NWp3QTR3ZENR?oc=5",
