@@ -505,6 +505,27 @@
       "topic": "coding",
       "updated_at": "2026-08-25T10:56:16Z"
     },
+    "f2e625cc3dc742708a4fcfd1a2e3cba1": {
+      "created_at": "2026-08-31T14:14:10Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOaDNIRlBnVm5ieDZDR2V1SzBWMmpPNFhXRGNNb29JeGZCVG5OQ09wNGZHc01iUHlncDZhcHFWd0VIWDhVUmo4Z25zd3dTWFpwT3FkUEtSNG9RZ0JMalN1Yk5kTVlBQ1I0ZVJyUjczSFFna0tUUlNDNmhpdkhHV1ctNWE5NlZZWFZzYjdCZnd5d1hNcUJWQmxqakRYWjJfd0dZbDdSSUh3Rm5UZWRDdDI2dXhJblZ5R3ZFREpmc3JnSzF0ZmV4MjZiVlMwZ1VLTVdXS2NfR2RBTDBwUFB5NWF5YWdn0gHiAUFVX3lxTE5oM0hGUGdWbmJ4NkNHZXVLMFYyak80WFdEY01vb0l4ZkJUbk5DT3A0ZkdzTWJQeWdwNmFwcVZ3RUhYOFVSajhnbnN3d1NYWnBPcWRQS1I0b1FnQkxqU3ViTmRNWUFDUjRlUnJSNzNIUWdrS1RSU0M2aGl2SEdXVy01YTk2VllYVnNiN0Jmd3l3WE1xQlZCbGpqRFhaMl93R1lsN1JJSHdGblRlZEN0MjZ1eEluVnlHdkVESmZzcmdLMXRmZXgyNmJWUzBnVUtNV1dLY19HZEFMMHBQUHk1YXlhZ2c?oc=5",
+      "news_url": "https://www.moneycontrol.com/news/trends/13-year-old-girl-with-zero-coding-skills-earns-rs-2-5-lakh-in-3-days-selling-ai-study-app-14019117.html/amp",
+      "overall_fingerprint": "3aea8e6ae58990d3816e65fde0e9de00f48cc112655e55bd8036623674c2868c",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "ba403643f823792b249c08e9a18bde92ae23c58339f72475f42affa5436d7398",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muf3pcleum2w",
+          "published_at": "2026-08-31T14:14:11Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3muf3pcleum2w"
+        }
+      },
+      "post_text": "Coding is becoming a branding exercise. A 13-year-old earns 2.5 lakh with no coding skills using an AI app. Technical depth doesn't matter when the wrapper sells itself 🙄. #botWrites https://www.moneycontrol.com/news/trends/13-year-old-girl-with-zero-coding-skills-earns-rs-2-5-lakh-in-3-days-selling-ai-study-app-14019117.html/amp",
+      "request_id": null,
+      "run_id": "f2e625cc3dc742708a4fcfd1a2e3cba1",
+      "tone": "rant",
+      "topic": "coding",
+      "updated_at": "2026-08-31T14:14:11Z"
+    },
     "f7d40b05a3b04180874263d105f2a9a5": {
       "created_at": "2026-08-25T15:13:48Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbk45b292amVPQldVYm5DU3R0dEI0N1QtbnZNMk1yWldHWmhrS2M0NlJuU0lQWGxLZ2JkWmo3bjJzS2ZNMWF2ZGlJdVlDMTNoSUFuX0xHbjh3eklEaFJXLUJHSE1rd1ZyMm0yZnhGVEFCR0pZeTlmY3M5SDJnaEpzVzU5eERVekp0VF96ZUE2S0lTMVd0QWJjRzRpU2lLNm9adHA2bm1FcHBpNFk3WWs3YzVqaG9BUU5waVp5cWdB?oc=5",

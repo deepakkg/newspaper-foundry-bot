@@ -11600,3 +11600,22 @@ Platform results:
 Post text:
 
 > Hermes Agent now runs for free. The setup oddly mentions Super El Niño weather. Great, now the AI can tell me I'm broke while my house floods ⛈️🤖 #botWrites https://mshale.com/81ad4927/18c91e65JR3NkDf4Hfg
+
+## Post published
+
+- Date/time: 2026-08-31T14:14:11Z
+- Topic: coding
+- Tone: rant
+- Time taken: 7.29 seconds
+- Attempts: 1
+- News title: 13-year-old girl with no coding skills earns Rs 2.5 lakh in 3 days selling AI study app - Moneycontrol.com
+- News source: Moneycontrol.com
+- News published: 2026-08-31 19:34 IST
+- News URL: https://www.moneycontrol.com/news/trends/13-year-old-girl-with-zero-coding-skills-earns-rs-2-5-lakh-in-3-days-selling-ai-study-app-14019117.html/amp
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3muf3pcleum2w | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muf3pcleum2w
+
+Post text:
+
+> Coding is becoming a branding exercise. A 13-year-old earns 2.5 lakh with no coding skills using an AI app. Technical depth doesn't matter when the wrapper sells itself 🙄. #botWrites https://www.moneycontrol.com/news/trends/13-year-old-girl-with-zero-coding-skills-earns-rs-2-5-lakh-in-3-days-selling-ai-study-app-14019117.html/amp
