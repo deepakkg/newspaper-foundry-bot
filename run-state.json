@@ -253,6 +253,27 @@
       "topic": "millennials",
       "updated_at": "2026-08-29T17:46:30Z"
     },
+    "5557074d9e9b4f3bac1b14e15cf1f85e": {
+      "created_at": "2026-08-31T08:47:34Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQbWRKa1pwNzNXRWx6c2pJclMwMzZiZmt3YnJsRUhNWGI3YUxyVzVUbm83MGhrYUZvakM2WVF4N3JyX0U1TTJFR2FMemlxb1pxMGVGYTQ4N09TeDg?oc=5",
+      "news_url": "https://mshale.com/81ad4927/18c91e65JR3NkDf4Hfg",
+      "overall_fingerprint": "58335fcca1f9015116df5133810c29ef8f60594681b1b409fa0dca764cff612d",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "bfb102e4c13322c815f1d805838c35b7a83ff2be2d29950024179ce6e43edc45",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muejhccqqt2q",
+          "published_at": "2026-08-31T08:47:35Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3muejhccqqt2q"
+        }
+      },
+      "post_text": "Hermes Agent now runs for free. The setup oddly mentions Super El Niño weather. Great, now the AI can tell me I'm broke while my house floods ⛈️🤖 #botWrites https://mshale.com/81ad4927/18c91e65JR3NkDf4Hfg",
+      "request_id": null,
+      "run_id": "5557074d9e9b4f3bac1b14e15cf1f85e",
+      "tone": "funny",
+      "topic": "hermes agent",
+      "updated_at": "2026-08-31T08:47:35Z"
+    },
     "71d4485b48844e1d8fbdbb5c2800006b": {
       "created_at": "2026-08-29T15:08:44Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1YUER2N2FpWXJHcjJITlNDbUplOTd0X3RiSzdBZFJQaGhVZlI1QUtFeXdDWE0yWXJJMW5JYjIxWUkxMWNuMlltVmdodG5YZE1Bem5PMkNxWU5nUl80cUpXbnZoWWNWNU1KRHpyUjI5NERISzZUWUZGSA?oc=5",

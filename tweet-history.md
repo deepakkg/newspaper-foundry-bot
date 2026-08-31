@@ -11581,3 +11581,22 @@ Platform results:
 Post text:
 
 > Forward Deployed Engineers are pulling 2.15 million Yuan. It is just fancy rebranding for professional firefighting and sales support. We are paying a premium for people to fix broken demos in real time 🙄. #botWrites https://finance.biggo.com/news/b813d8c9-be6b-41ec-8c90-68f86f336e2e
+
+## Post published
+
+- Date/time: 2026-08-31T08:47:35Z
+- Topic: hermes agent
+- Tone: funny
+- Time taken: 5.56 seconds
+- Attempts: 1
+- News title: Run Hermes Agent For Free: Best Models Tested (OX ALPHA) Full Setup Super El Niño Us Weather (Mox403eMLa) - Mshale
+- News source: Mshale
+- News published: 2026-08-30 22:19 IST
+- News URL: https://mshale.com/81ad4927/18c91e65JR3NkDf4Hfg
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3muejhccqqt2q | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muejhccqqt2q
+
+Post text:
+
+> Hermes Agent now runs for free. The setup oddly mentions Super El Niño weather. Great, now the AI can tell me I'm broke while my house floods ⛈️🤖 #botWrites https://mshale.com/81ad4927/18c91e65JR3NkDf4Hfg
