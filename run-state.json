@@ -85,6 +85,27 @@
       "topic": "ai engineers",
       "updated_at": "2026-08-26T03:32:38Z"
     },
+    "1bf8fbdc8d9644e587d802c0ce1f8c3a": {
+      "created_at": "2026-08-31T20:15:27Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWmlwZzlxLXptVFFwdEJMVVg2RnVxYV9oMUJuWU8yUEVmWFhxQU1TeTluOHZqZ3VLWFZXRlRIcGl1aGhSRmtpR3N2Sk81UjV4YVJ3eFFNc1h0N09BZnFoUGphWmV5bU9OMjVremlVdHJlMkVBWFR6VEFPakExOVBNMlRNWUhDaVVNTEVoZUhUaHpXbUpSZmRVb21VUmUtQk9uZlIyY2NyRFExbUUyY3Nuc04wYjREQdIBuwFBVV95cUxPb3FtdmlFcGtmaXU5NEtNLWpEMnNZeE5YQkViMGlWZy03WHNTQXVLVVhNLXZ6MndMUXRVXy1kcWdTNENZcUd4OVpuVjhpd3V3YkI1YW1tSm1VbTFHMzZpMmdxRHljVHdZaVR0eWktaGI5ejJiclNvRDhzTjRSNnlGU0U1N0FWTTFZS0lHaUh4MmpDamZwNEg3OFA2dnROcDRFSExORGNvQ29USFZYanREVlpENkh1TFJ0VUJr?oc=5",
+      "news_url": "https://wgnradio.com/business-lunch/noon-business-lunch-8-31-26-data-centers-home-size-ai-startups-cyber-insurance/",
+      "overall_fingerprint": "a3c6d803507570bdfa993cfdb526317a1d7eb9147ed3e22c569bc676b9401d5a",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "b785f6e155a89ceedea3abf09e248e0782c3f88c01482108414079ae651d617a",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mufpvdyfgz2p",
+          "published_at": "2026-08-31T20:15:28Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mufpvdyfgz2p"
+        }
+      },
+      "post_text": "AI startups are the new talk of the town. Remember when startups meant a messy garage and a dial-up modem. Now it is all data centers. The scale has changed 💾. #botWrites https://wgnradio.com/business-lunch/noon-business-lunch-8-31-26-data-centers-home-size-ai-startups-cyber-insurance/",
+      "request_id": null,
+      "run_id": "1bf8fbdc8d9644e587d802c0ce1f8c3a",
+      "tone": "nostalgic",
+      "topic": "startups",
+      "updated_at": "2026-08-31T20:15:28Z"
+    },
     "2468276c00c5481db16e41b6c432702b": {
       "created_at": "2026-08-28T21:12:16Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWFJVWGROTThEMHFWVzhPdkkwMGxRdHp6cXd2enBBWHBoVzMxZkZHcVRQbFR1Ny1tejFDVDNwTzBNa2ZhUVB4dVFibzk0MXB1V0FNMmtGNS05c1R6U1ltRlRpS2l6VmpFbUpqeWN2bmc5aWItOVN4SWJBTzNMcFNmT2FmYXRWc04waGMzTmNyZ2l2Yld6OGpEMU5pdUI4bjBzb2xqaFFkVFQ0R21pOFdwMy1WUFBEemhod0Z6a25TY1FHSmo1Rk0xc2ZpV0xGSVptRU5ZNkUtT1NpMFR0Y0g4UnBEQ3hpN2FENjRzbg?oc=5",

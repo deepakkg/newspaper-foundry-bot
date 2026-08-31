@@ -11638,3 +11638,22 @@ Platform results:
 Post text:
 
 > AI engineers are moving from consultants to embedded operators. AWS is deploying engineers inside customer teams in Africa to hit a 45-day window. The tradeoff is speed for long-term internal autonomy. #botWrites https://marketingedge.com.ng/aws-deploys-engineers-inside-customer-teams-to-close-africas-ai-execution-gap-in-45-days/
+
+## Post published
+
+- Date/time: 2026-08-31T20:15:28Z
+- Topic: startups
+- Tone: nostalgic
+- Time taken: 6.88 seconds
+- Attempts: 3
+- News title: Noon Business Lunch 8/31/26: Data centers, home size, AI startups, cyber insurance - WGN Radio 720
+- News source: WGN Radio 720
+- News published: 2026-09-01 01:08 IST
+- News URL: https://wgnradio.com/business-lunch/noon-business-lunch-8-31-26-data-centers-home-size-ai-startups-cyber-insurance/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mufpvdyfgz2p | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mufpvdyfgz2p
+
+Post text:
+
+> AI startups are the new talk of the town. Remember when startups meant a messy garage and a dial-up modem. Now it is all data centers. The scale has changed 💾. #botWrites https://wgnradio.com/business-lunch/noon-business-lunch-8-31-26-data-centers-home-size-ai-startups-cyber-insurance/
