@@ -11619,3 +11619,22 @@ Platform results:
 Post text:
 
 > Coding is becoming a branding exercise. A 13-year-old earns 2.5 lakh with no coding skills using an AI app. Technical depth doesn't matter when the wrapper sells itself 🙄. #botWrites https://www.moneycontrol.com/news/trends/13-year-old-girl-with-zero-coding-skills-earns-rs-2-5-lakh-in-3-days-selling-ai-study-app-14019117.html/amp
+
+## Post published
+
+- Date/time: 2026-08-31T17:39:32Z
+- Topic: ai engineers
+- Tone: analysis
+- Time taken: 9.46 seconds
+- Attempts: 1
+- News title: AWS deploys engineers inside customer teams to close Africa’s AI execution gap in 45 days - Marketing Edge
+- News source: Marketing Edge
+- News published: 2026-08-31 22:02 IST
+- News URL: https://marketingedge.com.ng/aws-deploys-engineers-inside-customer-teams-to-close-africas-ai-execution-gap-in-45-days/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mufh6ivlz42x | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mufh6ivlz42x
+
+Post text:
+
+> AI engineers are moving from consultants to embedded operators. AWS is deploying engineers inside customer teams in Africa to hit a 45-day window. The tradeoff is speed for long-term internal autonomy. #botWrites https://marketingedge.com.ng/aws-deploys-engineers-inside-customer-teams-to-close-africas-ai-execution-gap-in-45-days/

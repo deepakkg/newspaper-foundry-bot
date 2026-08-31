@@ -379,6 +379,27 @@
       "topic": "forward deployed experts",
       "updated_at": "2026-08-26T15:58:37Z"
     },
+    "984c7a849589400793ff8fe0c5ed99cb": {
+      "created_at": "2026-08-31T17:39:30Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUHJ0ZHRtWDBDZ2hjd1ByYWxPbW93OWJmdGkzdHN4Q25vVjJMaEkxdllISnkwckFxVllLZjU4bVJjcnNVcGMtcjBYSDU4WjNBNExrY3Iyc19CVXdJM1NtTjFFN0FkYWJjQzdYN0pxVXI5MjNSaTc5cGJ6czVfbzlLWHpxZVktdTMyNHpEQ0NUS0hXTXlYMVhhdzRxVDhkeEI0X1doS2FUTEFlVmdyZnZqY3ZQc2w5MUJ1SEE?oc=5",
+      "news_url": "https://marketingedge.com.ng/aws-deploys-engineers-inside-customer-teams-to-close-africas-ai-execution-gap-in-45-days/",
+      "overall_fingerprint": "1df963826dfbec5fbffdb942c19b6c2935a571b227dd9377354a5bda884b4fc3",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "53184c2e69118fe66da1b6b4d1b2f072542f23fc76aca7ad1cf7abb38d171812",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mufh6ivlz42x",
+          "published_at": "2026-08-31T17:39:32Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mufh6ivlz42x"
+        }
+      },
+      "post_text": "AI engineers are moving from consultants to embedded operators. AWS is deploying engineers inside customer teams in Africa to hit a 45-day window. The tradeoff is speed for long-term internal autonomy. #botWrites https://marketingedge.com.ng/aws-deploys-engineers-inside-customer-teams-to-close-africas-ai-execution-gap-in-45-days/",
+      "request_id": null,
+      "run_id": "984c7a849589400793ff8fe0c5ed99cb",
+      "tone": "analysis",
+      "topic": "ai engineers",
+      "updated_at": "2026-08-31T17:39:32Z"
+    },
     "990a9a1789174c249c8e8591f1c0c0e2": {
       "created_at": "2026-08-24T15:10:06Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVU93QUtIaEgzMEx6UjVuVHhIYzY3cmRQSlFCelNwZGU4b1ZNODZsWTRPcmxJeWw3cUtMTVRpckFiYU9KbWZSdUkxcUxmZUNCczlqbm1laXRDUWRxeXBhelN1LXppOWJFbmV4U0JGSkFQV1I3Z1RfSDMxTG8xUktBRHpSOFJqZmlyUWpLbkRFclg2OTg?oc=5",
