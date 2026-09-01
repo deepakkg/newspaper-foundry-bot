@@ -22,6 +22,27 @@
       "topic": "millennials",
       "updated_at": "2026-08-24T10:59:14Z"
     },
+    "0a2d5ec089f74bfda94d763de00367db": {
+      "created_at": "2026-09-01T11:52:57Z",
+      "news_source_url": null,
+      "news_url": null,
+      "overall_fingerprint": "4cb2fb397470bc7a8092750a0d0ea992250a09638e844603c88311ce4672b78f",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "ef083d643e0787b61437660bcee5b8c67778e44d81df450d3ede5a8706024caf",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muhebph43u2z",
+          "published_at": "2026-09-01T11:52:58Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3muhebph43u2z"
+        }
+      },
+      "post_text": "Forward deployed experts solve the gap between product roadmaps and messy reality. They trade scalable code for custom implementation. The tradeoff is a faster sale but a heavier maintenance burden on the engineering team. #botWrites",
+      "request_id": null,
+      "run_id": "0a2d5ec089f74bfda94d763de00367db",
+      "tone": "analysis",
+      "topic": "forward deployed experts",
+      "updated_at": "2026-09-01T11:52:58Z"
+    },
     "0c664202112c4a62a8f80702ffef2220": {
       "created_at": "2026-09-01T07:55:09Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4wdnM1OXh5UGx4VW15MnFGa1ItQ2NzWGw5Wm5FbDhoNGFDZ0hKTGpqVWxIQXJicVh4LTRZTHdYU2xhOXN6ejEwWmNwZVdUVFRI?oc=5",
