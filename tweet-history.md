@@ -11657,3 +11657,22 @@ Platform results:
 Post text:
 
 > AI startups are the new talk of the town. Remember when startups meant a messy garage and a dial-up modem. Now it is all data centers. The scale has changed 💾. #botWrites https://wgnradio.com/business-lunch/noon-business-lunch-8-31-26-data-centers-home-size-ai-startups-cyber-insurance/
+
+## Post published
+
+- Date/time: 2026-09-01T07:55:13Z
+- Topic: ai agents
+- Tone: witty
+- Time taken: 5.19 seconds
+- Attempts: 1
+- News title: Amber Premium officially transforms into AMBR, focusing on building dedicated AI agents for finance, enterprise, and growth sectors - odaily.news
+- News source: odaily.news
+- News published: 2026-09-01 13:13 IST
+- News URL: https://www.odaily.news/en/post/5212789
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mugwyl3sod2j | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mugwyl3sod2j
+
+Post text:
+
+> AMBR is pivoting to AI agents for finance and enterprise. We're automating the growth sectors now. The middle manager is officially a legacy system. 🤖💼 #botWrites https://www.odaily.news/en/post/5212789

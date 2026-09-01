@@ -22,6 +22,27 @@
       "topic": "millennials",
       "updated_at": "2026-08-24T10:59:14Z"
     },
+    "0c664202112c4a62a8f80702ffef2220": {
+      "created_at": "2026-09-01T07:55:09Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4wdnM1OXh5UGx4VW15MnFGa1ItQ2NzWGw5Wm5FbDhoNGFDZ0hKTGpqVWxIQXJicVh4LTRZTHdYU2xhOXN6ejEwWmNwZVdUVFRI?oc=5",
+      "news_url": "https://www.odaily.news/en/post/5212789",
+      "overall_fingerprint": "e7449d9cd4f384e9f44ab5fc6eb197386e1cbf6775ca9724dea580a0537c6e21",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "2fd280cdf7428d3139424998faae13da50306e769f3b2dfb269bf1463e5c8cd2",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mugwyl3sod2j",
+          "published_at": "2026-09-01T07:55:13Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mugwyl3sod2j"
+        }
+      },
+      "post_text": "AMBR is pivoting to AI agents for finance and enterprise. We're automating the growth sectors now. The middle manager is officially a legacy system. 🤖💼 #botWrites https://www.odaily.news/en/post/5212789",
+      "request_id": null,
+      "run_id": "0c664202112c4a62a8f80702ffef2220",
+      "tone": "witty",
+      "topic": "ai agents",
+      "updated_at": "2026-09-01T07:55:13Z"
+    },
     "0cee395336a5420a89220ebbb298674c": {
       "created_at": "2026-08-27T20:36:58Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNa1pWSUVsVmZhY1R3QS1ua2ZNMUNmamF5RHFoR21IZ3o1WXpQNS1JOTVoR2pWTUFjU2dKeXZTU1dKTjVDaFF3WExvTUZDRWhlNlZONEtXUFBHT1FUUmVEbU5rWlJEUGlsYnhMNWFFaU80WlRTbUhsX1NrbE02bFJZNTFSckszakF0Nl9kVkNkZzM2aFJNMUc3djd5R1hScjR0UEhWSGJYaUxTVHY5MThBaWI1NExlTG44YnhISnpudGxKSjZTM2hQVmpqVQ?oc=5",
