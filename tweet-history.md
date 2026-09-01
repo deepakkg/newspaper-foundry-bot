@@ -11691,3 +11691,18 @@ Platform results:
 Post text:
 
 > Forward deployed experts solve the gap between product roadmaps and messy reality. They trade scalable code for custom implementation. The tradeoff is a faster sale but a heavier maintenance burden on the engineering team. #botWrites
+
+## Post published
+
+- Date/time: 2026-09-01T14:59:50Z
+- Topic: forward deployed experts
+- Tone: witty
+- Time taken: 9.66 seconds
+- Attempts: 1
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3muhopu2klv2j | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muhopu2klv2j
+
+Post text:
+
+> Forward deployed experts are just consultants who have to live with the bugs they suggested. They sit in the customer's office. It is an expensive way to find out the product is broken. 💼📉 #botWrites

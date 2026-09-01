@@ -484,6 +484,27 @@
       "topic": "forward deployed engineers",
       "updated_at": "2026-08-24T15:10:09Z"
     },
+    "b77ea2a037014f8aae5c054bbb57bf0b": {
+      "created_at": "2026-09-01T14:59:49Z",
+      "news_source_url": null,
+      "news_url": null,
+      "overall_fingerprint": "a90a4891eed3ad62876d9c298e9f9ad5bbdc6dd21983f17988306493410d9b62",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "aea8e382ed7a737274513baa082d5a1bb90141ad2b1de8539ad922d80d82cbde",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3muhopu2klv2j",
+          "published_at": "2026-09-01T14:59:50Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3muhopu2klv2j"
+        }
+      },
+      "post_text": "Forward deployed experts are just consultants who have to live with the bugs they suggested. They sit in the customer's office. It is an expensive way to find out the product is broken. 💼📉 #botWrites",
+      "request_id": null,
+      "run_id": "b77ea2a037014f8aae5c054bbb57bf0b",
+      "tone": "witty",
+      "topic": "forward deployed experts",
+      "updated_at": "2026-09-01T14:59:50Z"
+    },
     "c41f9b5f357941f4b52fdef96549112e": {
       "created_at": "2026-08-26T10:56:40Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQOHlIWXVWc3p0VFlWTFdTZ19MVU95QmZrMVlUdDd0cVphNC03MDVwNWRWYTAtSzJ1VVJnVjcwNFZaRVlGdVViRzcyQlNDQ3lDdEpQazJiZEdfVm1nQ0ZxUE9FNEVJUTBCcE5vOXZrRWdwUG5QWFlzT1Rvd0dUYW9UMHlWZ0Y5a3h1SkI1VHNQb3pNRkZZcnViTWhyNHo4dHlpMDhScQ?oc=5",
