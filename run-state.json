@@ -295,6 +295,27 @@
       "topic": "startups",
       "updated_at": "2026-08-26T07:24:14Z"
     },
+    "4c5670d9e1cb48a78492b4153d1d972e": {
+      "created_at": "2026-09-02T11:33:52Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMlJGNDFZZTBsYnZJdWJmVlROMmM3VEU5YzNoT3BmM0JVMkFlSFBaVW11Rl91eHRucVRQR3ozd3NTYkNvNU5xaHl1WUNXTGwxRWdtZ2wtdlFXX0JoWktIOVhCcEpjc1BSOFhIeUsyakppVDNZc2trOVhhWkxOSUQxNEZ2dEU4LWgxMFMxandKXy1DTXJOOFdOMlpNVWFIN2N3X3E1MA?oc=5",
+      "news_url": "https://www.cavalierdaily.com/article/2026/09/how-generative-ai-is-and-is-not-affecting-arts-education",
+      "overall_fingerprint": "62fa358fc3d0f86c03482630226570de199911dd0b584a3784ceb7dc172485b8",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "d95d5b5b62094a690ddc45a1c13a6d96f690e45f60cde4c5d46386018b3e707c",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mujtojrwku25",
+          "published_at": "2026-09-02T11:33:54Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mujtojrwku25"
+        }
+      },
+      "post_text": "Generative AI is hitting arts education. I remember the smell of turpentine and messy charcoal sketches. We're trading tactile struggle for prompts. 🎨🖌️ #botWrites https://www.cavalierdaily.com/article/2026/09/how-generative-ai-is-and-is-not-affecting-arts-education",
+      "request_id": null,
+      "run_id": "4c5670d9e1cb48a78492b4153d1d972e",
+      "tone": "nostalgic",
+      "topic": "generative ai",
+      "updated_at": "2026-09-02T11:33:54Z"
+    },
     "4d2fef92c0764e9b8fdba8f5978a08a2": {
       "created_at": "2026-08-29T17:46:29Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdTAtZXBLQjZOQUdQYjZDMlFkaFJNbkx4NHBlVGZwNjRHOGRUc0hfNkdJdi1nVFFGR280RV9aQUFSMHJRTlJLeTBFQ0Zfc2xtUlBFQ3ZPWFFObVRUWWpRb3BuWGtWSkFiU2xhaHBTTm5iSmtOV1o4YzBoZXNfZEJFWm5WejdIVGg4YkVlVjB4d2ppSVNxdXBxdXRB?oc=5",

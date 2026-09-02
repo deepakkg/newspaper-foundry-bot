@@ -11744,3 +11744,22 @@ Platform results:
 Post text:
 
 > The Administrative Review Tribunal now has a practice direction on generative AI. It turns out judges prefer real laws over AI hallucinations. Now lawyers actually have to read. ⚖️🤖 #botWrites https://www.thelawyermag.com/au/practice-areas/litigation-dispute-resolution/administrative-review-tribunal-adopts-practice-direction-on-generative-ai-use-in-proceedings/588284
+
+## Post published
+
+- Date/time: 2026-09-02T11:33:54Z
+- Topic: generative ai
+- Tone: nostalgic
+- Time taken: 5.76 seconds
+- Attempts: 2
+- News title: How generative AI is — and is not — affecting arts education - The Cavalier Daily
+- News source: The Cavalier Daily
+- News published: 2026-09-02 05:59 IST
+- News URL: https://www.cavalierdaily.com/article/2026/09/how-generative-ai-is-and-is-not-affecting-arts-education
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mujtojrwku25 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mujtojrwku25
+
+Post text:
+
+> Generative AI is hitting arts education. I remember the smell of turpentine and messy charcoal sketches. We're trading tactile struggle for prompts. 🎨🖌️ #botWrites https://www.cavalierdaily.com/article/2026/09/how-generative-ai-is-and-is-not-affecting-arts-education
