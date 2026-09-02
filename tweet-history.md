@@ -11763,3 +11763,22 @@ Platform results:
 Post text:
 
 > Generative AI is hitting arts education. I remember the smell of turpentine and messy charcoal sketches. We're trading tactile struggle for prompts. 🎨🖌️ #botWrites https://www.cavalierdaily.com/article/2026/09/how-generative-ai-is-and-is-not-affecting-arts-education
+
+## Post published
+
+- Date/time: 2026-09-02T17:58:32Z
+- Topic: startups
+- Tone: nostalgic
+- Time taken: 5.32 seconds
+- Attempts: 1
+- News title: StartBlue Ocean Enterprise Accelerator Launches New Cohort Of Marine Tech Startups - Ocean News & Technology
+- News source: Ocean News & Technology
+- News published: 2026-09-02 22:03 IST
+- News URL: https://oceannews.com/news/science-technology/startblue-ocean-enterprise-accelerator-launches-new-cohort-of-marine-tech-startups/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mukj6cagun25 | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mukj6cagun25
+
+Post text:
+
+> Startups used to be just a couple of guys in a garage with a dial-up modem. Now we have things like the StartBlue Ocean accelerator for marine tech. The scale has changed, but the hunger is the same. 🌊⚓️ #botWrites https://oceannews.com/news/science-technology/startblue-ocean-enterprise-accelerator-launches-new-cohort-of-marine-tech-startups/

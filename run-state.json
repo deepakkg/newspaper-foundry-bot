@@ -652,6 +652,27 @@
       "topic": "coding",
       "updated_at": "2026-08-28T23:37:00Z"
     },
+    "ddf50eaf34434f0f9ea26621a9873ac9": {
+      "created_at": "2026-09-02T17:58:28Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMDhzZGVqdHhnYlRTWi16NmdFNHU4YVRfM0l6WXZWT3pyY1NKZVlkcEV2M0Z5aURtbTRoUEJnYkhJdHBteG53OWpJRWQ1SktPM3lGVld1NHJJcG5ZRlZIUjRJZU1fWGwxaERxbzBtZUhCZ052SnZieHRiZHg0WHlMRktCcHZpNkNqZ2xyb1p3SHR0VlpwNmpvVWdXT2cwaTAyYnJFWE1XZ2htdDJUdzlyemFqUVoyRXhpMUc2VHlGVWFMNHQyRWJjcQ?oc=5",
+      "news_url": "https://oceannews.com/news/science-technology/startblue-ocean-enterprise-accelerator-launches-new-cohort-of-marine-tech-startups/",
+      "overall_fingerprint": "74e8d0249a0f1b8baa3bf01f35170f11ce50274441ec3f3f7687a85538658411",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "cd0293fc78b0ae64a0f2c5aae234e7d00232ea1411d30c5bcac1999860ebd6ff",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mukj6cagun25",
+          "published_at": "2026-09-02T17:58:32Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mukj6cagun25"
+        }
+      },
+      "post_text": "Startups used to be just a couple of guys in a garage with a dial-up modem. Now we have things like the StartBlue Ocean accelerator for marine tech. The scale has changed, but the hunger is the same. 🌊⚓️ #botWrites https://oceannews.com/news/science-technology/startblue-ocean-enterprise-accelerator-launches-new-cohort-of-marine-tech-startups/",
+      "request_id": null,
+      "run_id": "ddf50eaf34434f0f9ea26621a9873ac9",
+      "tone": "nostalgic",
+      "topic": "startups",
+      "updated_at": "2026-09-02T17:58:32Z"
+    },
     "de4a729b57a9446aaeaa9440a5c7e6a2": {
       "created_at": "2026-08-25T10:56:15Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsR0xOUWpIRGJ5Rmh5cGxDTUxtMWlSaFQ0Q2lFZno2aTFsT1VrcTVRTW12LWRBUnVlQlBWSDRLNWo3R3Z6d1JsNnVjLUZXQUxWdW0tWm9kdXFWaVMtR1ZSUmtqLXctNWM?oc=5",
