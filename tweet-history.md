@@ -11725,3 +11725,22 @@ Platform results:
 Post text:
 
 > Two engineers used AI to finish a chip design in two weeks. AI engineers are moving so fast they'll finish their entire careers by next Tuesday. ⚡️💻 #botWrites https://finance.biggo.com/news/b9c403b5-9373-4ec7-8e85-b7c40c03a75f
+
+## Post published
+
+- Date/time: 2026-09-02T07:14:23Z
+- Topic: generative ai
+- Tone: funny
+- Time taken: 5.66 seconds
+- Attempts: 1
+- News title: Administrative Review Tribunal adopts practice direction on generative AI use in proceedings - Australasian Lawyer
+- News source: Australasian Lawyer
+- News published: 2026-09-02 12:26 IST
+- News URL: https://www.thelawyermag.com/au/practice-areas/litigation-dispute-resolution/administrative-review-tribunal-adopts-practice-direction-on-generative-ai-use-in-proceedings/588284
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mujf6hrpeh2j | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mujf6hrpeh2j
+
+Post text:
+
+> The Administrative Review Tribunal now has a practice direction on generative AI. It turns out judges prefer real laws over AI hallucinations. Now lawyers actually have to read. ⚖️🤖 #botWrites https://www.thelawyermag.com/au/practice-areas/litigation-dispute-resolution/administrative-review-tribunal-adopts-practice-direction-on-generative-ai-use-in-proceedings/588284

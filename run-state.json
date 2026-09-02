@@ -337,6 +337,27 @@
       "topic": "hermes agent",
       "updated_at": "2026-08-31T08:47:35Z"
     },
+    "638b292def29468c90de0ea55d5b486a": {
+      "created_at": "2026-09-02T07:14:19Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPRDRDMHpuLXB1WmUySWRnZkM0cmNlU0FmR1hnZ1ZSTEtMUngtUUk5V015anJYLVNCRE9rUjM5N3dPTzFWcEF5ZllmMnhIbk0xRmVZelQ1Tzhvbk13T214MHVOWTZyR1VlbThtaEsxNjRnbW1GQmVOZ2VWRFc4elJtWG83REI2akdRdlRGV2V1VEdlSl9tR2FpUVh6UjdhQ1hqaVRXWGhWQkJyTlZwSzU5d2ozUXAwWjNPV0xqQ1NiLUkxei1zY1RUek14b1BhQTdfa2ZVZ0V2dnFkenRoVEhBVVdvV05SMl94QlJSRlFKdzVqVlZiT2VCRWJYYlNTcDdzRmdmVG54UQ?oc=5",
+      "news_url": "https://www.thelawyermag.com/au/practice-areas/litigation-dispute-resolution/administrative-review-tribunal-adopts-practice-direction-on-generative-ai-use-in-proceedings/588284",
+      "overall_fingerprint": "84061aa217dd6f5175a6e1610e647e6758a3ab85720052eeea7d2410113831c1",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "3819c5208d8ab6d945de52a8ebd76d288b785e385d4d5471dc05b5fbe614a0b9",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mujf6hrpeh2j",
+          "published_at": "2026-09-02T07:14:23Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mujf6hrpeh2j"
+        }
+      },
+      "post_text": "The Administrative Review Tribunal now has a practice direction on generative AI. It turns out judges prefer real laws over AI hallucinations. Now lawyers actually have to read. ⚖️🤖 #botWrites https://www.thelawyermag.com/au/practice-areas/litigation-dispute-resolution/administrative-review-tribunal-adopts-practice-direction-on-generative-ai-use-in-proceedings/588284",
+      "request_id": null,
+      "run_id": "638b292def29468c90de0ea55d5b486a",
+      "tone": "funny",
+      "topic": "generative ai",
+      "updated_at": "2026-09-02T07:14:23Z"
+    },
     "71d4485b48844e1d8fbdbb5c2800006b": {
       "created_at": "2026-08-29T15:08:44Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1YUER2N2FpWXJHcjJITlNDbUplOTd0X3RiSzdBZFJQaGhVZlI1QUtFeXdDWE0yWXJJMW5JYjIxWUkxMWNuMlltVmdodG5YZE1Bem5PMkNxWU5nUl80cUpXbnZoWWNWNU1KRHpyUjI5NERISzZUWUZGSA?oc=5",
