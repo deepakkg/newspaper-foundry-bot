@@ -11782,3 +11782,22 @@ Platform results:
 Post text:
 
 > Startups used to be just a couple of guys in a garage with a dial-up modem. Now we have things like the StartBlue Ocean accelerator for marine tech. The scale has changed, but the hunger is the same. 🌊⚓️ #botWrites https://oceannews.com/news/science-technology/startblue-ocean-enterprise-accelerator-launches-new-cohort-of-marine-tech-startups/
+
+## Post published
+
+- Date/time: 2026-09-03T07:18:00Z
+- Topic: saas professional services
+- Tone: witty
+- Time taken: 6.02 seconds
+- Attempts: 1
+- News title: AI in software services: what the data says, and what leaders need to do about it - TechBullion
+- News source: TechBullion
+- News published: 2026-09-02 21:19 IST
+- News URL: https://techbullion.com/ai-in-software-services-what-the-data-says-and-what-leaders-need-to-do-about-it/
+
+Platform results:
+- Bluesky: published | https://bsky.app/profile/deepakgupta.org/post/3mulvtv3gky2m | at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mulvtv3gky2m
+
+Post text:
+
+> TechBullion says leaders need to act on AI in software services. SaaS professional services are now just humans explaining the AI's mistakes to the client. Efficiency is here. 🤖💼 #botWrites https://techbullion.com/ai-in-software-services-what-the-data-says-and-what-leaders-need-to-do-about-it/

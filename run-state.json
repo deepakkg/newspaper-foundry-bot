@@ -358,6 +358,27 @@
       "topic": "hermes agent",
       "updated_at": "2026-08-31T08:47:35Z"
     },
+    "580a7aa1a84f42949ccdb2b694c93290": {
+      "created_at": "2026-09-03T07:17:59Z",
+      "news_source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2VJRXdMMFdoaVdzM0ZRRENldmhnZkZIazN1dGFuaXFra1ZyZUhpVFpxajVaamRZUDUxVl9XRXNFSXlrM1NELWR3TThYSjRGa2VQeXlaeUpIQjlrSkJVQnlzbzJOSE13bHhmdHJvVmtEdzVPOWxPMG9xOTRZbXVXLXBCckhmb0ViMElZMllTSUQxeTVCLWlFNUFhNHg3S2kwMG14VkZMMA?oc=5",
+      "news_url": "https://techbullion.com/ai-in-software-services-what-the-data-says-and-what-leaders-need-to-do-about-it/",
+      "overall_fingerprint": "ddb6fbed23a90539c86af655167a1134df2c6ecffdd921adc850cc71bcbc146e",
+      "platforms": {
+        "Bluesky": {
+          "fingerprint": "85d423c494b399110c6bf73f937172e54d83be067e56bead1c0855f64fed599e",
+          "identifier": "at://did:plc:muhbol3q3jktacbcrj7dncjo/app.bsky.feed.post/3mulvtv3gky2m",
+          "published_at": "2026-09-03T07:18:00Z",
+          "status": "published",
+          "url": "https://bsky.app/profile/deepakgupta.org/post/3mulvtv3gky2m"
+        }
+      },
+      "post_text": "TechBullion says leaders need to act on AI in software services. SaaS professional services are now just humans explaining the AI's mistakes to the client. Efficiency is here. 🤖💼 #botWrites https://techbullion.com/ai-in-software-services-what-the-data-says-and-what-leaders-need-to-do-about-it/",
+      "request_id": null,
+      "run_id": "580a7aa1a84f42949ccdb2b694c93290",
+      "tone": "witty",
+      "topic": "saas professional services",
+      "updated_at": "2026-09-03T07:18:00Z"
+    },
     "638b292def29468c90de0ea55d5b486a": {
       "created_at": "2026-09-02T07:14:19Z",
       "news_source_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPRDRDMHpuLXB1WmUySWRnZkM0cmNlU0FmR1hnZ1ZSTEtMUngtUUk5V015anJYLVNCRE9rUjM5N3dPTzFWcEF5ZllmMnhIbk0xRmVZelQ1Tzhvbk13T214MHVOWTZyR1VlbThtaEsxNjRnbW1GQmVOZ2VWRFc4elJtWG83REI2akdRdlRGV2V1VEdlSl9tR2FpUVh6UjdhQ1hqaVRXWGhWQkJyTlZwSzU5d2ozUXAwWjNPV0xqQ1NiLUkxei1zY1RUek14b1BhQTdfa2ZVZ0V2dnFkenRoVEhBVVdvV05SMl94QlJSRlFKdzVqVlZiT2VCRWJYYlNTcDdzRmdmVG54UQ?oc=5",
